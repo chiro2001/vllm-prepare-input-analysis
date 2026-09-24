@@ -54,7 +54,11 @@ read_map() {
 }
 
 # 待处理的文本文件集合。
-# 注意：**必须跳过本脚本自身**——否则一次 --apply 会把脚本改坏（真事，已踩过）。
+# 跳过清单（都是踩过坑才加的）：
+#   * 本脚本自身 —— 否则一次 --apply 会把脚本里的映射表改坏（原值反而留在仓库里）
+#   * .sanitize-map.tsv —— 它就是映射表本身
+#   * docs/SANITIZATION.md —— 它**本身就在列举占位符**，卷进替换会自指
+#   * refs/ · coscli* · __pycache__ —— 见 .gitignore 的排除理由
 find_text_files() {
   find . \
     -type f \
@@ -65,6 +69,7 @@ find_text_files() {
     -not -path "*/__pycache__/*" \
     -not -name "*.pyc" \
     -not -name ".sanitize-map.tsv" \
+    -not -path "./docs/SANITIZATION.md" \
     -not -path "./$SELF_REL" \
     -print0
 }
@@ -96,6 +101,29 @@ echo "== 净化模式: $MODE =="
 echo "   映射表: $MAPFILE"
 echo
 
+# ---- 撞名预检（这是踩过坑的：占位符若与语料里**既有标识符**同名，revert 会改坏代码）----
+# 反例：占位符 `LINKS_HOST` 与 scripts/package_and_upload.sh 里本来就叫 LINKS_HOST 的
+# shell 变量撞名 ⇒ revert 把变量名也换成真实值，脚本直接语法错误。
+collisions=0
+if [ "$MODE" = apply ]; then
+  while IFS=$'\t' read -r _ to; do
+    [ -n "$to" ] || continue
+    n=$(count_hits "$to")
+    if [ "$n" != "0" ]; then
+      printf '[预检] ⚠️  占位符 %s 在语料中已存在 %s 处（撞名风险）\n' "$to" "$n" >&2
+      collisions=$((collisions + 1))
+    fi
+  done < <(read_map)
+  if [ "$collisions" != "0" ]; then
+    cat >&2 <<'EOF'
+[预检] 上面这些占位符会与既有标识符混淆，导致 --revert 不可逆。
+[预检] 改法：给占位符加一个不会撞名的前缀（例如 X_LINKS_HOST、ZZ_REMOTE_USER）。
+[预检] 确认无误可设 SANITIZE_FORCE=1 跳过本检查。
+EOF
+    [ "${SANITIZE_FORCE:-0}" = "1" ] || exit 4
+  fi
+fi
+
 if [ "$MODE" = check ]; then
   printf '%-30s %s\n' "原值" "命中行数"
   printf '%-30s %s\n' "------------------------------" "--------"
@@ -109,12 +137,12 @@ if [ "$MODE" = check ]; then
 fi
 
 if [ "$MODE" = revert ]; then
-  echo "== 还原（占位符 → 原值，逆序执行）=="
+  echo "== 还原（占位符 → 原值，长值优先）=="
   while IFS=$'\t' read -r from to; do
     [ -n "$from" ] || continue
     n=$(apply_edit "s|${to}|${from}|g")
     echo "  ${to} -> ${from}   (${n} 个文本文件)"
-  done < <(read_map | tac)
+  done < <(read_map)   # 必须与 apply 同序（长值优先）；用 tac 会让短占位符吃掉长的
   echo
   echo "还原完成。建议复核：bash $0 --check"
   exit 0

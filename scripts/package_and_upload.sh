@@ -12,7 +12,7 @@
 #   5) 追加 www 版本（含图，供浏览器直接看）到 links-server
 #
 # 依赖：本地有 coscli（~/.local/bin/coscli）且 ~/.cos.yaml 已配置；
-#       能 ssh LINKS_USER@LINKS_HOST。
+#       能 ssh LINKS_USER@X_LINKS_HOST。
 # 注意：原始 perf.data 不上传（体积原因），只在 a3-22 留档。
 # ---------------------------------------------------------------------------
 set -euo pipefail
@@ -33,7 +33,7 @@ done
 SHARE=${SHARE:-share}
 BUCKET=${BUCKET:-COS_BUCKET}
 BUCKET_FQ=${BUCKET_FQ:-COS_BUCKET_FQ.COS_ENDPOINT}
-LINKS_HOST=${LINKS_HOST:-LINKS_USER@LINKS_HOST}
+LINKS_HOST=${LINKS_HOST:-LINKS_USER@X_LINKS_HOST}
 NAME="prepare-input-cpu-analysis-$TAG"
 
 cd "$ROOT"

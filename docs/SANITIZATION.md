@@ -29,13 +29,18 @@
 | 内部分析项目目录名 | `HIST_PROJECT` | 701 |
 | 内网 IP（目标机） | `A3_22_IP` | 2 |
 | 链接服务公网 IP | `LINKS_IP` | 2 |
-| 链接服务域名 | `LINKS_HOST` | 4 |
-| 链接服务用户名 | `LINKS_USER@LINKS_HOST` | 3 |
+| 链接服务域名 | `X_LINKS_HOST` | 4 |
+| 链接服务用户名 | `LINKS_USER@X_LINKS_HOST` | 3 |
 | COS 桶名（短名 / 全名） | `COS_BUCKET` / `COS_BUCKET_FQ` | 6 / 2 |
 | COS 端点 | `COS_ENDPOINT` | 2 |
 | 发布者邮箱 | `PUBLISHER_EMAIL` | 1 |
 
 替换在**文本文件**上执行；二进制文件不替换，改为在 `.gitignore` 里排除（见 §3）。
+
+> **本文件自身被排除在替换范围之外**（`scripts/sanitize_for_publish.sh` 里有显式跳过）。
+> 原因：它在**列举占位符**，若参与替换会自指——`--revert` 会把表里的占位符
+> 当成数据处理，把文档改坏。所以本表**只记占位符名，不记真实值**；
+> 真实值只存在于 `.sanitize-map.tsv`。
 
 ## 3. 整体排除的内容（`.gitignore`）
 
@@ -89,6 +94,18 @@ bash scripts/sanitize_for_publish.sh --apply
 > 结果 `--apply` 会**把脚本自己也替换掉**（映射项 `<原值>|REMOTE_USER` 变成
 > `REMOTE_USER|REMOTE_USER`），导致 `--revert` 失效、且原值反而随脚本留在仓库里。
 > 现在的版本显式跳过脚本自身，并把真实值外置。
+
+> **第二类坑：前缀互吃与标识符撞名**（也已修）。两个真实故障：
+> 1. `--revert` 曾用 `tac` 做逆序，导致**短占位符先执行并吃掉长占位符**：
+>    `COS_BUCKET` 先把 `COS_BUCKET_FQ` 的**前缀**替换掉、剩下 `<桶名短名>_FQ`；
+>    `X_LINKS_HOST` 又把 `LINKS_USER@X_LINKS_HOST` 里的后半段替换掉。
+>    → 修法：**revert 与 apply 同序（原值长度降序）**，不用 `tac`。
+> 2. 早期选的一个占位符，与某个交付脚本里**本来就存在的同名 shell 变量撞名**，
+>    revert 会把变量名一起替换掉 → 脚本直接语法错误。
+>    → 修法：撞名者改名（`LINKS_HOST` → `X_LINKS_HOST`），并在 `--apply` 前加
+>    **撞名预检**：若某个占位符在语料中已存在就告警并中止（`SANITIZE_FORCE=1` 可跳过）。
+>
+> 修完后做过**往返验证**：`--apply` 再 `--revert`，与原树逐文件一致。
 
 > ⚠️ `--revert` 能还原§2 的字符串替换，但**不会**把 `.gitignore` 排除的文件找回来。
 > 完整未净化的工作树另有两份副本：
