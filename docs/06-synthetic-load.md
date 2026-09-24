@@ -413,7 +413,9 @@ chunked prefill 把单步 prefill 工作量封顶在 `chunk_size`，ISL 只决�
 
 配置：`--preset realmachine --batch 1 --isl 128 --osl 64 --steady-seconds 12`
 → **27 947 步**，scope = **379.1 µs/步**（`noop`）。
-图：`figures/06-substep-realmachine.svg`；数据：`data/harness/substep_realmachine.json`。
+图：`figures/06-substep-realmachine.svg`（真机口径）；
+对照 `figures/06-substep-stress.svg`（`stress` 口径，可与前者对比看 buffer 宽度的影响）；
+数据：`data/harness/substep_realmachine.json`。
 
 | 子步骤 | 占 scope | 每步 |
 |---|---|---|
@@ -617,12 +619,13 @@ bash harness/scripts/prof_harness.sh --slot-mapping-mode noop --batch 16 --isl 1
 
 产物目录：`data/harness/prof_realmachine_20260924-031609/`
 （`topdown.json`、`hotspots.json`、`hotspots_top20.csv`、`annotate_top.json`、
-`flamegraph_oncpu.svg` + `.folded`、`manifest.json`、`noise_pre/post.json`）。
+`data/harness/prof_realmachine_20260924-031609/flamegraph_oncpu.svg` + 同名 `.folded`、
+`manifest.json`、`noise_pre/post.json`）。
 
 | 项 | 结果 |
 |---|---|
-| **on-CPU 火焰图** | `flamegraph_oncpu.svg`（flamegraph-rs 0.6.14，**29 953 样本，0 lost**） |
-| 折叠栈 | `flamegraph_oncpu.folded`（6952 行） |
+| **on-CPU 火焰图** | `data/harness/prof_realmachine_20260924-031609/flamegraph_oncpu.svg`（flamegraph-rs 0.6.14，**29 953 样本，0 lost**）；<br>同一张图已归档到交付图的统一目录：`figures/05-flame-harness-realmachine.svg` |
+| 折叠栈 | `data/harness/prof_realmachine_20260924-031609/flamegraph_oncpu.folded`（6952 行） |
 | **指令级 annotate** | `_PyEval_EvalFrameDefault` 11.43%（`object.h:642/646` 的**引用计数读写占 17.5%**）；`_PyObject_Malloc` 1.63%（free-list 头 load/store）；`unicodekeys_lookup_unicode` 1.38% |
 | self 热点 top-5（火焰图口径） | `_PyEval_EvalFrameDefault` 2164 / `Py_INCREF` 1190 / `_PyType_Lookup` 375 / `unicodekeys_lookup_unicode` 373 / `pthread_mutex_lock` 336 样本 |
 
@@ -711,4 +714,3 @@ cache 与干扰环境"。harness 是紧循环、单进程、无步间通信，**
 > sudo perf report --force --stdio --no-children --sort dso,symbol --symfs "$SYMFS" -i perf.data
 > ```
 > 补完这两个库后，`_PyEval_EvalFrameDefault` 从裸地址变成 11.43% 的可读符号。
-

@@ -321,7 +321,7 @@ harness owner 的独立基线为 364.8 / 17.1 / 379.1 µs ⇒ **偏差 +3.2% / +
 
 #### （c）realmachine 核心曲线
 
-图：`figures/06-sweep-realmachine-batch.svg`、`06-sweep-rm-isl.svg`。
+图：`figures/06-sweep-realmachine-batch.svg`、`figures/06-sweep-rm-isl.svg`。
 口径 `pi_net_p50_us`，`--repeat 3` 取跨轮中位数。
 
 | preset | 维度 | `c_us` | `a_us_per_unit` | R² | n | `noise_band_pct` |
@@ -342,7 +342,8 @@ harness owner 的独立基线为 364.8 / 17.1 / 379.1 µs ⇒ **偏差 +3.2% / +
 
 #### （d）stress 六维（**仅斜率/趋势，不可作真机对照**）
 
-图：`06-sweep-{isl,batch,chunk,blocksize,spec,prefix}.svg` + `06-sweep-summary.svg`。
+图：`figures/06-sweep-{isl,batch,chunk,blocksize,spec,prefix}.svg`
+ + `figures/06-sweep-summary.svg`（2×3 汇总）+ `figures/06-sweep-panels.svg`（同源的拼版）。
 
 | dim | `c_us` | `a_us_per_unit` | R² | n | 判断 |
 |---|---|---|---|---|---|
@@ -357,3 +358,18 @@ harness owner 的独立基线为 364.8 / 17.1 / 379.1 µs ⇒ **偏差 +3.2% / +
 与 `realmachine` 的 1.6750 一致 ⇒ **`_update_states` 的逐请求成本对 preset 不敏感**，
 而 `_prepare_inputs` 的斜率会随 preset 变（0.5375 vs 0.7310）——因为它吃 `max_model_len`
 决定的 cache footprint。
+
+### 7.3 历史基线图（既有项目的实测复刻，口径见 `docs/09`）
+
+本节三张图来自对既有 `HIST_PROJECT` 项目 26 个 decode 配置的挖掘，
+**用于说明"占比随模式跃变"这件事不是本次采集的偶然**（数据：`data/historical/`）。
+
+| 图 | 内容 | 一句话结论 |
+|---|---|---|
+| `figures/hist-01-phase-decomposition.svg` | 各配置的 phase 分解 | `prepare input` 绝对耗时 1.6–6.4 ms，**与模型规模基本无关** |
+| `figures/hist-02-prepare-vs-step-period.svg` | `prepare input` vs 单步周期（按模式分组） | eager→graph 时**分母塌了 7.5×**，占比从 6.7% 跳到 55.3%，而分子只 +10% |
+| `figures/hist-03-topdown-ipc.svg` | worker 主线程 topdown 四桶 + IPC | frontend-bound 55.99–65.00%、IPC 0.719–0.890，跨 0.8B→80B / TP1–4 稳定 |
+
+> ⚠️ 引用这三张图的数字时**必须带 pystack 污染声明**：历史 phase 数据由
+> `POST /start_profile` 采集，该接口会无条件启动 1 ms 采样器（实测对 `prepare input`
+> 污染 **+24.2%**、对 ITL **+60%**）。判据与修正见 `docs/09-historical-data-caveat.md`。

@@ -171,7 +171,7 @@ GE 把前四层压到"每步一次"，但**压不掉 Guards**；Guards 失效还
 
 ### 2.4 E2.3 稳态每步到底走什么：官方 `compile_cache` 配图
 
-- **来源**：[模型编译缓存功能](https://www.hiascend.com/document/detail/zh/Pytorch/2600/modthirdparty/torchairuseguide/docs/zh/ascend_ir/features/advanced/compile_cache.md)（"图 1 max-autotune模式执行时间分布示意图"，访问 2026-09-24；图源 `raw.gitcode.com/Ascend/torchair/raw/26.0.0/docs/zh/figures/execution_time_1.png`）。
+- **来源**：[模型编译缓存功能](https://www.hiascend.com/document/detail/zh/Pytorch/2600/modthirdparty/torchairuseguide/docs/zh/ascend_ir/features/advanced/compile_cache.md)（"图 1 max-autotune模式执行时间分布示意图"，访问 2026-09-24；图源 `https://raw.gitcode.com/Ascend/torchair/raw/26.0.0/docs/zh/figures/execution_time_1.png`）。
 - **机制**：该图把 Ascend IR（GE）模式的时间线画成三段：
   - **首次执行**：`Dynamo编译` → `Guards` → `Ascend IR图编译` → `Input转换` → `图执行`；
   - **再次执行**：`Guards` → `Input转换` → `图执行`（Dynamo 与 IR 编译消失）；

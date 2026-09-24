@@ -327,7 +327,9 @@ graph + MTP-off 各臂 frontend **55.99–65.00%**、IPC **0.719–0.890**。
 > 数据源：`data/subscope/sub-s1-c2d-gdnb/`（B=1, ISL=128, decode,
 > FULL_DECODE_ONLY, pystack off）、`data/subscope/sub-s2-on-attn-20260923T184335Z/`
 > （B=64 同配置）。工具：`instrument/`（AST 等价性已验证的探针）+ 
-> `scripts/parse_subscope.py`。图：`figures/05-subscope-breakdown.svg`。
+> `scripts/parse_subscope.py`。图：`figures/05-subscope-breakdown.svg`（**占比 %**）
+> 与 `figures/05-subscope-breakdown-absolute.svg`（**绝对 µs/步**，同一份数据的另一种读数——
+> 看绝对值用后者，看结构占比用前者）。
 
 前面 §1–§4 的 perf 采样是**进程级**的，无法把热点函数切到 scope 内部（限制 G1）。
 本节用 66 个 `pi: *` 子探针补上这一层：每个探针记录 `self_us`（独占）与
