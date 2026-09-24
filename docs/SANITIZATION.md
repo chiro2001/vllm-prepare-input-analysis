@@ -67,6 +67,10 @@
 ## 5. 如何还原 / 如何重做
 
 ```bash
+# 首次使用：从模板建映射表并填入真实值
+cp scripts/sanitize-map.example.tsv .sanitize-map.tsv
+$EDITOR .sanitize-map.tsv
+
 # 查看当前命中情况（不修改文件）
 bash scripts/sanitize_for_publish.sh --check
 
@@ -76,6 +80,15 @@ bash scripts/sanitize_for_publish.sh --revert
 # 重新净化
 bash scripts/sanitize_for_publish.sh --apply
 ```
+
+**真实值放在哪里？** 在 `.sanitize-map.tsv`（仓库根目录），**该文件被 `.gitignore` 排除**，
+不进仓库；仓库里只有模板 `scripts/sanitize-map.example.tsv`。
+所以 `sanitize_for_publish.sh` 本身可以公开——它只是读表干活，不含任何真实标识。
+
+> **这个设计是踩坑换来的**：最早的版本把"原值 → 占位符"表直接写在脚本里，
+> 结果 `--apply` 会**把脚本自己也替换掉**（映射项 `<原值>|REMOTE_USER` 变成
+> `REMOTE_USER|REMOTE_USER`），导致 `--revert` 失效、且原值反而随脚本留在仓库里。
+> 现在的版本显式跳过脚本自身，并把真实值外置。
 
 > ⚠️ `--revert` 能还原§2 的字符串替换，但**不会**把 `.gitignore` 排除的文件找回来。
 > 完整未净化的工作树另有两份副本：

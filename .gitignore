@@ -1,4 +1,8 @@
 # ---- 第三方源码（upstream vLLM，Apache-2.0；不属于本项目产出，且体积 39 MB）----
+# ---- 净化映射表（含真实内部标识；仓库里只保留 scripts/sanitize-map.example.tsv）----
+/.sanitize-map.tsv
+
+# ---- 第三方源码（upstream vLLM，Apache-2.0；不属于本项目产出，且体积 39 MB）----
 # 需要时按 docs/00-INDEX.md 记录的 commit 自行 clone：
 #   git clone https://github.com/vllm-project/vllm && git checkout 568afb3a1
 /refs/
