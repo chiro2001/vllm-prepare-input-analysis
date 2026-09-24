@@ -65,3 +65,15 @@ bash harness/scripts/pi-docker.sh --preset realmachine --batch 1 --isl 128
 原始 `perf.data`（419 MiB + 245 MiB）与符号目录**未进交付包**（体积原因），
 留在 `a3-22:~/projects/vllm/prepare-input-phase/data/profiles/`；
 重绘火焰图需要它们或对应的 `--symfs` 目录，配方见 `docs/05-hotspots.md`。
+
+## 关于本仓库的标识符
+
+本仓库是**净化版**：内部账号/员工号、内网地址、主机名、对象存储桶名等已替换为
+占位符（如 `REMOTE_USER`、`A3_22_IP`、`COS_BUCKET`），**技术内容未改动**。
+
+完整替换表、保留项判断依据、以及一键还原/重做的方法见
+**[`docs/SANITIZATION.md`](docs/SANITIZATION.md)**。
+工具：`scripts/sanitize_for_publish.sh`（真实值外置在 `.sanitize-map.tsv`，不进仓库）。
+
+未净化的原始工作树另有两处：a3-22 `~/projects/vllm/prepare-input-phase/`，
+以及内部分发的 COS 交付包。
