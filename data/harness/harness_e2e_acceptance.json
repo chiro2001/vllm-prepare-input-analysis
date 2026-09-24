@@ -1,0 +1,50 @@
+{
+  "purpose": "harness 自验收（无卡容器内，5 项）",
+  "run_at": "2026-09-24T03:40:47+0800",
+  "entry": "bash harness/scripts/pi-docker.sh \"bash /work/scratch/e2e_check.sh\"",
+  "checks": [
+    {
+      "id": 1,
+      "name": "核心 replay（realmachine 口径）",
+      "expect": "跑完且 pi_p50 在 300-450µs 区间",
+      "observed": "pi_p50=355.8µs, us_p50=11.5µs (--steps 300)",
+      "pass": true
+    },
+    {
+      "id": 2,
+      "name": "非法配置必须被拒绝",
+      "expect": "exit=2 且给出可操作的提示",
+      "observed": "error: isl+osl=2112 > max_model_len(2048) ... 需要 17 个 KV block > 16",
+      "pass": true
+    },
+    {
+      "id": 3,
+      "name": "trace 驱动（P2 通路）",
+      "expect": "自动按 trace 尺寸扩 buffer 并跑完",
+      "observed": "steps_run=75 (trace_synth_prefill.jsonl); autosize 把 max_num_reqs/max_model_len 抬到 trace 实际峰值",
+      "pass": true
+    },
+    {
+      "id": 4,
+      "name": "CLI --help + sweep",
+      "expect": "help OK 且 sweep 能出数",
+      "observed": "cli help OK; [sweep] isl=128 pi_p50=463.7us",
+      "pass": true
+    },
+    {
+      "id": 5,
+      "name": "shim 审计",
+      "expect": "无未 shim 的设备操作、无 warning",
+      "observed": "installed=True, warnings=[], UNSHIMMED_DEVICE_OP=0, pin_memory_available=False（容器无 pinned allocator，已登记为 D9）",
+      "pass": true
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "passed": 5
+  },
+  "known_limitations_reconfirmed": [
+    "pin_memory_available=False：容器无 pinned allocator，pin_memory 全部降级为 False（docs/06 §5 D9）",
+    "trace 模式下 max_model_len 由 trace 的实际 prompt 长度推导（真机跑该 trace 时引擎必然开着足够的 max_model_len）"
+  ]
+}

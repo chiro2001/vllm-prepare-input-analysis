@@ -1,0 +1,332 @@
+{
+  "artifacts": {
+    "pmu": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/pmu/count.json",
+    "hotspots": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/perf/hotspots.json",
+    "annotate_txt": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/perf/annotate/_.__0x00000000001c95e8.txt",
+    "annotate_json": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/perf/annotate/_.__0x00000000001c95e8.json",
+    "flamegraph_svg": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/perf/flamegraph.svg"
+  },
+  "pmu": {
+    "counters": {
+      "CPU_CYCLES": 1627745082,
+      "INST_RETIRED": 6037766844,
+      "INST_SPEC": 6491735176,
+      "BR_PRED": 1309159058,
+      "BR_MIS_PRED": 5965355,
+      "L1D_CACHE_REFILL": 1047855
+    },
+    "ipc": 3.7092828052543916,
+    "time_enabled": 561510180,
+    "time_running": 561510180,
+    "confidence": 1.0,
+    "wall_s": 0.669673
+  },
+  "symfs": {
+    "symfs": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/perf/symfs",
+    "copied": [],
+    "existing": [],
+    "n_dsos": 0
+  },
+  "hotspots_top": [
+    {
+      "overhead_pct": 7.77,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c95e8"
+    },
+    {
+      "overhead_pct": 5.84,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c95dc"
+    },
+    {
+      "overhead_pct": 5.68,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c95fc"
+    },
+    {
+      "overhead_pct": 5.33,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c8870"
+    },
+    {
+      "overhead_pct": 3.88,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c885c"
+    },
+    {
+      "overhead_pct": 3.49,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c8850"
+    },
+    {
+      "overhead_pct": 2.27,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c8824"
+    },
+    {
+      "overhead_pct": 1.88,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c95a8"
+    },
+    {
+      "overhead_pct": 1.87,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c887c"
+    },
+    {
+      "overhead_pct": 1.67,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x0000000000115928"
+    },
+    {
+      "overhead_pct": 1.62,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c8898"
+    },
+    {
+      "overhead_pct": 1.58,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x0000000000306808"
+    },
+    {
+      "overhead_pct": 1.37,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x000000000019eaa0"
+    },
+    {
+      "overhead_pct": 1.34,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x000000000011427c"
+    },
+    {
+      "overhead_pct": 1.29,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c8ce0"
+    },
+    {
+      "overhead_pct": 1.21,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x000000000019eaf4"
+    },
+    {
+      "overhead_pct": 1.08,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x0000000000114274"
+    },
+    {
+      "overhead_pct": 1.07,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x0000000000112438"
+    },
+    {
+      "overhead_pct": 1.07,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x0000000000113110"
+    },
+    {
+      "overhead_pct": 1.07,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001a2854"
+    }
+  ],
+  "annotate": {
+    "symbol": "[.] 0x00000000001c95e8",
+    "caliber_version": "prof-v1",
+    "kind": "annotate",
+    "file": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/perf/annotate/_.__0x00000000001c95e8.txt",
+    "n_instructions": 0,
+    "sum_instr_pct": 0,
+    "hot_source_lines": [],
+    "top_instructions": []
+  },
+  "flamegraph_tool": "flamegraph-rs",
+  "caliber_version": "prof-v1",
+  "tag": "smoke3",
+  "ts": "2026-09-24T01:54:55+0800",
+  "out": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445",
+  "cpus": "204,206,210,212",
+  "image": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+  "cmd": [
+    "python3",
+    "-m",
+    "pi_harness.profiling.microbench",
+    "--phase",
+    "arith",
+    "--iters",
+    "3000000",
+    "--warmup",
+    "0",
+    "--json",
+    "/tmp/mb_smoke.json"
+  ],
+  "stages": [
+    "pmu",
+    "perf"
+  ],
+  "passes": [
+    {
+      "name": "pmu",
+      "ts_start": "2026-09-24T01:54:51+0800",
+      "instruments": {
+        "pmu": {
+          "cmd": [
+            "sudo",
+            "-n",
+            "env",
+            "PYTHONPATH=/home/REMOTE_USER/projects/vllm/prepare-input-phase/harness",
+            "PI_LIBKPERFX=/home/REMOTE_USER/tools/libkperfx",
+            "PI_FLAMEGRAPH_RS=/home/REMOTE_USER/tools/cargo/bin/flamegraph",
+            "PI_PYSPY=/home/REMOTE_USER/.local/bin/py-spy",
+            "python3",
+            "-m",
+            "pi_harness.profiling.pmu",
+            "count",
+            "--pid",
+            "3992727",
+            "--wait-exit",
+            "--timeout",
+            "300.0",
+            "--ready-file",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/pmu/pmu.ready",
+            "--out",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/pmu/count.json",
+            "--events",
+            "cpu_cycles,inst_retired,inst_spec,br_pred,br_mis_pred,l1d_cache_refill"
+          ],
+          "pid": 3992848,
+          "log": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/pmu/pmu.log",
+          "ready_file": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/pmu/pmu.ready"
+        }
+      },
+      "docker_run": {
+        "cmd": [
+          "docker",
+          "run",
+          "-d",
+          "--cidfile",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/pmu/container.cid",
+          "--name",
+          "pi-prof-smoke3-pmu",
+          "--network",
+          "none",
+          "--cpuset-cpus",
+          "204,206,210,212",
+          "--user",
+          "1003:1003",
+          "-e",
+          "HOME=/tmp",
+          "-e",
+          "TORCH_DEVICE_BACKEND_AUTOLOAD=0",
+          "-e",
+          "PI_HARNESS_ROOT=/work/harness",
+          "-e",
+          "PYTHONPATH=/work/harness",
+          "-e",
+          "PYTHONDONTWRITEBYTECODE=1",
+          "-v",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase:/work",
+          "-w",
+          "/work",
+          "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+          "bash",
+          "-c",
+          "kill -STOP $$; exec python3 -m pi_harness.profiling.microbench --phase arith --iters 3000000 --warmup 0 --json /tmp/mb_smoke.json"
+        ],
+        "rc": 0,
+        "stdout": "5286510832eb6f96d5e45b0c0439bf98245ef8fb7edb9994324b81417a0f1bed",
+        "stderr": ""
+      },
+      "container": "5286510832eb6f96d5e45b0c0439bf98245ef8fb7edb9994324b81417a0f1bed",
+      "container_name": "pi-prof-smoke3-pmu",
+      "host_pid": 3992727,
+      "gate": true,
+      "ready": {
+        "pmu": true
+      },
+      "target": {
+        "exit_code": 0,
+        "rc": 0,
+        "wall_s": 0.12,
+        "stderr": "",
+        "stopped_reason": "exit"
+      }
+    },
+    {
+      "name": "perf",
+      "ts_start": "2026-09-24T01:54:52+0800",
+      "instruments": {
+        "perf": {
+          "cmd": [
+            "sudo",
+            "-n",
+            "perf",
+            "record",
+            "-o",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/perf/perf.data",
+            "-F",
+            "999",
+            "-g",
+            "--call-graph",
+            "dwarf",
+            "-p",
+            "3994493"
+          ],
+          "pid": 3994625,
+          "log": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/perf/perf.log",
+          "ready_file": null,
+          "exit_code": -2
+        }
+      },
+      "docker_run": {
+        "cmd": [
+          "docker",
+          "run",
+          "-d",
+          "--cidfile",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke3_20260924-015445/passes/perf/container.cid",
+          "--name",
+          "pi-prof-smoke3-perf",
+          "--network",
+          "none",
+          "--cpuset-cpus",
+          "204,206,210,212",
+          "--user",
+          "1003:1003",
+          "-e",
+          "HOME=/tmp",
+          "-e",
+          "TORCH_DEVICE_BACKEND_AUTOLOAD=0",
+          "-e",
+          "PI_HARNESS_ROOT=/work/harness",
+          "-e",
+          "PYTHONPATH=/work/harness",
+          "-e",
+          "PYTHONDONTWRITEBYTECODE=1",
+          "-v",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase:/work",
+          "-w",
+          "/work",
+          "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+          "bash",
+          "-c",
+          "kill -STOP $$; exec python3 -m pi_harness.profiling.microbench --phase arith --iters 3000000 --warmup 0 --json /tmp/mb_smoke.json"
+        ],
+        "rc": 0,
+        "stdout": "5e903e0e8f1f4c9aba914fbc1b2a24094b51275993144bc6fc142fe1a1f3cb4c",
+        "stderr": ""
+      },
+      "container": "5e903e0e8f1f4c9aba914fbc1b2a24094b51275993144bc6fc142fe1a1f3cb4c",
+      "container_name": "pi-prof-smoke3-perf",
+      "host_pid": 3994493,
+      "gate": true,
+      "target": {
+        "exit_code": 0,
+        "rc": 0,
+        "wall_s": 0.139,
+        "stderr": "",
+        "stopped_reason": "exit"
+      }
+    }
+  ],
+  "wall_s_total": 9.74
+}

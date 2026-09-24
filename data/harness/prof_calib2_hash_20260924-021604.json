@@ -1,0 +1,538 @@
+{
+  "artifacts": {
+    "pmu": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/pmu/count.json",
+    "topdown": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/pmu/topdown.json",
+    "hotspots": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/perf/hotspots.json",
+    "annotate_txt": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/perf/annotate/0x000000000022ff54.txt",
+    "annotate_json": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/perf/annotate/0x000000000022ff54.json",
+    "flamegraph_svg": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/perf/flamegraph.svg"
+  },
+  "pmu": {
+    "counters": {
+      "CPU_CYCLES": 11188817583,
+      "INST_RETIRED": 13140543433,
+      "INST_SPEC": 13299660299,
+      "BR_PRED": 666706553,
+      "BR_MIS_PRED": 2592616,
+      "L1D_CACHE_REFILL": 15400779
+    },
+    "ipc": 1.1744353981572997,
+    "time_enabled": 3858256800,
+    "time_running": 3858256800,
+    "confidence": 1.0,
+    "wall_s": 3.88911
+  },
+  "topdown_meta": {
+    "mode": "split",
+    "split": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/pmu/topdown_split",
+    "retries": []
+  },
+  "topdown": {
+    "level1": {
+      "retiring": 19.601199444269287,
+      "bad_spec": 0.24305161039248174,
+      "frontend_bound": 5.9291070351204205,
+      "backend_bound": 74.22664191021781
+    },
+    "level2": {
+      "frontend": {
+        "frontend_latency_bound": 4.4039035981017705,
+        "frontend_bandwidth_bound": 1.52520343701865
+      },
+      "backend": {
+        "resource_bound": 1.5336019959122051,
+        "core_bound": 72.6930399143056,
+        "mem_bound": 0.0
+      }
+    },
+    "level3_mem": {
+      "mem_l1_bound": 0.0,
+      "mem_l2_bound": 0.0,
+      "mem_l3_dram_bound": 0.0,
+      "mem_mem_bound": 0.0,
+      "mem_store_bound": 0.0
+    },
+    "ooo_stall": {
+      "rob_stall_pct": null,
+      "ptag_stall_pct": null,
+      "mapq_stall_pct": null,
+      "pcbuf_stall_pct": null,
+      "other_stall_pct": null
+    },
+    "ipc": 1.1760719666561572,
+    "confidence": {
+      "per_group": [
+        {
+          "file": "split_1.json",
+          "preset": "920b_topdown_full_1",
+          "counter": null,
+          "count": null,
+          "time_enabled": 3855861050,
+          "time_running": 3855861050,
+          "confidence": 1.0,
+          "useronly_forced": false,
+          "pmu": "920B"
+        }
+      ],
+      "min": 1.0,
+      "time_enabled_sum": 3855861050,
+      "time_running_sum": 3855861050,
+      "ratio": 1.0
+    },
+    "notes": [
+      "只合并了 1/9 个 preset 组，缺失分量按 0 处理"
+    ]
+  },
+  "symfs": {
+    "symfs": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/perf/symfs",
+    "copied": [],
+    "existing": [],
+    "cached": [
+      "/usr/lib/ld-linux-aarch64.so.1",
+      "/usr/lib/locale/C.utf8/LC_CTYPE",
+      "/usr/lib64/gconv/gconv-modules.cache",
+      "/usr/lib64/libbz2.so.1.0.8",
+      "/usr/lib64/libc.so.6",
+      "/usr/lib64/libcrypto.so.3.0.12",
+      "/usr/lib64/liblzma.so.5.4.7",
+      "/usr/lib64/libm.so.6",
+      "/usr/lib64/libz.so.1.2.13",
+      "/usr/local/python3.12.13/bin/python3.12",
+      "/usr/local/python3.12.13/lib/libpython3.12.so.1.0",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_blake2.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_bz2.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_hashlib.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_heapq.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_json.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_lzma.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_posixsubprocess.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_queue.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_socket.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/array.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/fcntl.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/math.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/select.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/termios.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/zlib.cpython-312-aarch64-linux-gnu.so"
+    ],
+    "n_dsos": 189
+  },
+  "caveats": [
+    "有 163 个 DSO 抽取失败（符号可能不全）",
+    "采样后噪声超阈 {'203': 42.91, '207': 22.13} load1/cpu=0.096"
+  ],
+  "hotspots_top": [
+    {
+      "overhead_pct": 7.87,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ff54"
+    },
+    {
+      "overhead_pct": 7.84,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x00000000002300d4"
+    },
+    {
+      "overhead_pct": 6.94,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ffbc"
+    },
+    {
+      "overhead_pct": 6.42,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x00000000002300b8"
+    },
+    {
+      "overhead_pct": 6.07,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ffd8"
+    },
+    {
+      "overhead_pct": 5.46,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x00000000002300fc"
+    },
+    {
+      "overhead_pct": 5.41,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x0000000000230048"
+    },
+    {
+      "overhead_pct": 5.36,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000023002c"
+    },
+    {
+      "overhead_pct": 5.33,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ffa0"
+    },
+    {
+      "overhead_pct": 5.04,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x0000000000230010"
+    },
+    {
+      "overhead_pct": 4.87,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x0000000000230064"
+    },
+    {
+      "overhead_pct": 4.85,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000023009c"
+    },
+    {
+      "overhead_pct": 4.74,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x0000000000230080"
+    },
+    {
+      "overhead_pct": 4.39,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022fff4"
+    },
+    {
+      "overhead_pct": 3.65,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ff84"
+    },
+    {
+      "overhead_pct": 1.58,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b4c"
+    },
+    {
+      "overhead_pct": 1.39,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ff50"
+    },
+    {
+      "overhead_pct": 1.29,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x00000000002300e8"
+    },
+    {
+      "overhead_pct": 0.89,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyEval_EvalFrameDefault"
+    },
+    {
+      "overhead_pct": 0.88,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b44"
+    }
+  ],
+  "annotate": {
+    "symbol": "[.] 0x000000000022ff54",
+    "symbol_used": "0x000000000022ff54",
+    "caliber_version": "prof-v1",
+    "kind": "annotate",
+    "file": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/perf/annotate/0x000000000022ff54.txt",
+    "n_instructions": 0,
+    "sum_instr_pct": 0,
+    "hot_source_lines": [],
+    "top_instructions": []
+  },
+  "flamegraph_tool": "flamegraph-rs",
+  "caliber_version": "prof-v1",
+  "tag": "prof_calib2_hash",
+  "ts": "2026-09-24T02:18:12+0800",
+  "out": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737",
+  "cpus": "203,207,211,213",
+  "image": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+  "cmd": [
+    "python3",
+    "-m",
+    "pi_harness.profiling.microbench",
+    "--phase",
+    "hash",
+    "--threads",
+    "1",
+    "--warmup",
+    "1",
+    "--json",
+    "/tmp/microbench_hash.json",
+    "--iters",
+    "350000"
+  ],
+  "stages": [
+    "pmu",
+    "topdown",
+    "perf"
+  ],
+  "passes": [
+    {
+      "name": "pmu",
+      "ts_start": "2026-09-24T02:17:42+0800",
+      "instruments": {
+        "pmu": {
+          "cmd": [
+            "sudo",
+            "-n",
+            "env",
+            "PYTHONPATH=/home/REMOTE_USER/projects/vllm/prepare-input-phase/harness",
+            "PI_LIBKPERFX=/home/REMOTE_USER/tools/libkperfx",
+            "PI_FLAMEGRAPH_RS=/home/REMOTE_USER/tools/cargo/bin/flamegraph",
+            "PI_PYSPY=/home/REMOTE_USER/.local/bin/py-spy",
+            "python3",
+            "-m",
+            "pi_harness.profiling.pmu",
+            "count",
+            "--pid",
+            "48812",
+            "--wait-exit",
+            "--timeout",
+            "1800.0",
+            "--ready-file",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/pmu/pmu.ready",
+            "--out",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/pmu/count.json",
+            "--events",
+            "cpu_cycles,inst_retired,inst_spec,br_pred,br_mis_pred,l1d_cache_refill"
+          ],
+          "pid": 48936,
+          "log": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/pmu/pmu.log",
+          "ready_file": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/pmu/pmu.ready"
+        }
+      },
+      "docker_run": {
+        "cmd": [
+          "docker",
+          "run",
+          "-d",
+          "--cidfile",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/pmu/container.cid",
+          "--name",
+          "pi-prof-prof_calib2_hash-pmu",
+          "--network",
+          "none",
+          "--cpuset-cpus",
+          "203,207,211,213",
+          "--user",
+          "1003:1003",
+          "-e",
+          "HOME=/tmp",
+          "-e",
+          "TORCH_DEVICE_BACKEND_AUTOLOAD=0",
+          "-e",
+          "PI_HARNESS_ROOT=/work/harness",
+          "-e",
+          "PYTHONPATH=/work/harness",
+          "-e",
+          "PYTHONDONTWRITEBYTECODE=1",
+          "-v",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase:/work",
+          "-w",
+          "/work",
+          "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+          "bash",
+          "-c",
+          "kill -STOP $$; exec python3 -m pi_harness.profiling.microbench --phase hash --threads 1 --warmup 1 --json /tmp/microbench_hash.json --iters 350000"
+        ],
+        "rc": 0,
+        "stdout": "5ac517d67414bd66293691fa12a2f73de9c1bb037c166be8bce9c51e21714d0f",
+        "stderr": ""
+      },
+      "container": "5ac517d67414bd66293691fa12a2f73de9c1bb037c166be8bce9c51e21714d0f",
+      "container_name": "pi-prof-prof_calib2_hash-pmu",
+      "host_pid": 48812,
+      "gate": true,
+      "ready": {
+        "pmu": true
+      },
+      "target": {
+        "exit_code": 0,
+        "rc": 0,
+        "wall_s": 3.412,
+        "stderr": "",
+        "stopped_reason": "exit"
+      }
+    },
+    {
+      "name": "topdown_g1",
+      "ts_start": "2026-09-24T02:17:47+0800",
+      "instruments": {
+        "pmu": {
+          "cmd": [
+            "sudo",
+            "-n",
+            "env",
+            "PYTHONPATH=/home/REMOTE_USER/projects/vllm/prepare-input-phase/harness",
+            "PI_LIBKPERFX=/home/REMOTE_USER/tools/libkperfx",
+            "PI_FLAMEGRAPH_RS=/home/REMOTE_USER/tools/cargo/bin/flamegraph",
+            "PI_PYSPY=/home/REMOTE_USER/.local/bin/py-spy",
+            "python3",
+            "-m",
+            "pi_harness.profiling.pmu",
+            "count",
+            "--pid",
+            "49204",
+            "--wait-exit",
+            "--timeout",
+            "1800.0",
+            "--ready-file",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/topdown_g1/pmu.ready",
+            "--out",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/pmu/topdown_split/split_1.json",
+            "--preset",
+            "920b_topdown_full_1"
+          ],
+          "pid": 49325,
+          "log": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/topdown_g1/pmu.log",
+          "ready_file": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/topdown_g1/pmu.ready"
+        }
+      },
+      "docker_run": {
+        "cmd": [
+          "docker",
+          "run",
+          "-d",
+          "--cidfile",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/topdown_g1/container.cid",
+          "--name",
+          "pi-prof-prof_calib2_hash-topdown_g1",
+          "--network",
+          "none",
+          "--cpuset-cpus",
+          "203,207,211,213",
+          "--user",
+          "1003:1003",
+          "-e",
+          "HOME=/tmp",
+          "-e",
+          "TORCH_DEVICE_BACKEND_AUTOLOAD=0",
+          "-e",
+          "PI_HARNESS_ROOT=/work/harness",
+          "-e",
+          "PYTHONPATH=/work/harness",
+          "-e",
+          "PYTHONDONTWRITEBYTECODE=1",
+          "-v",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase:/work",
+          "-w",
+          "/work",
+          "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+          "bash",
+          "-c",
+          "kill -STOP $$; exec python3 -m pi_harness.profiling.microbench --phase hash --threads 1 --warmup 1 --json /tmp/microbench_hash.json --iters 350000"
+        ],
+        "rc": 0,
+        "stdout": "feda4feb6ef5771215024bee9d3683a2988339c74afadbf4c2e1c44417cbf7f6",
+        "stderr": ""
+      },
+      "container": "feda4feb6ef5771215024bee9d3683a2988339c74afadbf4c2e1c44417cbf7f6",
+      "container_name": "pi-prof-prof_calib2_hash-topdown_g1",
+      "host_pid": 49204,
+      "gate": true,
+      "ready": {
+        "pmu": true
+      },
+      "target": {
+        "exit_code": 0,
+        "rc": 0,
+        "wall_s": 3.411,
+        "stderr": "",
+        "stopped_reason": "exit"
+      }
+    },
+    {
+      "name": "perf",
+      "ts_start": "2026-09-24T02:17:51+0800",
+      "instruments": {
+        "perf": {
+          "cmd": [
+            "sudo",
+            "-n",
+            "perf",
+            "record",
+            "-o",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/perf/perf.data",
+            "-F",
+            "999",
+            "-g",
+            "--call-graph",
+            "dwarf",
+            "-p",
+            "49638"
+          ],
+          "pid": 49753,
+          "log": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/perf/perf.log",
+          "ready_file": null,
+          "exit_code": -2
+        },
+        "pyspy": {
+          "cmd": [
+            "sudo",
+            "-n",
+            "/home/REMOTE_USER/.local/bin/py-spy",
+            "record",
+            "--pid",
+            "49638",
+            "--duration",
+            "12",
+            "--rate",
+            "199",
+            "--format",
+            "flamegraph",
+            "-o",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/perf/pyspy.svg",
+            "--native"
+          ],
+          "pid": 49840,
+          "svg": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/perf/pyspy.svg"
+        }
+      },
+      "docker_run": {
+        "cmd": [
+          "docker",
+          "run",
+          "-d",
+          "--cidfile",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_hash_20260924-021737/passes/perf/container.cid",
+          "--name",
+          "pi-prof-prof_calib2_hash-perf",
+          "--network",
+          "none",
+          "--cpuset-cpus",
+          "203,207,211,213",
+          "--user",
+          "1003:1003",
+          "-e",
+          "HOME=/tmp",
+          "-e",
+          "TORCH_DEVICE_BACKEND_AUTOLOAD=0",
+          "-e",
+          "PI_HARNESS_ROOT=/work/harness",
+          "-e",
+          "PYTHONPATH=/work/harness",
+          "-e",
+          "PYTHONDONTWRITEBYTECODE=1",
+          "-v",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase:/work",
+          "-w",
+          "/work",
+          "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+          "bash",
+          "-c",
+          "kill -STOP $$; exec python3 -m pi_harness.profiling.microbench --phase hash --threads 1 --warmup 1 --json /tmp/microbench_hash.json --iters 350000"
+        ],
+        "rc": 0,
+        "stdout": "81a69e50d8b81ec9ff364473c5e35a9454a4e98376b905c7785679ef2d5e5a7b",
+        "stderr": ""
+      },
+      "container": "81a69e50d8b81ec9ff364473c5e35a9454a4e98376b905c7785679ef2d5e5a7b",
+      "container_name": "pi-prof-prof_calib2_hash-perf",
+      "host_pid": 49638,
+      "gate": true,
+      "target": {
+        "exit_code": 0,
+        "rc": 0,
+        "wall_s": 3.487,
+        "stderr": "",
+        "stopped_reason": "exit"
+      }
+    }
+  ],
+  "wall_s_total": 34.924
+}

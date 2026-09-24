@@ -1,0 +1,17 @@
+[2026-09-23T20:29:21Z] pmu_tid_sweep start tid=704908 groups=[1, 2, 3, 4, 5, 6, 7, 8, 9] window=3.0s prefix=920b_topdown_full_ -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/real-b1/pmu
+[2026-09-23T20:29:21Z] kperfx_version=1.0.0
+[2026-09-23T20:29:21Z] pmu=920B
+[2026-09-23T20:29:21Z] backend=920B(counting)
+[2026-09-23T20:29:21Z] preset_groups=9
+[2026-09-23T20:29:21Z] sudo=True
+[2026-09-23T20:29:21Z] target={"tid": 704908, "comm": "VLLM::EngineCor", "state": "R", "cpu": 139, "cpus_allowed": [122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157]} script_sha256=d984fd655a82bad90d6a90aa4f74df9d6a73a04cb35158c220458ba26826a073
+[2026-09-23T20:29:49Z] group 1: OK conf=1.0000 t_en=2850546620ns t_run=2850546620ns useronly=False counters=8 wall=3.133s attempt=1
+[2026-09-23T20:29:49Z] group 2: OK conf=1.0000 t_en=2927511250ns t_run=2927511250ns useronly=False counters=8 wall=3.1317s attempt=1
+[2026-09-23T20:29:49Z] group 3: OK conf=1.0000 t_en=2852349960ns t_run=2852349960ns useronly=False counters=8 wall=3.1332s attempt=1
+[2026-09-23T20:29:49Z] group 4: OK conf=1.0000 t_en=2927033250ns t_run=2927033250ns useronly=False counters=8 wall=3.1277s attempt=1
+[2026-09-23T20:29:49Z] group 5: OK conf=1.0000 t_en=2926570290ns t_run=2926570290ns useronly=False counters=8 wall=3.1256s attempt=1
+[2026-09-23T20:29:49Z] group 6: OK conf=1.0000 t_en=2850276710ns t_run=2850276710ns useronly=False counters=8 wall=3.1261s attempt=1
+[2026-09-23T20:29:49Z] group 7: OK conf=1.0000 t_en=2928860600ns t_run=2928860600ns useronly=False counters=8 wall=3.1273s attempt=1
+[2026-09-23T20:29:49Z] group 8: OK conf=1.0000 t_en=2851294290ns t_run=2851294290ns useronly=False counters=6 wall=3.133s attempt=1
+[2026-09-23T20:29:49Z] group 9: OK conf=1.0000 t_en=2927320200ns t_run=2927320200ns useronly=False counters=4 wall=3.1336s attempt=1
+[2026-09-23T20:29:49Z] done: 9/9 groups ok (exit 0)

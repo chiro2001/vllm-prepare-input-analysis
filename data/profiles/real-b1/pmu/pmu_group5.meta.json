@@ -1,0 +1,119 @@
+{
+  "schema": "pi-pmu-group-meta-v1",
+  "tag": "real-b1",
+  "group": 5,
+  "preset": "920b_topdown_full_5",
+  "events": [
+    "vfp_pair_ptag_stall",
+    "vpd_ptag_stall",
+    "int_mpq_stall",
+    "vfp_mpq_stall",
+    "cc_mpq_stall",
+    "ports_0_serialize",
+    "ports_0_nonserialize",
+    "ports_1"
+  ],
+  "tid": 704908,
+  "pid": 704908,
+  "status": "ok",
+  "attempts": 1,
+  "rc": 0,
+  "timed_out": false,
+  "error": null,
+  "outer_wall_s": 3.1256,
+  "inner_wall_s": 3.014773,
+  "started_at_utc": "2026-09-23T20:29:33Z",
+  "finished_at_utc": "2026-09-23T20:29:36Z",
+  "confidence": 1.0,
+  "time_enabled": 2926570290,
+  "time_running": 2926570290,
+  "useronly_forced": false,
+  "counters": [
+    {
+      "name": "VFP_PAIR_PTAG_STALL",
+      "id": "vfp_pair_ptag_stall",
+      "config": "0x2009",
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "VPD_PTAG_STALL",
+      "id": "vpd_ptag_stall",
+      "config": "0x200a",
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "INT_MPQ_STALL",
+      "id": "int_mpq_stall",
+      "config": "0x200b",
+      "delta": 165960329,
+      "rate": 56708130.184702
+    },
+    {
+      "name": "VFP_MPQ_STALL",
+      "id": "vfp_mpq_stall",
+      "config": "0x200c",
+      "delta": 545,
+      "rate": 186.224811
+    },
+    {
+      "name": "CC_MPQ_STALL",
+      "id": "cc_mpq_stall",
+      "config": "0x200d",
+      "delta": 4046252,
+      "rate": 1382591.770929
+    },
+    {
+      "name": "PORTS_0_SERIALIZE",
+      "id": "ports_0_serialize",
+      "config": "0x700a",
+      "delta": 109250096,
+      "rate": 37330419.287486
+    },
+    {
+      "name": "PORTS_0_NONSERIALIZE",
+      "id": "ports_0_nonserialize",
+      "config": "0x700b",
+      "delta": 4679441150,
+      "rate": 1598950541.522787
+    },
+    {
+      "name": "PORTS_1",
+      "id": "ports_1",
+      "config": "0x700c",
+      "delta": 993886710,
+      "rate": 339608009.209989
+    }
+  ],
+  "counters_map": {
+    "VFP_PAIR_PTAG_STALL": 0,
+    "VPD_PTAG_STALL": 0,
+    "INT_MPQ_STALL": 165960329,
+    "VFP_MPQ_STALL": 545,
+    "CC_MPQ_STALL": 4046252,
+    "PORTS_0_SERIALIZE": 109250096,
+    "PORTS_0_NONSERIALIZE": 4679441150,
+    "PORTS_1": 993886710
+  },
+  "cmd": [
+    "sudo",
+    "-n",
+    "/usr/bin/python3",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+    "--inner",
+    "--tid",
+    "704908",
+    "--group",
+    "5",
+    "--window",
+    "3.000000",
+    "--preset-prefix",
+    "920b_topdown_full_",
+    "--kperfx-python",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/python",
+    "--quiet"
+  ],
+  "stderr_tail": "KPERFX_META {\"group\": 5, \"preset\": \"920b_topdown_full_5\", \"events\": [\"vfp_pair_ptag_stall\", \"vpd_ptag_stall\", \"int_mpq_stall\", \"vfp_mpq_stall\", \"cc_mpq_stall\", \"ports_0_serialize\", \"ports_0_nonserialize\", \"ports_1\"], \"tid\": 704908, \"window_requested_s\": 3.0, \"wall_s\": 3.014773, \"started_at_utc\": \"2026-09-23T20:29:33Z\", \"finished_at_utc\": \"2026-09-23T20:29:36Z\", \"time_enabled_ns\": 2926570290, \"time_running_ns\": 2926570290, \"confidence\": 1.0, \"useronly_forced\": false, \"instances\": 1, \"counters\": 8, \"raw_json_writer\": \"kperfx_ctx_write_output\"}\n",
+  "raw_json_writer": "kperfx_ctx_write_output"
+}

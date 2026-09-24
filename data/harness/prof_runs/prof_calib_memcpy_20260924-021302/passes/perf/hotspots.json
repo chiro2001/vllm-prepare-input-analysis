@@ -1,0 +1,230 @@
+{
+  "caliber_version": "prof-v1",
+  "kind": "self_overhead",
+  "perfdata": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_memcpy_20260924-021302/passes/perf/perf.data",
+  "cmd": [
+    "perf",
+    "report",
+    "--force",
+    "--stdio",
+    "--no-children",
+    "--sort",
+    "dso,symbol",
+    "-t",
+    "|",
+    "-i",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_memcpy_20260924-021302/passes/perf/perf.data",
+    "--symfs",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_memcpy_20260924-021302/passes/perf/symfs"
+  ],
+  "header": {
+    "samples": "3K of event 'cycles:P'",
+    "lost_samples": "0",
+    "event_count": "10634103973"
+  },
+  "total_symbols": 59,
+  "top": [
+    {
+      "overhead_pct": 45.29,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b4c"
+    },
+    {
+      "overhead_pct": 31.46,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b44"
+    },
+    {
+      "overhead_pct": 4.12,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyEval_EvalFrameDefault"
+    },
+    {
+      "overhead_pct": 4.1,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b5c"
+    },
+    {
+      "overhead_pct": 2.74,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b48"
+    },
+    {
+      "overhead_pct": 1.68,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_Malloc"
+    },
+    {
+      "overhead_pct": 1.38,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] slice_dealloc"
+    },
+    {
+      "overhead_pct": 1.28,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_Free"
+    },
+    {
+      "overhead_pct": 0.98,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b40"
+    },
+    {
+      "overhead_pct": 0.81,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyObject_GetItem"
+    },
+    {
+      "overhead_pct": 0.69,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyObject_SetItem"
+    },
+    {
+      "overhead_pct": 0.63,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyNumber_And"
+    },
+    {
+      "overhead_pct": 0.57,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] bytearray_ass_subscript"
+    },
+    {
+      "overhead_pct": 0.57,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099a40"
+    },
+    {
+      "overhead_pct": 0.41,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyBuildSlice_ConsumeRefs"
+    },
+    {
+      "overhead_pct": 0.27,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PySlice_Unpack"
+    },
+    {
+      "overhead_pct": 0.25,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] bytearray_subscript"
+    },
+    {
+      "overhead_pct": 0.24,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b70"
+    },
+    {
+      "overhead_pct": 0.24,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b28"
+    },
+    {
+      "overhead_pct": 0.22,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyNumber_AsSsize_t"
+    },
+    {
+      "overhead_pct": 0.19,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _Py_NewReference"
+    },
+    {
+      "overhead_pct": 0.19,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyLong_Add"
+    },
+    {
+      "overhead_pct": 0.14,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyLong_AsSsize_t"
+    },
+    {
+      "overhead_pct": 0.14,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b30"
+    },
+    {
+      "overhead_pct": 0.14,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyNumber_Index"
+    },
+    {
+      "overhead_pct": 0.11,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyObject_Malloc"
+    },
+    {
+      "overhead_pct": 0.11,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] long_and"
+    },
+    {
+      "overhead_pct": 0.08,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyLong_FromLong"
+    },
+    {
+      "overhead_pct": 0.05,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PySlice_AdjustIndices"
+    },
+    {
+      "overhead_pct": 0.05,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b74"
+    },
+    {
+      "overhead_pct": 0.05,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PySlice_AdjustIndices@plt"
+    },
+    {
+      "overhead_pct": 0.05,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] long_dealloc"
+    },
+    {
+      "overhead_pct": 0.05,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] tupledealloc"
+    },
+    {
+      "overhead_pct": 0.05,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyObject_Free"
+    },
+    {
+      "overhead_pct": 0.05,
+      "dso": "[kernel.kallsyms]",
+      "symbol": "[k] 0xffffb39566da6c50"
+    },
+    {
+      "overhead_pct": 0.05,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] gc_collect_main"
+    },
+    {
+      "overhead_pct": 0.03,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyObject_SetItem@plt"
+    },
+    {
+      "overhead_pct": 0.03,
+      "dso": "[overlay]",
+      "symbol": "[k] 0x000000000000675c"
+    },
+    {
+      "overhead_pct": 0.03,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyDict_SetItem"
+    },
+    {
+      "overhead_pct": 0.03,
+      "dso": "[kernel.kallsyms]",
+      "symbol": "[k] 0xffffb39566e499f8"
+    }
+  ],
+  "sum_of_top_pct": 99.55,
+  "sum_all_pct": 100.06
+}

@@ -1,0 +1,110 @@
+{
+  "annotate": {
+    "no_debug_info": [
+      "pthread_mutex_lock"
+    ],
+    "ok": true,
+    "symbols": [
+      "_PyEval_EvalFrameDefault",
+      "_PyType_Lookup",
+      "pthread_mutex_lock"
+    ]
+  },
+  "call_graph": "fp",
+  "call_graph_requested": "fp",
+  "cmd": [
+    "bash",
+    "perf_capture.sh",
+    "--tid",
+    "704908",
+    "--seconds",
+    "20",
+    "--freq",
+    "999",
+    "--call-graph",
+    "fp",
+    "--name",
+    "real-b1-scope",
+    "--outdir",
+    "data/profiles/real-b1/fp-scope"
+  ],
+  "error": null,
+  "event": "cycles",
+  "finished_utc": "2026-09-23T20:33:38Z",
+  "freq": 999,
+  "kernel_version": "6.6.0-159.4.3.154.oe2403sp4.aarch64",
+  "lost_samples": 0,
+  "name": "real-b1-scope",
+  "notes": [
+    "target: host TID 704908, comm 'VLLM::EngineCor'",
+    "perf event 'cycles', -F 999, -g --call-graph fp, window 20s",
+    "perf.data 16M (16130240 bytes)",
+    "perf.data kept root-owned mode 0644 (perf's owner check); raw data is not uploaded",
+    "PERF-NOTE-SRC: _PyEval_EvalFrameDefault -- source lines found: yes",
+    "PERF-NOTE-SRC: _PyType_Lookup -- source lines found: yes",
+    "PERF-NOTE-SRC: pthread_mutex_lock -- source lines found: none (no debug info for this dso/symbol)"
+  ],
+  "ok": true,
+  "outdir": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/real-b1/fp-scope",
+  "perf_data_bytes": 16130240,
+  "perf_record_cmd": [
+    "sudo",
+    "-n",
+    "perf",
+    "record",
+    "-o",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/real-b1/fp-scope/perf.data",
+    "-e",
+    "cycles",
+    "-F",
+    "999",
+    "-g",
+    "--call-graph",
+    "fp",
+    "-t",
+    "704908",
+    "--",
+    "sleep",
+    "20"
+  ],
+  "perf_version": "perf version 6.6.0-159.4.13.167.oe2403sp4.aarch64",
+  "sample_count": 19564,
+  "seconds": 20,
+  "started_utc": "2026-09-23T20:31:23Z",
+  "symbol_quality": {
+    "dso_self_pct": {
+      "[kernel.kallsyms]": 7.04,
+      "_multiarray_umath.cpython-312-aarch64-linux-gnu.so": 3.39,
+      "libc.so.6": 8.34,
+      "libnnopbase.so": 3.13,
+      "libpython3.12.so.1.0": 43.87,
+      "libtorch_cpu.so": 9.49,
+      "libtorch_npu.so": 9.78,
+      "libtorch_python.so": 5.98
+    },
+    "python_frames": {
+      "mean_frames_per_sample": 90.76,
+      "note": "self/leaf symbolisation can be ~100% while every Python caller is still missing; use samples_with_py_frame_pct. samples_with_unknown_frame_pct is ~100% whenever the unresolved libc bottom frame (__libc_start_call_main) is present, so unknown_frame_line_pct is the useful one",
+      "py_frame_lines": 13086,
+      "py_leaf_samples": 0,
+      "samples_total": 19564,
+      "samples_with_py_frame_pct": 100.0,
+      "samples_with_py_leaf_pct": 0.38,
+      "samples_with_unknown_frame_pct": 30.92,
+      "unknown_frame_line_pct": 1.59,
+      "unknown_frame_lines": 28220
+    },
+    "resolved_pct": 85.87,
+    "top_dso": [
+      "libpython3.12.so.1.0",
+      "libtorch_npu.so",
+      "libtorch_cpu.so",
+      "libc.so.6",
+      "[kernel.kallsyms]"
+    ],
+    "unknown_pct": 14.13
+  },
+  "tid": 704908,
+  "title": "real-b1-scope",
+  "tools_bin": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/bin"
+}

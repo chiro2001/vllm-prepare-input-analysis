@@ -1,0 +1,83 @@
+{
+  "schema": "pi-pmu-group-meta-v1",
+  "tag": "real-b1",
+  "group": 9,
+  "preset": "920b_topdown_full_9",
+  "events": [
+    "context_switches",
+    "cpu_migrations",
+    "page_faults",
+    "cpu_clock"
+  ],
+  "tid": 704908,
+  "pid": 704908,
+  "status": "ok",
+  "attempts": 1,
+  "rc": 0,
+  "timed_out": false,
+  "error": null,
+  "outer_wall_s": 3.1336,
+  "inner_wall_s": 3.016237,
+  "started_at_utc": "2026-09-23T20:29:46Z",
+  "finished_at_utc": "2026-09-23T20:29:49Z",
+  "confidence": 1.0,
+  "time_enabled": 2927320200,
+  "time_running": 2927320200,
+  "useronly_forced": false,
+  "counters": [
+    {
+      "name": "CONTEXT_SWITCHES",
+      "id": "context_switches",
+      "config": "0x3",
+      "delta": 5319,
+      "rate": 1817.020222
+    },
+    {
+      "name": "CPU_MIGRATIONS",
+      "id": "cpu_migrations",
+      "config": "0x4",
+      "delta": 1,
+      "rate": 0.341609
+    },
+    {
+      "name": "PAGE_FAULTS",
+      "id": "page_faults",
+      "config": "0x2",
+      "delta": 383,
+      "rate": 130.836387
+    },
+    {
+      "name": "CPU_CLOCK",
+      "id": "cpu_clock",
+      "config": "0x0",
+      "delta": 2926883220,
+      "rate": 999850723.538887
+    }
+  ],
+  "counters_map": {
+    "CONTEXT_SWITCHES": 5319,
+    "CPU_MIGRATIONS": 1,
+    "PAGE_FAULTS": 383,
+    "CPU_CLOCK": 2926883220
+  },
+  "cmd": [
+    "sudo",
+    "-n",
+    "/usr/bin/python3",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+    "--inner",
+    "--tid",
+    "704908",
+    "--group",
+    "9",
+    "--window",
+    "3.000000",
+    "--preset-prefix",
+    "920b_topdown_full_",
+    "--kperfx-python",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/python",
+    "--quiet"
+  ],
+  "stderr_tail": "KPERFX_META {\"group\": 9, \"preset\": \"920b_topdown_full_9\", \"events\": [\"context_switches\", \"cpu_migrations\", \"page_faults\", \"cpu_clock\"], \"tid\": 704908, \"window_requested_s\": 3.0, \"wall_s\": 3.016237, \"started_at_utc\": \"2026-09-23T20:29:46Z\", \"finished_at_utc\": \"2026-09-23T20:29:49Z\", \"time_enabled_ns\": 2927320200, \"time_running_ns\": 2927320200, \"confidence\": 1.0, \"useronly_forced\": false, \"instances\": 1, \"counters\": 4, \"raw_json_writer\": \"kperfx_ctx_write_output\"}\n",
+  "raw_json_writer": "kperfx_ctx_write_output"
+}

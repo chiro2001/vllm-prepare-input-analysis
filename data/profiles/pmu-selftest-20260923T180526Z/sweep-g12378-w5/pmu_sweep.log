@@ -1,0 +1,13 @@
+[2026-09-23T18:12:43Z] pmu_tid_sweep start tid=4160170 groups=[1, 2, 3, 7, 8] window=5.0s prefix=920b_topdown_full_ -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/sweep-g12378-w5
+[2026-09-23T18:12:44Z] kperfx_version=1.0.0
+[2026-09-23T18:12:44Z] pmu=920B
+[2026-09-23T18:12:44Z] backend=920B(counting)
+[2026-09-23T18:12:44Z] preset_groups=9
+[2026-09-23T18:12:44Z] sudo=True
+[2026-09-23T18:12:44Z] target={"tid": 4160170, "comm": "workload_gen", "state": "R", "cpu": 200, "cpus_allowed": [200]} script_sha256=d984fd655a82bad90d6a90aa4f74df9d6a73a04cb35158c220458ba26826a073
+[2026-09-23T18:13:09Z] group 1: OK conf=1.0000 t_en=4999459490ns t_run=4999459490ns useronly=False counters=8 wall=5.1286s attempt=1
+[2026-09-23T18:13:09Z] group 2: OK conf=1.0000 t_en=5000212240ns t_run=5000212240ns useronly=False counters=8 wall=5.1365s attempt=1
+[2026-09-23T18:13:09Z] group 3: OK conf=1.0000 t_en=5000014580ns t_run=5000014580ns useronly=False counters=8 wall=5.1334s attempt=1
+[2026-09-23T18:13:09Z] group 7: OK conf=1.0000 t_en=4999431460ns t_run=4999431460ns useronly=False counters=8 wall=5.136s attempt=1
+[2026-09-23T18:13:09Z] group 8: OK conf=1.0000 t_en=4999940330ns t_run=4999940330ns useronly=False counters=6 wall=5.1426s attempt=1
+[2026-09-23T18:13:09Z] done: 5/5 groups ok (exit 0)

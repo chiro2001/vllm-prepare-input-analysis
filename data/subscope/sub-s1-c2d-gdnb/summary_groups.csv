@@ -1,0 +1,16 @@
+group,n_steps_present,steps_present_pct,self_us_p50,self_us_p90,self_us_p99,self_us_mean,share_pct_of_prepare_input_p50
+synchronize+update_states,123,100.0,202.86,229.14,307.96,217.131,6.16
+block_table commit,121,98.4,86.14,89.18,102.21,85.28,2.61
+attn_state,121,98.4,26.83,27.45,30.17,26.459,0.81
+positions+token_indices,121,98.4,89.45,91.65,103.91,88.64,2.72
+query_start_loc,121,98.4,27.04,27.8,41.92,26.941,0.82
+input_ids/H2D,121,98.4,368.0,380.73,393.06,364.142,11.17
+bookkeeping other,121,98.4,283.46,287.16,309.94,279.984,8.6
+spec decode metadata,0,0.0,0.0,0.0,0.0,0.0,0.0
+batch padding decision,121,98.4,49.08,50.11,65.02,48.625,1.49
+scheduler glue,121,98.4,192.24,203.02,229.2,189.64,5.84
+attn metadata,121,98.4,569.16,584.49,594.34,561.79,17.28
+attn metadata (SFA),0,0.0,0.0,0.0,0.0,0.0,0.0
+attn metadata (GDN),121,98.4,943.06,961.59,970.8,946.296,28.62
+attn metadata (builder by class),121,98.4,208.99,212.0,239.36,232.537,6.34
+pi: (unattributed),123,0.0,207.12,259.47,271.68,219.3,6.29

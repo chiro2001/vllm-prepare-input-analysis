@@ -1,0 +1,703 @@
+
+
+########## library and unit tests ##########
+
+===== test_api =====
+== test_api ==
+  libkperfx 1.0.0, pmu=920B, backend=920B(counting), group limit=8
+test_api: 51 checks, 0 failures
+
+===== test_cli =====
+== test_cli ==
+libkperfx      : 1.0.0
+pmu            : 920B
+backend        : 920B(counting)
+cpu part (MIDR): 0xd02
+arch           : aarch64
+kernel         : Linux 6.6.0-159.4.3.154.oe2403sp4.aarch64
+nproc          : 640
+paranoid       : 2 (kernel bits unavailable -> events fall back to user only)
+group limit    : 8 counter(s) per group (cached (/tmp/.kperfx-group-limit-2-1003))
+named events   : see `/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/kperfx events`
+presets        : see `/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/kperfx presets`
+pmu=920B backend=920B(counting)
+EVENTS CONFIDENCE   CYCLES         VERDICT
+1      1.0000       21000188       ok
+2      1.0000       21000117       ok
+3      1.0000       21000163       ok
+4      1.0000       21000169       ok
+5      1.0000       21000151       ok
+6      1.0000       21000160       ok
+7      1.0000       21000157       ok
+8      1.0000       21000111       ok
+9      0.0011       0              not scheduled
+10     0.0011       0              not scheduled
+group limit = 8 counter(s) per group (cached (/tmp/.kperfx-group-limit-2-1003))
+pmu=920B backend=920B(counting) per_group=8
+GROUPS SIMULTANEOUS confidence      SERIAL confidence            RATIO
+1      1.000                        1.000                        1.000
+2      0.450 0.551                  1.000 1.000                  0.450
+3      0.436 0.551 0.014            1.000 1.000 1.000            0.436
+KPERFX_ENABLE      = 1
+KPERFX_EVENTS      = cpu_cycles,inst_retired
+KPERFX_PRESET      = (unset)
+KPERFX_MODE        = count
+KPERFX_SAMPLE_PERIOD = 1000000
+KPERFX_TARGET      = process (pid=3790018 cpu=-1 inherit=1)
+KPERFX_USERONLY    = 0
+KPERFX_INHERIT     = 1
+KPERFX_ROI         = 0
+KPERFX_ITER_START  = 2
+KPERFX_ITER_END    = 3
+KPERFX_OUTPUT      = stdout
+KPERFX_FILE        = kperfx.out
+KPERFX_FORMAT      = json
+KPERFX_VERBOSE     = 0
+resolved events    = cpu_cycles,inst_retired
+pmu                = 920B (920B(counting))
+kind=alu threads=1 iters=16777216 rounds=7 secs=0.122 checksum=0x995134917acadd6f
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                352493203 2875208277.171
+INST_RETIRED               inst_retired 0x8                 469886861 3832762108.837
+-- events=2 time_enabled=122597450ns time_running=122597450ns confidence=1.0000 useronly(forced)
+kind=mixed threads=1 iters=16777216 rounds=9 secs=0.123 checksum=0xc99b34104503ef82
+kind=mixed threads=1 iters=16777216 rounds=9 secs=0.122 checksum=0xc99b34104503ef82
+splitting 920b_topdown_full into 2 groups -> build/test_split
+  group 1: 920b_topdown_full_1
+  group 2: 920b_topdown_full_2
+done. merge with: /home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/kperfx merge --out kperfx-metrics.txt build/test_split/split_*.json
+test_cli: 43 checks, 0 failures
+
+===== test_count =====
+== test_count ==
+  -- count session (20M ALU ops)
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                 41067570 2896647674.292
+INST_RETIRED               inst_retired 0x8                 160000811 11285449250.297
+INST_SPEC                  inst_spec    0x1b                160002459 11285565489.835
+-- events=3 time_enabled=14177620ns time_running=14177620ns confidence=1.0000 useronly(forced)
+  2x work ratio = 2.002 (cycles 41067570 -> 82198096)
+test_count: 42 checks, 0 failures
+
+===== test_env =====
+[kperfx] start failed: no events configured: set KPERFX_EVENTS or KPERFX_PRESET
+[kperfx] start failed: unknown event token: not_a_real_event (backend 920B(counting))
+[kperfx] config error: unknown preset: nope
+[kperfx] config error: KPERFX_MODE=nonsense
+[kperfx] config error: iter_end (3) < iter_start (9)
+== test_env ==
+  iter gated cycles = 16427337 (samples of JSON: {
+  "count": 2,
+  "entries": [
+    {"name":"CPU_CYCLES","id"...)
+  roi gated=16427337 full=86176935
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                  2060664 2865814616.508
+INST_RETIRED               inst_retired 0x8                   8000221 11126098324.178
+INST_SPEC                  inst_spec    0x1b                  8000695 11126757527.293
+BR_MIS_PRED                br_mis_pred  0x10                       14      19470.134
+-- events=4 time_enabled=719050ns time_running=719050ns confidence=1.0000 useronly(forced)
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+RAW_0011                   r0011        0x11                  1000564 2888380820.415
+RAW_0008                   r0008        0x8                   1750240 5052510031.466
+-- events=2 time_enabled=346410ns time_running=346410ns confidence=1.0000 useronly(forced)
+{
+  "count": 1,
+  "entries": [
+    {"name":"CPU_CYCLES","id":"cycles","config":"0x11","delta":4104113,"rate":2898507705.128748}
+  ],
+  "time_enabled": 1415940,
+  "time_running": 1415940,
+  "confidence": 1.000000,
+  "sampled": false,
+  "sample_count": 0,
+  "lost_samples": 0,
+  "gated": false,
+  "iter_gated": false,
+  "iter_start_at": 0,
+  "iter_end_at": 0,
+  "iter_start_seen": 0,
+  "iter_end_seen": 0,
+  "roi_start_seen": 0,
+  "roi_end_seen": 0,
+  "useronly_forced": true,
+  "instances": 1,
+  "pmu": "920B"
+}
+test_env: 38 checks, 0 failures
+
+===== test_event_matrix =====
+== test_event_matrix ==
+  backend=920B(counting) pmu=920B, 93 named events, group limit=8
+  zero  L1D_CACHE_REFILL           opened but did not count
+  zero  LD_RETIRED                 opened but did not count
+  zero  ST_RETIRED                 opened but did not count
+  zero  FDIV_FSQRT_STALL           opened but did not count
+  zero  EXE_STALL_DIV              opened but did not count
+  zero  MEM_STALL_ANYSTORE         opened but did not count
+  zero  MEMSTALL_L1MISS            opened but did not count
+  zero  MEMSTALL_L2MISS            opened but did not count
+  zero  MEMSTALL_L3MISS            opened but did not count
+  zero  PORTS_0_SERIALIZE          opened but did not count
+  zero  PORTS_6                    opened but did not count
+  zero  PORTS_7                    opened but did not count
+  zero  PORTS_8                    opened but did not count
+  zero  INT_PTAG_STALL             opened but did not count
+  zero  CC_PTAG_STALL              opened but did not count
+  zero  LD_CANCEL_MISALIGN         opened but did not count
+  zero  LD_CANCEL_LQ_FULL          opened but did not count
+  zero  LD_CANCEL_INST_TYPE        opened but did not count
+  zero  LD_CANCEL_PIPELINE         opened but did not count
+  zero  L2_BOUND_BUF               opened but did not count
+  zero  L2_BOUND_SNP               opened but did not count
+  zero  L2_BOUND_ARB               opened but did not count
+  zero  DRAM_LOCAL                 opened but did not count
+  zero  DRAM_REMOTE                opened but did not count
+  zero  DRAM_REMOTE_CACHE          opened but did not count
+  zero  BP_MISP_BR_BLR             opened but did not count
+  zero  BP_MISP_BR_BL              opened but did not count
+  zero  VPD_PTAG_STALL             opened but did not count
+  zero  NUKE_FLUSH                 opened but did not count
+  zero  L2I_TLB_REFILL             opened but did not count
+  zero  L2I_CACHE_REFILL           opened but did not count
+  zero  VFP_SINGLE_PTAG_STALL      opened but did not count
+  zero  VFP_PAIR_PTAG_STALL        opened but did not count
+  zero  INT_MPQ_STALL              opened but did not count
+  zero  VFP_MPQ_STALL              opened but did not count
+  zero  CC_MPQ_STALL               opened but did not count
+  zero  ST_BOUND_PIPELINE          opened but did not count
+  zero  CONTEXT_SWITCHES           opened but did not count
+  zero  CPU_MIGRATIONS             opened but did not count
+  zero  PAGE_FAULTS                opened but did not count
+  zero  MINOR_FAULTS               opened but did not count
+  zero  MAJOR_FAULTS               opened but did not count
+  zero  ALIGNMENT_FAULTS           opened but did not count
+  zero  EMULATION_FAULTS           opened but did not count
+  zero  HW_CACHE_MISSES            opened but did not count
+  n/a   HW_BUS_CYCLES              perf_event_open failed
+  named events: 47 count, 45 zero, 1 unsupported, 0 unknown/error
+  sweeping 9 preset group(s) of 920b_topdown_full
+  920b_topdown_full_1    events= 8 confidence=1.0000 counting= 8/ 8
+  920b_topdown_full_2    events= 8 confidence=1.0000 counting= 5/ 8
+  920b_topdown_full_3    events= 8 confidence=1.0000 counting= 5/ 8
+  920b_topdown_full_4    events= 8 confidence=1.0000 counting= 5/ 8
+  920b_topdown_full_5    events= 8 confidence=1.0000 counting= 4/ 8
+  920b_topdown_full_6    events= 8 confidence=1.0000 counting= 6/ 8
+  920b_topdown_full_7    events= 8 confidence=1.0000 counting= 5/ 8
+  920b_topdown_full_8    events= 6 confidence=1.0000 counting= 3/ 6
+  920b_topdown_full_9    events= 4 confidence=1.0000 counting= 2/ 4
+  counters that moved: 43/66
+test_event_matrix: 31 checks, 0 failures
+
+===== test_gate =====
+== test_gate ==
+  no markers (full)      cycles=      21416232 inst=      82001801 iter_seen=0/0 gated=0
+  iter gate(3,5)         cycles=      12364988 inst=      48002685 iter_seen=20/20 gated=1
+  iter gate(8,10)        cycles=       1555160 inst=       6002685 iter_seen=20/20 gated=1
+  roi(3..5)              cycles=      12464142 inst=      48001001 iter_seen=0/0 gated=1
+  roi unpaired           cycles=      20027812 inst=      78001810 iter_seen=0/0 gated=1
+  roi without markers    cycles=      21074082 inst=      82001222 iter_seen=0/0 gated=0
+  roi(cheap 9)           cycles=        516776 inst=       2000895 iter_seen=0/0 gated=1
+  iter gate(50,52)       cycles=             0 inst=             0 iter_seen=20/20 gated=1
+test_gate: 26 checks, 0 failures
+
+===== test_multiplex =====
+== test_multiplex ==
+  hardware group limit = 8 (pmu=920B)
+   8 events in 1 group  : confidence=1.0000 cycles=61573889
+  12 events in 1 group  : confidence=0.0004 (first=0 last=0)
+  2x 8 events, 2 groups : confidence=0.5001 raw=33283634 scaled=56462332
+  per-event ratio to the exclusive run: raw=0.541 scaled=0.917
+  serial 2x 8 events     : confidence=1.0000/1.0000 cycle-sum=123355133
+test_multiplex: 20 checks, 0 failures
+
+===== test_output =====
+== test_output ==
+  merged metrics: frontend=1.4290 retiring=2.8570 bad_spec=0.7140 backend=95.0000
+test_output: 27 checks, 0 failures
+
+===== test_privilege =====
+== test_privilege ==
+  uid=1003 paranoid=?
+  user=16856490 full=16866133 forced=1
+test_privilege: 5 checks, 0 failures
+
+===== test_sample =====
+== test_sample ==
+  perf_event_max_sample_rate = 100000/s
+  counting reference: cycles=123123034 inst=480000819
+  period=20000: samples=4800 cycles=96000200 inst=480313569 implied=20000.0
+  note: sampling delivery was irregular (implied=20000, 100660 samples/s vs max 100000/s), period check skipped
+  note: sampling group was throttled (100660 samples/s vs max 100000/s), inst ratio 1.0007 not enforced
+  2x work: samples 4800 -> 9626 (x2.01)
+  period=5000 : samples=5200 cycles=26000199 implied=5000.0 inst ratio=1.0007
+  note: period=5000 run was irregular (implied=5000, 108048 samples/s vs max 100000/s), inst ratio 1.0007 not enforced
+test_sample: 35 checks, 0 failures
+
+===== test_tables =====
+-- backend 920b: 9 groups
+-- 920b: 66 counters in 9 groups
+test_tables[920b]: 85 checks, 0 failures
+-- backend 920g: 16 groups
+-- 920g: 72 counters in 16 groups
+test_tables[920g]: 105 checks, 0 failures
+-- backend zen4: 9 groups
+-- zen4: 45 counters in 9 groups
+test_tables[zen4]: 64 checks, 0 failures
+== test_tables ==
+test_tables: 3 checks, 0 failures
+
+===== test_threads =====
+== test_threads ==
+  thread                 cycles=     347637272 inst=    1310503084 conf=1.000
+  process                cycles=     699010634 inst=    2638504547 conf=1.000
+  process/thread ratio = 2.01
+  pid=3790301 without inherit: cycles=6803
+  cpu: setup failed: perf_event_open(cpu_cycles) denied: Permission denied (perf_event_paranoid=?)
+  (cpu-wide measurement not permitted here)
+test_threads: 5 checks, 0 failures
+
+===== test_workload_loads =====
+== test_workload_loads ==
+  measuring with: cpu_cycles,inst_retired,exec_stall,mem_stall_anyload,memstall_l3miss,br_mis_pred,fdiv_fsqrt_stall,total_resource_stall
+  LOAD               CYCLES           INST      IPC       L3MISS     BR_MIS       FDIV
+  alu_par         435268560     1694511457     3.89            0        199        561
+  alu             440403685      587210767     1.33            0        119        338
+  fpu             436207037      436213737     1.00            0         99        319
+  fma             436213306      763390041     1.75            0        276        522
+  div             435157237      522209279     1.20            0        223        402
+  fsqrt           463470601      190842650     0.41            0         37  259721059
+  branch          436869829      943725417     2.16            0    1514410        120
+  indirect        452511946      257252169     0.57            0   13980553         13
+  l1              435775862     1222154760     2.80            0        401        131
+  l2              433915828     1205694215     2.78            0        629        482
+  l3              433330618      934965468     2.16            0        337        332
+  dram            417269961      747656594     1.79            0        254         41
+  store           438771385      238559657     0.54            0        315         17
+  tlb             433726109      354714339     0.82            0        366         28
+  mixed           436053973     1170750097     2.68            0     776249        472
+test_workload_loads: 38 checks, 0 failures
+
+===== test_zen4 =====
+-- forced backend: zen4(forced)
+test_zen4[forced]: 46 checks, 0 failures
+== test_zen4 ==
+-- live check skipped: backend is 920B(counting), not zen4
+test_zen4: 1 checks, 0 failures
+
+
+########## python binding ##########
+
+===== python-binding =====
+test_count_session (__main__.TestBinding.test_count_session) ... ok
+test_env_disabled (__main__.TestBinding.test_env_disabled) ... ok
+test_env_error (__main__.TestBinding.test_env_error) ... [kperfx] start failed: unknown event token: not_an_event (backend 920B(counting))
+ok
+test_env_session (__main__.TestBinding.test_env_session) ... ok
+test_errors (__main__.TestBinding.test_errors) ... ok
+test_iter_gating (__main__.TestBinding.test_iter_gating) ... ok
+test_list_events (__main__.TestBinding.test_list_events) ... ok
+test_merge_files (__main__.TestBinding.test_merge_files) ... ok
+test_multiplex_split (__main__.TestBinding.test_multiplex_split) ... ok
+test_presets (__main__.TestBinding.test_presets) ... ok
+test_probe_event (__main__.TestBinding.test_probe_event) ... ok
+test_result_getters_before_stop (__main__.TestBinding.test_result_getters_before_stop) ... ok
+test_roi_gating (__main__.TestBinding.test_roi_gating) ... ok
+test_sample_mode (__main__.TestBinding.test_sample_mode) ... ok
+test_topdown_known_values (__main__.TestBinding.test_topdown_known_values) ... ok
+test_version_and_pmu (__main__.TestBinding.test_version_and_pmu) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.612s
+
+OK
+
+
+########## command line evidence ##########
+
+===== cli-probe =====
+pmu=920B backend=920B(counting)
+EVENTS CONFIDENCE   CYCLES         VERDICT
+1      1.0000       21000168       ok
+2      1.0000       21000150       ok
+3      1.0000       21000142       ok
+4      1.0000       21000151       ok
+5      1.0000       21000103       ok
+6      1.0000       21000148       ok
+7      1.0000       21000147       ok
+8      1.0000       21000161       ok
+9      0.0011       0              not scheduled
+10     0.0011       0              not scheduled
+group limit = 8 counter(s) per group (cached (/tmp/.kperfx-group-limit-2-1003))
+
+===== cli-probe-mux =====
+pmu=920B backend=920B(counting) per_group=8
+GROUPS SIMULTANEOUS confidence      SERIAL confidence            RATIO
+1      1.000                        1.000                        1.000
+2      0.508 0.493                  1.000 1.000                  0.508
+3      0.140 0.546 0.315            1.000 1.000 1.000            0.140
+
+===== cli-info =====
+libkperfx      : 1.0.0
+pmu            : 920B
+backend        : 920B(counting)
+cpu part (MIDR): 0xd02
+arch           : aarch64
+kernel         : Linux 6.6.0-159.4.3.154.oe2403sp4.aarch64
+nproc          : 640
+paranoid       : 2 (kernel bits unavailable -> events fall back to user only)
+group limit    : 8 counter(s) per group (cached (/tmp/.kperfx-group-limit-2-1003))
+named events   : see `./kperfx events`
+presets        : see `./kperfx presets`
+
+===== cli-verify-events =====
+EVENT                      CONFIG              DELTA       CONF VERDICT
+CPU_CYCLES                 0x11             14000130      1.000 ok
+INST_RETIRED               0x8              12000029      1.000 ok
+INST_SPEC                  0x1b             12000495      1.000 ok
+BR_MIS_PRED                0x10                    3      1.000 ok
+BR_PRED                    0x12              2000045      1.000 ok
+STALL_FRONTEND             0x23                  123      1.000 ok
+STALL_BACKEND              0x24             11999880      1.000 ok
+L1D_TLB                    0x25              4000149      1.000 ok
+L1I_TLB                    0x26              2000102      1.000 ok
+L1D_CACHE                  0x4               4000007      1.000 ok
+L1D_CACHE_REFILL           0x3                     0      1.000 NOT-COUNTING
+L1I_CACHE_REFILL           0x1                    16      1.000 ok
+LD_RETIRED                 0x6                     0      1.000 NOT-COUNTING
+ST_RETIRED                 0x7                     0      1.000 NOT-COUNTING
+MEM_ACCESS                 0x13              4000006      1.000 ok
+TOTAL_RESOURCE_STALL       0x7000                  0      1.000 NOT-COUNTING
+EXEC_STALL                 0x7001           14000123      1.000 ok
+FDIV_FSQRT_STALL           0x7002                  0      1.000 NOT-COUNTING
+EXE_STALL_DIV              0x7003                  0      1.000 NOT-COUNTING
+FSU_STALL                  0x7004                  1      1.000 ok
+MEM_STALL_ANYLOAD          0x7005            2839008      1.000 ok
+MEM_STALL_ANYSTORE         0x7006                  0      1.000 NOT-COUNTING
+MEMSTALL_L1MISS            0x7007                  0      1.000 NOT-COUNTING
+MEMSTALL_L2MISS            0x7008                  0      1.000 NOT-COUNTING
+MEMSTALL_L3MISS            0x7009                  0      1.000 NOT-COUNTING
+PORTS_0_SERIALIZE          0x700a                  0      1.000 NOT-COUNTING
+PORTS_0_NONSERIALIZE       0x700b            3502759      1.000 ok
+PORTS_1                    0x700c            7102619      1.000 ok
+PORTS_2                    0x700d            3239206      1.000 ok
+PORTS_3                    0x700e            1203604      1.000 ok
+PORTS_4                    0x700f             932466      1.000 ok
+PORTS_5                    0x7010                 12      1.000 ok
+PORTS_6                    0x7011                  0      1.000 NOT-COUNTING
+PORTS_7                    0x7012                  0      1.000 NOT-COUNTING
+PORTS_8                    0x7013                  0      1.000 NOT-COUNTING
+ROB_STALL                  0x2004                 30      1.000 ok
+PC_BUF_STALL               0x2005                  0      1.000 NOT-COUNTING
+INT_PTAG_STALL             0x2006                  0      1.000 NOT-COUNTING
+CC_PTAG_STALL              0x2007                  0      1.000 NOT-COUNTING
+LD_CANCEL_DTLB_MISS        0x5090                  3      1.000 ok
+LD_CANCEL_MISALIGN         0x5091                  0      1.000 NOT-COUNTING
+LD_CANCEL_LQ_FULL          0x5092                  0      1.000 NOT-COUNTING
+LD_CANCEL_INST_TYPE        0x5093                  0      1.000 NOT-COUNTING
+LD_CANCEL_FWD_HZD          0x5094            9763598      1.000 ok
+LD_CANCEL_STRUCT_HZD       0x5095                187      1.000 ok
+LD_CANCEL_PIPELINE         0x5096                  0      1.000 NOT-COUNTING
+L2_BOUND_BUF               0x701e                  0      1.000 NOT-COUNTING
+L2_BOUND_SNP               0x701f                  0      1.000 NOT-COUNTING
+L2_BOUND_ARB               0x7020                  0      1.000 NOT-COUNTING
+DRAM_LOCAL                 0x7021                  0      1.000 NOT-COUNTING
+DRAM_REMOTE                0x7022                  0      1.000 NOT-COUNTING
+DRAM_REMOTE_CACHE          0x7023                  0      1.000 NOT-COUNTING
+ST_SCA_FULL                0x50a0                  9      1.000 ok
+ST_HEAD_NO_PGEN            0x50a2                 13      1.000 ok
+ST_ORDER_FAIL              0x50a3           26000006      1.000 ok
+BP_MISP_BR_IND             0x1010                  1      1.000 ok
+BP_MISP_BR_BLR             0x1013                  0      1.000 NOT-COUNTING
+BP_MISP_BR_BL              0x1016                  0      1.000 NOT-COUNTING
+BP_MISP_BR_RET             0x100d                  1      1.000 ok
+VPD_PTAG_STALL             0x200a                  0      1.000 NOT-COUNTING
+FETCH_BUBBLE               0x2011                824      1.000 ok
+FETCH_BUBBLE_MAX           0x2012                119      1.000 ok
+O3_FLUSH                   0x2010                  3      1.000 ok
+NUKE_FLUSH                 0x200f                  1      1.000 ok
+IF_SP_FLUSH                0x104f                  3      1.000 ok
+L2I_TLB                    0x30                    2      1.000 ok
+L2I_TLB_REFILL             0x2e                    0      1.000 NOT-COUNTING
+L2I_CACHE                  0x27                   14      1.000 ok
+L2I_CACHE_REFILL           0x28                    0      1.000 NOT-COUNTING
+VFP_SINGLE_PTAG_STALL      0x2008                  0      1.000 NOT-COUNTING
+VFP_PAIR_PTAG_STALL        0x2009                  0      1.000 NOT-COUNTING
+INT_MPQ_STALL              0x200b                  0      1.000 NOT-COUNTING
+VFP_MPQ_STALL              0x200c                  0      1.000 NOT-COUNTING
+CC_MPQ_STALL               0x200d                  0      1.000 NOT-COUNTING
+ST_BOUND_PIPELINE          0x50a4                  0      1.000 NOT-COUNTING
+CONTEXT_SWITCHES           0x3                     0      1.000 NOT-COUNTING
+CPU_MIGRATIONS             0x4                     0      1.000 NOT-COUNTING
+PAGE_FAULTS                0x2                     0      1.000 NOT-COUNTING
+MINOR_FAULTS               0x5                     0      1.000 NOT-COUNTING
+MAJOR_FAULTS               0x6                     0      1.000 NOT-COUNTING
+CPU_CLOCK                  0x0               4836760      1.000 ok
+TASK_CLOCK                 0x1               4838610      1.000 ok
+ALIGNMENT_FAULTS           0x7                     0      1.000 NOT-COUNTING
+EMULATION_FAULTS           0x8                     0      1.000 NOT-COUNTING
+HW_CPU_CYCLES              0x0              14000161      1.000 ok
+HW_INSTRUCTIONS            0x1              12000029      1.000 ok
+HW_CACHE_REFERENCES        0x2               4000007      1.000 ok
+HW_CACHE_MISSES            0x3                     0      1.000 NOT-COUNTING
+HW_BRANCH_INSTRUCTIONS     0x4               2000008      1.000 ok
+HW_BRANCH_MISSES           0x5                     3      1.000 ok
+HW_BUS_CYCLES              -                       -          - not-supported
+HW_STALLED_CYCLES_FRONTEND 0x7                   133      1.000 ok
+HW_STALLED_CYCLES_BACKEND  0x8              11999876      1.000 ok
+
+46 counting, 46 zero, 1 unsupported, 0 failed
+
+===== cli-presets =====
+basic            1 group(s)
+branch           1 group(s)
+memory           1 group(s)
+stalls           1 group(s)
+ports            1 group(s)
+software         1 group(s)
+920b_topdown_full_1..9 9 groups (920B/k147, 8 events each)
+950b_topdown_full_1..9 9 groups (920B/k147, 8 events each)
+k147_topdown_full_1..9 9 groups (920B/k147, 8 events each)
+920g_topdown_full_1..16 16 groups (920G/LC930, <=6 events each)
+920_topdown_full_1..16 16 groups (920G/LC930, <=6 events each)
+950_topdown_full_1..16 16 groups (920G/LC930, <=6 events each)
+
+
+########## load matrix against the 920B preset groups ##########
+  full preset family: 920b_topdown_full
+
+===== load-alu =====
+kind=alu threads=1 iters=16777216 rounds=12 secs=0.209 checksum=0x69f080800223e00c
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                604160996 2882889974.096
+INST_RETIRED               inst_retired 0x8                 805432481 3843302099.373
+INST_SPEC                  inst_spec    0x1b                805630525 3844247110.828
+FETCH_BUBBLE               fetch_bubble 0x2011                 549742    2623217.504
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012                  83462     398257.691
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000                   9426      44978.277
+EXEC_STALL                 exec_stall   0x7001              604154358 2882858299.387
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002                      0          0.000
+-- events=8 time_enabled=209567830ns time_running=209567830ns confidence=1.0000 useronly(forced)
+
+===== load-fma =====
+kind=fma threads=1 iters=16777216 rounds=35 secs=0.203 checksum=0xffffffffffffffff
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                587377999 2884630726.672
+INST_RETIRED               inst_retired 0x8                1027734082 5047232475.224
+INST_SPEC                  inst_spec    0x1b               1027937844 5048233156.433
+FETCH_BUBBLE               fetch_bubble 0x2011                 495747    2434628.180
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012                  74659     366652.557
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000                   6609      32456.994
+EXEC_STALL                 exec_stall   0x7001              587371714 2884599860.851
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002                      0          0.000
+-- events=8 time_enabled=203623290ns time_running=203623290ns confidence=1.0000 useronly(forced)
+
+===== load-div =====
+kind=div threads=1 iters=4194304 rounds=28 secs=0.203 checksum=0x90
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                587374015 2884952470.344
+INST_RETIRED               inst_retired 0x8                 704770959 3461560551.318
+INST_SPEC                  inst_spec    0x1b                704969779 3462537077.749
+FETCH_BUBBLE               fetch_bubble 0x2011                 489524    2404351.294
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012                  73619     361587.865
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000                   5295      26006.978
+EXEC_STALL                 exec_stall   0x7001              587367761 2884921753.131
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002                      0          0.000
+-- events=8 time_enabled=203599200ns time_running=203599200ns confidence=1.0000 useronly(forced)
+
+===== load-fsqrt =====
+kind=fsqrt threads=1 iters=16777216 rounds=3 secs=0.296 checksum=0x5
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                855833154 2886746975.029
+INST_RETIRED               inst_retired 0x8                 352446619 1188811401.500
+INST_SPEC                  inst_spec    0x1b                352654369 1189512147.529
+FETCH_BUBBLE               fetch_bubble 0x2011                 580528    1958135.695
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012                  87712     295854.805
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000                5676883   19148270.608
+EXEC_STALL                 exec_stall   0x7001              855826990 2886726183.700
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002              478856600 1615195479.471
+-- events=8 time_enabled=296469750ns time_running=296469750ns confidence=1.0000 useronly(forced)
+
+===== load-branch =====
+kind=branch threads=1 iters=16777216 rounds=3 secs=0.262 checksum=0x605568edad7b2000
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                756499651 2886606897.151
+INST_RETIRED               inst_retired 0x8                 377612543 1440871743.475
+INST_SPEC                  inst_spec    0x1b               2018537591 7702217079.197
+FETCH_BUBBLE               fetch_bubble 0x2011             2517906053 9607677900.921
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012              369643912 1410465509.744
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000                  83198     317462.038
+EXEC_STALL                 exec_stall   0x7001              751300790 2866769388.964
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002                      0          0.000
+-- events=8 time_enabled=262072280ns time_running=262072280ns confidence=1.0000 useronly(forced)
+
+===== load-indirect =====
+kind=indirect threads=1 iters=16777216 rounds=2 secs=0.309 checksum=0xb52019a9589c2b5e
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                894081312 2889242470.419
+INST_RETIRED               inst_retired 0x8                 514629094 1663034687.049
+INST_SPEC                  inst_spec    0x1b               2421247597 7824312279.834
+FETCH_BUBBLE               fetch_bubble 0x2011             2942407062 9508449997.433
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012              271378960  876966788.464
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000                  14592      47154.353
+EXEC_STALL                 exec_stall   0x7001              893023754 2885824949.610
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002                      0          0.000
+-- events=8 time_enabled=309451810ns time_running=309451810ns confidence=1.0000 useronly(forced)
+
+===== load-l1 =====
+kind=l1 threads=1 iters=4194304 rounds=43 secs=0.203 checksum=0x148800000
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                586625340 2880801124.731
+INST_RETIRED               inst_retired 0x8                1623330942 7971857478.104
+INST_SPEC                  inst_spec    0x1b               1623557160 7972968390.000
+FETCH_BUBBLE               fetch_bubble 0x2011                 562846    2764025.485
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012                  84391     414427.525
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000                  33588     164944.031
+EXEC_STALL                 exec_stall   0x7001              586607701 2880714503.087
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002                      8         39.286
+-- events=8 time_enabled=203632710ns time_running=203632710ns confidence=1.0000 useronly(forced)
+
+===== load-l2 =====
+kind=l2 threads=1 iters=2097152 rounds=85 secs=0.202 checksum=0x3e5800000
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                584585309 2883242176.333
+INST_RETIRED               inst_retired 0x8                1604481942 7913490016.116
+INST_SPEC                  inst_spec    0x1b               1604716296 7914645877.077
+FETCH_BUBBLE               fetch_bubble 0x2011                 607046    2994020.895
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012                  91808     452807.646
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000                  12394      61128.638
+EXEC_STALL                 exec_stall   0x7001              584575915 2883195844.042
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002                      0          0.000
+-- events=8 time_enabled=202752760ns time_running=202752760ns confidence=1.0000 useronly(forced)
+
+===== load-l3 =====
+kind=l3 threads=1 iters=4194304 rounds=34 secs=0.202 checksum=0x2ae800000
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                582354144 2879886488.723
+INST_RETIRED               inst_retired 0x8                1284245176 6350912702.650
+INST_SPEC                  inst_spec    0x1b               1286130739 6360237281.968
+FETCH_BUBBLE               fetch_bubble 0x2011                 968110    4787545.409
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012                 144868     716408.392
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000               70588393  349077209.042
+EXEC_STALL                 exec_stall   0x7001              582339565 2879814391.932
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002                      0          0.000
+-- events=8 time_enabled=202214270ns time_running=202214270ns confidence=1.0000 useronly(forced)
+
+===== load-dram =====
+kind=dram threads=1 iters=4194304 rounds=25 secs=0.205 checksum=0x1c9000000
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                578411305 2806020567.185
+INST_RETIRED               inst_retired 0x8                 964820953 4680592191.692
+INST_SPEC                  inst_spec    0x1b                968108350 4696540191.869
+FETCH_BUBBLE               fetch_bubble 0x2011                1718711    8337904.832
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012                 277218    1344855.128
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000              163467685  793023376.644
+EXEC_STALL                 exec_stall   0x7001              578404873 2805989363.915
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002                      7         33.959
+-- events=8 time_enabled=206132240ns time_running=206132240ns confidence=1.0000 useronly(forced)
+
+===== load-store =====
+kind=store threads=1 iters=4194304 rounds=18 secs=0.210 checksum=0xf3a
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                605794661 2878250275.427
+INST_RETIRED               inst_retired 0x8                 528940278 2513099898.115
+INST_SPEC                  inst_spec    0x1b                531202104 2523846280.886
+FETCH_BUBBLE               fetch_bubble 0x2011                1201041    5706383.386
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012                 187136     889120.156
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000               35638531  169325710.955
+EXEC_STALL                 exec_stall   0x7001              605078937 2874849729.115
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002                      0          0.000
+-- events=8 time_enabled=210473240ns time_running=210473240ns confidence=1.0000 useronly(forced)
+
+===== load-tlb =====
+kind=tlb threads=1 iters=1048576 rounds=38 secs=0.205 checksum=0xbfa00000
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                572759017 2797971408.626
+INST_RETIRED               inst_retired 0x8                 459409058 2244248228.305
+INST_SPEC                  inst_spec    0x1b                461835739 2256102749.761
+FETCH_BUBBLE               fetch_bubble 0x2011                1579866    7717765.703
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012                 249133    1217033.674
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000              388422201 1897472026.833
+EXEC_STALL                 exec_stall   0x7001              571143052 2790077296.560
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002                      0          0.000
+-- events=8 time_enabled=204705100ns time_running=204705100ns confidence=1.0000 useronly(forced)
+
+===== load-pagefault =====
+kind=pagefault threads=1 iters=4096 rounds=3309 secs=0.199 checksum=0x0
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+CPU_CYCLES                 cpu_cycles   0x11                 21725413  109459874.033
+INST_RETIRED               inst_retired 0x8                   1718913    8660456.786
+INST_SPEC                  inst_spec    0x1b                 50479874  254334435.402
+FETCH_BUBBLE               fetch_bubble 0x2011               49425335  249021316.332
+FETCH_BUBBLE_MAX           fetch_bubble_max 0x2012                5709068   28764188.010
+TOTAL_RESOURCE_STALL       total_resource_stall 0x7000                 977154    4923227.639
+EXEC_STALL                 exec_stall   0x7001               21700984  109336792.586
+FDIV_FSQRT_STALL           fdiv_fsqrt_stall 0x7002                      0          0.000
+-- events=8 time_enabled=198478330ns time_running=198478330ns confidence=1.0000 useronly(forced)
+
+===== load-branch-group3 =====
+kind=branch threads=1 iters=16777216 rounds=3 secs=0.261 checksum=0x605568edad7b2000
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+BR_MIS_PRED                br_mis_pred  0x10                 41666571  159077522.600
+O3_FLUSH                   o3_flush     0x2010                    197        752.120
+NUKE_FLUSH                 nuke_flush   0x200f                     14         53.450
+BP_MISP_BR_IND             bp_misp_br_ind 0x1010                     47        179.440
+BP_MISP_BR_BLR             bp_misp_br_blr 0x1013                      6         22.907
+BP_MISP_BR_BL              bp_misp_br_bl 0x1016                      2          7.636
+BP_MISP_BR_RET             bp_misp_br_ret 0x100d                     25         95.447
+IF_SP_FLUSH                if_sp_flush  0x104f                   1460       5574.089
+-- events=8 time_enabled=261926200ns time_running=261926200ns confidence=1.0000 useronly(forced)
+
+===== load-dram-group7 =====
+kind=dram threads=1 iters=4194304 rounds=25 secs=0.207 checksum=0x1c9000000
+EVENT                      ID           CONFIG                  DELTA         RATE/s
+LD_CANCEL_INST_TYPE        ld_cancel_inst_type 0x5093                    163        785.141
+LD_CANCEL_FWD_HZD          ld_cancel_fwd_hzd 0x5094                    685       3299.517
+LD_CANCEL_STRUCT_HZD       ld_cancel_struct_hzd 0x5095               41350491  199177591.761
+LD_CANCEL_PIPELINE         ld_cancel_pipeline 0x5096               18037663   86884053.622
+L2_BOUND_BUF               l2_bound_buf 0x701e                      0          0.000
+L2_BOUND_SNP               l2_bound_snp 0x701f                2793236   13454496.095
+L2_BOUND_ARB               l2_bound_arb 0x7020                3242091   15616546.794
+DRAM_LOCAL                 dram_local   0x7021                      0          0.000
+-- events=8 time_enabled=207606140ns time_running=207606140ns confidence=1.0000 useronly(forced)
+
+
+########## full topdown sweep of one command (all groups, merged) ##########
+
+===== sweep-split =====
+kind=mixed threads=1 iters=16777216 rounds=19 secs=0.257 checksum=0xcc4b8fc8068a3711
+kind=mixed threads=1 iters=16777216 rounds=19 secs=0.256 checksum=0xcc4b8fc8068a3711
+kind=mixed threads=1 iters=16777216 rounds=18 secs=0.262 checksum=0xcf500be8fcb9e835
+kind=mixed threads=1 iters=16777216 rounds=19 secs=0.255 checksum=0xcc4b8fc8068a3711
+kind=mixed threads=1 iters=16777216 rounds=19 secs=0.257 checksum=0xcc4b8fc8068a3711
+kind=mixed threads=1 iters=16777216 rounds=19 secs=0.258 checksum=0xcc4b8fc8068a3711
+kind=mixed threads=1 iters=16777216 rounds=19 secs=0.258 checksum=0xcc4b8fc8068a3711
+kind=mixed threads=1 iters=16777216 rounds=19 secs=0.256 checksum=0xcc4b8fc8068a3711
+kind=mixed threads=1 iters=16777216 rounds=19 secs=0.255 checksum=0xcc4b8fc8068a3711
+splitting 920b_topdown_full into 9 groups -> build/sweep
+  group 1: 920b_topdown_full_1
+  group 2: 920b_topdown_full_2
+  group 3: 920b_topdown_full_3
+  group 4: 920b_topdown_full_4
+  group 5: 920b_topdown_full_5
+  group 6: 920b_topdown_full_6
+  group 7: 920b_topdown_full_7
+  group 8: 920b_topdown_full_8
+  group 9: 920b_topdown_full_9
+done. merge with: ./kperfx merge --out kperfx-metrics.txt build/sweep/split_*.json
+
+===== sweep-merge =====
+
+wrote build/sweep/metrics.txt
+
+
+########## iteration gated sweep (documented workflow) ##########
+
+===== iter-gate-group1 =====
+
+===== iter-gate-group2 =====
+
+===== iter-gate-group3 =====
+
+===============================
+PASS: 40   FAIL: 0

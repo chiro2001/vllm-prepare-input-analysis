@@ -1,0 +1,30 @@
+{
+  "count": 8,
+  "entries": [
+    {"name":"VFP_PAIR_PTAG_STALL","id":"vfp_pair_ptag_stall","config":"0x2009","delta":0,"rate":0.000000},
+    {"name":"VPD_PTAG_STALL","id":"vpd_ptag_stall","config":"0x200a","delta":0,"rate":0.000000},
+    {"name":"INT_MPQ_STALL","id":"int_mpq_stall","config":"0x200b","delta":165960329,"rate":56708130.184702},
+    {"name":"VFP_MPQ_STALL","id":"vfp_mpq_stall","config":"0x200c","delta":545,"rate":186.224811},
+    {"name":"CC_MPQ_STALL","id":"cc_mpq_stall","config":"0x200d","delta":4046252,"rate":1382591.770929},
+    {"name":"PORTS_0_SERIALIZE","id":"ports_0_serialize","config":"0x700a","delta":109250096,"rate":37330419.287486},
+    {"name":"PORTS_0_NONSERIALIZE","id":"ports_0_nonserialize","config":"0x700b","delta":4679441150,"rate":1598950541.522787},
+    {"name":"PORTS_1","id":"ports_1","config":"0x700c","delta":993886710,"rate":339608009.209989}
+  ],
+  "time_enabled": 2926570290,
+  "time_running": 2926570290,
+  "confidence": 1.000000,
+  "sampled": false,
+  "sample_count": 0,
+  "lost_samples": 0,
+  "gated": false,
+  "iter_gated": false,
+  "iter_start_at": 0,
+  "iter_end_at": 0,
+  "iter_start_seen": 0,
+  "iter_end_seen": 0,
+  "roi_start_seen": 0,
+  "roi_end_seen": 0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B"
+}

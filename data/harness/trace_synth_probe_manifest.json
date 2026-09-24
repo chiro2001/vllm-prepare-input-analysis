@@ -1,0 +1,48 @@
+{
+  "kind": "trace",
+  "created_at": "2026-09-23T18:11:38+0000",
+  "params": {
+    "batch": 8,
+    "isl": 1024,
+    "osl": 16,
+    "block_size": 128,
+    "max_model_len": 8192,
+    "spec_k": 0,
+    "prefix_hit_ratio": 0.0,
+    "chunk_size": 2048,
+    "arrival": "poisson",
+    "steps": 0,
+    "seed": 0,
+    "engine": "real",
+    "shuffle_values": false,
+    "max_num_seqs": 8,
+    "num_blocks": 682,
+    "vocab_size": 131072,
+    "token_id_base": 7,
+    "prefix_len": 512,
+    "arrival_rate": 0.0,
+    "arrival_group": 0,
+    "arrival_period": 0,
+    "accept_ratio": 0.6,
+    "request_id_prefix": "req"
+  },
+  "trace": "/work/data/harness/trace_synth_probe.jsonl",
+  "num_steps": 34,
+  "summary": {
+    "num_steps": 34,
+    "phases": {
+      "prefill": 1,
+      "decode": 25,
+      "mixed": 7,
+      "drain": 1
+    },
+    "total_tokens": 8312,
+    "tokens_mean": 244.47058823529412,
+    "tokens_max": 1030,
+    "num_reqs_mean": 3.764705882352941,
+    "num_reqs_max": 7
+  },
+  "sha256": {
+    "generate.py": "8aecc91fbfa9c1a091782b8a28b17c016fedea3d874e03675ad61a44cb5c1549"
+  }
+}

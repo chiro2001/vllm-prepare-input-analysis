@@ -1,0 +1,110 @@
+{
+  "annotate": {
+    "no_debug_info": [
+      "sgemm_kernel_ARMV8SVE"
+    ],
+    "ok": true,
+    "symbols": [
+      "sgemm_kernel_ARMV8SVE",
+      "gc_collect_main",
+      "_PyEval_EvalFrameDefault"
+    ]
+  },
+  "call_graph": "fp",
+  "call_graph_requested": "fp",
+  "cmd": [
+    "bash",
+    "perf_capture.sh",
+    "--tid",
+    "175616",
+    "--seconds",
+    "8",
+    "--freq",
+    "999",
+    "--call-graph",
+    "fp",
+    "--name",
+    "selftest-fp_notramp",
+    "--outdir",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp"
+  ],
+  "error": null,
+  "event": "cycles",
+  "finished_utc": "2026-09-23T18:37:11Z",
+  "freq": 999,
+  "kernel_version": "6.6.0-159.4.3.154.oe2403sp4.aarch64",
+  "lost_samples": 0,
+  "name": "selftest-fp_notramp",
+  "notes": [
+    "target: host TID 175616, comm 'python3'",
+    "perf event 'cycles', -F 999, -g --call-graph fp, window 8s",
+    "perf.data 2.2M (2228300 bytes)",
+    "perf.data kept root-owned mode 0644 (perf's owner check); raw data is not uploaded",
+    "PERF-NOTE-SRC: sgemm_kernel_ARMV8SVE -- source lines found: none (no debug info for this dso/symbol)",
+    "PERF-NOTE-SRC: gc_collect_main -- source lines found: yes",
+    "PERF-NOTE-SRC: _PyEval_EvalFrameDefault -- source lines found: yes"
+  ],
+  "ok": true,
+  "outdir": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp",
+  "perf_data_bytes": 2228300,
+  "perf_record_cmd": [
+    "sudo",
+    "-n",
+    "perf",
+    "record",
+    "-o",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data",
+    "-e",
+    "cycles",
+    "-F",
+    "999",
+    "-g",
+    "--call-graph",
+    "fp",
+    "-t",
+    "175616",
+    "--",
+    "sleep",
+    "8"
+  ],
+  "perf_version": "perf version 6.6.0-159.4.13.167.oe2403sp4.aarch64",
+  "sample_count": 7972,
+  "seconds": 8,
+  "started_utc": "2026-09-23T18:36:48Z",
+  "symbol_quality": {
+    "dso_self_pct": {
+      "_multiarray_umath.cpython-312-aarch64-linux-gnu.so": 3.46,
+      "ld-linux-aarch64.so.1": 0.66,
+      "libc.so.6": 1.18,
+      "libm.so.6": 0.3,
+      "libopenblas-24fd393f.so.0": 23.6,
+      "libpython3.12.so.1.0": 68.26,
+      "libtorch_cpu.so": 2.03,
+      "libtorch_python.so": 0.21
+    },
+    "python_frames": {
+      "mean_frames_per_sample": 19.15,
+      "note": "self/leaf symbolisation can be ~100% while every Python caller is still missing; use samples_with_py_frame_pct. samples_with_unknown_frame_pct is ~100% whenever the unresolved libc bottom frame (__libc_start_call_main) is present, so unknown_frame_line_pct is the useful one",
+      "py_frame_lines": 0,
+      "py_leaf_samples": 0,
+      "samples_total": 7972,
+      "samples_with_py_frame_pct": 0.0,
+      "samples_with_py_leaf_pct": 0.0,
+      "samples_with_unknown_frame_pct": 100.0,
+      "unknown_frame_line_pct": 5.3,
+      "unknown_frame_lines": 8091
+    },
+    "resolved_pct": 98.53,
+    "top_dso": [
+      "libpython3.12.so.1.0",
+      "libopenblas-24fd393f.so.0",
+      "_multiarray_umath.cpython-312-aarch64-linux-gnu.so",
+      "libtorch_cpu.so",
+      "libc.so.6"
+    ],
+    "unknown_pct": 1.47
+  },
+  "tid": 175616,
+  "title": "selftest-fp_notramp",
+  "tools_bin": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/bin"
+}

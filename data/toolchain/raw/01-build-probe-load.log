@@ -1,0 +1,6 @@
+$ gcc -O2 -g -fno-omit-frame-pointer -std=gnu11 -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/probe_load /home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/synth/probe_load.c -lpthread -lm
+# rc=0 wall_s=0.163
+
+
+----- stderr -----
+

@@ -1,0 +1,230 @@
+{
+  "caliber_version": "prof-v1",
+  "kind": "self_overhead",
+  "perfdata": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/perf.data",
+  "cmd": [
+    "perf",
+    "report",
+    "--force",
+    "--stdio",
+    "--no-children",
+    "--sort",
+    "dso,symbol",
+    "-t",
+    "|",
+    "-i",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/perf.data",
+    "--symfs",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/symfs"
+  ],
+  "header": {
+    "samples": "30K of event 'cycles:P'",
+    "lost_samples": "0",
+    "event_count": "86503553351"
+  },
+  "total_symbols": 1785,
+  "top": [
+    {
+      "overhead_pct": 9.8,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyEval_EvalFrameDefault"
+    },
+    {
+      "overhead_pct": 1.51,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_Malloc"
+    },
+    {
+      "overhead_pct": 1.11,
+      "dso": "libc.so.6",
+      "symbol": "[.] pthread_mutex_lock"
+    },
+    {
+      "overhead_pct": 1.06,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyType_Lookup"
+    },
+    {
+      "overhead_pct": 1.05,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] unicodekeys_lookup_unicode"
+    },
+    {
+      "overhead_pct": 1.02,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_Free"
+    },
+    {
+      "overhead_pct": 0.93,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_GenericGetAttrWithDict"
+    },
+    {
+      "overhead_pct": 0.81,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] tupledealloc"
+    },
+    {
+      "overhead_pct": 0.8,
+      "dso": "libc.so.6",
+      "symbol": "[.] malloc"
+    },
+    {
+      "overhead_pct": 0.79,
+      "dso": "_multiarray_umath.cpython-312-aarch64-linux-gnu.so",
+      "symbol": "[.] ufunc_generic_fastcall"
+    },
+    {
+      "overhead_pct": 0.73,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const"
+    },
+    {
+      "overhead_pct": 0.72,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyType_IsSubtype"
+    },
+    {
+      "overhead_pct": 0.68,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _Py_dict_lookup"
+    },
+    {
+      "overhead_pct": 0.58,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] tuple_alloc"
+    },
+    {
+      "overhead_pct": 0.58,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyFrame_ClearExceptCode"
+    },
+    {
+      "overhead_pct": 0.57,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000083e78"
+    },
+    {
+      "overhead_pct": 0.54,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)"
+    },
+    {
+      "overhead_pct": 0.52,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] at::_ops::as_strided::call(at::Tensor const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, std::optional<c10::SymInt>)"
+    },
+    {
+      "overhead_pct": 0.51,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] at::native::as_strided_tensorimpl(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, std::optional<long>)"
+    },
+    {
+      "overhead_pct": 0.5,
+      "dso": "libtorch_python.so",
+      "symbol": "[.] torch::FunctionSignature::parse(_object*, _object*, _object*, _object**, std::vector<_object*, std::allocator<_object*> >&, bool)"
+    },
+    {
+      "overhead_pct": 0.5,
+      "dso": "libc.so.6",
+      "symbol": "[.] pthread_getspecific"
+    },
+    {
+      "overhead_pct": 0.49,
+      "dso": "ld-linux-aarch64.so.1",
+      "symbol": "[.] 0x00000000000127a0"
+    },
+    {
+      "overhead_pct": 0.47,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000083e70"
+    },
+    {
+      "overhead_pct": 0.45,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyObject_Vectorcall"
+    },
+    {
+      "overhead_pct": 0.44,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyType_GenericAlloc"
+    },
+    {
+      "overhead_pct": 0.44,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] at::native::copy_impl(at::Tensor&, at::Tensor const&, bool) [clone .isra.0]"
+    },
+    {
+      "overhead_pct": 0.43,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] initialize_locals"
+    },
+    {
+      "overhead_pct": 0.43,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] at::_ops::slice_Tensor::call(at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)"
+    },
+    {
+      "overhead_pct": 0.42,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyObject_GC_UnTrack"
+    },
+    {
+      "overhead_pct": 0.42,
+      "dso": "_multiarray_umath.cpython-312-aarch64-linux-gnu.so",
+      "symbol": "[.] PyArray_NewFromDescr_int"
+    },
+    {
+      "overhead_pct": 0.42,
+      "dso": "libc.so.6",
+      "symbol": "[.] cfree"
+    },
+    {
+      "overhead_pct": 0.4,
+      "dso": "libtorch_python.so",
+      "symbol": "[.] torch::autograd::THPVariable_getitem(_object*, _object*)"
+    },
+    {
+      "overhead_pct": 0.38,
+      "dso": "_multiarray_umath.cpython-312-aarch64-linux-gnu.so",
+      "symbol": "[.] NpyIter_AdvancedNew"
+    },
+    {
+      "overhead_pct": 0.37,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyThreadState_UncheckedGet"
+    },
+    {
+      "overhead_pct": 0.37,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::reset_not_null_(c10::TensorImpl*)"
+    },
+    {
+      "overhead_pct": 0.37,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] subtype_dealloc"
+    },
+    {
+      "overhead_pct": 0.37,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] at::TensorIteratorBase::compute_types(at::TensorIteratorConfig const&)"
+    },
+    {
+      "overhead_pct": 0.36,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] at::native::slice(at::Tensor const&, long, std::optional<long>, std::optional<long>, long)"
+    },
+    {
+      "overhead_pct": 0.35,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyDict_GetItemWithError"
+    },
+    {
+      "overhead_pct": 0.34,
+      "dso": "libtorch_python.so",
+      "symbol": "[.] pybind11::detail::get_internals()"
+    }
+  ],
+  "sum_of_top_pct": 33.03,
+  "sum_all_pct": 99.06
+}

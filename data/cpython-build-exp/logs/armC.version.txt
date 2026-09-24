@@ -1,0 +1,16 @@
+/work/scripts/build_arm.sh: line 69: ./python: No such file or directory
+--- pyconfig.h ---
+161:#define HAVE_COMPUTED_GOTOS 1
+1710:#define USE_COMPUTED_GOTOS 1
+--- dispatch site (ceval.c) ---
+661:#if USE_COMPUTED_GOTOS
+843:#if !USE_COMPUTED_GOTOS
+855:#if USE_COMPUTED_GOTOS
+886:#if USE_COMPUTED_GOTOS
+--- binary ---
+-rwxr-xr-x. 1 root root    73944 Sep 24 03:55 ./python
+-rwxr-xr-x. 2 root root 30209248 Sep 24 03:55 libpython3.12.so.1.0
+--- sha256 ---
+3b06b91fdcda34599d102fbc6e0e6d22161860c74caa679ba9b2281a3ba39412  ./python
+6aa59c68620e59c027fb7110188bff465744aefb05e057cfb36927a2dacef4fd  libpython3.12.so.1.0
+date_end=2026-09-24T03:55:51+00:00

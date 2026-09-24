@@ -1,0 +1,54 @@
+{
+  "kind": "trace",
+  "created_at": "2026-09-23T18:58:15+0000",
+  "params": {
+    "batch": 8,
+    "isl": 512,
+    "osl": 16,
+    "block_size": 128,
+    "max_model_len": 4096,
+    "spec_k": 0,
+    "prefix_hit_ratio": 0.0,
+    "chunk_size": 2048,
+    "arrival": "poisson",
+    "steps": 0,
+    "seed": 0,
+    "engine": "real",
+    "shuffle_values": false,
+    "max_num_seqs": 8,
+    "num_blocks": 349,
+    "vocab_size": 131072,
+    "token_id_base": 7,
+    "prefix_len": 256,
+    "arrival_rate": 0.0,
+    "arrival_group": 0,
+    "arrival_period": 0,
+    "accept_ratio": 0.6,
+    "request_id_prefix": "req"
+  },
+  "trace": "/work/data/harness/trace_synth_smoke2.jsonl",
+  "num_steps": 34,
+  "summary": {
+    "num_steps": 34,
+    "phases": {
+      "prefill": 1,
+      "decode": 25,
+      "mixed": 7,
+      "drain": 1
+    },
+    "total_tokens": 4216,
+    "tokens_mean": 124.0,
+    "tokens_max": 518,
+    "num_reqs_mean": 3.764705882352941,
+    "num_reqs_max": 7
+  },
+  "sha256": {
+    "generate.py": "4d23fe173f29264d6e90e0de3eb411839dc08144bf0feffcf574fcdb4cf45780",
+    "schema.py": "a935324848805f824ffebe5f18855567e4e6b4d54ce2f4fd4e3aaf1f0eebeb07",
+    "synth_real.py": "d0f0ec5e0f2a875f1f2fecc38ce3fb70f1d2a48b4828abba1bc9c8b2552395d6",
+    "synth_pure.py": "dc85f06981727eead688b4d3a3949dd9a529f79cbd8e2ebf8dcb241729926ee2",
+    "worker_state.py": "6fbb2c969375d2ea27469c53c04d01a59a333733937681f532ed042ffb42d693"
+  },
+  "image": "",
+  "host": "00a71d1d7216"
+}

@@ -1,0 +1,73 @@
+{
+ "description": "worker \u4e3b\u7ebf\u7a0b perf record \u7684\u81ea\u91c7\u6837\u70ed\u70b9\uff08period \u52a0\u6743\uff0ctop 30\uff1b\u539f\u59cb top \u8868\u66f4\u957f\uff09\u3002",
+ "tier": "historical-measured",
+ "scope": "exact_worker_main_tid",
+ "source": "a3-21:HIST_PROJECT/perf-analysis/20260914T1014Z-perf-record-r1/record-rank0.stacks.json",
+ "raw_perf_data": "runs/20260914T1014Z-...-perf-record-r1/perf/record-rank0.perf.data\uff0832.2 MB\uff0c\u672a\u4e0a\u4f20\uff09",
+ "capture": {
+  "event": "cycles",
+  "samples_header": 125000,
+  "period_header": 86023367614,
+  "lost_samples_header": 0,
+  "perf_data_header": {
+   "hostname": "localhost.localdomain",
+   "os_release": "6.6.0-159.4.3.154.oe2403sp4.aarch64",
+   "arch": "aarch64",
+   "perf_version": "6.6.0-159.4.13.167.oe2403sp4.aarch64",
+   "nrcpus_online": 640,
+   "cmdline": "/usr/bin/perf record -t 4149971 -e cycles -g -o /home/REMOTE_USER/projects/vllm/HIST_PROJECT/runs/20260914T1014Z-qwen35-08b-tp1-mtp-off-long-decode-b1-perf-record-r1/perf/record-rank0.perf.data",
+   "event": {
+    "name": "cycles",
+    "sample_period_or_freq": 4000,
+    "freq_mode": true,
+    "sample_type": [
+     "IP",
+     "TID",
+     "TIME",
+     "CALLCHAIN",
+     "PERIOD",
+     "REGS_USER"
+    ],
+    "exclude_guest": true
+   },
+   "sample_frequency_hz": 4000,
+   "time_of_first_sample_s": 528957.727287,
+   "time_of_last_sample_s": 528989.632529,
+   "sample_duration_ms": 31905.242,
+   "missing_features": "TRACING_DATA CPUDESC BRANCH_STACK GROUP_DESC AUXTRACE STAT CLOCKID DIR_FORMAT COMPRESSED CPU_PMU_CAPS CLOCK_DATA HYBRID_TOPOLOGY"
+  },
+  "perf_log": {
+   "samples": 125703,
+   "size_mb": 30.328,
+   "text_lost_samples": 0
+  }
+ },
+ "totals": {
+  "symbols": 7243,
+  "samples": 125703,
+  "period": 86023367614,
+  "overhead_percent_sum": 93.24,
+  "skipped_flat_rows": 0
+ },
+ "categories": {
+  "user": {
+   "samples": 119101,
+   "period": 81504696804,
+   "symbols": 6755,
+   "period_percent": 94.7472,
+   "samples_percent": 94.7479
+  },
+  "kernel": {
+   "samples": 6602,
+   "period": 4518670810,
+   "symbols": 488,
+   "period_percent": 5.2528,
+   "samples_percent": 5.2521
+  }
+ },
+ "config": "qwen35-08b / TP1 / graph / MTP-off / chip15 / 4000 Hz / 31.9 s \u89e3\u7801\u7a97\u53e3",
+ "caveats": [
+  "symbols \u5217\u8868\u88ab\u622a\u65ad\uff08symbols_truncated=true\uff09\uff0c\u53ea\u4fdd\u7559 top 30\u3002",
+  "\u672a\u89e3\u6790\uff08strip DSO\uff09\u7684\u957f\u5c3e\u7ea6\u5360 period \u7684 6.8%\uff0894.75% user + 5.25% kernel \u4e2d\u5df2\u5f52\u7c7b\u7684\u90e8\u5206\uff09\u3002"
+ ]
+}

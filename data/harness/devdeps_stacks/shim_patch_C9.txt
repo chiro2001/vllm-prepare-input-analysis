@@ -1,0 +1,6 @@
+# C9 Tensor.to('npu')
+# ok=True
+# value='cpu'
+# exc=None
+# tb
+

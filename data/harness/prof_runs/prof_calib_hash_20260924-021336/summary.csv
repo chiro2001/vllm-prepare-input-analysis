@@ -1,0 +1,51 @@
+tag,ts,metric,value,source,note
+prof_calib_hash,2026-09-24T02:14:12+0800,ipc,1.0627429398124508,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_hash,2026-09-24T02:14:12+0800,time_enabled,4301210650,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_hash,2026-09-24T02:14:12+0800,time_running,4301210650,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_hash,2026-09-24T02:14:12+0800,confidence,1.0,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_hash,2026-09-24T02:14:12+0800,wall_s,4.333436,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_hash,2026-09-24T02:14:12+0800,counter.CPU_CYCLES,12473244533,pmu/count.json,libkperfx 区间增量
+prof_calib_hash,2026-09-24T02:14:12+0800,counter.INST_RETIRED,13255852564,pmu/count.json,libkperfx 区间增量
+prof_calib_hash,2026-09-24T02:14:12+0800,counter.INST_SPEC,13405439854,pmu/count.json,libkperfx 区间增量
+prof_calib_hash,2026-09-24T02:14:12+0800,counter.BR_PRED,668525413,pmu/count.json,libkperfx 区间增量
+prof_calib_hash,2026-09-24T02:14:12+0800,counter.BR_MIS_PRED,2807150,pmu/count.json,libkperfx 区间增量
+prof_calib_hash,2026-09-24T02:14:12+0800,counter.L1D_CACHE_REFILL,12232267,pmu/count.json,libkperfx 区间增量
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level1.retiring,17.809951040056063,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level1.bad_spec,0.20503069790311126,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level1.frontend_bound,14.722936098319806,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level1.backend_bound,67.26208216372102,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level2.frontend.frontend_latency_bound,13.326058268835078,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level2.frontend.frontend_bandwidth_bound,1.396877829484728,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level2.backend.resource_bound,4.878663167241836,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level2.backend.core_bound,62.383418996479186,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level2.backend.mem_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level3_mem.mem_l1_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level3_mem.mem_l2_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level3_mem.mem_l3_dram_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level3_mem.mem_mem_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.level3_mem.mem_store_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.ooo_stall.rob_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.ooo_stall.ptag_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.ooo_stall.mapq_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.ooo_stall.pcbuf_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,topdown.ooo_stall.other_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x000000000022ff54,7.34,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x00000000002300d4,7.26,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x000000000022ffd8,6.31,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x000000000022ffa0,6.02,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x000000000022ffbc,5.42,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x000000000023002c,5.35,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x00000000002300fc,5.32,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x0000000000230048,5.04,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x0000000000230080,5.01,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x0000000000230010,4.92,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x000000000022fff4,4.78,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x00000000002300b8,4.75,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x000000000023009c,3.92,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x0000000000230064,3.89,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x000000000022ff84,3.49,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x00000000002300e8,1.49,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x0000000000099b4c,1.47,perf/hotspots.json,libc.so.6
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x000000000022ff50,1.3,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] 0x00000000001e7c94,1.27,perf/hotspots.json,libcrypto.so.3.0.12
+prof_calib_hash,2026-09-24T02:14:12+0800,hotspot.[.] EVP_DigestFinal_ex,1.17,perf/hotspots.json,libcrypto.so.3.0.12

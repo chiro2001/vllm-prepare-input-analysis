@@ -1,0 +1,5730 @@
+{
+  "schema": "sweep-fits-v3-preset",
+  "formal_fits": [
+    {
+      "preset": "realmachine",
+      "dim": "batch",
+      "entry": "rm_batch_mmr8",
+      "x_values": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "y_values": [
+        370.2600079122931,
+        373.6850048881024,
+        375.76499744318426,
+        377.0749899558723
+      ],
+      "caliber": "pi_net_p50_us",
+      "c_us": 371.02066182895845,
+      "a_us_per_unit": 0.8468235255745414,
+      "a_unit": "us per count",
+      "r2": 0.7778944702545182,
+      "n_points": 4,
+      "noise_band_pct": 0.6831047170855421,
+      "noise_band_pct_max": 1.6538274691065031,
+      "x_range": [
+        1.0,
+        8.0
+      ],
+      "source_files": [
+        "sweep_rm_realmachine_20260923-190428.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "batch",
+      "entry": "rm_batch_mmr8",
+      "x_values": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "y_values": [
+        17.980026314035058,
+        20.844978280365467,
+        24.604989448562264,
+        30.90500831604004
+      ],
+      "caliber": "us_p50_us",
+      "c_us": 16.856739935262684,
+      "a_us_per_unit": 1.7938695078634712,
+      "a_unit": "us per count",
+      "r2": 0.9889918898386574,
+      "n_points": 4,
+      "noise_band_pct": 0.6831047170855421,
+      "noise_band_pct_max": 1.6538274691065031,
+      "x_range": [
+        1.0,
+        8.0
+      ],
+      "source_files": [
+        "sweep_rm_realmachine_20260923-190428.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "batch",
+      "entry": "rm_batch_mmr8",
+      "x_values": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "y_values": [
+        388.65001988597214,
+        394.75507219322026,
+        400.4349757451564,
+        408.3549720235169
+      ],
+      "caliber": "scope_net_p50_us",
+      "c_us": 388.13461509087807,
+      "a_us_per_unit": 2.6437719656235457,
+      "a_unit": "us per count",
+      "r2": 0.9519285131830876,
+      "n_points": 4,
+      "noise_band_pct": 0.6831047170855421,
+      "noise_band_pct_max": 1.6538274691065031,
+      "x_range": [
+        1.0,
+        8.0
+      ],
+      "source_files": [
+        "sweep_rm_realmachine_20260923-190428.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "isl",
+      "entry": "rm_isl",
+      "x_values": [
+        64.0,
+        128.0,
+        256.0,
+        512.0,
+        1024.0
+      ],
+      "y_values": [
+        375.4450299311429,
+        375.48498949036,
+        376.42999086529016,
+        393.2499676011503,
+        377.7800011448562
+      ],
+      "caliber": "pi_net_p50_us",
+      "c_us": 377.4864599108696,
+      "a_us_per_unit": 0.005523023930670985,
+      "a_unit": "us per tokens",
+      "r2": 0.07950236039984493,
+      "n_points": 5,
+      "noise_band_pct": 1.1599179960918222,
+      "noise_band_pct_max": 6.715443599093916,
+      "x_range": [
+        64.0,
+        1024.0
+      ],
+      "source_files": [
+        "sweep_rm_realmachine_20260923-190512.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "isl",
+      "entry": "rm_isl",
+      "x_values": [
+        64.0,
+        128.0,
+        256.0,
+        512.0,
+        1024.0
+      ],
+      "y_values": [
+        18.15002178773284,
+        18.42499477788806,
+        18.924998585134745,
+        18.984981579706073,
+        18.72499706223607
+      ],
+      "caliber": "us_p50_us",
+      "c_us": 18.463755016758416,
+      "a_us_per_unit": 0.00044920297827908355,
+      "a_unit": "us per tokens",
+      "r2": 0.24908280535177096,
+      "n_points": 5,
+      "noise_band_pct": 1.1599179960918222,
+      "noise_band_pct_max": 6.715443599093916,
+      "x_range": [
+        64.0,
+        1024.0
+      ],
+      "source_files": [
+        "sweep_rm_realmachine_20260923-190512.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "isl",
+      "entry": "rm_isl",
+      "x_values": [
+        64.0,
+        128.0,
+        256.0,
+        512.0,
+        1024.0
+      ],
+      "y_values": [
+        393.65500560961664,
+        394.19005042873323,
+        395.45499021187425,
+        412.3749677091837,
+        396.4299976360053
+      ],
+      "caliber": "scope_net_p50_us",
+      "c_us": 396.14251484939206,
+      "a_us_per_unit": 0.005742155921599033,
+      "a_unit": "us per tokens",
+      "r2": 0.08100341134490119,
+      "n_points": 5,
+      "noise_band_pct": 1.1599179960918222,
+      "noise_band_pct_max": 6.715443599093916,
+      "x_range": [
+        64.0,
+        1024.0
+      ],
+      "source_files": [
+        "sweep_rm_realmachine_20260923-190512.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "isl",
+      "entry": "rm_isl_warmup0",
+      "x_values": [
+        128.0,
+        512.0,
+        1024.0
+      ],
+      "y_values": [
+        373.7399820238352,
+        375.7800441235304,
+        377.4099750444293
+      ],
+      "caliber": "pi_net_p50_us",
+      "c_us": 373.39879231326074,
+      "a_us_per_unit": 0.004046649189911415,
+      "a_unit": "us per tokens",
+      "r2": 0.9786262777788846,
+      "n_points": 3,
+      "noise_band_pct": 0.5609900509405644,
+      "noise_band_pct_max": 2.2845098820511818,
+      "x_range": [
+        128.0,
+        1024.0
+      ],
+      "source_files": [
+        "sweep_rmw0_realmachine_20260923-190837.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "isl",
+      "entry": "rm_isl_warmup0",
+      "x_values": [
+        128.0,
+        512.0,
+        1024.0
+      ],
+      "y_values": [
+        18.31003464758396,
+        18.969993107020855,
+        19.179948139935732
+      ],
+      "caliber": "us_p50_us",
+      "c_us": 18.298288498929626,
+      "a_us_per_unit": 0.0009405711524949991,
+      "a_unit": "us per tokens",
+      "r2": 0.8675299634691881,
+      "n_points": 3,
+      "noise_band_pct": 0.5609900509405644,
+      "noise_band_pct_max": 2.2845098820511818,
+      "x_range": [
+        128.0,
+        1024.0
+      ],
+      "source_files": [
+        "sweep_rmw0_realmachine_20260923-190837.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "isl",
+      "entry": "rm_isl_warmup0",
+      "x_values": [
+        128.0,
+        512.0,
+        1024.0
+      ],
+      "y_values": [
+        392.19000609591603,
+        394.75993253290653,
+        396.600051317364
+      ],
+      "caliber": "scope_net_p50_us",
+      "c_us": 391.8264496983406,
+      "a_us_per_unit": 0.004850144742286523,
+      "a_unit": "us per tokens",
+      "r2": 0.9688067371756601,
+      "n_points": 3,
+      "noise_band_pct": 0.5609900509405644,
+      "noise_band_pct_max": 2.2845098820511818,
+      "x_range": [
+        128.0,
+        1024.0
+      ],
+      "source_files": [
+        "sweep_rmw0_realmachine_20260923-190837.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "batch",
+      "entry": "rm_batch_mmr64",
+      "x_values": [
+        1.0,
+        8.0,
+        16.0,
+        32.0,
+        64.0
+      ],
+      "y_values": [
+        379.13498817943037,
+        385.17502252943814,
+        390.68495971150696,
+        399.97498970478773,
+        413.8249787501991
+      ],
+      "caliber": "pi_net_p50_us",
+      "c_us": 380.7512439877969,
+      "a_us_per_unit": 0.5375100738543579,
+      "a_unit": "us per count",
+      "r2": 0.9833568031703285,
+      "n_points": 5,
+      "noise_band_pct": 0.3745622939718782,
+      "noise_band_pct_max": 3.3974373911193227,
+      "x_range": [
+        1.0,
+        64.0
+      ],
+      "source_files": [
+        "sweep_rm64_realmachine_20260923-190556.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "batch",
+      "entry": "rm_batch_mmr64",
+      "x_values": [
+        1.0,
+        8.0,
+        16.0,
+        32.0,
+        64.0
+      ],
+      "y_values": [
+        19.014987628906965,
+        31.72500873915851,
+        45.06000550463796,
+        71.84501737356186,
+        124.94999100454152
+      ],
+      "caliber": "us_p50_us",
+      "c_us": 17.985197432780698,
+      "a_us_per_unit": 1.6749506040239943,
+      "a_unit": "us per count",
+      "r2": 0.9998964436632561,
+      "n_points": 5,
+      "noise_band_pct": 0.3745622939718782,
+      "noise_band_pct_max": 3.3974373911193227,
+      "x_range": [
+        1.0,
+        64.0
+      ],
+      "source_files": [
+        "sweep_rm64_realmachine_20260923-190556.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "batch",
+      "entry": "rm_batch_mmr64",
+      "x_values": [
+        1.0,
+        8.0,
+        16.0,
+        32.0,
+        64.0
+      ],
+      "y_values": [
+        398.5149669460952,
+        417.1799519099295,
+        436.06001418083906,
+        471.78007662296295,
+        540.5599949881434
+      ],
+      "caliber": "scope_net_p50_us",
+      "c_us": 398.7463523172488,
+      "a_us_per_unit": 2.2344069674522764,
+      "a_unit": "us per count",
+      "r2": 0.9989969058179777,
+      "n_points": 5,
+      "noise_band_pct": 0.3745622939718782,
+      "noise_band_pct_max": 3.3974373911193227,
+      "x_range": [
+        1.0,
+        64.0
+      ],
+      "source_files": [
+        "sweep_rm64_realmachine_20260923-190556.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "batch",
+      "entry": "rm_steady12s",
+      "x_values": [
+        1.0
+      ],
+      "y_values": [
+        375.9300452657044
+      ],
+      "caliber": "pi_net_p50_us",
+      "c_us": NaN,
+      "a_us_per_unit": NaN,
+      "a_unit": "us per count",
+      "r2": NaN,
+      "n_points": 1,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        1.0,
+        1.0
+      ],
+      "source_files": [
+        "sweep_rmsteady_realmachine_20260923-190652.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "batch",
+      "entry": "rm_steady12s",
+      "x_values": [
+        1.0
+      ],
+      "y_values": [
+        18.45002407208085
+      ],
+      "caliber": "us_p50_us",
+      "c_us": NaN,
+      "a_us_per_unit": NaN,
+      "a_unit": "us per count",
+      "r2": NaN,
+      "n_points": 1,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        1.0,
+        1.0
+      ],
+      "source_files": [
+        "sweep_rmsteady_realmachine_20260923-190652.csv"
+      ]
+    },
+    {
+      "preset": "realmachine",
+      "dim": "batch",
+      "entry": "rm_steady12s",
+      "x_values": [
+        1.0
+      ],
+      "y_values": [
+        394.75999074056745
+      ],
+      "caliber": "scope_net_p50_us",
+      "c_us": NaN,
+      "a_us_per_unit": NaN,
+      "a_unit": "us per count",
+      "r2": NaN,
+      "n_points": 1,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        1.0,
+        1.0
+      ],
+      "source_files": [
+        "sweep_rmsteady_realmachine_20260923-190652.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "isl",
+      "entry": "stress_isl",
+      "x_values": [
+        64.0,
+        128.0,
+        256.0,
+        512.0,
+        1024.0,
+        2048.0
+      ],
+      "y_values": [
+        380.899989977479,
+        390.2000607922673,
+        392.179936170578,
+        398.055010009557,
+        397.17505569569767,
+        399.4749567937106
+      ],
+      "caliber": "pi_net_p50_us",
+      "c_us": 388.6151605920486,
+      "a_us_per_unit": 0.0065213407457831865,
+      "a_unit": "us per tokens",
+      "r2": 0.51096521844106,
+      "n_points": 6,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        64.0,
+        2048.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "isl",
+      "entry": "stress_isl",
+      "x_values": [
+        64.0,
+        128.0,
+        256.0,
+        512.0,
+        1024.0,
+        2048.0
+      ],
+      "y_values": [
+        67.59498501196504,
+        68.53500963188708,
+        69.35998681001365,
+        70.64003148116171,
+        69.78999590501189,
+        70.92501618899405
+      ],
+      "caliber": "us_p50_us",
+      "c_us": 68.62950079207914,
+      "a_us_per_unit": 0.0012569494733528008,
+      "a_unit": "us per tokens",
+      "r2": 0.5697639682722568,
+      "n_points": 6,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        64.0,
+        2048.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "isl",
+      "entry": "stress_isl",
+      "x_values": [
+        64.0,
+        128.0,
+        256.0,
+        512.0,
+        1024.0,
+        2048.0
+      ],
+      "y_values": [
+        448.4699747990817,
+        459.7649967763573,
+        461.43500367179513,
+        468.59501162543893,
+        467.22497791051865,
+        470.2750011347234
+      ],
+      "caliber": "scope_net_p50_us",
+      "c_us": 457.5324552631774,
+      "a_us_per_unit": 0.00758190335784985,
+      "a_unit": "us per tokens",
+      "r2": 0.5092348908060509,
+      "n_points": 6,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        64.0,
+        2048.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "batch",
+      "entry": "stress_batch",
+      "x_values": [
+        1.0,
+        2.0,
+        4.0,
+        8.0,
+        16.0,
+        32.0,
+        64.0
+      ],
+      "y_values": [
+        374.6050060726702,
+        376.88997690565884,
+        379.89995325915515,
+        383.50498653016984,
+        394.4550408050418,
+        401.8650215584785,
+        422.02501208521426
+      ],
+      "caliber": "pi_net_p50_us",
+      "c_us": 377.2008511433164,
+      "a_us_per_unit": 0.7310160567966432,
+      "a_unit": "us per count",
+      "r2": 0.9707546679590991,
+      "n_points": 7,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        1.0,
+        64.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "batch",
+      "entry": "stress_batch",
+      "x_values": [
+        1.0,
+        2.0,
+        4.0,
+        8.0,
+        16.0,
+        32.0,
+        64.0
+      ],
+      "y_values": [
+        19.435014110058546,
+        21.704996470361948,
+        25.060027837753296,
+        31.579984351992607,
+        44.4399775005877,
+        71.47499127313495,
+        122.21999350003898
+      ],
+      "caliber": "us_p50_us",
+      "c_us": 18.438508154706625,
+      "a_us_per_unit": 1.6287041571730838,
+      "a_unit": "us per count",
+      "r2": 0.9998236331701734,
+      "n_points": 7,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        1.0,
+        64.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "batch",
+      "entry": "stress_batch",
+      "x_values": [
+        1.0,
+        2.0,
+        4.0,
+        8.0,
+        16.0,
+        32.0,
+        64.0
+      ],
+      "y_values": [
+        394.470029277727,
+        398.81502743810415,
+        405.2600124850869,
+        415.3100016992539,
+        438.8600355014205,
+        474.2199962493032,
+        544.865004485473
+      ],
+      "caliber": "scope_net_p50_us",
+      "c_us": 395.8828949661199,
+      "a_us_per_unit": 2.3670853730199206,
+      "a_unit": "us per count",
+      "r2": 0.9967963036204376,
+      "n_points": 7,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        1.0,
+        64.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "chunk_size",
+      "entry": "stress_chunk_size",
+      "x_values": [
+        128.0,
+        256.0,
+        512.0,
+        1024.0,
+        2048.0,
+        8192.0
+      ],
+      "y_values": [
+        401.9850166514516,
+        385.1400106213987,
+        391.0500090569258,
+        394.47995368391275,
+        396.1650072596967,
+        395.76494600623846
+      ],
+      "caliber": "pi_net_p50_us",
+      "c_us": 393.4461989962871,
+      "a_us_per_unit": 0.0003213609623274536,
+      "a_unit": "us per tokens",
+      "r2": 0.03122237257092919,
+      "n_points": 6,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        128.0,
+        8192.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "chunk_size",
+      "entry": "stress_chunk_size",
+      "x_values": [
+        128.0,
+        256.0,
+        512.0,
+        1024.0,
+        2048.0,
+        8192.0
+      ],
+      "y_values": [
+        71.70502794906497,
+        67.1599991619587,
+        69.53001138754189,
+        69.51997056603432,
+        69.92500857450068,
+        69.97497985139489
+      ],
+      "caliber": "us_p50_us",
+      "c_us": 69.5165251964665,
+      "a_us_per_unit": 5.8868940106617776e-05,
+      "a_unit": "us per tokens",
+      "r2": 0.015658824422101425,
+      "n_points": 6,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        128.0,
+        8192.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "chunk_size",
+      "entry": "stress_chunk_size",
+      "x_values": [
+        128.0,
+        256.0,
+        512.0,
+        1024.0,
+        2048.0,
+        8192.0
+      ],
+      "y_values": [
+        474.3449972011149,
+        452.77999015524983,
+        461.0949836205691,
+        464.47000931948423,
+        466.4200241677463,
+        466.50500735267997
+      ],
+      "caliber": "scope_net_p50_us",
+      "c_us": 463.4403962192329,
+      "a_us_per_unit": 0.00040893375834266524,
+      "a_unit": "us per tokens",
+      "r2": 0.03172772678572744,
+      "n_points": 6,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        128.0,
+        8192.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "block_size",
+      "entry": "stress_block_size",
+      "x_values": [
+        32.0,
+        64.0,
+        128.0,
+        256.0
+      ],
+      "y_values": [
+        389.89499444141984,
+        391.76002610474825,
+        392.79001066461205,
+        391.96497527882457
+      ],
+      "caliber": "pi_net_p50_us",
+      "c_us": 390.78632329145194,
+      "a_us_per_unit": 0.006801486091243032,
+      "a_unit": "us per count",
+      "r2": 0.30386277206790424,
+      "n_points": 4,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        32.0,
+        256.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "block_size",
+      "entry": "stress_block_size",
+      "x_values": [
+        32.0,
+        64.0,
+        128.0,
+        256.0
+      ],
+      "y_values": [
+        66.769978730008,
+        68.78000567667186,
+        69.6149654686451,
+        70.25501690804958
+      ],
+      "caliber": "us_p50_us",
+      "c_us": 67.28910755001655,
+      "a_us_per_unit": 0.013049034548558923,
+      "a_unit": "us per count",
+      "r2": 0.7275146940849101,
+      "n_points": 4,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        32.0,
+        256.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "block_size",
+      "entry": "stress_block_size",
+      "x_values": [
+        32.0,
+        64.0,
+        128.0,
+        256.0
+      ],
+      "y_values": [
+        456.8399745039642,
+        461.130024632439,
+        463.2500058505684,
+        462.8149908967316
+      ],
+      "caliber": "scope_net_p50_us",
+      "c_us": 458.4667394342627,
+      "a_us_per_unit": 0.021183412805524146,
+      "a_unit": "us per count",
+      "r2": 0.5144573163870444,
+      "n_points": 4,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        32.0,
+        256.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "spec_k",
+      "entry": "stress_spec_k",
+      "x_values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "y_values": [
+        398.7700038123876,
+        558.1649602390826,
+        578.940031118691,
+        555.4349918384105
+      ],
+      "caliber": "pi_net_p50_us",
+      "c_us": 449.2119915084914,
+      "a_us_per_unit": 49.07700349576768,
+      "a_unit": "us per count",
+      "r2": 0.5775665633646307,
+      "n_points": 4,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        0.0,
+        3.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "spec_k",
+      "entry": "stress_spec_k",
+      "x_values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "y_values": [
+        71.44501432776451,
+        226.09997540712357,
+        232.20997536554933,
+        229.14001601748168
+      ],
+      "caliber": "us_p50_us",
+      "c_us": 117.84449452534324,
+      "a_us_per_unit": 47.919500502757714,
+      "a_unit": "us per count",
+      "r2": 0.6149051623553545,
+      "n_points": 4,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        0.0,
+        3.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "spec_k",
+      "entry": "stress_spec_k",
+      "x_values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "y_values": [
+        470.10500566102564,
+        785.8600292820483,
+        813.9399578794837,
+        790.390040492639
+      ],
+      "caliber": "scope_net_p50_us",
+      "c_us": 566.733503364958,
+      "a_us_per_unit": 98.89350330922748,
+      "a_unit": "us per count",
+      "r2": 0.607694449473813,
+      "n_points": 4,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        0.0,
+        3.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "prefix_hit_ratio",
+      "entry": "stress_prefix_hit_ratio",
+      "x_values": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "y_values": [
+        411.8800279684365,
+        410.4299587197602,
+        417.88502130657434,
+        406.27006092108786,
+        400.110031478107
+      ],
+      "caliber": "pi_net_p50_us",
+      "c_us": 414.8549982346594,
+      "a_us_per_unit": -11.079956311732705,
+      "a_unit": "us per ratio",
+      "r2": 0.4377703872017159,
+      "n_points": 5,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        0.0,
+        1.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "prefix_hit_ratio",
+      "entry": "stress_prefix_hit_ratio",
+      "x_values": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "y_values": [
+        69.08000796101987,
+        69.21502063050866,
+        69.48001100681722,
+        68.78501153551042,
+        69.08000796101987
+      ],
+      "caliber": "us_p50_us",
+      "c_us": 69.21401363797483,
+      "a_us_per_unit": -0.1720036379993054,
+      "a_unit": "us per ratio",
+      "r2": 0.07287527668256011,
+      "n_points": 5,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        0.0,
+        1.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stress",
+      "dim": "prefix_hit_ratio",
+      "entry": "stress_prefix_hit_ratio",
+      "x_values": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "y_values": [
+        481.7799781449139,
+        480.51500925794244,
+        488.324963953346,
+        476.5749617945403,
+        469.2199872806668
+      ],
+      "caliber": "scope_net_p50_us",
+      "c_us": 485.09498592466116,
+      "a_us_per_unit": -11.624011676758613,
+      "a_unit": "us per ratio",
+      "r2": 0.4262761699649281,
+      "n_points": 5,
+      "noise_band_pct": 0.0,
+      "noise_band_pct_max": 0.0,
+      "x_range": [
+        0.0,
+        1.0
+      ],
+      "source_files": [
+        "sweep_stress_stress_20260923-191424.csv"
+      ]
+    },
+    {
+      "preset": "stresssub",
+      "dim": "block_size",
+      "entry": "stresssub_block_size",
+      "x_values": [
+        32.0,
+        64.0,
+        128.0,
+        256.0
+      ],
+      "y_values": [
+        397.9175235144794,
+        403.8000188302249,
+        404.1674837935716,
+        405.30998376198113
+      ],
+      "caliber": "pi_net_p50_us",
+      "c_us": 399.8396986508336,
+      "a_us_per_unit": 0.024658781868588237,
+      "a_unit": "us per count",
+      "r2": 0.5423172669190864,
+      "n_points": 4,
+      "noise_band_pct": 0.2753284784718817,
+      "noise_band_pct_max": 2.1454594092992108,
+      "x_range": [
+        32.0,
+        256.0
+      ],
+      "source_files": [
+        "sweep_stresssub_stress_20260923-192036.csv"
+      ]
+    },
+    {
+      "preset": "stresssub",
+      "dim": "block_size",
+      "entry": "stresssub_block_size",
+      "x_values": [
+        32.0,
+        64.0,
+        128.0,
+        256.0
+      ],
+      "y_values": [
+        67.7124917274341,
+        69.21500607859343,
+        70.18999895080924,
+        70.75999747030437
+      ],
+      "caliber": "us_p50_us",
+      "c_us": 68.04217232654437,
+      "a_us_per_unit": 0.011893343585340835,
+      "a_unit": "us per count",
+      "r2": 0.7803719016957478,
+      "n_points": 4,
+      "noise_band_pct": 0.2753284784718817,
+      "noise_band_pct_max": 2.1454594092992108,
+      "x_range": [
+        32.0,
+        256.0
+      ],
+      "source_files": [
+        "sweep_stresssub_stress_20260923-192036.csv"
+      ]
+    },
+    {
+      "preset": "stresssub",
+      "dim": "block_size",
+      "entry": "stresssub_block_size",
+      "x_values": [
+        32.0,
+        64.0,
+        128.0,
+        256.0
+      ],
+      "y_values": [
+        465.6625387724489,
+        472.85002074204385,
+        474.43501534871757,
+        476.3249744428322
+      ],
+      "caliber": "scope_net_p50_us",
+      "c_us": 467.76200115741426,
+      "a_us_per_unit": 0.037967801409135506,
+      "a_unit": "us per count",
+      "r2": 0.651751843413797,
+      "n_points": 4,
+      "noise_band_pct": 0.2753284784718817,
+      "noise_band_pct_max": 2.1454594092992108,
+      "x_range": [
+        32.0,
+        256.0
+      ],
+      "source_files": [
+        "sweep_stresssub_stress_20260923-192036.csv"
+      ]
+    }
+  ],
+  "ipc_preset_sensitivity": {
+    "source": "docs/06-synthetic-load.md §9.2（PMU/libkperfx 920B preset, 9 组 confidence=1.0）",
+    "caliber": "IPC（同一 prepare_input 代码，只换 preset）",
+    "rows": [
+      {
+        "preset": "realmachine",
+        "token_ids_cpu_shape": "(8, 2048)",
+        "working_set": "64 KB",
+        "ipc": 0.949,
+        "note": "与真机历史区间 0.719–0.890 同区间"
+      },
+      {
+        "preset": "stress",
+        "token_ids_cpu_shape": "(64, 32768)",
+        "working_set": "8 MB",
+        "ipc": 1.553,
+        "note": "远离真机，不能用于一致性对照"
+      }
+    ],
+    "delta_pct": 63.6,
+    "conclusion": "同一个 prepare_input 代码，只换引擎启动参数，IPC 差 64%"
+  },
+  "metric_convention": {
+    "pi_net_us": "prepare_inputs_us - triton_cpu_us",
+    "scope_total_us": "update_states_us + prepare_inputs_us",
+    "scope_net_us": "scope_total_us - triton_cpu_us",
+    "stat": "per-step p50 unless stated; 跨轮取中位数",
+    "preset_note": "同一维度的 c/a 只在同一 preset 内可比；preset 决定 max_model_len → token_ids_cpu_tensor 形状 → cache 行为"
+  },
+  "presets": {
+    "realmachine": "max_model_len=2048 / max_num_reqs=8 / max_num_batched_tokens=2048 / no-prefix-caching / async=on / slot_mapping=noop（真机 launcher 口径）",
+    "stress": "max_model_len=32768 / 64 reqs / 16384 tokens / prefix-caching=on / async=off / slot_mapping=noop（放斜率用）"
+  },
+  "canonical_entries": {
+    "realmachine": {
+      "batch_mmr8": "rm_batch_mmr8",
+      "batch_mmr64": "rm_batch_mmr64",
+      "isl": "rm_isl",
+      "isl_warmup0": "rm_isl_warmup0",
+      "steady": "rm_steady12s"
+    },
+    "stress": {
+      "isl": "stress_isl",
+      "batch": "stress_batch",
+      "chunk_size": "stress_chunk_size",
+      "block_size": "stress_block_size",
+      "spec_k": "stress_spec_k",
+      "prefix_hit_ratio": "stress_prefix_hit_ratio"
+    }
+  },
+  "noise": {
+    "gates": {
+      "final": {
+        "file": "sweep_noise_final.json",
+        "mean_busy_pct": 6.63,
+        "max_busy_pct": 58.88,
+        "hot_cpus": [
+          210,
+          211
+        ],
+        "n_offenders_on_slice": 41,
+        "slice_quiet": false,
+        "top_offender_cpu_pct": [
+          201.21,
+          201.21,
+          200.91,
+          200.91,
+          200.91
+        ]
+      },
+      "post": {
+        "file": "sweep_noise_post.json",
+        "mean_busy_pct": 7.23,
+        "max_busy_pct": 100.0,
+        "hot_cpus": [
+          209
+        ],
+        "n_offenders_on_slice": 41,
+        "slice_quiet": false,
+        "top_offender_cpu_pct": [
+          200.63,
+          200.34,
+          200.34,
+          200.34,
+          200.34
+        ]
+      },
+      "pre": {
+        "file": "sweep_noise_pre.json",
+        "mean_busy_pct": 25.15,
+        "max_busy_pct": 100.0,
+        "hot_cpus": [
+          200,
+          208,
+          210,
+          214
+        ],
+        "n_offenders_on_slice": 43,
+        "slice_quiet": false,
+        "top_offender_cpu_pct": [
+          200.92,
+          200.62,
+          200.62,
+          200.62,
+          200.62
+        ]
+      }
+    },
+    "slice": "200-215",
+    "mean_busy_pct_across_gates": 13.003333333333332,
+    "mean_busy_pct_min": 6.63,
+    "mean_busy_pct_max": 25.15,
+    "any_gate_quiet": false
+  },
+  "fits": {
+    "realmachine": {
+      "rm_batch_mmr8": {
+        "preset": "realmachine",
+        "dim": "batch",
+        "x": "count",
+        "primary_metric": "pi_net_us p50（每步；已扣 triton_cpu_us）",
+        "pi_net": {
+          "a": 0.8468235255745414,
+          "c": 371.02066182895845,
+          "r2": 0.7778944702545182,
+          "n_points": 4,
+          "x_min": 1.0,
+          "x_max": 8.0,
+          "y_at_x_min": 371.867485354533,
+          "y_at_x_max": 377.7952500335548,
+          "constant_share_at_x_min": 0.9977227814774738,
+          "constant_share_at_x_max": 0.9820680958694038,
+          "per_unit_ns": 846.8235255745415,
+          "slope_first_2": 3.4249969758092433,
+          "slope_last_2": 0.32749812817198354,
+          "slope_ratio_last_over_first": 0.09561997586716225
+        },
+        "us": {
+          "a": 1.7938695078634712,
+          "c": 16.856739935262684,
+          "r2": 0.9889918898386574,
+          "n_points": 4,
+          "x_min": 1.0,
+          "x_max": 8.0,
+          "y_at_x_min": 18.650609443126157,
+          "y_at_x_max": 31.207695998170454,
+          "constant_share_at_x_min": 0.9038171104631318,
+          "constant_share_at_x_max": 0.5401468899290389,
+          "per_unit_ns": 1793.8695078634712,
+          "slope_first_2": 2.8649519663304015,
+          "slope_last_2": 1.575004716869441,
+          "slope_ratio_last_over_first": 0.5497490831885742
+        },
+        "scope_net": {
+          "a": 2.6437719656235457,
+          "c": 388.13461509087807,
+          "r2": 0.9519285131830876,
+          "n_points": 4,
+          "x_min": 1.0,
+          "x_max": 8.0,
+          "y_at_x_min": 390.77838705650163,
+          "y_at_x_max": 409.2847908158664,
+          "constant_share_at_x_min": 0.9932346003433365,
+          "constant_share_at_x_max": 0.9483240613880919,
+          "per_unit_ns": 2643.771965623546,
+          "slope_first_2": 6.105052307247974,
+          "slope_last_2": 1.9799990695900758,
+          "slope_ratio_last_over_first": 0.32432139315815567
+        },
+        "pi_raw": {
+          "a": 0.8622128718897089,
+          "c": 371.4104595533369,
+          "r2": 0.7829821728782009,
+          "n_points": 4,
+          "x_min": 1.0,
+          "x_max": 8.0,
+          "y_at_x_min": 372.27267242522663,
+          "y_at_x_max": 378.3081625284546,
+          "constant_share_at_x_min": 0.99768392112622,
+          "constant_share_at_x_max": 0.9817669729116699,
+          "per_unit_ns": 862.2128718897088,
+          "slope_first_2": 3.470020601525736,
+          "slope_last_2": 0.3462409949861245,
+          "slope_ratio_last_over_first": 0.09978067416484084
+        },
+        "triton": {
+          "a": 0.0039148448116105685,
+          "c": 0.4577981915486895,
+          "r2": 0.9268736721023775,
+          "n_points": 4,
+          "x_min": 1.0,
+          "x_max": 8.0,
+          "y_at_x_min": 0.4617130363603001,
+          "y_at_x_max": 0.4891169500415741,
+          "constant_share_at_x_min": 0.9915210433682543,
+          "constant_share_at_x_max": 0.9359687729279828,
+          "per_unit_ns": 3.9148448116105685,
+          "slope_first_2": 0.009982613846659496,
+          "slope_last_2": 0.005005858838558131,
+          "slope_ratio_last_over_first": 0.5014577259475236
+        },
+        "noise_band": {
+          "median_pi_raw_p50_range_us": 2.572487574070692,
+          "max_pi_raw_p50_range_us": 6.129994289949536,
+          "note": "同配置重复轮之间 pi_raw p50 的极差（raw 口径），仅本维度点数"
+        },
+        "n_points": 4,
+        "points": [
+          {
+            "x": 1.0,
+            "x_label": "1",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm_realmachine_20260923-190428.csv"
+            ],
+            "pi_raw_p50": 370.65500509925187,
+            "pi_raw_p50_min": 364.78499532677233,
+            "pi_raw_p50_max": 370.91498961672187,
+            "pi_raw_p50_range": 6.129994289949536,
+            "pi_net_p50": 370.2600079122931,
+            "pi_net_p50_min": 364.25000871531665,
+            "pi_net_p50_max": 370.43498014099896,
+            "pi_net_p50_range": 6.184971425682306,
+            "pi_net_p90": 378.71291278861463,
+            "pi_net_p50_decode": 370.2600079122931,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.4599860403686762,
+            "triton_p50_min": 0.43999170884490013,
+            "triton_p50_max": 0.48999208956956863,
+            "triton_p50_range": 0.0500003807246685,
+            "us_p50": 17.980026314035058,
+            "us_p50_min": 16.959995264187455,
+            "us_p50_max": 18.55997834354639,
+            "us_p50_range": 1.5999830793589354,
+            "scope_raw_p50": 389.1100059263408,
+            "scope_net_p50": 388.65001988597214,
+            "scope_net_p50_min": 381.1549977399409,
+            "scope_net_p50_max": 388.6949853040278,
+            "scope_net_p50_range": 7.539987564086914,
+            "tokens_per_step": 1.0,
+            "tokens_per_step_decode": 1.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 1.0,
+            "reqs_per_step": 1.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 62.0,
+            "steps_run": 62.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 2.0,
+            "x_label": "2",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm_realmachine_20260923-190428.csv"
+            ],
+            "pi_raw_p50": 374.12502570077777,
+            "pi_raw_p50_min": 373.5799982678145,
+            "pi_raw_p50_max": 374.8350136447698,
+            "pi_raw_p50_range": 1.2550153769552708,
+            "pi_net_p50": 373.6850048881024,
+            "pi_net_p50_min": 373.1150063686073,
+            "pi_net_p50_max": 374.3600391317159,
+            "pi_net_p50_range": 1.245032763108611,
+            "pi_net_p90": 380.60296210460365,
+            "pi_net_p50_decode": 373.6850048881024,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.46996865421533585,
+            "triton_p50_min": 0.45995693653821945,
+            "triton_p50_max": 0.4700268618762493,
+            "triton_p50_range": 0.010069925338029861,
+            "us_p50": 20.844978280365467,
+            "us_p50_min": 20.275008864700794,
+            "us_p50_max": 21.055020624771714,
+            "us_p50_range": 0.78001176007092,
+            "scope_raw_p50": 395.2150291297585,
+            "scope_net_p50": 394.75507219322026,
+            "scope_net_p50_min": 394.349975977093,
+            "scope_net_p50_max": 394.79503175243735,
+            "scope_net_p50_range": 0.4450557753443718,
+            "tokens_per_step": 2.0,
+            "tokens_per_step_decode": 2.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 2.0,
+            "reqs_per_step": 2.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 62.0,
+            "steps_run": 62.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 4.0,
+            "x_label": "4",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm_realmachine_20260923-190428.csv"
+            ],
+            "pi_raw_p50": 376.2050182558596,
+            "pi_raw_p50_min": 375.6500082090497,
+            "pi_raw_p50_max": 379.3700016103685,
+            "pi_raw_p50_range": 3.7199934013187885,
+            "pi_net_p50": 375.76499744318426,
+            "pi_net_p50_min": 375.190022168681,
+            "pi_net_p50_max": 378.93999251537025,
+            "pi_net_p50_range": 3.7499703466892242,
+            "pi_net_p90": 384.2859878204763,
+            "pi_net_p50_decode": 375.76499744318426,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.46996865421533585,
+            "triton_p50_min": 0.45995693653821945,
+            "triton_p50_max": 0.4750036168843508,
+            "triton_p50_range": 0.015046680346131325,
+            "us_p50": 24.604989448562264,
+            "us_p50_min": 24.289998691529036,
+            "us_p50_max": 24.670007405802608,
+            "us_p50_range": 0.38000871427357197,
+            "scope_raw_p50": 400.90997936204076,
+            "scope_net_p50": 400.4349757451564,
+            "scope_net_p50_min": 399.5250444859266,
+            "scope_net_p50_max": 404.05004983767867,
+            "scope_net_p50_range": 4.525005351752043,
+            "tokens_per_step": 4.0,
+            "tokens_per_step_decode": 4.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 4.0,
+            "reqs_per_step": 4.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 62.0,
+            "steps_run": 62.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 8.0,
+            "x_label": "8",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm_realmachine_20260923-190428.csv"
+            ],
+            "pi_raw_p50": 377.5899822358042,
+            "pi_raw_p50_min": 377.574993763119,
+            "pi_raw_p50_max": 378.9999755099416,
+            "pi_raw_p50_range": 1.4249817468225956,
+            "pi_net_p50": 377.0749899558723,
+            "pi_net_p50_min": 377.06500734202564,
+            "pi_net_p50_max": 378.5349545069039,
+            "pi_net_p50_range": 1.4699471648782492,
+            "pi_net_p90": 387.41693715564907,
+            "pi_net_p50_decode": 377.0749899558723,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.48999208956956863,
+            "triton_p50_min": 0.4600151441991329,
+            "triton_p50_max": 0.500003807246685,
+            "triton_p50_range": 0.03998866304755211,
+            "us_p50": 30.90500831604004,
+            "us_p50_min": 30.839990358799696,
+            "us_p50_max": 30.925002647563815,
+            "us_p50_range": 0.08501228876411915,
+            "scope_raw_p50": 408.8549758307636,
+            "scope_net_p50": 408.3549720235169,
+            "scope_net_p50_min": 408.1249644514173,
+            "scope_net_p50_max": 409.58498721010983,
+            "scope_net_p50_range": 1.460022758692503,
+            "tokens_per_step": 8.0,
+            "tokens_per_step_decode": 8.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 8.0,
+            "reqs_per_step": 8.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 62.0,
+            "steps_run": 62.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          }
+        ],
+        "notes": "rm_batch_mmr8"
+      },
+      "rm_isl": {
+        "preset": "realmachine",
+        "dim": "isl",
+        "x": "tokens",
+        "primary_metric": "pi_net_us p50（每步；已扣 triton_cpu_us）",
+        "pi_net": {
+          "a": 0.005523023930670985,
+          "c": 377.4864599108696,
+          "r2": 0.07950236039984493,
+          "n_points": 5,
+          "x_min": 64.0,
+          "x_max": 1024.0,
+          "y_at_x_min": 377.83993344243254,
+          "y_at_x_max": 383.1420364158767,
+          "constant_share_at_x_min": 0.9990644886887882,
+          "constant_share_at_x_max": 0.9852389558767487,
+          "per_unit_ns": 5.523023930670985,
+          "slope_first_2": 0.0006243681127646118,
+          "slope_last_2": -0.030214778234949693,
+          "slope_ratio_last_over_first": -48.39257101257625
+        },
+        "us": {
+          "a": 0.00044920297827908355,
+          "c": 18.463755016758416,
+          "r2": 0.24908280535177096,
+          "n_points": 5,
+          "x_min": 64.0,
+          "x_max": 1024.0,
+          "y_at_x_min": 18.49250400736828,
+          "y_at_x_max": 18.923738866516196,
+          "constant_share_at_x_min": 0.9984453705891637,
+          "constant_share_at_x_max": 0.9756927606641371,
+          "per_unit_ns": 0.44920297827908356,
+          "slope_first_2": 0.004296452971175237,
+          "slope_last_2": -0.0005077822606836052,
+          "slope_ratio_last_over_first": -0.11818638865368708
+        },
+        "scope_net": {
+          "a": 0.005742155921599033,
+          "c": 396.14251484939206,
+          "r2": 0.08100341134490119,
+          "n_points": 5,
+          "x_min": 64.0,
+          "x_max": 1024.0,
+          "y_at_x_min": 396.5100128283744,
+          "y_at_x_max": 402.0224825131095,
+          "constant_share_at_x_min": 0.9990731684772324,
+          "constant_share_at_x_max": 0.9853740327482166,
+          "per_unit_ns": 5.742155921599033,
+          "slope_first_2": 0.00836007529869408,
+          "slope_last_2": -0.031142519674176895,
+          "slope_ratio_last_over_first": -3.725148226720116
+        },
+        "pi_raw": {
+          "a": 0.005577433473253334,
+          "c": 377.95187624093785,
+          "r2": 0.08120775422662674,
+          "n_points": 5,
+          "x_min": 64.0,
+          "x_max": 1024.0,
+          "y_at_x_min": 378.30883198322607,
+          "y_at_x_max": 383.6631681175493,
+          "constant_share_at_x_min": 0.9990564435400122,
+          "constant_share_at_x_max": 0.9851137863855058,
+          "per_unit_ns": 5.5774334732533335,
+          "slope_first_2": 0.0012501004675862296,
+          "slope_last_2": -0.030107401016721342,
+          "slope_ratio_last_over_first": -24.08398508549841
+        },
+        "triton": {
+          "a": 6.510466240191203e-05,
+          "c": 0.4891820329551896,
+          "r2": 0.8611111111111108,
+          "n_points": 5,
+          "x_min": 64.0,
+          "x_max": 1024.0,
+          "y_at_x_min": 0.49334873134891194,
+          "y_at_x_max": 0.5558492072547475,
+          "constant_share_at_x_min": 0.9915542533527353,
+          "constant_share_at_x_max": 0.8800624820015186,
+          "per_unit_ns": 0.06510466240191203,
+          "slope_first_2": 0.000390627974411469,
+          "slope_last_2": 9.76569936028679e-05,
+          "slope_ratio_last_over_first": 0.25000000000000167
+        },
+        "noise_band": {
+          "median_pi_raw_p50_range_us": 4.360015736892819,
+          "max_pi_raw_p50_range_us": 26.440044166520238,
+          "note": "同配置重复轮之间 pi_raw p50 的极差（raw 口径），仅本维度点数"
+        },
+        "n_points": 5,
+        "points": [
+          {
+            "x": 64.0,
+            "x_label": "64",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm_realmachine_20260923-190512.csv"
+            ],
+            "pi_raw_p50": 375.8899983949959,
+            "pi_raw_p50_min": 374.4149871636182,
+            "pi_raw_p50_max": 378.775002900511,
+            "pi_raw_p50_range": 4.360015736892819,
+            "pi_net_p50": 375.4450299311429,
+            "pi_net_p50_min": 373.8649538718164,
+            "pi_net_p50_max": 378.28501081094146,
+            "pi_net_p50_range": 4.420056939125061,
+            "pi_net_p90": 388.69601557962596,
+            "pi_net_p50_decode": 375.4450299311429,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.48501533456146717,
+            "triton_p50_min": 0.480009475722909,
+            "triton_p50_max": 0.5500041879713535,
+            "triton_p50_range": 0.06999471224844456,
+            "us_p50": 18.15002178773284,
+            "us_p50_min": 17.315003788098693,
+            "us_p50_max": 18.215010641142726,
+            "us_p50_range": 0.900006853044033,
+            "scope_raw_p50": 394.13501508533955,
+            "scope_net_p50": 393.65500560961664,
+            "scope_net_p50_min": 391.1700041498989,
+            "scope_net_p50_max": 396.8499950133264,
+            "scope_net_p50_range": 5.67999086342752,
+            "tokens_per_step": 1.0,
+            "tokens_per_step_decode": 1.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 1.0,
+            "reqs_per_step": 1.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 62.0,
+            "steps_run": 62.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 128.0,
+            "x_label": "128",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm_realmachine_20260923-190512.csv"
+            ],
+            "pi_raw_p50": 375.9700048249215,
+            "pi_raw_p50_min": 375.000003259629,
+            "pi_raw_p50_max": 377.19501415267587,
+            "pi_raw_p50_range": 2.195010893046856,
+            "pi_net_p50": 375.48498949036,
+            "pi_net_p50_min": 374.5650465134531,
+            "pi_net_p50_max": 376.68002187274396,
+            "pi_net_p50_range": 2.1149753592908382,
+            "pi_net_p90": 389.0630148816854,
+            "pi_net_p50_decode": 375.48498949036,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5100155249238014,
+            "triton_p50_min": 0.4800385795533657,
+            "triton_p50_max": 0.5199690349400043,
+            "triton_p50_range": 0.03993045538663864,
+            "us_p50": 18.42499477788806,
+            "us_p50_min": 18.125021597370505,
+            "us_p50_max": 18.485006876289845,
+            "us_p50_range": 0.3599852789193392,
+            "scope_raw_p50": 394.71001946367323,
+            "scope_net_p50": 394.19005042873323,
+            "scope_net_p50_min": 392.7599755115807,
+            "scope_net_p50_max": 395.7799926865846,
+            "scope_net_p50_range": 3.0200171750038862,
+            "tokens_per_step": 1.0,
+            "tokens_per_step_decode": 1.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 1.0,
+            "reqs_per_step": 1.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 62.0,
+            "steps_run": 62.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 256.0,
+            "x_label": "256",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm_realmachine_20260923-190512.csv"
+            ],
+            "pi_raw_p50": 376.94000639021397,
+            "pi_raw_p50_min": 376.4049615710974,
+            "pi_raw_p50_max": 399.4750150013715,
+            "pi_raw_p50_range": 23.07005343027413,
+            "pi_net_p50": 376.42999086529016,
+            "pi_net_p50_min": 375.90996362268925,
+            "pi_net_p50_max": 398.9150281995535,
+            "pi_net_p50_range": 23.005064576864243,
+            "pi_net_p90": 390.5249875970185,
+            "pi_net_p50_decode": 376.42999086529016,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5100155249238014,
+            "triton_p50_min": 0.500003807246685,
+            "triton_p50_max": 0.5100155249238014,
+            "triton_p50_range": 0.010011717677116394,
+            "us_p50": 18.924998585134745,
+            "us_p50_min": 18.664984963834286,
+            "us_p50_max": 19.184983102604747,
+            "us_p50_range": 0.5199981387704611,
+            "scope_raw_p50": 395.96500573679805,
+            "scope_net_p50": 395.45499021187425,
+            "scope_net_p50_min": 394.84500302933156,
+            "scope_net_p50_max": 418.54000301100314,
+            "scope_net_p50_range": 23.69499998167157,
+            "tokens_per_step": 1.0,
+            "tokens_per_step_decode": 1.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 1.0,
+            "reqs_per_step": 1.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 62.0,
+            "steps_run": 62.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 512.0,
+            "x_label": "512",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm_realmachine_20260923-190512.csv"
+            ],
+            "pi_raw_p50": 393.7199944630265,
+            "pi_raw_p50_min": 378.19999852217734,
+            "pi_raw_p50_max": 404.6400426886976,
+            "pi_raw_p50_range": 26.440044166520238,
+            "pi_net_p50": 393.2499676011503,
+            "pi_net_p50_min": 377.6450175791979,
+            "pi_net_p50_max": 404.15505645796657,
+            "pi_net_p50_range": 26.510038878768682,
+            "pi_net_p90": 411.52098565362394,
+            "pi_net_p50_decode": 393.2499676011503,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5100155249238014,
+            "triton_p50_min": 0.500003807246685,
+            "triton_p50_max": 0.5200272426009178,
+            "triton_p50_range": 0.020023435354232788,
+            "us_p50": 18.984981579706073,
+            "us_p50_min": 18.809980247169733,
+            "us_p50_max": 19.42997914738953,
+            "us_p50_range": 0.6199989002197981,
+            "scope_raw_p50": 412.8949949517846,
+            "scope_net_p50": 412.3749677091837,
+            "scope_net_p50_min": 396.39996248297393,
+            "scope_net_p50_max": 423.46998816356063,
+            "scope_net_p50_range": 27.070025680586696,
+            "tokens_per_step": 1.0,
+            "tokens_per_step_decode": 1.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 1.0,
+            "reqs_per_step": 1.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 62.0,
+            "steps_run": 62.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 1024.0,
+            "x_label": "1024",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm_realmachine_20260923-190512.csv"
+            ],
+            "pi_raw_p50": 378.30500514246523,
+            "pi_raw_p50_min": 378.13500966876745,
+            "pi_raw_p50_max": 379.77498141117394,
+            "pi_raw_p50_range": 1.6399717424064875,
+            "pi_net_p50": 377.7800011448562,
+            "pi_net_p50_min": 377.59498809464276,
+            "pi_net_p50_max": 379.18498856015503,
+            "pi_net_p50_range": 1.5900004655122757,
+            "pi_net_p90": 395.957991713658,
+            "pi_net_p50_decode": 377.7800011448562,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5600159056484699,
+            "triton_p50_min": 0.554980942979455,
+            "triton_p50_max": 0.5700276233255863,
+            "triton_p50_range": 0.015046680346131325,
+            "us_p50": 18.72499706223607,
+            "us_p50_min": 18.695020116865635,
+            "us_p50_max": 19.015016732737422,
+            "us_p50_range": 0.31999661587178707,
+            "scope_raw_p50": 396.99001354165375,
+            "scope_net_p50": 396.4299976360053,
+            "scope_net_p50_min": 396.37996815145016,
+            "scope_net_p50_max": 398.33999471738935,
+            "scope_net_p50_range": 1.960026565939188,
+            "tokens_per_step": 1.0,
+            "tokens_per_step_decode": 1.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 1.0,
+            "reqs_per_step": 1.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 62.0,
+            "steps_run": 62.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          }
+        ],
+        "notes": "rm_isl"
+      },
+      "rm_isl_warmup0": {
+        "preset": "realmachine",
+        "dim": "isl",
+        "x": "tokens",
+        "primary_metric": "pi_net_us p50（每步；已扣 triton_cpu_us）",
+        "pi_net": {
+          "a": 0.004046649189911415,
+          "c": 373.39879231326074,
+          "r2": 0.9786262777788846,
+          "n_points": 3,
+          "x_min": 128.0,
+          "x_max": 1024.0,
+          "y_at_x_min": 373.9167634095694,
+          "y_at_x_max": 377.54256108373005,
+          "constant_share_at_x_min": 0.99861474224481,
+          "constant_share_at_x_max": 0.9890243665281745,
+          "per_unit_ns": 4.046649189911415
+        },
+        "us": {
+          "a": 0.0009405711524949991,
+          "c": 18.298288498929626,
+          "r2": 0.8675299634691881,
+          "n_points": 3,
+          "x_min": 128.0,
+          "x_max": 1024.0,
+          "y_at_x_min": 18.418681606448985,
+          "y_at_x_max": 19.261433359084506,
+          "constant_share_at_x_min": 0.9934635328362913,
+          "constant_share_at_x_max": 0.9499962000646945,
+          "per_unit_ns": 0.9405711524949991
+        },
+        "scope_net": {
+          "a": 0.004850144742286523,
+          "c": 391.8264496983406,
+          "r2": 0.9688067371756601,
+          "n_points": 3,
+          "x_min": 128.0,
+          "x_max": 1024.0,
+          "y_at_x_min": 392.44726822535324,
+          "y_at_x_max": 396.79299791444197,
+          "constant_share_at_x_min": 0.998418084218499,
+          "constant_share_at_x_max": 0.9874832765643402,
+          "per_unit_ns": 4.850144742286523
+        },
+        "pi_raw": {
+          "a": 0.004015996760367882,
+          "c": 373.9124607622018,
+          "r2": 0.9807088376446986,
+          "n_points": 3,
+          "x_min": 128.0,
+          "x_max": 1024.0,
+          "y_at_x_min": 374.4265083475289,
+          "y_at_x_max": 378.02484144481855,
+          "constant_share_at_x_min": 0.998627106858444,
+          "constant_share_at_x_max": 0.9891214009457708,
+          "per_unit_ns": 4.015996760367883
+        },
+        "triton": {
+          "a": -1.0508350946160113e-05,
+          "c": 0.5291737112644557,
+          "r2": 0.6756756756756739,
+          "n_points": 3,
+          "x_min": 128.0,
+          "x_max": 1024.0,
+          "y_at_x_min": 0.5278286423433471,
+          "y_at_x_max": 0.5184131598955877,
+          "constant_share_at_x_min": 1.0025483060470857,
+          "constant_share_at_x_max": 1.0207567095153125,
+          "per_unit_ns": -0.010508350946160113
+        },
+        "noise_band": {
+          "median_pi_raw_p50_range_us": 2.1199812181293964,
+          "max_pi_raw_p50_range_us": 8.5500068962574,
+          "note": "同配置重复轮之间 pi_raw p50 的极差（raw 口径），仅本维度点数"
+        },
+        "n_points": 3,
+        "points": [
+          {
+            "x": 128.0,
+            "x_label": "128",
+            "n_runs": 3,
+            "files": [
+              "sweep_rmw0_realmachine_20260923-190837.csv"
+            ],
+            "pi_raw_p50": 374.2600092664361,
+            "pi_raw_p50_min": 366.4399846456945,
+            "pi_raw_p50_max": 374.9899915419519,
+            "pi_raw_p50_range": 8.5500068962574,
+            "pi_net_p50": 373.7399820238352,
+            "pi_net_p50_min": 365.879968740046,
+            "pi_net_p50_max": 374.4600107893348,
+            "pi_net_p50_range": 8.58004204928875,
+            "pi_net_p90": 385.4560083709657,
+            "pi_net_p50_decode": 373.6749931704253,
+            "pi_net_p50_prefill": 451.17002446204424,
+            "triton_p50": 0.5299807526171207,
+            "triton_p50_min": 0.500003807246685,
+            "triton_p50_max": 0.5399924702942371,
+            "triton_p50_range": 0.03998866304755211,
+            "us_p50": 18.31003464758396,
+            "us_p50_min": 17.340003978461027,
+            "us_p50_max": 18.46998929977417,
+            "us_p50_range": 1.1299853213131428,
+            "scope_raw_p50": 392.6900099031627,
+            "scope_net_p50": 392.19000609591603,
+            "scope_net_p50_min": 383.22998443618417,
+            "scope_net_p50_max": 392.77999894693494,
+            "scope_net_p50_range": 9.55001451075077,
+            "tokens_per_step": 1.0,
+            "tokens_per_step_decode": 1.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 1.0,
+            "reqs_per_step": 1.0,
+            "n_prefill_steps": 1.0,
+            "n_decode_steps": 64.0,
+            "steps_run": 65.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 512.0,
+            "x_label": "512",
+            "n_runs": 3,
+            "files": [
+              "sweep_rmw0_realmachine_20260923-190837.csv"
+            ],
+            "pi_raw_p50": 376.26002449542284,
+            "pi_raw_p50_min": 376.19995418936014,
+            "pi_raw_p50_max": 377.170043066144,
+            "pi_raw_p50_range": 0.9700888767838478,
+            "pi_net_p50": 375.7800441235304,
+            "pi_net_p50_min": 375.6699152290821,
+            "pi_net_p50_max": 376.6700392588973,
+            "pi_net_p50_range": 1.000124029815197,
+            "pi_net_p90": 386.79002318531275,
+            "pi_net_p50_decode": 375.71004941128194,
+            "pi_net_p50_prefill": 452.0399961620569,
+            "triton_p50": 0.5200272426009178,
+            "triton_p50_min": 0.500003807246685,
+            "triton_p50_max": 0.5200272426009178,
+            "triton_p50_range": 0.020023435354232788,
+            "us_p50": 18.969993107020855,
+            "us_p50_min": 18.830003682523966,
+            "us_p50_max": 19.11999424919486,
+            "us_p50_range": 0.2899905666708946,
+            "scope_raw_p50": 395.27995977550745,
+            "scope_net_p50": 394.75993253290653,
+            "scope_net_p50_min": 394.6300130337477,
+            "scope_net_p50_max": 396.23997872695327,
+            "scope_net_p50_range": 1.609965693205595,
+            "tokens_per_step": 1.0,
+            "tokens_per_step_decode": 1.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 1.0,
+            "reqs_per_step": 1.0,
+            "n_prefill_steps": 1.0,
+            "n_decode_steps": 64.0,
+            "steps_run": 65.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 1024.0,
+            "x_label": "1024",
+            "n_runs": 3,
+            "files": [
+              "sweep_rmw0_realmachine_20260923-190837.csv"
+            ],
+            "pi_raw_p50": 377.89996713399887,
+            "pi_raw_p50_min": 377.74001248180866,
+            "pi_raw_p50_max": 379.85999369993806,
+            "pi_raw_p50_range": 2.1199812181293964,
+            "pi_net_p50": 377.4099750444293,
+            "pi_net_p50_min": 377.27999733760953,
+            "pi_net_p50_max": 379.3099895119667,
+            "pi_net_p50_range": 2.029992174357176,
+            "pi_net_p90": 391.0119761712849,
+            "pi_net_p50_decode": 377.26000300608575,
+            "pi_net_p50_prefill": 460.5099675245583,
+            "triton_p50": 0.5200272426009178,
+            "triton_p50_min": 0.509957317262888,
+            "triton_p50_max": 0.5399924702942371,
+            "triton_p50_range": 0.030035153031349182,
+            "us_p50": 19.179948139935732,
+            "us_p50_min": 18.880004063248634,
+            "us_p50_max": 19.300030544400215,
+            "us_p50_range": 0.4200264811515808,
+            "scope_raw_p50": 397.11000863462687,
+            "scope_net_p50": 396.600051317364,
+            "scope_net_p50_min": 395.8399756811559,
+            "scope_net_p50_max": 398.57998490333557,
+            "scope_net_p50_range": 2.7400092221796513,
+            "tokens_per_step": 1.0,
+            "tokens_per_step_decode": 1.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 1.0,
+            "reqs_per_step": 1.0,
+            "n_prefill_steps": 1.0,
+            "n_decode_steps": 64.0,
+            "steps_run": 65.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          }
+        ],
+        "notes": "rm_isl_warmup0"
+      },
+      "rm_batch_mmr64": {
+        "preset": "realmachine",
+        "dim": "batch",
+        "x": "count",
+        "primary_metric": "pi_net_us p50（每步；已扣 triton_cpu_us）",
+        "pi_net": {
+          "a": 0.5375100738543579,
+          "c": 380.7512439877969,
+          "r2": 0.9833568031703285,
+          "n_points": 5,
+          "x_min": 1.0,
+          "x_max": 64.0,
+          "y_at_x_min": 381.2887540616513,
+          "y_at_x_max": 415.15188871447583,
+          "constant_share_at_x_min": 0.9985902808091542,
+          "constant_share_at_x_max": 0.9171372077019785,
+          "per_unit_ns": 537.5100738543579,
+          "slope_first_2": 0.8628620500011097,
+          "slope_last_2": 0.4328121576690998,
+          "slope_ratio_last_over_first": 0.5016006413406907
+        },
+        "us": {
+          "a": 1.6749506040239943,
+          "c": 17.985197432780698,
+          "r2": 0.9998964436632561,
+          "n_points": 5,
+          "x_min": 1.0,
+          "x_max": 64.0,
+          "y_at_x_min": 19.660148036804692,
+          "y_at_x_max": 125.18203609031633,
+          "constant_share_at_x_min": 0.9148047816889063,
+          "constant_share_at_x_max": 0.14367235103768994,
+          "per_unit_ns": 1674.9506040239944,
+          "slope_first_2": 1.8157173014645065,
+          "slope_last_2": 1.659530425968113,
+          "slope_ratio_last_over_first": 0.9139806205677405
+        },
+        "scope_net": {
+          "a": 2.2344069674522764,
+          "c": 398.7463523172488,
+          "r2": 0.9989969058179777,
+          "n_points": 5,
+          "x_min": 1.0,
+          "x_max": 64.0,
+          "y_at_x_min": 400.9807592847011,
+          "y_at_x_max": 541.7483982341945,
+          "constant_share_at_x_min": 0.9944276454275807,
+          "constant_share_at_x_max": 0.7360360521912853,
+          "per_unit_ns": 2234.4069674522766,
+          "slope_first_2": 2.6664264234049044,
+          "slope_last_2": 2.1493724489118855,
+          "slope_ratio_last_over_first": 0.8060872897318634
+        },
+        "pi_raw": {
+          "a": 0.5391241249433282,
+          "c": 381.3431899203424,
+          "r2": 0.983058742966674,
+          "n_points": 5,
+          "x_min": 1.0,
+          "x_max": 64.0,
+          "y_at_x_min": 381.88231404528574,
+          "y_at_x_max": 415.8471339167154,
+          "constant_share_at_x_min": 0.9985882453700661,
+          "constant_share_at_x_max": 0.9170273372539743,
+          "per_unit_ns": 539.1241249433282,
+          "slope_first_2": 0.8692898388419802,
+          "slope_last_2": 0.4332823664299174,
+          "slope_ratio_last_over_first": 0.4984325676774414
+        },
+        "triton": {
+          "a": 0.0014135256044647303,
+          "c": 0.5927881414335504,
+          "r2": 0.47014493151704406,
+          "n_points": 5,
+          "x_min": 1.0,
+          "x_max": 64.0,
+          "y_at_x_min": 0.5942016670380151,
+          "y_at_x_max": 0.6832537801192932,
+          "constant_share_at_x_min": 0.9976211349060818,
+          "constant_share_at_x_max": 0.8675958460559884,
+          "per_unit_ns": 1.4135256044647304,
+          "slope_first_2": 0.011433647679431088,
+          "slope_last_2": 0.0004702087608165986,
+          "slope_ratio_last_over_first": 0.04112499999999957
+        },
+        "noise_band": {
+          "median_pi_raw_p50_range_us": 1.4450051821768284,
+          "max_pi_raw_p50_range_us": 12.900069123134017,
+          "note": "同配置重复轮之间 pi_raw p50 的极差（raw 口径），仅本维度点数"
+        },
+        "n_points": 5,
+        "points": [
+          {
+            "x": 1.0,
+            "x_label": "1",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm64_realmachine_20260923-190556.csv"
+            ],
+            "pi_raw_p50": 379.69998084008694,
+            "pi_raw_p50_min": 370.8849544636905,
+            "pi_raw_p50_max": 383.78502358682454,
+            "pi_raw_p50_range": 12.900069123134017,
+            "pi_net_p50": 379.13498817943037,
+            "pi_net_p50_min": 370.33992703072727,
+            "pi_net_p50_max": 383.30000825226307,
+            "pi_net_p50_range": 12.960081221535802,
+            "pi_net_p90": 388.3650235366076,
+            "pi_net_p50_decode": 379.13498817943037,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5399924702942371,
+            "triton_p50_min": 0.500003807246685,
+            "triton_p50_max": 0.5750043783336878,
+            "triton_p50_range": 0.07500057108700275,
+            "us_p50": 19.014987628906965,
+            "us_p50_min": 17.31002703309059,
+            "us_p50_max": 19.175000488758087,
+            "us_p50_range": 1.8649734556674957,
+            "scope_raw_p50": 399.0899713244289,
+            "scope_net_p50": 398.5149669460952,
+            "scope_net_p50_min": 387.73001870140433,
+            "scope_net_p50_max": 402.5000089313835,
+            "scope_net_p50_range": 14.769990229979157,
+            "tokens_per_step": 1.0,
+            "tokens_per_step_decode": 1.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 1.0,
+            "reqs_per_step": 1.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 62.0,
+            "steps_run": 62.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 0.524288,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 8.0,
+            "x_label": "8",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm64_realmachine_20260923-190556.csv"
+            ],
+            "pi_raw_p50": 385.7850097119808,
+            "pi_raw_p50_min": 385.72499761357903,
+            "pi_raw_p50_max": 387.17000279575586,
+            "pi_raw_p50_range": 1.4450051821768284,
+            "pi_net_p50": 385.17502252943814,
+            "pi_net_p50_min": 385.130028007552,
+            "pi_net_p50_max": 386.5600156132132,
+            "pi_net_p50_range": 1.4299876056611538,
+            "pi_net_p90": 393.57695495709777,
+            "pi_net_p50_decode": 385.17502252943814,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.6200280040502548,
+            "triton_p50_min": 0.600004568696022,
+            "triton_p50_max": 0.6350164767354727,
+            "triton_p50_range": 0.035011908039450645,
+            "us_p50": 31.72500873915851,
+            "us_p50_min": 31.41004708595574,
+            "us_p50_max": 31.980016501620412,
+            "us_p50_range": 0.5699694156646729,
+            "scope_raw_p50": 417.79997991397977,
+            "scope_net_p50": 417.1799519099295,
+            "scope_net_p50_min": 416.5999998804182,
+            "scope_net_p50_max": 418.6449805274606,
+            "scope_net_p50_range": 2.0449806470423937,
+            "tokens_per_step": 8.0,
+            "tokens_per_step_decode": 8.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 8.0,
+            "reqs_per_step": 8.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 62.0,
+            "steps_run": 62.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 0.524288,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 16.0,
+            "x_label": "16",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm64_realmachine_20260923-190556.csv"
+            ],
+            "pi_raw_p50": 391.31997618824244,
+            "pi_raw_p50_min": 391.07000338844955,
+            "pi_raw_p50_max": 391.64500776678324,
+            "pi_raw_p50_range": 0.5750043783336878,
+            "pi_net_p50": 390.68495971150696,
+            "pi_net_p50_min": 390.41496347635984,
+            "pi_net_p50_max": 390.995031921193,
+            "pi_net_p50_range": 0.5800684448331594,
+            "pi_net_p90": 399.807991925627,
+            "pi_net_p50_decode": 390.68495971150696,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.6600166670978069,
+            "triton_p50_min": 0.6500049494206905,
+            "triton_p50_max": 0.6649934221059084,
+            "triton_p50_range": 0.014988472685217857,
+            "us_p50": 45.06000550463796,
+            "us_p50_min": 45.0500228907913,
+            "us_p50_max": 46.250002924352884,
+            "us_p50_range": 1.1999800335615873,
+            "scope_raw_p50": 436.71001913025975,
+            "scope_net_p50": 436.06001418083906,
+            "scope_net_p50_min": 435.9299782663584,
+            "scope_net_p50_max": 437.37501255236566,
+            "scope_net_p50_range": 1.4450342860072851,
+            "tokens_per_step": 16.0,
+            "tokens_per_step_decode": 16.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 16.0,
+            "reqs_per_step": 16.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 62.0,
+            "steps_run": 62.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 0.524288,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 32.0,
+            "x_label": "32",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm64_realmachine_20260923-190556.csv"
+            ],
+            "pi_raw_p50": 400.63998312689364,
+            "pi_raw_p50_min": 400.36000427789986,
+            "pi_raw_p50_max": 401.67500264942646,
+            "pi_raw_p50_range": 1.314998371526599,
+            "pi_net_p50": 399.97498970478773,
+            "pi_net_p50_min": 399.7500170953572,
+            "pi_net_p50_max": 401.02499770000577,
+            "pi_net_p50_range": 1.27498060464859,
+            "pi_net_p90": 412.1489997487515,
+            "pi_net_p50_decode": 399.97498970478773,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.6499467417597771,
+            "triton_p50_min": 0.6450281944125891,
+            "triton_p50_max": 0.6699992809444666,
+            "triton_p50_range": 0.024971086531877518,
+            "us_p50": 71.84501737356186,
+            "us_p50_min": 71.51003228500485,
+            "us_p50_max": 72.10500189103186,
+            "us_p50_range": 0.5949696060270071,
+            "scope_raw_p50": 472.43002336472273,
+            "scope_net_p50": 471.78007662296295,
+            "scope_net_p50_min": 471.76997759379447,
+            "scope_net_p50_max": 473.6199916806072,
+            "scope_net_p50_range": 1.8500140868127346,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 64.0,
+            "steps_run": 64.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 0.524288,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          },
+          {
+            "x": 64.0,
+            "x_label": "64",
+            "n_runs": 3,
+            "files": [
+              "sweep_rm64_realmachine_20260923-190556.csv"
+            ],
+            "pi_raw_p50": 414.5050188526511,
+            "pi_raw_p50_min": 413.59997703693807,
+            "pi_raw_p50_max": 419.95002538897097,
+            "pi_raw_p50_range": 6.3500483520329,
+            "pi_net_p50": 413.8249787501991,
+            "pi_net_p50_min": 412.95497794635594,
+            "pi_net_p50_max": 419.25502591766417,
+            "pi_net_p50_range": 6.300047971308231,
+            "pi_net_p90": 428.7049814593047,
+            "pi_net_p50_decode": 413.8249787501991,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.6649934221059084,
+            "triton_p50_min": 0.6399932317435741,
+            "triton_p50_max": 0.6800401024520397,
+            "triton_p50_range": 0.040046870708465576,
+            "us_p50": 124.94999100454152,
+            "us_p50_min": 124.85499610193074,
+            "us_p50_max": 126.03000504896045,
+            "us_p50_range": 1.1750089470297098,
+            "scope_raw_p50": 541.199988219887,
+            "scope_net_p50": 540.5599949881434,
+            "scope_net_p50_min": 538.1000228226185,
+            "scope_net_p50_max": 544.8499578051269,
+            "scope_net_p50_range": 6.749934982508421,
+            "tokens_per_step": 64.0,
+            "tokens_per_step_decode": 64.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 64.0,
+            "reqs_per_step": 64.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 66.0,
+            "steps_run": 66.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 0.524288,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          }
+        ],
+        "notes": "rm_batch_mmr64"
+      },
+      "rm_steady12s": {
+        "preset": "realmachine",
+        "dim": "batch",
+        "x": "count",
+        "primary_metric": "pi_net_us p50（每步；已扣 triton_cpu_us）",
+        "pi_net": {
+          "c": NaN,
+          "a": NaN,
+          "r2": NaN,
+          "n_points": 1
+        },
+        "us": {
+          "c": NaN,
+          "a": NaN,
+          "r2": NaN,
+          "n_points": 1
+        },
+        "scope_net": {
+          "c": NaN,
+          "a": NaN,
+          "r2": NaN,
+          "n_points": 1
+        },
+        "pi_raw": {
+          "c": NaN,
+          "a": NaN,
+          "r2": NaN,
+          "n_points": 1
+        },
+        "triton": {
+          "c": NaN,
+          "a": NaN,
+          "r2": NaN,
+          "n_points": 1
+        },
+        "noise_band": {
+          "median_pi_raw_p50_range_us": 0.0,
+          "max_pi_raw_p50_range_us": 0.0,
+          "note": "同配置重复轮之间 pi_raw p50 的极差（raw 口径），仅本维度点数"
+        },
+        "n_points": 1,
+        "points": [
+          {
+            "x": 1.0,
+            "x_label": "1",
+            "n_runs": 1,
+            "files": [
+              "sweep_rmsteady_realmachine_20260923-190652.csv"
+            ],
+            "pi_raw_p50": 376.50996819138527,
+            "pi_raw_p50_min": 376.50996819138527,
+            "pi_raw_p50_max": 376.50996819138527,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 375.9300452657044,
+            "pi_net_p50_min": 375.9300452657044,
+            "pi_net_p50_max": 375.9300452657044,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 392.51995040103793,
+            "pi_net_p50_decode": 375.8149978239089,
+            "pi_net_p50_prefill": 410.24998063221574,
+            "triton_p50": 0.5699694156646729,
+            "triton_p50_min": 0.5699694156646729,
+            "triton_p50_max": 0.5699694156646729,
+            "triton_p50_range": 0.0,
+            "us_p50": 18.45002407208085,
+            "us_p50_min": 18.45002407208085,
+            "us_p50_max": 18.45002407208085,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 395.3299601562321,
+            "scope_net_p50": 394.75999074056745,
+            "scope_net_p50_min": 394.75999074056745,
+            "scope_net_p50_max": 394.75999074056745,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 1.0,
+            "tokens_per_step_decode": 1.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 1.0,
+            "reqs_per_step": 1.0,
+            "n_prefill_steps": 413.0,
+            "n_decode_steps": 26456.0,
+            "steps_run": 26869.0,
+            "max_num_blocks_per_req": 16.0,
+            "max_model_len": 2048.0,
+            "max_num_reqs": 8.0,
+            "token_ids_cpu_MB": 0.065536,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "True"
+            ],
+            "prefix_caching": [
+              "False"
+            ]
+          }
+        ],
+        "notes": "rm_steady12s"
+      }
+    },
+    "stress": {
+      "stress_isl": {
+        "preset": "stress",
+        "dim": "isl",
+        "x": "tokens",
+        "primary_metric": "pi_net_us p50（每步；已扣 triton_cpu_us）",
+        "pi_net": {
+          "a": 0.0065213407457831865,
+          "c": 388.6151605920486,
+          "r2": 0.51096521844106,
+          "n_points": 6,
+          "x_min": 64.0,
+          "x_max": 2048.0,
+          "y_at_x_min": 389.0325263997787,
+          "y_at_x_max": 401.9708664394126,
+          "constant_share_at_x_min": 0.9989271698909278,
+          "constant_share_at_x_max": 0.9667744432185683,
+          "per_unit_ns": 6.521340745783187,
+          "slope_first_2": 0.1453136064810661,
+          "slope_last_2": 0.0022459971660281903,
+          "slope_ratio_last_over_first": 0.015456206892235083
+        },
+        "us": {
+          "a": 0.0012569494733528008,
+          "c": 68.62950079207914,
+          "r2": 0.5697639682722568,
+          "n_points": 6,
+          "x_min": 64.0,
+          "x_max": 2048.0,
+          "y_at_x_min": 68.70994555837372,
+          "y_at_x_max": 71.20373331350568,
+          "constant_share_at_x_min": 0.9988292121956895,
+          "constant_share_at_x_max": 0.9638469445121318,
+          "per_unit_ns": 1.2569494733528008,
+          "slope_first_2": 0.014687884686281506,
+          "slope_last_2": 0.0011084182460763183,
+          "slope_ratio_last_over_first": 0.07546479767175608
+        },
+        "scope_net": {
+          "a": 0.00758190335784985,
+          "c": 457.5324552631774,
+          "r2": 0.5092348908060509,
+          "n_points": 6,
+          "x_min": 64.0,
+          "x_max": 2048.0,
+          "y_at_x_min": 458.0176970780798,
+          "y_at_x_max": 473.0601933400539,
+          "constant_share_at_x_min": 0.9989405609914246,
+          "constant_share_at_x_max": 0.9671759782465683,
+          "per_unit_ns": 7.58190335784985,
+          "slope_first_2": 0.17648471839492805,
+          "slope_last_2": 0.002978538304887369,
+          "slope_ratio_last_over_first": 0.016877032368446516
+        },
+        "pi_raw": {
+          "a": 0.006515679512948638,
+          "c": 389.1989654764089,
+          "r2": 0.5062616504627551,
+          "n_points": 6,
+          "x_min": 64.0,
+          "x_max": 2048.0,
+          "y_at_x_min": 389.6159689652376,
+          "y_at_x_max": 402.5430771189277,
+          "constant_share_at_x_min": 0.9989297063723127,
+          "constant_share_at_x_max": 0.966850475387566,
+          "per_unit_ns": 6.515679512948639,
+          "slope_first_2": 0.14671877579530432,
+          "slope_last_2": 0.002236276941402904,
+          "slope_ratio_last_over_first": 0.015241927485292413
+        },
+        "triton": {
+          "a": 1.776617422237244e-05,
+          "c": 0.5814057730824052,
+          "r2": 0.2007772914889805,
+          "n_points": 6,
+          "x_min": 64.0,
+          "x_max": 2048.0,
+          "y_at_x_min": 0.582542808232637,
+          "y_at_x_max": 0.6177908978898239,
+          "constant_share_at_x_min": 0.9980481517681395,
+          "constant_share_at_x_max": 0.9411044660390778,
+          "per_unit_ns": 0.01776617422237244,
+          "slope_first_2": 0.0006239133654162253,
+          "slope_last_2": -1.9554136088118242e-05,
+          "slope_ratio_last_over_first": -0.031341107871720744
+        },
+        "noise_band": {
+          "median_pi_raw_p50_range_us": 0.0,
+          "max_pi_raw_p50_range_us": 0.0,
+          "note": "同配置重复轮之间 pi_raw p50 的极差（raw 口径），仅本维度点数"
+        },
+        "n_points": 6,
+        "points": [
+          {
+            "x": 64.0,
+            "x_label": "64",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 381.41501136124134,
+            "pi_raw_p50_min": 381.41501136124134,
+            "pi_raw_p50_max": 381.41501136124134,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 380.899989977479,
+            "pi_net_p50_min": 380.899989977479,
+            "pi_net_p50_max": 380.899989977479,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 396.52601117268205,
+            "pi_net_p50_decode": 380.899989977479,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5400506779551506,
+            "triton_p50_min": 0.5400506779551506,
+            "triton_p50_max": 0.5400506779551506,
+            "triton_p50_range": 0.0,
+            "us_p50": 67.59498501196504,
+            "us_p50_min": 67.59498501196504,
+            "us_p50_max": 67.59498501196504,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 449.01002547703683,
+            "scope_net_p50": 448.4699747990817,
+            "scope_net_p50_min": 448.4699747990817,
+            "scope_net_p50_max": 448.4699747990817,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 128.0,
+            "x_label": "128",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 390.805013012141,
+            "pi_raw_p50_min": 390.805013012141,
+            "pi_raw_p50_max": 390.805013012141,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 390.2000607922673,
+            "pi_net_p50_min": 390.2000607922673,
+            "pi_net_p50_max": 390.2000607922673,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 400.0329761765897,
+            "pi_net_p50_decode": 390.2000607922673,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5799811333417892,
+            "triton_p50_min": 0.5799811333417892,
+            "triton_p50_max": 0.5799811333417892,
+            "triton_p50_range": 0.0,
+            "us_p50": 68.53500963188708,
+            "us_p50_min": 68.53500963188708,
+            "us_p50_max": 68.53500963188708,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 460.3449779096991,
+            "scope_net_p50": 459.7649967763573,
+            "scope_net_p50_min": 459.7649967763573,
+            "scope_net_p50_max": 459.7649967763573,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 256.0,
+            "x_label": "256",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 392.7599755115807,
+            "pi_raw_p50_min": 392.7599755115807,
+            "pi_raw_p50_max": 392.7599755115807,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 392.179936170578,
+            "pi_net_p50_min": 392.179936170578,
+            "pi_net_p50_max": 392.179936170578,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 406.67293360456824,
+            "pi_net_p50_decode": 392.179936170578,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.600004568696022,
+            "triton_p50_min": 0.600004568696022,
+            "triton_p50_max": 0.600004568696022,
+            "triton_p50_range": 0.0,
+            "us_p50": 69.35998681001365,
+            "us_p50_min": 69.35998681001365,
+            "us_p50_max": 69.35998681001365,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 462.03500824049115,
+            "scope_net_p50": 461.43500367179513,
+            "scope_net_p50_min": 461.43500367179513,
+            "scope_net_p50_max": 461.43500367179513,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 512.0,
+            "x_label": "512",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 398.7050149589777,
+            "pi_raw_p50_min": 398.7050149589777,
+            "pi_raw_p50_max": 398.7050149589777,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 398.055010009557,
+            "pi_net_p50_min": 398.055010009557,
+            "pi_net_p50_max": 398.055010009557,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 408.74300175346434,
+            "pi_net_p50_decode": 398.055010009557,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.6199989002197981,
+            "triton_p50_min": 0.6199989002197981,
+            "triton_p50_max": 0.6199989002197981,
+            "triton_p50_range": 0.0,
+            "us_p50": 70.64003148116171,
+            "us_p50_min": 70.64003148116171,
+            "us_p50_max": 70.64003148116171,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 469.2150105256587,
+            "scope_net_p50": 468.59501162543893,
+            "scope_net_p50_min": 468.59501162543893,
+            "scope_net_p50_max": 468.59501162543893,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 1024.0,
+            "x_label": "1024",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 397.74502511136234,
+            "pi_raw_p50_min": 397.74502511136234,
+            "pi_raw_p50_max": 397.74502511136234,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 397.17505569569767,
+            "pi_net_p50_min": 397.17505569569767,
+            "pi_net_p50_max": 397.17505569569767,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 406.4580076374114,
+            "pi_net_p50_decode": 397.17505569569767,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.6200280040502548,
+            "triton_p50_min": 0.6200280040502548,
+            "triton_p50_max": 0.6200280040502548,
+            "triton_p50_range": 0.0,
+            "us_p50": 69.78999590501189,
+            "us_p50_min": 69.78999590501189,
+            "us_p50_max": 69.78999590501189,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 467.8450059145689,
+            "scope_net_p50": 467.22497791051865,
+            "scope_net_p50_min": 467.22497791051865,
+            "scope_net_p50_max": 467.22497791051865,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 2048.0,
+            "x_label": "2048",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 400.03497269935906,
+            "pi_raw_p50_min": 400.03497269935906,
+            "pi_raw_p50_max": 400.03497269935906,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 399.4749567937106,
+            "pi_net_p50_min": 399.4749567937106,
+            "pi_net_p50_max": 399.4749567937106,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 411.8390264920891,
+            "pi_net_p50_decode": 399.4749567937106,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.600004568696022,
+            "triton_p50_min": 0.600004568696022,
+            "triton_p50_max": 0.600004568696022,
+            "triton_p50_range": 0.0,
+            "us_p50": 70.92501618899405,
+            "us_p50_min": 70.92501618899405,
+            "us_p50_max": 70.92501618899405,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 470.87500570341945,
+            "scope_net_p50": 470.2750011347234,
+            "scope_net_p50_min": 470.2750011347234,
+            "scope_net_p50_max": 470.2750011347234,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          }
+        ],
+        "notes": "stress_isl"
+      },
+      "stress_batch": {
+        "preset": "stress",
+        "dim": "batch",
+        "x": "count",
+        "primary_metric": "pi_net_us p50（每步；已扣 triton_cpu_us）",
+        "pi_net": {
+          "a": 0.7310160567966432,
+          "c": 377.2008511433164,
+          "r2": 0.9707546679590991,
+          "n_points": 7,
+          "x_min": 1.0,
+          "x_max": 64.0,
+          "y_at_x_min": 377.93186720011306,
+          "y_at_x_max": 423.9858787783016,
+          "constant_share_at_x_min": 0.9980657464473363,
+          "constant_share_at_x_max": 0.8896542786524062,
+          "per_unit_ns": 731.0160567966432,
+          "slope_first_2": 2.2849708329884035,
+          "slope_last_2": 0.6299997039604893,
+          "slope_ratio_last_over_first": 0.27571454955359015
+        },
+        "us": {
+          "a": 1.6287041571730838,
+          "c": 18.438508154706625,
+          "r2": 0.9998236331701734,
+          "n_points": 7,
+          "x_min": 1.0,
+          "x_max": 64.0,
+          "y_at_x_min": 20.067212311879707,
+          "y_at_x_max": 122.67557421378399,
+          "constant_share_at_x_min": 0.9188375479433735,
+          "constant_share_at_x_max": 0.15030301078985983,
+          "per_unit_ns": 1628.7041571730838,
+          "slope_first_2": 2.269982360303393,
+          "slope_last_2": 1.5857813195907506,
+          "slope_ratio_last_over_first": 0.6985875076927047
+        },
+        "scope_net": {
+          "a": 2.3670853730199206,
+          "c": 395.8828949661199,
+          "r2": 0.9967963036204376,
+          "n_points": 7,
+          "x_min": 1.0,
+          "x_max": 64.0,
+          "y_at_x_min": 398.2499803391398,
+          "y_at_x_max": 547.3763588393948,
+          "constant_share_at_x_min": 0.9940562825112906,
+          "constant_share_at_x_max": 0.7232371083864723,
+          "per_unit_ns": 2367.0853730199206,
+          "slope_first_2": 4.344998160376991,
+          "slope_last_2": 2.2076565073803036,
+          "slope_ratio_last_over_first": 0.5080914711339619
+        },
+        "pi_raw": {
+          "a": 0.7309300109755158,
+          "c": 377.79383951444834,
+          "r2": 0.9712255330155943,
+          "n_points": 7,
+          "x_min": 1.0,
+          "x_max": 64.0,
+          "y_at_x_min": 378.52476952542384,
+          "y_at_x_max": 424.5733602168813,
+          "constant_share_at_x_min": 0.9980690034845225,
+          "constant_share_at_x_max": 0.889819934348832,
+          "per_unit_ns": 730.9300109755158,
+          "slope_first_2": 2.335000317543598,
+          "slope_last_2": 0.6328127710730737,
+          "slope_ratio_last_over_first": 0.2710118565374705
+        },
+        "triton": {
+          "a": 0.0013330734412180156,
+          "c": 0.5779475450044734,
+          "r2": 0.6237654713582167,
+          "n_points": 7,
+          "x_min": 1.0,
+          "x_max": 64.0,
+          "y_at_x_min": 0.5792806184456915,
+          "y_at_x_max": 0.6632642452424264,
+          "constant_share_at_x_min": 0.9976987432364044,
+          "constant_share_at_x_max": 0.8713684615898912,
+          "per_unit_ns": 1.3330734412180156,
+          "slope_first_2": 0.029976945370435527,
+          "slope_last_2": 0.001092303136829281,
+          "slope_ratio_last_over_first": 0.03643810679611654
+        },
+        "noise_band": {
+          "median_pi_raw_p50_range_us": 0.0,
+          "max_pi_raw_p50_range_us": 0.0,
+          "note": "同配置重复轮之间 pi_raw p50 的极差（raw 口径），仅本维度点数"
+        },
+        "n_points": 7,
+        "points": [
+          {
+            "x": 1.0,
+            "x_label": "1",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 375.184987206012,
+            "pi_raw_p50_min": 375.184987206012,
+            "pi_raw_p50_max": 375.184987206012,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 374.6050060726702,
+            "pi_net_p50_min": 374.6050060726702,
+            "pi_net_p50_max": 374.6050060726702,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 381.2659939285368,
+            "pi_net_p50_decode": 374.6050060726702,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5399924702942371,
+            "triton_p50_min": 0.5399924702942371,
+            "triton_p50_max": 0.5399924702942371,
+            "triton_p50_range": 0.0,
+            "us_p50": 19.435014110058546,
+            "us_p50_min": 19.435014110058546,
+            "us_p50_max": 19.435014110058546,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 395.01002174802125,
+            "scope_net_p50": 394.470029277727,
+            "scope_net_p50_min": 394.470029277727,
+            "scope_net_p50_max": 394.470029277727,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 1.0,
+            "tokens_per_step_decode": 1.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 1.0,
+            "reqs_per_step": 1.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 2.0,
+            "x_label": "2",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 377.51998752355576,
+            "pi_raw_p50_min": 377.51998752355576,
+            "pi_raw_p50_max": 377.51998752355576,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 376.88997690565884,
+            "pi_net_p50_min": 376.88997690565884,
+            "pi_net_p50_max": 376.88997690565884,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 389.4289315212518,
+            "pi_net_p50_decode": 376.88997690565884,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5699694156646729,
+            "triton_p50_min": 0.5699694156646729,
+            "triton_p50_max": 0.5699694156646729,
+            "triton_p50_range": 0.0,
+            "us_p50": 21.704996470361948,
+            "us_p50_min": 21.704996470361948,
+            "us_p50_max": 21.704996470361948,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 399.3849968537688,
+            "scope_net_p50": 398.81502743810415,
+            "scope_net_p50_min": 398.81502743810415,
+            "scope_net_p50_max": 398.81502743810415,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 2.0,
+            "tokens_per_step_decode": 2.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 2.0,
+            "reqs_per_step": 2.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 4.0,
+            "x_label": "4",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 380.5699816439301,
+            "pi_raw_p50_min": 380.5699816439301,
+            "pi_raw_p50_max": 380.5699816439301,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 379.89995325915515,
+            "pi_net_p50_min": 379.89995325915515,
+            "pi_net_p50_max": 379.89995325915515,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 391.2469604983926,
+            "pi_net_p50_decode": 379.89995325915515,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.6099871825426817,
+            "triton_p50_min": 0.6099871825426817,
+            "triton_p50_max": 0.6099871825426817,
+            "triton_p50_range": 0.0,
+            "us_p50": 25.060027837753296,
+            "us_p50_min": 25.060027837753296,
+            "us_p50_max": 25.060027837753296,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 405.8699996676296,
+            "scope_net_p50": 405.2600124850869,
+            "scope_net_p50_min": 405.2600124850869,
+            "scope_net_p50_max": 405.2600124850869,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 4.0,
+            "tokens_per_step_decode": 4.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 4.0,
+            "reqs_per_step": 4.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 8.0,
+            "x_label": "8",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 384.0549907181412,
+            "pi_raw_p50_min": 384.0549907181412,
+            "pi_raw_p50_max": 384.0549907181412,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 383.50498653016984,
+            "pi_net_p50_min": 383.50498653016984,
+            "pi_net_p50_max": 383.50498653016984,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 389.89500026218593,
+            "pi_net_p50_decode": 383.50498653016984,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5899928510189056,
+            "triton_p50_min": 0.5899928510189056,
+            "triton_p50_max": 0.5899928510189056,
+            "triton_p50_range": 0.0,
+            "us_p50": 31.579984351992607,
+            "us_p50_min": 31.579984351992607,
+            "us_p50_max": 31.579984351992607,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 415.8999945502728,
+            "scope_net_p50": 415.3100016992539,
+            "scope_net_p50_min": 415.3100016992539,
+            "scope_net_p50_max": 415.3100016992539,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 8.0,
+            "tokens_per_step_decode": 8.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 8.0,
+            "reqs_per_step": 8.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 16.0,
+            "x_label": "16",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 395.0050158891827,
+            "pi_raw_p50_min": 395.0050158891827,
+            "pi_raw_p50_max": 395.0050158891827,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 394.4550408050418,
+            "pi_net_p50_min": 394.4550408050418,
+            "pi_net_p50_max": 394.4550408050418,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 407.53205539658666,
+            "pi_net_p50_decode": 394.4550408050418,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.6299815140664577,
+            "triton_p50_min": 0.6299815140664577,
+            "triton_p50_max": 0.6299815140664577,
+            "triton_p50_range": 0.0,
+            "us_p50": 44.4399775005877,
+            "us_p50_min": 44.4399775005877,
+            "us_p50_max": 44.4399775005877,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 439.49001701548696,
+            "scope_net_p50": 438.8600355014205,
+            "scope_net_p50_min": 438.8600355014205,
+            "scope_net_p50_max": 438.8600355014205,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 16.0,
+            "tokens_per_step_decode": 16.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 16.0,
+            "reqs_per_step": 16.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 32.0,
+            "x_label": "32",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 402.40000816993415,
+            "pi_raw_p50_min": 402.40000816993415,
+            "pi_raw_p50_max": 402.40000816993415,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 401.8650215584785,
+            "pi_net_p50_min": 401.8650215584785,
+            "pi_net_p50_max": 401.8650215584785,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 415.8949654083699,
+            "pi_net_p50_decode": 401.8650215584785,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.6200280040502548,
+            "triton_p50_min": 0.6200280040502548,
+            "triton_p50_max": 0.6200280040502548,
+            "triton_p50_range": 0.0,
+            "us_p50": 71.47499127313495,
+            "us_p50_min": 71.47499127313495,
+            "us_p50_max": 71.47499127313495,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 474.8400242533535,
+            "scope_net_p50": 474.2199962493032,
+            "scope_net_p50_min": 474.2199962493032,
+            "scope_net_p50_max": 474.2199962493032,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 64.0,
+            "x_label": "64",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 422.6500168442726,
+            "pi_raw_p50_min": 422.6500168442726,
+            "pi_raw_p50_max": 422.6500168442726,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 422.02501208521426,
+            "pi_net_p50_min": 422.02501208521426,
+            "pi_net_p50_max": 422.02501208521426,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 438.0929982289672,
+            "pi_net_p50_decode": 422.02501208521426,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.654981704428792,
+            "triton_p50_min": 0.654981704428792,
+            "triton_p50_max": 0.654981704428792,
+            "triton_p50_range": 0.0,
+            "us_p50": 122.21999350003898,
+            "us_p50_min": 122.21999350003898,
+            "us_p50_max": 122.21999350003898,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 545.5199861899018,
+            "scope_net_p50": 544.865004485473,
+            "scope_net_p50_min": 544.865004485473,
+            "scope_net_p50_max": 544.865004485473,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 64.0,
+            "tokens_per_step_decode": 64.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 64.0,
+            "reqs_per_step": 64.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          }
+        ],
+        "notes": "stress_batch"
+      },
+      "stress_chunk_size": {
+        "preset": "stress",
+        "dim": "chunk_size",
+        "x": "tokens",
+        "primary_metric": "pi_net_us p50（每步；已扣 triton_cpu_us）",
+        "pi_net": {
+          "a": 0.0003213609623274536,
+          "c": 393.4461989962871,
+          "r2": 0.03122237257092919,
+          "n_points": 6,
+          "x_min": 128.0,
+          "x_max": 8192.0,
+          "y_at_x_min": 393.487333199465,
+          "y_at_x_max": 396.0787879996736,
+          "constant_share_at_x_min": 0.9998954624464186,
+          "constant_share_at_x_max": 0.993353370381984,
+          "per_unit_ns": 0.3213609623274536,
+          "slope_first_2": -0.13160160960978928,
+          "slope_last_2": -6.511413630505607e-05,
+          "slope_ratio_last_over_first": 0.0004947822180756405
+        },
+        "us": {
+          "a": 5.8868940106617776e-05,
+          "c": 69.5165251964665,
+          "r2": 0.015658824422101425,
+          "n_points": 6,
+          "x_min": 128.0,
+          "x_max": 8192.0,
+          "y_at_x_min": 69.52406042080015,
+          "y_at_x_max": 69.99877955381992,
+          "constant_share_at_x_min": 0.9998916170274285,
+          "constant_share_at_x_max": 0.9931105319203084,
+          "per_unit_ns": 0.05886894010661778,
+          "slope_first_2": -0.03550803739926805,
+          "slope_last_2": 8.133345848666786e-06,
+          "slope_ratio_last_over_first": -0.0002290564740937905
+        },
+        "scope_net": {
+          "a": 0.00040893375834266524,
+          "c": 463.4403962192329,
+          "r2": 0.03172772678572744,
+          "n_points": 6,
+          "x_min": 128.0,
+          "x_max": 8192.0,
+          "y_at_x_min": 463.4927397403008,
+          "y_at_x_max": 466.79038156757605,
+          "constant_share_at_x_min": 0.9998870672254818,
+          "constant_share_at_x_max": 0.9928233625185395,
+          "per_unit_ns": 0.40893375834266527,
+          "slope_first_2": -0.1684766175458222,
+          "slope_last_2": 1.3831898589485724e-05,
+          "slope_ratio_last_over_first": -8.209981177787909e-05
+        },
+        "pi_raw": {
+          "a": 0.000326719212865719,
+          "c": 393.99033995406256,
+          "r2": 0.031813755446951086,
+          "n_points": 6,
+          "x_min": 128.0,
+          "x_max": 8192.0,
+          "y_at_x_min": 394.03216001330935,
+          "y_at_x_max": 396.66682374585855,
+          "constant_share_at_x_min": 0.9998938663807406,
+          "constant_share_at_x_max": 0.9932525645413925,
+          "per_unit_ns": 0.326719212865719,
+          "slope_first_2": -0.13234352991276083,
+          "slope_last_2": -7.161797081303713e-05,
+          "slope_ratio_last_over_first": 0.0005411520371282736
+        },
+        "triton": {
+          "a": 2.2275177604526543e-06,
+          "c": 0.5721537113136138,
+          "r2": 0.025018581998362155,
+          "n_points": 6,
+          "x_min": 128.0,
+          "x_max": 8192.0,
+          "y_at_x_min": 0.5724388335869518,
+          "y_at_x_max": 0.590401536807242,
+          "constant_share_at_x_min": 0.9995019166125552,
+          "constant_share_at_x_max": 0.9690925169465034,
+          "per_unit_ns": 0.0022275177604526544,
+          "slope_first_2": -0.001015450834529475,
+          "slope_last_2": 1.6247743891047518e-06,
+          "slope_ratio_last_over_first": -0.0016000522466039593
+        },
+        "noise_band": {
+          "median_pi_raw_p50_range_us": 0.0,
+          "max_pi_raw_p50_range_us": 0.0,
+          "note": "同配置重复轮之间 pi_raw p50 的极差（raw 口径），仅本维度点数"
+        },
+        "n_points": 6,
+        "points": [
+          {
+            "x": 128.0,
+            "x_label": "128",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 402.53999759443104,
+            "pi_raw_p50_min": 402.53999759443104,
+            "pi_raw_p50_max": 402.53999759443104,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 401.9850166514516,
+            "pi_net_p50_min": 401.9850166514516,
+            "pi_net_p50_max": 401.9850166514516,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 471.2040245067328,
+            "pi_net_p50_decode": 400.89996764436364,
+            "pi_net_p50_prefill": 471.78001841530204,
+            "triton_p50": 0.6399932317435741,
+            "triton_p50_min": 0.6399932317435741,
+            "triton_p50_max": 0.6399932317435741,
+            "triton_p50_range": 0.0,
+            "us_p50": 71.70502794906497,
+            "us_p50_min": 71.70502794906497,
+            "us_p50_max": 71.70502794906497,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 474.98499043285847,
+            "scope_net_p50": 474.3449972011149,
+            "scope_net_p50_min": 474.3449972011149,
+            "scope_net_p50_max": 474.3449972011149,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 13.0,
+            "n_decode_steps": 67.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 256.0,
+            "x_label": "256",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 385.6000257655978,
+            "pi_raw_p50_min": 385.6000257655978,
+            "pi_raw_p50_max": 385.6000257655978,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 385.1400106213987,
+            "pi_net_p50_min": 385.1400106213987,
+            "pi_net_p50_max": 385.1400106213987,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 404.29199580103165,
+            "pi_net_p50_decode": 384.5500177703798,
+            "pi_net_p50_prefill": 497.029977850616,
+            "triton_p50": 0.5100155249238014,
+            "triton_p50_min": 0.5100155249238014,
+            "triton_p50_max": 0.5100155249238014,
+            "triton_p50_range": 0.0,
+            "us_p50": 67.1599991619587,
+            "us_p50_min": 67.1599991619587,
+            "us_p50_max": 67.1599991619587,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 453.29000568017364,
+            "scope_net_p50": 452.77999015524983,
+            "scope_net_p50_min": 452.77999015524983,
+            "scope_net_p50_max": 452.77999015524983,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 5.0,
+            "n_decode_steps": 75.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 512.0,
+            "x_label": "512",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 391.5650013368577,
+            "pi_raw_p50_min": 391.5650013368577,
+            "pi_raw_p50_max": 391.5650013368577,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 391.0500090569258,
+            "pi_net_p50_min": 391.0500090569258,
+            "pi_net_p50_max": 391.0500090569258,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 402.63602277264,
+            "pi_net_p50_decode": 390.9300430677831,
+            "pi_net_p50_prefill": 591.0599138587713,
+            "triton_p50": 0.5500041879713535,
+            "triton_p50_min": 0.5500041879713535,
+            "triton_p50_max": 0.5500041879713535,
+            "triton_p50_range": 0.0,
+            "us_p50": 69.53001138754189,
+            "us_p50_min": 69.53001138754189,
+            "us_p50_max": 69.53001138754189,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 461.64498780854046,
+            "scope_net_p50": 461.0949836205691,
+            "scope_net_p50_min": 461.0949836205691,
+            "scope_net_p50_max": 461.0949836205691,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 1.0,
+            "n_decode_steps": 79.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 1024.0,
+            "x_label": "1024",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 395.09995258413255,
+            "pi_raw_p50_min": 395.09995258413255,
+            "pi_raw_p50_max": 395.09995258413255,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 394.47995368391275,
+            "pi_net_p50_min": 394.47995368391275,
+            "pi_net_p50_max": 394.47995368391275,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 404.64497869834304,
+            "pi_net_p50_decode": 394.47995368391275,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5899928510189056,
+            "triton_p50_min": 0.5899928510189056,
+            "triton_p50_max": 0.5899928510189056,
+            "triton_p50_range": 0.0,
+            "us_p50": 69.51997056603432,
+            "us_p50_min": 69.51997056603432,
+            "us_p50_max": 69.51997056603432,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 465.06000217050314,
+            "scope_net_p50": 464.47000931948423,
+            "scope_net_p50_min": 464.47000931948423,
+            "scope_net_p50_max": 464.47000931948423,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 2048.0,
+            "x_label": "2048",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 396.7749944422394,
+            "pi_raw_p50_min": 396.7749944422394,
+            "pi_raw_p50_max": 396.7749944422394,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 396.1650072596967,
+            "pi_net_p50_min": 396.1650072596967,
+            "pi_net_p50_max": 396.1650072596967,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 406.92402981221676,
+            "pi_net_p50_decode": 396.1650072596967,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.580010237172246,
+            "triton_p50_min": 0.580010237172246,
+            "triton_p50_max": 0.580010237172246,
+            "triton_p50_range": 0.0,
+            "us_p50": 69.92500857450068,
+            "us_p50_min": 69.92500857450068,
+            "us_p50_max": 69.92500857450068,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 467.00003440491855,
+            "scope_net_p50": 466.4200241677463,
+            "scope_net_p50_min": 466.4200241677463,
+            "scope_net_p50_max": 466.4200241677463,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 8192.0,
+            "x_label": "8192",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 396.33497362956405,
+            "pi_raw_p50_min": 396.33497362956405,
+            "pi_raw_p50_max": 396.33497362956405,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 395.76494600623846,
+            "pi_net_p50_min": 395.76494600623846,
+            "pi_net_p50_max": 395.76494600623846,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 408.4640124347061,
+            "pi_net_p50_decode": 395.76494600623846,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5899928510189056,
+            "triton_p50_min": 0.5899928510189056,
+            "triton_p50_max": 0.5899928510189056,
+            "triton_p50_range": 0.0,
+            "us_p50": 69.97497985139489,
+            "us_p50_min": 69.97497985139489,
+            "us_p50_max": 69.97497985139489,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 467.0950002036989,
+            "scope_net_p50": 466.50500735267997,
+            "scope_net_p50_min": 466.50500735267997,
+            "scope_net_p50_max": 466.50500735267997,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          }
+        ],
+        "notes": "stress_chunk_size"
+      },
+      "stress_block_size": {
+        "preset": "stress",
+        "dim": "block_size",
+        "x": "count",
+        "primary_metric": "pi_net_us p50（每步；已扣 triton_cpu_us）",
+        "pi_net": {
+          "a": 0.006801486091243032,
+          "c": 390.78632329145194,
+          "r2": 0.30386277206790424,
+          "n_points": 4,
+          "x_min": 32.0,
+          "x_max": 256.0,
+          "y_at_x_min": 391.0039708463717,
+          "y_at_x_max": 392.52750373081017,
+          "constant_share_at_x_min": 0.9994433622900334,
+          "constant_share_at_x_max": 0.995564182324018,
+          "per_unit_ns": 6.801486091243032,
+          "slope_first_2": 0.05828223947901014,
+          "slope_last_2": -0.0064455889514655074,
+          "slope_ratio_last_over_first": -0.11059267813116262
+        },
+        "us": {
+          "a": 0.013049034548558923,
+          "c": 67.28910755001655,
+          "r2": 0.7275146940849101,
+          "n_points": 4,
+          "x_min": 32.0,
+          "x_max": 256.0,
+          "y_at_x_min": 67.70667665557043,
+          "y_at_x_max": 70.62966039444764,
+          "constant_share_at_x_min": 0.9938326746167429,
+          "constant_share_at_x_max": 0.9527032577280564,
+          "per_unit_ns": 13.049034548558923,
+          "slope_first_2": 0.06281334208324478,
+          "slope_last_2": 0.005000401870347397,
+          "slope_ratio_last_over_first": 0.0796073207459731
+        },
+        "scope_net": {
+          "a": 0.021183412805524146,
+          "c": 458.4667394342627,
+          "r2": 0.5144573163870444,
+          "n_points": 4,
+          "x_min": 32.0,
+          "x_max": 256.0,
+          "y_at_x_min": 459.14460864403947,
+          "y_at_x_max": 463.8896931124769,
+          "constant_share_at_x_min": 0.9985236258969071,
+          "constant_share_at_x_max": 0.9883098207208942,
+          "per_unit_ns": 21.183412805524146,
+          "slope_first_2": 0.13406406651483058,
+          "slope_last_2": -0.003398554326851639,
+          "slope_ratio_last_over_first": -0.025350225569024346
+        },
+        "pi_raw": {
+          "a": 0.006960663481352412,
+          "c": 391.338464712886,
+          "r2": 0.3007415874838254,
+          "n_points": 4,
+          "x_min": 32.0,
+          "x_max": 256.0,
+          "y_at_x_min": 391.56120594428927,
+          "y_at_x_max": 393.1203945641122,
+          "constant_share_at_x_min": 0.9994311458131657,
+          "constant_share_at_x_max": 0.9954672159575898,
+          "per_unit_ns": 6.9606634813524115,
+          "slope_first_2": 0.058750629250422036,
+          "slope_last_2": -0.006913978722878624,
+          "slope_ratio_last_over_first": -0.11768348375313711
+        },
+        "triton": {
+          "a": 0.0004157814344026792,
+          "c": 0.4926089035428088,
+          "r2": 0.6113511779020266,
+          "n_points": 4,
+          "x_min": 32.0,
+          "x_max": 256.0,
+          "y_at_x_min": 0.5059139094436945,
+          "y_at_x_max": 0.5990489507498946,
+          "constant_share_at_x_min": 0.9737010474459656,
+          "constant_share_at_x_max": 0.8223182812125065,
+          "per_unit_ns": 0.4157814344026792,
+          "slope_first_2": 0.000467480276711277,
+          "slope_last_2": -0.00011709744285326634,
+          "slope_ratio_last_over_first": -0.25048638132296547
+        },
+        "noise_band": {
+          "median_pi_raw_p50_range_us": 0.0,
+          "max_pi_raw_p50_range_us": 0.0,
+          "note": "同配置重复轮之间 pi_raw p50 的极差（raw 口径），仅本维度点数"
+        },
+        "n_points": 4,
+        "points": [
+          {
+            "x": 32.0,
+            "x_label": "32",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 390.4299810528755,
+            "pi_raw_p50_min": 390.4299810528755,
+            "pi_raw_p50_max": 390.4299810528755,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 389.89499444141984,
+            "pi_net_p50_min": 389.89499444141984,
+            "pi_net_p50_max": 389.89499444141984,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 403.7179925944656,
+            "pi_net_p50_decode": 389.89499444141984,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.49002119340002537,
+            "triton_p50_min": 0.49002119340002537,
+            "triton_p50_max": 0.49002119340002537,
+            "triton_p50_range": 0.0,
+            "us_p50": 66.769978730008,
+            "us_p50_min": 66.769978730008,
+            "us_p50_max": 66.769978730008,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 457.3299956973642,
+            "scope_net_p50": 456.8399745039642,
+            "scope_net_p50_min": 456.8399745039642,
+            "scope_net_p50_max": 456.8399745039642,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 1024.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 64.0,
+            "x_label": "64",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 392.31000118888915,
+            "pi_raw_p50_min": 392.31000118888915,
+            "pi_raw_p50_max": 392.31000118888915,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 391.76002610474825,
+            "pi_net_p50_min": 391.76002610474825,
+            "pi_net_p50_max": 391.76002610474825,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 403.2900324091315,
+            "pi_net_p50_decode": 391.76002610474825,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5049805622547865,
+            "triton_p50_min": 0.5049805622547865,
+            "triton_p50_max": 0.5049805622547865,
+            "triton_p50_range": 0.0,
+            "us_p50": 68.78000567667186,
+            "us_p50_min": 68.78000567667186,
+            "us_p50_max": 68.78000567667186,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 461.6350051946938,
+            "scope_net_p50": 461.130024632439,
+            "scope_net_p50_min": 461.130024632439,
+            "scope_net_p50_max": 461.130024632439,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 512.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 128.0,
+            "x_label": "128",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 393.4199921786785,
+            "pi_raw_p50_min": 393.4199921786785,
+            "pi_raw_p50_max": 393.4199921786785,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 392.79001066461205,
+            "pi_net_p50_min": 392.79001066461205,
+            "pi_net_p50_max": 392.79001066461205,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 405.2669566590339,
+            "pi_net_p50_decode": 392.79001066461205,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5949987098574638,
+            "triton_p50_min": 0.5949987098574638,
+            "triton_p50_max": 0.5949987098574638,
+            "triton_p50_range": 0.0,
+            "us_p50": 69.6149654686451,
+            "us_p50_min": 69.6149654686451,
+            "us_p50_max": 69.6149654686451,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 463.8450045604259,
+            "scope_net_p50": 463.2500058505684,
+            "scope_net_p50_min": 463.2500058505684,
+            "scope_net_p50_max": 463.2500058505684,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 256.0,
+            "x_label": "256",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 392.53500290215015,
+            "pi_raw_p50_min": 392.53500290215015,
+            "pi_raw_p50_max": 392.53500290215015,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 391.96497527882457,
+            "pi_net_p50_min": 391.96497527882457,
+            "pi_net_p50_max": 391.96497527882457,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 403.827999252826,
+            "pi_net_p50_decode": 391.96497527882457,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.580010237172246,
+            "triton_p50_min": 0.580010237172246,
+            "triton_p50_max": 0.580010237172246,
+            "triton_p50_range": 0.0,
+            "us_p50": 70.25501690804958,
+            "us_p50_min": 70.25501690804958,
+            "us_p50_max": 70.25501690804958,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 463.39500113390386,
+            "scope_net_p50": 462.8149908967316,
+            "scope_net_p50_min": 462.8149908967316,
+            "scope_net_p50_max": 462.8149908967316,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 128.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          }
+        ],
+        "notes": "stress_block_size"
+      },
+      "stress_spec_k": {
+        "preset": "stress",
+        "dim": "spec_k",
+        "x": "count",
+        "primary_metric": "pi_net_us p50（每步；已扣 triton_cpu_us）",
+        "pi_net": {
+          "a": 49.07700349576768,
+          "c": 449.2119915084914,
+          "r2": 0.5775665633646307,
+          "n_points": 4,
+          "x_min": 0.0,
+          "x_max": 3.0,
+          "y_at_x_min": 449.2119915084914,
+          "y_at_x_max": 596.4430019957945,
+          "constant_share_at_x_min": 1.0,
+          "constant_share_at_x_max": 0.7531515836473152,
+          "per_unit_ns": 49077.003495767676,
+          "slope_first_2": 159.39495642669485,
+          "slope_last_2": -23.505039280280354,
+          "slope_ratio_last_over_first": -0.14746413441939887
+        },
+        "us": {
+          "a": 47.919500502757714,
+          "c": 117.84449452534324,
+          "r2": 0.6149051623553545,
+          "n_points": 4,
+          "x_min": 0.0,
+          "x_max": 3.0,
+          "y_at_x_min": 117.84449452534324,
+          "y_at_x_max": 261.60299603361636,
+          "constant_share_at_x_min": 1.0,
+          "constant_share_at_x_max": 0.4504707373848274,
+          "per_unit_ns": 47919.50050275771,
+          "slope_first_2": 154.65496107935903,
+          "slope_last_2": -3.069959348067585,
+          "slope_ratio_last_over_first": -0.019850377424958765
+        },
+        "scope_net": {
+          "a": 98.89350330922748,
+          "c": 566.733503364958,
+          "r2": 0.607694449473813,
+          "n_points": 4,
+          "x_min": 0.0,
+          "x_max": 3.0,
+          "y_at_x_min": 566.733503364958,
+          "y_at_x_max": 863.4140132926404,
+          "constant_share_at_x_min": 1.0,
+          "constant_share_at_x_max": 0.6563867329460087,
+          "per_unit_ns": 98893.50330922748,
+          "slope_first_2": 315.75502362102253,
+          "slope_last_2": -23.549917386844513,
+          "slope_ratio_last_over_first": -0.07458287477671216
+        },
+        "pi_raw": {
+          "a": 49.07700349576768,
+          "c": 449.766987003386,
+          "r2": 0.5775926373179996,
+          "n_points": 4,
+          "x_min": 0.0,
+          "x_max": 3.0,
+          "y_at_x_min": 449.766987003386,
+          "y_at_x_max": 596.997997490689,
+          "constant_share_at_x_min": 1.0,
+          "constant_share_at_x_max": 0.7533810647503901,
+          "per_unit_ns": 49077.003495767676,
+          "slope_first_2": 159.37499119900158,
+          "slope_last_2": -23.525004507973534,
+          "slope_ratio_last_over_first": -0.1476078795737741
+        },
+        "triton": {
+          "a": -0.00500003807246701,
+          "c": 0.570004340261221,
+          "r2": 0.04948666075815833,
+          "n_points": 4,
+          "x_min": 0.0,
+          "x_max": 3.0,
+          "y_at_x_min": 0.570004340261221,
+          "y_at_x_max": 0.55500422604382,
+          "constant_share_at_x_min": 1.0,
+          "constant_share_at_x_max": 1.0270270270270279,
+          "per_unit_ns": -5.00003807246701,
+          "slope_first_2": -0.06498885340988654,
+          "slope_last_2": -0.02505839802324763,
+          "slope_ratio_last_over_first": 0.38557993730407275
+        },
+        "noise_band": {
+          "median_pi_raw_p50_range_us": 0.0,
+          "max_pi_raw_p50_range_us": 0.0,
+          "note": "同配置重复轮之间 pi_raw p50 的极差（raw 口径），仅本维度点数"
+        },
+        "n_points": 4,
+        "points": [
+          {
+            "x": 0.0,
+            "x_label": "0",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 399.3299906142056,
+            "pi_raw_p50_min": 399.3299906142056,
+            "pi_raw_p50_max": 399.3299906142056,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 398.7700038123876,
+            "pi_net_p50_min": 398.7700038123876,
+            "pi_net_p50_max": 398.7700038123876,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 413.6530391406268,
+            "pi_net_p50_decode": 398.7700038123876,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5899928510189056,
+            "triton_p50_min": 0.5899928510189056,
+            "triton_p50_max": 0.5899928510189056,
+            "triton_p50_range": 0.0,
+            "us_p50": 71.44501432776451,
+            "us_p50_min": 71.44501432776451,
+            "us_p50_max": 71.44501432776451,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 470.69499851204455,
+            "scope_net_p50": 470.10500566102564,
+            "scope_net_p50_min": 470.10500566102564,
+            "scope_net_p50_max": 470.10500566102564,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 1.0,
+            "x_label": "1",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 558.7049818132073,
+            "pi_raw_p50_min": 558.7049818132073,
+            "pi_raw_p50_max": 558.7049818132073,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 558.1649602390826,
+            "pi_net_p50_min": 558.1649602390826,
+            "pi_net_p50_max": 558.1649602390826,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 582.6099368277937,
+            "pi_net_p50_decode": 558.1649602390826,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5250039976090193,
+            "triton_p50_min": 0.5250039976090193,
+            "triton_p50_max": 0.5250039976090193,
+            "triton_p50_range": 0.0,
+            "us_p50": 226.09997540712357,
+            "us_p50_min": 226.09997540712357,
+            "us_p50_max": 226.09997540712357,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 786.3850332796574,
+            "scope_net_p50": 785.8600292820483,
+            "scope_net_p50_min": 785.8600292820483,
+            "scope_net_p50_max": 785.8600292820483,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 64.0,
+            "tokens_per_step_decode": 64.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 64.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 66.0,
+            "steps_run": 66.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": true,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 2.0,
+            "x_label": "2",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 579.5100005343556,
+            "pi_raw_p50_min": 579.5100005343556,
+            "pi_raw_p50_max": 579.5100005343556,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 578.940031118691,
+            "pi_net_p50_min": 578.940031118691,
+            "pi_net_p50_max": 578.940031118691,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 647.539971396327,
+            "pi_net_p50_decode": 578.940031118691,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5800393410027027,
+            "triton_p50_min": 0.5800393410027027,
+            "triton_p50_max": 0.5800393410027027,
+            "triton_p50_range": 0.0,
+            "us_p50": 232.20997536554933,
+            "us_p50_min": 232.20997536554933,
+            "us_p50_max": 232.20997536554933,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 814.5199972204864,
+            "scope_net_p50": 813.9399578794837,
+            "scope_net_p50_min": 813.9399578794837,
+            "scope_net_p50_max": 813.9399578794837,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 96.0,
+            "tokens_per_step_decode": 96.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 96.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 45.0,
+            "steps_run": 45.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": true,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 3.0,
+            "x_label": "3",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 555.9849960263819,
+            "pi_raw_p50_min": 555.9849960263819,
+            "pi_raw_p50_max": 555.9849960263819,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 555.4349918384105,
+            "pi_net_p50_min": 555.4349918384105,
+            "pi_net_p50_max": 555.4349918384105,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 597.5800624582916,
+            "pi_net_p50_decode": 555.4349918384105,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.554980942979455,
+            "triton_p50_min": 0.554980942979455,
+            "triton_p50_max": 0.554980942979455,
+            "triton_p50_range": 0.0,
+            "us_p50": 229.14001601748168,
+            "us_p50_min": 229.14001601748168,
+            "us_p50_max": 229.14001601748168,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 790.9450214356184,
+            "scope_net_p50": 790.390040492639,
+            "scope_net_p50_min": 790.390040492639,
+            "scope_net_p50_max": 790.390040492639,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 128.0,
+            "tokens_per_step_decode": 128.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 128.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 34.0,
+            "steps_run": 34.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": true,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          }
+        ],
+        "notes": "stress_spec_k"
+      },
+      "stress_prefix_hit_ratio": {
+        "preset": "stress",
+        "dim": "prefix_hit_ratio",
+        "x": "ratio",
+        "primary_metric": "pi_net_us p50（每步；已扣 triton_cpu_us）",
+        "pi_net": {
+          "a": -11.079956311732705,
+          "c": 414.8549982346594,
+          "r2": 0.4377703872017159,
+          "n_points": 5,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_at_x_min": 414.8549982346594,
+          "y_at_x_max": 403.7750419229267,
+          "constant_share_at_x_min": 1.0,
+          "constant_share_at_x_max": 1.0274409142748542,
+          "per_unit_ns": -11079.956311732705,
+          "slope_first_2": -5.800276994705433,
+          "slope_last_2": -24.640117771923446,
+          "slope_ratio_last_over_first": 4.248093288374894
+        },
+        "us": {
+          "a": -0.1720036379993054,
+          "c": 69.21401363797483,
+          "r2": 0.07287527668256011,
+          "n_points": 5,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_at_x_min": 69.21401363797483,
+          "y_at_x_max": 69.04200999997552,
+          "constant_share_at_x_min": 1.0,
+          "constant_share_at_x_max": 1.0024912895496434,
+          "per_unit_ns": -172.0036379993054,
+          "slope_first_2": 0.5400506779551473,
+          "slope_last_2": 1.1799857020378397,
+          "slope_ratio_last_over_first": 2.1849536538047656
+        },
+        "scope_net": {
+          "a": -11.624011676758613,
+          "c": 485.09498592466116,
+          "r2": 0.4262761699649281,
+          "n_points": 5,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_at_x_min": 485.09498592466116,
+          "y_at_x_max": 473.4709742479025,
+          "constant_share_at_x_min": 1.0,
+          "constant_share_at_x_max": 1.024550632053471,
+          "per_unit_ns": -11624.011676758613,
+          "slope_first_2": -5.059875547886059,
+          "slope_last_2": -29.41989805549357,
+          "slope_ratio_last_over_first": 5.8143521074910165
+        },
+        "pi_raw": {
+          "a": -11.071993503719888,
+          "c": 415.3729998506608,
+          "r2": 0.44039784213526056,
+          "n_points": 5,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_at_x_min": 415.3729998506608,
+          "y_at_x_max": 404.3010063469409,
+          "constant_share_at_x_min": 1.0,
+          "constant_share_at_x_max": 1.027385520515422,
+          "per_unit_ns": -11071.993503719888,
+          "slope_first_2": -5.660229362547334,
+          "slope_last_2": -24.50007013976561,
+          "slope_ratio_last_over_first": 4.32845889636168
+        },
+        "triton": {
+          "a": -0.015948899090290236,
+          "c": 0.49898517318069935,
+          "r2": 0.431239287371849,
+          "n_points": 5,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_at_x_min": 0.49898517318069935,
+          "y_at_x_max": 0.4830362740904091,
+          "constant_share_at_x_min": 1.0,
+          "constant_share_at_x_max": 1.033018015303971,
+          "per_unit_ns": -15.948899090290237,
+          "slope_first_2": 0.059953890740871214,
+          "slope_last_2": -0.019907020032405624,
+          "slope_ratio_last_over_first": -0.3320388349514537
+        },
+        "noise_band": {
+          "median_pi_raw_p50_range_us": 0.0,
+          "max_pi_raw_p50_range_us": 0.0,
+          "note": "同配置重复轮之间 pi_raw p50 的极差（raw 口径），仅本维度点数"
+        },
+        "n_points": 5,
+        "points": [
+          {
+            "x": 0.0,
+            "x_label": "0.0",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 412.40002610720694,
+            "pi_raw_p50_min": 412.40002610720694,
+            "pi_raw_p50_max": 412.40002610720694,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 411.8800279684365,
+            "pi_net_p50_min": 411.8800279684365,
+            "pi_net_p50_max": 411.8800279684365,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 425.96203275024897,
+            "pi_net_p50_decode": 411.8800279684365,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.48999208956956863,
+            "triton_p50_min": 0.48999208956956863,
+            "triton_p50_max": 0.48999208956956863,
+            "triton_p50_range": 0.0,
+            "us_p50": 69.08000796101987,
+            "us_p50_min": 69.08000796101987,
+            "us_p50_max": 69.08000796101987,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 482.2699702344835,
+            "scope_net_p50": 481.7799781449139,
+            "scope_net_p50_min": 481.7799781449139,
+            "scope_net_p50_max": 481.7799781449139,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 0.25,
+            "x_label": "0.25",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 410.9849687665701,
+            "pi_raw_p50_min": 410.9849687665701,
+            "pi_raw_p50_max": 410.9849687665701,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 410.4299587197602,
+            "pi_net_p50_min": 410.4299587197602,
+            "pi_net_p50_max": 410.4299587197602,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 431.5939382649958,
+            "pi_net_p50_decode": 410.4299587197602,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.5049805622547865,
+            "triton_p50_min": 0.5049805622547865,
+            "triton_p50_max": 0.5049805622547865,
+            "triton_p50_range": 0.0,
+            "us_p50": 69.21502063050866,
+            "us_p50_min": 69.21502063050866,
+            "us_p50_max": 69.21502063050866,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 481.0199898201972,
+            "scope_net_p50": 480.51500925794244,
+            "scope_net_p50_min": 480.51500925794244,
+            "scope_net_p50_max": 480.51500925794244,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 0.5,
+            "x_label": "0.5",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 418.3549899607897,
+            "pi_raw_p50_min": 418.3549899607897,
+            "pi_raw_p50_max": 418.3549899607897,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 417.88502130657434,
+            "pi_net_p50_min": 417.88502130657434,
+            "pi_net_p50_max": 417.88502130657434,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 433.27094754204154,
+            "pi_net_p50_decode": 417.88502130657434,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.49502705223858356,
+            "triton_p50_min": 0.49502705223858356,
+            "triton_p50_max": 0.49502705223858356,
+            "triton_p50_range": 0.0,
+            "us_p50": 69.48001100681722,
+            "us_p50_min": 69.48001100681722,
+            "us_p50_max": 69.48001100681722,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 488.8199910055846,
+            "scope_net_p50": 488.324963953346,
+            "scope_net_p50_min": 488.324963953346,
+            "scope_net_p50_max": 488.324963953346,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 0.75,
+            "x_label": "0.75",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 406.7850240971893,
+            "pi_raw_p50_min": 406.7850240971893,
+            "pi_raw_p50_max": 406.7850240971893,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 406.27006092108786,
+            "pi_net_p50_min": 406.27006092108786,
+            "pi_net_p50_max": 406.27006092108786,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 427.4539474863559,
+            "pi_net_p50_decode": 406.27006092108786,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.48501533456146717,
+            "triton_p50_min": 0.48501533456146717,
+            "triton_p50_max": 0.48501533456146717,
+            "triton_p50_range": 0.0,
+            "us_p50": 68.78501153551042,
+            "us_p50_min": 68.78501153551042,
+            "us_p50_max": 68.78501153551042,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 477.05997712910175,
+            "scope_net_p50": 476.5749617945403,
+            "scope_net_p50_min": 476.5749617945403,
+            "scope_net_p50_max": 476.5749617945403,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 1.0,
+            "x_label": "1.0",
+            "n_runs": 1,
+            "files": [
+              "sweep_stress_stress_20260923-191424.csv"
+            ],
+            "pi_raw_p50": 400.6600065622479,
+            "pi_raw_p50_min": 400.6600065622479,
+            "pi_raw_p50_max": 400.6600065622479,
+            "pi_raw_p50_range": 0.0,
+            "pi_net_p50": 400.110031478107,
+            "pi_net_p50_min": 400.110031478107,
+            "pi_net_p50_max": 400.110031478107,
+            "pi_net_p50_range": 0.0,
+            "pi_net_p90": 416.45903838798404,
+            "pi_net_p50_decode": 400.110031478107,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.4800385795533657,
+            "triton_p50_min": 0.4800385795533657,
+            "triton_p50_max": 0.4800385795533657,
+            "triton_p50_range": 0.0,
+            "us_p50": 69.08000796101987,
+            "us_p50_min": 69.08000796101987,
+            "us_p50_max": 69.08000796101987,
+            "us_p50_range": 0.0,
+            "scope_raw_p50": 469.7000258602202,
+            "scope_net_p50": 469.2199872806668,
+            "scope_net_p50_min": 469.2199872806668,
+            "scope_net_p50_max": 469.2199872806668,
+            "scope_net_p50_range": 0.0,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          }
+        ],
+        "notes": "stress_prefix_hit_ratio"
+      }
+    },
+    "stresssub": {
+      "stresssub_block_size": {
+        "preset": "stresssub",
+        "dim": "block_size",
+        "x": "count",
+        "primary_metric": "pi_net_us p50（每步；已扣 triton_cpu_us）",
+        "pi_net": {
+          "a": 0.024658781868588237,
+          "c": 399.8396986508336,
+          "r2": 0.5423172669190864,
+          "n_points": 4,
+          "x_min": 32.0,
+          "x_max": 256.0,
+          "y_at_x_min": 400.62877967062843,
+          "y_at_x_max": 406.1523468091922,
+          "constant_share_at_x_min": 0.9980303935717161,
+          "constant_share_at_x_max": 0.9844574376882175,
+          "per_unit_ns": 24.65878186858824,
+          "slope_first_2": 0.18382797861704125,
+          "slope_last_2": 0.008925781003198104,
+          "slope_ratio_last_over_first": 0.048555073446097635
+        },
+        "us": {
+          "a": 0.011893343585340835,
+          "c": 68.04217232654437,
+          "r2": 0.7803719016957478,
+          "n_points": 4,
+          "x_min": 32.0,
+          "x_max": 256.0,
+          "y_at_x_min": 68.42275932127528,
+          "y_at_x_max": 71.08686828439163,
+          "constant_share_at_x_min": 0.9944377134376607,
+          "constant_share_at_x_max": 0.9571693614963234,
+          "per_unit_ns": 11.893343585340835,
+          "slope_first_2": 0.04695357347372861,
+          "slope_last_2": 0.004453113433555562,
+          "slope_ratio_last_over_first": 0.09484077790260545
+        },
+        "scope_net": {
+          "a": 0.037967801409135506,
+          "c": 467.76200115741426,
+          "r2": 0.651751843413797,
+          "n_points": 4,
+          "x_min": 32.0,
+          "x_max": 256.0,
+          "y_at_x_min": 468.97697080250657,
+          "y_at_x_max": 477.48175831815297,
+          "constant_share_at_x_min": 0.9974093191761351,
+          "constant_share_at_x_max": 0.9796437099608268,
+          "per_unit_ns": 37.967801409135504,
+          "slope_first_2": 0.22460881154983492,
+          "slope_last_2": 0.014765305422768545,
+          "slope_ratio_last_over_first": 0.06573787252995862
+        },
+        "pi_raw": {
+          "a": 0.02480434056411961,
+          "c": 400.45348641401876,
+          "r2": 0.5416100188123285,
+          "n_points": 4,
+          "x_min": 32.0,
+          "x_max": 256.0,
+          "y_at_x_min": 401.24722531207055,
+          "y_at_x_max": 406.8033975984334,
+          "constant_share_at_x_min": 0.9980218208426626,
+          "constant_share_at_x_max": 0.9843907125114948,
+          "per_unit_ns": 24.80434056411961,
+          "slope_first_2": 0.18351556718698325,
+          "slope_last_2": 0.008105530469037291,
+          "slope_ratio_last_over_first": 0.044168081178522584
+        },
+        "triton": {
+          "a": 4.778801509098261e-05,
+          "c": 0.6230136774399355,
+          "r2": 0.06290304191344631,
+          "n_points": 4,
+          "x_min": 32.0,
+          "x_max": 256.0,
+          "y_at_x_min": 0.624542893922847,
+          "y_at_x_max": 0.6352474093032271,
+          "constant_share_at_x_min": 0.9975514628413971,
+          "constant_share_at_x_max": 0.9807417839346875,
+          "per_unit_ns": 0.04778801509098261,
+          "slope_first_2": 0.0009376890375278863,
+          "slope_last_2": -0.00019497292669257228,
+          "slope_ratio_last_over_first": -0.2079291949563545
+        },
+        "noise_band": {
+          "median_pi_raw_p50_range_us": 1.114996848627925,
+          "max_pi_raw_p50_range_us": 8.549977792426944,
+          "note": "同配置重复轮之间 pi_raw p50 的极差（raw 口径），仅本维度点数"
+        },
+        "n_points": 4,
+        "points": [
+          {
+            "x": 32.0,
+            "x_label": "32",
+            "n_runs": 2,
+            "files": [
+              "sweep_stresssub_stress_20260923-192036.csv"
+            ],
+            "pi_raw_p50": 398.5150106018409,
+            "pi_raw_p50_min": 394.24002170562744,
+            "pi_raw_p50_max": 402.7899994980544,
+            "pi_raw_p50_range": 8.549977792426944,
+            "pi_net_p50": 397.9175235144794,
+            "pi_net_p50_min": 393.58504000119865,
+            "pi_net_p50_max": 402.25000702776015,
+            "pi_net_p50_range": 8.664967026561499,
+            "pi_net_p90": 406.91448375582695,
+            "pi_net_p50_decode": 397.9175235144794,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.6049813237041235,
+            "triton_p50_min": 0.5799811333417892,
+            "triton_p50_max": 0.6299815140664577,
+            "triton_p50_range": 0.0500003807246685,
+            "us_p50": 67.7124917274341,
+            "us_p50_min": 66.68499554507434,
+            "us_p50_max": 68.73998790979385,
+            "us_p50_range": 2.05499236471951,
+            "scope_raw_p50": 466.267520096153,
+            "scope_net_p50": 465.6625387724489,
+            "scope_net_p50_min": 460.24503535591066,
+            "scope_net_p50_max": 471.08004218898714,
+            "scope_net_p50_range": 10.835006833076477,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 1024.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 64.0,
+            "x_label": "64",
+            "n_runs": 2,
+            "files": [
+              "sweep_stresssub_stress_20260923-192036.csv"
+            ],
+            "pi_raw_p50": 404.3875087518245,
+            "pi_raw_p50_min": 403.695012209937,
+            "pi_raw_p50_max": 405.080005293712,
+            "pi_raw_p50_range": 1.3849930837750435,
+            "pi_net_p50": 403.8000188302249,
+            "pi_net_p50_min": 403.11002521775663,
+            "pi_net_p50_max": 404.4900124426931,
+            "pi_net_p50_range": 1.3799872249364853,
+            "pi_net_p90": 418.8804858131334,
+            "pi_net_p50_decode": 403.8000188302249,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.634987372905016,
+            "triton_p50_min": 0.6299815140664577,
+            "triton_p50_max": 0.6399932317435741,
+            "triton_p50_range": 0.010011717677116394,
+            "us_p50": 69.21500607859343,
+            "us_p50_min": 69.01001324877143,
+            "us_p50_max": 69.41999890841544,
+            "us_p50_range": 0.4099856596440077,
+            "scope_raw_p50": 473.48500811494887,
+            "scope_net_p50": 472.85002074204385,
+            "scope_net_p50_min": 472.84000902436674,
+            "scope_net_p50_max": 472.86003245972097,
+            "scope_net_p50_range": 0.020023435354232788,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 512.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 128.0,
+            "x_label": "128",
+            "n_runs": 2,
+            "files": [
+              "sweep_stresssub_stress_20260923-192036.csv"
+            ],
+            "pi_raw_p50": 404.89000093657523,
+            "pi_raw_p50_min": 404.7699912916869,
+            "pi_raw_p50_max": 405.0100105814636,
+            "pi_raw_p50_range": 0.24001928977668285,
+            "pi_net_p50": 404.1674837935716,
+            "pi_net_p50_min": 404.08497443422675,
+            "pi_net_p50_max": 404.24999315291643,
+            "pi_net_p50_range": 0.1650187186896801,
+            "pi_net_p90": 417.96899458859116,
+            "pi_net_p50_decode": 404.1674837935716,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.6499903975054622,
+            "triton_p50_min": 0.6399932317435741,
+            "triton_p50_max": 0.6599875632673502,
+            "triton_p50_range": 0.019994331523776054,
+            "us_p50": 70.18999895080924,
+            "us_p50_min": 69.76499571464956,
+            "us_p50_max": 70.61500218696892,
+            "us_p50_range": 0.8500064723193645,
+            "scope_raw_p50": 475.08500574622303,
+            "scope_net_p50": 474.43501534871757,
+            "scope_net_p50_min": 474.15003064088523,
+            "scope_net_p50_max": 474.7200000565499,
+            "scope_net_p50_range": 0.5699694156646729,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 256.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          },
+          {
+            "x": 256.0,
+            "x_label": "256",
+            "n_runs": 2,
+            "files": [
+              "sweep_stresssub_stress_20260923-192036.csv"
+            ],
+            "pi_raw_p50": 405.9275088366121,
+            "pi_raw_p50_min": 405.5050085298717,
+            "pi_raw_p50_max": 406.3500091433525,
+            "pi_raw_p50_range": 0.8450006134808064,
+            "pi_net_p50": 405.30998376198113,
+            "pi_net_p50_min": 404.89996899850667,
+            "pi_net_p50_max": 405.7199985254556,
+            "pi_net_p50_range": 0.8200295269489288,
+            "pi_net_p90": 419.5704765152186,
+            "pi_net_p50_decode": 405.30998376198113,
+            "pi_net_p50_prefill": NaN,
+            "triton_p50": 0.625033862888813,
+            "triton_p50_min": 0.6200280040502548,
+            "triton_p50_max": 0.6300397217273712,
+            "triton_p50_range": 0.010011717677116394,
+            "us_p50": 70.75999747030437,
+            "us_p50_min": 70.05999214015901,
+            "us_p50_max": 71.46000280044973,
+            "us_p50_range": 1.400010660290718,
+            "scope_raw_p50": 476.950008305721,
+            "scope_net_p50": 476.3249744428322,
+            "scope_net_p50_min": 476.0549636557698,
+            "scope_net_p50_max": 476.5949852298945,
+            "scope_net_p50_range": 0.5400215741246939,
+            "tokens_per_step": 32.0,
+            "tokens_per_step_decode": 32.0,
+            "tokens_per_step_prefill": NaN,
+            "logits_len_p50": 32.0,
+            "reqs_per_step": 32.0,
+            "n_prefill_steps": 0.0,
+            "n_decode_steps": 80.0,
+            "steps_run": 80.0,
+            "max_num_blocks_per_req": 128.0,
+            "max_model_len": 32768.0,
+            "max_num_reqs": 64.0,
+            "token_ids_cpu_MB": 8.388608,
+            "has_spec_decode": false,
+            "launches_set": [
+              "1"
+            ],
+            "slot_mapping_mode": [
+              "noop"
+            ],
+            "async_scheduling": [
+              "False"
+            ],
+            "prefix_caching": [
+              "True"
+            ]
+          }
+        ],
+        "notes": "stresssub_block_size"
+      }
+    }
+  },
+  "pooled_step_models": {
+    "realmachine": {
+      "n_steps": 29648,
+      "sources": [
+        "sweep_steps_realmachine_rm.csv",
+        "sweep_steps_realmachine_rm64.csv",
+        "sweep_steps_realmachine_rmsteady.csv",
+        "sweep_steps_realmachine_rmw0.csv"
+      ],
+      "pi_net_vs_num_reqs": {
+        "a": 0.6760221723600157,
+        "c": 377.88028392952845,
+        "r2": 0.056942513890622215,
+        "n_points": 29648,
+        "per_unit_ns": 676.0221723600157
+      },
+      "us_vs_num_reqs": {
+        "a": 1.8142462746365677,
+        "c": 17.217876577553046,
+        "r2": 0.6418013280254913,
+        "n_points": 29648,
+        "per_unit_ns": 1814.2462746365677
+      },
+      "pi_net_vs_tokens_per_step": {
+        "a": 0.6760221723600157,
+        "c": 377.88028392952845,
+        "r2": 0.056942513890622215,
+        "n_points": 29648,
+        "per_unit_ns": 676.0221723600157
+      },
+      "us_vs_tokens_per_step": {
+        "a": 1.8142462746365677,
+        "c": 17.217876577553046,
+        "r2": 0.6418013280254913,
+        "n_points": 29648,
+        "per_unit_ns": 1814.2462746365677
+      },
+      "pi_net_two_var": {
+        "c": 377.88028392952845,
+        "a_num_reqs": 0.3380110861845601,
+        "a_tokens_per_step": 0.33801108617541703,
+        "a_num_reqs_ns": 338.0110861845601,
+        "r2": 0.05694251389062199
+      },
+      "us_two_var": {
+        "c": 17.217876577553028,
+        "a_num_reqs": 0.9071231373184798,
+        "a_tokens_per_step": 0.9071231373180753,
+        "a_num_reqs_ns": 907.1231373184798,
+        "r2": 0.6418013280254913
+      }
+    },
+    "realmachine_mmr64": {
+      "n_steps": 942,
+      "sources": [
+        "sweep_steps_realmachine_rm64.csv"
+      ],
+      "pi_net_vs_num_reqs": {
+        "a": 0.5367152992139895,
+        "c": 384.51109047416367,
+        "r2": 0.12634059633053507,
+        "n_points": 942,
+        "per_unit_ns": 536.7152992139895
+      },
+      "us_vs_num_reqs": {
+        "a": 1.6703883061360645,
+        "c": 23.75099231541685,
+        "r2": 0.49986797644469383,
+        "n_points": 942,
+        "per_unit_ns": 1670.3883061360646
+      },
+      "pi_net_vs_tokens_per_step": {
+        "a": 0.5367152992139895,
+        "c": 384.51109047416367,
+        "r2": 0.12634059633053507,
+        "n_points": 942,
+        "per_unit_ns": 536.7152992139895
+      },
+      "us_vs_tokens_per_step": {
+        "a": 1.6703883061360645,
+        "c": 23.75099231541685,
+        "r2": 0.49986797644469383,
+        "n_points": 942,
+        "per_unit_ns": 1670.3883061360646
+      },
+      "pi_net_two_var": {
+        "c": 384.5110904741635,
+        "a_num_reqs": 0.2683576496069854,
+        "a_tokens_per_step": 0.2683576496069854,
+        "a_num_reqs_ns": 268.3576496069854,
+        "r2": 0.1263405963305354
+      },
+      "us_two_var": {
+        "c": 23.75099231541683,
+        "a_num_reqs": 0.8351941530680316,
+        "a_tokens_per_step": 0.8351941530680315,
+        "a_num_reqs_ns": 835.1941530680316,
+        "r2": 0.4998679764446936
+      }
+    },
+    "stress": {
+      "n_steps": 2408,
+      "sources": [
+        "sweep_steps_stress_stress.csv"
+      ],
+      "pi_net_vs_num_reqs": {
+        "a": 0.8449800716050775,
+        "c": 384.7871335250589,
+        "r2": 0.02463198284962409,
+        "n_points": 2408,
+        "per_unit_ns": 844.9800716050775
+      },
+      "us_vs_num_reqs": {
+        "a": 1.6990294588458728,
+        "c": 29.39121016649012,
+        "r2": 0.08874340132269942,
+        "n_points": 2408,
+        "per_unit_ns": 1699.0294588458728
+      },
+      "pi_net_vs_tokens_per_step": {
+        "a": 1.8777706175465707,
+        "c": 349.46916693591925,
+        "r2": 0.30948043455336516,
+        "n_points": 2408,
+        "per_unit_ns": 1877.7706175465707
+      },
+      "us_vs_tokens_per_step": {
+        "a": 2.0932965327281514,
+        "c": 11.672903070555819,
+        "r2": 0.34271841408906945,
+        "n_points": 2408,
+        "per_unit_ns": 2093.2965327281513
+      },
+      "pi_net_two_var": {
+        "c": 381.3310255914312,
+        "a_num_reqs": -2.0745468727503917,
+        "a_tokens_per_step": 2.7450269017051188,
+        "a_num_reqs_ns": -2074.5468727503917,
+        "r2": 0.3919402400573687
+      },
+      "us_two_var": {
+        "c": 26.255896473097888,
+        "a_num_reqs": -0.949508429049171,
+        "a_tokens_per_step": 2.49023485346257,
+        "a_num_reqs_ns": -949.508429049171,
+        "r2": 0.3581113429739916
+      }
+    }
+  },
+  "mode_interleaved_realmachine": {
+    "cpu_fallback": {
+      "n_rounds": 3,
+      "pi_raw_p50_median_us": 470.92497698031366,
+      "pi_raw_p50_min_us": 469.6400137618184,
+      "pi_raw_p50_max_us": 476.5949852298945,
+      "triton_p50_median_us": 86.98500460013747,
+      "pi_net_p50_median_us": 383.86500091291964,
+      "us_p50_median_us": 20.355015294626355,
+      "scope_net_p50_median_us": 404.3449880555272,
+      "steps_run": 62,
+      "delta_pi_raw_vs_noop_us": 91.54001600109041,
+      "delta_triton_vs_noop_us": 86.44501212984324,
+      "delta_pi_net_vs_noop_us": 4.995061317458749
+    },
+    "inject:15": {
+      "n_rounds": 3,
+      "pi_raw_p50_median_us": 487.88002459332347,
+      "pi_raw_p50_min_us": 487.354991491884,
+      "pi_raw_p50_max_us": 490.6950343865901,
+      "triton_p50_median_us": 102.58000111207366,
+      "pi_net_p50_median_us": 386.25000161118805,
+      "us_p50_median_us": 21.114974515512586,
+      "scope_net_p50_median_us": 407.82502037473023,
+      "steps_run": 62,
+      "delta_pi_raw_vs_noop_us": 108.49506361410022,
+      "delta_triton_vs_noop_us": 102.04000864177942,
+      "delta_pi_net_vs_noop_us": 7.380062015727162
+    },
+    "noop": {
+      "n_rounds": 3,
+      "pi_raw_p50_median_us": 379.38496097922325,
+      "pi_raw_p50_min_us": 370.06998900324106,
+      "pi_raw_p50_max_us": 379.9450059887022,
+      "triton_p50_median_us": 0.5399924702942371,
+      "pi_net_p50_median_us": 378.8699395954609,
+      "us_p50_median_us": 19.55500920303166,
+      "scope_net_p50_median_us": 398.9099932368845,
+      "steps_run": 62
+    },
+    "device_interaction_share_of_noop_pi_net_pct": {
+      "cpu_fallback": 22.959067349871006,
+      "inject:15": 27.07525469600561
+    },
+    "device_interaction_share_of_noop_pi_raw_pct": {
+      "cpu_fallback": 22.927900034735732,
+      "inject:15": 27.038499588203596
+    },
+    "paired_within_round": {
+      "cpu_fallback_minus_noop": {
+        "metric": "pi_net_p50_us (同 round 配对)",
+        "per_round_us": [
+          14.325021766126156,
+          3.604975063353777,
+          11.110067134723067
+        ],
+        "median_us": 11.110067134723067,
+        "mean_us": 9.680021321401,
+        "min_us": 3.604975063353777,
+        "max_us": 14.325021766126156,
+        "n_rounds": 3,
+        "source": [
+          "sweep_modecmp_rm_20260923-191635.csv"
+        ]
+      },
+      "inject:15_minus_noop": {
+        "metric": "pi_net_p50_us (同 round 配对)",
+        "per_round_us": [
+          15.100027667358518,
+          6.775022484362125,
+          9.755080100148916
+        ],
+        "median_us": 9.755080100148916,
+        "mean_us": 10.543376750623187,
+        "min_us": 6.775022484362125,
+        "max_us": 15.100027667358518,
+        "n_rounds": 3,
+        "source": [
+          "sweep_modecmp_rm_20260923-191635.csv"
+        ]
+      },
+      "inject:15_minus_cpu_fallback": {
+        "metric": "pi_net_p50_us (同 round 配对)",
+        "per_round_us": [
+          0.7750059012323618,
+          3.1700474210083485,
+          -1.354987034574151
+        ],
+        "median_us": 0.7750059012323618,
+        "mean_us": 0.8633554292221864,
+        "min_us": -1.354987034574151,
+        "max_us": 3.1700474210083485,
+        "n_rounds": 3,
+        "source": [
+          "sweep_modecmp_rm_20260923-191635.csv"
+        ]
+      }
+    }
+  },
+  "raw_rows": {
+    "preset_runs": {
+      "sweep_rm64_realmachine_20260923-190556.csv": null,
+      "sweep_rm_realmachine_20260923-190428.csv": null,
+      "sweep_rm_realmachine_20260923-190512.csv": null,
+      "sweep_rmcpu_realmachine_20260923-191425.csv": null,
+      "sweep_rminj_realmachine_20260923-191552.csv": null,
+      "sweep_rmnoop_realmachine_20260923-191508.csv": null,
+      "sweep_rmsteady_realmachine_20260923-190652.csv": null,
+      "sweep_rmw0_realmachine_20260923-190837.csv": null,
+      "sweep_stress_stress_20260923-191424.csv": null,
+      "sweep_stresssub_stress_20260923-192036.csv": null
+    }
+  }
+}

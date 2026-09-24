@@ -1,0 +1,38 @@
+{
+ "config_vars": {
+  "CC": "gcc",
+  "CFLAGS": "-fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall",
+  "CFLAGS_NODIST": "",
+  "CONFIG_ARGS": "'--prefix=/work/prefix-armB' '--enable-shared' '--with-computed-gotos'",
+  "EXT_SUFFIX": ".cpython-312-aarch64-linux-gnu.so",
+  "HAVE_COMPUTED_GOTOS": 1,
+  "HOST_GNU_TYPE": "aarch64-unknown-linux-gnu",
+  "INSTSONAME": "libpython3.12.so.1.0",
+  "LDFLAGS": "",
+  "LDFLAGS_NODIST": "",
+  "LDLIBRARY": "libpython3.12.so",
+  "LIBDIR": "/work/prefix-armB/lib",
+  "MULTIARCH": "aarch64-linux-gnu",
+  "OPT": "-DNDEBUG -g -O3 -Wall",
+  "PGO_PROF_USE_FLAG": "-fprofile-use -fprofile-correction",
+  "PROFILE_TASK": "-m test --pgo --timeout=1200",
+  "PY_CFLAGS": "-fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall",
+  "PY_CORE_CFLAGS": "-fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall -std=c11 -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wstrict-prototypes -Werror=implicit-function-declaration -fvisibility=hidden  -I./Include/internal -I. -I./Include -fPIC -DPy_BUILD_CORE",
+  "Py_DEBUG": 0,
+  "Py_ENABLE_SHARED": 1,
+  "SOABI": "cpython-312-aarch64-linux-gnu",
+  "USE_COMPUTED_GOTOS": 1,
+  "VERSION": "3.12",
+  "exec_prefix": "/work/prefix-armB",
+  "prefix": "/work/prefix-armB"
+ },
+ "executable": "/work/build-armB/Python-3.12.13/python",
+ "makefile": "/work/build-armB/Python-3.12.13/Makefile",
+ "makefile_keys": {
+  "CONFIGURE_LDFLAGS_NODIST": "# LDFLAGS_NOLTO is an extra flag to disable lto. It is used to speed up building",
+  "LDFLAGS_NODIST": null,
+  "PROFILE_TASK": "-m test --pgo --timeout=$(TESTTIMEOUT)",
+  "PY_CFLAGS_NODIST": "$(CONFIGURE_CFLAGS_NODIST) $(CFLAGS_NODIST) -I$(srcdir)/Include/internal"
+ },
+ "python_version": "3.12.13 (main, Sep 24 2026, 03:41:12) [GCC 12.3.1 (openEuler 12.3.1-111.oe2403sp3)]"
+}

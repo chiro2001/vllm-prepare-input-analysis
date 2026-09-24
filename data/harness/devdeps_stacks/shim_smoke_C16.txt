@@ -1,0 +1,14 @@
+# C16: torch.npu.config.allow_internal_format 读写
+# ok=False  0.75 ms
+# value: None
+# exc: AttributeError: '_npuConfig' object has no attribute 'allow_internal_format'
+# ---- traceback ----
+Traceback (most recent call last):
+  File "/work/harness/probes/smoke_shim.py", line 41, in _run_case
+    value = fn()
+            ^^^^
+  File "/work/harness/probes/smoke_shim.py", line 177, in c16_module_import_chain_attrs
+    return torch.npu.config.allow_internal_format
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: '_npuConfig' object has no attribute 'allow_internal_format'
+

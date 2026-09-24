@@ -1,0 +1,128 @@
+# finish_after_C start 2026-09-24T11:55:23+08:00
+# armC build finished rc=0 at 2026-09-24T11:55:53+08:00
+# --- C dispatch evidence ---
+1
+217
+# --- full three-arm benches ---
+
+########## 1/3 pi_sim_bench (mixed prepare_input-like) ##########
+# run_bench_arms  2026-09-24T11:55:53+08:00  host=host22  cpus=200-203 bench=pi rounds=7 steps=4000
+round1 armA rc=0 wall=1.229318350s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r1.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r1.log
+round1 armB rc=0 wall=1.156803220s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r1.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r1.log
+round1 armC rc=0 wall=.931864010s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r1.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r1.log
+round2 armA rc=0 wall=1.185785140s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r2.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r2.log
+round2 armB rc=0 wall=1.166867400s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r2.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r2.log
+round2 armC rc=0 wall=.934604860s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r2.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r2.log
+round3 armA rc=0 wall=1.190567020s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r3.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r3.log
+round3 armB rc=0 wall=1.160170860s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r3.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r3.log
+round3 armC rc=0 wall=.932320380s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r3.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r3.log
+round4 armA rc=0 wall=1.223683880s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r4.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r4.log
+round4 armB rc=0 wall=1.155759510s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r4.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r4.log
+round4 armC rc=0 wall=.930122550s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r4.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r4.log
+round5 armA rc=0 wall=1.203272300s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r5.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r5.log
+round5 armB rc=0 wall=1.162513040s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r5.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r5.log
+round5 armC rc=0 wall=.929237890s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r5.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r5.log
+round6 armA rc=0 wall=1.241075720s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r6.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r6.log
+round6 armB rc=0 wall=1.142075080s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r6.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r6.log
+round6 armC rc=0 wall=.940298940s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r6.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r6.log
+round7 armA rc=0 wall=1.208625440s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r7.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armA-r7.log
+round7 armB rc=0 wall=1.305186970s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r7.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armB-r7.log
+round7 armC rc=0 wall=.901394490s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r7.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-pi/pi-armC-r7.log
+# done 2026-09-24T11:56:17+08:00
+
+########## 2/3 dispatch_micro_bench (dispatch-dominated upper bound) ##########
+# run_bench_arms  2026-09-24T11:56:17+08:00  host=host22  cpus=200-203 bench=dispatch rounds=7 steps=2000
+round1 armA rc=0 wall=.333704230s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r1.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r1.log
+round1 armB rc=0 wall=.309922820s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r1.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r1.log
+round1 armC rc=0 wall=.285687580s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r1.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r1.log
+round2 armA rc=0 wall=.420127520s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r2.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r2.log
+round2 armB rc=0 wall=.325243650s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r2.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r2.log
+round2 armC rc=0 wall=.287249950s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r2.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r2.log
+round3 armA rc=0 wall=.336704600s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r3.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r3.log
+round3 armB rc=0 wall=.311326890s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r3.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r3.log
+round3 armC rc=0 wall=.285972190s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r3.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r3.log
+round4 armA rc=0 wall=.333356690s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r4.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r4.log
+round4 armB rc=0 wall=.311107610s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r4.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r4.log
+round4 armC rc=0 wall=.286332320s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r4.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r4.log
+round5 armA rc=0 wall=.357802580s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r5.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r5.log
+round5 armB rc=0 wall=.330201790s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r5.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r5.log
+round5 armC rc=0 wall=.307301390s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r5.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r5.log
+round6 armA rc=0 wall=.356259440s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r6.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r6.log
+round6 armB rc=0 wall=.310010060s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r6.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r6.log
+round6 armC rc=0 wall=.287209120s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r6.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r6.log
+round7 armA rc=0 wall=.338713520s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r7.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armA-r7.log
+round7 armB rc=0 wall=.314466360s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r7.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armB-r7.log
+round7 armC rc=0 wall=.300671500s json=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r7.json log=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/bench-dispatch/dispatch-armC-r7.log
+# done 2026-09-24T11:56:23+08:00
+
+########## 3/3 perf stat (IPC, branch-misses, icache, iTLB) ##########
+# perf_stat_arms 2026-09-24T11:56:23+08:00 host=host22 cpus=200-203 steps=4000 rounds=3 arms=A B C
+armA g1 rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/perf/perf-armA-g1.txt
+    21,797,388,508      instructions                     #    2.31  insn per cycle            
+        60,978,753      branch-misses                    #    1.28% of all branches           
+       3.304983260 seconds time elapsed
+armA g2 rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/perf/perf-armA-g2.txt
+       3.301068070 seconds time elapsed
+armB g1 rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/perf/perf-armB-g1.txt
+    20,665,940,138      instructions                     #    1.88  insn per cycle            
+        64,237,063      branch-misses                    #    1.48% of all branches           
+       3.786987680 seconds time elapsed
+armB g2 rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/perf/perf-armB-g2.txt
+       3.067136600 seconds time elapsed
+armC g1 rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/perf/perf-armC-g1.txt
+    18,371,263,964      instructions                     #    2.17  insn per cycle            
+        46,587,052      branch-misses                    #    1.30% of all branches           
+       2.922778100 seconds time elapsed
+armC g2 rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/data/perf/perf-armC-g2.txt
+       2.955501610 seconds time elapsed
+# done 2026-09-24T11:56:43+08:00
+
+########## done ##########
+2026-09-24T11:56:43+08:00
+# --- stock-image control for the same benches ---
+# run_bench_stock_image 2026-09-24T11:56:43+08:00 bench=dispatch rounds=7 cpus=200-203
+round1 rc=0 -> /work/exp-cpython/data/bench-dispatch-stock/dispatch-stockimg-r1.json
+round2 rc=0 -> /work/exp-cpython/data/bench-dispatch-stock/dispatch-stockimg-r2.json
+round3 rc=0 -> /work/exp-cpython/data/bench-dispatch-stock/dispatch-stockimg-r3.json
+round4 rc=0 -> /work/exp-cpython/data/bench-dispatch-stock/dispatch-stockimg-r4.json
+round5 rc=0 -> /work/exp-cpython/data/bench-dispatch-stock/dispatch-stockimg-r5.json
+round6 rc=0 -> /work/exp-cpython/data/bench-dispatch-stock/dispatch-stockimg-r6.json
+round7 rc=0 -> /work/exp-cpython/data/bench-dispatch-stock/dispatch-stockimg-r7.json
+# done 2026-09-24T11:56:48+08:00
+# run_bench_stock_image 2026-09-24T11:56:48+08:00 bench=pi rounds=5 cpus=200-203
+round1 rc=0 -> /work/exp-cpython/data/bench-pi-stock/pi-stockimg-r1.json
+round2 rc=0 -> /work/exp-cpython/data/bench-pi-stock/pi-stockimg-r2.json
+round3 rc=0 -> /work/exp-cpython/data/bench-pi-stock/pi-stockimg-r3.json
+round4 rc=0 -> /work/exp-cpython/data/bench-pi-stock/pi-stockimg-r4.json
+round5 rc=0 -> /work/exp-cpython/data/bench-pi-stock/pi-stockimg-r5.json
+# done 2026-09-24T11:56:56+08:00
+# --- real-workload harness: stock vs C, interleaved, n=3 ---
+rep1 arm=stock rc=0 tag=rep1_stock
+rep1 arm=C rc=0 tag=rep1_C
+rep2 arm=stock rc=0 tag=rep2_stock
+rep2 arm=C rc=0 tag=rep2_C
+rep3 arm=stock rc=0 tag=rep3_stock
+rep3 arm=C rc=0 tag=rep3_C
+raw runs:
+  rep1_A           p50=  457.5 mean=  465.9 p90=  477.4 p99=  588.5 update50= 18.7
+  rep2_A           p50=  472.1 mean=  480.6 p90=  505.9 p99=  560.4 update50= 20.1
+  rep1_B           p50=  452.7 mean=  456.8 p90=  469.1 p99=  497.7 update50= 18.2
+  rep2_B           p50=  450.4 mean=  460.6 p90=  469.6 p99=  653.4 update50= 18.2
+  rep1_C           p50=  392.3 mean=  401.7 p90=  406.3 p99=  576.0 update50= 15.6
+  rep2_C           p50=  388.3 mean=  422.8 p90=  412.5 p99= 1147.2 update50= 15.6
+  rep3_C           p50=  407.4 mean=  415.6 p90=  445.7 p99=  499.4 update50= 17.2
+  rep1_stock       p50=  467.0 mean=  471.4 p90=  485.1 p99=  520.8 update50= 19.1
+  rep1_stock       p50=  458.9 mean=  465.0 p90=  476.7 p99=  568.0 update50= 18.3
+  rep2_stock       p50=  462.6 mean=  469.5 p90=  475.1 p99=  588.6 update50= 18.4
+  rep2_stock       p50=  465.3 mean=  475.9 p90=  488.1 p99=  651.4 update50= 18.7
+  rep3_stock       p50=  464.7 mean=  469.7 p90=  479.6 p99=  550.7 update50= 19.3
+
+arm          n   p50_med   p50_min   mean_med   p90_med   upd_med
+A            2     464.8     457.5      473.2     491.6      19.4
+B            2     451.6     450.4      458.7     469.3      18.2
+C            3     392.3     388.3      415.6     412.5      15.6
+stock        5     464.7     458.9      469.7     479.6      18.7
+delta A vs stock = +0.01% (p50 median)
+delta B vs stock = -2.83% (p50 median)
+delta C vs stock = -15.59% (p50 median)
+# finish_after_C done 2026-09-24T12:00:46+08:00

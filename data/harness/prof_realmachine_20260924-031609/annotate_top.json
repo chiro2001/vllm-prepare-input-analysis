@@ -1,0 +1,668 @@
+{
+  "caliber_version": "prof-v1",
+  "kind": "annotate_top",
+  "perfdata": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_realmachine_20260924-031609/passes/perf/perf.data",
+  "hotspots": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_realmachine_20260924-031609/passes/perf/hotspots.json",
+  "symfs": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_realmachine_20260924-031609/passes/perf/symfs",
+  "requested_top": 3,
+  "annotated": 3,
+  "functions": [
+    {
+      "rank": 1,
+      "symbol": "_PyEval_EvalFrameDefault",
+      "symbol_raw": "[.] _PyEval_EvalFrameDefault",
+      "dso": "libpython3.12.so.1.0",
+      "self_overhead_pct": 11.43,
+      "annotate_lines": 13623,
+      "n_instructions": 11567,
+      "hot_source_lines": [
+        {
+          "pct": 9.47,
+          "loc": "object.h:642"
+        },
+        {
+          "pct": 8.07,
+          "loc": "object.h:646"
+        },
+        {
+          "pct": 2.39,
+          "loc": "ceval.c:772"
+        },
+        {
+          "pct": 1.75,
+          "loc": "generated_cases.c.h:3067"
+        },
+        {
+          "pct": 1.64,
+          "loc": "generated_cases.c.h:2421"
+        },
+        {
+          "pct": 1.63,
+          "loc": "generated_cases.c.h:83"
+        },
+        {
+          "pct": 1.55,
+          "loc": "generated_cases.c.h:2485"
+        },
+        {
+          "pct": 1.43,
+          "loc": "generated_cases.c.h:107"
+        },
+        {
+          "pct": 1.28,
+          "loc": "ceval.c:1624"
+        },
+        {
+          "pct": 1.25,
+          "loc": "bytecodes.c:1856"
+        },
+        {
+          "pct": 1.14,
+          "loc": "bytecodes.c:1852"
+        },
+        {
+          "pct": 1.05,
+          "loc": "pycore_frame.h:156"
+        },
+        {
+          "pct": 1.05,
+          "loc": "bytecodes.c:192"
+        },
+        {
+          "pct": 0.96,
+          "loc": "pycore_code.h:313"
+        },
+        {
+          "pct": 0.9,
+          "loc": "pycore_dict.h:135"
+        },
+        {
+          "pct": 0.85,
+          "loc": "generated_cases.c.h:1977"
+        },
+        {
+          "pct": 0.79,
+          "loc": "pycore_frame.h:248"
+        },
+        {
+          "pct": 0.76,
+          "loc": "generated_cases.c.h:2541"
+        },
+        {
+          "pct": 0.61,
+          "loc": "generated_cases.c.h:2510"
+        },
+        {
+          "pct": 0.58,
+          "loc": "generated_cases.c.h:3120"
+        },
+        {
+          "pct": 0.58,
+          "loc": "object.h:220"
+        },
+        {
+          "pct": 0.58,
+          "loc": "bytecodes.c:3245"
+        },
+        {
+          "pct": 0.55,
+          "loc": "generated_cases.c.h:180"
+        },
+        {
+          "pct": 0.53,
+          "loc": "generated_cases.c.h:3631"
+        }
+      ],
+      "top_instructions": [
+        {
+          "pct": 2.45,
+          "addr": "10fa80",
+          "mnemonic": "str",
+          "operands": "w0, [x25] // object.h:646",
+          "src": "L1818 Py_INCREF():"
+        },
+        {
+          "pct": 2.39,
+          "addr": "10d6ec",
+          "mnemonic": "ldrb",
+          "operands": "w28, [x0, #3] // ceval.c:772",
+          "src": "L156 _PyEval_EvalFrameDefault():"
+        },
+        {
+          "pct": 2.16,
+          "addr": "1160ec",
+          "mnemonic": "str",
+          "operands": "w0, [x1] // object.h:646",
+          "src": "L1373 Py_INCREF():"
+        },
+        {
+          "pct": 2.04,
+          "addr": "10fa74",
+          "mnemonic": "ldr",
+          "operands": "w0, [x25] // object.h:642",
+          "src": "L1818 Py_INCREF():"
+        },
+        {
+          "pct": 1.75,
+          "addr": "115910",
+          "mnemonic": "ldrb",
+          "operands": "w28, [x26, #1] // generated_cases.c.h:3067",
+          "src": "L321 _PyEval_EvalFrameDefault():"
+        },
+        {
+          "pct": 1.64,
+          "addr": "110200",
+          "mnemonic": "str",
+          "operands": "x26, [x20, #56] // generated_cases.c.h:2421",
+          "src": "L243 _PyEval_EvalFrameDefault():"
+        },
+        {
+          "pct": 1.63,
+          "addr": "1118a0",
+          "mnemonic": "str",
+          "operands": "x26, [x20, #56] // generated_cases.c.h:83",
+          "src": "L643 _PyEval_EvalFrameDefault():"
+        },
+        {
+          "pct": 1.6,
+          "addr": "112438",
+          "mnemonic": "ldr",
+          "operands": "w0, [x1] // object.h:642",
+          "src": "L207 Py_INCREF():"
+        },
+        {
+          "pct": 1.6,
+          "addr": "118920",
+          "mnemonic": "str",
+          "operands": "w0, [x25] // object.h:646",
+          "src": "L1864 Py_INCREF():"
+        },
+        {
+          "pct": 1.55,
+          "addr": "10fa50",
+          "mnemonic": "str",
+          "operands": "x26, [x20, #56] // generated_cases.c.h:2485",
+          "src": "L221 _PyEval_EvalFrameDefault():"
+        },
+        {
+          "pct": 1.43,
+          "addr": "11243c",
+          "mnemonic": "str",
+          "operands": "x26, [x20, #56] // generated_cases.c.h:107",
+          "src": "L643 _PyEval_EvalFrameDefault():"
+        },
+        {
+          "pct": 1.43,
+          "addr": "1160e0",
+          "mnemonic": "ldr",
+          "operands": "w0, [x1] // object.h:642",
+          "src": "L1373 Py_INCREF():"
+        },
+        {
+          "pct": 1.28,
+          "addr": "10e9f4",
+          "mnemonic": "ldr",
+          "operands": "w1, [x3] // object.h:642",
+          "src": "L1488 Py_INCREF():"
+        },
+        {
+          "pct": 1.28,
+          "addr": "1153b0",
+          "mnemonic": "ldr",
+          "operands": "x0, [sp, #112] // ceval.c:1624",
+          "src": "L647 _PyEvalFramePushAndInit_Ex():"
+        },
+        {
+          "pct": 1.25,
+          "addr": "11890c",
+          "mnemonic": "ldr",
+          "operands": "x25, [x3, #8] // bytecodes.c:1856",
+          "src": "L165 _PyEval_EvalFrameDefault():"
+        },
+        {
+          "pct": 1.14,
+          "addr": "10ee64",
+          "mnemonic": "ldr",
+          "operands": "x0, [x2, #32] // bytecodes.c:1852",
+          "src": "L221 _PyEval_EvalFrameDefault():"
+        },
+        {
+          "pct": 1.08,
+          "addr": "11247c",
+          "mnemonic": "ldr",
+          "operands": "w0, [x24] // object.h:642",
+          "src": "L681 Py_INCREF():"
+        },
+        {
+          "pct": 1.05,
+          "addr": "10d708",
+          "mnemonic": "str",
+          "operands": "w2, [x20, #64] // pycore_frame.h:156",
+          "src": "L773 _PyFrame_GetStackPointer():"
+        },
+        {
+          "pct": 1.05,
+          "addr": "111890",
+          "mnemonic": "add",
+          "operands": "x7, x20, w28, sxtw #3 // bytecodes.c:192",
+          "src": "L243 _PyEval_EvalFrameDefault():"
+        },
+        {
+          "pct": 1.02,
+          "addr": "10ea00",
+          "mnemonic": "str",
+          "operands": "w1, [x3] // object.h:646",
+          "src": "L1488 Py_INCREF():"
+        }
+      ],
+      "txt": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_realmachine_20260924-031609/passes/perf/annotate/_PyEval_EvalFrameDefault.txt",
+      "json": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_realmachine_20260924-031609/passes/perf/annotate/_PyEval_EvalFrameDefault.json"
+    },
+    {
+      "rank": 2,
+      "symbol": "_PyObject_Malloc",
+      "symbol_raw": "[.] _PyObject_Malloc",
+      "dso": "libpython3.12.so.1.0",
+      "self_overhead_pct": 1.63,
+      "annotate_lines": 121,
+      "n_instructions": 73,
+      "hot_source_lines": [
+        {
+          "pct": 24.68,
+          "loc": "obmalloc.c:1541"
+        },
+        {
+          "pct": 19.48,
+          "loc": "obmalloc.c:1544"
+        },
+        {
+          "pct": 13.54,
+          "loc": "obmalloc.c:1535"
+        },
+        {
+          "pct": 13.34,
+          "loc": "obmalloc.c:1562"
+        },
+        {
+          "pct": 5.96,
+          "loc": "pycore_pystate.h:27"
+        },
+        {
+          "pct": 4.52,
+          "loc": "pycore_pystate.h:133"
+        },
+        {
+          "pct": 4.52,
+          "loc": "obmalloc.c:1574"
+        },
+        {
+          "pct": 3.49,
+          "loc": "obmalloc.c:1357"
+        },
+        {
+          "pct": 3.07,
+          "loc": "obmalloc.c:1368"
+        },
+        {
+          "pct": 2.88,
+          "loc": "obmalloc.c:1540"
+        },
+        {
+          "pct": 1.64,
+          "loc": "obmalloc.c:1527"
+        },
+        {
+          "pct": 0.82,
+          "loc": "obmalloc.c:1370"
+        },
+        {
+          "pct": 0.62,
+          "loc": "obmalloc.c:1361"
+        },
+        {
+          "pct": 0.62,
+          "loc": "obmalloc.c:1369"
+        }
+      ],
+      "top_instructions": [
+        {
+          "pct": 24.68,
+          "addr": "1c95e8",
+          "mnemonic": "ldr",
+          "operands": "x0, [x2, #8] // obmalloc.c:1541",
+          "src": "L859 pymalloc_alloc():"
+        },
+        {
+          "pct": 19.48,
+          "addr": "1c95fc",
+          "mnemonic": "str",
+          "operands": "x3, [x2, #8] // obmalloc.c:1544",
+          "src": "L859 pymalloc_alloc():"
+        },
+        {
+          "pct": 13.54,
+          "addr": "1c95dc",
+          "mnemonic": "ldr",
+          "operands": "x4, [x2, #16] // obmalloc.c:1535",
+          "src": "L859 pymalloc_alloc():"
+        },
+        {
+          "pct": 9.45,
+          "addr": "1c9574",
+          "mnemonic": "stp",
+          "operands": "x29, x30, [sp, #-32]! // obmalloc.c:1562",
+          "src": "L6 _PyObject_Malloc():"
+        },
+        {
+          "pct": 5.96,
+          "addr": "1c95a8",
+          "mnemonic": "ldr",
+          "operands": "x0, [x3, #48] // pycore_pystate.h:27",
+          "src": "L134 _PyInterpreterState_Main():"
+        },
+        {
+          "pct": 3.9,
+          "addr": "1c9594",
+          "mnemonic": "stp",
+          "operands": "x19, x20, [sp, #16] // obmalloc.c:1562",
+          "src": "L138 _PyObject_Malloc():"
+        },
+        {
+          "pct": 3.49,
+          "addr": "1c9660",
+          "mnemonic": "ldp",
+          "operands": "w3, w5, [x2, #40] // obmalloc.c:1357",
+          "src": "L1567 pymalloc_pool_extend():"
+        },
+        {
+          "pct": 3.08,
+          "addr": "1c9578",
+          "mnemonic": "mrs",
+          "operands": "x2, tpidr_el0 // pycore_pystate.h:133",
+          "src": "L1563 _PyInterpreterState_GET():"
+        },
+        {
+          "pct": 3.07,
+          "addr": "1c966c",
+          "mnemonic": "ldr",
+          "operands": "x1, [x2, #24] // obmalloc.c:1368",
+          "src": "L1567 pymalloc_pool_extend():"
+        },
+        {
+          "pct": 2.88,
+          "addr": "1c9604",
+          "mnemonic": "ldp",
+          "operands": "x19, x20, [sp, #16] // obmalloc.c:1574",
+          "src": "L1547 _PyObject_Malloc():"
+        },
+        {
+          "pct": 1.85,
+          "addr": "1c95f4",
+          "mnemonic": "str",
+          "operands": "w3, [x2]",
+          "src": "L859 pymalloc_alloc():"
+        },
+        {
+          "pct": 1.64,
+          "addr": "1c95bc",
+          "mnemonic": "sub",
+          "operands": "x0, x19, #0x1 // obmalloc.c:1527",
+          "src": "L859 pymalloc_alloc():"
+        },
+        {
+          "pct": 1.64,
+          "addr": "1c9608",
+          "mnemonic": "ldp",
+          "operands": "x29, x30, [sp], #32",
+          "src": "L1547 _PyObject_Malloc():"
+        },
+        {
+          "pct": 1.44,
+          "addr": "1c9590",
+          "mnemonic": "ldr",
+          "operands": "x2, [x2, x0]",
+          "src": "L1563 _PyInterpreterState_GET():"
+        },
+        {
+          "pct": 1.03,
+          "addr": "1c95ec",
+          "mnemonic": "ldr",
+          "operands": "w3, [x2] // obmalloc.c:1540",
+          "src": "L859 pymalloc_alloc():"
+        },
+        {
+          "pct": 0.82,
+          "addr": "1c9674",
+          "mnemonic": "str",
+          "operands": "x4, [x1, #16] // obmalloc.c:1370",
+          "src": "L1567 pymalloc_pool_extend():"
+        },
+        {
+          "pct": 0.62,
+          "addr": "1c9670",
+          "mnemonic": "str",
+          "operands": "x1, [x4, #24] // obmalloc.c:1369",
+          "src": "L1567 pymalloc_pool_extend():"
+        },
+        {
+          "pct": 0.62,
+          "addr": "1c9690",
+          "mnemonic": "str",
+          "operands": "xzr, [x2, w3, uxtw] // obmalloc.c:1361",
+          "src": "L1566 pymalloc_pool_extend():"
+        },
+        {
+          "pct": 0.41,
+          "addr": "1c967c",
+          "mnemonic": "add",
+          "operands": "w1, w1, #0x1",
+          "src": "L1566 pymalloc_pool_extend():"
+        },
+        {
+          "pct": 0.21,
+          "addr": "1c957c",
+          "mnemonic": "mov",
+          "operands": "x29, sp",
+          "src": "L134 _PyObject_Malloc():"
+        }
+      ],
+      "txt": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_realmachine_20260924-031609/passes/perf/annotate/_PyObject_Malloc.txt",
+      "json": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_realmachine_20260924-031609/passes/perf/annotate/_PyObject_Malloc.json"
+    },
+    {
+      "rank": 3,
+      "symbol": "unicodekeys_lookup_unicode",
+      "symbol_raw": "[.] unicodekeys_lookup_unicode",
+      "dso": "libpython3.12.so.1.0",
+      "self_overhead_pct": 1.38,
+      "annotate_lines": 222,
+      "n_instructions": 156,
+      "hot_source_lines": [
+        {
+          "pct": 35.17,
+          "loc": "dictobject.c:968"
+        },
+        {
+          "pct": 32.57,
+          "loc": "dictobject.c:940"
+        },
+        {
+          "pct": 9.15,
+          "loc": "dictobject.c:949"
+        },
+        {
+          "pct": 3.62,
+          "loc": "unicodeobject.h:282"
+        },
+        {
+          "pct": 3.6,
+          "loc": "dictobject.c:928"
+        },
+        {
+          "pct": 3.37,
+          "loc": "dictobject.c:956"
+        },
+        {
+          "pct": 2.9,
+          "loc": "pycore_dict.h:135"
+        },
+        {
+          "pct": 2.17,
+          "loc": "dictobject.c:964"
+        },
+        {
+          "pct": 0.96,
+          "loc": "dictobject.c:945"
+        },
+        {
+          "pct": 0.72,
+          "loc": "dictobject.c:344"
+        }
+      ],
+      "top_instructions": [
+        {
+          "pct": 29.88,
+          "addr": "10d4ac",
+          "mnemonic": "ldp",
+          "operands": "x21, x22, [sp, #32] // dictobject.c:968",
+          "src": "L351 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 23.13,
+          "addr": "10d420",
+          "mnemonic": "lsl",
+          "operands": "x0, x20, #4 // dictobject.c:940",
+          "src": "L347 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 9.15,
+          "addr": "10d43c",
+          "mnemonic": "add",
+          "operands": "x19, x19, x19, lsl #2 // dictobject.c:949",
+          "src": "L347 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 8.71,
+          "addr": "10d430",
+          "mnemonic": "ldr",
+          "operands": "x1, [x0, #24]",
+          "src": "L347 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 3.37,
+          "addr": "10d46c",
+          "mnemonic": "ldr",
+          "operands": "x1, [x0, #24] // dictobject.c:956",
+          "src": "L347 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 2.9,
+          "addr": "10d3f4",
+          "mnemonic": "ldrb",
+          "operands": "w0, [x0, #9] // pycore_dict.h:135",
+          "src": "L931 _DK_ENTRIES():"
+        },
+        {
+          "pct": 2.17,
+          "addr": "10d478",
+          "mnemonic": "lsr",
+          "operands": "x21, x21, #10 // dictobject.c:964",
+          "src": "L347 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 2.17,
+          "addr": "10d524",
+          "mnemonic": "ldr",
+          "operands": "x3, [x0, #16] // unicodeobject.h:282",
+          "src": "L357 PyUnicode_GET_LENGTH():"
+        },
+        {
+          "pct": 1.68,
+          "addr": "10d3c8",
+          "mnemonic": "stp",
+          "operands": "x19, x20, [sp, #16] // dictobject.c:928",
+          "src": "L6 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 1.45,
+          "addr": "10d578",
+          "mnemonic": "ldr",
+          "operands": "x3, [x0, #16]",
+          "src": "L943 PyUnicode_GET_LENGTH():"
+        },
+        {
+          "pct": 1.21,
+          "addr": "10d4c4",
+          "mnemonic": "ldp",
+          "operands": "x29, x30, [sp], #96",
+          "src": "L351 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 1.2,
+          "addr": "10d4b4",
+          "mnemonic": "ldp",
+          "operands": "x19, x20, [sp, #16]",
+          "src": "L351 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 1.2,
+          "addr": "10d4c0",
+          "mnemonic": "ldr",
+          "operands": "x27, [sp, #80]",
+          "src": "L351 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 0.96,
+          "addr": "10d3dc",
+          "mnemonic": "stp",
+          "operands": "x25, x26, [sp, #64]",
+          "src": "L135 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 0.96,
+          "addr": "10d3e8",
+          "mnemonic": "str",
+          "operands": "x27, [sp, #80]",
+          "src": "L136 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 0.96,
+          "addr": "10d4a4",
+          "mnemonic": "cmn",
+          "operands": "x20, #0x1 // dictobject.c:945",
+          "src": "L351 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 0.96,
+          "addr": "10d4bc",
+          "mnemonic": "ldp",
+          "operands": "x25, x26, [sp, #64]",
+          "src": "L351 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 0.72,
+          "addr": "10d414",
+          "mnemonic": "nop",
+          "operands": "// dictobject.c:344",
+          "src": "L137 dictkeys_get_index():"
+        },
+        {
+          "pct": 0.72,
+          "addr": "10d424",
+          "mnemonic": "ldr",
+          "operands": "x0, [x26, x0]",
+          "src": "L347 unicodekeys_lookup_unicode():"
+        },
+        {
+          "pct": 0.72,
+          "addr": "10d4b8",
+          "mnemonic": "ldp",
+          "operands": "x23, x24, [sp, #48]",
+          "src": "L351 unicodekeys_lookup_unicode():"
+        }
+      ],
+      "txt": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_realmachine_20260924-031609/passes/perf/annotate/unicodekeys_lookup_unicode.txt",
+      "json": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_realmachine_20260924-031609/passes/perf/annotate/unicodekeys_lookup_unicode.json"
+    }
+  ]
+}

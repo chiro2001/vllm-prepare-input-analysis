@@ -1,0 +1,106 @@
+# libkperfx verify on a3-22 (920B), 2026-09-23T18:08:23Z
+# cmd: sudo -n tools/libkperfx/kperfx verify
+# meaning: DELTA is the count the probe workload produced during its own run;
+#          NOT-COUNTING = this probe workload did not exercise the event.
+#          It is NOT a statement about the event being dead (see l3-dram-probe.txt).
+EVENT                      CONFIG              DELTA       CONF VERDICT
+CPU_CYCLES                 0x11             14000117      1.000 ok
+INST_RETIRED               0x8              12000029      1.000 ok
+INST_SPEC                  0x1b             12000583      1.000 ok
+BR_MIS_PRED                0x10                    3      1.000 ok
+BR_PRED                    0x12              2000043      1.000 ok
+STALL_FRONTEND             0x23                   71      1.000 ok
+STALL_BACKEND              0x24             11999879      1.000 ok
+L1D_TLB                    0x25              4000085      1.000 ok
+L1I_TLB                    0x26              2000136      1.000 ok
+L1D_CACHE                  0x4               4000007      1.000 ok
+L1D_CACHE_REFILL           0x3                     0      1.000 NOT-COUNTING
+L1I_CACHE_REFILL           0x1                    17      1.000 ok
+LD_RETIRED                 0x6                     0      1.000 NOT-COUNTING
+ST_RETIRED                 0x7                     0      1.000 NOT-COUNTING
+MEM_ACCESS                 0x13              4000006      1.000 ok
+TOTAL_RESOURCE_STALL       0x7000                  0      1.000 NOT-COUNTING
+EXEC_STALL                 0x7001           14000137      1.000 ok
+FDIV_FSQRT_STALL           0x7002                  0      1.000 NOT-COUNTING
+EXE_STALL_DIV              0x7003                  0      1.000 NOT-COUNTING
+FSU_STALL                  0x7004                  1      1.000 ok
+MEM_STALL_ANYLOAD          0x7005             390073      1.000 ok
+MEM_STALL_ANYSTORE         0x7006                  0      1.000 NOT-COUNTING
+MEMSTALL_L1MISS            0x7007                  0      1.000 NOT-COUNTING
+MEMSTALL_L2MISS            0x7008                  0      1.000 NOT-COUNTING
+MEMSTALL_L3MISS            0x7009                  0      1.000 NOT-COUNTING
+PORTS_0_SERIALIZE          0x700a                  0      1.000 NOT-COUNTING
+PORTS_0_NONSERIALIZE       0x700b            1416729      1.000 ok
+PORTS_1                    0x700c            8640283      1.000 ok
+PORTS_2                    0x700d            1729019      1.000 ok
+PORTS_3                    0x700e            1053454      1.000 ok
+PORTS_4                    0x700f             431823      1.000 ok
+PORTS_5                    0x7010                 18      1.000 ok
+PORTS_6                    0x7011                  2      1.000 ok
+PORTS_7                    0x7012                  0      1.000 NOT-COUNTING
+PORTS_8                    0x7013                  0      1.000 NOT-COUNTING
+ROB_STALL                  0x2004                  0      1.000 NOT-COUNTING
+PC_BUF_STALL               0x2005                  0      1.000 NOT-COUNTING
+INT_PTAG_STALL             0x2006                  0      1.000 NOT-COUNTING
+CC_PTAG_STALL              0x2007                  0      1.000 NOT-COUNTING
+LD_CANCEL_DTLB_MISS        0x5090                  4      1.000 ok
+LD_CANCEL_MISALIGN         0x5091                  0      1.000 NOT-COUNTING
+LD_CANCEL_LQ_FULL          0x5092                  0      1.000 NOT-COUNTING
+LD_CANCEL_INST_TYPE        0x5093                  0      1.000 NOT-COUNTING
+LD_CANCEL_FWD_HZD          0x5094            8366753      1.000 ok
+LD_CANCEL_STRUCT_HZD       0x5095                146      1.000 ok
+LD_CANCEL_PIPELINE         0x5096                  0      1.000 NOT-COUNTING
+L2_BOUND_BUF               0x701e                  0      1.000 NOT-COUNTING
+L2_BOUND_SNP               0x701f                  0      1.000 NOT-COUNTING
+L2_BOUND_ARB               0x7020                  0      1.000 NOT-COUNTING
+DRAM_LOCAL                 0x7021                  0      1.000 NOT-COUNTING
+DRAM_REMOTE                0x7022                  0      1.000 NOT-COUNTING
+DRAM_REMOTE_CACHE          0x7023                  0      1.000 NOT-COUNTING
+ST_SCA_FULL                0x50a0                  9      1.000 ok
+ST_HEAD_NO_PGEN            0x50a2                 13      1.000 ok
+ST_ORDER_FAIL              0x50a3           26000019      1.000 ok
+BP_MISP_BR_IND             0x1010                  1      1.000 ok
+BP_MISP_BR_BLR             0x1013                  0      1.000 NOT-COUNTING
+BP_MISP_BR_BL              0x1016                  0      1.000 NOT-COUNTING
+BP_MISP_BR_RET             0x100d                  1      1.000 ok
+VPD_PTAG_STALL             0x200a                  0      1.000 NOT-COUNTING
+FETCH_BUBBLE               0x2011                757      1.000 ok
+FETCH_BUBBLE_MAX           0x2012                104      1.000 ok
+O3_FLUSH                   0x2010                  4      1.000 ok
+NUKE_FLUSH                 0x200f                  1      1.000 ok
+IF_SP_FLUSH                0x104f                  2      1.000 ok
+L2I_TLB                    0x30                    3      1.000 ok
+L2I_TLB_REFILL             0x2e                    0      1.000 NOT-COUNTING
+L2I_CACHE                  0x27                   14      1.000 ok
+L2I_CACHE_REFILL           0x28                    0      1.000 NOT-COUNTING
+VFP_SINGLE_PTAG_STALL      0x2008                  0      1.000 NOT-COUNTING
+VFP_PAIR_PTAG_STALL        0x2009                  0      1.000 NOT-COUNTING
+INT_MPQ_STALL              0x200b                  0      1.000 NOT-COUNTING
+VFP_MPQ_STALL              0x200c                  0      1.000 NOT-COUNTING
+CC_MPQ_STALL               0x200d                  0      1.000 NOT-COUNTING
+ST_BOUND_PIPELINE          0x50a4                  0      1.000 NOT-COUNTING
+CONTEXT_SWITCHES           0x3                     0      1.000 NOT-COUNTING
+CPU_MIGRATIONS             0x4                     0      1.000 NOT-COUNTING
+PAGE_FAULTS                0x2                     0      1.000 NOT-COUNTING
+MINOR_FAULTS               0x5                     0      1.000 NOT-COUNTING
+MAJOR_FAULTS               0x6                     0      1.000 NOT-COUNTING
+CPU_CLOCK                  0x0               4836920      1.000 ok
+TASK_CLOCK                 0x1               4833600      1.000 ok
+ALIGNMENT_FAULTS           0x7                     0      1.000 NOT-COUNTING
+EMULATION_FAULTS           0x8                     0      1.000 NOT-COUNTING
+HW_CPU_CYCLES              0x0              14000144      1.000 ok
+HW_INSTRUCTIONS            0x1              12000029      1.000 ok
+HW_CACHE_REFERENCES        0x2               4000007      1.000 ok
+HW_CACHE_MISSES            0x3                     0      1.000 NOT-COUNTING
+HW_BRANCH_INSTRUCTIONS     0x4               2000008      1.000 ok
+HW_BRANCH_MISSES           0x5                     3      1.000 ok
+HW_BUS_CYCLES              -                       -          - not-supported
+HW_STALLED_CYCLES_FRONTEND 0x7                    98      1.000 ok
+HW_STALLED_CYCLES_BACKEND  0x8              11999880      1.000 ok
+
+46 counting, 46 zero, 1 unsupported, 0 failed
+
+# NOTE: an earlier identical run of this probe (18:13Z) ended with
+#   "49 counting, 43 zero, 1 unsupported, 0 failed"
+# -> the ok/NOT-COUNTING split of the probe workload itself moves by a few
+#    events between runs; only the workload under study decides what counts.

@@ -1,0 +1,14 @@
+[pgrid] realmachine isl=128 rep=0 pi_net_p50=  365.9 (raw   366.4, triton    0.5) us_p50=  17.3 scope_net=  383.2 steps=65 pref=1/dec=64 MML=2048 blk/req=16 tok/step=1 wall=36.7s
+[pgrid] realmachine isl=128 rep=1 pi_net_p50=  374.5 (raw   375.0, triton    0.5) us_p50=  18.3 scope_net=  392.8 steps=65 pref=1/dec=64 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=128 rep=2 pi_net_p50=  373.7 (raw   374.3, triton    0.5) us_p50=  18.5 scope_net=  392.2 steps=65 pref=1/dec=64 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=512 rep=0 pi_net_p50=  375.7 (raw   376.2, triton    0.5) us_p50=  18.8 scope_net=  394.6 steps=65 pref=1/dec=64 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=512 rep=1 pi_net_p50=  375.8 (raw   376.3, triton    0.5) us_p50=  19.0 scope_net=  394.8 steps=65 pref=1/dec=64 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=512 rep=2 pi_net_p50=  376.7 (raw   377.2, triton    0.5) us_p50=  19.1 scope_net=  396.2 steps=65 pref=1/dec=64 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=1024 rep=0 pi_net_p50=  377.4 (raw   377.9, triton    0.5) us_p50=  19.2 scope_net=  396.6 steps=65 pref=1/dec=64 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=1024 rep=1 pi_net_p50=  377.3 (raw   377.7, triton    0.5) us_p50=  18.9 scope_net=  395.8 steps=65 pref=1/dec=64 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=1024 rep=2 pi_net_p50=  379.3 (raw   379.9, triton    0.5) us_p50=  19.3 scope_net=  398.6 steps=65 pref=1/dec=64 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=2048 rep=0 FAILED: could not broadcast input array from shape (17,) into shape (16,)
+[pgrid] realmachine isl=2048 rep=1 FAILED: could not broadcast input array from shape (17,) into shape (16,)
+[pgrid] realmachine isl=2048 rep=2 FAILED: could not broadcast input array from shape (17,) into shape (16,)
+[pgrid] wrote /work/data/harness/sweep_rmw0_realmachine_20260923-190837.csv (12 rows)
+[run] phase pgrid done

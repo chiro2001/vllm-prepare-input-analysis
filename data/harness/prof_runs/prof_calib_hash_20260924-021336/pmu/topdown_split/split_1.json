@@ -1,0 +1,93 @@
+{
+  "caliber_version": "prof-v1",
+  "ts_start": "2026-09-24T02:13:47+0800",
+  "pid": 4182232,
+  "events_spec": null,
+  "preset": "920b_topdown_full_1",
+  "multiplex_allowed": false,
+  "ts_running": "2026-09-24T02:13:47+0800",
+  "stopped_reason": "target_exit",
+  "ts_end": "2026-09-24T02:13:51+0800",
+  "wall_s": 4.313875,
+  "counters": {
+    "CPU_CYCLES": 12439704604,
+    "INST_RETIRED": 13293031797,
+    "INST_SPEC": 13446063076,
+    "FETCH_BUBBLE": 10988938558,
+    "FETCH_BUBBLE_MAX": 1657722284,
+    "TOTAL_RESOURCE_STALL": 887547735,
+    "EXEC_STALL": 12236612086,
+    "FDIV_FSQRT_STALL": 5218
+  },
+  "entries": [
+    {
+      "name": "CPU_CYCLES",
+      "id": "cpu_cycles",
+      "config": 17,
+      "delta": 12439704604,
+      "rate": 2899916070.6129174
+    },
+    {
+      "name": "INST_RETIRED",
+      "id": "inst_retired",
+      "config": 8,
+      "delta": 13293031797,
+      "rate": 3098841794.273269
+    },
+    {
+      "name": "INST_SPEC",
+      "id": "inst_spec",
+      "config": 27,
+      "delta": 13446063076,
+      "rate": 3134516103.222362
+    },
+    {
+      "name": "FETCH_BUBBLE",
+      "id": "fetch_bubble",
+      "config": 8209,
+      "delta": 10988938558,
+      "rate": 2561716739.887479
+    },
+    {
+      "name": "FETCH_BUBBLE_MAX",
+      "id": "fetch_bubble_max",
+      "config": 8210,
+      "delta": 1657722284,
+      "rate": 386444505.31719
+    },
+    {
+      "name": "TOTAL_RESOURCE_STALL",
+      "id": "total_resource_stall",
+      "config": 28672,
+      "delta": 887547735,
+      "rate": 206903139.75260973
+    },
+    {
+      "name": "EXEC_STALL",
+      "id": "exec_stall",
+      "config": 28673,
+      "delta": 12236612086,
+      "rate": 2852571597.772295
+    },
+    {
+      "name": "FDIV_FSQRT_STALL",
+      "id": "fdiv_fsqrt_stall",
+      "config": 28674,
+      "delta": 5218,
+      "rate": 1216.4084709529652
+    }
+  ],
+  "time_enabled": 4289677460,
+  "time_running": 4289677460,
+  "confidence": 1.0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B",
+  "backend": "920B(counting)",
+  "derived": {
+    "cpu_cycles": 12439704604.0,
+    "inst_retired": 13293031797.0,
+    "ipc": 1.0685970624033638,
+    "cycles_per_sec": 2883649758.975399
+  }
+}

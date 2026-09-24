@@ -1,0 +1,5 @@
+pmu=920B backend=920B(counting) per_group=8
+GROUPS SIMULTANEOUS confidence      SERIAL confidence            RATIO
+1      1.000                        1.000                        1.000
+2      0.450 0.551                  1.000 1.000                  0.450
+3      0.460 0.541 0.000            1.000 1.000 1.000            0.460

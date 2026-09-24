@@ -1,0 +1,44 @@
+scope,group,n_steps_present,steps_present_pct,self_us_mean,self_us_p50,self_us_p90,self_us_p99,self_us_max,incl_us_p50,n_calls_per_step,share_pct_of_prepare_input_p50
+pi: am.builder_build,attn metadata,121,98.4,968.833,939.61,964.85,1005.87,3992.28,1022.03,4.0,30.92
+pi: build_attention_metadata,attn metadata,121,98.4,281.844,280.6,288.31,300.37,305.18,1472.06,1.0,9.23
+pi: in.slot_mapping,bookkeeping other,121,98.4,135.138,134.6,136.25,155.5,158.85,134.6,1.0,4.43
+pi: in.positions_assembly,input_ids/H2D,121,98.4,111.029,109.76,113.5,135.37,153.69,109.76,1.0,3.61
+pi: sync_input_prep,synchronize+update_states,123,100.0,104.579,100.02,123.59,126.99,133.73,2804.28,1.0,3.29
+pi: update_states,synchronize+update_states,123,100.0,103.755,99.62,101.98,193.91,452.11,99.62,1.0,3.28
+pi: prepare_inputs,scheduler glue,121,98.4,95.019,94.26,95.79,113.35,117.16,974.77,1.0,3.1
+pi: in.block_table_commit,block_table commit,121,98.4,86.314,86.22,89.23,102.22,102.4,86.22,1.0,2.84
+pi: am.cm_base_pre,attn metadata,121,98.4,75.903,74.88,78.09,92.23,92.56,74.88,1.0,2.46
+pi: in.prepare_input_ids,input_ids/H2D,121,98.4,66.717,66.45,68.42,83.79,85.34,66.45,1.0,2.19
+pi: am.group_loop,attn metadata,121,98.4,66.438,65.9,67.89,82.72,87.07,1095.68,4.0,2.17
+pi: in.tokens_to_gpu,input_ids/H2D,121,98.4,61.687,61.07,63.35,71.7,72.08,61.07,1.0,2.01
+pi: in.discard_mask,bookkeeping other,121,98.4,58.48,58.02,59.56,66.54,72.89,58.02,1.0,1.91
+pi: in.seq_lens,input_ids/H2D,121,98.4,57.731,57.2,60.15,68.36,69.95,57.2,1.0,1.88
+pi: phase_classify,scheduler glue,121,98.4,59.271,53.61,72.97,100.15,143.51,53.61,1.0,1.76
+pi: batch_exec_and_padding,batch padding decision,121,98.4,49.22,48.75,49.95,66.54,67.34,48.75,1.0,1.6
+pi: in.optimistic_seq_lens,bookkeeping other,121,98.4,49.33,48.73,50.53,65.04,65.15,48.73,1.0,1.6
+pi: in.logits_indices,bookkeeping other,121,98.4,39.713,39.3,40.36,55.4,56.15,39.3,2.0,1.29
+pi: in.mrope_positions,input_ids/H2D,121,98.4,39.172,38.71,40.49,50.19,56.88,38.71,1.0,1.27
+pi: am.build.qsl_h2d,attn metadata,121,98.4,31.811,31.5,32.84,36.66,38.96,31.5,1.0,1.04
+pi: in.prev_positions,positions+token_indices,121,98.4,30.111,30.08,31.07,34.14,34.23,30.08,1.0,0.99
+pi: pad_query_start_loc,scheduler glue,120,97.6,28.564,28.29,29.33,32.67,42.33,28.29,1.0,0.93
+pi: in.query_start_loc,query_start_loc,121,98.4,27.838,27.24,29.24,40.73,41.66,27.24,1.0,0.9
+pi: in.attn_state,attn_state,121,98.4,27.862,27.14,28.14,46.63,67.18,27.14,1.0,0.89
+pi: in.token_indices_select,positions+token_indices,121,98.4,25.419,25.0,25.83,39.58,40.58,25.0,1.0,0.82
+pi: in.positions,positions+token_indices,121,98.4,25.073,24.81,25.47,33.87,41.7,24.81,1.0,0.82
+pi: am.max_seq_len,attn metadata,121,98.4,18.671,18.66,19.05,20.75,22.23,18.66,1.0,0.61
+pi: in.num_computed_tokens,input_ids/H2D,121,98.4,18.302,18.25,18.61,21.9,28.92,18.25,1.0,0.6
+pi: am.build.backend_metadata,attn metadata,121,98.4,14.578,14.45,14.99,15.37,31.24,14.45,1.0,0.48
+pi: in.num_accepted_tokens,input_ids/H2D,121,98.4,14.699,14.39,15.49,17.75,25.66,14.39,1.0,0.47
+pi: cascade_attn_prefix_lens,scheduler glue,121,98.4,10.821,10.78,11.18,11.51,13.29,10.78,1.0,0.35
+pi: in.req_indices,positions+token_indices,121,98.4,9.645,9.55,10.16,11.0,11.92,9.55,1.0,0.31
+pi: am.build.tolist,attn metadata,121,98.4,9.247,9.13,9.85,10.4,10.47,9.13,1.0,0.3
+pi: am.build.split_decodes,attn metadata,121,98.4,9.038,8.84,9.14,9.65,29.71,8.84,1.0,0.29
+pi: am.build.seq_lens_select,attn metadata,121,98.4,8.116,8.15,8.37,8.5,8.65,8.15,1.0,0.27
+pi: am.layer_assign,attn metadata,121,98.4,7.659,7.65,7.92,8.16,8.9,7.65,4.0,0.25
+pi: am.build.metadata_ctor,attn metadata,121,98.4,6.622,6.59,6.9,7.86,8.15,6.59,1.0,0.22
+pi: am.build.fia_pad,attn metadata,121,98.4,1.907,1.9,2.03,2.2,2.35,1.9,1.0,0.06
+pi: ubatch_slices,scheduler glue,121,98.4,1.543,1.54,1.62,1.81,2.05,1.54,1.0,0.05
+pi: am.build.attn_mask,attn metadata,121,98.4,1.191,1.18,1.29,1.37,1.69,1.18,1.0,0.04
+pi: sanitize_placeholder_ids,scheduler glue,121,98.4,1.187,1.17,1.28,1.55,1.58,1.17,1.0,0.04
+pi: tokens_list,scheduler glue,121,98.4,1.004,1.0,1.07,1.14,1.16,1.0,1.0,0.03
+pi: in.mrope_drift,input_ids/H2D,121,98.4,0.714,0.71,0.78,0.83,0.83,0.71,1.0,0.02

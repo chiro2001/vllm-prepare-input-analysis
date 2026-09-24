@@ -1,0 +1,2 @@
+de439dc24ea47b35d5e50ee269c7421b5f0eb5d4d129a9ab7ef1210d487c3c88  refimg/image-libpython3.12.so.1.0
+68f930a2e58929231d6622e98fe77ac25e0b0bc84b7a082220688dd5badc8114  refimg/image-python3.12

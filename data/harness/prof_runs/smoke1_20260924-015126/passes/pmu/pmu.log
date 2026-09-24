@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/REMOTE_USER/projects/vllm/prepare-input-phase/harness/pi_harness/profiling/pmu.py", line 188, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/REMOTE_USER/projects/vllm/prepare-input-phase/harness/pi_harness/profiling/pmu.py", line 175, in main
+    res = count_window(args.pid, events=args.events, preset=args.preset,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/REMOTE_USER/projects/vllm/prepare-input-phase/harness/pi_harness/profiling/pmu.py", line 95, in count_window
+    sess.start()
+  File "/home/REMOTE_USER/tools/libkperfx/python/kperfx.py", line 499, in start
+    _check(self.ctx, _open(self.ctx), "kperfx_open")
+  File "/home/REMOTE_USER/tools/libkperfx/python/kperfx.py", line 275, in _check
+    raise KPERFXError(rc, f"{what}: {message or _ERRNO_NAMES.get(-rc, rc)}")
+kperfx.KPERFXError: kperfx_open: unknown event token: br_retired (backend 920B(counting))

@@ -1,0 +1,22 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 8K of event 'cycles:P'
+# Event count (approx.): 22304402874
+#
+# Overhead  Command      Shared Object      Symbol                     
+# ........  ...........  .................  ...........................
+#
+    55.55%  probe_load   probe_load         [.] probe_hot_branch
+    32.82%  probe_load   probe_load         [.] probe_hot_pointer_chase
+    10.45%  probe_load   probe_load         [.] probe_hot_fp
+     0.21%  probe_load   [vdso]             [.] 0x000000000000049c
+     0.21%  bash         [kernel.kallsyms]  [k] 0xffffb39567145e40
+     0.17%  timeout      [kernel.kallsyms]  [k] 0xffffb39566dee88c
+
+
+#
+# (Tip: Print event counts in CSV format with: perf stat -x,)
+#

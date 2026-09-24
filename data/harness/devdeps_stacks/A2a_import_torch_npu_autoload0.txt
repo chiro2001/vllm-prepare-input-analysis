@@ -1,0 +1,57 @@
+# step_id     : A2a_import_torch_npu_autoload0
+# title       : import torch_npu，TORCH_DEVICE_BACKEND_AUTOLOAD=0
+# cwd         : /work
+# returncode  : 1
+# duration_s  : 3.04
+# env overrides: {"TORCH_DEVICE_BACKEND_AUTOLOAD": "0"}
+# ---- COMMAND (python -c) ----
+import json, sys, os
+import torch
+print("env.TORCH_DEVICE_BACKEND_AUTOLOAD =", os.environ.get("TORCH_DEVICE_BACKEND_AUTOLOAD"))
+print("torch:", torch.__version__, "| hasattr(torch,'npu') before import torch_npu =", hasattr(torch, "npu"))
+import torch_npu
+print("torch_npu OK")
+print("torch_npu.__file__ =", getattr(torch_npu, "__file__", None))
+print("torch_npu.__version__ =", getattr(torch_npu, "__version__", None))
+print("hasattr(torch,'npu') after import torch_npu =", hasattr(torch, "npu"))
+print("torch.npu.is_available() =", getattr(torch, "npu", None) and torch.npu.is_available())
+print("sys.modules torch_npu =", sys.modules.get("torch_npu"))
+# ---- STDOUT ----
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.env.TORCH_DEVICE_BACKEND_AUTOLOAD = 0
+torch: 2.10.0+cpu | hasattr(torch,'npu') before import torch_npu = False
+
+# ---- STDERR ----
+can not use command: npu-smi info
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/__init__.py", line 40, in <module>
+    import torch_npu.utils.patch_getenv
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/__init__.py", line 12, in <module>
+    from torch_npu.npu.utils import get_cann_version
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py", line 171, in <module>
+    from .deterministic import enable_deterministic_with_backward, disable_deterministic_with_backward # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/deterministic.py", line 5, in <module>
+    from torch._dynamo.decorators import forbid_in_graph
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_dynamo/__init__.py", line 13, in <module>
+    from . import (
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_dynamo/aot_compile.py", line 16, in <module>
+    from torch._dynamo.package import SystemInfo
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_dynamo/package.py", line 1157, in <module>
+    DynamoCache = DiskDynamoCache(os.path.join(cache_dir(), "dynamo"))
+                                               ^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_dynamo/package.py", line 1154, in cache_dir
+    return cache_dir()
+           ^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_inductor/runtime/cache_dir_utils.py", line 17, in cache_dir
+    os.environ["TORCHINDUCTOR_CACHE_DIR"] = cache_dir = default_cache_dir()
+                                                        ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_inductor/runtime/cache_dir_utils.py", line 23, in default_cache_dir
+    sanitized_username = re.sub(r'[\\/:*?"<>|]', "_", getpass.getuser())
+                                                      ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/getpass.py", line 169, in getuser
+    return pwd.getpwuid(os.getuid())[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'getpwuid(): uid not found: 1003'
+
+# ---- END ----

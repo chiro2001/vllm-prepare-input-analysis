@@ -1,0 +1,336 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="955" viewBox="0 0 1400 955" font-family="monospace">
+<rect width="100%" height="100%" fill="#f7f7f7"/>
+<text x="8" y="14" font-size="12">on-CPU prof_calib_arith — 4419 samples, 8 root frames, max depth 60</text>
+<text x="8" y="27" font-size="10" fill="#555">prof-v1 / on-CPU (cycles) / 宽度=样本占比；本图为内置渲染器兜底产物</text>
+<rect x="0.00" y="30.00" width="1400.00" height="14" fill="hsl(193,70%,68%)" stroke="#333" stroke-width="0.3"><title>all (4419 samples, 100.00%)</title></rect>
+<rect x="0.00" y="45.00" width="1386.69" height="14" fill="hsl(66,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_BytesMain (4377 samples, 99.05%)</title></rect>
+<rect x="0.00" y="60.00" width="1386.69" height="14" fill="hsl(70,70%,68%)" stroke="#333" stroke-width="0.3"><title>pymain_main (4377 samples, 99.05%)</title></rect>
+<rect x="0.00" y="75.00" width="1386.69" height="14" fill="hsl(270,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_RunMain (4377 samples, 99.05%)</title></rect>
+<rect x="0.00" y="90.00" width="1384.16" height="14" fill="hsl(57,70%,68%)" stroke="#333" stroke-width="0.3"><title>pymain_run_python (4369 samples, 98.87%)</title></rect>
+<rect x="0.00" y="105.00" width="1384.16" height="14" fill="hsl(17,70%,68%)" stroke="#333" stroke-width="0.3"><title>pymain_run_module (4369 samples, 98.87%)</title></rect>
+<rect x="0.00" y="120.00" width="1384.16" height="14" fill="hsl(291,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_EvalFrameDefault (4369 samples, 98.87%)</title></rect>
+<rect x="0.00" y="135.00" width="1384.16" height="14" fill="hsl(292,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_Vectorcall (4369 samples, 98.87%)</title></rect>
+<rect x="0.00" y="150.00" width="1384.16" height="14" fill="hsl(190,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_VectorcallTstate (4369 samples, 98.87%)</title></rect>
+<rect x="0.00" y="165.00" width="1384.16" height="14" fill="hsl(49,70%,68%)" stroke="#333" stroke-width="0.3"><title>cfunction_vectorcall_FASTCALL_KEYWORDS (4369 samples, 98.87%)</title></rect>
+<rect x="0.00" y="180.00" width="1384.16" height="14" fill="hsl(321,70%,68%)" stroke="#333" stroke-width="0.3"><title>builtin_exec (4369 samples, 98.87%)</title></rect>
+<rect x="0.00" y="195.00" width="1384.16" height="14" fill="hsl(158,70%,68%)" stroke="#333" stroke-width="0.3"><title>builtin_exec_impl (4369 samples, 98.87%)</title></rect>
+<rect x="0.00" y="210.00" width="1384.16" height="14" fill="hsl(355,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyEval_EvalCode (4369 samples, 98.87%)</title></rect>
+<rect x="0.00" y="225.00" width="1384.16" height="14" fill="hsl(334,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_Vector (4369 samples, 98.87%)</title></rect>
+<rect x="0.00" y="240.00" width="1384.16" height="14" fill="hsl(118,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_EvalFrame (4369 samples, 98.87%)</title></rect>
+<rect x="0.00" y="255.00" width="1384.16" height="14" fill="hsl(291,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_EvalFrameDefault (4369 samples, 98.87%)</title></rect>
+<rect x="0.00" y="270.00" width="354.20" height="14" fill="hsl(84,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Free (1118 samples, 25.30%)</title></rect>
+<rect x="0.00" y="285.00" width="339.94" height="14" fill="hsl(84,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Free (1073 samples, 24.28%)</title></rect>
+<rect x="0.00" y="300.00" width="286.40" height="14" fill="hsl(186,70%,68%)" stroke="#333" stroke-width="0.3"><title>pymalloc_free (904 samples, 20.46%)</title></rect>
+<rect x="0.00" y="315.00" width="262.64" height="14" fill="hsl(26,70%,68%)" stroke="#333" stroke-width="0.3"><title>address_in_range (829 samples, 18.76%)</title></rect>
+<rect x="0.00" y="330.00" width="262.64" height="14" fill="hsl(39,70%,68%)" stroke="#333" stroke-width="0.3"><title>arena_map_is_used (829 samples, 18.76%)</title></rect>
+<rect x="0.00" y="345.00" width="99.16" height="14" fill="hsl(107,70%,68%)" stroke="#333" stroke-width="0.3"><title>arena_map_get (313 samples, 7.08%)</title></rect>
+<rect x="99.16" y="345.00" width="1.90" height="14" fill="hsl(175,70%,68%)" stroke="#333" stroke-width="0.3"><title>el0t_64_irq (6 samples, 0.14%)</title></rect>
+<rect x="99.16" y="360.00" width="1.90" height="14" fill="hsl(214,70%,68%)" stroke="#333" stroke-width="0.3"><title>el0t_64_irq_handler (6 samples, 0.14%)</title></rect>
+<rect x="99.16" y="375.00" width="1.90" height="14" fill="hsl(129,70%,68%)" stroke="#333" stroke-width="0.3"><title>__el0_irq_handler_common (6 samples, 0.14%)</title></rect>
+<rect x="99.16" y="390.00" width="1.90" height="14" fill="hsl(21,70%,68%)" stroke="#333" stroke-width="0.3"><title>el0_interrupt (6 samples, 0.14%)</title></rect>
+<rect x="99.16" y="405.00" width="1.58" height="14" fill="hsl(175,70%,68%)" stroke="#333" stroke-width="0.3"><title>do_notify_resume (5 samples, 0.11%)</title></rect>
+<rect x="99.16" y="420.00" width="1.27" height="14" fill="hsl(347,70%,68%)" stroke="#333" stroke-width="0.3"><title>schedule (4 samples, 0.09%)</title></rect>
+<rect x="99.16" y="435.00" width="1.27" height="14" fill="hsl(319,70%,68%)" stroke="#333" stroke-width="0.3"><title>__schedule (4 samples, 0.09%)</title></rect>
+<rect x="99.16" y="450.00" width="1.27" height="14" fill="hsl(135,70%,68%)" stroke="#333" stroke-width="0.3"><title>finish_task_switch.isra.0 (4 samples, 0.09%)</title></rect>
+<rect x="286.40" y="300.00" width="53.54" height="14" fill="hsl(184,70%,68%)" stroke="#333" stroke-width="0.3"><title>get_state (169 samples, 3.82%)</title></rect>
+<rect x="286.40" y="315.00" width="39.28" height="14" fill="hsl(99,70%,68%)" stroke="#333" stroke-width="0.3"><title>has_own_state (124 samples, 2.81%)</title></rect>
+<rect x="286.40" y="330.00" width="39.28" height="14" fill="hsl(296,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_IsMainInterpreter (124 samples, 2.81%)</title></rect>
+<rect x="286.40" y="345.00" width="39.28" height="14" fill="hsl(233,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_Main (124 samples, 2.81%)</title></rect>
+<rect x="325.68" y="315.00" width="14.26" height="14" fill="hsl(258,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_GET (45 samples, 1.02%)</title></rect>
+<rect x="354.20" y="270.00" width="185.97" height="14" fill="hsl(335,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_Multiply (587 samples, 13.28%)</title></rect>
+<rect x="354.20" y="285.00" width="179.95" height="14" fill="hsl(335,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_Multiply (568 samples, 12.85%)</title></rect>
+<rect x="354.20" y="300.00" width="176.47" height="14" fill="hsl(24,70%,68%)" stroke="#333" stroke-width="0.3"><title>k_mul (557 samples, 12.60%)</title></rect>
+<rect x="354.20" y="315.00" width="157.14" height="14" fill="hsl(261,70%,68%)" stroke="#333" stroke-width="0.3"><title>x_mul (496 samples, 11.22%)</title></rect>
+<rect x="354.20" y="330.00" width="54.49" height="14" fill="hsl(61,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_New (172 samples, 3.89%)</title></rect>
+<rect x="354.20" y="345.00" width="42.77" height="14" fill="hsl(12,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Malloc (135 samples, 3.05%)</title></rect>
+<rect x="354.20" y="360.00" width="36.12" height="14" fill="hsl(175,70%,68%)" stroke="#333" stroke-width="0.3"><title>pymalloc_alloc (114 samples, 2.58%)</title></rect>
+<rect x="390.31" y="360.00" width="3.80" height="14" fill="hsl(184,70%,68%)" stroke="#333" stroke-width="0.3"><title>get_state (12 samples, 0.27%)</title></rect>
+<rect x="390.31" y="375.00" width="2.85" height="14" fill="hsl(258,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_GET (9 samples, 0.20%)</title></rect>
+<rect x="393.17" y="375.00" width="0.95" height="14" fill="hsl(99,70%,68%)" stroke="#333" stroke-width="0.3"><title>has_own_state (3 samples, 0.07%)</title></rect>
+<rect x="393.17" y="390.00" width="0.95" height="14" fill="hsl(296,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_IsMainInterpreter (3 samples, 0.07%)</title></rect>
+<rect x="393.17" y="405.00" width="0.95" height="14" fill="hsl(233,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_Main (3 samples, 0.07%)</title></rect>
+<rect x="396.97" y="345.00" width="7.29" height="14" fill="hsl(52,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Init (23 samples, 0.52%)</title></rect>
+<rect x="396.97" y="360.00" width="4.44" height="14" fill="hsl(70,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_NewReference (14 samples, 0.32%)</title></rect>
+<rect x="396.97" y="375.00" width="2.22" height="14" fill="hsl(268,70%,68%)" stroke="#333" stroke-width="0.3"><title>new_reference (7 samples, 0.16%)</title></rect>
+<rect x="401.40" y="360.00" width="2.85" height="14" fill="hsl(89,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyType_HasFeature (9 samples, 0.20%)</title></rect>
+<rect x="404.25" y="345.00" width="1.90" height="14" fill="hsl(39,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_Malloc (6 samples, 0.14%)</title></rect>
+<rect x="408.69" y="330.00" width="41.50" height="14" fill="hsl(346,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyErr_CheckSignals (131 samples, 2.96%)</title></rect>
+<rect x="408.69" y="345.00" width="27.88" height="14" fill="hsl(272,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_ThreadCanHandleSignals (88 samples, 1.99%)</title></rect>
+<rect x="408.69" y="360.00" width="23.13" height="14" fill="hsl(236,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_IsMainThread (73 samples, 1.65%)</title></rect>
+<rect x="408.69" y="375.00" width="8.24" height="14" fill="hsl(92,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyThread_get_thread_ident (26 samples, 0.59%)</title></rect>
+<rect x="436.57" y="345.00" width="2.85" height="14" fill="hsl(218,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyThreadState_GET (9 samples, 0.20%)</title></rect>
+<rect x="450.19" y="330.00" width="10.14" height="14" fill="hsl(262,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyErr_CheckSignalsTstate (32 samples, 0.72%)</title></rect>
+<rect x="460.33" y="330.00" width="2.22" height="14" fill="hsl(230,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_normalize (7 samples, 0.16%)</title></rect>
+<rect x="462.55" y="330.00" width="0.63" height="14" fill="hsl(253,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_DigitCount (2 samples, 0.05%)</title></rect>
+<rect x="511.34" y="315.00" width="12.99" height="14" fill="hsl(230,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_normalize (41 samples, 0.93%)</title></rect>
+<rect x="524.33" y="315.00" width="0.63" height="14" fill="hsl(253,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_DigitCount (2 samples, 0.05%)</title></rect>
+<rect x="530.66" y="300.00" width="1.27" height="14" fill="hsl(78,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_SameSign (4 samples, 0.09%)</title></rect>
+<rect x="540.17" y="270.00" width="151.75" height="14" fill="hsl(174,70%,68%)" stroke="#333" stroke-width="0.3"><title>x_add (479 samples, 10.84%)</title></rect>
+<rect x="540.17" y="285.00" width="108.67" height="14" fill="hsl(61,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_New (343 samples, 7.76%)</title></rect>
+<rect x="540.17" y="300.00" width="86.17" height="14" fill="hsl(12,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Malloc (272 samples, 6.16%)</title></rect>
+<rect x="540.17" y="315.00" width="62.41" height="14" fill="hsl(175,70%,68%)" stroke="#333" stroke-width="0.3"><title>pymalloc_alloc (197 samples, 4.46%)</title></rect>
+<rect x="602.58" y="315.00" width="15.84" height="14" fill="hsl(184,70%,68%)" stroke="#333" stroke-width="0.3"><title>get_state (50 samples, 1.13%)</title></rect>
+<rect x="602.58" y="330.00" width="9.50" height="14" fill="hsl(99,70%,68%)" stroke="#333" stroke-width="0.3"><title>has_own_state (30 samples, 0.68%)</title></rect>
+<rect x="602.58" y="345.00" width="9.50" height="14" fill="hsl(296,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_IsMainInterpreter (30 samples, 0.68%)</title></rect>
+<rect x="602.58" y="360.00" width="9.50" height="14" fill="hsl(233,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_Main (30 samples, 0.68%)</title></rect>
+<rect x="612.08" y="330.00" width="6.34" height="14" fill="hsl(258,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_GET (20 samples, 0.45%)</title></rect>
+<rect x="626.34" y="300.00" width="11.72" height="14" fill="hsl(52,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Init (37 samples, 0.84%)</title></rect>
+<rect x="626.34" y="315.00" width="8.55" height="14" fill="hsl(70,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_NewReference (27 samples, 0.61%)</title></rect>
+<rect x="626.34" y="330.00" width="3.17" height="14" fill="hsl(268,70%,68%)" stroke="#333" stroke-width="0.3"><title>new_reference (10 samples, 0.23%)</title></rect>
+<rect x="634.89" y="315.00" width="3.17" height="14" fill="hsl(89,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyType_HasFeature (10 samples, 0.23%)</title></rect>
+<rect x="638.06" y="300.00" width="5.70" height="14" fill="hsl(39,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_Malloc (18 samples, 0.41%)</title></rect>
+<rect x="648.83" y="285.00" width="23.44" height="14" fill="hsl(230,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_normalize (74 samples, 1.67%)</title></rect>
+<rect x="648.83" y="300.00" width="2.53" height="14" fill="hsl(253,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_DigitCount (8 samples, 0.18%)</title></rect>
+<rect x="672.28" y="285.00" width="3.80" height="14" fill="hsl(253,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_DigitCount (12 samples, 0.27%)</title></rect>
+<rect x="691.92" y="270.00" width="140.98" height="14" fill="hsl(94,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyNumber_And (445 samples, 10.07%)</title></rect>
+<rect x="691.92" y="285.00" width="130.84" height="14" fill="hsl(351,70%,68%)" stroke="#333" stroke-width="0.3"><title>binary_op (413 samples, 9.35%)</title></rect>
+<rect x="691.92" y="300.00" width="130.84" height="14" fill="hsl(214,70%,68%)" stroke="#333" stroke-width="0.3"><title>binary_op1 (413 samples, 9.35%)</title></rect>
+<rect x="691.92" y="315.00" width="115.32" height="14" fill="hsl(62,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_bitwise (364 samples, 8.24%)</title></rect>
+<rect x="691.92" y="330.00" width="63.36" height="14" fill="hsl(61,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_New (200 samples, 4.53%)</title></rect>
+<rect x="691.92" y="345.00" width="46.25" height="14" fill="hsl(12,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Malloc (146 samples, 3.30%)</title></rect>
+<rect x="691.92" y="360.00" width="31.36" height="14" fill="hsl(175,70%,68%)" stroke="#333" stroke-width="0.3"><title>pymalloc_alloc (99 samples, 2.24%)</title></rect>
+<rect x="723.29" y="360.00" width="8.55" height="14" fill="hsl(184,70%,68%)" stroke="#333" stroke-width="0.3"><title>get_state (27 samples, 0.61%)</title></rect>
+<rect x="723.29" y="375.00" width="4.75" height="14" fill="hsl(99,70%,68%)" stroke="#333" stroke-width="0.3"><title>has_own_state (15 samples, 0.34%)</title></rect>
+<rect x="723.29" y="390.00" width="4.75" height="14" fill="hsl(296,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_IsMainInterpreter (15 samples, 0.34%)</title></rect>
+<rect x="723.29" y="405.00" width="4.75" height="14" fill="hsl(233,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_Main (15 samples, 0.34%)</title></rect>
+<rect x="728.04" y="375.00" width="3.80" height="14" fill="hsl(258,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_GET (12 samples, 0.27%)</title></rect>
+<rect x="738.18" y="345.00" width="6.02" height="14" fill="hsl(52,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Init (19 samples, 0.43%)</title></rect>
+<rect x="738.18" y="360.00" width="3.48" height="14" fill="hsl(70,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_NewReference (11 samples, 0.25%)</title></rect>
+<rect x="738.18" y="375.00" width="1.27" height="14" fill="hsl(268,70%,68%)" stroke="#333" stroke-width="0.3"><title>new_reference (4 samples, 0.09%)</title></rect>
+<rect x="741.66" y="360.00" width="2.53" height="14" fill="hsl(89,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyType_HasFeature (8 samples, 0.18%)</title></rect>
+<rect x="744.20" y="345.00" width="4.12" height="14" fill="hsl(39,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_Malloc (13 samples, 0.29%)</title></rect>
+<rect x="755.28" y="330.00" width="17.11" height="14" fill="hsl(230,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_normalize (54 samples, 1.22%)</title></rect>
+<rect x="772.39" y="330.00" width="14.89" height="14" fill="hsl(263,70%,68%)" stroke="#333" stroke-width="0.3"><title>maybe_small_long (47 samples, 1.06%)</title></rect>
+<rect x="772.39" y="345.00" width="1.58" height="14" fill="hsl(125,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_CompactValue (5 samples, 0.11%)</title></rect>
+<rect x="787.28" y="330.00" width="2.53" height="14" fill="hsl(267,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_DECREF (8 samples, 0.18%)</title></rect>
+<rect x="789.82" y="330.00" width="2.22" height="14" fill="hsl(75,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_INCREF (7 samples, 0.16%)</title></rect>
+<rect x="792.03" y="330.00" width="1.58" height="14" fill="hsl(290,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_IsNegative (5 samples, 0.11%)</title></rect>
+<rect x="793.62" y="330.00" width="1.27" height="14" fill="hsl(203,70%,68%)" stroke="#333" stroke-width="0.3"><title>v_complement (4 samples, 0.09%)</title></rect>
+<rect x="794.89" y="330.00" width="0.95" height="14" fill="hsl(253,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_DigitCount (3 samples, 0.07%)</title></rect>
+<rect x="807.24" y="315.00" width="5.70" height="14" fill="hsl(176,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_and (18 samples, 0.41%)</title></rect>
+<rect x="807.24" y="330.00" width="3.17" height="14" fill="hsl(108,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyType_HasFeature (10 samples, 0.23%)</title></rect>
+<rect x="810.41" y="330.00" width="1.58" height="14" fill="hsl(176,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_and (5 samples, 0.11%)</title></rect>
+<rect x="812.94" y="315.00" width="1.27" height="14" fill="hsl(324,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_TYPE (4 samples, 0.09%)</title></rect>
+<rect x="832.90" y="270.00" width="135.28" height="14" fill="hsl(166,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyNumber_InPlaceXor (427 samples, 9.66%)</title></rect>
+<rect x="832.90" y="285.00" width="123.56" height="14" fill="hsl(140,70%,68%)" stroke="#333" stroke-width="0.3"><title>binary_iop (390 samples, 8.83%)</title></rect>
+<rect x="832.90" y="300.00" width="117.22" height="14" fill="hsl(309,70%,68%)" stroke="#333" stroke-width="0.3"><title>binary_iop1 (370 samples, 8.37%)</title></rect>
+<rect x="832.90" y="315.00" width="106.13" height="14" fill="hsl(214,70%,68%)" stroke="#333" stroke-width="0.3"><title>binary_op1 (335 samples, 7.58%)</title></rect>
+<rect x="832.90" y="330.00" width="59.56" height="14" fill="hsl(62,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_bitwise (188 samples, 4.25%)</title></rect>
+<rect x="832.90" y="345.00" width="41.19" height="14" fill="hsl(61,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_New (130 samples, 2.94%)</title></rect>
+<rect x="832.90" y="360.00" width="28.83" height="14" fill="hsl(12,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Malloc (91 samples, 2.06%)</title></rect>
+<rect x="832.90" y="375.00" width="20.91" height="14" fill="hsl(175,70%,68%)" stroke="#333" stroke-width="0.3"><title>pymalloc_alloc (66 samples, 1.49%)</title></rect>
+<rect x="853.81" y="375.00" width="3.80" height="14" fill="hsl(184,70%,68%)" stroke="#333" stroke-width="0.3"><title>get_state (12 samples, 0.27%)</title></rect>
+<rect x="853.81" y="390.00" width="3.48" height="14" fill="hsl(99,70%,68%)" stroke="#333" stroke-width="0.3"><title>has_own_state (11 samples, 0.25%)</title></rect>
+<rect x="853.81" y="405.00" width="3.48" height="14" fill="hsl(296,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_IsMainInterpreter (11 samples, 0.25%)</title></rect>
+<rect x="853.81" y="420.00" width="3.48" height="14" fill="hsl(233,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_Main (11 samples, 0.25%)</title></rect>
+<rect x="861.73" y="360.00" width="5.07" height="14" fill="hsl(52,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Init (16 samples, 0.36%)</title></rect>
+<rect x="861.73" y="375.00" width="2.53" height="14" fill="hsl(89,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyType_HasFeature (8 samples, 0.18%)</title></rect>
+<rect x="864.27" y="375.00" width="2.53" height="14" fill="hsl(70,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_NewReference (8 samples, 0.18%)</title></rect>
+<rect x="864.27" y="390.00" width="0.95" height="14" fill="hsl(268,70%,68%)" stroke="#333" stroke-width="0.3"><title>new_reference (3 samples, 0.07%)</title></rect>
+<rect x="866.80" y="360.00" width="1.27" height="14" fill="hsl(39,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_Malloc (4 samples, 0.09%)</title></rect>
+<rect x="874.09" y="345.00" width="6.34" height="14" fill="hsl(230,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_normalize (20 samples, 0.45%)</title></rect>
+<rect x="880.43" y="345.00" width="1.58" height="14" fill="hsl(267,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_DECREF (5 samples, 0.11%)</title></rect>
+<rect x="882.01" y="345.00" width="1.27" height="14" fill="hsl(75,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_INCREF (4 samples, 0.09%)</title></rect>
+<rect x="883.28" y="345.00" width="0.95" height="14" fill="hsl(253,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_DigitCount (3 samples, 0.07%)</title></rect>
+<rect x="892.46" y="330.00" width="45.30" height="14" fill="hsl(104,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_xor (143 samples, 3.24%)</title></rect>
+<rect x="892.46" y="345.00" width="37.70" height="14" fill="hsl(252,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_FromSTwoDigits (119 samples, 2.69%)</title></rect>
+<rect x="892.46" y="360.00" width="36.12" height="14" fill="hsl(190,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_FromMedium (114 samples, 2.58%)</title></rect>
+<rect x="892.46" y="375.00" width="23.76" height="14" fill="hsl(12,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Malloc (75 samples, 1.70%)</title></rect>
+<rect x="892.46" y="390.00" width="17.11" height="14" fill="hsl(175,70%,68%)" stroke="#333" stroke-width="0.3"><title>pymalloc_alloc (54 samples, 1.22%)</title></rect>
+<rect x="909.57" y="390.00" width="3.48" height="14" fill="hsl(184,70%,68%)" stroke="#333" stroke-width="0.3"><title>get_state (11 samples, 0.25%)</title></rect>
+<rect x="909.57" y="405.00" width="3.48" height="14" fill="hsl(99,70%,68%)" stroke="#333" stroke-width="0.3"><title>has_own_state (11 samples, 0.25%)</title></rect>
+<rect x="909.57" y="420.00" width="3.48" height="14" fill="hsl(296,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_IsMainInterpreter (11 samples, 0.25%)</title></rect>
+<rect x="909.57" y="435.00" width="3.48" height="14" fill="hsl(233,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_Main (11 samples, 0.25%)</title></rect>
+<rect x="916.23" y="375.00" width="2.85" height="14" fill="hsl(52,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Init (9 samples, 0.20%)</title></rect>
+<rect x="916.23" y="390.00" width="1.58" height="14" fill="hsl(70,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_NewReference (5 samples, 0.11%)</title></rect>
+<rect x="916.23" y="405.00" width="0.95" height="14" fill="hsl(268,70%,68%)" stroke="#333" stroke-width="0.3"><title>new_reference (3 samples, 0.07%)</title></rect>
+<rect x="917.81" y="390.00" width="0.95" height="14" fill="hsl(89,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyType_HasFeature (3 samples, 0.07%)</title></rect>
+<rect x="919.08" y="375.00" width="1.58" height="14" fill="hsl(39,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_Malloc (5 samples, 0.11%)</title></rect>
+<rect x="928.58" y="360.00" width="0.95" height="14" fill="hsl(354,70%,68%)" stroke="#333" stroke-width="0.3"><title>is_medium_int (3 samples, 0.07%)</title></rect>
+<rect x="930.17" y="345.00" width="2.53" height="14" fill="hsl(108,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyType_HasFeature (8 samples, 0.18%)</title></rect>
+<rect x="932.70" y="345.00" width="1.90" height="14" fill="hsl(358,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_IsCompact (6 samples, 0.14%)</title></rect>
+<rect x="939.04" y="315.00" width="1.58" height="14" fill="hsl(324,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_TYPE (5 samples, 0.11%)</title></rect>
+<rect x="950.12" y="300.00" width="6.34" height="14" fill="hsl(140,70%,68%)" stroke="#333" stroke-width="0.3"><title>binary_iop (20 samples, 0.45%)</title></rect>
+<rect x="950.12" y="315.00" width="6.34" height="14" fill="hsl(267,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_DECREF (20 samples, 0.45%)</title></rect>
+<rect x="950.12" y="330.00" width="6.34" height="14" fill="hsl(204,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_IsImmortal (20 samples, 0.45%)</title></rect>
+<rect x="968.18" y="270.00" width="120.39" height="14" fill="hsl(237,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyNumber_Rshift (380 samples, 8.60%)</title></rect>
+<rect x="968.18" y="285.00" width="114.05" height="14" fill="hsl(351,70%,68%)" stroke="#333" stroke-width="0.3"><title>binary_op (360 samples, 8.15%)</title></rect>
+<rect x="968.18" y="300.00" width="114.05" height="14" fill="hsl(214,70%,68%)" stroke="#333" stroke-width="0.3"><title>binary_op1 (360 samples, 8.15%)</title></rect>
+<rect x="968.18" y="315.00" width="90.29" height="14" fill="hsl(202,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_rshift1 (285 samples, 6.45%)</title></rect>
+<rect x="968.18" y="330.00" width="32.32" height="14" fill="hsl(61,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_New (102 samples, 2.31%)</title></rect>
+<rect x="968.18" y="345.00" width="25.35" height="14" fill="hsl(12,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Malloc (80 samples, 1.81%)</title></rect>
+<rect x="968.18" y="360.00" width="21.54" height="14" fill="hsl(175,70%,68%)" stroke="#333" stroke-width="0.3"><title>pymalloc_alloc (68 samples, 1.54%)</title></rect>
+<rect x="989.73" y="360.00" width="1.90" height="14" fill="hsl(184,70%,68%)" stroke="#333" stroke-width="0.3"><title>get_state (6 samples, 0.14%)</title></rect>
+<rect x="989.73" y="375.00" width="1.58" height="14" fill="hsl(99,70%,68%)" stroke="#333" stroke-width="0.3"><title>has_own_state (5 samples, 0.11%)</title></rect>
+<rect x="989.73" y="390.00" width="1.58" height="14" fill="hsl(296,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_IsMainInterpreter (5 samples, 0.11%)</title></rect>
+<rect x="989.73" y="405.00" width="1.58" height="14" fill="hsl(233,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_Main (5 samples, 0.11%)</title></rect>
+<rect x="993.53" y="345.00" width="3.17" height="14" fill="hsl(52,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Init (10 samples, 0.23%)</title></rect>
+<rect x="993.53" y="360.00" width="1.27" height="14" fill="hsl(89,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyType_HasFeature (4 samples, 0.09%)</title></rect>
+<rect x="994.80" y="360.00" width="1.27" height="14" fill="hsl(70,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_NewReference (4 samples, 0.09%)</title></rect>
+<rect x="994.80" y="375.00" width="0.63" height="14" fill="hsl(268,70%,68%)" stroke="#333" stroke-width="0.3"><title>new_reference (2 samples, 0.05%)</title></rect>
+<rect x="996.06" y="360.00" width="0.63" height="14" fill="hsl(5,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_SET_TYPE (2 samples, 0.05%)</title></rect>
+<rect x="996.70" y="345.00" width="1.90" height="14" fill="hsl(39,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_Malloc (6 samples, 0.14%)</title></rect>
+<rect x="1000.50" y="330.00" width="29.15" height="14" fill="hsl(252,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_FromSTwoDigits (92 samples, 2.08%)</title></rect>
+<rect x="1000.50" y="345.00" width="25.03" height="14" fill="hsl(190,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_FromMedium (79 samples, 1.79%)</title></rect>
+<rect x="1000.50" y="360.00" width="21.54" height="14" fill="hsl(12,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Malloc (68 samples, 1.54%)</title></rect>
+<rect x="1000.50" y="375.00" width="16.16" height="14" fill="hsl(175,70%,68%)" stroke="#333" stroke-width="0.3"><title>pymalloc_alloc (51 samples, 1.15%)</title></rect>
+<rect x="1016.66" y="375.00" width="3.17" height="14" fill="hsl(184,70%,68%)" stroke="#333" stroke-width="0.3"><title>get_state (10 samples, 0.23%)</title></rect>
+<rect x="1016.66" y="390.00" width="2.53" height="14" fill="hsl(99,70%,68%)" stroke="#333" stroke-width="0.3"><title>has_own_state (8 samples, 0.18%)</title></rect>
+<rect x="1016.66" y="405.00" width="2.53" height="14" fill="hsl(296,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_IsMainInterpreter (8 samples, 0.18%)</title></rect>
+<rect x="1016.66" y="420.00" width="2.53" height="14" fill="hsl(233,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_Main (8 samples, 0.18%)</title></rect>
+<rect x="1019.19" y="390.00" width="0.63" height="14" fill="hsl(258,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_GET (2 samples, 0.05%)</title></rect>
+<rect x="1022.04" y="360.00" width="1.58" height="14" fill="hsl(52,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Init (5 samples, 0.11%)</title></rect>
+<rect x="1022.04" y="375.00" width="1.27" height="14" fill="hsl(5,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_SET_TYPE (4 samples, 0.09%)</title></rect>
+<rect x="1023.63" y="360.00" width="0.95" height="14" fill="hsl(39,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_Malloc (3 samples, 0.07%)</title></rect>
+<rect x="1025.53" y="345.00" width="4.12" height="14" fill="hsl(354,70%,68%)" stroke="#333" stroke-width="0.3"><title>is_medium_int (13 samples, 0.29%)</title></rect>
+<rect x="1029.64" y="330.00" width="5.07" height="14" fill="hsl(230,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_normalize (16 samples, 0.36%)</title></rect>
+<rect x="1034.71" y="330.00" width="3.17" height="14" fill="hsl(263,70%,68%)" stroke="#333" stroke-width="0.3"><title>maybe_small_long (10 samples, 0.23%)</title></rect>
+<rect x="1058.47" y="315.00" width="11.72" height="14" fill="hsl(283,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_rshift (37 samples, 0.84%)</title></rect>
+<rect x="1058.47" y="330.00" width="7.60" height="14" fill="hsl(172,70%,68%)" stroke="#333" stroke-width="0.3"><title>divmod_shift (24 samples, 0.54%)</title></rect>
+<rect x="1058.47" y="345.00" width="4.12" height="14" fill="hsl(189,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyLong_AsSsize_t (13 samples, 0.29%)</title></rect>
+<rect x="1058.47" y="360.00" width="1.90" height="14" fill="hsl(108,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyType_HasFeature (6 samples, 0.14%)</title></rect>
+<rect x="1060.38" y="360.00" width="1.27" height="14" fill="hsl(125,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_CompactValue (4 samples, 0.09%)</title></rect>
+<rect x="1061.64" y="360.00" width="0.63" height="14" fill="hsl(358,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_IsCompact (2 samples, 0.05%)</title></rect>
+<rect x="1066.08" y="330.00" width="1.90" height="14" fill="hsl(290,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_IsNegative (6 samples, 0.14%)</title></rect>
+<rect x="1067.98" y="330.00" width="0.95" height="14" fill="hsl(108,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyType_HasFeature (3 samples, 0.07%)</title></rect>
+<rect x="1088.57" y="270.00" width="58.61" height="14" fill="hsl(16,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyLong_FromLong (185 samples, 4.19%)</title></rect>
+<rect x="1088.57" y="285.00" width="49.11" height="14" fill="hsl(190,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_FromMedium (155 samples, 3.51%)</title></rect>
+<rect x="1088.57" y="300.00" width="40.87" height="14" fill="hsl(12,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Malloc (129 samples, 2.92%)</title></rect>
+<rect x="1088.57" y="315.00" width="26.30" height="14" fill="hsl(175,70%,68%)" stroke="#333" stroke-width="0.3"><title>pymalloc_alloc (83 samples, 1.88%)</title></rect>
+<rect x="1114.87" y="315.00" width="8.87" height="14" fill="hsl(184,70%,68%)" stroke="#333" stroke-width="0.3"><title>get_state (28 samples, 0.63%)</title></rect>
+<rect x="1114.87" y="330.00" width="8.55" height="14" fill="hsl(99,70%,68%)" stroke="#333" stroke-width="0.3"><title>has_own_state (27 samples, 0.61%)</title></rect>
+<rect x="1114.87" y="345.00" width="8.55" height="14" fill="hsl(296,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_IsMainInterpreter (27 samples, 0.61%)</title></rect>
+<rect x="1114.87" y="360.00" width="8.55" height="14" fill="hsl(233,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyInterpreterState_Main (27 samples, 0.61%)</title></rect>
+<rect x="1129.44" y="300.00" width="6.34" height="14" fill="hsl(52,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_Init (20 samples, 0.45%)</title></rect>
+<rect x="1129.44" y="315.00" width="4.44" height="14" fill="hsl(70,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_NewReference (14 samples, 0.32%)</title></rect>
+<rect x="1129.44" y="330.00" width="0.95" height="14" fill="hsl(268,70%,68%)" stroke="#333" stroke-width="0.3"><title>new_reference (3 samples, 0.07%)</title></rect>
+<rect x="1133.88" y="315.00" width="1.90" height="14" fill="hsl(89,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyType_HasFeature (6 samples, 0.14%)</title></rect>
+<rect x="1135.78" y="300.00" width="1.90" height="14" fill="hsl(39,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_Malloc (6 samples, 0.14%)</title></rect>
+<rect x="1147.18" y="270.00" width="40.24" height="14" fill="hsl(221,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_dealloc (127 samples, 2.87%)</title></rect>
+<rect x="1147.18" y="285.00" width="5.39" height="14" fill="hsl(125,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_CompactValue (17 samples, 0.38%)</title></rect>
+<rect x="1152.57" y="285.00" width="3.17" height="14" fill="hsl(358,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_IsCompact (10 samples, 0.23%)</title></rect>
+<rect x="1187.42" y="270.00" width="25.66" height="14" fill="hsl(47,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_Free (81 samples, 1.83%)</title></rect>
+<rect x="1213.08" y="270.00" width="21.54" height="14" fill="hsl(75,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_INCREF (68 samples, 1.54%)</title></rect>
+<rect x="1234.62" y="270.00" width="13.31" height="14" fill="hsl(18,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_Add (42 samples, 0.95%)</title></rect>
+<rect x="1247.93" y="270.00" width="4.12" height="14" fill="hsl(204,70%,68%)" stroke="#333" stroke-width="0.3"><title>_Py_IsImmortal (13 samples, 0.29%)</title></rect>
+<rect x="1252.05" y="270.00" width="2.85" height="14" fill="hsl(281,70%,68%)" stroke="#333" stroke-width="0.3"><title>import_name (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="285.00" width="2.85" height="14" fill="hsl(229,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyImport_ImportModuleLevelObject (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="300.00" width="2.85" height="14" fill="hsl(302,70%,68%)" stroke="#333" stroke-width="0.3"><title>import_find_and_load (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="315.00" width="2.85" height="14" fill="hsl(282,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_CallMethodObjArgs (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="330.00" width="2.85" height="14" fill="hsl(257,70%,68%)" stroke="#333" stroke-width="0.3"><title>object_vacall (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="345.00" width="2.85" height="14" fill="hsl(190,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_VectorcallTstate (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="360.00" width="2.85" height="14" fill="hsl(291,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_EvalFrameDefault (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="375.00" width="2.85" height="14" fill="hsl(49,70%,68%)" stroke="#333" stroke-width="0.3"><title>cfunction_vectorcall_FASTCALL_KEYWORDS (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="390.00" width="2.85" height="14" fill="hsl(321,70%,68%)" stroke="#333" stroke-width="0.3"><title>builtin_exec (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="405.00" width="2.85" height="14" fill="hsl(158,70%,68%)" stroke="#333" stroke-width="0.3"><title>builtin_exec_impl (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="420.00" width="2.85" height="14" fill="hsl(355,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyEval_EvalCode (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="435.00" width="2.85" height="14" fill="hsl(334,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_Vector (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="450.00" width="2.85" height="14" fill="hsl(118,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_EvalFrame (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="465.00" width="2.85" height="14" fill="hsl(291,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_EvalFrameDefault (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="480.00" width="2.85" height="14" fill="hsl(281,70%,68%)" stroke="#333" stroke-width="0.3"><title>import_name (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="495.00" width="2.85" height="14" fill="hsl(229,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyImport_ImportModuleLevelObject (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="510.00" width="2.85" height="14" fill="hsl(302,70%,68%)" stroke="#333" stroke-width="0.3"><title>import_find_and_load (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="525.00" width="2.85" height="14" fill="hsl(282,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_CallMethodObjArgs (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="540.00" width="2.85" height="14" fill="hsl(257,70%,68%)" stroke="#333" stroke-width="0.3"><title>object_vacall (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="555.00" width="2.85" height="14" fill="hsl(190,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_VectorcallTstate (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="570.00" width="2.85" height="14" fill="hsl(291,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_EvalFrameDefault (9 samples, 0.20%)</title></rect>
+<rect x="1252.05" y="585.00" width="2.22" height="14" fill="hsl(49,70%,68%)" stroke="#333" stroke-width="0.3"><title>cfunction_vectorcall_FASTCALL_KEYWORDS (7 samples, 0.16%)</title></rect>
+<rect x="1252.05" y="600.00" width="2.22" height="14" fill="hsl(321,70%,68%)" stroke="#333" stroke-width="0.3"><title>builtin_exec (7 samples, 0.16%)</title></rect>
+<rect x="1252.05" y="615.00" width="2.22" height="14" fill="hsl(158,70%,68%)" stroke="#333" stroke-width="0.3"><title>builtin_exec_impl (7 samples, 0.16%)</title></rect>
+<rect x="1252.05" y="630.00" width="2.22" height="14" fill="hsl(355,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyEval_EvalCode (7 samples, 0.16%)</title></rect>
+<rect x="1252.05" y="645.00" width="2.22" height="14" fill="hsl(334,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_Vector (7 samples, 0.16%)</title></rect>
+<rect x="1252.05" y="660.00" width="2.22" height="14" fill="hsl(118,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_EvalFrame (7 samples, 0.16%)</title></rect>
+<rect x="1252.05" y="675.00" width="2.22" height="14" fill="hsl(291,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_EvalFrameDefault (7 samples, 0.16%)</title></rect>
+<rect x="1252.05" y="690.00" width="1.27" height="14" fill="hsl(281,70%,68%)" stroke="#333" stroke-width="0.3"><title>import_name (4 samples, 0.09%)</title></rect>
+<rect x="1252.05" y="705.00" width="1.27" height="14" fill="hsl(229,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyImport_ImportModuleLevelObject (4 samples, 0.09%)</title></rect>
+<rect x="1252.05" y="720.00" width="1.27" height="14" fill="hsl(302,70%,68%)" stroke="#333" stroke-width="0.3"><title>import_find_and_load (4 samples, 0.09%)</title></rect>
+<rect x="1252.05" y="735.00" width="1.27" height="14" fill="hsl(282,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_CallMethodObjArgs (4 samples, 0.09%)</title></rect>
+<rect x="1252.05" y="750.00" width="1.27" height="14" fill="hsl(257,70%,68%)" stroke="#333" stroke-width="0.3"><title>object_vacall (4 samples, 0.09%)</title></rect>
+<rect x="1252.05" y="765.00" width="1.27" height="14" fill="hsl(190,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyObject_VectorcallTstate (4 samples, 0.09%)</title></rect>
+<rect x="1252.05" y="780.00" width="1.27" height="14" fill="hsl(291,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyEval_EvalFrameDefault (4 samples, 0.09%)</title></rect>
+<rect x="1384.16" y="90.00" width="2.53" height="14" fill="hsl(7,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_FinalizeEx (8 samples, 0.18%)</title></rect>
+<rect x="1384.16" y="105.00" width="2.53" height="14" fill="hsl(7,70%,68%)" stroke="#333" stroke-width="0.3"><title>Py_FinalizeEx (8 samples, 0.18%)</title></rect>
+<rect x="1384.16" y="120.00" width="0.95" height="14" fill="hsl(198,70%,68%)" stroke="#333" stroke-width="0.3"><title>finalize_modules (3 samples, 0.07%)</title></rect>
+<rect x="1384.16" y="135.00" width="0.95" height="14" fill="hsl(122,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyGC_CollectNoFail (3 samples, 0.07%)</title></rect>
+<rect x="1384.16" y="150.00" width="0.95" height="14" fill="hsl(269,70%,68%)" stroke="#333" stroke-width="0.3"><title>gc_collect_main (3 samples, 0.07%)</title></rect>
+<rect x="1385.11" y="120.00" width="0.63" height="14" fill="hsl(240,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyGC_Collect (2 samples, 0.05%)</title></rect>
+<rect x="1385.11" y="135.00" width="0.63" height="14" fill="hsl(54,70%,68%)" stroke="#333" stroke-width="0.3"><title>gc_collect_with_callback (2 samples, 0.05%)</title></rect>
+<rect x="1385.11" y="150.00" width="0.63" height="14" fill="hsl(269,70%,68%)" stroke="#333" stroke-width="0.3"><title>gc_collect_main (2 samples, 0.05%)</title></rect>
+<rect x="1385.74" y="120.00" width="0.63" height="14" fill="hsl(303,70%,68%)" stroke="#333" stroke-width="0.3"><title>finalize_interp_clear (2 samples, 0.05%)</title></rect>
+<rect x="1386.69" y="45.00" width="7.29" height="14" fill="hsl(24,70%,68%)" stroke="#333" stroke-width="0.3"><title>k_mul (23 samples, 0.52%)</title></rect>
+<rect x="1386.69" y="60.00" width="7.29" height="14" fill="hsl(261,70%,68%)" stroke="#333" stroke-width="0.3"><title>x_mul (23 samples, 0.52%)</title></rect>
+<rect x="1386.69" y="75.00" width="6.34" height="14" fill="hsl(90,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyErr_CheckSignals@plt (20 samples, 0.45%)</title></rect>
+<rect x="1393.98" y="45.00" width="2.53" height="14" fill="hsl(62,70%,68%)" stroke="#333" stroke-width="0.3"><title>long_bitwise (8 samples, 0.18%)</title></rect>
+<rect x="1393.98" y="60.00" width="1.58" height="14" fill="hsl(157,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_New@plt (5 samples, 0.11%)</title></rect>
+<rect x="1395.56" y="60.00" width="0.95" height="14" fill="hsl(167,70%,68%)" stroke="#333" stroke-width="0.3"><title>memcpy@plt (3 samples, 0.07%)</title></rect>
+<rect x="1396.52" y="45.00" width="1.58" height="14" fill="hsl(61,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_New (5 samples, 0.11%)</title></rect>
+<rect x="1396.52" y="60.00" width="1.58" height="14" fill="hsl(255,70%,68%)" stroke="#333" stroke-width="0.3"><title>PyObject_Malloc@plt (5 samples, 0.11%)</title></rect>
+<rect x="1398.10" y="45.00" width="0.63" height="14" fill="hsl(52,70%,68%)" stroke="#333" stroke-width="0.3"><title>el0t_64_sync (2 samples, 0.05%)</title></rect>
+<rect x="1398.10" y="60.00" width="0.63" height="14" fill="hsl(251,70%,68%)" stroke="#333" stroke-width="0.3"><title>el0t_64_sync_handler (2 samples, 0.05%)</title></rect>
+<rect x="1398.73" y="45.00" width="0.63" height="14" fill="hsl(174,70%,68%)" stroke="#333" stroke-width="0.3"><title>x_add (2 samples, 0.05%)</title></rect>
+<rect x="1398.73" y="60.00" width="0.63" height="14" fill="hsl(157,70%,68%)" stroke="#333" stroke-width="0.3"><title>_PyLong_New@plt (2 samples, 0.05%)</title></rect>
+<text x="3.00" y="41.00" font-size="11" font-family="monospace" fill="#111">all</text>
+<text x="3.00" y="56.00" font-size="11" font-family="monospace" fill="#111">Py_BytesMain</text>
+<text x="3.00" y="71.00" font-size="11" font-family="monospace" fill="#111">pymain_main</text>
+<text x="3.00" y="86.00" font-size="11" font-family="monospace" fill="#111">Py_RunMain</text>
+<text x="3.00" y="101.00" font-size="11" font-family="monospace" fill="#111">pymain_run_python</text>
+<text x="3.00" y="116.00" font-size="11" font-family="monospace" fill="#111">pymain_run_module</text>
+<text x="3.00" y="131.00" font-size="11" font-family="monospace" fill="#111">_PyEval_EvalFrameDefault</text>
+<text x="3.00" y="146.00" font-size="11" font-family="monospace" fill="#111">PyObject_Vectorcall</text>
+<text x="3.00" y="161.00" font-size="11" font-family="monospace" fill="#111">_PyObject_VectorcallTstate</text>
+<text x="3.00" y="176.00" font-size="11" font-family="monospace" fill="#111">cfunction_vectorcall_FASTCALL_KEYWORDS</text>
+<text x="3.00" y="191.00" font-size="11" font-family="monospace" fill="#111">builtin_exec</text>
+<text x="3.00" y="206.00" font-size="11" font-family="monospace" fill="#111">builtin_exec_impl</text>
+<text x="3.00" y="221.00" font-size="11" font-family="monospace" fill="#111">PyEval_EvalCode</text>
+<text x="3.00" y="236.00" font-size="11" font-family="monospace" fill="#111">_PyEval_Vector</text>
+<text x="3.00" y="251.00" font-size="11" font-family="monospace" fill="#111">_PyEval_EvalFrame</text>
+<text x="3.00" y="266.00" font-size="11" font-family="monospace" fill="#111">_PyEval_EvalFrameDefault</text>
+<text x="3.00" y="281.00" font-size="11" font-family="monospace" fill="#111">_PyObject_Free</text>
+<text x="3.00" y="296.00" font-size="11" font-family="monospace" fill="#111">_PyObject_Free</text>
+<text x="3.00" y="311.00" font-size="11" font-family="monospace" fill="#111">pymalloc_free</text>
+<text x="3.00" y="326.00" font-size="11" font-family="monospace" fill="#111">address_in_range</text>
+<text x="3.00" y="341.00" font-size="11" font-family="monospace" fill="#111">arena_map_is_used</text>
+<text x="3.00" y="356.00" font-size="11" font-family="monospace" fill="#111">arena_map_get</text>
+<text x="289.40" y="311.00" font-size="11" font-family="monospace" fill="#111">get_st…</text>
+<text x="289.40" y="326.00" font-size="11" font-family="monospace" fill="#111">has_…</text>
+<text x="289.40" y="341.00" font-size="11" font-family="monospace" fill="#111">_Py_…</text>
+<text x="289.40" y="356.00" font-size="11" font-family="monospace" fill="#111">_PyI…</text>
+<text x="357.20" y="281.00" font-size="11" font-family="monospace" fill="#111">_PyLong_Multiply</text>
+<text x="357.20" y="296.00" font-size="11" font-family="monospace" fill="#111">_PyLong_Multiply</text>
+<text x="357.20" y="311.00" font-size="11" font-family="monospace" fill="#111">k_mul</text>
+<text x="357.20" y="326.00" font-size="11" font-family="monospace" fill="#111">x_mul</text>
+<text x="357.20" y="341.00" font-size="11" font-family="monospace" fill="#111">_PyLon…</text>
+<text x="357.20" y="356.00" font-size="11" font-family="monospace" fill="#111">_PyOb…</text>
+<text x="357.20" y="371.00" font-size="11" font-family="monospace" fill="#111">pyma…</text>
+<text x="411.69" y="341.00" font-size="11" font-family="monospace" fill="#111">PyErr…</text>
+<text x="543.17" y="281.00" font-size="11" font-family="monospace" fill="#111">x_add</text>
+<text x="543.17" y="296.00" font-size="11" font-family="monospace" fill="#111">_PyLong_New</text>
+<text x="543.17" y="311.00" font-size="11" font-family="monospace" fill="#111">_PyObject_M…</text>
+<text x="543.17" y="326.00" font-size="11" font-family="monospace" fill="#111">pymalloc…</text>
+<text x="694.92" y="281.00" font-size="11" font-family="monospace" fill="#111">PyNumber_And</text>
+<text x="694.92" y="296.00" font-size="11" font-family="monospace" fill="#111">binary_op</text>
+<text x="694.92" y="311.00" font-size="11" font-family="monospace" fill="#111">binary_op1</text>
+<text x="694.92" y="326.00" font-size="11" font-family="monospace" fill="#111">long_bitwise</text>
+<text x="694.92" y="341.00" font-size="11" font-family="monospace" fill="#111">_PyLong_…</text>
+<text x="694.92" y="356.00" font-size="11" font-family="monospace" fill="#111">_PyOb…</text>
+<text x="694.92" y="371.00" font-size="11" font-family="monospace" fill="#111">pym…</text>
+<text x="835.90" y="281.00" font-size="11" font-family="monospace" fill="#111">PyNumber_InPlaceXor</text>
+<text x="835.90" y="296.00" font-size="11" font-family="monospace" fill="#111">binary_iop</text>
+<text x="835.90" y="311.00" font-size="11" font-family="monospace" fill="#111">binary_iop1</text>
+<text x="835.90" y="326.00" font-size="11" font-family="monospace" fill="#111">binary_op1</text>
+<text x="835.90" y="341.00" font-size="11" font-family="monospace" fill="#111">long_bi…</text>
+<text x="835.90" y="356.00" font-size="11" font-family="monospace" fill="#111">_PyLo…</text>
+<text x="895.46" y="341.00" font-size="11" font-family="monospace" fill="#111">long_…</text>
+<text x="895.46" y="356.00" font-size="11" font-family="monospace" fill="#111">_PyL…</text>
+<text x="895.46" y="371.00" font-size="11" font-family="monospace" fill="#111">_PyL…</text>
+<text x="971.18" y="281.00" font-size="11" font-family="monospace" fill="#111">PyNumber_Rshift</text>
+<text x="971.18" y="296.00" font-size="11" font-family="monospace" fill="#111">binary_op</text>
+<text x="971.18" y="311.00" font-size="11" font-family="monospace" fill="#111">binary_op1</text>
+<text x="971.18" y="326.00" font-size="11" font-family="monospace" fill="#111">long_rshift1</text>
+<text x="971.18" y="341.00" font-size="11" font-family="monospace" fill="#111">_Py…</text>
+<text x="1091.57" y="281.00" font-size="11" font-family="monospace" fill="#111">PyLong_…</text>
+<text x="1091.57" y="296.00" font-size="11" font-family="monospace" fill="#111">_PyLon…</text>
+<text x="1091.57" y="311.00" font-size="11" font-family="monospace" fill="#111">_PyO…</text>
+<text x="1150.18" y="281.00" font-size="11" font-family="monospace" fill="#111">long…</text>
+</svg>

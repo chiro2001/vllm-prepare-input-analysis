@@ -1,0 +1,6 @@
+# started on Mon Sep 14 18:21:01 2026
+
+VLLM::Worker-4149971,29525.45,msec,task-clock,29525448360,100.00,0.924,CPUs utilized
+VLLM::Worker-4149971,85245,,context-switches,29525448160,100.00,2.887,K/sec
+VLLM::Worker-4149971,1,,cpu-migrations,29525448050,100.00,0.034,/sec
+VLLM::Worker-4149971,53088,,page-faults,29525447850,100.00,1.798,K/sec

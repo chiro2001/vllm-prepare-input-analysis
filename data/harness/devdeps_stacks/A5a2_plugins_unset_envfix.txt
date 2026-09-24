@@ -1,0 +1,51 @@
+# step_id     : A5a2_plugins_unset
+# title       : VLLM_PLUGINS unset（全部插件）
+# cwd         : /work
+# returncode  : 0
+# duration_s  : 5.59
+# extra env   : {"USER": "probe", "LOGNAME": "probe"}
+# env overrides: {"VLLM_PLUGINS": "<unset>"}
+# ---- COMMAND (python -c) ----
+import os, sys, logging
+logging.basicConfig(level=logging.INFO, stream=sys.stdout)
+import vllm, vllm.envs as envs, vllm.plugins as vplugins
+from importlib.metadata import entry_points
+
+print("VLLM_PLUGINS repr =", repr(envs.VLLM_PLUGINS))
+for group in ("vllm.general_plugins", "vllm.platform_plugins", "vllm.io_processor_plugins"):
+    eps = list(entry_points(group=group))
+    print(f"group {group}: {[(e.name, e.value) for e in eps]}")
+allowed = envs.VLLM_PLUGINS
+eps = list(entry_points(group="vllm.general_plugins"))
+print("general plugins that pass the allowlist:", [e.name for e in eps if allowed is None or e.name in allowed])
+loaded = vplugins.load_plugins_by_group("vllm.general_plugins")
+print("load_plugins_by_group('vllm.general_plugins') ->", sorted(loaded))
+# ---- STDOUT ----
+INFO 09-23 17:45:30 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 17:45:30 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-23 17:45:30 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-23 17:45:30 [__init__.py:237] Platform plugin ascend is activated
+WARNING:triton.tools.get_ascend_devices:can not use command: npu-smi info
+INFO:torch_npu.env:get env ASCEND_HOME_PATH = /usr/local/Ascend/cann-9.1.0
+INFO 09-23 17:45:33 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+VLLM_PLUGINS repr = None
+group vllm.general_plugins: [('msserviceprofiler', 'ms_service_profiler.patcher.vllm:register_service_profiler'), ('arctic_inference', 'arctic_inference.vllm.plugin:arctic_inference_plugin'), ('ascend_kv_connector', 'vllm_ascend:register_connector'), ('ascend_model', 'vllm_ascend:register_model'), ('ascend_model_loader', 'vllm_ascend:register_model_loader'), ('ascend_service_profiling', 'vllm_ascend:register_service_profiling'), ('lora_filesystem_resolver', 'vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver'), ('lora_hf_hub_resolver', 'vllm.plugins.lora_resolvers.hf_hub_resolver:register_hf_hub_resolver')]
+group vllm.platform_plugins: [('ascend', 'vllm_ascend:register')]
+group vllm.io_processor_plugins: []
+general plugins that pass the allowlist: ['msserviceprofiler', 'arctic_inference', 'ascend_kv_connector', 'ascend_model', 'ascend_model_loader', 'ascend_service_profiling', 'lora_filesystem_resolver', 'lora_hf_hub_resolver']
+load_plugins_by_group('vllm.general_plugins') -> ['arctic_inference', 'ascend_kv_connector', 'ascend_model', 'ascend_model_loader', 'ascend_service_profiling', 'lora_filesystem_resolver', 'lora_hf_hub_resolver', 'msserviceprofiler']
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.
+# ---- STDERR ----
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+2026-09-23 17:45:33,391 - 109 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0+empty: default 1
+
+# ---- END ----

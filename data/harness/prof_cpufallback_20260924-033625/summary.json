@@ -1,0 +1,751 @@
+{
+  "artifacts": {
+    "pmu": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/pmu/count.json",
+    "hotspots": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/hotspots.json",
+    "annotate_json": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/annotate/annotate_top.json",
+    "flamegraph_svg": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/flamegraph.svg"
+  },
+  "pmu": {
+    "counters": {
+      "CPU_CYCLES": 86997014090,
+      "INST_RETIRED": 70174557790,
+      "INST_SPEC": 111881820444,
+      "BR_PRED": 17590936665,
+      "BR_MIS_PRED": 1228180392,
+      "L1D_CACHE_REFILL": 1200344229
+    },
+    "ipc": 0.8066317967810153,
+    "time_enabled": 29999325590,
+    "time_running": 29999325590,
+    "confidence": 1.0,
+    "wall_s": 30.074614
+  },
+  "symfs": {
+    "symfs": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/symfs",
+    "copied": [],
+    "existing": [],
+    "cached": []
+  },
+  "hotspots_top": [
+    {
+      "overhead_pct": 9.8,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyEval_EvalFrameDefault"
+    },
+    {
+      "overhead_pct": 1.51,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_Malloc"
+    },
+    {
+      "overhead_pct": 1.11,
+      "dso": "libc.so.6",
+      "symbol": "[.] pthread_mutex_lock"
+    },
+    {
+      "overhead_pct": 1.06,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyType_Lookup"
+    },
+    {
+      "overhead_pct": 1.05,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] unicodekeys_lookup_unicode"
+    },
+    {
+      "overhead_pct": 1.02,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_Free"
+    },
+    {
+      "overhead_pct": 0.93,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_GenericGetAttrWithDict"
+    },
+    {
+      "overhead_pct": 0.81,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] tupledealloc"
+    },
+    {
+      "overhead_pct": 0.8,
+      "dso": "libc.so.6",
+      "symbol": "[.] malloc"
+    },
+    {
+      "overhead_pct": 0.79,
+      "dso": "_multiarray_umath.cpython-312-aarch64-linux-gnu.so",
+      "symbol": "[.] ufunc_generic_fastcall"
+    },
+    {
+      "overhead_pct": 0.73,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const"
+    },
+    {
+      "overhead_pct": 0.72,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyType_IsSubtype"
+    },
+    {
+      "overhead_pct": 0.68,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _Py_dict_lookup"
+    },
+    {
+      "overhead_pct": 0.58,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] tuple_alloc"
+    },
+    {
+      "overhead_pct": 0.58,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyFrame_ClearExceptCode"
+    },
+    {
+      "overhead_pct": 0.57,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000083e78"
+    },
+    {
+      "overhead_pct": 0.54,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)"
+    },
+    {
+      "overhead_pct": 0.52,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] at::_ops::as_strided::call(at::Tensor const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, std::optional<c10::SymInt>)"
+    },
+    {
+      "overhead_pct": 0.51,
+      "dso": "libtorch_cpu.so",
+      "symbol": "[.] at::native::as_strided_tensorimpl(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, std::optional<long>)"
+    },
+    {
+      "overhead_pct": 0.5,
+      "dso": "libtorch_python.so",
+      "symbol": "[.] torch::FunctionSignature::parse(_object*, _object*, _object*, _object**, std::vector<_object*, std::allocator<_object*> >&, bool)"
+    }
+  ],
+  "annotate": {
+    "caliber_version": "prof-v1",
+    "kind": "annotate_top",
+    "perfdata": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/perf.data",
+    "hotspots": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/hotspots.json",
+    "symfs": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/symfs",
+    "requested_top": 3,
+    "annotated": 3,
+    "functions": [
+      {
+        "rank": 1,
+        "symbol": "_PyEval_EvalFrameDefault",
+        "symbol_raw": "[.] _PyEval_EvalFrameDefault",
+        "dso": "libpython3.12.so.1.0",
+        "self_overhead_pct": 9.8,
+        "annotate_lines": 13621,
+        "n_instructions": 11567,
+        "hot_source_lines": [
+          {
+            "pct": 9.39,
+            "loc": "object.h:646"
+          },
+          {
+            "pct": 6.93,
+            "loc": "object.h:642"
+          },
+          {
+            "pct": 2.55,
+            "loc": "pycore_frame.h:248"
+          },
+          {
+            "pct": 2.46,
+            "loc": "ceval.c:772"
+          },
+          {
+            "pct": 1.8,
+            "loc": "generated_cases.c.h:2421"
+          },
+          {
+            "pct": 1.56,
+            "loc": "bytecodes.c:1852"
+          },
+          {
+            "pct": 1.56,
+            "loc": "generated_cases.c.h:83"
+          },
+          {
+            "pct": 1.4,
+            "loc": "generated_cases.c.h:107"
+          },
+          {
+            "pct": 1.29,
+            "loc": "bytecodes.c:192"
+          },
+          {
+            "pct": 1.23,
+            "loc": "bytecodes.c:1366"
+          },
+          {
+            "pct": 1.19,
+            "loc": "generated_cases.c.h:3067"
+          },
+          {
+            "pct": 1.16,
+            "loc": "generated_cases.c.h:2485"
+          },
+          {
+            "pct": 1.06,
+            "loc": "pycore_dict.h:135"
+          },
+          {
+            "pct": 1.05,
+            "loc": "pycore_code.h:313"
+          },
+          {
+            "pct": 0.99,
+            "loc": "bytecodes.c:2692"
+          },
+          {
+            "pct": 0.92,
+            "loc": "bytecodes.c:1856"
+          },
+          {
+            "pct": 0.68,
+            "loc": "bytecodes.c:2774"
+          },
+          {
+            "pct": 0.65,
+            "loc": "bytecodes.c:140"
+          },
+          {
+            "pct": 0.61,
+            "loc": "bytecodes.c:2775"
+          },
+          {
+            "pct": 0.54,
+            "loc": "pycore_frame.h:123"
+          },
+          {
+            "pct": 0.51,
+            "loc": "bytecodes.c:1853"
+          },
+          {
+            "pct": 0.51,
+            "loc": "pycore_frame.h:156"
+          }
+        ],
+        "top_instructions": [
+          {
+            "pct": 2.72,
+            "addr": "1160ec",
+            "mnemonic": "str",
+            "operands": "w0, [x1] // object.h:646",
+            "src": "L1373 Py_INCREF():"
+          },
+          {
+            "pct": 2.55,
+            "addr": "11414c",
+            "mnemonic": "ldr",
+            "operands": "x24, [x21, #240] // pycore_frame.h:248",
+            "src": "L2778 _PyThreadState_HasStackSpace():"
+          },
+          {
+            "pct": 2.55,
+            "addr": "118920",
+            "mnemonic": "str",
+            "operands": "w0, [x25] // object.h:646",
+            "src": "L1864 Py_INCREF():"
+          },
+          {
+            "pct": 2.46,
+            "addr": "10d6ec",
+            "mnemonic": "ldrb",
+            "operands": "w28, [x0, #3] // ceval.c:772",
+            "src": "L156 _PyEval_EvalFrameDefault():"
+          },
+          {
+            "pct": 2.31,
+            "addr": "10fa80",
+            "mnemonic": "str",
+            "operands": "w0, [x25] // object.h:646",
+            "src": "L1818 Py_INCREF():"
+          },
+          {
+            "pct": 2.11,
+            "addr": "1160e0",
+            "mnemonic": "ldr",
+            "operands": "w0, [x1] // object.h:642",
+            "src": "L1373 Py_INCREF():"
+          },
+          {
+            "pct": 1.8,
+            "addr": "110200",
+            "mnemonic": "str",
+            "operands": "x26, [x20, #56] // generated_cases.c.h:2421",
+            "src": "L243 _PyEval_EvalFrameDefault():"
+          },
+          {
+            "pct": 1.56,
+            "addr": "10ee64",
+            "mnemonic": "ldr",
+            "operands": "x0, [x2, #32] // bytecodes.c:1852",
+            "src": "L221 _PyEval_EvalFrameDefault():"
+          },
+          {
+            "pct": 1.56,
+            "addr": "1118a0",
+            "mnemonic": "str",
+            "operands": "x26, [x20, #56] // generated_cases.c.h:83",
+            "src": "L643 _PyEval_EvalFrameDefault():"
+          },
+          {
+            "pct": 1.4,
+            "addr": "11243c",
+            "mnemonic": "str",
+            "operands": "x26, [x20, #56] // generated_cases.c.h:107",
+            "src": "L643 _PyEval_EvalFrameDefault():"
+          },
+          {
+            "pct": 1.36,
+            "addr": "10fa74",
+            "mnemonic": "ldr",
+            "operands": "w0, [x25] // object.h:642",
+            "src": "L1818 Py_INCREF():"
+          },
+          {
+            "pct": 1.29,
+            "addr": "111890",
+            "mnemonic": "add",
+            "operands": "x7, x20, w28, sxtw #3 // bytecodes.c:192",
+            "src": "L243 _PyEval_EvalFrameDefault():"
+          },
+          {
+            "pct": 1.19,
+            "addr": "115910",
+            "mnemonic": "ldrb",
+            "operands": "w28, [x26, #1] // generated_cases.c.h:3067",
+            "src": "L321 _PyEval_EvalFrameDefault():"
+          },
+          {
+            "pct": 1.16,
+            "addr": "10fa50",
+            "mnemonic": "str",
+            "operands": "x26, [x20, #56] // generated_cases.c.h:2485",
+            "src": "L221 _PyEval_EvalFrameDefault():"
+          },
+          {
+            "pct": 1.09,
+            "addr": "11247c",
+            "mnemonic": "ldr",
+            "operands": "w0, [x24] // object.h:642",
+            "src": "L681 Py_INCREF():"
+          },
+          {
+            "pct": 1.06,
+            "addr": "1160c4",
+            "mnemonic": "ldrb",
+            "operands": "w4, [x1, #9] // pycore_dict.h:135",
+            "src": "L1372 _DK_ENTRIES():"
+          },
+          {
+            "pct": 1.05,
+            "addr": "10eb5c",
+            "mnemonic": "ldrh",
+            "operands": "w2, [x26, #4] // pycore_code.h:313",
+            "src": "L1369 read_u16():"
+          },
+          {
+            "pct": 0.99,
+            "addr": "110a6c",
+            "mnemonic": "ldr",
+            "operands": "x0, [x0, #4048] // bytecodes.c:2692",
+            "src": "L221 _PyEval_EvalFrameDefault():"
+          },
+          {
+            "pct": 0.95,
+            "addr": "112438",
+            "mnemonic": "ldr",
+            "operands": "w0, [x1] // object.h:642",
+            "src": "L207 Py_INCREF():"
+          },
+          {
+            "pct": 0.92,
+            "addr": "11189c",
+            "mnemonic": "ldr",
+            "operands": "w0, [x1] // object.h:642",
+            "src": "L193 Py_INCREF():"
+          }
+        ],
+        "txt": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/annotate/_PyEval_EvalFrameDefault.txt",
+        "json": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/annotate/_PyEval_EvalFrameDefault.json"
+      },
+      {
+        "rank": 2,
+        "symbol": "_PyObject_Malloc",
+        "symbol_raw": "[.] _PyObject_Malloc",
+        "dso": "libpython3.12.so.1.0",
+        "self_overhead_pct": 1.51,
+        "annotate_lines": 119,
+        "n_instructions": 73,
+        "hot_source_lines": [
+          {
+            "pct": 28.9,
+            "loc": "obmalloc.c:1544"
+          },
+          {
+            "pct": 20.77,
+            "loc": "obmalloc.c:1541"
+          },
+          {
+            "pct": 15.0,
+            "loc": "obmalloc.c:1535"
+          },
+          {
+            "pct": 14.59,
+            "loc": "obmalloc.c:1562"
+          },
+          {
+            "pct": 5.52,
+            "loc": "pycore_pystate.h:27"
+          },
+          {
+            "pct": 4.42,
+            "loc": "pycore_pystate.h:133"
+          },
+          {
+            "pct": 3.76,
+            "loc": "obmalloc.c:1540"
+          },
+          {
+            "pct": 2.43,
+            "loc": "obmalloc.c:1527"
+          },
+          {
+            "pct": 1.54,
+            "loc": "obmalloc.c:1574"
+          },
+          {
+            "pct": 1.11,
+            "loc": "obmalloc.c:1370"
+          },
+          {
+            "pct": 0.66,
+            "loc": "obmalloc.c:1368"
+          },
+          {
+            "pct": 0.65,
+            "loc": "obmalloc.c:1357"
+          }
+        ],
+        "top_instructions": [
+          {
+            "pct": 28.9,
+            "addr": "1c95fc",
+            "mnemonic": "str",
+            "operands": "x3, [x2, #8] // obmalloc.c:1544",
+            "src": "L859 pymalloc_alloc():"
+          },
+          {
+            "pct": 20.77,
+            "addr": "1c95e8",
+            "mnemonic": "ldr",
+            "operands": "x0, [x2, #8] // obmalloc.c:1541",
+            "src": "L859 pymalloc_alloc():"
+          },
+          {
+            "pct": 15.0,
+            "addr": "1c95dc",
+            "mnemonic": "ldr",
+            "operands": "x4, [x2, #16] // obmalloc.c:1535",
+            "src": "L859 pymalloc_alloc():"
+          },
+          {
+            "pct": 10.17,
+            "addr": "1c9574",
+            "mnemonic": "stp",
+            "operands": "x29, x30, [sp, #-32]! // obmalloc.c:1562",
+            "src": "L6 _PyObject_Malloc():"
+          },
+          {
+            "pct": 5.52,
+            "addr": "1c95a8",
+            "mnemonic": "ldr",
+            "operands": "x0, [x3, #48] // pycore_pystate.h:27",
+            "src": "L134 _PyInterpreterState_Main():"
+          },
+          {
+            "pct": 4.42,
+            "addr": "1c9594",
+            "mnemonic": "stp",
+            "operands": "x19, x20, [sp, #16] // obmalloc.c:1562",
+            "src": "L138 _PyObject_Malloc():"
+          },
+          {
+            "pct": 3.54,
+            "addr": "1c9578",
+            "mnemonic": "mrs",
+            "operands": "x2, tpidr_el0 // pycore_pystate.h:133",
+            "src": "L1563 _PyInterpreterState_GET():"
+          },
+          {
+            "pct": 2.43,
+            "addr": "1c95bc",
+            "mnemonic": "sub",
+            "operands": "x0, x19, #0x1 // obmalloc.c:1527",
+            "src": "L859 pymalloc_alloc():"
+          },
+          {
+            "pct": 2.43,
+            "addr": "1c95ec",
+            "mnemonic": "ldr",
+            "operands": "w3, [x2] // obmalloc.c:1540",
+            "src": "L859 pymalloc_alloc():"
+          },
+          {
+            "pct": 1.54,
+            "addr": "1c9604",
+            "mnemonic": "ldp",
+            "operands": "x19, x20, [sp, #16] // obmalloc.c:1574",
+            "src": "L1547 _PyObject_Malloc():"
+          },
+          {
+            "pct": 1.33,
+            "addr": "1c95f4",
+            "mnemonic": "str",
+            "operands": "w3, [x2]",
+            "src": "L859 pymalloc_alloc():"
+          },
+          {
+            "pct": 1.11,
+            "addr": "1c9674",
+            "mnemonic": "str",
+            "operands": "x4, [x1, #16] // obmalloc.c:1370",
+            "src": "L1567 pymalloc_pool_extend():"
+          },
+          {
+            "pct": 0.88,
+            "addr": "1c9590",
+            "mnemonic": "ldr",
+            "operands": "x2, [x2, x0]",
+            "src": "L1563 _PyInterpreterState_GET():"
+          },
+          {
+            "pct": 0.66,
+            "addr": "1c966c",
+            "mnemonic": "ldr",
+            "operands": "x1, [x2, #24] // obmalloc.c:1368",
+            "src": "L1567 pymalloc_pool_extend():"
+          },
+          {
+            "pct": 0.65,
+            "addr": "1c9660",
+            "mnemonic": "ldp",
+            "operands": "w3, w5, [x2, #40] // obmalloc.c:1357",
+            "src": "L1567 pymalloc_pool_extend():"
+          },
+          {
+            "pct": 0.44,
+            "addr": "1c9580",
+            "mnemonic": "adrp",
+            "operands": "x0, 542000 <PyImport_GetModule@@Base+0x2a08a0>",
+            "src": "L1563 _PyInterpreterState_GET():"
+          },
+          {
+            "pct": 0.22,
+            "addr": "1c9584",
+            "mnemonic": "ldr",
+            "operands": "x3, [x0, #3496]",
+            "src": "L1563 _PyInterpreterState_GET():"
+          },
+          {
+            "pct": 0.0,
+            "addr": "1c957c",
+            "mnemonic": "mov",
+            "operands": "x29, sp",
+            "src": "L134 _PyObject_Malloc():"
+          },
+          {
+            "pct": 0.0,
+            "addr": "1c9588",
+            "mnemonic": "add",
+            "operands": "x0, x0, #0xda8",
+            "src": "L1563 _PyInterpreterState_GET():"
+          },
+          {
+            "pct": 0.0,
+            "addr": "1c958c",
+            "mnemonic": "blr",
+            "operands": "x3",
+            "src": "L1563 _PyInterpreterState_GET():"
+          }
+        ],
+        "txt": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/annotate/_PyObject_Malloc.txt",
+        "json": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/annotate/_PyObject_Malloc.json"
+      },
+      {
+        "rank": 3,
+        "symbol": "pthread_mutex_lock",
+        "symbol_raw": "[.] pthread_mutex_lock",
+        "dso": "libc.so.6",
+        "self_overhead_pct": 1.11,
+        "annotate_lines": 178,
+        "n_instructions": 156,
+        "hot_source_lines": [],
+        "top_instructions": [
+          {
+            "pct": 65.67,
+            "addr": "8261c",
+            "mnemonic": "cmp",
+            "operands": "w2, #0x0 // libc.so.6[8261c]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 9.64,
+            "addr": "82614",
+            "mnemonic": "stxr",
+            "operands": "w3, w0, [x19] // libc.so.6[82614]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 8.44,
+            "addr": "825a4",
+            "mnemonic": "add",
+            "operands": "x3, x0, #0x10 // libc.so.6[825a4]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 3.62,
+            "addr": "82608",
+            "mnemonic": "mov",
+            "operands": "w0, #0x1                        // #1 // libc.so.6[82608]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 2.71,
+            "addr": "825b8",
+            "mnemonic": "tst",
+            "operands": "w2, #0x7c // libc.so.6[825b8]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 2.71,
+            "addr": "825d4",
+            "mnemonic": "mrs",
+            "operands": "x20, tpidr_el0 // libc.so.6[825d4]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 2.11,
+            "addr": "825c0",
+            "mnemonic": "stp",
+            "operands": "x29, x30, [sp, #-32]! // libc.so.6[825c0]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 1.5,
+            "addr": "82644",
+            "mnemonic": "ldp",
+            "operands": "x29, x30, [sp], #32 // libc.so.6[82644]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 1.21,
+            "addr": "825a8",
+            "mnemonic": "ldr",
+            "operands": "w2, [x3] // libc.so.6[825a8]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 1.21,
+            "addr": "825e4",
+            "mnemonic": "adrp",
+            "operands": "x0, 1a7000 <re_syntax_options@@GLIBC_2.17+0x258> // libc.so.6[825e4]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 0.3,
+            "addr": "825ac",
+            "mnemonic": "mov",
+            "operands": "w1, #0x17f                      // #383",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 0.3,
+            "addr": "825c8",
+            "mnemonic": "stp",
+            "operands": "x19, x20, [sp, #16]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 0.3,
+            "addr": "825d8",
+            "mnemonic": "ldr",
+            "operands": "w0, [x3]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 0.3,
+            "addr": "82640",
+            "mnemonic": "ldp",
+            "operands": "x19, x20, [sp, #16]",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 0.0,
+            "addr": "825b0",
+            "mnemonic": "and",
+            "operands": "w1, w2, w1",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 0.0,
+            "addr": "825b4",
+            "mnemonic": "nop",
+            "operands": "",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 0.0,
+            "addr": "825bc",
+            "mnemonic": "b.ne",
+            "operands": "8265c <__pthread_mutex_lock@GLIBC_2.17+0xb8>  // b.any",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 0.0,
+            "addr": "825c4",
+            "mnemonic": "mov",
+            "operands": "x29, sp",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 0.0,
+            "addr": "825cc",
+            "mnemonic": "mov",
+            "operands": "x19, x0",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          },
+          {
+            "pct": 0.0,
+            "addr": "825d0",
+            "mnemonic": "cbnz",
+            "operands": "w1, 82660 <__pthread_mutex_lock@GLIBC_2.17+0xbc>",
+            "src": "L5 00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:"
+          }
+        ],
+        "txt": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/annotate/pthread_mutex_lock.txt",
+        "json": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625/passes/perf/annotate/pthread_mutex_lock.json"
+      }
+    ]
+  },
+  "flamegraph_tool": "flamegraph-rs",
+  "caliber_version": "prof-v1",
+  "tag": "prof_cpufallback",
+  "ts": "2026-09-24T03:43:11+0800",
+  "out": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625",
+  "cpus": "201,203,205,207-208,210,214,216",
+  "image": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+  "cmd": [],
+  "mode": "post_only"
+}

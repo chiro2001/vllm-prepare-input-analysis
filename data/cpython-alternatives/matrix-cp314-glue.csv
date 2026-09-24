@@ -1,0 +1,13 @@
+label,python_label,python_bin,python,python_impl,variant,tensor_backend,iters,rounds,median_ns,min_ns,p10_ns,p90_ns,us_per_iter,checksum,numpy,torch,gil_enabled,affinity,error
+cp314:plain:numpy,cp314,/usr/bin/python3.14,3.14.6,cpython,plain,numpy,5000,7,11362.5762,11229.214,11229.214,11485.3846,11.3625762,14455000,2.5.1,,True,"4,5,6,7",
+cp314:plain:none,cp314,/usr/bin/python3.14,3.14.6,cpython,plain,none,5000,7,2319.751,2240.7842,2240.7842,2423.2514,2.319751,14385000,2.5.1,,True,"4,5,6,7",
+cp314:slots:numpy,cp314,/usr/bin/python3.14,3.14.6,cpython,slots,numpy,5000,7,11585.8674,11406.9928,11406.9928,11894.4792,11.5858674,14455000,2.5.1,,True,"4,5,6,7",
+cp314:slots:none,cp314,/usr/bin/python3.14,3.14.6,cpython,slots,none,5000,7,2214.4734,2194.9068,2194.9068,2310.8846,2.2144733999999997,14385000,2.5.1,,True,"4,5,6,7",
+cp314:manual_dict:numpy,cp314,/usr/bin/python3.14,3.14.6,cpython,manual_dict,numpy,5000,7,11635.3672,11239.1326,11239.1326,13674.3202,11.635367200000001,14455000,2.5.1,,True,"4,5,6,7",
+cp314:manual_dict:none,cp314,/usr/bin/python3.14,3.14.6,cpython,manual_dict,none,5000,7,2181.1292,2151.0754,2151.0754,2217.4648,2.1811292,14385000,2.5.1,,True,"4,5,6,7",
+cp314:manual_slots:numpy,cp314,/usr/bin/python3.14,3.14.6,cpython,manual_slots,numpy,5000,7,11435.7604,11160.0854,11160.0854,11663.151,11.4357604,14455000,2.5.1,,True,"4,5,6,7",
+cp314:manual_slots:none,cp314,/usr/bin/python3.14,3.14.6,cpython,manual_slots,none,5000,7,2303.7432,2248.719,2248.719,2350.8788,2.3037432,14385000,2.5.1,,True,"4,5,6,7",
+cp314:namedtuple:numpy,cp314,/usr/bin/python3.14,3.14.6,cpython,namedtuple,numpy,5000,7,12167.13,11707.7858,11707.7858,12622.182,12.167129999999998,14455000,2.5.1,,True,"4,5,6,7",
+cp314:namedtuple:none,cp314,/usr/bin/python3.14,3.14.6,cpython,namedtuple,none,5000,7,2646.0056,2595.9766,2595.9766,2956.5852,2.6460056,14385000,2.5.1,,True,"4,5,6,7",
+cp314:dict:numpy,cp314,/usr/bin/python3.14,3.14.6,cpython,dict,numpy,5000,7,12113.33,11751.279,11751.279,12849.551,12.11333,14455000,2.5.1,,True,"4,5,6,7",
+cp314:dict:none,cp314,/usr/bin/python3.14,3.14.6,cpython,dict,none,5000,7,2933.937,2846.9916,2846.9916,3276.0492,2.933937,14385000,2.5.1,,True,"4,5,6,7",

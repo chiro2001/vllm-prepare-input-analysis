@@ -1,0 +1,7 @@
+[ perf record: Woken up 37 times to write data ]
+Warning:
+Processed 1443 events and lost 1 chunks!
+
+Check IO/CPU overload!
+
+[ perf record: Captured and wrote 9.287 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke4_20260924-015834/passes/perf/perf.data (1131 samples) ]

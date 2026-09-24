@@ -1,0 +1,6 @@
+# C7: CpuGpuBuffer(device='npu:0', pin_memory=True)
+# ok=True  0.18 ms
+# value: {'cpu.device': 'cpu', 'gpu.device': 'cpu', 'cpu.is_pinned': False}
+# exc: None
+# ---- traceback ----
+

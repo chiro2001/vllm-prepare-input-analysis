@@ -1,0 +1,1 @@
+{"counters": {"PORTS_2": 1913578099, "PORTS_3": 2927703697, "PORTS_4": 3421431068, "PORTS_5": 2942865444, "PORTS_6": 3230446262, "LD_CANCEL_DTLB_MISS": 1813019, "LD_CANCEL_MISALIGN": 112728130, "LD_CANCEL_LQ_FULL": 286}, "confidence": 1.0, "ipc": null, "stopped_reason": "target_exit"}

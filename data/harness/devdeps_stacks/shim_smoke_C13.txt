@@ -1,0 +1,6 @@
+# C13: torch.zeros(pin_memory=True)
+# ok=True  1.4 ms
+# value: {'shape': (4,), 'str': 'tensor([0., 0., 0., 0.])'}
+# exc: None
+# ---- traceback ----
+

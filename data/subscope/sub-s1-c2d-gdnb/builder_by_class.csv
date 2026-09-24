@@ -1,0 +1,3 @@
+builder_class,n_calls_per_step,self_us_p50,self_us_p90,self_us_p99,self_us_max,self_us_per_call_p50,share_pct_of_prepare_input_p50
+AscendGDNAttentionMetadataBuilder,3.0,172.86,175.54,203.83,3402.56,57.62,5.25
+AscendAttentionMetadataBuilder,1.0,35.89,36.86,37.48,38.55,35.89,1.09

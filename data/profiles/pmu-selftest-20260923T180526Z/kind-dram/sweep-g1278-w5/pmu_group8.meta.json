@@ -1,0 +1,101 @@
+{
+  "schema": "pi-pmu-group-meta-v1",
+  "tag": "selftest-20260923T180526Z-dram",
+  "group": 8,
+  "preset": "920b_topdown_full_8",
+  "events": [
+    "dram_remote",
+    "dram_remote_cache",
+    "st_sca_full",
+    "st_head_no_pgen",
+    "st_order_fail",
+    "st_bound_pipeline"
+  ],
+  "tid": 4180345,
+  "pid": 0,
+  "status": "ok",
+  "attempts": 1,
+  "rc": 0,
+  "timed_out": false,
+  "error": null,
+  "outer_wall_s": 5.1354,
+  "inner_wall_s": 5.015574,
+  "started_at_utc": "2026-09-23T18:14:00Z",
+  "finished_at_utc": "2026-09-23T18:14:05Z",
+  "confidence": 1.0,
+  "time_enabled": 5000525890,
+  "time_running": 5000525890,
+  "useronly_forced": false,
+  "counters": [
+    {
+      "name": "DRAM_REMOTE",
+      "id": "dram_remote",
+      "config": "0x7022",
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "DRAM_REMOTE_CACHE",
+      "id": "dram_remote_cache",
+      "config": "0x7023",
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "ST_SCA_FULL",
+      "id": "st_sca_full",
+      "config": "0x50a0",
+      "delta": 231069,
+      "rate": 46208.939836
+    },
+    {
+      "name": "ST_HEAD_NO_PGEN",
+      "id": "st_head_no_pgen",
+      "config": "0x50a2",
+      "delta": 953837,
+      "rate": 190747.337577
+    },
+    {
+      "name": "ST_ORDER_FAIL",
+      "id": "st_order_fail",
+      "config": "0x50a3",
+      "delta": 79860076,
+      "rate": 15970335.472056
+    },
+    {
+      "name": "ST_BOUND_PIPELINE",
+      "id": "st_bound_pipeline",
+      "config": "0x50a4",
+      "delta": 11804,
+      "rate": 2360.551722
+    }
+  ],
+  "counters_map": {
+    "DRAM_REMOTE": 0,
+    "DRAM_REMOTE_CACHE": 0,
+    "ST_SCA_FULL": 231069,
+    "ST_HEAD_NO_PGEN": 953837,
+    "ST_ORDER_FAIL": 79860076,
+    "ST_BOUND_PIPELINE": 11804
+  },
+  "cmd": [
+    "sudo",
+    "-n",
+    "/usr/bin/python3",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+    "--inner",
+    "--tid",
+    "4180345",
+    "--group",
+    "8",
+    "--window",
+    "5.000000",
+    "--preset-prefix",
+    "920b_topdown_full_",
+    "--kperfx-python",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/python",
+    "--quiet"
+  ],
+  "stderr_tail": "KPERFX_META {\"group\": 8, \"preset\": \"920b_topdown_full_8\", \"events\": [\"dram_remote\", \"dram_remote_cache\", \"st_sca_full\", \"st_head_no_pgen\", \"st_order_fail\", \"st_bound_pipeline\"], \"tid\": 4180345, \"window_requested_s\": 5.0, \"wall_s\": 5.015574, \"started_at_utc\": \"2026-09-23T18:14:00Z\", \"finished_at_utc\": \"2026-09-23T18:14:05Z\", \"time_enabled_ns\": 5000525890, \"time_running_ns\": 5000525890, \"confidence\": 1.0, \"useronly_forced\": false, \"instances\": 1, \"counters\": 6, \"raw_json_writer\": \"kperfx_ctx_write_output\"}\n",
+  "raw_json_writer": "kperfx_ctx_write_output"
+}

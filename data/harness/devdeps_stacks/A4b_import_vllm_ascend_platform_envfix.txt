@@ -1,0 +1,36 @@
+# step_id     : A4b_import_vllm_ascend_platform
+# title       : import vllm_ascend.platform
+# cwd         : /work
+# returncode  : 0
+# duration_s  : 4.99
+# extra env   : {"USER": "probe", "LOGNAME": "probe"}
+# env overrides: {}
+# ---- COMMAND (python -c) ----
+import vllm_ascend.platform as p
+print("vllm_ascend.platform OK:", p.__file__)
+print("NPUPlatform:", p.NPUPlatform)
+print("device_name:", p.NPUPlatform.device_name)
+# ---- STDOUT ----
+INFO 09-23 17:45:09 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 17:45:09 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-23 17:45:09 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-23 17:45:09 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-23 17:45:12 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+vllm_ascend.platform OK: /vllm-workspace/vllm-ascend/vllm_ascend/platform.py
+NPUPlatform: <class 'vllm_ascend.platform.NPUPlatform'>
+device_name: npu
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.
+# ---- STDERR ----
+can not use command: npu-smi info
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+
+# ---- END ----

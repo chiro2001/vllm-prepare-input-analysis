@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="460" viewBox="0 0 640 460" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="640" height="460" fill="#ffffff"/>
+<text x="62" y="18" font-size="13" font-weight="bold">Share of prepare input wall time (%)</text>
+<line x1="62" y1="342" x2="618" y2="342" stroke="#333" stroke-width="1"/>
+<line x1="62" y1="28" x2="62" y2="342" stroke="#333" stroke-width="1"/>
+<line x1="62" y1="342.0" x2="618" y2="342.0" stroke="#eeeeee" stroke-width="1"/>
+<text x="56" y="346.0" font-size="10" text-anchor="end" fill="#444">0</text>
+<line x1="62" y1="263.5" x2="618" y2="263.5" stroke="#eeeeee" stroke-width="1"/>
+<text x="56" y="267.5" font-size="10" text-anchor="end" fill="#444">25</text>
+<line x1="62" y1="185.0" x2="618" y2="185.0" stroke="#eeeeee" stroke-width="1"/>
+<text x="56" y="189.0" font-size="10" text-anchor="end" fill="#444">50</text>
+<line x1="62" y1="106.5" x2="618" y2="106.5" stroke="#eeeeee" stroke-width="1"/>
+<text x="56" y="110.5" font-size="10" text-anchor="end" fill="#444">75</text>
+<line x1="62" y1="28.0" x2="618" y2="28.0" stroke="#eeeeee" stroke-width="1"/>
+<text x="56" y="32.0" font-size="10" text-anchor="end" fill="#444">100</text>
+<rect x="153.0" y="321.3" width="96.0" height="20.7" fill="#1f4e79" stroke="#ffffff" stroke-width="0.5"><title>synchronize+update_states: 6.61%</title></rect>
+<rect x="153.0" y="313.1" width="96.0" height="8.1" fill="#2e75b6" stroke="#ffffff" stroke-width="0.5"><title>block_table commit: 2.59%</title></rect>
+<rect x="153.0" y="310.6" width="96.0" height="2.5" fill="#5b9bd5" stroke="#ffffff" stroke-width="0.5"><title>attn_state: 0.81%</title></rect>
+<rect x="153.0" y="302.1" width="96.0" height="8.5" fill="#9dc3e6" stroke="#ffffff" stroke-width="0.5"><title>positions+token_indices: 2.70%</title></rect>
+<rect x="153.0" y="299.5" width="96.0" height="2.6" fill="#ffc000" stroke="#ffffff" stroke-width="0.5"><title>query_start_loc: 0.82%</title></rect>
+<rect x="153.0" y="264.8" width="96.0" height="34.8" fill="#ed7d31" stroke="#ffffff" stroke-width="0.5"><title>input_ids/H2D: 11.08%</title></rect>
+<rect x="153.0" y="238.0" width="96.0" height="26.7" fill="#a5a5a5" stroke="#ffffff" stroke-width="0.5"><title>bookkeeping other: 8.52%</title></rect>
+<rect x="153.0" y="233.4" width="96.0" height="4.6" fill="#c00000" stroke="#ffffff" stroke-width="0.5"><title>batch padding decision: 1.48%</title></rect>
+<rect x="153.0" y="215.2" width="96.0" height="18.1" fill="#7030a0" stroke="#ffffff" stroke-width="0.5"><title>scheduler glue: 5.77%</title></rect>
+<rect x="153.0" y="161.6" width="96.0" height="53.7" fill="#00b0f0" stroke="#ffffff" stroke-width="0.5"><title>attn metadata: 17.09%</title></rect>
+<rect x="153.0" y="139.4" width="96.0" height="22.2" fill="#888" stroke="#ffffff" stroke-width="0.5"><title>attn metadata (builder by class): 7.07%</title></rect>
+<rect x="153.0" y="49.0" width="96.0" height="90.4" fill="#888" stroke="#ffffff" stroke-width="0.5"><title>attn metadata (GDN): 28.79%</title></rect>
+<rect x="153.0" y="28.0" width="96.0" height="21.0" fill="#d9d9d9" stroke="#ffffff" stroke-width="0.5"><title>pi: (unattributed): 6.67%</title></rect>
+<text x="201.0" y="358" font-size="11" text-anchor="middle">B=1 decode (full 2nd-level probes)</text>
+<rect x="431.0" y="313.6" width="96.0" height="28.4" fill="#1f4e79" stroke="#ffffff" stroke-width="0.5"><title>synchronize+update_states: 9.05%</title></rect>
+<rect x="431.0" y="307.4" width="96.0" height="6.2" fill="#2e75b6" stroke="#ffffff" stroke-width="0.5"><title>block_table commit: 1.97%</title></rect>
+<rect x="431.0" y="305.4" width="96.0" height="2.0" fill="#5b9bd5" stroke="#ffffff" stroke-width="0.5"><title>attn_state: 0.64%</title></rect>
+<rect x="431.0" y="298.2" width="96.0" height="7.2" fill="#9dc3e6" stroke="#ffffff" stroke-width="0.5"><title>positions+token_indices: 2.29%</title></rect>
+<rect x="431.0" y="296.3" width="96.0" height="1.9" fill="#ffc000" stroke="#ffffff" stroke-width="0.5"><title>query_start_loc: 0.61%</title></rect>
+<rect x="431.0" y="209.4" width="96.0" height="86.8" fill="#ed7d31" stroke="#ffffff" stroke-width="0.5"><title>input_ids/H2D: 27.65%</title></rect>
+<rect x="431.0" y="188.5" width="96.0" height="21.0" fill="#a5a5a5" stroke="#ffffff" stroke-width="0.5"><title>bookkeeping other: 6.68%</title></rect>
+<rect x="431.0" y="184.9" width="96.0" height="3.5" fill="#c00000" stroke="#ffffff" stroke-width="0.5"><title>batch padding decision: 1.12%</title></rect>
+<rect x="431.0" y="170.8" width="96.0" height="14.2" fill="#7030a0" stroke="#ffffff" stroke-width="0.5"><title>scheduler glue: 4.51%</title></rect>
+<rect x="431.0" y="48.2" width="96.0" height="122.6" fill="#00b0f0" stroke="#ffffff" stroke-width="0.5"><title>attn metadata: 39.05%</title></rect>
+<rect x="431.0" y="28.0" width="96.0" height="20.2" fill="#d9d9d9" stroke="#ffffff" stroke-width="0.5"><title>pi: (unattributed): 6.42%</title></rect>
+<text x="479.0" y="358" font-size="11" text-anchor="middle">B=64 decode (1st-level probes: GDN inside cyan)</text>
+<rect x="62.0" y="371.0" width="10" height="10" fill="#1f4e79"/><text x="76.0" y="380.0" font-size="10" fill="#222">synchronize+update_states</text>
+<rect x="247.3" y="371.0" width="10" height="10" fill="#2e75b6"/><text x="261.3" y="380.0" font-size="10" fill="#222">block_table commit</text>
+<rect x="432.7" y="371.0" width="10" height="10" fill="#5b9bd5"/><text x="446.7" y="380.0" font-size="10" fill="#222">attn_state</text>
+<rect x="62.0" y="387.0" width="10" height="10" fill="#9dc3e6"/><text x="76.0" y="396.0" font-size="10" fill="#222">positions+token_indices</text>
+<rect x="247.3" y="387.0" width="10" height="10" fill="#ffc000"/><text x="261.3" y="396.0" font-size="10" fill="#222">query_start_loc</text>
+<rect x="432.7" y="387.0" width="10" height="10" fill="#ed7d31"/><text x="446.7" y="396.0" font-size="10" fill="#222">input_ids/H2D</text>
+<rect x="62.0" y="403.0" width="10" height="10" fill="#a5a5a5"/><text x="76.0" y="412.0" font-size="10" fill="#222">bookkeeping other</text>
+<rect x="247.3" y="403.0" width="10" height="10" fill="#70ad47"/><text x="261.3" y="412.0" font-size="10" fill="#222">spec decode metadata</text>
+<rect x="432.7" y="403.0" width="10" height="10" fill="#c00000"/><text x="446.7" y="412.0" font-size="10" fill="#222">batch padding decision</text>
+<rect x="62.0" y="419.0" width="10" height="10" fill="#7030a0"/><text x="76.0" y="428.0" font-size="10" fill="#222">scheduler glue</text>
+<rect x="247.3" y="419.0" width="10" height="10" fill="#00b0f0"/><text x="261.3" y="428.0" font-size="10" fill="#222">attn metadata</text>
+<rect x="432.7" y="419.0" width="10" height="10" fill="#888"/><text x="446.7" y="428.0" font-size="10" fill="#222">attn metadata (builder by class)</text>
+<rect x="62.0" y="435.0" width="10" height="10" fill="#888"/><text x="76.0" y="444.0" font-size="10" fill="#222">attn metadata (GDN)</text>
+<rect x="247.3" y="435.0" width="10" height="10" fill="#d9d9d9"/><text x="261.3" y="444.0" font-size="10" fill="#222">pi: (unattributed)</text>
+</svg>

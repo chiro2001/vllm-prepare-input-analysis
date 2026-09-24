@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "host": "a3-22 Kunpeng 920B",
+    "cpuset": "200-215 (NUMA node2)",
+    "method": "time.perf_counter_ns, 300 reps, 取中位数；容器 --network none",
+    "script": "scratch/micro_parts.py",
+    "note": "这是理解 prepare_input 为什么贵的微观基础：920B 上单次小操作固定开销 2-9µs，远大于数据搬运本身"
+  },
+  "rows": [
+    {
+      "name": "empty_lambda",
+      "expr": null,
+      "us": 0.11,
+      "comment": "空 lambda：调用开销基线"
+    },
+    {
+      "name": "torch_Tensor_numpy",
+      "expr": "bt.numpy() 64x2048 int32",
+      "us": 1.93,
+      "comment": "Tensor->ndarray（零拷贝）"
+    },
+    {
+      "name": "pos_numpy",
+      "expr": "pos.numpy() 16384 int64",
+      "us": 1.92,
+      "comment": "同上"
+    },
+    {
+      "name": "np_full_16384",
+      "expr": "np.full(16384,-1,int32)",
+      "us": 4.15,
+      "comment": "64KB memset"
+    },
+    {
+      "name": "torch_from_numpy",
+      "expr": "torch.from_numpy(arr)",
+      "us": 1.63,
+      "comment": "ndarray->Tensor（零拷贝）"
+    },
+    {
+      "name": "copy_8",
+      "expr": "sm[:8].copy_(...) 8 元素",
+      "us": 8.61,
+      "comment": "**8 元素拷贝要 8.6µs**：固定开销主导"
+    },
+    {
+      "name": "copy_16384",
+      "expr": "sm[:16384].copy_(...) 64KB",
+      "us": 9.47,
+      "comment": "64KB 只比 8 元素贵 0.9µs"
+    },
+    {
+      "name": "np_repeat_0",
+      "expr": "np.repeat(x, 0 元素)",
+      "us": 2.96,
+      "comment": "空操作也要 3µs"
+    },
+    {
+      "name": "np_cumsum_8",
+      "expr": "np.cumsum(arange(8))",
+      "us": 4.11,
+      "comment": "8 元素 cumsum 4.1µs"
+    },
+    {
+      "name": "fancy_index_3",
+      "expr": "bt[arr,arr] 3 元素花式索引",
+      "us": 7.84,
+      "comment": "花式索引 7.8µs"
+    },
+    {
+      "name": "subset_ops_8",
+      "expr": "cumsum+repeat+arange+索引（8 元素）",
+      "us": 21.05,
+      "comment": "**8 个 numpy 小操作 ≈21µs**"
+    }
+  ]
+}

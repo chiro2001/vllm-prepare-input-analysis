@@ -1,0 +1,46 @@
+scope,group,n_steps_present,steps_present_pct,self_us_mean,self_us_p50,self_us_p90,self_us_p99,self_us_max,incl_us_p50,n_calls_per_step,share_pct_of_prepare_input_p50
+pi: am.builder_build@AscendGDNAttentionMetadataBuilder,attn metadata (builder by class),121,98.4,936.538,908.51,933.55,988.19,4054.86,908.51,3.0,29.34
+pi: build_attention_metadata,attn metadata,121,98.4,283.647,281.81,295.31,314.62,315.76,1522.05,1.0,9.1
+pi: in.slot_mapping,unmapped,121,98.4,137.333,136.73,140.54,154.03,174.74,136.73,1.0,4.42
+pi: in.positions_assembly,input_ids/H2D,121,98.4,112.053,110.37,116.97,132.89,152.34,110.37,1.0,3.56
+pi: sync_input_prep,synchronize+update_states,123,100.0,115.233,106.01,132.21,159.61,196.36,2873.23,1.0,3.42
+pi: update_states,synchronize+update_states,123,100.0,109.207,102.72,110.69,222.99,472.64,102.72,1.0,3.32
+pi: prepare_inputs,unmapped,121,98.4,96.127,95.3,97.9,111.79,112.36,978.45,1.0,3.08
+pi: am.group_loop,attn metadata,121,98.4,88.509,88.2,91.91,107.33,109.0,1146.2,4.0,2.85
+pi: in.block_table_commit,block_table commit,121,98.4,86.559,84.45,93.6,110.04,112.94,84.45,1.0,2.73
+pi: am.cm_base_pre,attn metadata,121,98.4,75.678,74.68,77.7,92.46,110.47,74.68,1.0,2.41
+pi: in.prepare_input_ids,input_ids/H2D,121,98.4,65.816,65.32,68.25,82.54,82.87,65.32,1.0,2.11
+pi: in.tokens_to_gpu,input_ids/H2D,121,98.4,59.634,58.44,62.92,77.6,78.16,58.44,1.0,1.89
+pi: in.discard_mask,bookkeeping other,121,98.4,58.322,57.48,60.16,77.5,81.58,57.48,1.0,1.86
+pi: in.seq_lens,input_ids/H2D,121,98.4,56.57,56.06,59.3,62.72,70.72,56.06,1.0,1.81
+pi: phase_classify,scheduler glue,121,98.4,56.074,53.41,77.21,87.24,100.5,53.41,1.0,1.72
+pi: batch_exec_and_padding,batch padding decision,121,98.4,51.049,50.72,52.19,58.08,73.3,50.72,1.0,1.64
+pi: in.optimistic_seq_lens,bookkeeping other,121,98.4,49.809,49.22,50.85,61.53,83.47,49.22,1.0,1.59
+pi: in.logits_indices,bookkeeping other,121,98.4,40.626,39.77,42.08,66.47,69.27,39.77,2.0,1.28
+pi: in.mrope_positions,input_ids/H2D,121,98.4,40.079,39.62,41.73,52.21,54.12,39.62,1.0,1.28
+pi: am.builder_build@AscendAttentionMetadataBuilder,attn metadata (builder by class),121,98.4,36.421,36.31,37.08,39.22,39.49,121.66,1.0,1.17
+pi: am.build.qsl_h2d,attn metadata,121,98.4,33.675,33.16,35.05,43.23,50.19,33.16,1.0,1.07
+pi: in.prev_positions,positions+token_indices,121,98.4,30.179,30.24,31.4,34.32,45.38,30.24,1.0,0.98
+pi: pad_query_start_loc,scheduler glue,120,97.6,29.112,28.88,30.04,32.28,33.68,28.88,1.0,0.93
+pi: in.attn_state,attn_state,121,98.4,27.884,27.69,29.08,32.44,36.92,27.69,1.0,0.89
+pi: in.query_start_loc,query_start_loc,121,98.4,43.149,27.1,30.0,44.69,1894.55,27.1,1.0,0.88
+pi: in.token_indices_select,positions+token_indices,121,98.4,25.85,25.59,26.68,30.73,33.64,25.59,1.0,0.83
+pi: in.positions,positions+token_indices,121,98.4,25.484,25.19,26.08,30.97,41.13,25.19,1.0,0.81
+pi: am.builder_build,attn metadata,121,98.4,20.333,20.07,21.01,23.17,38.86,1049.95,4.0,0.65
+pi: am.max_seq_len,attn metadata,121,98.4,18.415,18.28,18.8,21.85,34.92,18.28,1.0,0.59
+pi: in.num_computed_tokens,input_ids/H2D,121,98.4,18.518,17.94,18.49,32.77,41.21,17.94,1.0,0.58
+pi: am.build.backend_metadata,attn metadata,121,98.4,15.486,15.14,16.21,28.98,31.06,15.14,1.0,0.49
+pi: in.num_accepted_tokens,input_ids/H2D,121,98.4,14.636,14.35,15.36,17.88,29.11,14.35,1.0,0.46
+pi: cascade_attn_prefix_lens,scheduler glue,121,98.4,10.667,10.64,11.21,12.12,13.02,10.64,1.0,0.34
+pi: in.req_indices,positions+token_indices,121,98.4,10.195,9.67,10.7,23.77,29.52,9.67,1.0,0.31
+pi: am.build.tolist,attn metadata,121,98.4,9.394,9.41,9.83,10.72,11.07,9.41,1.0,0.3
+pi: am.build.split_decodes,attn metadata,121,98.4,9.521,9.28,9.71,12.24,32.66,9.28,1.0,0.3
+pi: am.build.seq_lens_select,attn metadata,121,98.4,8.631,8.62,8.93,9.64,10.1,8.62,1.0,0.28
+pi: am.layer_assign,attn metadata,121,98.4,7.491,7.46,7.92,8.95,9.28,7.46,4.0,0.24
+pi: am.build.metadata_ctor,attn metadata,121,98.4,6.604,6.53,6.96,8.71,8.97,6.53,1.0,0.21
+pi: am.build.fia_pad,attn metadata,121,98.4,1.777,1.74,1.88,2.39,2.66,1.74,1.0,0.06
+pi: ubatch_slices,scheduler glue,121,98.4,1.545,1.53,1.63,2.14,2.52,1.53,1.0,0.05
+pi: am.build.attn_mask,attn metadata,121,98.4,1.246,1.24,1.34,1.49,1.58,1.24,1.0,0.04
+pi: sanitize_placeholder_ids,scheduler glue,121,98.4,1.129,1.11,1.23,1.43,1.45,1.11,1.0,0.04
+pi: tokens_list,scheduler glue,121,98.4,1.048,1.05,1.11,1.15,1.21,1.05,1.0,0.03
+pi: in.mrope_drift,input_ids/H2D,121,98.4,0.686,0.67,0.73,0.79,1.61,0.67,1.0,0.02

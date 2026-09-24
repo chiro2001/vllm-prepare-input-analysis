@@ -1,0 +1,9 @@
+{
+  "caliber_version": "prof-v1",
+  "kind": "annotate",
+  "file": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_hash_20260924-021336/passes/perf/annotate/0x000000000022ff54.txt",
+  "n_instructions": 0,
+  "sum_instr_pct": 0,
+  "hot_source_lines": [],
+  "top_instructions": []
+}

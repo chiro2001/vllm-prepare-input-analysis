@@ -1,0 +1,25 @@
+$ perf report --stdio -i /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-c.data --no-children --percent-limit 0.2 -g none
+# rc=0 wall_s=0.154
+
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2K of event 'cycles:P'
+# Event count (approx.): 8676871930
+#
+# Overhead  Command     Shared Object      Symbol                          
+# ........  ..........  .................  ................................
+#
+    56.10%  probe_load  probe_load         [.] probe_hot_branch
+    32.78%  probe_load  probe_load         [.] probe_hot_pointer_chase
+    10.94%  probe_load  probe_load         [.] probe_hot_fp
+
+
+#
+# (Tip: Use --symfs <dir> if your symbol files are in non-standard locations)
+#
+
+----- stderr -----
+

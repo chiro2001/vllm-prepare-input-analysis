@@ -1,0 +1,671 @@
+overhead_percent,shared_object,symbol,ipc,ipc_coverage
+9.58,libpython3.12.so.1.0,[.] _PyEval_EvalFrameDefault,-,-
+1.91,[kernel.kallsyms],[k] eventfd_write,-,-
+1.75,libpython3.12.so.1.0,[.] unicodekeys_lookup_unicode,-,-
+1.67,libc.so.6,[.] pthread_mutex_lock,-,-
+1.42,libc10.so,[.] c10::WarningUtils::get_warning_handler(),-,-
+1.20,libpython3.12.so.1.0,[.] initialize_locals,-,-
+1.16,libpython3.12.so.1.0,[.] gen_dealloc,-,-
+1.12,libpython3.12.so.1.0,[.] _PyObject_GenericGetAttrWithDict,-,-
+1.12,libpython3.12.so.1.0,[.] _PyObject_Free,-,-
+1.06,libpython3.12.so.1.0,[.] _Py_dict_lookup,-,-
+1.05,libpython3.12.so.1.0,[.] _PyObject_Malloc,-,-
+0.91,libpython3.12.so.1.0,[.] _PyType_Lookup,-,-
+0.81,libtorch_cpu.so,[.] at::impl::torch_function_mode_enabled(),-,-
+0.72,libpython3.12.so.1.0,[.] tupledealloc,-,-
+0.67,libpython3.12.so.1.0,[.] PyObject_GetAttr,-,-
+0.63,libjemalloc.so.2,[.] operator new(unsigned long),-,-
+0.61,libjemalloc.so.2,[.] free,-,-
+0.59,libruntime_v100.so,[.] 0x0000000000067430,-,-
+0.56,libtorch_npu.so,[.] 0x0000000001713624,-,-
+0.56,libc.so.6,[.] pthread_rwlock_rdlock,-,-
+0.56,libpython3.12.so.1.0,[.] unicode_decode_utf8,-,-
+0.56,libtorch_python.so,"[.] torch::FunctionSignature::parse(_object*, _object*, _object*, _object**, std::vector<_object*, std::allocator<_object*> >&, bool)",-,-
+0.55,libtorch_cpu.so,"[.] torch::ADInplaceOrView::(anonymous namespace)::slice_Tensor(c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)",-,-
+0.50,ld-linux-aarch64.so.1,[.] 0x00000000000127a0,-,-
+0.49,libtorch_python.so,[.] torch::PyWarningHandler::~PyWarningHandler(),-,-
+0.49,libc.so.6,[.] 0x0000000000083e78,-,-
+0.48,libpython3.12.so.1.0,[.] PyType_IsSubtype,-,-
+0.45,libtorch_npu.so,[.] c10_npu::current_device(),-,-
+0.43,libc10.so,[.] c10::get_default_dtype_as_scalartype(),-,-
+0.42,libc.so.6,[.] 0x0000000000083e70,-,-
+0.42,libpython3.12.so.1.0,[.] PyObject_GC_UnTrack,-,-
+0.42,libpython3.12.so.1.0,[.] tuple_alloc,-,-
+0.42,[kernel.kallsyms],[k] el0_svc,-,-
+0.41,libtorch_cpu.so,[.] c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const,-,-
+0.37,libtorch_cpu.so,"[.] at::_ops::slice_Tensor::call(at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)",-,-
+0.36,libtorch_cpu.so,"[.] at::_ops::as_strided::call(at::Tensor const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, std::optional<c10::SymInt>)",-,-
+0.35,libtorch_cpu.so,[.] c10::SymInt::SymInt(c10::SymInt const&),-,-
+0.35,libtorch_npu.so,[.] c10_npu::GetDevice(int*),-,-
+0.35,[kernel.kallsyms],[k] handle_softirqs,-,-
+0.35,ld-linux-aarch64.so.1,[.] 0x00000000000127f0,-,-
+0.35,libpython3.12.so.1.0,[.] insert_to_emptydict,-,-
+0.34,libc10.so,"[.] c10::intrusive_ptr<c10::StorageImpl, c10::detail::intrusive_target_default_null_type<c10::StorageImpl> >::reset_not_null_(c10::StorageImpl*)",-,-
+0.32,ld-linux-aarch64.so.1,[.] 0x00000000000127e0,-,-
+0.29,libpython3.12.so.1.0,[.] _PyDict_FromItems,-,-
+0.29,libc.so.6,[.] __errno_location,-,-
+0.28,libtorch_cpu.so,"[.] at::native::slice(at::Tensor const&, long, std::optional<long>, std::optional<long>, long)",-,-
+0.28,libpython3.12.so.1.0,[.] PyType_GenericAlloc,-,-
+0.28,libpython3.12.so.1.0,[.] take_gil,-,-
+0.28,libtorch_python.so,"[.] c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::reset_not_null_(c10::TensorImpl*)",-,-
+0.28,libtorch_cpu.so,"[.] c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::reset_not_null_(c10::TensorImpl*)",-,-
+0.28,libtorch_python.so,"[.] at::indexing::Slice::Slice(std::optional<c10::SymInt>, std::optional<c10::SymInt>, std::optional<c10::SymInt>)",-,-
+0.28,libpython3.12.so.1.0,[.] free_keys_object,-,-
+0.28,libpython3.12.so.1.0,[.] subtype_dealloc,-,-
+0.28,libtorch_cpu.so,"[.] c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd_Tensor_slice>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt> >, at::Tensor (at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)",-,-
+0.28,libpython3.12.so.1.0,[.] PyObject_IsInstance,-,-
+0.28,libc.so.6,[.] pthread_rwlock_unlock,-,-
+0.28,libtorch_cpu.so,"[.] torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)",-,-
+0.28,libnnopbase.so,"[.] op::internal::GetAddr(int, unsigned long)",-,-
+0.27,libtorch_python.so,"[.] at::indexing::impl::applySlice(at::Tensor const&, long, c10::SymInt, c10::SymInt, c10::SymInt, bool, c10::Device const&, std::optional<c10::ArrayRef<c10::SymInt> > const&)",-,-
+0.25,libopapi_math.so,"[.] l0op::ReFormat(aclTensor const*, ge::Format const&, aclOpExecutor*)",-,-
+0.24,libtorch_python.so,"[.] torch::autograd::THPVariable_getitem(_object*, _object*)",-,-
+0.23,libpython3.12.so.1.0,[.] _PyObject_GetInstanceAttribute,-,-
+0.23,libpython3.12.so.1.0,[.] _PyEvalFramePushAndInit,-,-
+0.23,libc.so.6,[.] __memcmpeq,-,-
+0.21,libtorch_cpu.so,"[.] at::detail::computeStorageNbytes(c10::ArrayRef<long>, c10::ArrayRef<long>, unsigned long, unsigned long)",-,-
+0.21,libopapi_math.so,"[.] l0op::Contiguous(aclTensor const*, aclOpExecutor*)",-,-
+0.21,[kernel.kallsyms],[k] __fget_files,-,-
+0.21,libpython3.12.so.1.0,[.] PyObject_Vectorcall,-,-
+0.21,libc10.so,"[.] c10::TensorImpl::TensorImpl(c10::Storage&&, c10::DispatchKeySet, caffe2::TypeMeta, std::optional<c10::Device>)",-,-
+0.21,libpython3.12.so.1.0,[.] _PyTrash_begin,-,-
+0.21,libpython3.12.so.1.0,[.] PyUnicode_FromFormatV,-,-
+0.21,libpython3.12.so.1.0,[.] do_super_lookup,-,-
+0.21,libpython3.12.so.1.0,[.] _Py_CheckFunctionResult,-,-
+0.21,libpython3.12.so.1.0,[.] _Py_NewReference,-,-
+0.21,libpython3.12.so.1.0,[.] method_get,-,-
+0.21,libpython3.12.so.1.0,[.] vgetargskeywords,-,-
+0.21,libtorch_cpu.so,"[.] torch::autograd::as_view(at::Tensor const&, at::Tensor const&, bool, bool, std::unique_ptr<torch::autograd::ViewFunc, std::default_delete<torch::autograd::ViewFunc> >, std::function<at::Tensor (at::Tensor const&)>, torch::autograd::CreationMeta, bool)",-,-
+0.21,libpython3.12.so.1.0,[.] set_lookkey,-,-
+0.21,libpython3.12.so.1.0,[.] _PyFunction_Vectorcall,-,-
+0.21,[kernel.kallsyms],[k] selinux_file_permission,-,-
+0.21,libtorch_python.so,[.] pybind11::gil_scoped_acquire::dec_ref(),-,-
+0.21,libtorch_python.so,[.] c10::SymInt::SymInt(c10::SymInt const&),-,-
+0.21,libc10.so,[.] c10::impl::ExcludeDispatchKeyGuard::~ExcludeDispatchKeyGuard(),-,-
+0.21,libpython3.12.so.1.0,[.] PyObject_GC_Del,-,-
+0.21,libtorch_cpu.so,[.] torch::autograd::DifferentiableViewMeta::~DifferentiableViewMeta(),-,-
+0.21,libpython3.12.so.1.0,[.] _PyFrame_ClearExceptCode,-,-
+0.21,libtorch_cpu.so,"[.] c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0]",-,-
+0.21,libpython3.12.so.1.0,[.] _PyTrash_end,-,-
+0.21,libpython3.12.so.1.0,[.] PyDict_GetItemWithError,-,-
+0.21,libunified_dlog.so,[.] CheckLogLevel,-,-
+0.21,libc10.so,[.] c10::AutogradState::get_tls_state(),-,-
+0.21,libtorch_npu.so,[.] c10_npu::get_npu_data_unsafe_flag(),-,-
+0.21,libtorch_python.so,"[.] _object* THPVariable_WrapWithType<at::TensorBase>(at::TensorBase&&, std::optional<_typeobject*>) [clone .isra.0]",-,-
+0.21,ld-linux-aarch64.so.1,[.] 0x0000000000012804,-,-
+0.21,libpython3.12.so.1.0,[.] PyObject_Malloc,-,-
+0.21,libtorch_python.so,[.] pybind11::gil_scoped_acquire::gil_scoped_acquire(),-,-
+0.21,libjemalloc.so.2,"[.] operator delete(void*, unsigned long)",-,-
+0.21,libtorch_npu.so,[.] c10_npu::option::OptionsManager::isACLGlobalLogOn(aclLogLevel),-,-
+0.21,libpython3.12.so.1.0,[.] _PyObject_GetMethod,-,-
+0.21,libpython3.12.so.1.0,[.] _PyObject_GenericSetAttrWithDict,-,-
+0.21,libpython3.12.so.1.0,[.] PyObject_IsTrue,-,-
+0.21,libc.so.6,[.] pthread_getspecific,-,-
+0.21,libtorch_python.so,"[.] torch::jit::toIValue(pybind11::handle, c10::Type::SingletonOrSharedTypePtr<c10::Type> const&, std::optional<int>)",-,-
+0.20,libtorch_npu.so,[.] 0x0000000000e94628,-,-
+0.20,libtorch_npu.so,[.] c10_npu::impl::NPUGuardImpl::exchangeDevice(c10::Device) const,-,-
+0.20,libtorch_cpu.so,"[.] at::detail::empty_generic(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>)",-,-
+0.20,libruntime_v100.so,[.] 0x0000000000073298,-,-
+0.17,libtorch_python.so,"[.] THPModule_has_torch_function_variadic(_object*, _object* const*, long)",-,-
+0.16,libtorch_npu.so,[.] 0x0000000004adda80,-,-
+0.16,libpython3.12.so.1.0,[.] PyLong_AsLongLongAndOverflow,-,-
+0.15,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] PyArray_FromAny_int,-,-
+0.15,libpython3.12.so.1.0,[.] _PyEval_SliceIndex,-,-
+0.15,libtorch_python.so,[.] THPVariable_clear(THPVariable*),-,-
+0.15,libtorch_python.so,[.] torch::utils::is_numpy_int(_object*),-,-
+0.15,libpython3.12.so.1.0,[.] PyObject_GC_Del@plt,-,-
+0.15,libc10.so,[.] c10::TensorImpl::incref_pyobject() const,-,-
+0.14,libnnopbase.so,[.] op::internal::OpExecCacheManager::GetOpExecCache(unsigned long),-,-
+0.14,ld-linux-aarch64.so.1,[.] 0x00000000000127e4,-,-
+0.14,libtorch_python.so,[.] at::indexing::Slice::~Slice(),-,-
+0.14,ld-linux-aarch64.so.1,[.] 0x00000000000127a4,-,-
+0.14,libpython3.12.so.1.0,[.] PyErr_Occurred,-,-
+0.14,libc10.so,[.] c10::get_privateuse1_backend[abi:cxx11](bool),-,-
+0.14,libtorch_npu.so,[.] 0x00000000019a034c,-,-
+0.14,libtorch_npu.so,[.] c10_npu::NpuSysCtrl::GetInstance(),-,-
+0.14,libtorch_cpu.so,"[.] at::native::flatten(at::Tensor const&, long, long)",-,-
+0.14,libtorch_npu.so,[.] c10_npu::getCurrentNPUStream(signed char),-,-
+0.14,[kernel.kallsyms],[k] do_el0_svc,-,-
+0.14,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] PyArray_DiscoverDTypeAndShape_Recursive,-,-
+0.14,_core.cpython-312-aarch64-linux-gnu.so,[.] Struct_dealloc_nogc,-,-
+0.14,libtorch_cpu.so,"[.] at::get_overlap_status(c10::TensorImpl const*, c10::TensorImpl const*)",-,-
+0.14,libpython3.12.so.1.0,[.] dict_dealloc,-,-
+0.14,libtorch_cpu.so,[.] __aarch64_ldadd4_acq_rel,-,-
+0.14,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] NpyIter_AdvancedNew,-,-
+0.14,libnnopbase.so,"[.] aclTensor::aclTensor(long const*, unsigned long, aclDataType, long const*, long, aclFormat, long const*, unsigned long, void*)",-,-
+0.14,libpython3.12.so.1.0,[.] PyLong_AsLongAndOverflow,-,-
+0.14,ld-linux-aarch64.so.1,[.] 0x00000000000127d4,-,-
+0.14,libc10.so,[.] c10::tls_debug_info::{lambda()#1}::_FUN(),-,-
+0.14,libc.so.6,[.] 0x000000000009aec0,-,-
+0.14,libpython3.12.so.1.0,[.] PyThread_get_thread_ident,-,-
+0.14,libtorch_python.so,"[.] pybind11::cpp_function::dispatcher(_object*, _object*, _object*)",-,-
+0.14,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] _npy_parse_arguments,-,-
+0.14,libpython3.12.so.1.0,[.] type_call,-,-
+0.14,libjemalloc.so.2,[.] 0x000000000002070c,-,-
+0.14,libtorch_python.so,[.] torch::PythonArgs::toInt64(int),-,-
+0.14,libruntime_v100.so,[.] 0x0000000000073d98,-,-
+0.14,libtorch_npu.so,[.] 0x00000000018efa6c,-,-
+0.14,libnnopbase.so,[.] op::IsPrivateFormat(ge::Format),-,-
+0.14,libpython3.12.so.1.0,[.] _PyObject_Call,-,-
+0.14,libpython3.12.so.1.0,[.] PyEval_SaveThread,-,-
+0.14,libjemalloc.so.2,[.] 0x000000000002071c,-,-
+0.14,libc10.so,[.] c10::WarningUtils::set_warning_handler(c10::WarningHandler*),-,-
+0.14,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] simple_legacy_resolve_descriptors,-,-
+0.14,libtorch_cpu.so,"[.] at::native::SVE256::copy_kernel(at::TensorIterator&, bool)::{lambda()#1}::operator()() const::{lambda()#12}::operator()() const::{lambda()#1}::operator()() const [clone .isra.0]",-,-
+0.14,libpython3.12.so.1.0,[.] cell_dealloc,-,-
+0.14,libtorch_cpu.so,[.] torch::autograd::ViewInfo::~ViewInfo(),-,-
+0.14,libtorch_python.so,[.] c10::impl::InlineDeviceGuard<c10::impl::VirtualGuardImpl>::InlineDeviceGuard(c10::Device),-,-
+0.14,libpython3.12.so.1.0,[.] PyNumber_AsSsize_t,-,-
+0.14,libpython3.12.so.1.0,[.] _PySuper_Lookup,-,-
+0.14,[vdso],[.] 0x0000000000000498,-,-
+0.14,libc10.so,"[.] c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::reset_not_null_(c10::VariableVersion::VersionCounter*)",-,-
+0.14,libtorch_npu.so,"[.] std::map<long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<long>, std::allocator<std::pair<long const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](long&&)",-,-
+0.14,libpython3.12.so.1.0,[.] _PyObject_FreeInstanceAttributes,-,-
+0.14,libtorch_npu.so,[.] 0x000000000116ae7c,-,-
+0.14,libtorch_npu.so,[.] 0x0000000001869d4c,-,-
+0.14,libtorch_cpu.so,[.] at::RecordFunction::~RecordFunction(),-,-
+0.14,libtorch_npu.so,[.] add_param_to_buf(at::Tensor const&),-,-
+0.14,libpython3.12.so.1.0,[.] insertdict,-,-
+0.14,libruntime_v100.so,[.] 0x000000000036d500,-,-
+0.14,libtorch_cpu.so,"[.] at::meta::resize_reduction(at::impl::MetaBase&, at::Tensor const&, c10::OptionalArrayRef<long>, bool, c10::ScalarType, bool)",-,-
+0.14,libpython3.12.so.1.0,[.] Py_IsInitialized,-,-
+0.14,libjemalloc.so.2,[.] 0x0000000000020704,-,-
+0.14,libnnopbase.so,[.] op::mem::KernelGraph::AddKernelNode(op::mem::KernelNode*),-,-
+0.14,libmetadef.so,"[.] ge::TypeUtilsImpl::GetDataTypeLength(ge::DataType, unsigned int&)",-,-
+0.14,libc10.so,[.] c10::TensorImpl::storage() const,-,-
+0.14,libtorch_npu.so,[.] 0x0000000004add6e8,-,-
+0.14,libpython3.12.so.1.0,[.] frame_dealloc,-,-
+0.14,libpython3.12.so.1.0,[.] getset_get,-,-
+0.14,libtorch_npu.so,[.] c10_npu::impl::NPUGuardImpl::uncheckedSetDevice(c10::Device) const,-,-
+0.14,libpython3.12.so.1.0,[.] PyObject_Hash,-,-
+0.14,libstdc++.so.6.0.30,[.] std::_Rb_tree_increment(std::_Rb_tree_node_base const*),-,-
+0.14,libtorch_cpu.so,"[.] at::infer_size(c10::ArrayRef<long>, c10::ArrayRef<long>)",-,-
+0.14,libtorch_npu.so,[.] c10::TensorImpl::refresh_contiguous(),-,-
+0.14,libpython3.12.so.1.0,[.] _PyDict_GetItem_KnownHash,-,-
+0.14,libtorch_npu.so,[.] 0x00000000018d611c,-,-
+0.14,libnnopbase.so,[.] op::internal::AddParamToBuf(aclTensorList const*),-,-
+0.14,libpython3.12.so.1.0,[.] PyObject_SetAttr,-,-
+0.14,libpython3.12.so.1.0,[.] PyObject_Free,-,-
+0.14,libtorch_cpu.so,[.] at::TensorIteratorBase::compute_names(at::TensorIteratorConfig const&),-,-
+0.14,libc10.so,[.] c10::TensorImpl::autograd_meta() const,-,-
+0.14,libtorch_cpu.so,"[.] c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt), &torch::ADInplaceOrView::(anonymous namespace)::slice_Tensor>, at::Tensor, c10::guts::typelist::typelist<c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt> >, at::Tensor (c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)",-,-
+0.14,libpython3.12.so.1.0,[.] _PyObject_FastCallDictTstate,-,-
+0.14,libjemalloc.so.2,[.] 0x00000000000206e8,-,-
+0.14,libpython3.12.so.1.0,[.] _PyObject_GC_Link,-,-
+0.14,libtorch_python.so,[.] THPVariable_Wrap(at::TensorBase&&),-,-
+0.14,[vdso],[.] 0x00000000000002f0,-,-
+0.14,libstdc++.so.6.0.30,"[.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)",-,-
+0.14,libnnopbase.so,[.] op::internal::GetThreadLocalContext(),-,-
+0.14,libtorch_npu.so,[.] 0x0000000001869cf0,-,-
+0.14,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] PyArray_ResultType,-,-
+0.14,libpython3.12.so.1.0,[.] _PyThreadState_UncheckedGet,-,-
+0.14,libpython3.12.so.1.0,[.] _PyObject_RealIsInstance,-,-
+0.14,libpython3.12.so.1.0,[.] _PyTuple_FromArraySteal,-,-
+0.13,libtorch_python.so,"[.] torch::FunctionParameter::_check(_object*, std::vector<_object*, std::allocator<_object*> >&, int, long*)",-,-
+0.13,libpython3.12.so.1.0,[.] find_name_in_mro,-,-
+0.12,tokenizers.abi3.so,[.] <core::str::lossy::Utf8Chunks as core::iter::traits::iterator::Iterator>::next,-,-
+0.11,libpython3.12.so.1.0,[.] _PyArg_UnpackKeywords,-,-
+0.10,libpython3.12.so.1.0,[.] PyObject_IS_GC,-,-
+0.10,libpython3.12.so.1.0,[.] long_to_decimal_string_internal,-,-
+0.10,libc10.so,"[.] c10::SymBool::guard_or_false(char const*, long) const",-,-
+0.09,libpython3.12.so.1.0,[.] object_recursive_isinstance,-,-
+0.09,libtorch_npu.so,[.] 0x0000000001874144,-,-
+0.08,libtorch_python.so,[.] torch::autograd::__PySlice_Unpack(_object*),-,-
+0.08,libtorch_cpu.so,"[.] c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::retain_()",-,-
+0.08,libruntime_v100.so,[.] 0x00000000004a8a7c,-,-
+0.08,libtorch_npu.so,[.] 0x00000000018b282c,-,-
+0.08,libtorch_npu.so,"[.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char const*, unsigned long, unsigned long) const@plt",-,-
+0.08,libtorch_cpu.so,[.] c10::TensorImpl::empty_tensor_restride(c10::MemoryFormat),-,-
+0.08,libstdc++.so.6.0.30,"[.] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag)",-,-
+0.08,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] PyArray_TransferNDimToStrided,-,-
+0.08,libpython3.12.so.1.0,[.] _PyTuple_FromArray,-,-
+0.08,libpython3.12.so.1.0,[.] _PyThreadState_MustExit,-,-
+0.08,libtorch_npu.so,[.] 0x0000000004b392c0,-,-
+0.08,libnnopbase.so,[.] aclOpExecutor::aclOpExecutor(),-,-
+0.08,libpython3.12.so.1.0,[.] PyGILState_Ensure,-,-
+0.08,libpython3.12.so.1.0,[.] method_vectorcall,-,-
+0.08,libtorch_npu.so,[.] 0x0000000000e94670,-,-
+0.08,libpython3.12.so.1.0,[.] PyObject_Malloc@plt,-,-
+0.08,libtorch_npu.so,[.] 0x00000000019a0e14,-,-
+0.07,libnnopbase.so,[.] InitPTACacheThreadLocal,-,-
+0.07,libtorch_cpu.so,[.] torch::autograd::impl::get_autograd_meta(at::TensorBase const&),-,-
+0.07,libruntime_common.so,[.] cce::runtime::ThreadLocalContainer::SetEnvFlags(unsigned int),-,-
+0.07,libtorch_npu.so,[.] 0x0000000000ead8a0,-,-
+0.07,libtorch_npu.so,[.] 0x00000000019a5034,-,-
+0.07,libtorch_npu.so,[.] 0x000000000173e9d4,-,-
+0.07,libpython3.12.so.1.0,[.] _Py_slot_tp_getattr_hook,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] PyArray_NewFromDescr_int,-,-
+0.07,libpython3.12.so.1.0,[.] _PyBuildSlice_ConsumeRefs,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004ce6cd0,-,-
+0.07,libpython3.12.so.1.0,[.] PySequence_Contains,-,-
+0.07,[kernel.kallsyms],[k] __audit_syscall_entry,-,-
+0.07,libtorch_npu.so,[.] 0x00000000018d615c,-,-
+0.07,libjemalloc.so.2,[.] 0x000000000006b130,-,-
+0.07,libtorch_npu.so,[.] 0x00000000046a698c,-,-
+0.07,libtorch_python.so,"[.] torch::autograd::THPVariable_add(_object*, _object*, _object*)",-,-
+0.07,libtorch_cpu.so,[.] at::detail::isMTIAHooksBuilt(),-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] BOOL_logical_and,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001921ec0,-,-
+0.07,libtorch_python.so,[.] torch::jit::ToIValueAllowNumbersAsTensors::ToIValueAllowNumbersAsTensors(bool),-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] array_array,-,-
+0.07,libtorch_cpu.so,"[.] at::namedinference::propagate_names_if_nonempty(c10::TensorImpl*, c10::ArrayRef<at::Dimname>, bool)",-,-
+0.07,libtorch_npu.so,[.] 0x0000000004addb24,-,-
+0.07,libtorch_npu.so,[.] CopyTypeV2(at::Tensor const&),-,-
+0.07,libtorch_cpu.so,"[.] at::infer_dense_strides(c10::ArrayRef<long>, c10::ArrayRef<long>)",-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] ensure_native_byteorder,-,-
+0.07,libtorch_npu.so,[.] c10::TensorImpl::sizes() const,-,-
+0.07,libnnopbase.so,[.] aclStorage::GetAddr() const,-,-
+0.07,[kernel.kallsyms],[k] __fget_light,-,-
+0.07,libnnopbase.so,[.] NnopbaseCheckHasContiguous,-,-
+0.07,libpython3.12.so.1.0,[.] PySequence_Fast@plt,-,-
+0.07,libpython3.12.so.1.0,[.] list_sort_impl,-,-
+0.07,libpython3.12.so.1.0,[.] set_add_entry,-,-
+0.07,libjemalloc.so.2,[.] 0x000000000001bc20,-,-
+0.07,libruntime.so,[.] 0x000000000008a138,-,-
+0.07,libtorch_cpu.so,[.] int* at::TensorBase::data_ptr<int>() const,-,-
+0.07,libtorch_npu.so,[.] 0x00000000018b20b0,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] try_binary_elide,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] NpyIter_Deallocate,-,-
+0.07,libtorch_npu.so,"[.] std::__detail::_Map_base<signed char, std::pair<signed char const, void*>, std::allocator<std::pair<signed char const, void*> >, std::__detail::_Select1st, std::equal_to<signed char>, std::hash<signed char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](signed char&&)",-,-
+0.07,libtorch_python.so,[.] torch::jit::ToIValueAllowNumbersAsTensors::~ToIValueAllowNumbersAsTensors(),-,-
+0.07,libtorch_npu.so,[.] 0x00000000018d60a0,-,-
+0.07,libtorch_cpu.so,[.] at::TensorIteratorBase::compute_mem_overlaps(at::TensorIteratorConfig const&),-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] raw_array_is_aligned,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] bool_arrtype_nonzero,-,-
+0.07,libstdc++.so.6.0.30,"[.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()",-,-
+0.07,libc.so.6,[.] 0x000000000007c43c,-,-
+0.07,libtorch_npu.so,[.] 0x000000000181aa00,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] PyArrayIdentityHash_GetItem,-,-
+0.07,libtorch_cpu.so,"[.] c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd__alias>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&> >, at::Tensor (at::Tensor const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&)",-,-
+0.07,libtorch_npu.so,[.] 0x000000000171b4c8,-,-
+0.07,libpython3.12.so.1.0,[.] method_vectorcall_VARARGS_KEYWORDS,-,-
+0.07,libpython3.12.so.1.0,[.] listiter_next,-,-
+0.07,libtorch_cpu.so,"[.] void at::native::setStrided<long>(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, long)",-,-
+0.07,libc.so.6,[.] 0x0000000000099a40,-,-
+0.07,libm.so.6,[.] fetestexcept,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001929174,-,-
+0.07,libtorch_python.so,[.] offset_0x1c4400@plt,-,-
+0.07,libpython3.12.so.1.0,[.] _PyObject_MakeTpCall,-,-
+0.07,libpython3.12.so.1.0,[.] _PyArg_CheckPositional,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001922a58,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001838e00,-,-
+0.07,libopapi_math.so,[.] 0x00000000009ab1c8,-,-
+0.07,libophost_math.so,[.] 0x00000000002750c0,-,-
+0.07,libruntime_common.so,[.] cce::runtime::GlobalContainer::GetRtChipType(),-,-
+0.07,libpython3.12.so.1.0,[.] siphash13,-,-
+0.07,libopapi_nn.so,[.] 0x000000000075f2d0,-,-
+0.07,libtorch_npu.so,[.] 0x00000000019a0c7c,-,-
+0.07,libpython3.12.so.1.0,[.] long_div,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] default_malloc,-,-
+0.07,libpython3.12.so.1.0,[.] _PyObject_LookupSpecial@plt,-,-
+0.07,libpython3.12.so.1.0,[.] _PyArg_ParseTupleAndKeywords_SizeT,-,-
+0.07,libc.so.6,[.] pthread_setspecific,-,-
+0.07,libnnopbase.so,[.] op::internal::InferShapeContextHolder::EnsureContextCapacity(unsigned long),-,-
+0.07,libtorch_npu.so,[.] 0x0000000001921acc,-,-
+0.07,libtorch_python.so,"[.] torch::PythonArgParser::raw_parse(_object*, _object*, _object*, _object**)",-,-
+0.07,libtorch_python.so,"[.] torch::autograd::THPVariable_to(_object*, _object*, _object*)",-,-
+0.07,libnnopbase.so,[.] TLS init function for op::internal::g_opExecCacheManager,-,-
+0.07,libtorch_python.so,"[.] pybind11::cpp_function::initialize<torch::mtia::initModule(_object*)::{lambda()#2}, bool, , pybind11::name, pybind11::scope, pybind11::sibling>(torch::mtia::initModule(_object*)::{lambda()#2}&&, bool (*)(), pybind11::name const&, pybind11::scope const&, pybind11::sibling const&)::{lambda(pybind11::detail::function_call&)#1}::_FUN(pybind11::detail::function_call&)",-,-
+0.07,libtorch_npu.so,[.] 0x000000000187415c,-,-
+0.07,libtorch_cpu.so,[.] at::TensorBase::sizes() const,-,-
+0.07,libtorch_cpu.so,[.] at::TensorIteratorBase::mark_resize_outputs(at::TensorIteratorConfig const&),-,-
+0.07,libc.so.6,[.] 0x000000000009af28,-,-
+0.07,libtorch_python.so,[.] at::impl::torch_function_mode_enabled()@plt,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001922a24,-,-
+0.07,libpython3.12.so.1.0,[.] pthread_mutex_lock@plt,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004b0e0b0,-,-
+0.07,libtorch_npu.so,[.] 0x000000000192903c,-,-
+0.07,libruntime_v100.so,[.] 0x000000000036f33c,-,-
+0.07,libtorch_python.so,[.] torch::utils::is_numpy_available(),-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] promote_and_get_ufuncimpl,-,-
+0.07,libpython3.12.so.1.0,[.] object_vacall,-,-
+0.07,libtorch_python.so,"[.] c10::IValue& std::vector<c10::IValue, std::allocator<c10::IValue> >::emplace_back<c10::IValue>(c10::IValue&&) [clone .isra.0]",-,-
+0.07,libc10.so,[.] c10::TensorImpl::compute_contiguous() const,-,-
+0.07,libtorch_npu.so,[.] 0x00000000019269a4,-,-
+0.07,libnnopbase.so,"[.] op::internal::BuildGraph(void*, unsigned int, op::OpArgList&, op::OpArgList&, op::OpArgList&)",-,-
+0.07,libtorch_npu.so,[.] 0x0000000004b4e0b0,-,-
+0.07,libtorch_npu.so,[.] 0x000000000187ea54,-,-
+0.07,libc.so.6,[.] 0x0000000000099a50,-,-
+0.07,libpython3.12.so.1.0,[.] list_dealloc,-,-
+0.07,libacl_rt_impl.so,[.] aclmdlRICaptureTaskUpdateEndImpl,-,-
+0.07,libtorch_cpu.so,[.] torch::autograd::impl::get_view_autograd_meta(at::TensorBase const&),-,-
+0.07,libnnopbase.so,"[.] op::internal::TilingCtxHolder::UpdateTilingCtx(op::internal::KernelContextHolder const*, op::internal::TilingParseCtxHolder const*)",-,-
+0.07,libpython3.12.so.1.0,[.] PyErr_GivenExceptionMatches,-,-
+0.07,libtorch_npu.so,[.] 0x00000000018b2080,-,-
+0.07,libtorch_npu.so,[.] 0x000000000174bee0,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004ce6e00,-,-
+0.07,libtorch_python.so,[.] THPVariable_Wrap(at::TensorBase const&),-,-
+0.07,libnnopbase.so,[.] CanUsePTACache,-,-
+0.07,libtorch_cpu.so,"[.] at::_ops::slice_Tensor::redispatch(c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)",-,-
+0.07,libtorch_npu.so,[.] 0x00000000018e620c,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001832210,-,-
+0.07,libc10.so,"[.] c10::operator<(c10::SymInt const&, int)",-,-
+0.07,libpython3.12.so.1.0,[.] PyIter_Next,-,-
+0.07,libpython3.12.so.1.0,[.] PyTuple_New,-,-
+0.07,libtorch_python.so,"[.] pybind11::detail::get_type_info(std::type_index const&, bool)",-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] LONG_add,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001717e24,-,-
+0.07,libtorch_npu.so,[.] 0x0000000002a0f43c,-,-
+0.07,libpython3.12.so.1.0,[.] cfunction_call,-,-
+0.07,libtorch_cpu.so,[.] at::native::_local_scalar_dense_cpu(at::Tensor const&),-,-
+0.07,libtorch_cpu.so,"[.] at::_ops::_to_copy::call(at::Tensor const&, std::optional<c10::ScalarType>, std::optional<c10::Layout>, std::optional<c10::Device>, std::optional<bool>, bool, std::optional<c10::MemoryFormat>)",-,-
+0.07,libtorch_python.so,[.] at::indexing::TensorIndex::TensorIndex(at::indexing::EllipsisIndexType),-,-
+0.07,libc10.so,[.] c10::TensorImpl::~TensorImpl(),-,-
+0.07,libnnopbase.so,[.] op::internal::TilingCtxHolder::EnsureTilingCtxCapacity(unsigned long),-,-
+0.07,libpython3.12.so.1.0,[.] _PyUnicode_Equal,-,-
+0.07,libtorch_npu.so,[.] c10::TensorImpl::set_sizes_contiguous(c10::ArrayRef<long>),-,-
+0.07,libtorch_npu.so,[.] 0x00000000018ed9d4,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001912680,-,-
+0.07,libtorch_npu.so,[.] 0x00000000018ae67c,-,-
+0.07,libascend_hal.so,[.] drvMemGetAttribute,-,-
+0.07,npu_utils.so,[.] c10::SmallVectorBase<unsigned int>::size() const,-,-
+0.07,libtorch_npu.so,[.] 0x000000000188d2d8,-,-
+0.07,libtorch_npu.so,[.] 0x0000000002a0f454,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001707db8,-,-
+0.07,libpython3.12.so.1.0,[.] find_empty_slot.constprop.0,-,-
+0.07,libtorch_python.so,"[.] at::indexing::set_item(at::Tensor const&, c10::ArrayRef<at::indexing::TensorIndex> const&, at::Tensor const&, bool)",-,-
+0.07,libpython3.12.so.1.0,[.] convertitem,-,-
+0.07,libtorch_cpu.so,"[.] at::native::check_t(at::Tensor const&, char const*)",-,-
+0.07,libtorch_python.so,[.] torch::PythonArgs::memoryformatOptional(int) [clone .isra.0],-,-
+0.07,libpython3.12.so.1.0,[.] object___reduce_ex__,-,-
+0.07,libtorch_cpu.so,"[.] at::_ops::__ior___Tensor::call(at::Tensor&, at::Tensor const&)",-,-
+0.07,libtorch_npu.so,[.] 0x00000000019a030c,-,-
+0.07,libtorch_python.so,"[.] torch::jit::getOpWithStack(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, pybind11::args const&, pybind11::kwargs const&)",-,-
+0.07,libpython3.12.so.1.0,[.] countformat,-,-
+0.07,ld-linux-aarch64.so.1,[.] 0x00000000000127cc,-,-
+0.07,libpython3.12.so.1.0,[.] func_dealloc,-,-
+0.07,libpython3.12.so.1.0,[.] PyTuple_Size,-,-
+0.07,libascend_hal.so,[.] 0x00000000000d9974,-,-
+0.07,[kernel.kallsyms],[k] do_notify_resume,-,-
+0.07,libruntime_v100.so,[.] 0x000000000036ac74,-,-
+0.07,libpython3.12.so.1.0,[.] PySequence_Fast,-,-
+0.07,libtorch_python.so,[.] torch::detail::(anonymous namespace)::ConcretePyInterpreterVTable::incref(_object*) const,-,-
+0.07,libtorch_python.so,[.] THPVariable_dealloc(_object*),-,-
+0.07,libtorch_python.so,[.] torch::PyWarningHandler::PyWarningHandler(),-,-
+0.07,libruntime_v100.so,[.] 0x000000000036d4e0,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] PyArray_DescrFromType,-,-
+0.07,libtorch_cpu.so,[.] at::TensorIteratorBase::compatible_stride(long) const,-,-
+0.07,libtorch_npu.so,[.] 0x000000000181cb80,-,-
+0.07,libpython3.12.so.1.0,[.] _PyUnicodeWriter_PrepareInternal,-,-
+0.07,libpython3.12.so.1.0,[.] PyLong_FromLong,-,-
+0.07,libtorch_python.so,[.] pybind11::detail::get_internals(),-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] array_assign_subscript,-,-
+0.07,libpython3.12.so.1.0,[.] _PyType_GetDict,-,-
+0.07,libpython3.12.so.1.0,[.] PyLong_AsSsize_t,-,-
+0.07,libpython3.12.so.1.0,[.] PyException_GetTraceback@plt,-,-
+0.07,libruntime_v100.so,[.] 0x0000000000377618,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] PyArray_CheckFromAny,-,-
+0.07,libpython3.12.so.1.0,[.] ga_dealloc,-,-
+0.07,libtorch_cpu.so,"[.] at::detail::empty_strided_generic(c10::ArrayRef<long>, c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType)",-,-
+0.07,libtorch_npu.so,[.] 0x00000000019a0c80,-,-
+0.07,libtorch_python.so,"[.] torch::autograd::THPVariable_any(_object*, _object*, _object*)",-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] array_dealloc,-,-
+0.07,libtorch_cpu.so,[.] c10::SmallVectorImpl<long>::operator=(c10::SmallVectorImpl<long>&&) [clone .isra.0],-,-
+0.07,libc10.so,[.] c10::DefaultCPUAllocator::allocate(unsigned long),-,-
+0.07,libpython3.12.so.1.0,[.] PyMethod_New,-,-
+0.07,libtorch_python.so,"[.] torch::autograd::THPVariable_diff(_object*, _object*, _object*)",-,-
+0.07,libtorch_npu.so,[.] 0x0000000001453e4c,-,-
+0.07,libpython3.12.so.1.0,[.] method_dealloc,-,-
+0.07,libnnopbase.so,[.] op::internal::AddParamToBuf(aclTensor const*),-,-
+0.07,libpython3.12.so.1.0,[.] PyDict_GetItem,-,-
+0.07,libtorch_npu.so,[.] 0x000000000171b458,-,-
+0.07,libpython3.12.so.1.0,[.] _Py_NewReference@plt,-,-
+0.07,libtorch_npu.so,[.] 0x00000000019223b0,-,-
+0.07,libnnopbase.so,[.] op::internal::OpExecCache::CanUse(),-,-
+0.07,libtorch_cpu.so,[.] at::TensorIteratorConfig::add_borrowed_const_input(at::TensorBase const&),-,-
+0.07,libtorch_npu.so,[.] 0x0000000004adb7d0,-,-
+0.07,libc.so.6,[.] 0x0000000000099a54,-,-
+0.07,libtorch_cpu.so,[.] at::TensorIteratorConfig::is_tensor_const(unsigned long),-,-
+0.07,libtorch_cpu.so,"[.] at::_ops::fill__Scalar::redispatch(c10::DispatchKeySet, at::Tensor&, c10::Scalar const&)",-,-
+0.07,[kernel.kallsyms],[k] vfs_write,-,-
+0.07,libpython3.12.so.1.0,[.] float_dealloc,-,-
+0.07,libopp_registry.so,"[.] optiling::TilingDefImpl::CheckAlignAndGenPlaceHolder(optiling::TilingDef&, char const*, unsigned long)",-,-
+0.07,libpython3.12.so.1.0,[.] PyUnicode_RichCompare,-,-
+0.07,libtorch_python.so,"[.] torch::utils::tensor_to_numpy(at::Tensor const&, bool)",-,-
+0.07,libopapi_math.so,"[.] l0op::ViewCopy(aclTensor const*, aclTensor const*, aclOpExecutor*)",-,-
+0.07,libpython3.12.so.1.0,[.] _PyErr_GetTopmostException,-,-
+0.07,libpython3.12.so.1.0,[.] PyObject_ClearWeakRefs,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004b37edc,-,-
+0.07,libtorch_npu.so,[.] 0x000000000475b518,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001717c4c,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001872edc,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001886e40,-,-
+0.07,libascend_dump.so,[.] Adx::DumpManager::IsEnableDump(Adx::DumpType),-,-
+0.07,libpython3.12.so.1.0,[.] slot_tp_init,-,-
+0.07,libpython3.12.so.1.0,[.] PyException_SetContext@plt,-,-
+0.07,libc10.so,[.] _mi_heap_malloc_zero,-,-
+0.07,libjemalloc.so.2,[.] 0x000000000001f9c0,-,-
+0.07,libtorch_python.so,"[.] _object* torch::autograd::TypeError_to_NotImplemented_<&torch::autograd::THPVariable___ior__>(_object*, _object*, _object*)",-,-
+0.07,libtorch_cpu.so,[.] at::_ops::_local_scalar_dense::call(at::Tensor const&),-,-
+0.07,libtorch_python.so,[.] THPPointer<_object>::free(),-,-
+0.07,libnnopbase.so,[.] 0x00000000001765a4,-,-
+0.07,libtorch_cpu.so,"[.] at::detail::scalar_fill(at::Tensor&, c10::Scalar const&)::{lambda()#1}::operator()() const [clone .isra.0]",-,-
+0.07,libc10.so,"[.] c10::TensorImpl::TensorImpl(c10::DispatchKeySet, caffe2::TypeMeta, std::optional<c10::Device>)",-,-
+0.07,libopapi_math.so,[.] op::internal::AddParamToBuf(aclTensorList*)@plt,-,-
+0.07,libpython3.12.so.1.0,[.] pysiphash,-,-
+0.07,libjemalloc.so.2,[.] malloc,-,-
+0.07,libpython3.12.so.1.0,[.] slot_tp_hash,-,-
+0.07,libtorch_cpu.so,[.] at::getStepCallbacksUnlessEmpty(at::RecordScope),-,-
+0.07,libpython3.12.so.1.0,[.] lock_PyThread_acquire_lock,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001868900,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001c5f21c,-,-
+0.07,libpython3.12.so.1.0,[.] PyNumber_InPlaceOr,-,-
+0.07,libtorch_cpu.so,"[.] c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, c10::ScalarType, bool, bool, std::optional<c10::MemoryFormat>), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd_dtype_to>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, c10::ScalarType, bool, bool, std::optional<c10::MemoryFormat> > >, at::Tensor (at::Tensor const&, c10::ScalarType, bool, bool, std::optional<c10::MemoryFormat>)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, c10::ScalarType, bool, bool, std::optional<c10::MemoryFormat>)",-,-
+0.07,libpython3.12.so.1.0,[.] PyMem_Free,-,-
+0.07,libnnopbase.so,[.] aclTensor::GetViewStrides() const@plt,-,-
+0.07,libpython3.12.so.1.0,[.] PyNumber_Add,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001926988,-,-
+0.07,libpython3.12.so.1.0,[.] min_max,-,-
+0.07,libopapi_math.so,"[.] bool IsNullptr<aclTensor>(aclTensor const*, char const*)",-,-
+0.07,libc10.so,"[.] c10::SymInt::guard_int(char const*, long) const",-,-
+0.07,libtorch_npu.so,[.] 0x0000000004b612cc,-,-
+0.07,libtorch_cpu.so,"[.] at::namedinference::propagate_names(at::Tensor const&, at::Tensor const&)",-,-
+0.07,libtorch_npu.so,[.] 0x00000000048f7970,-,-
+0.07,libtorch_python.so,"[.] torch::autograd::THPVariable_setitem(_object*, _object*, _object*)",-,-
+0.07,libc10.so,"[.] c10::TensorImpl::TensorImpl(c10::Storage&&, c10::DispatchKeySet, caffe2::TypeMeta)",-,-
+0.07,libtorch_npu.so,[.] c10::TensorImpl::incref_pyobject() const@plt,-,-
+0.07,libacl_rt.so,[.] aclrtPointerGetAttributesImpl@plt,-,-
+0.07,libtorch_cpu.so,[.] c10::IValue::isIntList() const,-,-
+0.07,libnnopbase.so,[.] PTAGetExecCache,-,-
+0.07,libtorch_cpu.so,"[.] at::_ops::index_put_::call(at::Tensor&, c10::List<std::optional<at::Tensor> > const&, at::Tensor const&, bool)",-,-
+0.07,[vdso],[.] 0x0000000000000478,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004ae9b38,-,-
+0.07,libnnopbase.so,[.] op::internal::Allocate(unsigned long),-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] ufunc_generic_fastcall,-,-
+0.07,libpython3.12.so.1.0,[.] PyGILState_Check,-,-
+0.07,libc.so.6,[.] read,-,-
+0.07,libtorch_npu.so,[.] 0x00000000018eee68,-,-
+0.07,[kernel.kallsyms],[k] security_file_permission,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] array_iter,-,-
+0.07,libpython3.12.so.1.0,[.] PyUnicode_New,-,-
+0.07,libnnopbase.so,[.] NnopbaseAddDynamicInput,-,-
+0.07,libtorch_python.so,[.] c10::TensorImpl::device() const,-,-
+0.07,libtorch_npu.so,[.] 0x000000000174f3b8,-,-
+0.07,libtorch_npu.so,[.] 0x00000000019126c8,-,-
+0.07,libtorch_cpu.so,"[.] at::_ops::argmax_out::call(at::Tensor const&, std::optional<long>, bool, at::Tensor&)@plt",-,-
+0.07,libpython3.12.so.1.0,[.] PyNumber_Long,-,-
+0.07,libpython3.12.so.1.0,[.] PyTraceMalloc_Track,-,-
+0.07,libpython3.12.so.1.0,[.] PyTuple_GetSlice,-,-
+0.07,libpython3.12.so.1.0,[.] _Py_Dealloc,-,-
+0.07,libopp_registry.so,[.] optiling::TilingDefImpl::InitData(optiling::TilingDef&),-,-
+0.07,libtorch_npu.so,[.] c10_npu::NPUStream::isSyncLaunchStream() const,-,-
+0.07,libnnopbase.so,[.] aclCreateTensor,-,-
+0.07,libpython3.12.so.1.0,[.] cfunction_vectorcall_O,-,-
+0.07,libc10.so,[.] c10::InferenceMode::is_enabled(),-,-
+0.07,libruntime_common.so,[.] cce::runtime::GlobalStateManager::WaitIfLocked(char const*),-,-
+0.07,libtorch_cpu.so,[.] at::TensorBase::sym_sizes() const,-,-
+0.07,libtorch_cpu.so,"[.] at::internal::serial_for_each(c10::ArrayRef<long>, c10::ArrayRef<long>, char**, unsigned long, c10::function_ref<void (char**, long const*, long, long)>, at::Range)",-,-
+0.07,libtorch_npu.so,[.] 0x0000000001713424,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004906dfc,-,-
+0.07,libopapi_transformer.so,[.] FusedInferAttentionScoreProcessSoftmaxLse,-,-
+0.07,libc10.so,[.] c10::TensorImpl::has_storage() const,-,-
+0.07,libpython3.12.so.1.0,[.] dict_merge,-,-
+0.07,libpython3.12.so.1.0,[.] PyNumber_Index,-,-
+0.07,libpython3.12.so.1.0,[.] _PyThreadState_PopFrame,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] BOOL_copyswap,-,-
+0.07,libpython3.12.so.1.0,[.] _Py_Dealloc@plt,-,-
+0.07,libpython3.12.so.1.0,[.] PyLong_AsLong,-,-
+0.07,libtorch_python.so,[.] at::TensorBase::sym_sizes() const,-,-
+0.07,libpython3.12.so.1.0,[.] PyThread_tss_set,-,-
+0.07,libpython3.12.so.1.0,[.] _PyObject_LookupAttr,-,-
+0.07,libtorch_npu.so,[.] 0x00000000048bb100,-,-
+0.07,libc.so.6,[.] 0x000000000009aef0,-,-
+0.07,libnnopbase.so,"[.] Indv::CacheKeyBuilder::AppendShapeInfo(NnopbaseExecutorArgs*, aclTensor const*)",-,-
+0.07,libtorch_npu.so,[.] 0x00000000029f0e5c,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004b09268,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004b0b17c,-,-
+0.07,libtorch_npu.so,[.] c10::TensorImpl::is_non_overlapping_and_dense() const,-,-
+0.07,libtorch_npu.so,[.] c10::IValue::toInt() const,-,-
+0.07,libpython3.12.so.1.0,[.] vgetargs1_impl,-,-
+0.07,libtorch_npu.so,[.] 0x000000000181cba4,-,-
+0.07,libtorch_python.so,"[.] torch::autograd::THPVariable_sub(_object*, _object*, _object*)",-,-
+0.07,libpython3.12.so.1.0,[.] tb_dealloc,-,-
+0.07,libpython3.12.so.1.0,[.] PyObject_SelfIter,-,-
+0.07,libc.so.6,[.] 0x0000000000083e48,-,-
+0.07,libtorch_python.so,"[.] torch::jit::invokeOperatorFromPython(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, pybind11::args const&, pybind11::kwargs const&, std::optional<c10::DispatchKey>)",-,-
+0.07,libc10.so,"[.] c10::TensorImpl::TensorImpl(c10::TensorImpl::ImplType, c10::Storage&&, c10::DispatchKeySet, caffe2::TypeMeta)",-,-
+0.07,libpython3.12.so.1.0,[.] PyErr_SetRaisedException,-,-
+0.07,libtorch_npu.so,[.] 0x0000000002a14e80,-,-
+0.07,libtorch_npu.so,"[.] void std::vector<at::Tensor, std::allocator<at::Tensor> >::_M_realloc_insert<at::Tensor&>(__gnu_cxx::__normal_iterator<at::Tensor*, std::vector<at::Tensor, std::allocator<at::Tensor> > >, at::Tensor&)",-,-
+0.07,libnnopbase.so,"[.] Indv::CacheKeyBuilder::AppendTensorList(NnopbaseExecutorArgs*, aclTensorList const*)",-,-
+0.07,libtorch_python.so,[.] c10::WarningUtils::set_warning_handler(c10::WarningHandler*)@plt,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001926968,-,-
+0.07,libruntime_v100.so,[.] 0x000000000005be68,-,-
+0.07,libruntime_v100.so,[.] 0x00000000000cfe18,-,-
+0.07,libpython3.12.so.1.0,[.] PyDict_New,-,-
+0.07,[kernel.kallsyms],[k] rseq_get_rseq_cs,-,-
+0.07,libtorch_npu.so,[.] 0x00000000012fc684,-,-
+0.07,[kernel.kallsyms],[k] invoke_syscall,-,-
+0.07,libpython3.12.so.1.0,[.] PyUnicode_DecodeUTF8,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] count_nonzero_int,-,-
+0.07,libpython3.12.so.1.0,[.] drop_gil,-,-
+0.07,libpython3.12.so.1.0,[.] PyThread_tss_get,-,-
+0.07,libtorch_npu.so,[.] 0x000000000173e940,-,-
+0.07,libpython3.12.so.1.0,[.] _PyUnicode_InternMortal,-,-
+0.07,libpython3.12.so.1.0,[.] _PyLong_New,-,-
+0.07,libnnopbase.so,[.] aclStorage::aclStorage(void*),-,-
+0.07,libtorch_python.so,[.] THPDevice_New(c10::Device const&),-,-
+0.07,libtorch_cpu.so,[.] at::_ops::t::call(at::Tensor const&)@plt,-,-
+0.07,libstdc++.so.6.0.30,[.] std::chrono::_V2::steady_clock::now(),-,-
+0.07,libtorch_cpu.so,[.] at::_ops::any::call(at::Tensor const&),-,-
+0.07,libruntime_v100.so,[.] 0x0000000000114548,-,-
+0.07,libtorch_python.so,[.] THPUtils_checkLong(_object*),-,-
+0.07,libpython3.12.so.1.0,[.] __errno_location@plt,-,-
+0.07,libjemalloc.so.2,[.] 0x00000000000206f4,-,-
+0.07,libtorch_npu.so,[.] c10::TensorImpl::compute_contiguous() const@plt,-,-
+0.07,libtorch_cpu.so,[.] at::_ops::detach::call(at::Tensor const&),-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] unpack_indices,-,-
+0.07,libtorch_npu.so,[.] 0x000000000187e77c,-,-
+0.07,libtorch_npu.so,[.] 0x000000000184c3bc,-,-
+0.07,libtorch_python.so,"[.] std::vector<c10::SymInt, std::allocator<c10::SymInt> >::reserve(unsigned long)",-,-
+0.07,libpython3.12.so.1.0,[.] _PyDict_Next,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001733080,-,-
+0.07,libnnopbase.so,[.] op::IsContiguous(aclTensor const*),-,-
+0.07,libtorch_cpu.so,"[.] torch::autograd::ViewInfo::chain(at::Tensor const&, at::Tensor const&, std::unique_ptr<torch::autograd::ViewFunc, std::default_delete<torch::autograd::ViewFunc> >, std::function<at::Tensor (at::Tensor const&)>) const",-,-
+0.07,libpython3.12.so.1.0,[.] object_isinstance,-,-
+0.07,libtorch_cpu.so,"[.] void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::TensorIteratorBase::loop_2d_from_1d<at::native::SVE256::cpu_kernel<at::native::(anonymous namespace)::lt_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#3}::operator()() const::{lambda(int, int)#1}>(at::TensorIteratorBase&, at::native::(anonymous namespace)::lt_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#3}::operator()() const::{lambda(int, int)#1}&&, long)::{lambda(char**, long const*, long)#1}>(at::native::SVE256::cpu_kernel<at::native::(anonymous namespace)::lt_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#3}::operator()() const::{lambda(int, int)#1}>(at::TensorIteratorBase&, at::native::(anonymous namespace)::lt_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#3}::operator()() const::{lambda(int, int)#1}&&, long)::{lambda(char**, long const*, long)#1} const&)::{lambda(char**, long const*, long, long)#1}>(long, char**, long const*, long, long)",-,-
+0.07,[kernel.kallsyms],[k] folio_mark_accessed,-,-
+0.07,libpython3.12.so.1.0,[.] slot_tp_call,-,-
+0.07,libtorch_cpu.so,[.] c10::InternedStrings::ns(c10::Symbol),-,-
+0.07,libpython3.12.so.1.0,[.] _PyNumber_Index,-,-
+0.07,libnnopbase.so,[.] op::internal::OpExecCache::InitCacheData(),-,-
+0.07,libpython3.12.so.1.0,[.] PyCapsule_GetPointer,-,-
+0.07,libtorch_cpu.so,"[.] at::native::diff_helper(at::Tensor const&, long, long)",-,-
+0.07,libtorch_npu.so,[.] 0x000000000173fddc,-,-
+0.07,libc.so.6,[.] 0x000000000009b120,-,-
+0.07,libopapi_math.so,[.] aclOpExecutor::AllocScalar(int)@plt,-,-
+0.07,libpython3.12.so.1.0,[.] _PyThreadState_SwapNoGIL,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] is_anyscalar_exact,-,-
+0.07,libnnopbase.so,[.] aclOpExecutor::SetLogInfo(op::internal::OpLogInfo const&),-,-
+0.07,libtorch_cpu.so,"[.] at::native::_to_copy(at::Tensor const&, std::optional<c10::ScalarType>, std::optional<c10::Layout>, std::optional<c10::Device>, std::optional<bool>, bool, std::optional<c10::MemoryFormat>)",-,-
+0.07,libpython3.12.so.1.0,[.] PyWeakref_NewRef,-,-
+0.07,libtorch_cpu.so,[.] c10::TensorImpl::layout() const,-,-
+0.07,libc.so.6,[.] pthread_mutex_unlock,-,-
+0.07,libtorch_python.so,[.] torch::utils::aten_to_numpy_dtype(c10::ScalarType),-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] PyUFuncOverride_GetNonDefaultArrayUfunc,-,-
+0.07,libtorch_cpu.so,[.] at::TensorIteratorBase::compute_types(at::TensorIteratorConfig const&),-,-
+0.07,libtorch_cpu.so,"[.] at::Tensor c10::callUnboxedKernelFunction<at::Tensor, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt>(void*, c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, long&&, std::optional<c10::SymInt>&&, std::optional<c10::SymInt>&&, c10::SymInt&&) [clone .isra.0]",-,-
+0.07,[kernel.kallsyms],[k] __fdget_pos,-,-
+0.07,libtorch_cpu.so,"[.] void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::TensorIteratorBase::loop_2d_from_1d<at::native::SVE256::cpu_kernel<at::native::(anonymous namespace)::gt_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#3}::operator()() const::{lambda(int, int)#1}>(at::TensorIteratorBase&, at::native::(anonymous namespace)::gt_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#3}::operator()() const::{lambda(int, int)#1}&&, long)::{lambda(char**, long const*, long)#1}>(at::native::SVE256::cpu_kernel<at::native::(anonymous namespace)::gt_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#3}::operator()() const::{lambda(int, int)#1}>(at::TensorIteratorBase&, at::native::(anonymous namespace)::gt_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#3}::operator()() const::{lambda(int, int)#1}&&, long)::{lambda(char**, long const*, long)#1} const&)::{lambda(char**, long const*, long, long)#1}>(long, char**, long const*, long, long)",-,-
+0.07,libtorch_python.so,"[.] torch::autograd::THPVariable_fill_(_object*, _object*, _object*)",-,-
+0.07,libpython3.12.so.1.0,[.] _abc__abc_instancecheck,-,-
+0.07,libpython3.12.so.1.0,[.] dictitems_iter,-,-
+0.07,libtorch_cpu.so,"[.] at::native::__and__(at::Tensor const&, at::Tensor const&)",-,-
+0.07,libtorch_cpu.so,[.] at::TensorBase::strides() const,-,-
+0.07,libtorch_python.so,[.] torch::get_symint_class()@plt,-,-
+0.07,libtorch_npu.so,"[.] MemcpyToBufImpl(void const*, unsigned long)",-,-
+0.07,libtorch_npu.so,[.] 0x00000000012fc80c,-,-
+0.07,libtorch_cpu.so,[.] torch::autograd::impl::bump_version(at::Tensor const&),-,-
+0.07,libpython3.12.so.1.0,[.] make_range_object,-,-
+0.07,libnnopbase.so,[.] aclTensor::GetDataType() const,-,-
+0.07,libtorch_npu.so,[.] 0x0000000000f77dfc,-,-
+0.07,libtorch_python.so,[.] c10::SymInt::release_() [clone .isra.0],-,-
+0.07,libc10.so,[.] mi_heap_malloc_zero_aligned_at_overalloc,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001885914,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004b393e8,-,-
+0.07,libtorch_python.so,"[.] torch::autograd::THPVariable_data_ptr(_object*, _object*)",-,-
+0.07,libjemalloc.so.2,[.] 0x0000000000019f90,-,-
+0.07,libtorch_npu.so,[.] 0x000000000174bfac,-,-
+0.07,libtorch_cpu.so,"[.] at::native::to(at::Tensor const&, c10::ScalarType, bool, bool, std::optional<c10::MemoryFormat>)",-,-
+0.07,libruntime_v100.so,[.] 0x000000000007e208,-,-
+0.07,libpython3.12.so.1.0,[.] _PyStack_UnpackDict,-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] _typenum_fromtypeobj,-,-
+0.07,libtorch_npu.so,[.] 0x00000000018253f0,-,-
+0.07,libtorch_cpu.so,[.] at::RecordFunction::RecordFunction(at::RecordScope),-,-
+0.07,libtorch_npu.so,[.] 0x000000000170085c,-,-
+0.07,libpython3.12.so.1.0,[.] func_clear,-,-
+0.07,[kernel.kallsyms],[k] audit_reset_context,-,-
+0.07,libc10.so,[.] c10::SymBool::sym_and(c10::SymBool const&) const,-,-
+0.07,libtorch_cpu.so,[.] at::OperandInfo::validate(),-,-
+0.07,libtorch_cpu.so,"[.] at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)",-,-
+0.07,launcher_cxx11abi1.cpython-312-aarch64-linux-gnu.so,"[.] launch(_object*, _object*)",-,-
+0.07,libc10.so,[.] c10::impl::getPyInterpreterHooks(),-,-
+0.07,libpython3.12.so.1.0,[.] _Py_HashBytes,-,-
+0.07,libtorch_cpu.so,[.] torch::jit::tracer::getTracingState(),-,-
+0.07,libtorch_python.so,"[.] c10::operator-(int, c10::SymInt const&)@plt",-,-
+0.07,libtorch_python.so,[.] c10::TensorImpl::layout() const,-,-
+0.07,libtorch_cpu.so,"[.] at::_ops::diff::call(at::Tensor const&, long, long, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&)",-,-
+0.07,libnnopbase.so,"[.] op::CalcShapeBytes(long, ge::DataType, bool)",-,-
+0.07,libpython3.12.so.1.0,[.] slot_tp_richcompare,-,-
+0.07,libtorch_cpu.so,"[.] at::native::view_as(at::Tensor const&, at::Tensor const&)",-,-
+0.07,libtorch_cpu.so,"[.] at::namedinference::propagate_names_except(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>)",-,-
+0.07,libtorch_npu.so,[.] 0x0000000004adb7b0,-,-
+0.07,libnnopbase.so,"[.] CreatAiCoreKernelLauncher(char const*, unsigned int, aclOpExecutor*, op::OpArgContext*)",-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] PyArray_DiscoverDTypeAndShape,-,-
+0.07,libtorch_cpu.so,"[.] at::TensorIteratorBase::serial_for_each(c10::function_ref<void (char**, long const*, long, long)>, at::Range) const",-,-
+0.07,libtorch_cpu.so,[.] at::_ops::item::call(at::Tensor const&),-,-
+0.07,libtorch_cpu.so,"[.] torch::autograd::make_variable_differentiable_view(at::Tensor const&, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta, bool) [clone .isra.0]",-,-
+0.07,libtorch_npu.so,[.] 0x00000000012fc700,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004b37e78,-,-
+0.07,libtorch_npu.so,[.] 0x000000000172d3f0,-,-
+0.07,libtorch_npu.so,[.] 0x000000000199f6d8,-,-
+0.07,libtorch_python.so,[.] std::_Optional_payload_base<c10::impl::InlineDeviceGuard<c10::impl::VirtualGuardImpl> >::_M_reset() [clone .part.0],-,-
+0.07,libtorch_python.so,"[.] pybind11::detail::instance::get_value_and_holder(pybind11::detail::type_info const*, bool)",-,-
+0.07,libpython3.12.so.1.0,[.] _PyObject_Realloc,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004ae1290,-,-
+0.07,libtorch_npu.so,[.] 0x0000000001874148,-,-
+0.07,libtorch_cpu.so,"[.] at::_ops::view::call(at::Tensor const&, c10::ArrayRef<c10::SymInt>)",-,-
+0.07,libtorch_cpu.so,"[.] at::detail::empty_cpu(c10::ArrayRef<long>, c10::ScalarType, bool, std::optional<c10::MemoryFormat>)",-,-
+0.07,libtorch_npu.so,[.] 0x000000000174cedc,-,-
+0.07,libmetadef.so,"[.] ge::TypeImpl::GetSizeInBytes(long, ge::DataType)",-,-
+0.07,ld-linux-aarch64.so.1,[.] 0x00000000000127d0,-,-
+0.07,libpython3.12.so.1.0,[.] _PyDict_SetItem_Take2,-,-
+0.07,libtorch_npu.so,[.] 0x00000000048c93e0,-,-
+0.07,libnnopbase.so,[.] op::internal::CheckCacheable(),-,-
+0.07,libtorch_npu.so,[.] CopyTypeV2(std::optional<at::Tensor> const&),-,-
+0.07,libc.so.6,[.] clock_gettime,-,-
+0.07,libstdc++.so.6.0.30,"[.] std::_Hash_bytes(void const*, unsigned long, unsigned long)",-,-
+0.07,libtorch_cpu.so,"[.] at::meta::structured_bitwise_and_Tensor::meta(at::Tensor const&, at::Tensor const&)@plt",-,-
+0.07,libpython3.12.so.1.0,[.] PyList_New,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004ade840,-,-
+0.07,libtorch_cpu.so,"[.] at::native::select_symint(at::Tensor const&, long, c10::SymInt)",-,-
+0.07,libc10.so,"[.] c10::operator-(int, c10::SymInt const&)",-,-
+0.07,libc10.so,"[.] c10::SymBool::guard_bool(char const*, long) const",-,-
+0.07,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] convert_to_long,-,-
+0.07,libtorch_cpu.so,"[.] at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)@plt",-,-
+0.07,libpython3.12.so.1.0,[.] PyTuple_SetItem,-,-
+0.07,libtorch_npu.so,[.] 0x0000000004b0b180,-,-
+0.07,libpython3.12.so.1.0,[.] pthread_getspecific@plt,-,-
+0.07,libstdc++.so.6.0.30,"[.] std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const",-,-
+0.06,libtorch_npu.so,[.] 0x0000000004ae9ac0,-,-
+0.06,libtorch_python.so,[.] at::_ops::lift_fresh::call(at::Tensor const&)@plt,-,-

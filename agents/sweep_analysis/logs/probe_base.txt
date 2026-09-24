@@ -1,0 +1,68 @@
+can not use command: npu-smi info
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+INFO 09-23 19:00:05 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 19:00:05 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-23 19:00:05 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-23 19:00:05 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-23 19:00:05 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+INFO 09-23 19:00:38 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 19:00:38 [model.py:1788] Using max model len 2048
+INFO 09-23 19:00:38 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 09-23 19:00:38 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=2048.
+INFO 09-23 19:00:38 [vllm.py:1109] Asynchronous scheduling is enabled.
+INFO 09-23 19:00:38 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 19:00:38 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 19:00:38 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+INFO 09-23 19:00:38 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 19:00:38 [ascend_config.py:922] The number of redundant experts is 0
+[probe] wrote /work/data/harness/sweep_probe_ccall_base_20260923-190038.json
+[probe] top C calls (us/step):
+        78.04  calls/step=   146.0  dict.get
+        50.91  calls/step=    11.0  Tensor.copy_
+        49.20  calls/step=    94.0  list.append
+        38.41  calls/step=     2.0  sum
+        31.91  calls/step=    77.0  len
+        27.44  calls/step=    66.0  perf_counter
+        18.01  calls/step=     4.0  Tensor.numpy
+        17.11  calls/step=     4.0  Tensor.fill_
+        15.99  calls/step=    30.0  list.pop
+        15.55  calls/step=     1.0  ndarray.clip
+        12.25  calls/step=     2.0  ndarray.cumsum
+        11.93  calls/step=     4.0  _VariableFunctionsClass.from_numpy
+        11.56  calls/step=     1.0  Tensor.to
+        11.29  calls/step=     4.0  ndarray.repeat
+        10.85  calls/step=    16.0  max
+        10.84  calls/step=    18.0  lock.__exit__
+         9.87  calls/step=     2.0  ufunc.reduce
+         9.44  calls/step=     9.0  Tensor.numel
+         8.09  calls/step=    16.0  list.clear
+         6.70  calls/step=     2.0  array
+[probe] top python funcs (us/step):
+      3454.61  calls/step=    30.0  py:wrapper
+      2156.64  calls/step=     1.0  py:_one_step
+      1193.16  calls/step=     1.0  py:_prepare_inputs
+      1011.65  calls/step=     2.0  py:_update_states
+       480.42  calls/step=     2.0  py:compute_slot_mapping
+       410.90  calls/step=    18.0  py:copy_to_gpu
+       319.24  calls/step=     1.0  py:step
+       207.46  calls/step=     1.0  py:_launch
+       188.73  calls/step=     1.0  py:_slot_mapping_cpu
+       109.08  calls/step=     2.0  py:commit_block_table
+        96.40  calls/step=    16.0  py:update_req_spec_token_ids
+        75.50  calls/step=     8.0  py:_wrapfunc
+        52.33  calls/step=     1.0  py:_build_attn_state
+        40.09  calls/step=     9.0  py:_record
+        39.74  calls/step=     1.0  py:_get_cumsum_and_arange
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.rtGetAiCoreCount failed, 0x7bc78

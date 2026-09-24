@@ -1,0 +1,8 @@
+ Error: Ambiguous option: symbol (could be --symbols or --symbol-filter)
+
+ Usage: perf report [<options>]
+
+    -S, --symbols <symbol[,symbol...]>
+                          only consider these symbols
+        --symbol-filter <filter>
+                          only show symbols that (partially) match with this filter

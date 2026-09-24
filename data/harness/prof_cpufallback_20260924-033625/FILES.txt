@@ -1,0 +1,20 @@
+# 交付清单 prof_prof_cpufallback_20260924-033625
+# 来自 run 目录: /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_cpufallback_20260924-033625
+# 口径版本: prof-v1
+
+total 5796
+drwxr-xr-x. 2 REMOTE_USER REMOTE_USER     4096 Sep 24 03:46 .
+drwxr-xr-x. 7 REMOTE_USER HwHiAiUser   20480 Sep 24 03:43 ..
+-rw-r--r--. 1 REMOTE_USER REMOTE_USER    17955 Sep 24 03:47 annotate_top.json
+-rwxr-xr-x. 1 REMOTE_USER REMOTE_USER     1299 Sep 24 03:47 cmd.sh
+-rw-r--r--. 1 REMOTE_USER REMOTE_USER     1830 Sep 24 03:47 count.json
+-rw-r--r--. 1 REMOTE_USER REMOTE_USER      205 Sep 24 03:47 FILES.txt
+-rw-r--r--. 1 REMOTE_USER REMOTE_USER  4469065 Sep 24 03:47 flamegraph_oncpu.folded
+-rw-r--r--. 1 REMOTE_USER REMOTE_USER  1339429 Sep 24 03:47 flamegraph_oncpu.svg
+-rw-r--r--. 1 REMOTE_USER REMOTE_USER     6546 Sep 24 03:47 hotspots.json
+-rw-r--r--. 1 REMOTE_USER REMOTE_USER     1603 Sep 24 03:47 hotspots_top20.csv
+-rw-r--r--. 1 REMOTE_USER REMOTE_USER     6045 Sep 24 03:47 manifest.json
+-rw-r--r--. 1 REMOTE_USER REMOTE_USER     2022 Sep 24 03:47 noise_post.json
+-rw-r--r--. 1 REMOTE_USER REMOTE_USER     2023 Sep 24 03:47 noise_pre.json
+-rw-r--r--. 1 REMOTE_USER REMOTE_USER     4216 Sep 24 03:47 summary.csv
+-rw-r--r--. 1 REMOTE_USER REMOTE_USER    23751 Sep 24 03:47 summary.json

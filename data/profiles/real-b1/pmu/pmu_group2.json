@@ -1,0 +1,30 @@
+{
+  "count": 8,
+  "entries": [
+    {"name":"EXE_STALL_DIV","id":"exe_stall_div","config":"0x7003","delta":5509311,"rate":1881909.420502},
+    {"name":"FSU_STALL","id":"fsu_stall","config":"0x7004","delta":3209494,"rate":1096321.662299},
+    {"name":"MEM_STALL_ANYLOAD","id":"mem_stall_anyload","config":"0x7005","delta":2360433203,"rate":806293469.581031},
+    {"name":"MEM_STALL_ANYSTORE","id":"mem_stall_anystore","config":"0x7006","delta":110905,"rate":37883.714367},
+    {"name":"MEMSTALL_L1MISS","id":"memstall_l1miss","config":"0x7007","delta":1445205729,"rate":493663595.314963},
+    {"name":"MEMSTALL_L2MISS","id":"memstall_l2miss","config":"0x7008","delta":1060202070,"rate":362151322.219513},
+    {"name":"MEMSTALL_L3MISS","id":"memstall_l3miss","config":"0x7009","delta":0,"rate":0.000000},
+    {"name":"ROB_STALL","id":"rob_stall","config":"0x2004","delta":40400713,"rate":13800361.313727}
+  ],
+  "time_enabled": 2927511250,
+  "time_running": 2927511250,
+  "confidence": 1.000000,
+  "sampled": false,
+  "sample_count": 0,
+  "lost_samples": 0,
+  "gated": false,
+  "iter_gated": false,
+  "iter_start_at": 0,
+  "iter_end_at": 0,
+  "iter_start_seen": 0,
+  "iter_end_seen": 0,
+  "roi_start_seen": 0,
+  "roi_end_seen": 0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B"
+}

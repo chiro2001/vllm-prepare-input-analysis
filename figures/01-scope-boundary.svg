@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">
+  <rect width="1180" height="620" fill="#ffffff"/>
+  <text x="590" y="34" font-size="21" font-weight="bold" text-anchor="middle" fill="#111">
+    prepare_input 阶段边界对比：core vLLM 0.26.0 vs vllm-ascend 0.26.0rc1
+  </text>
+  <text x="590" y="58" font-size="12.5" text-anchor="middle" fill="#555">
+    vLLM 568afb3a / vllm-ascend f2f74a16 —— 行号为工作区实际行号
+  </text>
+
+  <!-- ============ legend ============ -->
+  <g font-size="12">
+    <rect x="60" y="76" width="18" height="12" fill="#cfe3ff" stroke="#5b8ff9"/>
+    <text x="84" y="87" fill="#333">在 scope 内（计入 prepare_input 计时）</text>
+    <rect x="330" y="76" width="18" height="12" fill="#ffe6cc" stroke="#e8912d"/>
+    <text x="354" y="87" fill="#333">ascend 在 / core 不在</text>
+    <rect x="580" y="76" width="18" height="12" fill="#f0f0f0" stroke="#999"/>
+    <text x="604" y="87" fill="#333">scope 外（不计入）</text>
+    <rect x="800" y="76" width="18" height="12" fill="#ffd6d6" stroke="#d64545"/>
+    <text x="824" y="87" fill="#333">同步点（可能吸收 device 时间）</text>
+  </g>
+
+  <!-- ============ CORE ============ -->
+  <text x="60" y="128" font-size="15" font-weight="bold" fill="#1f4e79">
+    core：record_function_or_nullcontext("gpu_model_runner: preprocess")  —  4148 … 4347
+  </text>
+
+  <g>
+    <rect x="60" y="140" width="1060" height="52" rx="6" fill="#cfe3ff" stroke="#5b8ff9" stroke-width="1.6"/>
+    <line x1="60" y1="140" x2="60" y2="192" stroke="#5b8ff9" stroke-width="3"/>
+    <line x1="1120" y1="140" x2="1120" y2="192" stroke="#5b8ff9" stroke-width="3"/>
+
+    <text x="80" y="163" font-size="12.5" fill="#123">_update_states 4153</text>
+    <text x="248" y="163" font-size="12.5" fill="#123">_prepare_inputs 4195</text>
+    <text x="430" y="163" font-size="12.5" fill="#123">_determine_batch_exec.. 4216</text>
+    <text x="646" y="163" font-size="12.5" fill="#123">_get_slot_mappings 4311</text>
+    <text x="830" y="163" font-size="12.5" fill="#123">_build_attention_metadata 4322</text>
+    <text x="1035" y="163" font-size="12.5" fill="#123">_preprocess 4345</text>
+    <text x="80" y="182" font-size="11.5" fill="#555">H2D · condense · metadata 构造 —— 全部落在同一 scope 内</text>
+  </g>
+
+  <!-- ============ ASCEND ============ -->
+  <text x="60" y="238" font-size="15" font-weight="bold" fill="#7a3e00">
+    ascend：record_function_or_nullcontext("prepare input")  —  1859 … 2082
+  </text>
+
+  <g>
+    <!-- synchronize_input_prep sub-scope -->
+    <rect x="60" y="250" width="238" height="52" rx="6" fill="#e9f3e1" stroke="#6aa84f" stroke-dasharray="5,3"/>
+    <text x="72" y="269" font-size="11.5" font-weight="bold" fill="#274e13">
+      synchronize_input_prep() 1860–1883
+    </text>
+    <text x="72" y="286" font-size="11" fill="#3d5229">
+      只包 _update_states(1881)；<tspan font-weight="bold">record() 点在 1883</tspan>
+    </text>
+
+    <!-- main scope -->
+    <rect x="306" y="250" width="814" height="52" rx="6" fill="#cfe3ff" stroke="#5b8ff9" stroke-width="1.6"/>
+    <line x1="1120" y1="250" x2="1120" y2="302" stroke="#5b8ff9" stroke-width="3"/>
+    <text x="320" y="269" font-size="12" fill="#123">
+      early-return 1885/1895 → _prepare_inputs 1933 → cascade 1939 → padding 决策 1949
+    </text>
+    <text x="320" y="288" font-size="12" fill="#123">
+      mamba 1994 · DSA 2032 · _pad_query_start_loc_for_fia 2056 · _build_attention_metadata 2065
+    </text>
+
+    <!-- sync point marker -->
+    <rect x="826" y="306" width="118" height="30" rx="4" fill="#ffd6d6" stroke="#d64545" stroke-width="1.5"/>
+    <text x="885" y="326" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#8c1c1c">
+      sync @ 1104
+    </text>
+    <path d="M885 302 L885 306" stroke="#d64545" stroke-width="1.6"/>
+    <text x="950" y="326" font-size="11" fill="#8c1c1c">
+      num_accepted_tokens_event.synchronize()
+    </text>
+    <text x="950" y="341" font-size="10.5" fill="#a05a5a">
+      仅 spec decode + hybrid 时真正阻塞
+    </text>
+  </g>
+
+  <!-- ============ difference callout ============ -->
+  <g>
+    <rect x="60" y="368" width="1060" height="92" rx="8" fill="#ffe6cc" stroke="#e8912d" stroke-width="1.6"/>
+    <text x="82" y="394" font-size="14" font-weight="bold" fill="#7a3e00">
+      两处关键差异（直接决定 profiling 口径）
+    </text>
+    <text x="82" y="418" font-size="12.5" fill="#4a2a00">
+      1. ascend 的 prepare input <tspan font-weight="bold">不含 _preprocess（2084–2095）与 update_cos_sin（2098）</tspan>
+      —— 若拿 core 的 preprocess 数据解释 ascend，会高估其占比。
+    </text>
+    <text x="82" y="440" font-size="12.5" fill="#4a2a00">
+      2. ascend 的 prepare input <tspan font-weight="bold">含 _build_attention_metadata（2065）</tspan>
+      —— core 亦含，但 core 还多含 _get_slot_mappings（4311，ascend 无此函数）。
+    </text>
+  </g>
+
+  <!-- ============ early return note ============ -->
+  <g>
+    <rect x="60" y="482" width="520" height="108" rx="8" fill="#f7f7f7" stroke="#aaa"/>
+    <text x="80" y="506" font-size="13" font-weight="bold" fill="#333">空 batch 路径也在 scope 内</text>
+    <text x="80" y="528" font-size="12" fill="#444">ascend 1895–1910：num_scheduled_tokens == 0 → 提前返回</text>
+    <text x="80" y="548" font-size="12" fill="#444">  · DP + external_launcher 时先跑 _dummy_run(1, skip_gdn_state_update=True)</text>
+    <text x="80" y="572" font-size="12" fill="#8c1c1c">
+      ⇒ 统计 prepare input 占比必须先按 total_num_scheduled_tokens &gt; 0 分层
+    </text>
+  </g>
+
+  <g>
+    <rect x="600" y="482" width="520" height="108" rx="8" fill="#f7f7f7" stroke="#aaa"/>
+    <text x="620" y="506" font-size="13" font-weight="bold" fill="#333">slot_mapping 的计算在设备上，不在 CPU</text>
+    <text x="620" y="528" font-size="12" fill="#444">core   vllm/v1/worker/block_table.py:166</text>
+    <text x="620" y="546" font-size="12" fill="#444">ascend vllm_ascend/ops/triton/compute_slot_mapping.py:12</text>
+    <text x="620" y="570" font-size="12" fill="#1f6f3d">
+      ⇒ CPU 侧只剩 kernel launch，不是热点；勿列入优化目标
+    </text>
+  </g>
+
+  <text x="590" y="606" font-size="10.5" text-anchor="middle" fill="#888">
+    来源：docs/01-prepare-input-code-logic.md §1 · data/static/prepare-input-steps.json boundary
+  </text>
+</svg>

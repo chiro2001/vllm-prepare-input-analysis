@@ -1,0 +1,45 @@
+[
+  {
+    "group": "R",
+    "perf": null,
+    "phase_share": {
+      "step_model": {
+        "all": {
+          "prepare_over_step_mean": 0.722,
+          "prepare_over_step_p50": 0.736
+        },
+        "decode": {
+          "prepare_over_step_mean": 0.725,
+          "prepare_over_step_p50": 0.736
+        },
+        "idle": {
+          "prepare_over_step_mean": 0.515,
+          "prepare_over_step_p50": 0.515
+        }
+      },
+      "whole_loop": {
+        "all": {
+          "prepare_over_step_mean": 0.584,
+          "prepare_over_step_p50": 0.585
+        },
+        "decode": {
+          "prepare_over_step_mean": 0.569,
+          "prepare_over_step_p50": 0.585
+        },
+        "idle": {
+          "prepare_over_step_mean": 1.512,
+          "prepare_over_step_p50": 1.512
+        }
+      }
+    },
+    "pmu": null,
+    "tag": "_test",
+    "workload": {
+      "concurrency": 1,
+      "max_tokens": 64,
+      "prompt_tokens_target": 128,
+      "requests": 1,
+      "rounds": 1
+    }
+  }
+]

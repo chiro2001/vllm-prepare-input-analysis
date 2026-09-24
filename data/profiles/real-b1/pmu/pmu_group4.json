@@ -1,0 +1,30 @@
+{
+  "count": 8,
+  "entries": [
+    {"name":"L2I_TLB","id":"l2i_tlb","config":"0x30","delta":118176285,"rate":40374083.553714},
+    {"name":"L2I_TLB_REFILL","id":"l2i_tlb_refill","config":"0x2e","delta":3250086,"rate":1110368.664244},
+    {"name":"L2I_CACHE","id":"l2i_cache","config":"0x27","delta":561452632,"rate":191816280.870742},
+    {"name":"L2I_CACHE_REFILL","id":"l2i_cache_refill","config":"0x28","delta":96042781,"rate":32812330.027341},
+    {"name":"PC_BUF_STALL","id":"pcbuf_stall","config":"0x2005","delta":1356732,"rate":463517.795707},
+    {"name":"INT_PTAG_STALL","id":"int_ptag_stall","config":"0x2006","delta":482898552,"rate":164978840.605928},
+    {"name":"CC_PTAG_STALL","id":"cc_ptag_stall","config":"0x2007","delta":0,"rate":0.000000},
+    {"name":"VFP_SINGLE_PTAG_STALL","id":"vfp_single_ptag_stall","config":"0x2008","delta":125170,"rate":42763.436322}
+  ],
+  "time_enabled": 2927033250,
+  "time_running": 2927033250,
+  "confidence": 1.000000,
+  "sampled": false,
+  "sample_count": 0,
+  "lost_samples": 0,
+  "gated": false,
+  "iter_gated": false,
+  "iter_start_at": 0,
+  "iter_end_at": 0,
+  "iter_start_seen": 0,
+  "iter_end_seen": 0,
+  "roi_start_seen": 0,
+  "roi_end_seen": 0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B"
+}

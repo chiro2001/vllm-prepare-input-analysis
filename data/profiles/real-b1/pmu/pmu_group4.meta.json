@@ -1,0 +1,119 @@
+{
+  "schema": "pi-pmu-group-meta-v1",
+  "tag": "real-b1",
+  "group": 4,
+  "preset": "920b_topdown_full_4",
+  "events": [
+    "l2i_tlb",
+    "l2i_tlb_refill",
+    "l2i_cache",
+    "l2i_cache_refill",
+    "pcbuf_stall",
+    "int_ptag_stall",
+    "cc_ptag_stall",
+    "vfp_single_ptag_stall"
+  ],
+  "tid": 704908,
+  "pid": 704908,
+  "status": "ok",
+  "attempts": 1,
+  "rc": 0,
+  "timed_out": false,
+  "error": null,
+  "outer_wall_s": 3.1277,
+  "inner_wall_s": 3.014879,
+  "started_at_utc": "2026-09-23T20:29:30Z",
+  "finished_at_utc": "2026-09-23T20:29:33Z",
+  "confidence": 1.0,
+  "time_enabled": 2927033250,
+  "time_running": 2927033250,
+  "useronly_forced": false,
+  "counters": [
+    {
+      "name": "L2I_TLB",
+      "id": "l2i_tlb",
+      "config": "0x30",
+      "delta": 118176285,
+      "rate": 40374083.553714
+    },
+    {
+      "name": "L2I_TLB_REFILL",
+      "id": "l2i_tlb_refill",
+      "config": "0x2e",
+      "delta": 3250086,
+      "rate": 1110368.664244
+    },
+    {
+      "name": "L2I_CACHE",
+      "id": "l2i_cache",
+      "config": "0x27",
+      "delta": 561452632,
+      "rate": 191816280.870742
+    },
+    {
+      "name": "L2I_CACHE_REFILL",
+      "id": "l2i_cache_refill",
+      "config": "0x28",
+      "delta": 96042781,
+      "rate": 32812330.027341
+    },
+    {
+      "name": "PC_BUF_STALL",
+      "id": "pcbuf_stall",
+      "config": "0x2005",
+      "delta": 1356732,
+      "rate": 463517.795707
+    },
+    {
+      "name": "INT_PTAG_STALL",
+      "id": "int_ptag_stall",
+      "config": "0x2006",
+      "delta": 482898552,
+      "rate": 164978840.605928
+    },
+    {
+      "name": "CC_PTAG_STALL",
+      "id": "cc_ptag_stall",
+      "config": "0x2007",
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "VFP_SINGLE_PTAG_STALL",
+      "id": "vfp_single_ptag_stall",
+      "config": "0x2008",
+      "delta": 125170,
+      "rate": 42763.436322
+    }
+  ],
+  "counters_map": {
+    "L2I_TLB": 118176285,
+    "L2I_TLB_REFILL": 3250086,
+    "L2I_CACHE": 561452632,
+    "L2I_CACHE_REFILL": 96042781,
+    "PC_BUF_STALL": 1356732,
+    "INT_PTAG_STALL": 482898552,
+    "CC_PTAG_STALL": 0,
+    "VFP_SINGLE_PTAG_STALL": 125170
+  },
+  "cmd": [
+    "sudo",
+    "-n",
+    "/usr/bin/python3",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+    "--inner",
+    "--tid",
+    "704908",
+    "--group",
+    "4",
+    "--window",
+    "3.000000",
+    "--preset-prefix",
+    "920b_topdown_full_",
+    "--kperfx-python",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/python",
+    "--quiet"
+  ],
+  "stderr_tail": "KPERFX_META {\"group\": 4, \"preset\": \"920b_topdown_full_4\", \"events\": [\"l2i_tlb\", \"l2i_tlb_refill\", \"l2i_cache\", \"l2i_cache_refill\", \"pcbuf_stall\", \"int_ptag_stall\", \"cc_ptag_stall\", \"vfp_single_ptag_stall\"], \"tid\": 704908, \"window_requested_s\": 3.0, \"wall_s\": 3.014879, \"started_at_utc\": \"2026-09-23T20:29:30Z\", \"finished_at_utc\": \"2026-09-23T20:29:33Z\", \"time_enabled_ns\": 2927033250, \"time_running_ns\": 2927033250, \"confidence\": 1.0, \"useronly_forced\": false, \"instances\": 1, \"counters\": 8, \"raw_json_writer\": \"kperfx_ctx_write_output\"}\n",
+  "raw_json_writer": "kperfx_ctx_write_output"
+}

@@ -1,0 +1,795 @@
+{
+  "schema": "prepare-input-run-manifest/v1",
+  "generated_utc": "2026-09-23T20:21:13Z",
+  "run_id": "prof-real-b1",
+  "run_dir": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1",
+  "kind": "service-bringup",
+  "stage": "phase-timing",
+  "container": {
+    "name": "pi-phase-chip3-prof-real-b1",
+    "id": "63f0e99fdb3978b56f2a7c1b201230b2c95bbda047a19de118ccddb1625a0e69",
+    "running": true,
+    "cpuset_effective": "120-159",
+    "privileged": true
+  },
+  "image": {
+    "id": "sha256:b2c6ff72ff93f82d447c4d33b4f099208f5f522f04eaba69766c2cdb4fb86b42",
+    "ref": "local/vllm-ascend-liteprofiler:v0.26.0rc1-openeuler",
+    "repo_digest": null
+  },
+  "hardware": {
+    "host": "a3-22",
+    "chip": 3,
+    "device": "/dev/davinci3",
+    "cpuset": "120-159",
+    "cpuset_mems": 1,
+    "worker_main_cpus": "122-157",
+    "acl_cpu": 158,
+    "release_cpu": 159
+  },
+  "engine_core": {
+    "pid": 704908,
+    "tid": 704908,
+    "tid_rule": "vLLM v1 executes NPUModelRunner.execute_model on the process main thread and LiteProfiler records threading.get_native_id(), which equals the PID for that thread",
+    "process_name": null,
+    "memory_mb": null,
+    "source": "npu-smi (live)",
+    "pid_namespace": "host",
+    "threads": [
+      {
+        "tid": 704908,
+        "comm": "VLLM::EngineCor",
+        "role": "main"
+      },
+      {
+        "tid": 705044,
+        "comm": "WatchdogMonitor",
+        "role": "other"
+      },
+      {
+        "tid": 705045,
+        "comm": "AtraceMonitor",
+        "role": "other"
+      },
+      {
+        "tid": 705046,
+        "comm": "PlogFlush",
+        "role": "other"
+      },
+      {
+        "tid": 706027,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706176,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706177,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706178,
+        "comm": "adx_data_dump_t",
+        "role": "other"
+      },
+      {
+        "tid": 706179,
+        "comm": "PlogReportRecv",
+        "role": "other"
+      },
+      {
+        "tid": 706180,
+        "comm": "TraceClientRecv",
+        "role": "other"
+      },
+      {
+        "tid": 706221,
+        "comm": "MONITOR_0",
+        "role": "other"
+      },
+      {
+        "tid": 706222,
+        "comm": "REPORT_RAS",
+        "role": "other"
+      },
+      {
+        "tid": 706223,
+        "comm": "RT_RECYCLE_3",
+        "role": "other"
+      },
+      {
+        "tid": 706230,
+        "comm": "acl_thread",
+        "role": "acl_thread"
+      },
+      {
+        "tid": 706231,
+        "comm": "release_thread",
+        "role": "release_thread"
+      },
+      {
+        "tid": 706255,
+        "comm": "pt_autograd_0",
+        "role": "other"
+      },
+      {
+        "tid": 706256,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706262,
+        "comm": "pt_tcpstore_uv",
+        "role": "other"
+      },
+      {
+        "tid": 706292,
+        "comm": "hccl_watchdog_t",
+        "role": "other"
+      },
+      {
+        "tid": 706293,
+        "comm": "hccl_watchdog_t",
+        "role": "other"
+      },
+      {
+        "tid": 706300,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706306,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706307,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706308,
+        "comm": "hccl_watchdog_t",
+        "role": "other"
+      },
+      {
+        "tid": 706321,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706322,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706323,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706324,
+        "comm": "hccl_watchdog_t",
+        "role": "other"
+      },
+      {
+        "tid": 706337,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706338,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706339,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706340,
+        "comm": "hccl_watchdog_t",
+        "role": "other"
+      },
+      {
+        "tid": 706352,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706353,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706354,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706355,
+        "comm": "hccl_watchdog_t",
+        "role": "other"
+      },
+      {
+        "tid": 706356,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706357,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706358,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706359,
+        "comm": "hccl_watchdog_t",
+        "role": "other"
+      },
+      {
+        "tid": 706361,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706362,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706363,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706364,
+        "comm": "hccl_watchdog_t",
+        "role": "other"
+      },
+      {
+        "tid": 706407,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706408,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706409,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 706920,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707032,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707033,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707034,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707035,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707036,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707037,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707038,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707039,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707040,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707041,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707042,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707043,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707044,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707045,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707046,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707047,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707048,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707049,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707050,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707051,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707052,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707053,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707054,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707055,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707056,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707057,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707058,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707059,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707060,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707061,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707062,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707063,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707064,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707065,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707066,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707067,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707068,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707069,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707070,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707071,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 707096,
+        "comm": "CaffeTaskThread",
+        "role": "other"
+      },
+      {
+        "tid": 707097,
+        "comm": "CaffeTaskThread",
+        "role": "other"
+      },
+      {
+        "tid": 707098,
+        "comm": "CaffeTaskThread",
+        "role": "other"
+      },
+      {
+        "tid": 707099,
+        "comm": "CaffeTaskThread",
+        "role": "other"
+      },
+      {
+        "tid": 707100,
+        "comm": "CaffeTaskThread",
+        "role": "other"
+      },
+      {
+        "tid": 707101,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707102,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707103,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707104,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707105,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707106,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707107,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707108,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707152,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707153,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707154,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707155,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707156,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707157,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707158,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 707159,
+        "comm": "AOE_RTKB",
+        "role": "other"
+      },
+      {
+        "tid": 712690,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 712691,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      },
+      {
+        "tid": 712692,
+        "comm": "ZMQbg/Reaper",
+        "role": "other"
+      },
+      {
+        "tid": 712693,
+        "comm": "ZMQbg/IO/0",
+        "role": "other"
+      },
+      {
+        "tid": 712694,
+        "comm": "ZMQbg/Reaper",
+        "role": "other"
+      },
+      {
+        "tid": 712695,
+        "comm": "ZMQbg/IO/0",
+        "role": "other"
+      },
+      {
+        "tid": 712697,
+        "comm": "VLLM::EngineCor",
+        "role": "other"
+      }
+    ]
+  },
+  "server": {
+    "port": 18100,
+    "base_url": "http://127.0.0.1:18100",
+    "served_model_name": "qwen35-08b",
+    "backend": "uni",
+    "tensor_parallel_size": 1,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "max_model_len": 2048,
+    "max_num_seqs": 1,
+    "max_num_batched_tokens": 2048,
+    "async_scheduling": "on",
+    "prefix_caching": false,
+    "model_path": "/home/REMOTE_USER/models/Qwen3.5-0.8B"
+  },
+  "workload": {
+    "concurrency": 1,
+    "max_tokens": 1024,
+    "prompt_tokens_target": 128,
+    "requests": 1,
+    "streaming": true,
+    "temperature": 0.0,
+    "warmup_requests_before_profile_window": 2
+  },
+  "instrumentation": {
+    "activate": "POST /start_profile ; POST /stop_profile",
+    "extra_docker_args": "--pid=host -v /tmp:/tmp -e PYTHONPERFSUPPORT=1",
+    "log_path_in_container": "/runmeta/lite-profiler/lite.log",
+    "log_path_on_host": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/lite-profiler/lite.log",
+    "mode": "liteprofiler-v2 (env armed, no --profiler-config)",
+    "phase_timing": "on",
+    "pystack": {
+      "interval_us_effective": 4294967295,
+      "interval_us_requested": 0,
+      "log_path_on_host": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/lite-profiler/pystack.csv",
+      "note": "started unconditionally by /start_profile; samples every Python thread of the process and therefore competes for the GIL"
+    }
+  },
+  "pystack": {
+    "interval_us_requested": 0,
+    "interval_us_effective": 4294967295,
+    "log_path_on_host": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/lite-profiler/pystack.csv",
+    "log_exists": false,
+    "log_bytes": null,
+    "note": "interval_us == 4294967295 means the sampler was armed but effectively disabled; a small pystack.csv (<1 KB) confirms it"
+  },
+  "artifacts": {
+    "phase_timing": {
+      "raw_log": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/lite-profiler/lite.log",
+        "container_path": "/runmeta/lite-profiler/lite.log",
+        "exists": false,
+        "bytes": null
+      },
+      "per_step_csv": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/lite-profiler/phase_timing.csv",
+        "container_path": null,
+        "exists": false,
+        "bytes": null
+      },
+      "summary_json": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/lite-profiler/phase_timing.json",
+        "container_path": null,
+        "exists": false,
+        "bytes": null
+      }
+    },
+    "subscope": {
+      "raw_csv": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/pi-subscope/raw.csv",
+        "container_path": "/runmeta/pi-subscope/raw.csv",
+        "exists": false,
+        "bytes": null
+      },
+      "launch_env": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/pi-subscope/launch.env.txt",
+        "container_path": null,
+        "exists": true,
+        "bytes": 379
+      },
+      "per_step_csv": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/pi-subscope/per_step_subscope.csv",
+        "container_path": null,
+        "exists": false,
+        "bytes": null
+      },
+      "summary_csv": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/pi-subscope/summary.csv",
+        "container_path": null,
+        "exists": false,
+        "bytes": null
+      },
+      "summary_groups_csv": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/pi-subscope/summary_groups.csv",
+        "container_path": null,
+        "exists": false,
+        "bytes": null
+      },
+      "meta_json": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/pi-subscope/meta.json",
+        "container_path": null,
+        "exists": false,
+        "bytes": null
+      }
+    },
+    "docker": {
+      "inspect_created": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/host/docker_inspect.created.json",
+        "container_path": null,
+        "exists": true,
+        "bytes": 19140
+      },
+      "inspect_ready": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/host/docker_inspect.ready.json",
+        "container_path": null,
+        "exists": true,
+        "bytes": 19140
+      },
+      "container_id_file": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/host/container_id.txt",
+        "container_path": null,
+        "exists": true,
+        "bytes": 65
+      },
+      "logs": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/host/docker-logs.txt",
+        "container_path": null,
+        "exists": false,
+        "bytes": null
+      }
+    },
+    "mappings": {
+      "container_threads": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/mappings/container_threads.txt",
+        "container_path": null,
+        "exists": true,
+        "bytes": 20011
+      },
+      "npu_proc_mem_ready": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/mappings/npu_proc_mem.ready.txt",
+        "container_path": null,
+        "exists": true,
+        "bytes": 76
+      },
+      "cpu_pinning": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/mappings/cpu_pinning.txt",
+        "container_path": null,
+        "exists": true,
+        "bytes": 652
+      }
+    },
+    "workload": {
+      "client_stdout": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/requests/client.stdout.txt",
+        "container_path": null,
+        "exists": false,
+        "bytes": null
+      },
+      "client_stderr": {
+        "host_path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/prof-real-b1/requests/client.stderr.txt",
+        "container_path": null,
+        "exists": false,
+        "bytes": null
+      }
+    }
+  },
+  "handoff": {
+    "attach_perf": "sudo perf record -g -F 999 -t 704908 -o /tmp/perf.data -- sleep 30",
+    "attach_libkperfx": "KPERFX_TARGET=pid:704908 <kperfx command>",
+    "drive_workload": "python3 scripts/phase_smoke_client.py --base-url http://127.0.0.1:18100 --model qwen35-08b --outdir runs/prof-real-b1/requests/perf-window --requests <N> --concurrency <C> --prompt-tokens <ISL> --max-tokens <OSL> --tag perf-window",
+    "arm_lite_profiler": "curl -s -X POST http://127.0.0.1:18100/start_profile ; curl -s -X POST http://127.0.0.1:18100/stop_profile",
+    "exec_in_container": "sudo -n docker exec -it pi-phase-chip3-prof-real-b1 bash",
+    "stop_container": "sudo -n docker stop --time 60 pi-phase-chip3-prof-real-b1 && sudo -n docker rm -f pi-phase-chip3-prof-real-b1"
+  },
+  "warnings": []
+}

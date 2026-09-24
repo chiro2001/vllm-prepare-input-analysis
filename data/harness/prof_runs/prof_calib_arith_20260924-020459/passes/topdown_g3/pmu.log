@@ -1,0 +1,1 @@
+{"counters": {"BR_MIS_PRED": 55446237, "O3_FLUSH": 946612, "NUKE_FLUSH": 933015, "BP_MISP_BR_IND": 85846, "BP_MISP_BR_BLR": 35350, "BP_MISP_BR_BL": 1042, "BP_MISP_BR_RET": 18892, "IF_SP_FLUSH": 3562037}, "confidence": 1.0, "ipc": null, "stopped_reason": "target_exit"}

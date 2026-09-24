@@ -1,0 +1,19 @@
+{
+  "host": "host22",
+  "machine": "aarch64",
+  "python": "3.11.16",
+  "numpy": "2.4.6",
+  "torch": "2.9.0+cpu",
+  "torch_num_threads": 1,
+  "affinity": [
+    200,
+    203,
+    4
+  ],
+  "env": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "cpu_model": "aarch64",
+  "note": "H2D/DMA 与 device kernel launch 不在本脚本范围（需 chip3）。"
+}

@@ -1,0 +1,6 @@
+# C15: torch.npu Stream/Event 语义（record/synchronize/stream ctx）
+# ok=True  0.04 ms
+# value: 'ok'
+# exc: None
+# ---- traceback ----
+

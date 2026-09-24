@@ -1,0 +1,32 @@
+tag,ts,metric,value,source,note
+smoke5,2026-09-24T01:59:23+0800,ipc,3.7354675964773487,pmu/count.json,CPU busy cycles 口径，不是 wall time
+smoke5,2026-09-24T01:59:23+0800,time_enabled,1371816830,pmu/count.json,CPU busy cycles 口径，不是 wall time
+smoke5,2026-09-24T01:59:23+0800,time_running,1371816830,pmu/count.json,CPU busy cycles 口径，不是 wall time
+smoke5,2026-09-24T01:59:23+0800,confidence,1.0,pmu/count.json,CPU busy cycles 口径，不是 wall time
+smoke5,2026-09-24T01:59:23+0800,wall_s,1.401219,pmu/count.json,CPU busy cycles 口径，不是 wall time
+smoke5,2026-09-24T01:59:23+0800,counter.CPU_CYCLES,3975891800,pmu/count.json,libkperfx 区间增量
+smoke5,2026-09-24T01:59:23+0800,counter.INST_RETIRED,14851814986,pmu/count.json,libkperfx 区间增量
+smoke5,2026-09-24T01:59:23+0800,counter.INST_SPEC,15989604370,pmu/count.json,libkperfx 区间增量
+smoke5,2026-09-24T01:59:23+0800,counter.BR_PRED,3220063881,pmu/count.json,libkperfx 区间增量
+smoke5,2026-09-24T01:59:23+0800,counter.BR_MIS_PRED,13701175,pmu/count.json,libkperfx 区间增量
+smoke5,2026-09-24T01:59:23+0800,counter.L1D_CACHE_REFILL,1248711,pmu/count.json,libkperfx 区间增量
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] _PyObject_Free,23.51,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] _PyObject_Malloc,20.44,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] _PyEval_EvalFrameDefault,11.99,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] k_mul,4.5,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] long_bitwise,4.02,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] x_add,3.11,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] _Py_NewReference,2.98,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] long_dealloc,2.95,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] long_rshift1,2.69,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] PyErr_CheckSignals,2.21,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] _PyLong_New,2.12,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] PyNumber_InPlaceXor,1.97,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] PyObject_Free,1.87,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] PyNumber_Rshift,1.42,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] long_rshift,1.33,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] PyNumber_And,1.32,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] PyObject_Malloc,1.23,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] _PyErr_CheckSignalsTstate,1.06,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] _PyLong_Add,0.98,perf/hotspots.json,libpython3.12.so.1.0
+smoke5,2026-09-24T01:59:23+0800,hotspot.[.] long_xor,0.86,perf/hotspots.json,libpython3.12.so.1.0

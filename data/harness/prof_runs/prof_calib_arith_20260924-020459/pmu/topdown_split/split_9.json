@@ -1,0 +1,61 @@
+{
+  "caliber_version": "prof-v1",
+  "ts_start": "2026-09-24T02:07:29+0800",
+  "pid": 4109973,
+  "events_spec": null,
+  "preset": "920b_topdown_full_9",
+  "multiplex_allowed": false,
+  "ts_running": "2026-09-24T02:07:29+0800",
+  "stopped_reason": "target_exit",
+  "ts_end": "2026-09-24T02:07:35+0800",
+  "wall_s": 5.51901,
+  "counters": {
+    "CONTEXT_SWITCHES": 10,
+    "CPU_MIGRATIONS": 0,
+    "PAGE_FAULTS": 204,
+    "CPU_CLOCK": 5480057270
+  },
+  "entries": [
+    {
+      "name": "CONTEXT_SWITCHES",
+      "id": "context_switches",
+      "config": 3,
+      "delta": 10,
+      "rate": 1.8247922109109433
+    },
+    {
+      "name": "CPU_MIGRATIONS",
+      "id": "cpu_migrations",
+      "config": 4,
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "PAGE_FAULTS",
+      "id": "page_faults",
+      "config": 2,
+      "delta": 204,
+      "rate": 37.22576110258325
+    },
+    {
+      "name": "CPU_CLOCK",
+      "id": "cpu_clock",
+      "config": 0,
+      "delta": 5480057270,
+      "rate": 999996582.1641889
+    }
+  ],
+  "time_enabled": 5480076000,
+  "time_running": 5480076000,
+  "confidence": 1.0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B",
+  "backend": "920B(counting)",
+  "derived": {
+    "cpu_cycles": null,
+    "inst_retired": null,
+    "ipc": null,
+    "cycles_per_sec": null
+  }
+}

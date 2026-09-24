@@ -1,0 +1,6 @@
+# C7 CpuGpuBuffer(device=npu:0, pin_memory=True)
+# ok=True
+# value='cpu=cpu gpu=cpu'
+# exc=None
+# tb
+

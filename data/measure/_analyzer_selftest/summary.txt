@@ -1,0 +1,50 @@
+lite log                : data/measure/_analyzer_selftest/lite.log
+rows                    : 982 usable, 0 malformed
+threads                 : tid 1=66, tid 131=915, tid 1131=1
+selected thread         : tid=131 (66 steps from scope 'Step:Model')
+orphan rows folded      : 652
+steps by phase (steady) : prefill=0, prefill+decode=0, decode=63, idle=1
+warmup steps excluded   : 2 of 66 steps in the slice
+
+per-phase statistics (steady state, us)
+  scope                     decode          idle           all
+  step_dur                  5570.5         429.4        5569.7
+  prepare input             3932.8         221.1        3874.8
+  forward                   1084.2             -        1084.2
+  post process               167.5             -         167.5
+  sample_token               154.7             -         154.7
+  draft_token                  2.7             -           2.7
+  n_steps                       63             1            64
+  (step_dur prints p50; every other row prints the mean us/step)
+
+prepare input / step_dur (share_step: mean of per-step ratios, p50)
+  decode            p50=   73.6%  mean=   72.5%
+  idle              p50=   51.5%  mean=   51.5%
+  all               p50=   73.6%  mean=   72.2%
+
+coverage of the step scope by the measured scopes
+  decode             measured=5751.682 us (105.9% of step_dur)
+  idle               measured=221.06 us (51.5% of step_dur)
+  all                measured=5693.686 us (106.4% of step_dur)
+
+scope inventory (per-step sums over all steps, warm-up included)
+  scope                           steps    mean us     p50 us   total ms
+  Step:Model                         66     6876.2     5605.7     453.83
+  prepare input                      66     3967.6     4088.6     261.86
+  forward                            64     2500.9     1099.4     160.05
+  Step:Schedule                      65      334.9      323.1      21.77
+  post process                       64      166.3      117.4      10.64
+  sample_token                       64      153.6      110.5       9.83
+  async_state_update                 64       81.3       48.5       5.21
+  Step:Output                        65       40.9       39.0       2.66
+  schedule: allocate_slots           63       39.8       39.2       2.51
+  schedule: make_cached_request_data     65       11.2       10.7       0.73
+  schedule: update_after_schedule     65        7.4        7.2       0.48
+  draft_token                        64        2.7        2.6       0.17
+  schedule: get_num_common_prefix_blocks     65        2.3        2.3       0.15
+  Input:Process                       1       28.8       28.8       0.03
+
+warnings
+  ! step_scope=Step:Model: 132 anchor rows for 66 steps; 66 secondary anchor rows were folded into the nearest preceding step as orphans (the async batch-queue path emits two Step:Model scopes per engine-core iteration: the execute_model dispatch and the batch_queue wait). Step windows use the dispatch anchors only.
+  ! 62 of 66 steps have measured scopes summing to more than the step scope itself (scopes that run outside the step window are folded in by the orphan rule); other_us is clamped to 0 for those steps
+

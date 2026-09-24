@@ -1,0 +1,6 @@
+# C14: with torch.device('npu'): torch.zeros(2)
+# ok=True  0.09 ms
+# value: 'cpu'
+# exc: None
+# ---- traceback ----
+

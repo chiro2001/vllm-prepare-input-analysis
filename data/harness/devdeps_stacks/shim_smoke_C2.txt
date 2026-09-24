@@ -1,0 +1,6 @@
+# C2: torch.npu.* 基本命名空间（is_available/current_stream/Event/Stream/synchronize/mem_get_info）
+# ok=True  0.07 ms
+# value: {'npu.is_available': True, 'npu.device_count': 1, 'npu.current_device': 0, 'npu.current_stream': '<CpuShimStream>', 'npu.synchronize': None, 'npu.Event': '<CpuShimEvent>', 'npu.Stream': '<CpuShimStream>', 'npu.empty_cache': None, 'npu.mem_get_info': (1099511627776, 1099511627776)}
+# exc: None
+# ---- traceback ----
+

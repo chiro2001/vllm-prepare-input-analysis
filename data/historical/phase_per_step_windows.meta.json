@@ -1,0 +1,1640 @@
+{
+ "description": "\u6bcf\u4e2a lite trace \u7684\u6bcf\u4e2a phase \u7a97\u53e3 \u00d7 \u6bcf\u4e2a scope \u7684\u8017\u65f6\u7edf\u8ba1\uff1b\u5355\u4f4d\u5fae\u79d2\uff08\u9664 share_of_step_pct\uff09\u3002",
+ "source": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/<run>/lite.trace.json.gz",
+ "tier": "historical-measured",
+ "caveats": [
+  "w1/m1a/e1a \u4e09\u6ce2\u7684\u955c\u50cf\u6ca1\u6709 wait scope\uff1aprepare input / forward \u5185\u542b device \u7b49\u5f85\uff0c\u4e0d\u80fd\u76f4\u63a5\u5f53\u4f5c CPU \u4fa7\u8017\u65f6\uff1bMTP-on \u7684 graph \u81c2\u5c24\u5176\u660e\u663e\u3002",
+  "\u7a97\u53e3\u4e4b\u95f4\u4e0d\u8fde\u7eed\uff08\u6bcf\u4efd trace 5 \u4e2a ~25 s \u7a97\u53e3\uff0c\u95f4\u9694 ~15 s \u672a\u91c7\u6837\uff09\u3002",
+  "\u6b65\u6570\u7531 Step:Schedule \u5b9e\u4f8b\u6570\u786e\u5b9a\u3002"
+ ],
+ "traces": [
+  {
+   "run": "tdb_qwen3-17b_tp1_eager_mtp-off_e1a_20260915T014119Z_5",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen3-17b_tp1_eager_mtp-off_e1a_20260915T014119Z_5",
+   "worker_main_lanes": [
+    "155:155"
+   ],
+   "lanes": [
+    {
+     "lane": "155:155",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "ac04614b7cd4060a7c9f3ddc181d081cdc9874c5d4d88f45ce771bf2a4e0ee49",
+   "source_logs": [
+    {
+     "bytes": 2821428,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen3-17b_tp1_eager_mtp-off_e1a_20260915T014119Z_5/lite-profiler/lite.log",
+     "sha256": "6ccc4795bf8bbc783780233b13e6121ae572e2f1a62decaeec06a47354d4e39c"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen3-17b_tp1_eager_mtp-off_m1a_20260914T230257Z_5",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen3-17b_tp1_eager_mtp-off_m1a_20260914T230257Z_5",
+   "worker_main_lanes": [
+    "154:154"
+   ],
+   "lanes": [
+    {
+     "lane": "154:154",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "f170014165d55891c27ee1b6529927b00bb80523e5d04d69a70ab5702aae6f89",
+   "source_logs": [
+    {
+     "bytes": 2901376,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen3-17b_tp1_eager_mtp-off_m1a_20260914T230257Z_5/lite-profiler/lite.log",
+     "sha256": "8b4fc0c7c77d2169696b7d7e6ba77a824c4127576269a78c012ed4d8655e8135"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen3-17b_tp1_eager_mtp-off_w1_20260914T201524Z_5",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen3-17b_tp1_eager_mtp-off_w1_20260914T201524Z_5",
+   "worker_main_lanes": [
+    "128:128"
+   ],
+   "lanes": [
+    {
+     "lane": "128:128",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "47af5cac6591f89787760c7a121b9b2e108e3a33537bc761bb5dfd217cd80999",
+   "source_logs": [
+    {
+     "bytes": 2145230,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen3-17b_tp1_eager_mtp-off_w1_20260914T201524Z_5/lite-profiler/lite.log",
+     "sha256": "b37744685cb85968a35839b0857723843f6a651dc1256a5ea8d363ecb304f81a"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen3-17b_tp1_graph_mtp-off_e1a_20260915T014119Z_4",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen3-17b_tp1_graph_mtp-off_e1a_20260915T014119Z_4",
+   "worker_main_lanes": [
+    "155:155"
+   ],
+   "lanes": [
+    {
+     "lane": "155:155",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "397a3f3484046eddede42f375bdcc6f6a135986421b81ddd147874217c114588",
+   "source_logs": [
+    {
+     "bytes": 16295662,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen3-17b_tp1_graph_mtp-off_e1a_20260915T014119Z_4/lite-profiler/lite.log",
+     "sha256": "19903ac11bdb8e46781e4856056140a57d2b2aac105d9f466db2a8f806f7e640"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen3-17b_tp1_graph_mtp-off_m1a_20260914T230257Z_4",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen3-17b_tp1_graph_mtp-off_m1a_20260914T230257Z_4",
+   "worker_main_lanes": [
+    "155:155"
+   ],
+   "lanes": [
+    {
+     "lane": "155:155",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "c2bc0bbe573454d48dd645e6ee47057d9bfd65f2e8aed5685e7030855dc7dbc7",
+   "source_logs": [
+    {
+     "bytes": 15882687,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen3-17b_tp1_graph_mtp-off_m1a_20260914T230257Z_4/lite-profiler/lite.log",
+     "sha256": "39554b365b130e3f0c31c93d82b11bd9cfc136bc36ac3f57a6550e5bb937df7f"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen3-17b_tp1_graph_mtp-off_w1_20260914T201524Z_4",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen3-17b_tp1_graph_mtp-off_w1_20260914T201524Z_4",
+   "worker_main_lanes": [
+    "128:128"
+   ],
+   "lanes": [
+    {
+     "lane": "128:128",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "cec4e2bb496b930742b2cd3812008ac833d4642bd6875a08133318c85de72afe",
+   "source_logs": [
+    {
+     "bytes": 12621969,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen3-17b_tp1_graph_mtp-off_w1_20260914T201524Z_4/lite-profiler/lite.log",
+     "sha256": "0affebddf0ce106e4545274d8fb0fd18a041c31463977df18fae680f2392e6eb"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp1_eager_mtp-off_e1a_20260915T014119Z_2",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp1_eager_mtp-off_e1a_20260915T014119Z_2",
+   "worker_main_lanes": [
+    "158:158"
+   ],
+   "lanes": [
+    {
+     "lane": "158:158",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "6e0ef581d58467a04bb1a986f59f7fb7cdc86fe2ea267a5b12f518ebc0751e81",
+   "source_logs": [
+    {
+     "bytes": 2678037,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp1_eager_mtp-off_e1a_20260915T014119Z_2/lite-profiler/lite.log",
+     "sha256": "529f85115a760fb85c7659b2cb3527467c8250f45a69be5e48ce2dc9326216e8"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp1_eager_mtp-off_m1a_20260914T230257Z_2",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp1_eager_mtp-off_m1a_20260914T230257Z_2",
+   "worker_main_lanes": [
+    "158:158"
+   ],
+   "lanes": [
+    {
+     "lane": "158:158",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "783593578eebfbbc59f2a3bcb3d5df138f0928e011daa1dce7e67b808f656df9",
+   "source_logs": [
+    {
+     "bytes": 2601322,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp1_eager_mtp-off_m1a_20260914T230257Z_2/lite-profiler/lite.log",
+     "sha256": "6e6e512cb11bfa9cabdf5c351f7427428b0d58de3a3755c7ed8368499aceda8d"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp1_eager_mtp-off_w1_20260914T201524Z_2",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp1_eager_mtp-off_w1_20260914T201524Z_2",
+   "worker_main_lanes": [
+    "131:131"
+   ],
+   "lanes": [
+    {
+     "lane": "131:131",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "baf595f1369afab7a3fa3d37296c14cc8858a72f7c989e0cdb933c26010469a4",
+   "source_logs": [
+    {
+     "bytes": 1998967,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp1_eager_mtp-off_w1_20260914T201524Z_2/lite-profiler/lite.log",
+     "sha256": "ad413a226ea94418d4bf1905c7e2f0cc44be13548cc0c31dc3b540fd8eb99c20"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp1_eager_mtp-on_e1a_20260915T014119Z_3",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp1_eager_mtp-on_e1a_20260915T014119Z_3",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "6f8ec3636bd258fd379e350986b9c52b4a0fa19b11c1f3d31c255c81a8a79653",
+   "source_logs": [
+    {
+     "bytes": 2522598,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp1_eager_mtp-on_e1a_20260915T014119Z_3/lite-profiler/lite.log",
+     "sha256": "64db275aefce85b0548060481ab51af3ac68d057461dff35db6c9ecbc55ef4df"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp1_eager_mtp-on_m1a_20260914T230257Z_3",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp1_eager_mtp-on_m1a_20260914T230257Z_3",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "280087ab43fb0ec4edd04f95ecb09fe255bf932c50dd3249cef2131db1f22ff0",
+   "source_logs": [
+    {
+     "bytes": 2488162,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp1_eager_mtp-on_m1a_20260914T230257Z_3/lite-profiler/lite.log",
+     "sha256": "131c2128aaf9c3ce6375a733160ef7661d52cf583316d6b3c739551b3b7ab923"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp1_eager_mtp-on_w1_20260914T201524Z_3",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp1_eager_mtp-on_w1_20260914T201524Z_3",
+   "worker_main_lanes": [
+    "154:154"
+   ],
+   "lanes": [
+    {
+     "lane": "154:154",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "6943e6b59fe38b790ccd63c452d168d863b20e66b56b575a523373999807d9ad",
+   "source_logs": [
+    {
+     "bytes": 1853330,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp1_eager_mtp-on_w1_20260914T201524Z_3/lite-profiler/lite.log",
+     "sha256": "5cf06a4f28bc3eaf2190da180efb76df9dd02dd768e9beed31e41d3ae8ef525d"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp1_graph_mtp-off_e1a_20260915T014119Z_0",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp1_graph_mtp-off_e1a_20260915T014119Z_0",
+   "worker_main_lanes": [
+    "158:158"
+   ],
+   "lanes": [
+    {
+     "lane": "158:158",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "44f61d9b949f08bd112252b6d2705f745df226aa9f8bb07df328c78e84488abe",
+   "source_logs": [
+    {
+     "bytes": 19410972,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp1_graph_mtp-off_e1a_20260915T014119Z_0/lite-profiler/lite.log",
+     "sha256": "56082e314d794f9b7f4d256d84ddf9591464d235b6bd36b1dfffc7ead240d0a7"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp1_graph_mtp-off_m1a_20260914T230257Z_0",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp1_graph_mtp-off_m1a_20260914T230257Z_0",
+   "worker_main_lanes": [
+    "159:159"
+   ],
+   "lanes": [
+    {
+     "lane": "159:159",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "e429e1cf15c10fa9ff7a79d9b8e1dc4d7298984a6d7aff1504609a08ca4bc97c",
+   "source_logs": [
+    {
+     "bytes": 19581655,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp1_graph_mtp-off_m1a_20260914T230257Z_0/lite-profiler/lite.log",
+     "sha256": "62b6945822a521abecf35f1bfaa74ee194c49778da0392ce27238e51d90c063c"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp1_graph_mtp-off_w1_20260914T201524Z_0",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp1_graph_mtp-off_w1_20260914T201524Z_0",
+   "worker_main_lanes": [
+    "131:131"
+   ],
+   "lanes": [
+    {
+     "lane": "131:131",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "c9cc5f624fd94b3ebed598aebc751bceb1c77371d20029fc153720052ad13890",
+   "source_logs": [
+    {
+     "bytes": 14962689,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp1_graph_mtp-off_w1_20260914T201524Z_0/lite-profiler/lite.log",
+     "sha256": "9ed18931eca8a871732569196fc0f2085fa532e3b68281e6325e5e7cbb0d99cc"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp1_graph_mtp-on_e1a_20260915T014119Z_1",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp1_graph_mtp-on_e1a_20260915T014119Z_1",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "07d5dbfb5561d5dff1f6728683fa2c05867c1d8a7c69a084282723915d383405",
+   "source_logs": [
+    {
+     "bytes": 10214586,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp1_graph_mtp-on_e1a_20260915T014119Z_1/lite-profiler/lite.log",
+     "sha256": "deb055a5fb028060ac9638353333c2686927ebe18fa3e76468b223bb6654a56e"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp1_graph_mtp-on_m1a_20260914T230257Z_1",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp1_graph_mtp-on_m1a_20260914T230257Z_1",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "bdf6a95ec0a626c30b7a0fcdcaf8be5480e8bcb1df031729c5ae5c071a03afa8",
+   "source_logs": [
+    {
+     "bytes": 10257179,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp1_graph_mtp-on_m1a_20260914T230257Z_1/lite-profiler/lite.log",
+     "sha256": "a0082eeb4a515304071b4b2ae1afe8435c601e24879640445b26f83225e627b6"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp1_graph_mtp-on_w1_20260914T201524Z_1",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp1_graph_mtp-on_w1_20260914T201524Z_1",
+   "worker_main_lanes": [
+    "154:154"
+   ],
+   "lanes": [
+    {
+     "lane": "154:154",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "9479bbc2ce4ea192fd80b2c4bb6149d7e5c7fcf54511aa3bc105ae918d3b2d9e",
+   "source_logs": [
+    {
+     "bytes": 7903886,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp1_graph_mtp-on_w1_20260914T201524Z_1/lite-profiler/lite.log",
+     "sha256": "757b3b230da3cd7063306e290530c2e5afb0e0f70c1d473f2f0bf632395939f9"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp4_eager_mtp-off_m4_qwen35-08b_eager_off_20260915T010438Z_0",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp4_eager_mtp-off_m4_qwen35-08b_eager_off_20260915T010438Z_0",
+   "worker_main_lanes": [
+    "157:157",
+    "158:158",
+    "159:159",
+    "160:160"
+   ],
+   "lanes": [
+    {
+     "lane": "157:157",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    },
+    {
+     "lane": "158:158",
+     "rank": 1,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    },
+    {
+     "lane": "159:159",
+     "rank": 2,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    },
+    {
+     "lane": "160:160",
+     "rank": 3,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "244a9138e9bdbd1e07e840cf17c6cbb931354abbc80a1794cdacdb492c467954",
+   "source_logs": [
+    {
+     "bytes": 4575438,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp4_eager_mtp-off_m4_qwen35-08b_eager_off_20260915T010438Z_0/lite-profiler/lite.log",
+     "sha256": "d95903358529910b561d1fd5552ee54842f3fe45b9e069dd362bdb5228422d50"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp4_graph_mtp-off_m4_qwen35-08b_graph_off_20260915T005705Z_0",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp4_graph_mtp-off_m4_qwen35-08b_graph_off_20260915T005705Z_0",
+   "worker_main_lanes": [
+    "158:158",
+    "159:159",
+    "160:160",
+    "161:161"
+   ],
+   "lanes": [
+    {
+     "lane": "158:158",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    },
+    {
+     "lane": "159:159",
+     "rank": 1,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    },
+    {
+     "lane": "160:160",
+     "rank": 2,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    },
+    {
+     "lane": "161:161",
+     "rank": 3,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "cd1cbad0d3432b6db4f4bdbdc6ac6de9730a5b085225efe47295ce20cfb8d3a9",
+   "source_logs": [
+    {
+     "bytes": 37573139,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp4_graph_mtp-off_m4_qwen35-08b_graph_off_20260915T005705Z_0/lite-profiler/lite.log",
+     "sha256": "8d01daeb38aa258784f4ba43d7e30d91853615dd15b02c7d758d0d36f9ea2c99"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-08b_tp4_graph_mtp-off_v4b_20260914T225423Z_0",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-08b_tp4_graph_mtp-off_v4b_20260914T225423Z_0",
+   "worker_main_lanes": [
+    "158:158",
+    "159:159",
+    "160:160",
+    "161:161"
+   ],
+   "lanes": [
+    {
+     "lane": "158:158",
+     "rank": 0,
+     "windows": 1,
+     "unattributed": {
+      "prepare input": 1
+     }
+    },
+    {
+     "lane": "159:159",
+     "rank": 1,
+     "windows": 1,
+     "unattributed": {
+      "prepare input": 1
+     }
+    },
+    {
+     "lane": "160:160",
+     "rank": 2,
+     "windows": 1,
+     "unattributed": {
+      "prepare input": 1
+     }
+    },
+    {
+     "lane": "161:161",
+     "rank": 3,
+     "windows": 1,
+     "unattributed": {
+      "prepare input": 1
+     }
+    }
+   ],
+   "trace_sha256": "665665eed17dcb7e989751d4205dce15c84d24066a8a29d682b65a1bd3ab8d8e",
+   "source_logs": [
+    {
+     "bytes": 7196774,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-08b_tp4_graph_mtp-off_v4b_20260914T225423Z_0/lite-profiler/lite.log",
+     "sha256": "4c9a3e88644503e4730ff39dfe5c083c0c0266463e7c59b34e578b196cb43f8a"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-27b_tp1_eager_mtp-off_m1c_20260914T235832Z_4",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-27b_tp1_eager_mtp-off_m1c_20260914T235832Z_4",
+   "worker_main_lanes": [
+    "158:158"
+   ],
+   "lanes": [
+    {
+     "lane": "158:158",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "405b58523cebffdee08b364d1ca946eec36bba461af62e30d285c4d40ba072da",
+   "source_logs": [
+    {
+     "bytes": 1028127,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-27b_tp1_eager_mtp-off_m1c_20260914T235832Z_4/lite-profiler/lite.log",
+     "sha256": "81dcf6d71c985e6684ae3cc6bc91a0e5e398ffc49f216badddfaea7acf2b6b1f"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-27b_tp1_eager_mtp-off_w2b_20260914T211728Z_4",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-27b_tp1_eager_mtp-off_w2b_20260914T211728Z_4",
+   "worker_main_lanes": [
+    "130:130"
+   ],
+   "lanes": [
+    {
+     "lane": "130:130",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "54d0d9662eb406345e408a9346e7fccab9a950b4494175906952c7de6d619938",
+   "source_logs": [
+    {
+     "bytes": 600300,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-27b_tp1_eager_mtp-off_w2b_20260914T211728Z_4/lite-profiler/lite.log",
+     "sha256": "6f032649d8f22c67bfb21069d3e1771c1e2fc58fb0802499019b657dc61ac1c9"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-27b_tp1_eager_mtp-on_m1c_20260914T235832Z_5",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-27b_tp1_eager_mtp-on_m1c_20260914T235832Z_5",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "007def0d9592fcda64d6c55589f0ffb49e8bca9cf94c0db8467daeb1927831a2",
+   "source_logs": [
+    {
+     "bytes": 1090016,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-27b_tp1_eager_mtp-on_m1c_20260914T235832Z_5/lite-profiler/lite.log",
+     "sha256": "d35d3a0da1f3e4c93acd0536afdfcb0985e18226639999d2e624c0612f3f5653"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-27b_tp1_eager_mtp-on_w2b_20260914T211728Z_5",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-27b_tp1_eager_mtp-on_w2b_20260914T211728Z_5",
+   "worker_main_lanes": [
+    "154:154"
+   ],
+   "lanes": [
+    {
+     "lane": "154:154",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "2651b4618f0034266bdd10cd3e8ed537038582c12cd63c2fe0670a68da9aa44f",
+   "source_logs": [
+    {
+     "bytes": 678721,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-27b_tp1_eager_mtp-on_w2b_20260914T211728Z_5/lite-profiler/lite.log",
+     "sha256": "799f1b2f40d4aa6cc4b545b73dfa8b79ce76fa66550dde4836b503f23569968d"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-27b_tp1_graph_mtp-off_m1c_20260914T235832Z_2",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-27b_tp1_graph_mtp-off_m1c_20260914T235832Z_2",
+   "worker_main_lanes": [
+    "158:158"
+   ],
+   "lanes": [
+    {
+     "lane": "158:158",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "367836729a1800e0bce5f79083218f1f06e7cf163b44bd8fa2ab9ef32ac9aa63",
+   "source_logs": [
+    {
+     "bytes": 2760402,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-27b_tp1_graph_mtp-off_m1c_20260914T235832Z_2/lite-profiler/lite.log",
+     "sha256": "e6392a965e2116983c319b04fafe346d013b41c9a1293de275ec8e574f6c6acd"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-27b_tp1_graph_mtp-off_w2b_20260914T211728Z_2",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-27b_tp1_graph_mtp-off_w2b_20260914T211728Z_2",
+   "worker_main_lanes": [
+    "131:131"
+   ],
+   "lanes": [
+    {
+     "lane": "131:131",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "753e4315930895793c233f63e23dc53112cbe51c0977db7dc45cc210ba3052a4",
+   "source_logs": [
+    {
+     "bytes": 2754542,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-27b_tp1_graph_mtp-off_w2b_20260914T211728Z_2/lite-profiler/lite.log",
+     "sha256": "f50a2a5d2387ea9a773fa9baa406a2580f2ac7fc1210bf192c4ea7ca1ade167c"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-27b_tp1_graph_mtp-on_e1c_20260915T023631Z_3",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-27b_tp1_graph_mtp-on_e1c_20260915T023631Z_3",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "e6bca11bc35e734bb45f80ace0c1970f3329c8ad8ae7d5e05b9f79275ea14ea0",
+   "source_logs": [
+    {
+     "bytes": 2248363,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-27b_tp1_graph_mtp-on_e1c_20260915T023631Z_3/lite-profiler/lite.log",
+     "sha256": "69a1244a96f4eb677ef20bd0d54b71c81a4da896c2896090ce3e04df7125d11c"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-27b_tp1_graph_mtp-on_m1c_20260914T235832Z_3",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-27b_tp1_graph_mtp-on_m1c_20260914T235832Z_3",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "b527b1760617b43a5685c891012ca9b9aaa7fd0b9573417d2fe20bff106449ad",
+   "source_logs": [
+    {
+     "bytes": 2244513,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-27b_tp1_graph_mtp-on_m1c_20260914T235832Z_3/lite-profiler/lite.log",
+     "sha256": "9085d5070557ae92f823bfd409774015c7f7493355fba36ec6dae312c4a65e17"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-27b_tp1_graph_mtp-on_w2b_20260914T211728Z_3",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-27b_tp1_graph_mtp-on_w2b_20260914T211728Z_3",
+   "worker_main_lanes": [
+    "153:153"
+   ],
+   "lanes": [
+    {
+     "lane": "153:153",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "d0c0daddc067099cd732fa5588300643816ee69317f709ef2fe8f941f019a83f",
+   "source_logs": [
+    {
+     "bytes": 2242771,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-27b_tp1_graph_mtp-on_w2b_20260914T211728Z_3/lite-profiler/lite.log",
+     "sha256": "37216388e61b03137ccd1cee557c3c4921525f7c7a0d1b448e427a10eecf9ef2"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-2b_tp1_eager_mtp-off_e1b_20260915T020833Z_2",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-2b_tp1_eager_mtp-off_e1b_20260915T020833Z_2",
+   "worker_main_lanes": [
+    "158:158"
+   ],
+   "lanes": [
+    {
+     "lane": "158:158",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "4e4e0b8bdcd9a480112bef55930fa338f2d60196f656ebfa16c9345b47c67a63",
+   "source_logs": [
+    {
+     "bytes": 2618379,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-2b_tp1_eager_mtp-off_e1b_20260915T020833Z_2/lite-profiler/lite.log",
+     "sha256": "a308c67aa8228ed9313f384b9ecebe8481ba4c4851cc2f3bc44f9a85fea7a2c7"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-2b_tp1_eager_mtp-off_m1b_20260914T233006Z_2",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-2b_tp1_eager_mtp-off_m1b_20260914T233006Z_2",
+   "worker_main_lanes": [
+    "158:158"
+   ],
+   "lanes": [
+    {
+     "lane": "158:158",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "1f0f0e45caed0a578c20127803da57bf39b21dcd3fda8d756ebf9c3c343b6824",
+   "source_logs": [
+    {
+     "bytes": 2567300,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-2b_tp1_eager_mtp-off_m1b_20260914T233006Z_2/lite-profiler/lite.log",
+     "sha256": "8d22b3e6f7a85ab8bb8923be7f7fce27c162742166760ea2062a50bb0243b695"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-2b_tp1_eager_mtp-off_w2a_20260914T204321Z_2",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-2b_tp1_eager_mtp-off_w2a_20260914T204321Z_2",
+   "worker_main_lanes": [
+    "131:131"
+   ],
+   "lanes": [
+    {
+     "lane": "131:131",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "33dfc743071b0715f776269616aedcaba7bdc4598ba42fc5383a314bde7595c1",
+   "source_logs": [
+    {
+     "bytes": 1835241,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-2b_tp1_eager_mtp-off_w2a_20260914T204321Z_2/lite-profiler/lite.log",
+     "sha256": "3127187bfba07c3efd5e6607cddd71c53be10f7c730eab53af307b96f8098788"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-2b_tp1_eager_mtp-on_e1b_20260915T020833Z_3",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-2b_tp1_eager_mtp-on_e1b_20260915T020833Z_3",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "e75997730cab10c442d80bd3b81960df6e885c5676984dd5a898aa53d2e6c629",
+   "source_logs": [
+    {
+     "bytes": 2354632,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-2b_tp1_eager_mtp-on_e1b_20260915T020833Z_3/lite-profiler/lite.log",
+     "sha256": "46053eaed1e5a048b68cf9f4cd5707e8442f6e32980a54f70c7ef257a5500087"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-2b_tp1_eager_mtp-on_m1b_20260914T233006Z_3",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-2b_tp1_eager_mtp-on_m1b_20260914T233006Z_3",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "8fed4692b1378be7808a08d4708a916ca11fdebc2fe4e5c7615b92911ba93fbb",
+   "source_logs": [
+    {
+     "bytes": 2432143,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-2b_tp1_eager_mtp-on_m1b_20260914T233006Z_3/lite-profiler/lite.log",
+     "sha256": "e2699fab6e0e788b5f8a16c44dae4f4ba75a58e8bbe32fac2e7375d1b43d8201"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-2b_tp1_eager_mtp-on_w2a_20260914T204321Z_3",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-2b_tp1_eager_mtp-on_w2a_20260914T204321Z_3",
+   "worker_main_lanes": [
+    "154:154"
+   ],
+   "lanes": [
+    {
+     "lane": "154:154",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "bdd4e908498f08dc0cc4bc410e6cc862f01aa68afe0efbeded27bd5173b60a5f",
+   "source_logs": [
+    {
+     "bytes": 1761521,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-2b_tp1_eager_mtp-on_w2a_20260914T204321Z_3/lite-profiler/lite.log",
+     "sha256": "6bdcad4c5fd7bb836476eaaf41d50a724a65904398840e33a4755ded93effc18"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-2b_tp1_graph_mtp-off_e1b_20260915T020833Z_0",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-2b_tp1_graph_mtp-off_e1b_20260915T020833Z_0",
+   "worker_main_lanes": [
+    "158:158"
+   ],
+   "lanes": [
+    {
+     "lane": "158:158",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "1770a7dd89ef1dde554d864ddeffaa0bc970da9e713a8fe99bf576afd6140dd8",
+   "source_logs": [
+    {
+     "bytes": 16545757,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-2b_tp1_graph_mtp-off_e1b_20260915T020833Z_0/lite-profiler/lite.log",
+     "sha256": "011647b9b69f971b228ca34a34fecccfa03463544a5967741e6d90e8f8ae4697"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-2b_tp1_graph_mtp-off_m1b_20260914T233006Z_0",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-2b_tp1_graph_mtp-off_m1b_20260914T233006Z_0",
+   "worker_main_lanes": [
+    "158:158"
+   ],
+   "lanes": [
+    {
+     "lane": "158:158",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "a4d44d4ff16f8d631fd8ff17cc28f9da9f4e872e8fa5d545de840447ad37db69",
+   "source_logs": [
+    {
+     "bytes": 16590701,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-2b_tp1_graph_mtp-off_m1b_20260914T233006Z_0/lite-profiler/lite.log",
+     "sha256": "830901894ead0622ba7548b029bda3f4cd64701eb1d5badd63549b113ffaac47"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-2b_tp1_graph_mtp-off_w2a_20260914T204321Z_0",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-2b_tp1_graph_mtp-off_w2a_20260914T204321Z_0",
+   "worker_main_lanes": [
+    "131:131"
+   ],
+   "lanes": [
+    {
+     "lane": "131:131",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "752c8ab8fde4154fd9924934c81649dcb2b64c00c89e200dcfac985f363fdf0e",
+   "source_logs": [
+    {
+     "bytes": 14955162,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-2b_tp1_graph_mtp-off_w2a_20260914T204321Z_0/lite-profiler/lite.log",
+     "sha256": "8b9222bc6e0839e882741fdbcf0cb06a01d2492f23f09ce9d4662a07a68af857"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-2b_tp1_graph_mtp-on_e1b_20260915T020833Z_1",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-2b_tp1_graph_mtp-on_e1b_20260915T020833Z_1",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "ed63ac4c9b0fa62f134878fe40a26aae5715d9330376b9ab880cd7215bb58427",
+   "source_logs": [
+    {
+     "bytes": 9609360,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-2b_tp1_graph_mtp-on_e1b_20260915T020833Z_1/lite-profiler/lite.log",
+     "sha256": "e128a811d1c887fb5aca6b34c3a2159937d064f4328a367bb1c70799121c880d"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-2b_tp1_graph_mtp-on_m1b_20260914T233006Z_1",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-2b_tp1_graph_mtp-on_m1b_20260914T233006Z_1",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "da0614e0e41dfc241d6ddb7eca6ce7d4499125b5b8d4dddcbc794a0b1435d30a",
+   "source_logs": [
+    {
+     "bytes": 9541753,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-2b_tp1_graph_mtp-on_m1b_20260914T233006Z_1/lite-profiler/lite.log",
+     "sha256": "1d1149a8057e1ce2dc6eb1143bf735bec2a2b47c9c59d7dc36c90b2f3b4c96a8"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen35-2b_tp1_graph_mtp-on_w2a_20260914T204321Z_1",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen35-2b_tp1_graph_mtp-on_w2a_20260914T204321Z_1",
+   "worker_main_lanes": [
+    "154:154"
+   ],
+   "lanes": [
+    {
+     "lane": "154:154",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "1c8ec2b3d1a2c65297929754a7e3910c51e4054dde8f905f99d0954995862d65",
+   "source_logs": [
+    {
+     "bytes": 7853424,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen35-2b_tp1_graph_mtp-on_w2a_20260914T204321Z_1/lite-profiler/lite.log",
+     "sha256": "6159759b76dd92c582119f4aba0f84ad597018f1c9d732c900f2c0d10e9ce52d"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen38-27b_tp1_eager_mtp-off_m1c_20260914T235832Z_0",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen38-27b_tp1_eager_mtp-off_m1c_20260914T235832Z_0",
+   "worker_main_lanes": [
+    "157:157"
+   ],
+   "lanes": [
+    {
+     "lane": "157:157",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "b9dac30cc078f30df64ec9fb29b0878f10a860d397fba264e1e16dc4e75f7f39",
+   "source_logs": [
+    {
+     "bytes": 997839,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen38-27b_tp1_eager_mtp-off_m1c_20260914T235832Z_0/lite-profiler/lite.log",
+     "sha256": "8602b3cd34337830a45df6dcdff09789e6d29edde2742cc1674070aa7031019c"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen38-27b_tp1_eager_mtp-off_w2b_20260914T211728Z_0",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen38-27b_tp1_eager_mtp-off_w2b_20260914T211728Z_0",
+   "worker_main_lanes": [
+    "131:131"
+   ],
+   "lanes": [
+    {
+     "lane": "131:131",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "b1dec0ec45b651c9b747d48f45df86d6f349d78a9fd2ba546efcbb856f9da7f6",
+   "source_logs": [
+    {
+     "bytes": 615629,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen38-27b_tp1_eager_mtp-off_w2b_20260914T211728Z_0/lite-profiler/lite.log",
+     "sha256": "a05840091f934b64ede205c675d4ac4c74a0134696356a97a05f4630d391afd6"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen38-27b_tp1_eager_mtp-on_m1c_20260914T235832Z_1",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen38-27b_tp1_eager_mtp-on_m1c_20260914T235832Z_1",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "90416649dc21256c138c968a1915cdb20b547b96d6f2753b9792edfb82eb2e9d",
+   "source_logs": [
+    {
+     "bytes": 1130454,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen38-27b_tp1_eager_mtp-on_m1c_20260914T235832Z_1/lite-profiler/lite.log",
+     "sha256": "3fc1c7681b3564d10ea9b25f6afaa4745b3b5c80a5529300a309549d0a9e512c"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen38-27b_tp1_eager_mtp-on_w2b_20260914T211728Z_1",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen38-27b_tp1_eager_mtp-on_w2b_20260914T211728Z_1",
+   "worker_main_lanes": [
+    "154:154"
+   ],
+   "lanes": [
+    {
+     "lane": "154:154",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "faf4f5645b3febafca3e915db557632daee25d4bdc28c23e9b727c3648a5f1cc",
+   "source_logs": [
+    {
+     "bytes": 664721,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen38-27b_tp1_eager_mtp-on_w2b_20260914T211728Z_1/lite-profiler/lite.log",
+     "sha256": "9c2cf1a17616c8fe9b1ceb3d19c0516b6e11439bea47535c1621afa53727a667"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen38-27b_tp1_graph_mtp-off_e1b_20260915T020833Z_4",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen38-27b_tp1_graph_mtp-off_e1b_20260915T020833Z_4",
+   "worker_main_lanes": [
+    "157:157"
+   ],
+   "lanes": [
+    {
+     "lane": "157:157",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "b7e4a2917d44f559ac6dfed3ffa89a1e7aa0ba41da12ab7fa5a514119b980cd6",
+   "source_logs": [
+    {
+     "bytes": 3088541,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen38-27b_tp1_graph_mtp-off_e1b_20260915T020833Z_4/lite-profiler/lite.log",
+     "sha256": "a5c788b0cb051a71f01cb131f79535445242454a1b4fb38a772e5ebfa3de4329"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen38-27b_tp1_graph_mtp-off_m1b_20260914T233006Z_4",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen38-27b_tp1_graph_mtp-off_m1b_20260914T233006Z_4",
+   "worker_main_lanes": [
+    "158:158"
+   ],
+   "lanes": [
+    {
+     "lane": "158:158",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "5477bb3ced71ebe6e7525f9bcce06fa52d1315457697cf5d4fa9e830894632de",
+   "source_logs": [
+    {
+     "bytes": 3079519,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen38-27b_tp1_graph_mtp-off_m1b_20260914T233006Z_4/lite-profiler/lite.log",
+     "sha256": "6dbdf0ae5cf9795de6a9fea275d3865c6c56b22302cb1314fdf7c880b95e6954"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen38-27b_tp1_graph_mtp-off_w2a_20260914T204321Z_4",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen38-27b_tp1_graph_mtp-off_w2a_20260914T204321Z_4",
+   "worker_main_lanes": [
+    "131:131"
+   ],
+   "lanes": [
+    {
+     "lane": "131:131",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "b922498ae9622ca6bab854f7bab54b29b0bbdbfd1b3ccea98c11e209e8914e9f",
+   "source_logs": [
+    {
+     "bytes": 3093453,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen38-27b_tp1_graph_mtp-off_w2a_20260914T204321Z_4/lite-profiler/lite.log",
+     "sha256": "d79752422a05da98e4c7eeb2a96086c1ebfaa63bfb83e22a53a019bdad6712d4"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen38-27b_tp1_graph_mtp-on_e1b_20260915T020833Z_5",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen38-27b_tp1_graph_mtp-on_e1b_20260915T020833Z_5",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "6983532f7034cd51f5fceb30e72ef22a466719f2ed642dce3d31acd00d8afa33",
+   "source_logs": [
+    {
+     "bytes": 2445471,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen38-27b_tp1_graph_mtp-on_e1b_20260915T020833Z_5/lite-profiler/lite.log",
+     "sha256": "5087b6963c4d08e083be140ed0f2e1dac70093bdcb2253e5163d9ec3fe556046"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen38-27b_tp1_graph_mtp-on_m1b_20260914T233006Z_5",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen38-27b_tp1_graph_mtp-on_m1b_20260914T233006Z_5",
+   "worker_main_lanes": [
+    "181:181"
+   ],
+   "lanes": [
+    {
+     "lane": "181:181",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "784383d9d67f188052bd2a32f07f45b8b239116a399290c9eb9249863425488b",
+   "source_logs": [
+    {
+     "bytes": 2447341,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen38-27b_tp1_graph_mtp-on_m1b_20260914T233006Z_5/lite-profiler/lite.log",
+     "sha256": "6f1ec819caacde47419eb27abeab51ea35435a9a7fd62cc321ee349a840e1315"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  },
+  {
+   "run": "tdb_qwen38-27b_tp1_graph_mtp-on_w2a_20260914T204321Z_5",
+   "trace_dir": "/home/chiro/projects/vllm/HIST_PROJECT/reports/lite-traces/tdb_qwen38-27b_tp1_graph_mtp-on_w2a_20260914T204321Z_5",
+   "worker_main_lanes": [
+    "154:154"
+   ],
+   "lanes": [
+    {
+     "lane": "154:154",
+     "rank": 0,
+     "windows": 5,
+     "unattributed": {
+      "Step:Schedule": 5,
+      "schedule: allocate_slots": 5,
+      "schedule: get_num_common_prefix_blocks": 5,
+      "schedule: make_cached_request_data": 5,
+      "schedule: update_after_schedule": 5,
+      "prepare input": 5
+     }
+    }
+   ],
+   "trace_sha256": "ecfcc785059e9fb89ad0aee61ae395aa0c4819e9e0dda0f611564918f7c607e8",
+   "source_logs": [
+    {
+     "bytes": 2443280,
+     "path": "reports/lite-traces/.cache/bundle/tdb_qwen38-27b_tp1_graph_mtp-on_w2a_20260914T204321Z_5/lite-profiler/lite.log",
+     "sha256": "1a7ad85e0af650b7199422cfb457791dbc23a973fee4baebcf898cda7bb5e971"
+    }
+   ],
+   "window_seconds": null,
+   "meta_warnings": [],
+   "meta_clean": null
+  }
+ ],
+ "failures": []
+}

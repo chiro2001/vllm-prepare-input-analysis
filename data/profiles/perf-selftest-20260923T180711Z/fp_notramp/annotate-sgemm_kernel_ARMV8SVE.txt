@@ -1,0 +1,2792 @@
+
+Sorted summary for file /usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libopenblas-24fd393f.so.0
+----------------------------------------------
+
+    1.98 libopenblas-24fd393f.so.0[75a5e0]
+    1.95 libopenblas-24fd393f.so.0[75a300]
+    1.70 libopenblas-24fd393f.so.0[75a374]
+    1.64 libopenblas-24fd393f.so.0[75a614]
+    1.59 libopenblas-24fd393f.so.0[75a410]
+    1.57 libopenblas-24fd393f.so.0[75a368]
+    1.54 libopenblas-24fd393f.so.0[75a328]
+    1.53 libopenblas-24fd393f.so.0[75a350]
+    1.53 libopenblas-24fd393f.so.0[75a2b4]
+    1.48 libopenblas-24fd393f.so.0[75a4c4]
+    1.43 libopenblas-24fd393f.so.0[75a4f8]
+    1.43 libopenblas-24fd393f.so.0[75a5a0]
+    1.43 libopenblas-24fd393f.so.0[75a4d0]
+    1.37 libopenblas-24fd393f.so.0[75a620]
+    1.37 libopenblas-24fd393f.so.0[75a62c]
+    1.37 libopenblas-24fd393f.so.0[75a4ac]
+    1.37 libopenblas-24fd393f.so.0[75a450]
+    1.32 libopenblas-24fd393f.so.0[75a470]
+    1.32 libopenblas-24fd393f.so.0[75a5f0]
+    1.32 libopenblas-24fd393f.so.0[75a4a0]
+    1.26 libopenblas-24fd393f.so.0[75a3dc]
+    1.21 libopenblas-24fd393f.so.0[75a538]
+    1.21 libopenblas-24fd393f.so.0[75a52c]
+    1.21 libopenblas-24fd393f.so.0[75a56c]
+    1.21 libopenblas-24fd393f.so.0[75a3e8]
+    1.21 libopenblas-24fd393f.so.0[75a4b8]
+    1.15 libopenblas-24fd393f.so.0[75a558]
+    1.15 libopenblas-24fd393f.so.0[75a588]
+    1.15 libopenblas-24fd393f.so.0[75a420]
+    1.10 libopenblas-24fd393f.so.0[75a5b8]
+    1.10 libopenblas-24fd393f.so.0[75a438]
+    1.10 libopenblas-24fd393f.so.0[75a5ac]
+    1.10 libopenblas-24fd393f.so.0[75a380]
+    1.10 libopenblas-24fd393f.so.0[75a35c]
+    1.10 libopenblas-24fd393f.so.0[75a608]
+    1.06 libopenblas-24fd393f.so.0[75a520]
+    1.04 libopenblas-24fd393f.so.0[75a5c4]
+    1.04 libopenblas-24fd393f.so.0[75a638]
+    1.04 libopenblas-24fd393f.so.0[75a3f4]
+    1.04 libopenblas-24fd393f.so.0[75a3ac]
+    1.04 libopenblas-24fd393f.so.0[75a544]
+    1.04 libopenblas-24fd393f.so.0[75a3c4]
+    0.99 libopenblas-24fd393f.so.0[75a2f4]
+    0.99 libopenblas-24fd393f.so.0[75a30c]
+    0.99 libopenblas-24fd393f.so.0[75a2e8]
+    0.99 libopenblas-24fd393f.so.0[75a4e8]
+    0.99 libopenblas-24fd393f.so.0[75a5cc]
+    0.99 libopenblas-24fd393f.so.0[75a314]
+    0.99 libopenblas-24fd393f.so.0[75a42c]
+    0.93 libopenblas-24fd393f.so.0[75a3d0]
+    0.93 libopenblas-24fd393f.so.0[75a484]
+    0.93 libopenblas-24fd393f.so.0[75a2c4]
+    0.93 libopenblas-24fd393f.so.0[75a508]
+    0.93 libopenblas-24fd393f.so.0[75a2d0]
+    0.90 libopenblas-24fd393f.so.0[75a5fc]
+    0.88 libopenblas-24fd393f.so.0[75a318]
+    0.88 libopenblas-24fd393f.so.0[75a4e4]
+    0.88 libopenblas-24fd393f.so.0[75a444]
+    0.88 libopenblas-24fd393f.so.0[75a468]
+    0.88 libopenblas-24fd393f.so.0[75a4dc]
+    0.83 libopenblas-24fd393f.so.0[75a2dc]
+    0.82 libopenblas-24fd393f.so.0[75a338]
+    0.82 libopenblas-24fd393f.so.0[75a45c]
+    0.77 libopenblas-24fd393f.so.0[75a3b8]
+    0.77 libopenblas-24fd393f.so.0[75a550]
+    0.77 libopenblas-24fd393f.so.0[75a388]
+    0.71 libopenblas-24fd393f.so.0[75a594]
+    0.71 libopenblas-24fd393f.so.0[75a390]
+    0.66 libopenblas-24fd393f.so.0[75a38c]
+    0.66 libopenblas-24fd393f.so.0[75a494]
+    0.60 libopenblas-24fd393f.so.0[75a39c]
+    0.55 libopenblas-24fd393f.so.0[75a5d0]
+    0.55 libopenblas-24fd393f.so.0[75a400]
+    0.55 libopenblas-24fd393f.so.0[75a3fc]
+    0.55 libopenblas-24fd393f.so.0[75a514]
+ Percent |	Source code & Disassembly of libopenblas-24fd393f.so.0 for cycles (1799 samples, percent: local period)
+-----------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3      Disassembly of section .text:
+         :
+         : 5      0000000000759dc0 <sgemm_kernel_ARMV8SVE>:
+         : 6      sgemm_kernel_ARMV8SVE():
+    0.00 :   759dc0: sub     sp, sp, #0xb0
+    0.00 :   759dc4: stp     d8, d9, [sp]
+    0.00 :   759dc8: stp     d10, d11, [sp, #16]
+    0.00 :   759dcc: stp     d12, d13, [sp, #32]
+    0.00 :   759dd0: stp     d14, d15, [sp, #48]
+    0.00 :   759dd4: stp     d16, d17, [sp, #64]
+    0.00 :   759dd8: stp     x18, x19, [sp, #80]
+    0.00 :   759ddc: stp     x20, x21, [sp, #96]
+    0.00 :   759de0: stp     x22, x23, [sp, #112]
+    0.00 :   759de4: stp     x24, x25, [sp, #128]
+    0.00 :   759de8: stp     x26, x27, [sp, #144]
+    0.00 :   759dec: str     x28, [sp, #160]
+    0.00 :   759df0: fmov    w18, s0
+    0.00 :   759df4: mov     z7.s, w18
+    0.00 :   759df8: cntw    x19
+    0.00 :   759dfc: lsl     x20, x19, #1
+    0.00 :   759e00: lsl     x6, x6, #2
+    0.00 :   759e04: ptrue   p0.s
+    0.00 :   759e08: mov     x11, x4
+    0.00 :   759e0c: mov     x10, x1
+    0.00 :   759e10: asr     x10, x10, #3
+    0.00 :   759e14: cmp     x10, #0x0
+    0.00 :   759e18: b.le    75baa0 <sgemm_kernel_ARMV8SVE+0x1ce0>
+    0.00 :   759e1c: nop
+    0.00 :   759e20: mov     x12, x5
+    0.00 :   759e24: add     x5, x5, x6, lsl #3
+    0.00 :   759e28: mov     x16, x3
+    0.00 :   759e2c: mov     x9, #0x0                        // #0
+    0.00 :   759e30: cmp     x0, x20
+    0.00 :   759e34: b.lt    75af60 <sgemm_kernel_ARMV8SVE+0x11a0>  // b.tstop
+    0.00 :   759e38: mov     x9, x0
+    0.00 :   759e3c: mul     x7, x19, x2
+    0.00 :   759e40: add     x17, x16, x7, lsl #2
+    0.00 :   759e44: nop
+    0.00 :   759e48: nop
+    0.00 :   759e4c: nop
+    0.00 :   759e50: nop
+    0.00 :   759e54: nop
+    0.00 :   759e58: nop
+    0.00 :   759e5c: nop
+    0.00 :   759e60: mov     x11, x4
+    0.00 :   759e64: mov     z16.s, #0
+    0.00 :   759e68: mov     z17.s, #0
+    0.00 :   759e6c: mov     z18.s, #0
+    0.00 :   759e70: mov     z19.s, #0
+    0.00 :   759e74: mov     z20.s, #0
+    0.00 :   759e78: mov     z21.s, #0
+    0.00 :   759e7c: mov     z22.s, #0
+    0.00 :   759e80: mov     z23.s, #0
+    0.00 :   759e84: mov     z24.s, #0
+    0.00 :   759e88: mov     z25.s, #0
+    0.00 :   759e8c: mov     z26.s, #0
+    0.00 :   759e90: mov     z27.s, #0
+    0.00 :   759e94: mov     z28.s, #0
+    0.05 :   759e98: mov     z29.s, #0
+    0.00 :   759e9c: mov     z30.s, #0
+    0.00 :   759ea0: mov     z31.s, #0
+    0.00 :   759ea4: asr     x8, x2, #3
+    0.00 :   759ea8: cmp     x8, #0x2
+    0.00 :   759eac: b.lt    75a9e0 <sgemm_kernel_ARMV8SVE+0xc20>  // b.tstop
+    0.27 :   759eb0: ld1w    {z0.s}, p0/z, [x16]
+    0.16 :   759eb4: ld1w    {z1.s}, p0/z, [x17]
+    0.33 :   759eb8: ld1w    {z2.s}, p0/z, [x16, x19, lsl #2]
+    0.00 :   759ebc: ld1w    {z3.s}, p0/z, [x17, x19, lsl #2]
+    0.00 :   759ec0: add     x16, x16, x19, lsl #3
+    0.00 :   759ec4: add     x17, x17, x19, lsl #3
+    0.00 :   759ec8: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   759ecc: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   759ed0: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   759ed4: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.05 :   759ed8: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   759edc: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   759ee0: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.05 :   759ee4: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   759ee8: add     x11, x11, #0x20
+    0.00 :   759eec: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   759ef0: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   759ef4: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   759ef8: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   759efc: fmla    z19.s, p0/m, z1.s, z9.s
+    0.11 :   759f00: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   759f04: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   759f08: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   759f0c: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   759f10: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   759f14: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   759f18: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   759f1c: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   759f20: fmla    z25.s, p0/m, z1.s, z12.s
+    0.00 :   759f24: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   759f28: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   759f2c: fmla    z27.s, p0/m, z1.s, z13.s
+    0.05 :   759f30: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   759f34: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   759f38: fmla    z29.s, p0/m, z1.s, z14.s
+    0.11 :   759f3c: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   759f40: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   759f44: fmla    z31.s, p0/m, z1.s, z15.s
+    0.11 :   759f48: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   759f4c: add     x11, x11, #0x20
+    0.00 :   759f50: ld1w    {z0.s}, p0/z, [x16]
+    0.05 :   759f54: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   759f58: add     x16, x16, x19, lsl #2
+    0.00 :   759f5c: add     x17, x17, x19, lsl #2
+    0.00 :   759f60: fmla    z16.s, p0/m, z2.s, z8.s
+    0.05 :   759f64: fmla    z17.s, p0/m, z3.s, z8.s
+    0.00 :   759f68: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   759f6c: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   759f70: fmla    z19.s, p0/m, z3.s, z9.s
+    0.05 :   759f74: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   759f78: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   759f7c: fmla    z21.s, p0/m, z3.s, z10.s
+    0.00 :   759f80: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   759f84: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   759f88: fmla    z23.s, p0/m, z3.s, z11.s
+    0.00 :   759f8c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   759f90: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   759f94: fmla    z25.s, p0/m, z3.s, z12.s
+    0.11 :   759f98: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   759f9c: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   759fa0: fmla    z27.s, p0/m, z3.s, z13.s
+    0.16 :   759fa4: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   759fa8: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   759fac: fmla    z29.s, p0/m, z3.s, z14.s
+    0.11 :   759fb0: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   759fb4: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   759fb8: fmla    z31.s, p0/m, z3.s, z15.s
+    0.38 :   759fbc: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   759fc0: add     x11, x11, #0x20
+    0.00 :   759fc4: ld1w    {z2.s}, p0/z, [x16]
+    0.00 :   759fc8: ld1w    {z3.s}, p0/z, [x17]
+    0.00 :   759fcc: add     x16, x16, x19, lsl #2
+    0.00 :   759fd0: add     x17, x17, x19, lsl #2
+    0.00 :   759fd4: fmla    z16.s, p0/m, z0.s, z8.s
+    0.16 :   759fd8: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   759fdc: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   759fe0: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   759fe4: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   759fe8: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   759fec: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   759ff0: fmla    z21.s, p0/m, z1.s, z10.s
+    0.11 :   759ff4: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   759ff8: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   759ffc: fmla    z23.s, p0/m, z1.s, z11.s
+    0.16 :   75a000: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a004: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75a008: fmla    z25.s, p0/m, z1.s, z12.s
+    0.00 :   75a00c: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a010: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75a014: fmla    z27.s, p0/m, z1.s, z13.s
+    0.05 :   75a018: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a01c: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75a020: fmla    z29.s, p0/m, z1.s, z14.s
+    0.05 :   75a024: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a028: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75a02c: fmla    z31.s, p0/m, z1.s, z15.s
+    0.05 :   75a030: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a034: add     x11, x11, #0x20
+    0.00 :   75a038: ld1w    {z0.s}, p0/z, [x16]
+    0.05 :   75a03c: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75a040: add     x16, x16, x19, lsl #2
+    0.00 :   75a044: add     x17, x17, x19, lsl #2
+    0.05 :   75a048: fmla    z16.s, p0/m, z2.s, z8.s
+    0.00 :   75a04c: fmla    z17.s, p0/m, z3.s, z8.s
+    0.00 :   75a050: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a054: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75a058: fmla    z19.s, p0/m, z3.s, z9.s
+    0.11 :   75a05c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a060: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75a064: fmla    z21.s, p0/m, z3.s, z10.s
+    0.05 :   75a068: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a06c: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75a070: fmla    z23.s, p0/m, z3.s, z11.s
+    0.00 :   75a074: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a078: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75a07c: fmla    z25.s, p0/m, z3.s, z12.s
+    0.22 :   75a080: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a084: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75a088: fmla    z27.s, p0/m, z3.s, z13.s
+    0.11 :   75a08c: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a090: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75a094: fmla    z29.s, p0/m, z3.s, z14.s
+    0.00 :   75a098: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a09c: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75a0a0: fmla    z31.s, p0/m, z3.s, z15.s
+    0.00 :   75a0a4: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a0a8: add     x11, x11, #0x20
+    0.05 :   75a0ac: ld1w    {z2.s}, p0/z, [x16]
+    0.00 :   75a0b0: ld1w    {z3.s}, p0/z, [x17]
+    0.00 :   75a0b4: add     x16, x16, x19, lsl #2
+    0.00 :   75a0b8: add     x17, x17, x19, lsl #2
+    0.00 :   75a0bc: fmla    z16.s, p0/m, z0.s, z8.s
+    0.16 :   75a0c0: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75a0c4: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a0c8: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75a0cc: fmla    z19.s, p0/m, z1.s, z9.s
+    0.22 :   75a0d0: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a0d4: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75a0d8: fmla    z21.s, p0/m, z1.s, z10.s
+    0.11 :   75a0dc: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a0e0: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75a0e4: fmla    z23.s, p0/m, z1.s, z11.s
+    0.05 :   75a0e8: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a0ec: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75a0f0: fmla    z25.s, p0/m, z1.s, z12.s
+    0.05 :   75a0f4: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a0f8: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75a0fc: fmla    z27.s, p0/m, z1.s, z13.s
+    0.11 :   75a100: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a104: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75a108: fmla    z29.s, p0/m, z1.s, z14.s
+    0.11 :   75a10c: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a110: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75a114: fmla    z31.s, p0/m, z1.s, z15.s
+    0.11 :   75a118: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a11c: add     x11, x11, #0x20
+    0.00 :   75a120: ld1w    {z0.s}, p0/z, [x16]
+    0.16 :   75a124: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75a128: add     x16, x16, x19, lsl #2
+    0.00 :   75a12c: add     x17, x17, x19, lsl #2
+    0.11 :   75a130: fmla    z16.s, p0/m, z2.s, z8.s
+    0.11 :   75a134: fmla    z17.s, p0/m, z3.s, z8.s
+    0.00 :   75a138: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a13c: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75a140: fmla    z19.s, p0/m, z3.s, z9.s
+    0.05 :   75a144: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a148: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75a14c: fmla    z21.s, p0/m, z3.s, z10.s
+    0.05 :   75a150: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a154: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75a158: fmla    z23.s, p0/m, z3.s, z11.s
+    0.05 :   75a15c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a160: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75a164: fmla    z25.s, p0/m, z3.s, z12.s
+    0.00 :   75a168: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a16c: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75a170: fmla    z27.s, p0/m, z3.s, z13.s
+    0.00 :   75a174: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a178: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75a17c: fmla    z29.s, p0/m, z3.s, z14.s
+    0.05 :   75a180: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a184: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75a188: fmla    z31.s, p0/m, z3.s, z15.s
+    0.00 :   75a18c: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a190: add     x11, x11, #0x20
+    0.05 :   75a194: ld1w    {z2.s}, p0/z, [x16]
+    0.05 :   75a198: ld1w    {z3.s}, p0/z, [x17]
+    0.00 :   75a19c: add     x16, x16, x19, lsl #2
+    0.00 :   75a1a0: add     x17, x17, x19, lsl #2
+    0.00 :   75a1a4: fmla    z16.s, p0/m, z0.s, z8.s
+    0.05 :   75a1a8: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75a1ac: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a1b0: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75a1b4: fmla    z19.s, p0/m, z1.s, z9.s
+    0.05 :   75a1b8: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a1bc: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75a1c0: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75a1c4: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a1c8: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75a1cc: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75a1d0: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a1d4: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75a1d8: fmla    z25.s, p0/m, z1.s, z12.s
+    0.11 :   75a1dc: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a1e0: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75a1e4: fmla    z27.s, p0/m, z1.s, z13.s
+    0.11 :   75a1e8: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a1ec: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75a1f0: fmla    z29.s, p0/m, z1.s, z14.s
+    0.11 :   75a1f4: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a1f8: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75a1fc: fmla    z31.s, p0/m, z1.s, z15.s
+    0.05 :   75a200: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a204: add     x11, x11, #0x20
+    0.11 :   75a208: ld1w    {z0.s}, p0/z, [x16]
+    0.05 :   75a20c: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75a210: add     x16, x16, x19, lsl #2
+    0.00 :   75a214: add     x17, x17, x19, lsl #2
+    0.00 :   75a218: fmla    z16.s, p0/m, z2.s, z8.s
+    0.22 :   75a21c: fmla    z17.s, p0/m, z3.s, z8.s
+    0.00 :   75a220: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a224: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75a228: fmla    z19.s, p0/m, z3.s, z9.s
+    0.05 :   75a22c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a230: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75a234: fmla    z21.s, p0/m, z3.s, z10.s
+    0.00 :   75a238: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a23c: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75a240: fmla    z23.s, p0/m, z3.s, z11.s
+    0.00 :   75a244: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a248: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75a24c: fmla    z25.s, p0/m, z3.s, z12.s
+    0.00 :   75a250: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a254: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75a258: fmla    z27.s, p0/m, z3.s, z13.s
+    0.05 :   75a25c: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a260: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75a264: fmla    z29.s, p0/m, z3.s, z14.s
+    0.05 :   75a268: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a26c: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75a270: fmla    z31.s, p0/m, z3.s, z15.s
+    0.05 :   75a274: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a278: add     x11, x11, #0x20
+    0.00 :   75a27c: subs    x8, x8, #0x2
+    0.00 :   75a280: b.le    75a660 <sgemm_kernel_ARMV8SVE+0x8a0>
+    0.00 :   75a284: nop
+    0.00 :   75a288: nop
+    0.00 :   75a28c: nop
+    0.00 :   75a290: nop
+    0.00 :   75a294: nop
+    0.00 :   75a298: nop
+    0.00 :   75a29c: nop
+    0.38 :   75a2a0: ld1w    {z2.s}, p0/z, [x16]
+    0.38 :   75a2a4: ld1w    {z3.s}, p0/z, [x17]
+    0.00 :   75a2a8: add     x16, x16, x19, lsl #2
+    0.00 :   75a2ac: add     x17, x17, x19, lsl #2
+    0.00 :   75a2b0: fmla    z16.s, p0/m, z0.s, z8.s
+    1.53 :   75a2b4: fmla    z17.s, p0/m, z1.s, z8.s // libopenblas-24fd393f.so.0[75a2b4]
+    0.00 :   75a2b8: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a2bc: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75a2c0: fmla    z19.s, p0/m, z1.s, z9.s
+    0.93 :   75a2c4: ld1rw   {z9.s}, p0/z, [x11, #4] // libopenblas-24fd393f.so.0[75a2c4]
+    0.00 :   75a2c8: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75a2cc: fmla    z21.s, p0/m, z1.s, z10.s
+    0.93 :   75a2d0: ld1rw   {z10.s}, p0/z, [x11, #8] // libopenblas-24fd393f.so.0[75a2d0]
+    0.00 :   75a2d4: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75a2d8: fmla    z23.s, p0/m, z1.s, z11.s
+    0.83 :   75a2dc: ld1rw   {z11.s}, p0/z, [x11, #12] // libopenblas-24fd393f.so.0[75a2dc]
+    0.00 :   75a2e0: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75a2e4: fmla    z25.s, p0/m, z1.s, z12.s
+    0.99 :   75a2e8: ld1rw   {z12.s}, p0/z, [x11, #16] // libopenblas-24fd393f.so.0[75a2e8]
+    0.00 :   75a2ec: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75a2f0: fmla    z27.s, p0/m, z1.s, z13.s
+    0.99 :   75a2f4: ld1rw   {z13.s}, p0/z, [x11, #20] // libopenblas-24fd393f.so.0[75a2f4]
+    0.00 :   75a2f8: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75a2fc: fmla    z29.s, p0/m, z1.s, z14.s
+    1.95 :   75a300: ld1rw   {z14.s}, p0/z, [x11, #24] // libopenblas-24fd393f.so.0[75a300]
+    0.00 :   75a304: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75a308: fmla    z31.s, p0/m, z1.s, z15.s
+    0.99 :   75a30c: ld1rw   {z15.s}, p0/z, [x11, #28] // libopenblas-24fd393f.so.0[75a30c]
+    0.00 :   75a310: add     x11, x11, #0x20
+    0.99 :   75a314: ld1w    {z0.s}, p0/z, [x16] // libopenblas-24fd393f.so.0[75a314]
+    0.88 :   75a318: ld1w    {z1.s}, p0/z, [x17] // libopenblas-24fd393f.so.0[75a318]
+    0.12 :   75a31c: add     x16, x16, x19, lsl #2
+    0.00 :   75a320: add     x17, x17, x19, lsl #2
+    0.00 :   75a324: fmla    z16.s, p0/m, z2.s, z8.s
+    1.54 :   75a328: fmla    z17.s, p0/m, z3.s, z8.s // libopenblas-24fd393f.so.0[75a328]
+    0.05 :   75a32c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a330: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75a334: fmla    z19.s, p0/m, z3.s, z9.s
+    0.82 :   75a338: ld1rw   {z9.s}, p0/z, [x11, #4] // libopenblas-24fd393f.so.0[75a338]
+    0.00 :   75a33c: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75a340: fmla    z21.s, p0/m, z3.s, z10.s
+    0.49 :   75a344: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a348: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75a34c: fmla    z23.s, p0/m, z3.s, z11.s
+    1.53 :   75a350: ld1rw   {z11.s}, p0/z, [x11, #12] // libopenblas-24fd393f.so.0[75a350]
+    0.00 :   75a354: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75a358: fmla    z25.s, p0/m, z3.s, z12.s
+    1.10 :   75a35c: ld1rw   {z12.s}, p0/z, [x11, #16] // libopenblas-24fd393f.so.0[75a35c]
+    0.00 :   75a360: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75a364: fmla    z27.s, p0/m, z3.s, z13.s
+    1.57 :   75a368: ld1rw   {z13.s}, p0/z, [x11, #20] // libopenblas-24fd393f.so.0[75a368]
+    0.00 :   75a36c: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75a370: fmla    z29.s, p0/m, z3.s, z14.s
+    1.70 :   75a374: ld1rw   {z14.s}, p0/z, [x11, #24] // libopenblas-24fd393f.so.0[75a374]
+    0.00 :   75a378: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75a37c: fmla    z31.s, p0/m, z3.s, z15.s
+    1.10 :   75a380: ld1rw   {z15.s}, p0/z, [x11, #28] // libopenblas-24fd393f.so.0[75a380]
+    0.00 :   75a384: add     x11, x11, #0x20
+    0.77 :   75a388: ld1w    {z2.s}, p0/z, [x16] // libopenblas-24fd393f.so.0[75a388]
+    0.66 :   75a38c: ld1w    {z3.s}, p0/z, [x17] // libopenblas-24fd393f.so.0[75a38c]
+    0.71 :   75a390: add     x16, x16, x19, lsl #2 // libopenblas-24fd393f.so.0[75a390]
+    0.00 :   75a394: add     x17, x17, x19, lsl #2
+    0.22 :   75a398: fmla    z16.s, p0/m, z0.s, z8.s
+    0.60 :   75a39c: fmla    z17.s, p0/m, z1.s, z8.s // libopenblas-24fd393f.so.0[75a39c]
+    0.00 :   75a3a0: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a3a4: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75a3a8: fmla    z19.s, p0/m, z1.s, z9.s
+    1.04 :   75a3ac: ld1rw   {z9.s}, p0/z, [x11, #4] // libopenblas-24fd393f.so.0[75a3ac]
+    0.00 :   75a3b0: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75a3b4: fmla    z21.s, p0/m, z1.s, z10.s
+    0.77 :   75a3b8: ld1rw   {z10.s}, p0/z, [x11, #8] // libopenblas-24fd393f.so.0[75a3b8]
+    0.00 :   75a3bc: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75a3c0: fmla    z23.s, p0/m, z1.s, z11.s
+    1.04 :   75a3c4: ld1rw   {z11.s}, p0/z, [x11, #12] // libopenblas-24fd393f.so.0[75a3c4]
+    0.00 :   75a3c8: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75a3cc: fmla    z25.s, p0/m, z1.s, z12.s
+    0.93 :   75a3d0: ld1rw   {z12.s}, p0/z, [x11, #16] // libopenblas-24fd393f.so.0[75a3d0]
+    0.00 :   75a3d4: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75a3d8: fmla    z27.s, p0/m, z1.s, z13.s
+    1.26 :   75a3dc: ld1rw   {z13.s}, p0/z, [x11, #20] // libopenblas-24fd393f.so.0[75a3dc]
+    0.00 :   75a3e0: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75a3e4: fmla    z29.s, p0/m, z1.s, z14.s
+    1.21 :   75a3e8: ld1rw   {z14.s}, p0/z, [x11, #24] // libopenblas-24fd393f.so.0[75a3e8]
+    0.00 :   75a3ec: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75a3f0: fmla    z31.s, p0/m, z1.s, z15.s
+    1.04 :   75a3f4: ld1rw   {z15.s}, p0/z, [x11, #28] // libopenblas-24fd393f.so.0[75a3f4]
+    0.00 :   75a3f8: add     x11, x11, #0x20
+    0.55 :   75a3fc: ld1w    {z0.s}, p0/z, [x16] // libopenblas-24fd393f.so.0[75a3fc]
+    0.55 :   75a400: ld1w    {z1.s}, p0/z, [x17] // libopenblas-24fd393f.so.0[75a400]
+    0.00 :   75a404: add     x16, x16, x19, lsl #2
+    0.00 :   75a408: add     x17, x17, x19, lsl #2
+    0.00 :   75a40c: fmla    z16.s, p0/m, z2.s, z8.s
+    1.59 :   75a410: fmla    z17.s, p0/m, z3.s, z8.s // libopenblas-24fd393f.so.0[75a410]
+    0.00 :   75a414: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a418: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75a41c: fmla    z19.s, p0/m, z3.s, z9.s
+    1.15 :   75a420: ld1rw   {z9.s}, p0/z, [x11, #4] // libopenblas-24fd393f.so.0[75a420]
+    0.00 :   75a424: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75a428: fmla    z21.s, p0/m, z3.s, z10.s
+    0.99 :   75a42c: ld1rw   {z10.s}, p0/z, [x11, #8] // libopenblas-24fd393f.so.0[75a42c]
+    0.00 :   75a430: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75a434: fmla    z23.s, p0/m, z3.s, z11.s
+    1.10 :   75a438: ld1rw   {z11.s}, p0/z, [x11, #12] // libopenblas-24fd393f.so.0[75a438]
+    0.00 :   75a43c: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75a440: fmla    z25.s, p0/m, z3.s, z12.s
+    0.88 :   75a444: ld1rw   {z12.s}, p0/z, [x11, #16] // libopenblas-24fd393f.so.0[75a444]
+    0.00 :   75a448: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75a44c: fmla    z27.s, p0/m, z3.s, z13.s
+    1.37 :   75a450: ld1rw   {z13.s}, p0/z, [x11, #20] // libopenblas-24fd393f.so.0[75a450]
+    0.00 :   75a454: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75a458: fmla    z29.s, p0/m, z3.s, z14.s
+    0.82 :   75a45c: ld1rw   {z14.s}, p0/z, [x11, #24] // libopenblas-24fd393f.so.0[75a45c]
+    0.00 :   75a460: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75a464: fmla    z31.s, p0/m, z3.s, z15.s
+    0.88 :   75a468: ld1rw   {z15.s}, p0/z, [x11, #28] // libopenblas-24fd393f.so.0[75a468]
+    0.00 :   75a46c: add     x11, x11, #0x20
+    1.32 :   75a470: ld1w    {z2.s}, p0/z, [x16] // libopenblas-24fd393f.so.0[75a470]
+    0.27 :   75a474: ld1w    {z3.s}, p0/z, [x17]
+    0.00 :   75a478: add     x16, x16, x19, lsl #2
+    0.00 :   75a47c: add     x17, x17, x19, lsl #2
+    0.00 :   75a480: fmla    z16.s, p0/m, z0.s, z8.s
+    0.93 :   75a484: fmla    z17.s, p0/m, z1.s, z8.s // libopenblas-24fd393f.so.0[75a484]
+    0.00 :   75a488: ld1rw   {z8.s}, p0/z, [x11]
+    0.49 :   75a48c: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75a490: fmla    z19.s, p0/m, z1.s, z9.s
+    0.66 :   75a494: ld1rw   {z9.s}, p0/z, [x11, #4] // libopenblas-24fd393f.so.0[75a494]
+    0.00 :   75a498: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75a49c: fmla    z21.s, p0/m, z1.s, z10.s
+    1.32 :   75a4a0: ld1rw   {z10.s}, p0/z, [x11, #8] // libopenblas-24fd393f.so.0[75a4a0]
+    0.00 :   75a4a4: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75a4a8: fmla    z23.s, p0/m, z1.s, z11.s
+    1.37 :   75a4ac: ld1rw   {z11.s}, p0/z, [x11, #12] // libopenblas-24fd393f.so.0[75a4ac]
+    0.00 :   75a4b0: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75a4b4: fmla    z25.s, p0/m, z1.s, z12.s
+    1.21 :   75a4b8: ld1rw   {z12.s}, p0/z, [x11, #16] // libopenblas-24fd393f.so.0[75a4b8]
+    0.00 :   75a4bc: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75a4c0: fmla    z27.s, p0/m, z1.s, z13.s
+    1.48 :   75a4c4: ld1rw   {z13.s}, p0/z, [x11, #20] // libopenblas-24fd393f.so.0[75a4c4]
+    0.00 :   75a4c8: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75a4cc: fmla    z29.s, p0/m, z1.s, z14.s
+    1.43 :   75a4d0: ld1rw   {z14.s}, p0/z, [x11, #24] // libopenblas-24fd393f.so.0[75a4d0]
+    0.00 :   75a4d4: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75a4d8: fmla    z31.s, p0/m, z1.s, z15.s
+    0.88 :   75a4dc: ld1rw   {z15.s}, p0/z, [x11, #28] // libopenblas-24fd393f.so.0[75a4dc]
+    0.00 :   75a4e0: add     x11, x11, #0x20
+    0.88 :   75a4e4: ld1w    {z0.s}, p0/z, [x16] // libopenblas-24fd393f.so.0[75a4e4]
+    0.99 :   75a4e8: ld1w    {z1.s}, p0/z, [x17] // libopenblas-24fd393f.so.0[75a4e8]
+    0.05 :   75a4ec: add     x16, x16, x19, lsl #2
+    0.00 :   75a4f0: add     x17, x17, x19, lsl #2
+    0.11 :   75a4f4: fmla    z16.s, p0/m, z2.s, z8.s
+    1.43 :   75a4f8: fmla    z17.s, p0/m, z3.s, z8.s // libopenblas-24fd393f.so.0[75a4f8]
+    0.05 :   75a4fc: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a500: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75a504: fmla    z19.s, p0/m, z3.s, z9.s
+    0.93 :   75a508: ld1rw   {z9.s}, p0/z, [x11, #4] // libopenblas-24fd393f.so.0[75a508]
+    0.00 :   75a50c: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75a510: fmla    z21.s, p0/m, z3.s, z10.s
+    0.55 :   75a514: ld1rw   {z10.s}, p0/z, [x11, #8] // libopenblas-24fd393f.so.0[75a514]
+    0.00 :   75a518: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75a51c: fmla    z23.s, p0/m, z3.s, z11.s
+    1.06 :   75a520: ld1rw   {z11.s}, p0/z, [x11, #12] // libopenblas-24fd393f.so.0[75a520]
+    0.00 :   75a524: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75a528: fmla    z25.s, p0/m, z3.s, z12.s
+    1.21 :   75a52c: ld1rw   {z12.s}, p0/z, [x11, #16] // libopenblas-24fd393f.so.0[75a52c]
+    0.00 :   75a530: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75a534: fmla    z27.s, p0/m, z3.s, z13.s
+    1.21 :   75a538: ld1rw   {z13.s}, p0/z, [x11, #20] // libopenblas-24fd393f.so.0[75a538]
+    0.00 :   75a53c: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75a540: fmla    z29.s, p0/m, z3.s, z14.s
+    1.04 :   75a544: ld1rw   {z14.s}, p0/z, [x11, #24] // libopenblas-24fd393f.so.0[75a544]
+    0.00 :   75a548: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75a54c: fmla    z31.s, p0/m, z3.s, z15.s
+    0.77 :   75a550: ld1rw   {z15.s}, p0/z, [x11, #28] // libopenblas-24fd393f.so.0[75a550]
+    0.00 :   75a554: add     x11, x11, #0x20
+    1.15 :   75a558: ld1w    {z2.s}, p0/z, [x16] // libopenblas-24fd393f.so.0[75a558]
+    0.27 :   75a55c: ld1w    {z3.s}, p0/z, [x17]
+    0.00 :   75a560: add     x16, x16, x19, lsl #2
+    0.00 :   75a564: add     x17, x17, x19, lsl #2
+    0.00 :   75a568: fmla    z16.s, p0/m, z0.s, z8.s
+    1.21 :   75a56c: fmla    z17.s, p0/m, z1.s, z8.s // libopenblas-24fd393f.so.0[75a56c]
+    0.00 :   75a570: ld1rw   {z8.s}, p0/z, [x11]
+    0.49 :   75a574: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75a578: fmla    z19.s, p0/m, z1.s, z9.s
+    0.44 :   75a57c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a580: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75a584: fmla    z21.s, p0/m, z1.s, z10.s
+    1.15 :   75a588: ld1rw   {z10.s}, p0/z, [x11, #8] // libopenblas-24fd393f.so.0[75a588]
+    0.00 :   75a58c: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75a590: fmla    z23.s, p0/m, z1.s, z11.s
+    0.71 :   75a594: ld1rw   {z11.s}, p0/z, [x11, #12] // libopenblas-24fd393f.so.0[75a594]
+    0.00 :   75a598: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75a59c: fmla    z25.s, p0/m, z1.s, z12.s
+    1.43 :   75a5a0: ld1rw   {z12.s}, p0/z, [x11, #16] // libopenblas-24fd393f.so.0[75a5a0]
+    0.00 :   75a5a4: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75a5a8: fmla    z27.s, p0/m, z1.s, z13.s
+    1.10 :   75a5ac: ld1rw   {z13.s}, p0/z, [x11, #20] // libopenblas-24fd393f.so.0[75a5ac]
+    0.00 :   75a5b0: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75a5b4: fmla    z29.s, p0/m, z1.s, z14.s
+    1.10 :   75a5b8: ld1rw   {z14.s}, p0/z, [x11, #24] // libopenblas-24fd393f.so.0[75a5b8]
+    0.00 :   75a5bc: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75a5c0: fmla    z31.s, p0/m, z1.s, z15.s
+    1.04 :   75a5c4: ld1rw   {z15.s}, p0/z, [x11, #28] // libopenblas-24fd393f.so.0[75a5c4]
+    0.00 :   75a5c8: add     x11, x11, #0x20
+    0.99 :   75a5cc: ld1w    {z0.s}, p0/z, [x16] // libopenblas-24fd393f.so.0[75a5cc]
+    0.55 :   75a5d0: ld1w    {z1.s}, p0/z, [x17] // libopenblas-24fd393f.so.0[75a5d0]
+    0.00 :   75a5d4: add     x16, x16, x19, lsl #2
+    0.00 :   75a5d8: add     x17, x17, x19, lsl #2
+    0.05 :   75a5dc: fmla    z16.s, p0/m, z2.s, z8.s
+    1.98 :   75a5e0: fmla    z17.s, p0/m, z3.s, z8.s // libopenblas-24fd393f.so.0[75a5e0]
+    0.00 :   75a5e4: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a5e8: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75a5ec: fmla    z19.s, p0/m, z3.s, z9.s
+    1.32 :   75a5f0: ld1rw   {z9.s}, p0/z, [x11, #4] // libopenblas-24fd393f.so.0[75a5f0]
+    0.00 :   75a5f4: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75a5f8: fmla    z21.s, p0/m, z3.s, z10.s
+    0.90 :   75a5fc: ld1rw   {z10.s}, p0/z, [x11, #8] // libopenblas-24fd393f.so.0[75a5fc]
+    0.00 :   75a600: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75a604: fmla    z23.s, p0/m, z3.s, z11.s
+    1.10 :   75a608: ld1rw   {z11.s}, p0/z, [x11, #12] // libopenblas-24fd393f.so.0[75a608]
+    0.00 :   75a60c: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75a610: fmla    z25.s, p0/m, z3.s, z12.s
+    1.64 :   75a614: ld1rw   {z12.s}, p0/z, [x11, #16] // libopenblas-24fd393f.so.0[75a614]
+    0.00 :   75a618: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75a61c: fmla    z27.s, p0/m, z3.s, z13.s
+    1.37 :   75a620: ld1rw   {z13.s}, p0/z, [x11, #20] // libopenblas-24fd393f.so.0[75a620]
+    0.00 :   75a624: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75a628: fmla    z29.s, p0/m, z3.s, z14.s
+    1.37 :   75a62c: ld1rw   {z14.s}, p0/z, [x11, #24] // libopenblas-24fd393f.so.0[75a62c]
+    0.00 :   75a630: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75a634: fmla    z31.s, p0/m, z3.s, z15.s
+    1.04 :   75a638: ld1rw   {z15.s}, p0/z, [x11, #28] // libopenblas-24fd393f.so.0[75a638]
+    0.00 :   75a63c: add     x11, x11, #0x20
+    0.00 :   75a640: subs    x8, x8, #0x1
+    0.00 :   75a644: b.gt    75a2a0 <sgemm_kernel_ARMV8SVE+0x4e0>
+    0.00 :   75a648: nop
+    0.00 :   75a64c: nop
+    0.00 :   75a650: nop
+    0.00 :   75a654: nop
+    0.00 :   75a658: nop
+    0.00 :   75a65c: nop
+    0.00 :   75a660: ld1w    {z2.s}, p0/z, [x16]
+    0.05 :   75a664: ld1w    {z3.s}, p0/z, [x17]
+    0.00 :   75a668: add     x16, x16, x19, lsl #2
+    0.00 :   75a66c: add     x17, x17, x19, lsl #2
+    0.05 :   75a670: fmla    z16.s, p0/m, z0.s, z8.s
+    0.11 :   75a674: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75a678: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a67c: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75a680: fmla    z19.s, p0/m, z1.s, z9.s
+    0.11 :   75a684: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a688: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75a68c: fmla    z21.s, p0/m, z1.s, z10.s
+    0.16 :   75a690: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a694: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75a698: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75a69c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a6a0: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75a6a4: fmla    z25.s, p0/m, z1.s, z12.s
+    0.05 :   75a6a8: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a6ac: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75a6b0: fmla    z27.s, p0/m, z1.s, z13.s
+    0.11 :   75a6b4: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a6b8: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75a6bc: fmla    z29.s, p0/m, z1.s, z14.s
+    0.05 :   75a6c0: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a6c4: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75a6c8: fmla    z31.s, p0/m, z1.s, z15.s
+    0.00 :   75a6cc: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a6d0: add     x11, x11, #0x20
+    0.05 :   75a6d4: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75a6d8: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75a6dc: add     x16, x16, x19, lsl #2
+    0.00 :   75a6e0: add     x17, x17, x19, lsl #2
+    0.00 :   75a6e4: fmla    z16.s, p0/m, z2.s, z8.s
+    0.16 :   75a6e8: fmla    z17.s, p0/m, z3.s, z8.s
+    0.00 :   75a6ec: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a6f0: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75a6f4: fmla    z19.s, p0/m, z3.s, z9.s
+    0.11 :   75a6f8: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a6fc: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75a700: fmla    z21.s, p0/m, z3.s, z10.s
+    0.11 :   75a704: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a708: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75a70c: fmla    z23.s, p0/m, z3.s, z11.s
+    0.11 :   75a710: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a714: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75a718: fmla    z25.s, p0/m, z3.s, z12.s
+    0.05 :   75a71c: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a720: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75a724: fmla    z27.s, p0/m, z3.s, z13.s
+    0.05 :   75a728: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a72c: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75a730: fmla    z29.s, p0/m, z3.s, z14.s
+    0.05 :   75a734: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a738: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75a73c: fmla    z31.s, p0/m, z3.s, z15.s
+    0.11 :   75a740: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a744: add     x11, x11, #0x20
+    0.05 :   75a748: ld1w    {z2.s}, p0/z, [x16]
+    0.00 :   75a74c: ld1w    {z3.s}, p0/z, [x17]
+    0.05 :   75a750: add     x16, x16, x19, lsl #2
+    0.00 :   75a754: add     x17, x17, x19, lsl #2
+    0.00 :   75a758: fmla    z16.s, p0/m, z0.s, z8.s
+    0.11 :   75a75c: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75a760: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a764: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75a768: fmla    z19.s, p0/m, z1.s, z9.s
+    0.16 :   75a76c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a770: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75a774: fmla    z21.s, p0/m, z1.s, z10.s
+    0.05 :   75a778: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a77c: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75a780: fmla    z23.s, p0/m, z1.s, z11.s
+    0.11 :   75a784: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a788: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75a78c: fmla    z25.s, p0/m, z1.s, z12.s
+    0.11 :   75a790: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a794: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75a798: fmla    z27.s, p0/m, z1.s, z13.s
+    0.11 :   75a79c: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a7a0: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75a7a4: fmla    z29.s, p0/m, z1.s, z14.s
+    0.00 :   75a7a8: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a7ac: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75a7b0: fmla    z31.s, p0/m, z1.s, z15.s
+    0.00 :   75a7b4: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a7b8: add     x11, x11, #0x20
+    0.11 :   75a7bc: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75a7c0: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75a7c4: add     x16, x16, x19, lsl #2
+    0.00 :   75a7c8: add     x17, x17, x19, lsl #2
+    0.00 :   75a7cc: fmla    z16.s, p0/m, z2.s, z8.s
+    0.11 :   75a7d0: fmla    z17.s, p0/m, z3.s, z8.s
+    0.00 :   75a7d4: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a7d8: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75a7dc: fmla    z19.s, p0/m, z3.s, z9.s
+    0.05 :   75a7e0: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a7e4: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75a7e8: fmla    z21.s, p0/m, z3.s, z10.s
+    0.00 :   75a7ec: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a7f0: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75a7f4: fmla    z23.s, p0/m, z3.s, z11.s
+    0.05 :   75a7f8: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a7fc: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75a800: fmla    z25.s, p0/m, z3.s, z12.s
+    0.05 :   75a804: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a808: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75a80c: fmla    z27.s, p0/m, z3.s, z13.s
+    0.22 :   75a810: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a814: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75a818: fmla    z29.s, p0/m, z3.s, z14.s
+    0.11 :   75a81c: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a820: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75a824: fmla    z31.s, p0/m, z3.s, z15.s
+    0.16 :   75a828: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a82c: add     x11, x11, #0x20
+    0.00 :   75a830: ld1w    {z2.s}, p0/z, [x16]
+    0.05 :   75a834: ld1w    {z3.s}, p0/z, [x17]
+    0.00 :   75a838: add     x16, x16, x19, lsl #2
+    0.00 :   75a83c: add     x17, x17, x19, lsl #2
+    0.00 :   75a840: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75a844: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75a848: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a84c: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75a850: fmla    z19.s, p0/m, z1.s, z9.s
+    0.05 :   75a854: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a858: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75a85c: fmla    z21.s, p0/m, z1.s, z10.s
+    0.11 :   75a860: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a864: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75a868: fmla    z23.s, p0/m, z1.s, z11.s
+    0.05 :   75a86c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a870: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75a874: fmla    z25.s, p0/m, z1.s, z12.s
+    0.00 :   75a878: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a87c: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75a880: fmla    z27.s, p0/m, z1.s, z13.s
+    0.16 :   75a884: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a888: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75a88c: fmla    z29.s, p0/m, z1.s, z14.s
+    0.11 :   75a890: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a894: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75a898: fmla    z31.s, p0/m, z1.s, z15.s
+    0.22 :   75a89c: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a8a0: add     x11, x11, #0x20
+    0.16 :   75a8a4: ld1w    {z0.s}, p0/z, [x16]
+    0.11 :   75a8a8: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75a8ac: add     x16, x16, x19, lsl #2
+    0.00 :   75a8b0: add     x17, x17, x19, lsl #2
+    0.00 :   75a8b4: fmla    z16.s, p0/m, z2.s, z8.s
+    0.45 :   75a8b8: fmla    z17.s, p0/m, z3.s, z8.s
+    0.00 :   75a8bc: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a8c0: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75a8c4: fmla    z19.s, p0/m, z3.s, z9.s
+    0.05 :   75a8c8: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a8cc: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75a8d0: fmla    z21.s, p0/m, z3.s, z10.s
+    0.11 :   75a8d4: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a8d8: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75a8dc: fmla    z23.s, p0/m, z3.s, z11.s
+    0.00 :   75a8e0: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a8e4: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75a8e8: fmla    z25.s, p0/m, z3.s, z12.s
+    0.05 :   75a8ec: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a8f0: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75a8f4: fmla    z27.s, p0/m, z3.s, z13.s
+    0.16 :   75a8f8: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a8fc: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75a900: fmla    z29.s, p0/m, z3.s, z14.s
+    0.05 :   75a904: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a908: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75a90c: fmla    z31.s, p0/m, z3.s, z15.s
+    0.11 :   75a910: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a914: add     x11, x11, #0x20
+    0.11 :   75a918: ld1w    {z2.s}, p0/z, [x16]
+    0.00 :   75a91c: ld1w    {z3.s}, p0/z, [x17]
+    0.00 :   75a920: add     x16, x16, x19, lsl #2
+    0.00 :   75a924: add     x17, x17, x19, lsl #2
+    0.00 :   75a928: fmla    z16.s, p0/m, z0.s, z8.s
+    0.05 :   75a92c: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75a930: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75a934: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75a938: fmla    z19.s, p0/m, z1.s, z9.s
+    0.16 :   75a93c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75a940: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75a944: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75a948: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75a94c: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75a950: fmla    z23.s, p0/m, z1.s, z11.s
+    0.05 :   75a954: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75a958: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75a95c: fmla    z25.s, p0/m, z1.s, z12.s
+    0.00 :   75a960: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75a964: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75a968: fmla    z27.s, p0/m, z1.s, z13.s
+    0.00 :   75a96c: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75a970: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75a974: fmla    z29.s, p0/m, z1.s, z14.s
+    0.05 :   75a978: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75a97c: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75a980: fmla    z31.s, p0/m, z1.s, z15.s
+    0.11 :   75a984: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75a988: add     x11, x11, #0x20
+    0.00 :   75a98c: fmla    z16.s, p0/m, z2.s, z8.s
+    0.00 :   75a990: fmla    z17.s, p0/m, z3.s, z8.s
+    0.00 :   75a994: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75a998: fmla    z19.s, p0/m, z3.s, z9.s
+    0.00 :   75a99c: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75a9a0: fmla    z21.s, p0/m, z3.s, z10.s
+    0.00 :   75a9a4: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75a9a8: fmla    z23.s, p0/m, z3.s, z11.s
+    0.00 :   75a9ac: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75a9b0: fmla    z25.s, p0/m, z3.s, z12.s
+    0.05 :   75a9b4: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75a9b8: fmla    z27.s, p0/m, z3.s, z13.s
+    0.00 :   75a9bc: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75a9c0: fmla    z29.s, p0/m, z3.s, z14.s
+    0.00 :   75a9c4: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75a9c8: fmla    z31.s, p0/m, z3.s, z15.s
+    0.00 :   75a9cc: b       75adc4 <sgemm_kernel_ARMV8SVE+0x1004>
+    0.00 :   75a9d0: nop
+    0.00 :   75a9d4: nop
+    0.00 :   75a9d8: nop
+    0.00 :   75a9dc: nop
+    0.00 :   75a9e0: tst     x8, #0x1
+    0.00 :   75a9e4: b.le    75ad84 <sgemm_kernel_ARMV8SVE+0xfc4>
+    0.00 :   75a9e8: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75a9ec: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75a9f0: ld1w    {z2.s}, p0/z, [x16, x19, lsl #2]
+    0.00 :   75a9f4: ld1w    {z3.s}, p0/z, [x17, x19, lsl #2]
+    0.00 :   75a9f8: add     x16, x16, x19, lsl #3
+    0.00 :   75a9fc: add     x17, x17, x19, lsl #3
+    0.00 :   75aa00: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75aa04: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75aa08: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75aa0c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75aa10: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75aa14: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75aa18: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75aa1c: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75aa20: add     x11, x11, #0x20
+    0.00 :   75aa24: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75aa28: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75aa2c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75aa30: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75aa34: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75aa38: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75aa3c: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75aa40: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75aa44: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75aa48: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75aa4c: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75aa50: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75aa54: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75aa58: fmla    z25.s, p0/m, z1.s, z12.s
+    0.00 :   75aa5c: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75aa60: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75aa64: fmla    z27.s, p0/m, z1.s, z13.s
+    0.00 :   75aa68: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75aa6c: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75aa70: fmla    z29.s, p0/m, z1.s, z14.s
+    0.00 :   75aa74: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75aa78: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75aa7c: fmla    z31.s, p0/m, z1.s, z15.s
+    0.00 :   75aa80: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75aa84: add     x11, x11, #0x20
+    0.00 :   75aa88: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75aa8c: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75aa90: add     x16, x16, x19, lsl #2
+    0.00 :   75aa94: add     x17, x17, x19, lsl #2
+    0.00 :   75aa98: fmla    z16.s, p0/m, z2.s, z8.s
+    0.00 :   75aa9c: fmla    z17.s, p0/m, z3.s, z8.s
+    0.00 :   75aaa0: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75aaa4: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75aaa8: fmla    z19.s, p0/m, z3.s, z9.s
+    0.00 :   75aaac: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75aab0: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75aab4: fmla    z21.s, p0/m, z3.s, z10.s
+    0.00 :   75aab8: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75aabc: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75aac0: fmla    z23.s, p0/m, z3.s, z11.s
+    0.00 :   75aac4: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75aac8: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75aacc: fmla    z25.s, p0/m, z3.s, z12.s
+    0.00 :   75aad0: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75aad4: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75aad8: fmla    z27.s, p0/m, z3.s, z13.s
+    0.00 :   75aadc: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75aae0: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75aae4: fmla    z29.s, p0/m, z3.s, z14.s
+    0.00 :   75aae8: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75aaec: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75aaf0: fmla    z31.s, p0/m, z3.s, z15.s
+    0.00 :   75aaf4: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75aaf8: add     x11, x11, #0x20
+    0.00 :   75aafc: ld1w    {z2.s}, p0/z, [x16]
+    0.00 :   75ab00: ld1w    {z3.s}, p0/z, [x17]
+    0.00 :   75ab04: add     x16, x16, x19, lsl #2
+    0.00 :   75ab08: add     x17, x17, x19, lsl #2
+    0.00 :   75ab0c: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75ab10: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75ab14: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75ab18: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75ab1c: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75ab20: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75ab24: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75ab28: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75ab2c: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75ab30: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75ab34: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75ab38: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75ab3c: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75ab40: fmla    z25.s, p0/m, z1.s, z12.s
+    0.00 :   75ab44: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75ab48: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75ab4c: fmla    z27.s, p0/m, z1.s, z13.s
+    0.00 :   75ab50: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75ab54: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75ab58: fmla    z29.s, p0/m, z1.s, z14.s
+    0.00 :   75ab5c: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75ab60: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75ab64: fmla    z31.s, p0/m, z1.s, z15.s
+    0.00 :   75ab68: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75ab6c: add     x11, x11, #0x20
+    0.00 :   75ab70: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75ab74: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75ab78: add     x16, x16, x19, lsl #2
+    0.00 :   75ab7c: add     x17, x17, x19, lsl #2
+    0.00 :   75ab80: fmla    z16.s, p0/m, z2.s, z8.s
+    0.00 :   75ab84: fmla    z17.s, p0/m, z3.s, z8.s
+    0.00 :   75ab88: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75ab8c: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75ab90: fmla    z19.s, p0/m, z3.s, z9.s
+    0.00 :   75ab94: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75ab98: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75ab9c: fmla    z21.s, p0/m, z3.s, z10.s
+    0.00 :   75aba0: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75aba4: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75aba8: fmla    z23.s, p0/m, z3.s, z11.s
+    0.00 :   75abac: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75abb0: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75abb4: fmla    z25.s, p0/m, z3.s, z12.s
+    0.00 :   75abb8: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75abbc: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75abc0: fmla    z27.s, p0/m, z3.s, z13.s
+    0.00 :   75abc4: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75abc8: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75abcc: fmla    z29.s, p0/m, z3.s, z14.s
+    0.00 :   75abd0: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75abd4: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75abd8: fmla    z31.s, p0/m, z3.s, z15.s
+    0.00 :   75abdc: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75abe0: add     x11, x11, #0x20
+    0.00 :   75abe4: ld1w    {z2.s}, p0/z, [x16]
+    0.00 :   75abe8: ld1w    {z3.s}, p0/z, [x17]
+    0.00 :   75abec: add     x16, x16, x19, lsl #2
+    0.00 :   75abf0: add     x17, x17, x19, lsl #2
+    0.00 :   75abf4: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75abf8: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75abfc: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75ac00: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75ac04: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75ac08: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75ac0c: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75ac10: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75ac14: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75ac18: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75ac1c: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75ac20: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75ac24: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75ac28: fmla    z25.s, p0/m, z1.s, z12.s
+    0.00 :   75ac2c: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75ac30: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75ac34: fmla    z27.s, p0/m, z1.s, z13.s
+    0.00 :   75ac38: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75ac3c: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75ac40: fmla    z29.s, p0/m, z1.s, z14.s
+    0.00 :   75ac44: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75ac48: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75ac4c: fmla    z31.s, p0/m, z1.s, z15.s
+    0.00 :   75ac50: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75ac54: add     x11, x11, #0x20
+    0.00 :   75ac58: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75ac5c: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75ac60: add     x16, x16, x19, lsl #2
+    0.00 :   75ac64: add     x17, x17, x19, lsl #2
+    0.00 :   75ac68: fmla    z16.s, p0/m, z2.s, z8.s
+    0.00 :   75ac6c: fmla    z17.s, p0/m, z3.s, z8.s
+    0.00 :   75ac70: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75ac74: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75ac78: fmla    z19.s, p0/m, z3.s, z9.s
+    0.00 :   75ac7c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75ac80: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75ac84: fmla    z21.s, p0/m, z3.s, z10.s
+    0.00 :   75ac88: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75ac8c: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75ac90: fmla    z23.s, p0/m, z3.s, z11.s
+    0.00 :   75ac94: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75ac98: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75ac9c: fmla    z25.s, p0/m, z3.s, z12.s
+    0.00 :   75aca0: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75aca4: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75aca8: fmla    z27.s, p0/m, z3.s, z13.s
+    0.00 :   75acac: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75acb0: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75acb4: fmla    z29.s, p0/m, z3.s, z14.s
+    0.00 :   75acb8: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75acbc: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75acc0: fmla    z31.s, p0/m, z3.s, z15.s
+    0.00 :   75acc4: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75acc8: add     x11, x11, #0x20
+    0.00 :   75accc: ld1w    {z2.s}, p0/z, [x16]
+    0.00 :   75acd0: ld1w    {z3.s}, p0/z, [x17]
+    0.00 :   75acd4: add     x16, x16, x19, lsl #2
+    0.00 :   75acd8: add     x17, x17, x19, lsl #2
+    0.00 :   75acdc: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75ace0: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75ace4: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75ace8: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75acec: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75acf0: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75acf4: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75acf8: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75acfc: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75ad00: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75ad04: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75ad08: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75ad0c: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75ad10: fmla    z25.s, p0/m, z1.s, z12.s
+    0.00 :   75ad14: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75ad18: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75ad1c: fmla    z27.s, p0/m, z1.s, z13.s
+    0.00 :   75ad20: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75ad24: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75ad28: fmla    z29.s, p0/m, z1.s, z14.s
+    0.00 :   75ad2c: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75ad30: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75ad34: fmla    z31.s, p0/m, z1.s, z15.s
+    0.00 :   75ad38: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75ad3c: add     x11, x11, #0x20
+    0.00 :   75ad40: fmla    z16.s, p0/m, z2.s, z8.s
+    0.00 :   75ad44: fmla    z17.s, p0/m, z3.s, z8.s
+    0.00 :   75ad48: fmla    z18.s, p0/m, z2.s, z9.s
+    0.00 :   75ad4c: fmla    z19.s, p0/m, z3.s, z9.s
+    0.00 :   75ad50: fmla    z20.s, p0/m, z2.s, z10.s
+    0.00 :   75ad54: fmla    z21.s, p0/m, z3.s, z10.s
+    0.00 :   75ad58: fmla    z22.s, p0/m, z2.s, z11.s
+    0.00 :   75ad5c: fmla    z23.s, p0/m, z3.s, z11.s
+    0.00 :   75ad60: fmla    z24.s, p0/m, z2.s, z12.s
+    0.00 :   75ad64: fmla    z25.s, p0/m, z3.s, z12.s
+    0.00 :   75ad68: fmla    z26.s, p0/m, z2.s, z13.s
+    0.00 :   75ad6c: fmla    z27.s, p0/m, z3.s, z13.s
+    0.00 :   75ad70: fmla    z28.s, p0/m, z2.s, z14.s
+    0.00 :   75ad74: fmla    z29.s, p0/m, z3.s, z14.s
+    0.00 :   75ad78: fmla    z30.s, p0/m, z2.s, z15.s
+    0.00 :   75ad7c: fmla    z31.s, p0/m, z3.s, z15.s
+    0.00 :   75ad80: b       75adc4 <sgemm_kernel_ARMV8SVE+0x1004>
+    0.00 :   75ad84: mov     z16.s, #0
+    0.00 :   75ad88: mov     z17.s, #0
+    0.00 :   75ad8c: mov     z18.s, #0
+    0.00 :   75ad90: mov     z19.s, #0
+    0.00 :   75ad94: mov     z20.s, #0
+    0.00 :   75ad98: mov     z21.s, #0
+    0.00 :   75ad9c: mov     z22.s, #0
+    0.00 :   75ada0: mov     z23.s, #0
+    0.00 :   75ada4: mov     z24.s, #0
+    0.00 :   75ada8: mov     z25.s, #0
+    0.00 :   75adac: mov     z26.s, #0
+    0.00 :   75adb0: mov     z27.s, #0
+    0.00 :   75adb4: mov     z28.s, #0
+    0.00 :   75adb8: mov     z29.s, #0
+    0.00 :   75adbc: mov     z30.s, #0
+    0.00 :   75adc0: mov     z31.s, #0
+    0.22 :   75adc4: ands    x8, x2, #0x7
+    0.00 :   75adc8: b.le    75ae5c <sgemm_kernel_ARMV8SVE+0x109c>
+    0.00 :   75adcc: nop
+    0.00 :   75add0: nop
+    0.00 :   75add4: nop
+    0.00 :   75add8: nop
+    0.00 :   75addc: nop
+    0.00 :   75ade0: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75ade4: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75ade8: add     x16, x16, x19, lsl #2
+    0.00 :   75adec: add     x17, x17, x19, lsl #2
+    0.00 :   75adf0: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75adf4: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75adf8: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75adfc: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75ae00: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75ae04: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75ae08: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75ae0c: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75ae10: add     x11, x11, #0x20
+    0.00 :   75ae14: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75ae18: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75ae1c: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75ae20: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75ae24: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75ae28: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75ae2c: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75ae30: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75ae34: fmla    z24.s, p0/m, z0.s, z12.s
+    0.00 :   75ae38: fmla    z25.s, p0/m, z1.s, z12.s
+    0.00 :   75ae3c: fmla    z26.s, p0/m, z0.s, z13.s
+    0.00 :   75ae40: fmla    z27.s, p0/m, z1.s, z13.s
+    0.00 :   75ae44: fmla    z28.s, p0/m, z0.s, z14.s
+    0.00 :   75ae48: fmla    z29.s, p0/m, z1.s, z14.s
+    0.00 :   75ae4c: fmla    z30.s, p0/m, z0.s, z15.s
+    0.00 :   75ae50: fmla    z31.s, p0/m, z1.s, z15.s
+    0.00 :   75ae54: subs    x8, x8, #0x1
+    0.00 :   75ae58: b.ne    75ade0 <sgemm_kernel_ARMV8SVE+0x1020>  // b.any
+    0.05 :   75ae5c: add     x13, x12, x6
+    0.05 :   75ae60: ld1w    {z8.s}, p0/z, [x12]
+    0.38 :   75ae64: ld1w    {z9.s}, p0/z, [x12, #1, mul vl]
+    0.00 :   75ae68: fmla    z8.s, p0/m, z16.s, z7.s
+    0.00 :   75ae6c: fmla    z9.s, p0/m, z17.s, z7.s
+    0.05 :   75ae70: st1w    {z8.s}, p0, [x12]
+    0.00 :   75ae74: st1w    {z9.s}, p0, [x12, #1, mul vl]
+    0.00 :   75ae78: add     x14, x13, x6
+    0.00 :   75ae7c: ld1w    {z10.s}, p0/z, [x13]
+    0.00 :   75ae80: ld1w    {z11.s}, p0/z, [x13, #1, mul vl]
+    0.00 :   75ae84: fmla    z10.s, p0/m, z18.s, z7.s
+    0.00 :   75ae88: fmla    z11.s, p0/m, z19.s, z7.s
+    0.00 :   75ae8c: st1w    {z10.s}, p0, [x13]
+    0.00 :   75ae90: st1w    {z11.s}, p0, [x13, #1, mul vl]
+    0.00 :   75ae94: add     x13, x14, x6
+    0.00 :   75ae98: ld1w    {z12.s}, p0/z, [x14]
+    0.11 :   75ae9c: ld1w    {z13.s}, p0/z, [x14, #1, mul vl]
+    0.00 :   75aea0: fmla    z12.s, p0/m, z20.s, z7.s
+    0.00 :   75aea4: fmla    z13.s, p0/m, z21.s, z7.s
+    0.11 :   75aea8: st1w    {z12.s}, p0, [x14]
+    0.00 :   75aeac: st1w    {z13.s}, p0, [x14, #1, mul vl]
+    0.00 :   75aeb0: add     x14, x13, x6
+    0.00 :   75aeb4: ld1w    {z14.s}, p0/z, [x13]
+    0.11 :   75aeb8: ld1w    {z15.s}, p0/z, [x13, #1, mul vl]
+    0.00 :   75aebc: fmla    z14.s, p0/m, z22.s, z7.s
+    0.00 :   75aec0: fmla    z15.s, p0/m, z23.s, z7.s
+    0.00 :   75aec4: st1w    {z14.s}, p0, [x13]
+    0.00 :   75aec8: st1w    {z15.s}, p0, [x13, #1, mul vl]
+    0.00 :   75aecc: add     x13, x14, x6
+    0.00 :   75aed0: ld1w    {z8.s}, p0/z, [x14]
+    0.11 :   75aed4: ld1w    {z9.s}, p0/z, [x14, #1, mul vl]
+    0.00 :   75aed8: fmla    z8.s, p0/m, z24.s, z7.s
+    0.00 :   75aedc: fmla    z9.s, p0/m, z25.s, z7.s
+    0.00 :   75aee0: st1w    {z8.s}, p0, [x14]
+    0.00 :   75aee4: st1w    {z9.s}, p0, [x14, #1, mul vl]
+    0.00 :   75aee8: add     x14, x13, x6
+    0.00 :   75aeec: ld1w    {z10.s}, p0/z, [x13]
+    0.11 :   75aef0: ld1w    {z11.s}, p0/z, [x13, #1, mul vl]
+    0.00 :   75aef4: fmla    z10.s, p0/m, z26.s, z7.s
+    0.00 :   75aef8: fmla    z11.s, p0/m, z27.s, z7.s
+    0.00 :   75aefc: st1w    {z10.s}, p0, [x13]
+    0.00 :   75af00: st1w    {z11.s}, p0, [x13, #1, mul vl]
+    0.00 :   75af04: add     x13, x14, x6
+    0.00 :   75af08: ld1w    {z12.s}, p0/z, [x14]
+    0.00 :   75af0c: ld1w    {z13.s}, p0/z, [x14, #1, mul vl]
+    0.00 :   75af10: fmla    z12.s, p0/m, z28.s, z7.s
+    0.00 :   75af14: fmla    z13.s, p0/m, z29.s, z7.s
+    0.00 :   75af18: st1w    {z12.s}, p0, [x14]
+    0.05 :   75af1c: st1w    {z13.s}, p0, [x14, #1, mul vl]
+    0.05 :   75af20: ld1w    {z14.s}, p0/z, [x13]
+    0.22 :   75af24: ld1w    {z15.s}, p0/z, [x13, #1, mul vl]
+    0.00 :   75af28: fmla    z14.s, p0/m, z30.s, z7.s
+    0.00 :   75af2c: fmla    z15.s, p0/m, z31.s, z7.s
+    0.00 :   75af30: st1w    {z14.s}, p0, [x13]
+    0.00 :   75af34: st1w    {z15.s}, p0, [x13, #1, mul vl]
+    0.00 :   75af38: add     x12, x12, x19, lsl #3
+    0.00 :   75af3c: mov     x16, x17
+    0.00 :   75af40: mul     x7, x19, x2
+    0.05 :   75af44: add     x17, x16, x7, lsl #2
+    0.00 :   75af48: sub     x9, x9, x20
+    0.00 :   75af4c: cmp     x9, x20
+    0.00 :   75af50: b.ge    759e60 <sgemm_kernel_ARMV8SVE+0xa0>  // b.tcont
+    0.00 :   75af54: sub     x9, x0, x9
+    0.00 :   75af58: cmp     x9, x0
+    0.00 :   75af5c: b.eq    75ba84 <sgemm_kernel_ARMV8SVE+0x1cc4>  // b.none
+    0.00 :   75af60: whilelt p1.s, x9, x0
+    0.00 :   75af64: cntp    x15, p0, p1.s
+    0.00 :   75af68: nop
+    0.00 :   75af6c: nop
+    0.00 :   75af70: nop
+    0.00 :   75af74: nop
+    0.00 :   75af78: nop
+    0.00 :   75af7c: nop
+    0.00 :   75af80: mov     x11, x4
+    0.00 :   75af84: mov     z16.s, #0
+    0.00 :   75af88: mov     z17.s, #0
+    0.00 :   75af8c: mov     z18.s, #0
+    0.00 :   75af90: mov     z19.s, #0
+    0.00 :   75af94: mov     z20.s, #0
+    0.00 :   75af98: mov     z21.s, #0
+    0.00 :   75af9c: mov     z22.s, #0
+    0.00 :   75afa0: mov     z23.s, #0
+    0.00 :   75afa4: asr     x8, x2, #3
+    0.00 :   75afa8: cmp     x8, #0x2
+    0.00 :   75afac: b.lt    75b700 <sgemm_kernel_ARMV8SVE+0x1940>  // b.tstop
+    0.00 :   75afb0: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75afb4: ld1w    {z1.s}, p1/z, [x16, x15, lsl #2]
+    0.00 :   75afb8: add     x16, x16, x15, lsl #3
+    0.00 :   75afbc: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75afc0: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75afc4: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75afc8: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75afcc: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75afd0: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75afd4: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75afd8: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75afdc: add     x11, x11, #0x20
+    0.00 :   75afe0: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75afe4: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75afe8: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75afec: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75aff0: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75aff4: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75aff8: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75affc: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b000: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b004: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b008: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b00c: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b010: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b014: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b018: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b01c: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b020: add     x11, x11, #0x20
+    0.00 :   75b024: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b028: add     x16, x16, x15, lsl #2
+    0.00 :   75b02c: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b030: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b034: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b038: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b03c: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b040: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b044: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b048: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b04c: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b050: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b054: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b058: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b05c: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b060: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b064: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b068: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b06c: add     x11, x11, #0x20
+    0.00 :   75b070: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b074: add     x16, x16, x15, lsl #2
+    0.00 :   75b078: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b07c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b080: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b084: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b088: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b08c: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b090: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b094: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b098: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b09c: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b0a0: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b0a4: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b0a8: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b0ac: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b0b0: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b0b4: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b0b8: add     x11, x11, #0x20
+    0.00 :   75b0bc: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b0c0: add     x16, x16, x15, lsl #2
+    0.00 :   75b0c4: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b0c8: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b0cc: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b0d0: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b0d4: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b0d8: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b0dc: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b0e0: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b0e4: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b0e8: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b0ec: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b0f0: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b0f4: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b0f8: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b0fc: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b100: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b104: add     x11, x11, #0x20
+    0.00 :   75b108: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b10c: add     x16, x16, x15, lsl #2
+    0.00 :   75b110: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b114: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b118: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b11c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b120: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b124: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b128: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b12c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b130: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b134: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b138: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b13c: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b140: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b144: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b148: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b14c: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b150: add     x11, x11, #0x20
+    0.00 :   75b154: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b158: add     x16, x16, x15, lsl #2
+    0.00 :   75b15c: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b160: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b164: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b168: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b16c: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b170: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b174: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b178: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b17c: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b180: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b184: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b188: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b18c: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b190: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b194: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b198: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b19c: add     x11, x11, #0x20
+    0.00 :   75b1a0: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b1a4: add     x16, x16, x15, lsl #2
+    0.00 :   75b1a8: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b1ac: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b1b0: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b1b4: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b1b8: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b1bc: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b1c0: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b1c4: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b1c8: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b1cc: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b1d0: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b1d4: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b1d8: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b1dc: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b1e0: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b1e4: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b1e8: add     x11, x11, #0x20
+    0.00 :   75b1ec: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b1f0: add     x16, x16, x15, lsl #2
+    0.00 :   75b1f4: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b1f8: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b1fc: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b200: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b204: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b208: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b20c: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b210: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b214: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b218: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b21c: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b220: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b224: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b228: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b22c: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b230: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b234: add     x11, x11, #0x20
+    0.00 :   75b238: subs    x8, x8, #0x2
+    0.00 :   75b23c: b.le    75b4c0 <sgemm_kernel_ARMV8SVE+0x1700>
+    0.00 :   75b240: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b244: add     x16, x16, x15, lsl #2
+    0.00 :   75b248: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b24c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b250: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b254: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b258: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b25c: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b260: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b264: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b268: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b26c: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b270: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b274: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b278: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b27c: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b280: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b284: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b288: add     x11, x11, #0x20
+    0.00 :   75b28c: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b290: add     x16, x16, x15, lsl #2
+    0.00 :   75b294: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b298: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b29c: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b2a0: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b2a4: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b2a8: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b2ac: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b2b0: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b2b4: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b2b8: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b2bc: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b2c0: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b2c4: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b2c8: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b2cc: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b2d0: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b2d4: add     x11, x11, #0x20
+    0.00 :   75b2d8: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b2dc: add     x16, x16, x15, lsl #2
+    0.00 :   75b2e0: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b2e4: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b2e8: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b2ec: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b2f0: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b2f4: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b2f8: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b2fc: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b300: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b304: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b308: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b30c: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b310: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b314: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b318: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b31c: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b320: add     x11, x11, #0x20
+    0.00 :   75b324: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b328: add     x16, x16, x15, lsl #2
+    0.00 :   75b32c: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b330: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b334: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b338: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b33c: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b340: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b344: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b348: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b34c: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b350: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b354: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b358: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b35c: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b360: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b364: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b368: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b36c: add     x11, x11, #0x20
+    0.00 :   75b370: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b374: add     x16, x16, x15, lsl #2
+    0.00 :   75b378: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b37c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b380: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b384: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b388: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b38c: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b390: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b394: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b398: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b39c: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b3a0: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b3a4: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b3a8: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b3ac: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b3b0: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b3b4: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b3b8: add     x11, x11, #0x20
+    0.00 :   75b3bc: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b3c0: add     x16, x16, x15, lsl #2
+    0.00 :   75b3c4: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b3c8: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b3cc: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b3d0: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b3d4: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b3d8: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b3dc: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b3e0: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b3e4: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b3e8: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b3ec: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b3f0: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b3f4: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b3f8: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b3fc: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b400: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b404: add     x11, x11, #0x20
+    0.00 :   75b408: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b40c: add     x16, x16, x15, lsl #2
+    0.00 :   75b410: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b414: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b418: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b41c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b420: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b424: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b428: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b42c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b430: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b434: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b438: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b43c: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b440: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b444: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b448: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b44c: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b450: add     x11, x11, #0x20
+    0.00 :   75b454: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b458: add     x16, x16, x15, lsl #2
+    0.00 :   75b45c: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b460: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b464: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b468: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b46c: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b470: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b474: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b478: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b47c: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b480: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b484: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b488: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b48c: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b490: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b494: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b498: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b49c: add     x11, x11, #0x20
+    0.00 :   75b4a0: subs    x8, x8, #0x1
+    0.00 :   75b4a4: b.gt    75b240 <sgemm_kernel_ARMV8SVE+0x1480>
+    0.00 :   75b4a8: nop
+    0.00 :   75b4ac: nop
+    0.00 :   75b4b0: nop
+    0.00 :   75b4b4: nop
+    0.00 :   75b4b8: nop
+    0.00 :   75b4bc: nop
+    0.00 :   75b4c0: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b4c4: add     x16, x16, x15, lsl #2
+    0.00 :   75b4c8: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b4cc: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b4d0: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b4d4: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b4d8: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b4dc: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b4e0: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b4e4: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b4e8: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b4ec: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b4f0: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b4f4: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b4f8: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b4fc: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b500: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b504: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b508: add     x11, x11, #0x20
+    0.00 :   75b50c: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b510: add     x16, x16, x15, lsl #2
+    0.00 :   75b514: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b518: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b51c: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b520: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b524: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b528: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b52c: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b530: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b534: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b538: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b53c: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b540: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b544: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b548: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b54c: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b550: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b554: add     x11, x11, #0x20
+    0.00 :   75b558: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b55c: add     x16, x16, x15, lsl #2
+    0.00 :   75b560: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b564: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b568: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b56c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b570: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b574: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b578: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b57c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b580: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b584: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b588: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b58c: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b590: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b594: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b598: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b59c: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b5a0: add     x11, x11, #0x20
+    0.00 :   75b5a4: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b5a8: add     x16, x16, x15, lsl #2
+    0.00 :   75b5ac: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b5b0: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b5b4: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b5b8: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b5bc: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b5c0: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b5c4: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b5c8: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b5cc: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b5d0: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b5d4: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b5d8: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b5dc: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b5e0: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b5e4: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b5e8: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b5ec: add     x11, x11, #0x20
+    0.00 :   75b5f0: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b5f4: add     x16, x16, x15, lsl #2
+    0.00 :   75b5f8: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b5fc: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b600: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b604: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b608: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b60c: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b610: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b614: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b618: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b61c: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b620: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b624: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b628: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b62c: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b630: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b634: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b638: add     x11, x11, #0x20
+    0.00 :   75b63c: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b640: add     x16, x16, x15, lsl #2
+    0.00 :   75b644: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b648: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b64c: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b650: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b654: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b658: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b65c: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b660: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b664: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b668: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b66c: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b670: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b674: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b678: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b67c: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b680: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b684: add     x11, x11, #0x20
+    0.00 :   75b688: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b68c: add     x16, x16, x15, lsl #2
+    0.00 :   75b690: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b694: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b698: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b69c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b6a0: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b6a4: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b6a8: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b6ac: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b6b0: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b6b4: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b6b8: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b6bc: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b6c0: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b6c4: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b6c8: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b6cc: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b6d0: add     x11, x11, #0x20
+    0.00 :   75b6d4: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b6d8: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b6dc: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b6e0: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b6e4: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b6e8: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b6ec: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b6f0: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b6f4: b       75b988 <sgemm_kernel_ARMV8SVE+0x1bc8>
+    0.00 :   75b6f8: nop
+    0.00 :   75b6fc: nop
+    0.00 :   75b700: tst     x8, #0x1
+    0.00 :   75b704: b.le    75b968 <sgemm_kernel_ARMV8SVE+0x1ba8>
+    0.00 :   75b708: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b70c: ld1w    {z1.s}, p1/z, [x16, x15, lsl #2]
+    0.00 :   75b710: add     x16, x16, x15, lsl #3
+    0.00 :   75b714: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b718: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b71c: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b720: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b724: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b728: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b72c: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b730: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b734: add     x11, x11, #0x20
+    0.00 :   75b738: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b73c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b740: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b744: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b748: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b74c: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b750: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b754: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b758: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b75c: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b760: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b764: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b768: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b76c: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b770: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b774: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b778: add     x11, x11, #0x20
+    0.00 :   75b77c: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b780: add     x16, x16, x15, lsl #2
+    0.00 :   75b784: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b788: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b78c: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b790: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b794: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b798: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b79c: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b7a0: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b7a4: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b7a8: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b7ac: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b7b0: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b7b4: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b7b8: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b7bc: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b7c0: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b7c4: add     x11, x11, #0x20
+    0.00 :   75b7c8: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b7cc: add     x16, x16, x15, lsl #2
+    0.00 :   75b7d0: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b7d4: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b7d8: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b7dc: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b7e0: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b7e4: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b7e8: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b7ec: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b7f0: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b7f4: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b7f8: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b7fc: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b800: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b804: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b808: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b80c: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b810: add     x11, x11, #0x20
+    0.00 :   75b814: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b818: add     x16, x16, x15, lsl #2
+    0.00 :   75b81c: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b820: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b824: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b828: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b82c: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b830: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b834: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b838: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b83c: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b840: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b844: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b848: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b84c: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b850: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b854: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b858: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b85c: add     x11, x11, #0x20
+    0.00 :   75b860: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b864: add     x16, x16, x15, lsl #2
+    0.00 :   75b868: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b86c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b870: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b874: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b878: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b87c: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b880: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b884: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b888: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b88c: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b890: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b894: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b898: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b89c: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b8a0: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b8a4: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b8a8: add     x11, x11, #0x20
+    0.00 :   75b8ac: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b8b0: add     x16, x16, x15, lsl #2
+    0.00 :   75b8b4: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b8b8: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b8bc: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b8c0: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b8c4: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b8c8: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b8cc: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b8d0: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b8d4: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b8d8: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b8dc: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b8e0: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b8e4: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b8e8: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b8ec: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b8f0: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b8f4: add     x11, x11, #0x20
+    0.00 :   75b8f8: ld1w    {z1.s}, p1/z, [x16]
+    0.00 :   75b8fc: add     x16, x16, x15, lsl #2
+    0.00 :   75b900: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b904: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b908: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b90c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b910: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b914: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b918: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b91c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b920: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b924: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b928: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b92c: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b930: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b934: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b938: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b93c: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b940: add     x11, x11, #0x20
+    0.00 :   75b944: fmla    z16.s, p1/m, z1.s, z8.s
+    0.00 :   75b948: fmla    z17.s, p1/m, z1.s, z9.s
+    0.00 :   75b94c: fmla    z18.s, p1/m, z1.s, z10.s
+    0.00 :   75b950: fmla    z19.s, p1/m, z1.s, z11.s
+    0.00 :   75b954: fmla    z20.s, p1/m, z1.s, z12.s
+    0.00 :   75b958: fmla    z21.s, p1/m, z1.s, z13.s
+    0.00 :   75b95c: fmla    z22.s, p1/m, z1.s, z14.s
+    0.00 :   75b960: fmla    z23.s, p1/m, z1.s, z15.s
+    0.00 :   75b964: b       75b988 <sgemm_kernel_ARMV8SVE+0x1bc8>
+    0.00 :   75b968: mov     z16.s, #0
+    0.00 :   75b96c: mov     z17.s, #0
+    0.00 :   75b970: mov     z18.s, #0
+    0.00 :   75b974: mov     z19.s, #0
+    0.00 :   75b978: mov     z20.s, #0
+    0.00 :   75b97c: mov     z21.s, #0
+    0.00 :   75b980: mov     z22.s, #0
+    0.00 :   75b984: mov     z23.s, #0
+    0.00 :   75b988: ands    x8, x2, #0x7
+    0.00 :   75b98c: b.le    75b9f4 <sgemm_kernel_ARMV8SVE+0x1c34>
+    0.00 :   75b990: nop
+    0.00 :   75b994: nop
+    0.00 :   75b998: nop
+    0.00 :   75b99c: nop
+    0.00 :   75b9a0: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75b9a4: add     x16, x16, x15, lsl #2
+    0.00 :   75b9a8: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75b9ac: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75b9b0: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75b9b4: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75b9b8: ld1rw   {z12.s}, p0/z, [x11, #16]
+    0.00 :   75b9bc: ld1rw   {z13.s}, p0/z, [x11, #20]
+    0.00 :   75b9c0: ld1rw   {z14.s}, p0/z, [x11, #24]
+    0.00 :   75b9c4: ld1rw   {z15.s}, p0/z, [x11, #28]
+    0.00 :   75b9c8: add     x11, x11, #0x20
+    0.00 :   75b9cc: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75b9d0: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75b9d4: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75b9d8: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75b9dc: fmla    z20.s, p1/m, z0.s, z12.s
+    0.00 :   75b9e0: fmla    z21.s, p1/m, z0.s, z13.s
+    0.00 :   75b9e4: fmla    z22.s, p1/m, z0.s, z14.s
+    0.00 :   75b9e8: fmla    z23.s, p1/m, z0.s, z15.s
+    0.00 :   75b9ec: subs    x8, x8, #0x1
+    0.00 :   75b9f0: b.ne    75b9a0 <sgemm_kernel_ARMV8SVE+0x1be0>  // b.any
+    0.00 :   75b9f4: add     x13, x12, x6
+    0.00 :   75b9f8: ld1w    {z24.s}, p1/z, [x12]
+    0.00 :   75b9fc: fmla    z24.s, p1/m, z16.s, z7.s
+    0.00 :   75ba00: st1w    {z24.s}, p1, [x12]
+    0.00 :   75ba04: add     x14, x13, x6
+    0.00 :   75ba08: ld1w    {z25.s}, p1/z, [x13]
+    0.00 :   75ba0c: fmla    z25.s, p1/m, z17.s, z7.s
+    0.00 :   75ba10: st1w    {z25.s}, p1, [x13]
+    0.00 :   75ba14: add     x13, x14, x6
+    0.00 :   75ba18: ld1w    {z26.s}, p1/z, [x14]
+    0.00 :   75ba1c: fmla    z26.s, p1/m, z18.s, z7.s
+    0.00 :   75ba20: st1w    {z26.s}, p1, [x14]
+    0.00 :   75ba24: add     x14, x13, x6
+    0.00 :   75ba28: ld1w    {z27.s}, p1/z, [x13]
+    0.00 :   75ba2c: fmla    z27.s, p1/m, z19.s, z7.s
+    0.00 :   75ba30: st1w    {z27.s}, p1, [x13]
+    0.00 :   75ba34: add     x13, x14, x6
+    0.00 :   75ba38: ld1w    {z28.s}, p1/z, [x14]
+    0.00 :   75ba3c: fmla    z28.s, p1/m, z20.s, z7.s
+    0.00 :   75ba40: st1w    {z28.s}, p1, [x14]
+    0.00 :   75ba44: add     x14, x13, x6
+    0.00 :   75ba48: ld1w    {z29.s}, p1/z, [x13]
+    0.00 :   75ba4c: fmla    z29.s, p1/m, z21.s, z7.s
+    0.00 :   75ba50: st1w    {z29.s}, p1, [x13]
+    0.00 :   75ba54: add     x13, x14, x6
+    0.00 :   75ba58: ld1w    {z30.s}, p1/z, [x14]
+    0.00 :   75ba5c: fmla    z30.s, p1/m, z22.s, z7.s
+    0.00 :   75ba60: st1w    {z30.s}, p1, [x14]
+    0.00 :   75ba64: ld1w    {z31.s}, p1/z, [x13]
+    0.00 :   75ba68: fmla    z31.s, p1/m, z23.s, z7.s
+    0.00 :   75ba6c: st1w    {z31.s}, p1, [x13]
+    0.00 :   75ba70: add     x12, x12, x15, lsl #2
+    0.00 :   75ba74: incw    x9
+    0.00 :   75ba78: whilelt p1.s, x9, x0
+    0.00 :   75ba7c: cntp    x15, p0, p1.s
+    0.00 :   75ba80: b.ne    75af80 <sgemm_kernel_ARMV8SVE+0x11c0>  // b.any
+    0.11 :   75ba84: lsl     x7, x2, #5
+    0.00 :   75ba88: add     x4, x4, x7
+    0.00 :   75ba8c: subs    x10, x10, #0x1
+    0.00 :   75ba90: b.gt    759e20 <sgemm_kernel_ARMV8SVE+0x60>
+    0.00 :   75ba94: nop
+    0.00 :   75ba98: nop
+    0.00 :   75ba9c: nop
+    0.00 :   75baa0: mov     x10, x1
+    0.00 :   75baa4: tst     x10, #0x4
+    0.00 :   75baa8: b.le    75c0a0 <sgemm_kernel_ARMV8SVE+0x22e0>
+    0.00 :   75baac: mov     x12, x5
+    0.00 :   75bab0: add     x5, x5, x6, lsl #2
+    0.00 :   75bab4: mov     x16, x3
+    0.00 :   75bab8: mov     x9, #0x0                        // #0
+    0.00 :   75babc: cmp     x0, x20
+    0.00 :   75bac0: b.lt    75be40 <sgemm_kernel_ARMV8SVE+0x2080>  // b.tstop
+    0.00 :   75bac4: mov     x9, x0
+    0.00 :   75bac8: mul     x7, x19, x2
+    0.00 :   75bacc: add     x17, x16, x7, lsl #2
+    0.00 :   75bad0: nop
+    0.00 :   75bad4: nop
+    0.00 :   75bad8: nop
+    0.00 :   75badc: nop
+    0.00 :   75bae0: mov     x11, x4
+    0.00 :   75bae4: mov     z16.s, #0
+    0.00 :   75bae8: mov     z17.s, #0
+    0.00 :   75baec: mov     z18.s, #0
+    0.00 :   75baf0: mov     z19.s, #0
+    0.00 :   75baf4: mov     z20.s, #0
+    0.00 :   75baf8: mov     z21.s, #0
+    0.00 :   75bafc: mov     z22.s, #0
+    0.00 :   75bb00: mov     z23.s, #0
+    0.00 :   75bb04: asr     x8, x2, #3
+    0.00 :   75bb08: cmp     x8, #0x0
+    0.00 :   75bb0c: b.le    75bd48 <sgemm_kernel_ARMV8SVE+0x1f88>
+    0.00 :   75bb10: nop
+    0.00 :   75bb14: nop
+    0.00 :   75bb18: nop
+    0.00 :   75bb1c: nop
+    0.00 :   75bb20: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75bb24: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75bb28: add     x16, x16, x19, lsl #2
+    0.00 :   75bb2c: add     x17, x17, x19, lsl #2
+    0.00 :   75bb30: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bb34: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bb38: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bb3c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bb40: add     x11, x11, #0x10
+    0.00 :   75bb44: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75bb48: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75bb4c: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75bb50: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75bb54: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75bb58: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75bb5c: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75bb60: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75bb64: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75bb68: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75bb6c: add     x16, x16, x19, lsl #2
+    0.00 :   75bb70: add     x17, x17, x19, lsl #2
+    0.00 :   75bb74: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bb78: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bb7c: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bb80: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bb84: add     x11, x11, #0x10
+    0.00 :   75bb88: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75bb8c: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75bb90: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75bb94: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75bb98: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75bb9c: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75bba0: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75bba4: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75bba8: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75bbac: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75bbb0: add     x16, x16, x19, lsl #2
+    0.00 :   75bbb4: add     x17, x17, x19, lsl #2
+    0.00 :   75bbb8: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bbbc: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bbc0: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bbc4: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bbc8: add     x11, x11, #0x10
+    0.00 :   75bbcc: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75bbd0: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75bbd4: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75bbd8: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75bbdc: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75bbe0: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75bbe4: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75bbe8: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75bbec: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75bbf0: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75bbf4: add     x16, x16, x19, lsl #2
+    0.00 :   75bbf8: add     x17, x17, x19, lsl #2
+    0.00 :   75bbfc: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bc00: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bc04: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bc08: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bc0c: add     x11, x11, #0x10
+    0.00 :   75bc10: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75bc14: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75bc18: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75bc1c: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75bc20: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75bc24: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75bc28: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75bc2c: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75bc30: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75bc34: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75bc38: add     x16, x16, x19, lsl #2
+    0.00 :   75bc3c: add     x17, x17, x19, lsl #2
+    0.00 :   75bc40: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bc44: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bc48: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bc4c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bc50: add     x11, x11, #0x10
+    0.00 :   75bc54: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75bc58: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75bc5c: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75bc60: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75bc64: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75bc68: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75bc6c: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75bc70: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75bc74: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75bc78: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75bc7c: add     x16, x16, x19, lsl #2
+    0.00 :   75bc80: add     x17, x17, x19, lsl #2
+    0.00 :   75bc84: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bc88: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bc8c: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bc90: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bc94: add     x11, x11, #0x10
+    0.00 :   75bc98: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75bc9c: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75bca0: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75bca4: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75bca8: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75bcac: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75bcb0: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75bcb4: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75bcb8: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75bcbc: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75bcc0: add     x16, x16, x19, lsl #2
+    0.00 :   75bcc4: add     x17, x17, x19, lsl #2
+    0.00 :   75bcc8: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bccc: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bcd0: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bcd4: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bcd8: add     x11, x11, #0x10
+    0.00 :   75bcdc: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75bce0: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75bce4: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75bce8: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75bcec: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75bcf0: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75bcf4: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75bcf8: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75bcfc: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75bd00: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75bd04: add     x16, x16, x19, lsl #2
+    0.00 :   75bd08: add     x17, x17, x19, lsl #2
+    0.00 :   75bd0c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bd10: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bd14: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bd18: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bd1c: add     x11, x11, #0x10
+    0.00 :   75bd20: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75bd24: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75bd28: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75bd2c: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75bd30: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75bd34: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75bd38: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75bd3c: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75bd40: subs    x8, x8, #0x1
+    0.00 :   75bd44: b.gt    75bb20 <sgemm_kernel_ARMV8SVE+0x1d60>
+    0.00 :   75bd48: ands    x8, x2, #0x7
+    0.00 :   75bd4c: b.le    75bdac <sgemm_kernel_ARMV8SVE+0x1fec>
+    0.00 :   75bd50: nop
+    0.00 :   75bd54: nop
+    0.00 :   75bd58: nop
+    0.00 :   75bd5c: nop
+    0.00 :   75bd60: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75bd64: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75bd68: add     x16, x16, x19, lsl #2
+    0.00 :   75bd6c: add     x17, x17, x19, lsl #2
+    0.00 :   75bd70: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bd74: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bd78: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bd7c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bd80: add     x11, x11, #0x10
+    0.00 :   75bd84: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75bd88: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75bd8c: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75bd90: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75bd94: fmla    z20.s, p0/m, z0.s, z10.s
+    0.00 :   75bd98: fmla    z21.s, p0/m, z1.s, z10.s
+    0.00 :   75bd9c: fmla    z22.s, p0/m, z0.s, z11.s
+    0.00 :   75bda0: fmla    z23.s, p0/m, z1.s, z11.s
+    0.00 :   75bda4: subs    x8, x8, #0x1
+    0.00 :   75bda8: b.ne    75bd60 <sgemm_kernel_ARMV8SVE+0x1fa0>  // b.any
+    0.00 :   75bdac: add     x13, x12, x6
+    0.00 :   75bdb0: ld1w    {z8.s}, p0/z, [x12]
+    0.00 :   75bdb4: ld1w    {z9.s}, p0/z, [x12, #1, mul vl]
+    0.00 :   75bdb8: fmla    z8.s, p0/m, z16.s, z7.s
+    0.00 :   75bdbc: fmla    z9.s, p0/m, z17.s, z7.s
+    0.00 :   75bdc0: st1w    {z8.s}, p0, [x12]
+    0.00 :   75bdc4: st1w    {z9.s}, p0, [x12, #1, mul vl]
+    0.00 :   75bdc8: add     x14, x13, x6
+    0.00 :   75bdcc: ld1w    {z10.s}, p0/z, [x13]
+    0.00 :   75bdd0: ld1w    {z11.s}, p0/z, [x13, #1, mul vl]
+    0.00 :   75bdd4: fmla    z10.s, p0/m, z18.s, z7.s
+    0.00 :   75bdd8: fmla    z11.s, p0/m, z19.s, z7.s
+    0.00 :   75bddc: st1w    {z10.s}, p0, [x13]
+    0.00 :   75bde0: st1w    {z11.s}, p0, [x13, #1, mul vl]
+    0.00 :   75bde4: add     x13, x14, x6
+    0.00 :   75bde8: ld1w    {z12.s}, p0/z, [x14]
+    0.00 :   75bdec: ld1w    {z13.s}, p0/z, [x14, #1, mul vl]
+    0.00 :   75bdf0: fmla    z12.s, p0/m, z20.s, z7.s
+    0.00 :   75bdf4: fmla    z13.s, p0/m, z21.s, z7.s
+    0.00 :   75bdf8: st1w    {z12.s}, p0, [x14]
+    0.00 :   75bdfc: st1w    {z13.s}, p0, [x14, #1, mul vl]
+    0.00 :   75be00: ld1w    {z14.s}, p0/z, [x13]
+    0.00 :   75be04: ld1w    {z15.s}, p0/z, [x13, #1, mul vl]
+    0.00 :   75be08: fmla    z14.s, p0/m, z22.s, z7.s
+    0.00 :   75be0c: fmla    z15.s, p0/m, z23.s, z7.s
+    0.00 :   75be10: st1w    {z14.s}, p0, [x13]
+    0.00 :   75be14: st1w    {z15.s}, p0, [x13, #1, mul vl]
+    0.00 :   75be18: add     x12, x12, x19, lsl #3
+    0.00 :   75be1c: mov     x16, x17
+    0.00 :   75be20: mul     x7, x19, x2
+    0.00 :   75be24: add     x17, x16, x7, lsl #2
+    0.00 :   75be28: sub     x9, x9, x20
+    0.00 :   75be2c: cmp     x9, x20
+    0.00 :   75be30: b.ge    75bae0 <sgemm_kernel_ARMV8SVE+0x1d20>  // b.tcont
+    0.00 :   75be34: sub     x9, x0, x9
+    0.00 :   75be38: cmp     x9, x0
+    0.00 :   75be3c: b.eq    75c084 <sgemm_kernel_ARMV8SVE+0x22c4>  // b.none
+    0.00 :   75be40: whilelt p1.s, x9, x0
+    0.00 :   75be44: cntp    x15, p0, p1.s
+    0.00 :   75be48: nop
+    0.00 :   75be4c: nop
+    0.00 :   75be50: nop
+    0.00 :   75be54: nop
+    0.00 :   75be58: nop
+    0.00 :   75be5c: nop
+    0.00 :   75be60: mov     x11, x4
+    0.00 :   75be64: mov     z16.s, #0
+    0.00 :   75be68: mov     z17.s, #0
+    0.00 :   75be6c: mov     z18.s, #0
+    0.00 :   75be70: mov     z19.s, #0
+    0.00 :   75be74: asr     x8, x2, #3
+    0.00 :   75be78: cmp     x8, #0x0
+    0.00 :   75be7c: b.le    75bfe8 <sgemm_kernel_ARMV8SVE+0x2228>
+    0.00 :   75be80: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75be84: add     x16, x16, x15, lsl #2
+    0.00 :   75be88: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75be8c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75be90: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75be94: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75be98: add     x11, x11, #0x10
+    0.00 :   75be9c: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75bea0: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75bea4: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75bea8: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75beac: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75beb0: add     x16, x16, x15, lsl #2
+    0.00 :   75beb4: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75beb8: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bebc: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bec0: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bec4: add     x11, x11, #0x10
+    0.00 :   75bec8: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75becc: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75bed0: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75bed4: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75bed8: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75bedc: add     x16, x16, x15, lsl #2
+    0.00 :   75bee0: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bee4: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bee8: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75beec: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bef0: add     x11, x11, #0x10
+    0.00 :   75bef4: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75bef8: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75befc: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75bf00: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75bf04: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75bf08: add     x16, x16, x15, lsl #2
+    0.00 :   75bf0c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bf10: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bf14: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bf18: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bf1c: add     x11, x11, #0x10
+    0.00 :   75bf20: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75bf24: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75bf28: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75bf2c: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75bf30: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75bf34: add     x16, x16, x15, lsl #2
+    0.00 :   75bf38: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bf3c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bf40: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bf44: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bf48: add     x11, x11, #0x10
+    0.00 :   75bf4c: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75bf50: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75bf54: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75bf58: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75bf5c: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75bf60: add     x16, x16, x15, lsl #2
+    0.00 :   75bf64: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bf68: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bf6c: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bf70: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bf74: add     x11, x11, #0x10
+    0.00 :   75bf78: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75bf7c: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75bf80: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75bf84: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75bf88: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75bf8c: add     x16, x16, x15, lsl #2
+    0.00 :   75bf90: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bf94: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bf98: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bf9c: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bfa0: add     x11, x11, #0x10
+    0.00 :   75bfa4: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75bfa8: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75bfac: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75bfb0: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75bfb4: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75bfb8: add     x16, x16, x15, lsl #2
+    0.00 :   75bfbc: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75bfc0: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75bfc4: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75bfc8: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75bfcc: add     x11, x11, #0x10
+    0.00 :   75bfd0: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75bfd4: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75bfd8: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75bfdc: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75bfe0: subs    x8, x8, #0x1
+    0.00 :   75bfe4: b.gt    75be80 <sgemm_kernel_ARMV8SVE+0x20c0>
+    0.00 :   75bfe8: ands    x8, x2, #0x7
+    0.00 :   75bfec: b.le    75c034 <sgemm_kernel_ARMV8SVE+0x2274>
+    0.00 :   75bff0: nop
+    0.00 :   75bff4: nop
+    0.00 :   75bff8: nop
+    0.00 :   75bffc: nop
+    0.00 :   75c000: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c004: add     x16, x16, x15, lsl #2
+    0.00 :   75c008: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c00c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c010: ld1rw   {z10.s}, p0/z, [x11, #8]
+    0.00 :   75c014: ld1rw   {z11.s}, p0/z, [x11, #12]
+    0.00 :   75c018: add     x11, x11, #0x10
+    0.00 :   75c01c: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c020: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75c024: fmla    z18.s, p1/m, z0.s, z10.s
+    0.00 :   75c028: fmla    z19.s, p1/m, z0.s, z11.s
+    0.00 :   75c02c: subs    x8, x8, #0x1
+    0.00 :   75c030: b.ne    75c000 <sgemm_kernel_ARMV8SVE+0x2240>  // b.any
+    0.00 :   75c034: add     x13, x12, x6
+    0.00 :   75c038: ld1w    {z24.s}, p1/z, [x12]
+    0.00 :   75c03c: fmla    z24.s, p1/m, z16.s, z7.s
+    0.00 :   75c040: st1w    {z24.s}, p1, [x12]
+    0.00 :   75c044: add     x14, x13, x6
+    0.00 :   75c048: ld1w    {z25.s}, p1/z, [x13]
+    0.00 :   75c04c: fmla    z25.s, p1/m, z17.s, z7.s
+    0.00 :   75c050: st1w    {z25.s}, p1, [x13]
+    0.00 :   75c054: add     x13, x14, x6
+    0.00 :   75c058: ld1w    {z26.s}, p1/z, [x14]
+    0.00 :   75c05c: fmla    z26.s, p1/m, z18.s, z7.s
+    0.00 :   75c060: st1w    {z26.s}, p1, [x14]
+    0.00 :   75c064: ld1w    {z27.s}, p1/z, [x13]
+    0.00 :   75c068: fmla    z27.s, p1/m, z19.s, z7.s
+    0.00 :   75c06c: st1w    {z27.s}, p1, [x13]
+    0.00 :   75c070: add     x12, x12, x15, lsl #2
+    0.00 :   75c074: incw    x9
+    0.00 :   75c078: whilelt p1.s, x9, x0
+    0.00 :   75c07c: cntp    x15, p0, p1.s
+    0.00 :   75c080: b.ne    75be60 <sgemm_kernel_ARMV8SVE+0x20a0>  // b.any
+    0.00 :   75c084: lsl     x7, x2, #4
+    0.00 :   75c088: add     x4, x4, x7
+    0.00 :   75c08c: nop
+    0.00 :   75c090: nop
+    0.00 :   75c094: nop
+    0.00 :   75c098: nop
+    0.00 :   75c09c: nop
+    0.00 :   75c0a0: mov     x10, x1
+    0.00 :   75c0a4: tst     x10, #0x2
+    0.00 :   75c0a8: b.le    75c4a0 <sgemm_kernel_ARMV8SVE+0x26e0>
+    0.00 :   75c0ac: mov     x12, x5
+    0.00 :   75c0b0: add     x5, x5, x6, lsl #1
+    0.00 :   75c0b4: mov     x16, x3
+    0.00 :   75c0b8: mov     x9, #0x0                        // #0
+    0.00 :   75c0bc: cmp     x0, x20
+    0.00 :   75c0c0: b.lt    75c310 <sgemm_kernel_ARMV8SVE+0x2550>  // b.tstop
+    0.00 :   75c0c4: mov     x9, x0
+    0.00 :   75c0c8: mul     x7, x19, x2
+    0.00 :   75c0cc: add     x17, x16, x7, lsl #2
+    0.00 :   75c0d0: nop
+    0.00 :   75c0d4: nop
+    0.00 :   75c0d8: nop
+    0.00 :   75c0dc: nop
+    0.00 :   75c0e0: mov     x11, x4
+    0.00 :   75c0e4: mov     z16.s, #0
+    0.00 :   75c0e8: mov     z17.s, #0
+    0.00 :   75c0ec: mov     z18.s, #0
+    0.00 :   75c0f0: mov     z19.s, #0
+    0.00 :   75c0f4: asr     x8, x2, #3
+    0.00 :   75c0f8: cmp     x8, #0x0
+    0.00 :   75c0fc: b.le    75c268 <sgemm_kernel_ARMV8SVE+0x24a8>
+    0.00 :   75c100: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c104: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c108: add     x16, x16, x19, lsl #2
+    0.00 :   75c10c: add     x17, x17, x19, lsl #2
+    0.00 :   75c110: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c114: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c118: add     x11, x11, #0x8
+    0.00 :   75c11c: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c120: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c124: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75c128: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75c12c: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c130: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c134: add     x16, x16, x19, lsl #2
+    0.00 :   75c138: add     x17, x17, x19, lsl #2
+    0.00 :   75c13c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c140: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c144: add     x11, x11, #0x8
+    0.00 :   75c148: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c14c: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c150: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75c154: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75c158: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c15c: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c160: add     x16, x16, x19, lsl #2
+    0.00 :   75c164: add     x17, x17, x19, lsl #2
+    0.00 :   75c168: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c16c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c170: add     x11, x11, #0x8
+    0.00 :   75c174: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c178: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c17c: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75c180: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75c184: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c188: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c18c: add     x16, x16, x19, lsl #2
+    0.00 :   75c190: add     x17, x17, x19, lsl #2
+    0.00 :   75c194: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c198: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c19c: add     x11, x11, #0x8
+    0.00 :   75c1a0: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c1a4: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c1a8: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75c1ac: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75c1b0: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c1b4: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c1b8: add     x16, x16, x19, lsl #2
+    0.00 :   75c1bc: add     x17, x17, x19, lsl #2
+    0.00 :   75c1c0: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c1c4: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c1c8: add     x11, x11, #0x8
+    0.00 :   75c1cc: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c1d0: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c1d4: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75c1d8: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75c1dc: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c1e0: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c1e4: add     x16, x16, x19, lsl #2
+    0.00 :   75c1e8: add     x17, x17, x19, lsl #2
+    0.00 :   75c1ec: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c1f0: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c1f4: add     x11, x11, #0x8
+    0.00 :   75c1f8: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c1fc: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c200: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75c204: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75c208: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c20c: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c210: add     x16, x16, x19, lsl #2
+    0.00 :   75c214: add     x17, x17, x19, lsl #2
+    0.00 :   75c218: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c21c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c220: add     x11, x11, #0x8
+    0.00 :   75c224: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c228: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c22c: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75c230: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75c234: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c238: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c23c: add     x16, x16, x19, lsl #2
+    0.00 :   75c240: add     x17, x17, x19, lsl #2
+    0.00 :   75c244: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c248: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c24c: add     x11, x11, #0x8
+    0.00 :   75c250: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c254: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c258: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75c25c: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75c260: subs    x8, x8, #0x1
+    0.00 :   75c264: b.gt    75c100 <sgemm_kernel_ARMV8SVE+0x2340>
+    0.00 :   75c268: ands    x8, x2, #0x7
+    0.00 :   75c26c: b.le    75c2b4 <sgemm_kernel_ARMV8SVE+0x24f4>
+    0.00 :   75c270: nop
+    0.00 :   75c274: nop
+    0.00 :   75c278: nop
+    0.00 :   75c27c: nop
+    0.00 :   75c280: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c284: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c288: add     x16, x16, x19, lsl #2
+    0.00 :   75c28c: add     x17, x17, x19, lsl #2
+    0.00 :   75c290: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c294: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c298: add     x11, x11, #0x8
+    0.00 :   75c29c: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c2a0: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c2a4: fmla    z18.s, p0/m, z0.s, z9.s
+    0.00 :   75c2a8: fmla    z19.s, p0/m, z1.s, z9.s
+    0.00 :   75c2ac: subs    x8, x8, #0x1
+    0.00 :   75c2b0: b.ne    75c280 <sgemm_kernel_ARMV8SVE+0x24c0>  // b.any
+    0.00 :   75c2b4: add     x13, x12, x6
+    0.00 :   75c2b8: ld1w    {z8.s}, p0/z, [x12]
+    0.00 :   75c2bc: ld1w    {z9.s}, p0/z, [x12, #1, mul vl]
+    0.00 :   75c2c0: fmla    z8.s, p0/m, z16.s, z7.s
+    0.00 :   75c2c4: fmla    z9.s, p0/m, z17.s, z7.s
+    0.00 :   75c2c8: st1w    {z8.s}, p0, [x12]
+    0.00 :   75c2cc: st1w    {z9.s}, p0, [x12, #1, mul vl]
+    0.00 :   75c2d0: ld1w    {z10.s}, p0/z, [x13]
+    0.00 :   75c2d4: ld1w    {z11.s}, p0/z, [x13, #1, mul vl]
+    0.00 :   75c2d8: fmla    z10.s, p0/m, z18.s, z7.s
+    0.00 :   75c2dc: fmla    z11.s, p0/m, z19.s, z7.s
+    0.00 :   75c2e0: st1w    {z10.s}, p0, [x13]
+    0.00 :   75c2e4: st1w    {z11.s}, p0, [x13, #1, mul vl]
+    0.00 :   75c2e8: add     x12, x12, x19, lsl #3
+    0.00 :   75c2ec: mov     x16, x17
+    0.00 :   75c2f0: mul     x7, x19, x2
+    0.00 :   75c2f4: add     x17, x16, x7, lsl #2
+    0.00 :   75c2f8: sub     x9, x9, x20
+    0.00 :   75c2fc: cmp     x9, x20
+    0.00 :   75c300: b.ge    75c0e0 <sgemm_kernel_ARMV8SVE+0x2320>  // b.tcont
+    0.00 :   75c304: sub     x9, x0, x9
+    0.00 :   75c308: cmp     x9, x0
+    0.00 :   75c30c: b.eq    75c494 <sgemm_kernel_ARMV8SVE+0x26d4>  // b.none
+    0.00 :   75c310: whilelt p1.s, x9, x0
+    0.00 :   75c314: cntp    x15, p0, p1.s
+    0.00 :   75c318: nop
+    0.00 :   75c31c: nop
+    0.00 :   75c320: mov     x11, x4
+    0.00 :   75c324: mov     z16.s, #0
+    0.00 :   75c328: mov     z17.s, #0
+    0.00 :   75c32c: asr     x8, x2, #3
+    0.00 :   75c330: cmp     x8, #0x0
+    0.00 :   75c334: b.le    75c428 <sgemm_kernel_ARMV8SVE+0x2668>
+    0.00 :   75c338: nop
+    0.00 :   75c33c: nop
+    0.00 :   75c340: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c344: add     x16, x16, x15, lsl #2
+    0.00 :   75c348: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c34c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c350: add     x11, x11, #0x8
+    0.00 :   75c354: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c358: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75c35c: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c360: add     x16, x16, x15, lsl #2
+    0.00 :   75c364: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c368: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c36c: add     x11, x11, #0x8
+    0.00 :   75c370: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c374: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75c378: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c37c: add     x16, x16, x15, lsl #2
+    0.00 :   75c380: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c384: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c388: add     x11, x11, #0x8
+    0.00 :   75c38c: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c390: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75c394: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c398: add     x16, x16, x15, lsl #2
+    0.00 :   75c39c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c3a0: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c3a4: add     x11, x11, #0x8
+    0.00 :   75c3a8: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c3ac: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75c3b0: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c3b4: add     x16, x16, x15, lsl #2
+    0.00 :   75c3b8: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c3bc: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c3c0: add     x11, x11, #0x8
+    0.00 :   75c3c4: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c3c8: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75c3cc: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c3d0: add     x16, x16, x15, lsl #2
+    0.00 :   75c3d4: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c3d8: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c3dc: add     x11, x11, #0x8
+    0.00 :   75c3e0: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c3e4: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75c3e8: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c3ec: add     x16, x16, x15, lsl #2
+    0.00 :   75c3f0: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c3f4: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c3f8: add     x11, x11, #0x8
+    0.00 :   75c3fc: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c400: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75c404: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c408: add     x16, x16, x15, lsl #2
+    0.00 :   75c40c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c410: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c414: add     x11, x11, #0x8
+    0.00 :   75c418: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c41c: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75c420: subs    x8, x8, #0x1
+    0.00 :   75c424: b.gt    75c340 <sgemm_kernel_ARMV8SVE+0x2580>
+    0.00 :   75c428: ands    x8, x2, #0x7
+    0.00 :   75c42c: b.le    75c464 <sgemm_kernel_ARMV8SVE+0x26a4>
+    0.00 :   75c430: nop
+    0.00 :   75c434: nop
+    0.00 :   75c438: nop
+    0.00 :   75c43c: nop
+    0.00 :   75c440: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c444: add     x16, x16, x15, lsl #2
+    0.00 :   75c448: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c44c: ld1rw   {z9.s}, p0/z, [x11, #4]
+    0.00 :   75c450: add     x11, x11, #0x8
+    0.00 :   75c454: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c458: fmla    z17.s, p1/m, z0.s, z9.s
+    0.00 :   75c45c: subs    x8, x8, #0x1
+    0.00 :   75c460: b.ne    75c440 <sgemm_kernel_ARMV8SVE+0x2680>  // b.any
+    0.00 :   75c464: add     x13, x12, x6
+    0.00 :   75c468: ld1w    {z24.s}, p1/z, [x12]
+    0.00 :   75c46c: fmla    z24.s, p1/m, z16.s, z7.s
+    0.00 :   75c470: st1w    {z24.s}, p1, [x12]
+    0.00 :   75c474: ld1w    {z25.s}, p1/z, [x13]
+    0.00 :   75c478: fmla    z25.s, p1/m, z17.s, z7.s
+    0.00 :   75c47c: st1w    {z25.s}, p1, [x13]
+    0.00 :   75c480: add     x12, x12, x15, lsl #2
+    0.00 :   75c484: incw    x9
+    0.00 :   75c488: whilelt p1.s, x9, x0
+    0.00 :   75c48c: cntp    x15, p0, p1.s
+    0.00 :   75c490: b.ne    75c320 <sgemm_kernel_ARMV8SVE+0x2560>  // b.any
+    0.00 :   75c494: add     x4, x4, x2, lsl #3
+    0.00 :   75c498: nop
+    0.00 :   75c49c: nop
+    0.00 :   75c4a0: mov     x10, x1
+    0.00 :   75c4a4: tst     x10, #0x1
+    0.00 :   75c4a8: b.le    75c7bc <sgemm_kernel_ARMV8SVE+0x29fc>
+    0.00 :   75c4ac: mov     x12, x5
+    0.00 :   75c4b0: add     x5, x5, x6
+    0.00 :   75c4b4: mov     x16, x3
+    0.00 :   75c4b8: mov     x9, #0x0                        // #0
+    0.00 :   75c4bc: cmp     x0, x20
+    0.00 :   75c4c0: b.lt    75c68c <sgemm_kernel_ARMV8SVE+0x28cc>  // b.tstop
+    0.00 :   75c4c4: mov     x9, x0
+    0.00 :   75c4c8: mul     x7, x19, x2
+    0.00 :   75c4cc: add     x17, x16, x7, lsl #2
+    0.00 :   75c4d0: nop
+    0.00 :   75c4d4: nop
+    0.00 :   75c4d8: nop
+    0.00 :   75c4dc: nop
+    0.00 :   75c4e0: mov     x11, x4
+    0.00 :   75c4e4: mov     z16.s, #0
+    0.00 :   75c4e8: mov     z17.s, #0
+    0.00 :   75c4ec: asr     x8, x2, #3
+    0.00 :   75c4f0: cmp     x8, #0x0
+    0.00 :   75c4f4: b.le    75c608 <sgemm_kernel_ARMV8SVE+0x2848>
+    0.00 :   75c4f8: nop
+    0.00 :   75c4fc: nop
+    0.00 :   75c500: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c504: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c508: add     x16, x16, x19, lsl #2
+    0.00 :   75c50c: add     x17, x17, x19, lsl #2
+    0.00 :   75c510: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c514: add     x11, x11, #0x4
+    0.00 :   75c518: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c51c: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c520: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c524: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c528: add     x16, x16, x19, lsl #2
+    0.00 :   75c52c: add     x17, x17, x19, lsl #2
+    0.00 :   75c530: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c534: add     x11, x11, #0x4
+    0.00 :   75c538: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c53c: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c540: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c544: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c548: add     x16, x16, x19, lsl #2
+    0.00 :   75c54c: add     x17, x17, x19, lsl #2
+    0.00 :   75c550: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c554: add     x11, x11, #0x4
+    0.00 :   75c558: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c55c: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c560: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c564: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c568: add     x16, x16, x19, lsl #2
+    0.00 :   75c56c: add     x17, x17, x19, lsl #2
+    0.00 :   75c570: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c574: add     x11, x11, #0x4
+    0.00 :   75c578: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c57c: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c580: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c584: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c588: add     x16, x16, x19, lsl #2
+    0.00 :   75c58c: add     x17, x17, x19, lsl #2
+    0.00 :   75c590: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c594: add     x11, x11, #0x4
+    0.00 :   75c598: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c59c: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c5a0: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c5a4: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c5a8: add     x16, x16, x19, lsl #2
+    0.00 :   75c5ac: add     x17, x17, x19, lsl #2
+    0.00 :   75c5b0: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c5b4: add     x11, x11, #0x4
+    0.00 :   75c5b8: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c5bc: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c5c0: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c5c4: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c5c8: add     x16, x16, x19, lsl #2
+    0.00 :   75c5cc: add     x17, x17, x19, lsl #2
+    0.00 :   75c5d0: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c5d4: add     x11, x11, #0x4
+    0.00 :   75c5d8: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c5dc: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c5e0: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c5e4: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c5e8: add     x16, x16, x19, lsl #2
+    0.00 :   75c5ec: add     x17, x17, x19, lsl #2
+    0.00 :   75c5f0: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c5f4: add     x11, x11, #0x4
+    0.00 :   75c5f8: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c5fc: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c600: subs    x8, x8, #0x1
+    0.00 :   75c604: b.gt    75c500 <sgemm_kernel_ARMV8SVE+0x2740>
+    0.00 :   75c608: ands    x8, x2, #0x7
+    0.00 :   75c60c: b.le    75c648 <sgemm_kernel_ARMV8SVE+0x2888>
+    0.00 :   75c610: nop
+    0.00 :   75c614: nop
+    0.00 :   75c618: nop
+    0.00 :   75c61c: nop
+    0.00 :   75c620: ld1w    {z0.s}, p0/z, [x16]
+    0.00 :   75c624: ld1w    {z1.s}, p0/z, [x17]
+    0.00 :   75c628: add     x16, x16, x19, lsl #2
+    0.00 :   75c62c: add     x17, x17, x19, lsl #2
+    0.00 :   75c630: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c634: add     x11, x11, #0x4
+    0.00 :   75c638: fmla    z16.s, p0/m, z0.s, z8.s
+    0.00 :   75c63c: fmla    z17.s, p0/m, z1.s, z8.s
+    0.00 :   75c640: subs    x8, x8, #0x1
+    0.00 :   75c644: b.gt    75c620 <sgemm_kernel_ARMV8SVE+0x2860>
+    0.00 :   75c648: add     x13, x12, x6
+    0.00 :   75c64c: ld1w    {z8.s}, p0/z, [x12]
+    0.00 :   75c650: ld1w    {z9.s}, p0/z, [x12, #1, mul vl]
+    0.00 :   75c654: fmla    z8.s, p0/m, z16.s, z7.s
+    0.00 :   75c658: fmla    z9.s, p0/m, z17.s, z7.s
+    0.00 :   75c65c: st1w    {z8.s}, p0, [x12]
+    0.00 :   75c660: st1w    {z9.s}, p0, [x12, #1, mul vl]
+    0.00 :   75c664: add     x12, x12, x19, lsl #3
+    0.00 :   75c668: mov     x16, x17
+    0.00 :   75c66c: mul     x7, x19, x2
+    0.00 :   75c670: add     x17, x16, x7, lsl #2
+    0.00 :   75c674: sub     x9, x9, x20
+    0.00 :   75c678: cmp     x9, x20
+    0.00 :   75c67c: b.ge    75c4e0 <sgemm_kernel_ARMV8SVE+0x2720>  // b.tcont
+    0.00 :   75c680: sub     x9, x0, x9
+    0.00 :   75c684: cmp     x9, x0
+    0.00 :   75c688: b.eq    75c7bc <sgemm_kernel_ARMV8SVE+0x29fc>  // b.none
+    0.00 :   75c68c: whilelt p1.s, x9, x0
+    0.00 :   75c690: cntp    x15, p0, p1.s
+    0.00 :   75c694: nop
+    0.00 :   75c698: nop
+    0.00 :   75c69c: nop
+    0.00 :   75c6a0: mov     x11, x4
+    0.00 :   75c6a4: mov     z16.s, #0
+    0.00 :   75c6a8: asr     x8, x2, #3
+    0.00 :   75c6ac: cmp     x8, #0x0
+    0.00 :   75c6b0: b.le    75c768 <sgemm_kernel_ARMV8SVE+0x29a8>
+    0.00 :   75c6b4: nop
+    0.00 :   75c6b8: nop
+    0.00 :   75c6bc: nop
+    0.00 :   75c6c0: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c6c4: add     x16, x16, x15, lsl #2
+    0.00 :   75c6c8: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c6cc: add     x11, x11, #0x4
+    0.00 :   75c6d0: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c6d4: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c6d8: add     x16, x16, x15, lsl #2
+    0.00 :   75c6dc: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c6e0: add     x11, x11, #0x4
+    0.00 :   75c6e4: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c6e8: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c6ec: add     x16, x16, x15, lsl #2
+    0.00 :   75c6f0: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c6f4: add     x11, x11, #0x4
+    0.00 :   75c6f8: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c6fc: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c700: add     x16, x16, x15, lsl #2
+    0.00 :   75c704: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c708: add     x11, x11, #0x4
+    0.00 :   75c70c: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c710: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c714: add     x16, x16, x15, lsl #2
+    0.00 :   75c718: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c71c: add     x11, x11, #0x4
+    0.00 :   75c720: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c724: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c728: add     x16, x16, x15, lsl #2
+    0.00 :   75c72c: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c730: add     x11, x11, #0x4
+    0.00 :   75c734: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c738: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c73c: add     x16, x16, x15, lsl #2
+    0.00 :   75c740: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c744: add     x11, x11, #0x4
+    0.00 :   75c748: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c74c: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c750: add     x16, x16, x15, lsl #2
+    0.00 :   75c754: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c758: add     x11, x11, #0x4
+    0.00 :   75c75c: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c760: subs    x8, x8, #0x1
+    0.00 :   75c764: b.gt    75c6c0 <sgemm_kernel_ARMV8SVE+0x2900>
+    0.00 :   75c768: ands    x8, x2, #0x7
+    0.00 :   75c76c: b.le    75c79c <sgemm_kernel_ARMV8SVE+0x29dc>
+    0.00 :   75c770: nop
+    0.00 :   75c774: nop
+    0.00 :   75c778: nop
+    0.00 :   75c77c: nop
+    0.00 :   75c780: ld1w    {z0.s}, p1/z, [x16]
+    0.00 :   75c784: add     x16, x16, x15, lsl #2
+    0.00 :   75c788: ld1rw   {z8.s}, p0/z, [x11]
+    0.00 :   75c78c: add     x11, x11, #0x4
+    0.00 :   75c790: fmla    z16.s, p1/m, z0.s, z8.s
+    0.00 :   75c794: subs    x8, x8, #0x1
+    0.00 :   75c798: b.gt    75c780 <sgemm_kernel_ARMV8SVE+0x29c0>
+    0.00 :   75c79c: ld1w    {z24.s}, p1/z, [x12]
+    0.00 :   75c7a0: fmla    z24.s, p1/m, z16.s, z7.s
+    0.00 :   75c7a4: st1w    {z24.s}, p1, [x12]
+    0.00 :   75c7a8: add     x12, x12, x15, lsl #2
+    0.00 :   75c7ac: incw    x9
+    0.00 :   75c7b0: whilelt p1.s, x9, x0
+    0.00 :   75c7b4: cntp    x15, p0, p1.s
+    0.00 :   75c7b8: b.ne    75c6a0 <sgemm_kernel_ARMV8SVE+0x28e0>  // b.any
+    0.00 :   75c7bc: mov     x0, #0x0                        // #0
+    0.00 :   75c7c0: ldp     d8, d9, [sp]
+    0.11 :   75c7c4: ldp     d10, d11, [sp, #16]
+    0.00 :   75c7c8: ldp     d12, d13, [sp, #32]
+    0.00 :   75c7cc: ldp     d14, d15, [sp, #48]
+    0.00 :   75c7d0: ldp     d16, d17, [sp, #64]
+    0.00 :   75c7d4: ldp     x18, x19, [sp, #80]
+    0.00 :   75c7d8: ldp     x20, x21, [sp, #96]
+    0.05 :   75c7dc: ldp     x22, x23, [sp, #112]
+    0.00 :   75c7e0: ldp     x24, x25, [sp, #128]
+    0.00 :   75c7e4: ldp     x26, x27, [sp, #144]
+    0.00 :   75c7e8: ldr     x28, [sp, #160]
+    0.00 :   75c7ec: add     sp, sp, #0xb0
+    0.00 :   75c7f0: ret
+    0.00 :   75c7f4: nop
+    0.00 :   75c7f8: nop
+    0.00 :   75c7fc: nop

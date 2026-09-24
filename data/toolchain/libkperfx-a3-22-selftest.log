@@ -1,0 +1,52 @@
+libkperfx self test
+  runner uid : 0 (root)
+  paranoid   : 2
+  cpu part   : 0xd02
+  kernel     : Linux 6.6.0-159.4.3.154.oe2403sp4.aarch64 aarch64
+  pmu/backend: 920B 920B(counting) 
+  report     : build/test-report.txt
+[PASS] test_api
+[PASS] test_cli
+[PASS] test_count
+[PASS] test_env
+[PASS] test_event_matrix
+[PASS] test_gate
+[PASS] test_multiplex
+[PASS] test_output
+[PASS] test_privilege
+[PASS] test_sample
+[PASS] test_tables
+[PASS] test_threads
+[PASS] test_workload_loads
+[PASS] test_zen4
+[PASS] python-binding
+[PASS] cli-probe
+[PASS] cli-probe-mux
+[PASS] cli-info
+[PASS] cli-verify-events
+[PASS] cli-presets
+[PASS] load-alu
+[PASS] load-fma
+[PASS] load-div
+[PASS] load-fsqrt
+[PASS] load-branch
+[PASS] load-indirect
+[PASS] load-l1
+[PASS] load-l2
+[PASS] load-l3
+[PASS] load-dram
+[PASS] load-store
+[PASS] load-tlb
+[PASS] load-pagefault
+[PASS] load-branch-group3
+[PASS] load-dram-group7
+[PASS] sweep-split
+[PASS] sweep-merge
+[PASS] iter-gate-group1
+[PASS] iter-gate-group2
+[PASS] iter-gate-group3
+
+===============================
+PASS: 40   FAIL: 0
+report: build/test-report.txt
+ROOT_EXIT=0

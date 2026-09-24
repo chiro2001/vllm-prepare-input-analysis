@@ -1,0 +1,4108 @@
+[
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "a-b1",
+  "group": "A",
+  "note": "",
+  "workload": {
+   "requests": 1,
+   "concurrency": 1,
+   "prompt_tokens_target": 128,
+   "max_tokens": 1024,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.3018,
+   "exec_ns_delta": 9054000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 0.354,
+     "mean_itl_ms": 18.05,
+     "output_tps_aggregate": 47.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 0.35753999999999997,
+     "mean_itl_ms": 18.411,
+     "output_tps_aggregate": 46.53
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/a-b1/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 2962.0,
+       "p90_us": 3080.48,
+       "p99_us": 3554.4,
+       "mean_us": 3021.24
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 934.0,
+       "p90_us": 962.02,
+       "p99_us": 1018.06,
+       "mean_us": 948.01,
+       "min_us": 840.6,
+       "max_us": 1074.1,
+       "sum_us": 59776.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1408.0,
+       "p90_us": 1492.48,
+       "p99_us": 1661.44,
+       "mean_us": 1450.24,
+       "min_us": 1267.2,
+       "max_us": 1619.2,
+       "sum_us": 90112.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 2964.7,
+       "ratio_of_step_dur": 1.001
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 2962.0,
+       "p90_us": 3080.48,
+       "p99_us": 3554.4,
+       "mean_us": 3021.24
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 934.0,
+       "p90_us": 962.02,
+       "p99_us": 1018.06,
+       "mean_us": 948.01,
+       "min_us": 840.6,
+       "max_us": 1074.1,
+       "sum_us": 59776.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1408.0,
+       "p90_us": 1492.48,
+       "p99_us": 1661.44,
+       "mean_us": 1450.24,
+       "min_us": 1267.2,
+       "max_us": 1619.2,
+       "sum_us": 90112.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 2964.7,
+       "ratio_of_step_dur": 1.001
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.3153,
+      "prepare_over_step_mean": 0.3153
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "a-b2",
+  "group": "A",
+  "note": "",
+  "workload": {
+   "requests": 2,
+   "concurrency": 2,
+   "prompt_tokens_target": 128,
+   "max_tokens": 1024,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.3036,
+   "exec_ns_delta": 9108000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 0.358,
+     "mean_itl_ms": 18.1,
+     "output_tps_aggregate": 49.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 0.36158,
+     "mean_itl_ms": 18.462000000000003,
+     "output_tps_aggregate": 48.51
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/a-b2/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3004.0,
+       "p90_us": 3124.16,
+       "p99_us": 3604.8,
+       "mean_us": 3064.08
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 968.0,
+       "p90_us": 997.04,
+       "p99_us": 1055.12,
+       "mean_us": 982.52,
+       "min_us": 871.2,
+       "max_us": 1113.2,
+       "sum_us": 61952.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1416.0,
+       "p90_us": 1500.96,
+       "p99_us": 1670.88,
+       "mean_us": 1458.48,
+       "min_us": 1274.4,
+       "max_us": 1628.4,
+       "sum_us": 90624.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 3006.7,
+       "ratio_of_step_dur": 1.001
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3004.0,
+       "p90_us": 3124.16,
+       "p99_us": 3604.8,
+       "mean_us": 3064.08
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 968.0,
+       "p90_us": 997.04,
+       "p99_us": 1055.12,
+       "mean_us": 982.52,
+       "min_us": 871.2,
+       "max_us": 1113.2,
+       "sum_us": 61952.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1416.0,
+       "p90_us": 1500.96,
+       "p99_us": 1670.88,
+       "mean_us": 1458.48,
+       "min_us": 1274.4,
+       "max_us": 1628.4,
+       "sum_us": 90624.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 3006.7,
+       "ratio_of_step_dur": 1.001
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.3222,
+      "prepare_over_step_mean": 0.3222
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "a-b4",
+  "group": "A",
+  "note": "",
+  "workload": {
+   "requests": 4,
+   "concurrency": 4,
+   "prompt_tokens_target": 128,
+   "max_tokens": 1024,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.3072,
+   "exec_ns_delta": 9216000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 0.366,
+     "mean_itl_ms": 18.2,
+     "output_tps_aggregate": 53.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 0.36966,
+     "mean_itl_ms": 18.564,
+     "output_tps_aggregate": 52.47
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/a-b4/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3088.0,
+       "p90_us": 3211.52,
+       "p99_us": 3705.6,
+       "mean_us": 3149.76
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 1036.0,
+       "p90_us": 1067.08,
+       "p99_us": 1129.24,
+       "mean_us": 1051.54,
+       "min_us": 932.4,
+       "max_us": 1191.4,
+       "sum_us": 66304.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1432.0,
+       "p90_us": 1517.92,
+       "p99_us": 1689.76,
+       "mean_us": 1474.96,
+       "min_us": 1288.8,
+       "max_us": 1646.8,
+       "sum_us": 91648.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 3090.7,
+       "ratio_of_step_dur": 1.001
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3088.0,
+       "p90_us": 3211.52,
+       "p99_us": 3705.6,
+       "mean_us": 3149.76
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 1036.0,
+       "p90_us": 1067.08,
+       "p99_us": 1129.24,
+       "mean_us": 1051.54,
+       "min_us": 932.4,
+       "max_us": 1191.4,
+       "sum_us": 66304.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1432.0,
+       "p90_us": 1517.92,
+       "p99_us": 1689.76,
+       "mean_us": 1474.96,
+       "min_us": 1288.8,
+       "max_us": 1646.8,
+       "sum_us": 91648.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 3090.7,
+       "ratio_of_step_dur": 1.001
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.3355,
+      "prepare_over_step_mean": 0.3355
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "a-b8",
+  "group": "A",
+  "note": "",
+  "workload": {
+   "requests": 8,
+   "concurrency": 8,
+   "prompt_tokens_target": 128,
+   "max_tokens": 1024,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.3144,
+   "exec_ns_delta": 9432000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 0.382,
+     "mean_itl_ms": 18.4,
+     "output_tps_aggregate": 61.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 0.38582,
+     "mean_itl_ms": 18.767999999999997,
+     "output_tps_aggregate": 60.39
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/a-b8/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3256.0,
+       "p90_us": 3386.24,
+       "p99_us": 3907.2,
+       "mean_us": 3321.12
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 1172.0,
+       "p90_us": 1207.16,
+       "p99_us": 1277.48,
+       "mean_us": 1189.58,
+       "min_us": 1054.8,
+       "max_us": 1347.8,
+       "sum_us": 75008.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1464.0,
+       "p90_us": 1551.84,
+       "p99_us": 1727.52,
+       "mean_us": 1507.92,
+       "min_us": 1317.6,
+       "max_us": 1683.6,
+       "sum_us": 93696.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 3258.7,
+       "ratio_of_step_dur": 1.001
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3256.0,
+       "p90_us": 3386.24,
+       "p99_us": 3907.2,
+       "mean_us": 3321.12
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 1172.0,
+       "p90_us": 1207.16,
+       "p99_us": 1277.48,
+       "mean_us": 1189.58,
+       "min_us": 1054.8,
+       "max_us": 1347.8,
+       "sum_us": 75008.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1464.0,
+       "p90_us": 1551.84,
+       "p99_us": 1727.52,
+       "mean_us": 1507.92,
+       "min_us": 1317.6,
+       "max_us": 1683.6,
+       "sum_us": 93696.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 3258.7,
+       "ratio_of_step_dur": 1.001
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.36,
+      "prepare_over_step_mean": 0.36
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "a-b16",
+  "group": "A",
+  "note": "",
+  "workload": {
+   "requests": 16,
+   "concurrency": 16,
+   "prompt_tokens_target": 128,
+   "max_tokens": 1024,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.3288,
+   "exec_ns_delta": 9864000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 0.414,
+     "mean_itl_ms": 18.8,
+     "output_tps_aggregate": 77.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 0.41813999999999996,
+     "mean_itl_ms": 19.176000000000002,
+     "output_tps_aggregate": 76.23
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/a-b16/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3592.0,
+       "p90_us": 3735.68,
+       "p99_us": 4310.4,
+       "mean_us": 3663.84
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 1444.0,
+       "p90_us": 1487.32,
+       "p99_us": 1573.96,
+       "mean_us": 1465.66,
+       "min_us": 1299.6,
+       "max_us": 1660.6,
+       "sum_us": 92416.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1528.0,
+       "p90_us": 1619.68,
+       "p99_us": 1803.04,
+       "mean_us": 1573.84,
+       "min_us": 1375.2,
+       "max_us": 1757.2,
+       "sum_us": 97792.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 3594.7,
+       "ratio_of_step_dur": 1.001
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3592.0,
+       "p90_us": 3735.68,
+       "p99_us": 4310.4,
+       "mean_us": 3663.84
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 1444.0,
+       "p90_us": 1487.32,
+       "p99_us": 1573.96,
+       "mean_us": 1465.66,
+       "min_us": 1299.6,
+       "max_us": 1660.6,
+       "sum_us": 92416.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1528.0,
+       "p90_us": 1619.68,
+       "p99_us": 1803.04,
+       "mean_us": 1573.84,
+       "min_us": 1375.2,
+       "max_us": 1757.2,
+       "sum_us": 97792.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 3594.7,
+       "ratio_of_step_dur": 1.001
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.402,
+      "prepare_over_step_mean": 0.402
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "a-b32",
+  "group": "A",
+  "note": "",
+  "workload": {
+   "requests": 32,
+   "concurrency": 32,
+   "prompt_tokens_target": 128,
+   "max_tokens": 1024,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.3576,
+   "exec_ns_delta": 10728000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 0.478,
+     "mean_itl_ms": 19.6,
+     "output_tps_aggregate": 109.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 0.48278,
+     "mean_itl_ms": 19.992,
+     "output_tps_aggregate": 107.91
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/a-b32/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 4264.0,
+       "p90_us": 4434.56,
+       "p99_us": 5116.8,
+       "mean_us": 4349.28
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 1988.0,
+       "p90_us": 2047.64,
+       "p99_us": 2166.92,
+       "mean_us": 2017.82,
+       "min_us": 1789.2,
+       "max_us": 2286.2,
+       "sum_us": 127232.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1656.0,
+       "p90_us": 1755.36,
+       "p99_us": 1954.08,
+       "mean_us": 1705.68,
+       "min_us": 1490.4,
+       "max_us": 1904.4,
+       "sum_us": 105984.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4266.7,
+       "ratio_of_step_dur": 1.001
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 4264.0,
+       "p90_us": 4434.56,
+       "p99_us": 5116.8,
+       "mean_us": 4349.28
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 1988.0,
+       "p90_us": 2047.64,
+       "p99_us": 2166.92,
+       "mean_us": 2017.82,
+       "min_us": 1789.2,
+       "max_us": 2286.2,
+       "sum_us": 127232.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1656.0,
+       "p90_us": 1755.36,
+       "p99_us": 1954.08,
+       "mean_us": 1705.68,
+       "min_us": 1490.4,
+       "max_us": 1904.4,
+       "sum_us": 105984.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4266.7,
+       "ratio_of_step_dur": 1.001
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.4662,
+      "prepare_over_step_mean": 0.4662
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "a-b64",
+  "group": "A",
+  "note": "",
+  "workload": {
+   "requests": 64,
+   "concurrency": 64,
+   "prompt_tokens_target": 128,
+   "max_tokens": 1024,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.4152,
+   "exec_ns_delta": 12456000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 0.606,
+     "mean_itl_ms": 21.2,
+     "output_tps_aggregate": 173.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 0.6120599999999999,
+     "mean_itl_ms": 21.624,
+     "output_tps_aggregate": 171.27
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/a-b64/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 5608.0,
+       "p90_us": 5832.32,
+       "p99_us": 6729.6,
+       "mean_us": 5720.16
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 3076.0,
+       "p90_us": 3168.28,
+       "p99_us": 3352.84,
+       "mean_us": 3122.14,
+       "min_us": 2768.4,
+       "max_us": 3537.4,
+       "sum_us": 196864.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1912.0,
+       "p90_us": 2026.72,
+       "p99_us": 2256.16,
+       "mean_us": 1969.36,
+       "min_us": 1720.8,
+       "max_us": 2198.8,
+       "sum_us": 122368.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 5610.7,
+       "ratio_of_step_dur": 1.0
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 5608.0,
+       "p90_us": 5832.32,
+       "p99_us": 6729.6,
+       "mean_us": 5720.16
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 3076.0,
+       "p90_us": 3168.28,
+       "p99_us": 3352.84,
+       "mean_us": 3122.14,
+       "min_us": 2768.4,
+       "max_us": 3537.4,
+       "sum_us": 196864.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1912.0,
+       "p90_us": 2026.72,
+       "p99_us": 2256.16,
+       "mean_us": 1969.36,
+       "min_us": 1720.8,
+       "max_us": 2198.8,
+       "sum_us": 122368.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 5610.7,
+       "ratio_of_step_dur": 1.0
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.5485,
+      "prepare_over_step_mean": 0.5485
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "a-b128",
+  "group": "A",
+  "note": "",
+  "workload": {
+   "requests": 128,
+   "concurrency": 128,
+   "prompt_tokens_target": 128,
+   "max_tokens": 1024,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.5304,
+   "exec_ns_delta": 15912000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 0.862,
+     "mean_itl_ms": 24.4,
+     "output_tps_aggregate": 301.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 0.87062,
+     "mean_itl_ms": 24.887999999999998,
+     "output_tps_aggregate": 297.99
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/a-b128/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 8296.0,
+       "p90_us": 8627.84,
+       "p99_us": 9955.2,
+       "mean_us": 8461.92
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 5252.0,
+       "p90_us": 5409.56,
+       "p99_us": 5724.68,
+       "mean_us": 5330.78,
+       "min_us": 4726.8,
+       "max_us": 6039.8,
+       "sum_us": 336128.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 2424.0,
+       "p90_us": 2569.44,
+       "p99_us": 2860.32,
+       "mean_us": 2496.72,
+       "min_us": 2181.6,
+       "max_us": 2787.6,
+       "sum_us": 155136.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 8298.7,
+       "ratio_of_step_dur": 1.0
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 8296.0,
+       "p90_us": 8627.84,
+       "p99_us": 9955.2,
+       "mean_us": 8461.92
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 5252.0,
+       "p90_us": 5409.56,
+       "p99_us": 5724.68,
+       "mean_us": 5330.78,
+       "min_us": 4726.8,
+       "max_us": 6039.8,
+       "sum_us": 336128.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 2424.0,
+       "p90_us": 2569.44,
+       "p99_us": 2860.32,
+       "mean_us": 2496.72,
+       "min_us": 2181.6,
+       "max_us": 2787.6,
+       "sum_us": 155136.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 8298.7,
+       "ratio_of_step_dur": 1.0
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.6331,
+      "prepare_over_step_mean": 0.6331
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "a-b256",
+  "group": "A",
+  "note": "",
+  "workload": {
+   "requests": 256,
+   "concurrency": 256,
+   "prompt_tokens_target": 128,
+   "max_tokens": 1024,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.7607999999999999,
+   "exec_ns_delta": 22823999999
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 1.374,
+     "mean_itl_ms": 30.8,
+     "output_tps_aggregate": 557.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 1.3877400000000002,
+     "mean_itl_ms": 31.416,
+     "output_tps_aggregate": 551.43
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/a-b256/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 13672.0,
+       "p90_us": 14218.88,
+       "p99_us": 16406.4,
+       "mean_us": 13945.44
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 9604.0,
+       "p90_us": 9892.12,
+       "p99_us": 10468.36,
+       "mean_us": 9748.06,
+       "min_us": 8643.6,
+       "max_us": 11044.6,
+       "sum_us": 614656.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 3448.0,
+       "p90_us": 3654.88,
+       "p99_us": 4068.64,
+       "mean_us": 3551.44,
+       "min_us": 3103.2,
+       "max_us": 3965.2,
+       "sum_us": 220672.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 13674.7,
+       "ratio_of_step_dur": 1.0
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 13672.0,
+       "p90_us": 14218.88,
+       "p99_us": 16406.4,
+       "mean_us": 13945.44
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 9604.0,
+       "p90_us": 9892.12,
+       "p99_us": 10468.36,
+       "mean_us": 9748.06,
+       "min_us": 8643.6,
+       "max_us": 11044.6,
+       "sum_us": 614656.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 3448.0,
+       "p90_us": 3654.88,
+       "p99_us": 4068.64,
+       "mean_us": 3551.44,
+       "min_us": 3103.2,
+       "max_us": 3965.2,
+       "sum_us": 220672.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 13674.7,
+       "ratio_of_step_dur": 1.0
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.7025,
+      "prepare_over_step_mean": 0.7025
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "b-isl128",
+  "group": "B",
+  "note": "",
+  "workload": {
+   "requests": 1,
+   "concurrency": 1,
+   "prompt_tokens_target": 128,
+   "max_tokens": 1,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 8192,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.310512,
+   "exec_ns_delta": 9315360000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 0.3448,
+     "mean_itl_ms": 20.0,
+     "output_tps_aggregate": 1.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 0.348248,
+     "mean_itl_ms": 20.4,
+     "output_tps_aggregate": 0.99
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/b-isl128/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3908.077,
+       "p90_us": 4064.4,
+       "p99_us": 4689.692,
+       "mean_us": 3986.238
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2600.269,
+       "p90_us": 2678.277,
+       "p99_us": 2834.293,
+       "mean_us": 2639.273,
+       "min_us": 2340.242,
+       "max_us": 2990.309,
+       "sum_us": 166417.203
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 907.808,
+       "p90_us": 962.276,
+       "p99_us": 1071.213,
+       "mean_us": 935.042,
+       "min_us": 817.027,
+       "max_us": 1043.979,
+       "sum_us": 58099.712
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4130.777,
+       "ratio_of_step_dur": 1.057
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3908.077,
+       "p90_us": 4064.4,
+       "p99_us": 4689.692,
+       "mean_us": 3986.238
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2600.269,
+       "p90_us": 2678.277,
+       "p99_us": 2834.293,
+       "mean_us": 2639.273,
+       "min_us": 2340.242,
+       "max_us": 2990.309,
+       "sum_us": 166417.203
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 907.808,
+       "p90_us": 962.276,
+       "p99_us": 1071.213,
+       "mean_us": 935.042,
+       "min_us": 817.027,
+       "max_us": 1043.979,
+       "sum_us": 58099.712
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4130.777,
+       "ratio_of_step_dur": 1.057
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.6654,
+      "prepare_over_step_mean": 0.6654
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "b-isl512",
+  "group": "B",
+  "note": "",
+  "workload": {
+   "requests": 1,
+   "concurrency": 1,
+   "prompt_tokens_target": 512,
+   "max_tokens": 1,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 8192,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.312048,
+   "exec_ns_delta": 9361440000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 0.47919999999999996,
+     "mean_itl_ms": 20.0,
+     "output_tps_aggregate": 1.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 0.483992,
+     "mean_itl_ms": 20.4,
+     "output_tps_aggregate": 0.99
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/b-isl512/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3932.307,
+       "p90_us": 4089.599,
+       "p99_us": 4718.769,
+       "mean_us": 4010.953
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2601.075,
+       "p90_us": 2679.107,
+       "p99_us": 2835.172,
+       "mean_us": 2640.091,
+       "min_us": 2340.968,
+       "max_us": 2991.236,
+       "sum_us": 166468.813
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 931.232,
+       "p90_us": 987.106,
+       "p99_us": 1098.854,
+       "mean_us": 959.169,
+       "min_us": 838.109,
+       "max_us": 1070.917,
+       "sum_us": 59598.848
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4155.007,
+       "ratio_of_step_dur": 1.057
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3932.307,
+       "p90_us": 4089.599,
+       "p99_us": 4718.769,
+       "mean_us": 4010.953
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2601.075,
+       "p90_us": 2679.107,
+       "p99_us": 2835.172,
+       "mean_us": 2640.091,
+       "min_us": 2340.968,
+       "max_us": 2991.236,
+       "sum_us": 166468.813
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 931.232,
+       "p90_us": 987.106,
+       "p99_us": 1098.854,
+       "mean_us": 959.169,
+       "min_us": 838.109,
+       "max_us": 1070.917,
+       "sum_us": 59598.848
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4155.007,
+       "ratio_of_step_dur": 1.057
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.6615,
+      "prepare_over_step_mean": 0.6615
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "b-isl2048",
+  "group": "B",
+  "note": "",
+  "workload": {
+   "requests": 1,
+   "concurrency": 1,
+   "prompt_tokens_target": 2048,
+   "max_tokens": 1,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 8192,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.318192,
+   "exec_ns_delta": 9545760000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 1.0168,
+     "mean_itl_ms": 20.0,
+     "output_tps_aggregate": 1.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 1.0269679999999999,
+     "mean_itl_ms": 20.4,
+     "output_tps_aggregate": 0.99
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/b-isl2048/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 4029.229,
+       "p90_us": 4190.398,
+       "p99_us": 4835.075,
+       "mean_us": 4109.813
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2604.301,
+       "p90_us": 2682.43,
+       "p99_us": 2838.688,
+       "mean_us": 2643.365,
+       "min_us": 2343.871,
+       "max_us": 2994.946,
+       "sum_us": 166675.251
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1024.928,
+       "p90_us": 1086.424,
+       "p99_us": 1209.415,
+       "mean_us": 1055.676,
+       "min_us": 922.435,
+       "max_us": 1178.667,
+       "sum_us": 65595.392
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4251.929,
+       "ratio_of_step_dur": 1.055
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 4029.229,
+       "p90_us": 4190.398,
+       "p99_us": 4835.075,
+       "mean_us": 4109.813
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2604.301,
+       "p90_us": 2682.43,
+       "p99_us": 2838.688,
+       "mean_us": 2643.365,
+       "min_us": 2343.871,
+       "max_us": 2994.946,
+       "sum_us": 166675.251
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1024.928,
+       "p90_us": 1086.424,
+       "p99_us": 1209.415,
+       "mean_us": 1055.676,
+       "min_us": 922.435,
+       "max_us": 1178.667,
+       "sum_us": 65595.392
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4251.929,
+       "ratio_of_step_dur": 1.055
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.6464,
+      "prepare_over_step_mean": 0.6464
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "b-isl8192",
+  "group": "B",
+  "note": "",
+  "workload": {
+   "requests": 1,
+   "concurrency": 1,
+   "prompt_tokens_target": 8192,
+   "max_tokens": 1,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 8192,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.342768,
+   "exec_ns_delta": 10283040000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 3.1672,
+     "mean_itl_ms": 20.0,
+     "output_tps_aggregate": 1.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 3.1988719999999997,
+     "mean_itl_ms": 20.4,
+     "output_tps_aggregate": 0.99
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/b-isl8192/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 4416.915,
+       "p90_us": 4593.592,
+       "p99_us": 5300.298,
+       "mean_us": 4505.254
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2617.203,
+       "p90_us": 2695.719,
+       "p99_us": 2852.751,
+       "mean_us": 2656.461,
+       "min_us": 2355.483,
+       "max_us": 3009.784,
+       "sum_us": 167501.005
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1399.712,
+       "p90_us": 1483.695,
+       "p99_us": 1651.66,
+       "mean_us": 1441.703,
+       "min_us": 1259.741,
+       "max_us": 1609.669,
+       "sum_us": 89581.568
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4639.615,
+       "ratio_of_step_dur": 1.05
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 4416.915,
+       "p90_us": 4593.592,
+       "p99_us": 5300.298,
+       "mean_us": 4505.254
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2617.203,
+       "p90_us": 2695.719,
+       "p99_us": 2852.751,
+       "mean_us": 2656.461,
+       "min_us": 2355.483,
+       "max_us": 3009.784,
+       "sum_us": 167501.005
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1399.712,
+       "p90_us": 1483.695,
+       "p99_us": 1651.66,
+       "mean_us": 1441.703,
+       "min_us": 1259.741,
+       "max_us": 1609.669,
+       "sum_us": 89581.568
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4639.615,
+       "ratio_of_step_dur": 1.05
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.5925,
+      "prepare_over_step_mean": 0.5925
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "c-chunk512",
+  "group": "C",
+  "note": "",
+  "workload": {
+   "requests": 1,
+   "concurrency": 1,
+   "prompt_tokens_target": 32768,
+   "max_tokens": 1,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 512,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.33,
+   "exec_ns_delta": 9900000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 1.24336,
+     "mean_itl_ms": 20.0,
+     "output_tps_aggregate": 0.9
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 1.2557936,
+     "mean_itl_ms": 20.4,
+     "output_tps_aggregate": 0.891
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/c-chunk512/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3959.024,
+       "p90_us": 4117.385,
+       "p99_us": 4750.829,
+       "mean_us": 4038.204
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2656.144,
+       "p90_us": 2735.828,
+       "p99_us": 2895.197,
+       "mean_us": 2695.986,
+       "min_us": 2390.53,
+       "max_us": 3054.566,
+       "sum_us": 169993.216
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 922.88,
+       "p90_us": 978.253,
+       "p99_us": 1088.998,
+       "mean_us": 950.566,
+       "min_us": 830.592,
+       "max_us": 1061.312,
+       "sum_us": 59064.32
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4201.724,
+       "ratio_of_step_dur": 1.061
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 3959.024,
+       "p90_us": 4117.385,
+       "p99_us": 4750.829,
+       "mean_us": 4038.204
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2656.144,
+       "p90_us": 2735.828,
+       "p99_us": 2895.197,
+       "mean_us": 2695.986,
+       "min_us": 2390.53,
+       "max_us": 3054.566,
+       "sum_us": 169993.216
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 922.88,
+       "p90_us": 978.253,
+       "p99_us": 1088.998,
+       "mean_us": 950.566,
+       "min_us": 830.592,
+       "max_us": 1061.312,
+       "sum_us": 59064.32
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4201.724,
+       "ratio_of_step_dur": 1.061
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.6709,
+      "prepare_over_step_mean": 0.6709
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "c-chunk2048",
+  "group": "C",
+  "note": "",
+  "workload": {
+   "requests": 1,
+   "concurrency": 1,
+   "prompt_tokens_target": 32768,
+   "max_tokens": 1,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.33,
+   "exec_ns_delta": 9900000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 1.67344,
+     "mean_itl_ms": 20.0,
+     "output_tps_aggregate": 0.9
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 1.6901744,
+     "mean_itl_ms": 20.4,
+     "output_tps_aggregate": 0.891
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/c-chunk2048/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 4327.664,
+       "p90_us": 4500.771,
+       "p99_us": 5193.197,
+       "mean_us": 4414.217
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2656.144,
+       "p90_us": 2735.828,
+       "p99_us": 2895.197,
+       "mean_us": 2695.986,
+       "min_us": 2390.53,
+       "max_us": 3054.566,
+       "sum_us": 169993.216
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1291.52,
+       "p90_us": 1369.011,
+       "p99_us": 1523.994,
+       "mean_us": 1330.266,
+       "min_us": 1162.368,
+       "max_us": 1485.248,
+       "sum_us": 82657.28
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4570.364,
+       "ratio_of_step_dur": 1.056
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 4327.664,
+       "p90_us": 4500.771,
+       "p99_us": 5193.197,
+       "mean_us": 4414.217
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2656.144,
+       "p90_us": 2735.828,
+       "p99_us": 2895.197,
+       "mean_us": 2695.986,
+       "min_us": 2390.53,
+       "max_us": 3054.566,
+       "sum_us": 169993.216
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1291.52,
+       "p90_us": 1369.011,
+       "p99_us": 1523.994,
+       "mean_us": 1330.266,
+       "min_us": 1162.368,
+       "max_us": 1485.248,
+       "sum_us": 82657.28
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 4570.364,
+       "ratio_of_step_dur": 1.056
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.6138,
+      "prepare_over_step_mean": 0.6138
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "c-chunk8192",
+  "group": "C",
+  "note": "",
+  "workload": {
+   "requests": 1,
+   "concurrency": 1,
+   "prompt_tokens_target": 32768,
+   "max_tokens": 1,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 8192,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.33,
+   "exec_ns_delta": 9900000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 3.39376,
+     "mean_itl_ms": 20.0,
+     "output_tps_aggregate": 0.9
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 3.4276976,
+     "mean_itl_ms": 20.4,
+     "output_tps_aggregate": 0.891
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/c-chunk8192/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 5802.224,
+       "p90_us": 6034.313,
+       "p99_us": 6962.669,
+       "mean_us": 5918.268
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2656.144,
+       "p90_us": 2735.828,
+       "p99_us": 2895.197,
+       "mean_us": 2695.986,
+       "min_us": 2390.53,
+       "max_us": 3054.566,
+       "sum_us": 169993.216
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 2766.08,
+       "p90_us": 2932.045,
+       "p99_us": 3263.974,
+       "mean_us": 2849.062,
+       "min_us": 2489.472,
+       "max_us": 3180.992,
+       "sum_us": 177029.12
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 6044.924,
+       "ratio_of_step_dur": 1.042
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 5802.224,
+       "p90_us": 6034.313,
+       "p99_us": 6962.669,
+       "mean_us": 5918.268
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 2656.144,
+       "p90_us": 2735.828,
+       "p99_us": 2895.197,
+       "mean_us": 2695.986,
+       "min_us": 2390.53,
+       "max_us": 3054.566,
+       "sum_us": 169993.216
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 2766.08,
+       "p90_us": 2932.045,
+       "p99_us": 3263.974,
+       "mean_us": 2849.062,
+       "min_us": 2489.472,
+       "max_us": 3180.992,
+       "sum_us": 177029.12
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 6044.924,
+       "ratio_of_step_dur": 1.042
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.4578,
+      "prepare_over_step_mean": 0.4578
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "e-mtp-off",
+  "group": "E",
+  "note": "mtp-off",
+  "workload": {
+   "requests": 64,
+   "concurrency": 64,
+   "prompt_tokens_target": 2048,
+   "max_tokens": 256,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.42,
+   "exec_ns_delta": 12600000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 2.4,
+     "mean_itl_ms": 22.0,
+     "output_tps_aggregate": 3000.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 2.424,
+     "mean_itl_ms": 22.44,
+     "output_tps_aggregate": 2970.0
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/e-mtp-off/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 5628.0,
+       "p90_us": 5853.12,
+       "p99_us": 6753.6,
+       "mean_us": 5740.56
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 3076.0,
+       "p90_us": 3168.28,
+       "p99_us": 3352.84,
+       "mean_us": 3122.14,
+       "min_us": 2768.4,
+       "max_us": 3537.4,
+       "sum_us": 196864.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1912.0,
+       "p90_us": 2026.72,
+       "p99_us": 2256.16,
+       "mean_us": 1969.36,
+       "min_us": 1720.8,
+       "max_us": 2198.8,
+       "sum_us": 122368.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 5610.7,
+       "ratio_of_step_dur": 0.997
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 5628.0,
+       "p90_us": 5853.12,
+       "p99_us": 6753.6,
+       "mean_us": 5740.56
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 3076.0,
+       "p90_us": 3168.28,
+       "p99_us": 3352.84,
+       "mean_us": 3122.14,
+       "min_us": 2768.4,
+       "max_us": 3537.4,
+       "sum_us": 196864.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 1912.0,
+       "p90_us": 2026.72,
+       "p99_us": 2256.16,
+       "mean_us": 1969.36,
+       "min_us": 1720.8,
+       "max_us": 2198.8,
+       "sum_us": 122368.0
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 5610.7,
+       "ratio_of_step_dur": 0.997
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.5466,
+      "prepare_over_step_mean": 0.5466
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "e-mtp-on",
+  "group": "E",
+  "note": "mtp-on",
+  "workload": {
+   "requests": 64,
+   "concurrency": 64,
+   "prompt_tokens_target": 2048,
+   "max_tokens": 256,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 1,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.42,
+   "exec_ns_delta": 12600000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 2.4,
+     "mean_itl_ms": 19.5,
+     "output_tps_aggregate": 4050.0000000000005
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 2.424,
+     "mean_itl_ms": 19.89,
+     "output_tps_aggregate": 4009.5000000000005
+    }
+   }
+  ],
+  "phases": {
+   "available": true,
+   "rc": 0,
+   "summary": {
+    "schema": "pi-lite-summary-v1",
+    "lite_log": "data/measure/selftest-plot-20260924T0000Z/points/e-mtp-on/lite.log",
+    "rows": 900,
+    "malformed": 0,
+    "selected_tid": 131,
+    "tids": {
+     "131": 900
+    },
+    "orphans": 6,
+    "n_steps": 66,
+    "steps_by_phase": {
+     "prefill": 2,
+     "prefill+decode": 0,
+     "decode": 62,
+     "idle": 0
+    },
+    "by_phase": {
+     "decode": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 6805.2,
+       "p90_us": 7077.408,
+       "p99_us": 8166.24,
+       "mean_us": 6941.304
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 3106.0,
+       "p90_us": 3199.18,
+       "p99_us": 3385.54,
+       "mean_us": 3152.59,
+       "min_us": 2795.4,
+       "max_us": 3571.9,
+       "sum_us": 198784.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 3059.2,
+       "p90_us": 3242.752,
+       "p99_us": 3609.856,
+       "mean_us": 3150.976,
+       "min_us": 2753.28,
+       "max_us": 3518.08,
+       "sum_us": 195788.8
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 6787.9,
+       "ratio_of_step_dur": 0.997
+      }
+     },
+     "all": {
+      "n_steps": 64,
+      "step_dur": {
+       "p50_us": 6805.2,
+       "p90_us": 7077.408,
+       "p99_us": 8166.24,
+       "mean_us": 6941.304
+      },
+      "prepare input": {
+       "n": 64,
+       "p50_us": 3106.0,
+       "p90_us": 3199.18,
+       "p99_us": 3385.54,
+       "mean_us": 3152.59,
+       "min_us": 2795.4,
+       "max_us": 3571.9,
+       "sum_us": 198784.0
+      },
+      "forward": {
+       "n": 64,
+       "p50_us": 3059.2,
+       "p90_us": 3242.752,
+       "p99_us": 3609.856,
+       "mean_us": 3150.976,
+       "min_us": 2753.28,
+       "max_us": 3518.08,
+       "sum_us": 195788.8
+      },
+      "post process": {
+       "n": 64,
+       "p50_us": 140.0,
+       "p90_us": 182.0,
+       "p99_us": 266.0,
+       "mean_us": 161.0,
+       "min_us": 126.0,
+       "max_us": 161.0,
+       "sum_us": 8960.0
+      },
+      "sample_token": {
+       "n": 64,
+       "p50_us": 150.0,
+       "p90_us": 195.0,
+       "p99_us": 285.0,
+       "mean_us": 172.5,
+       "min_us": 135.0,
+       "max_us": 172.5,
+       "sum_us": 9600.0
+      },
+      "draft_token": {
+       "n": 64,
+       "p50_us": 2.7,
+       "p90_us": 2.97,
+       "p99_us": 3.51,
+       "mean_us": 2.835,
+       "min_us": 2.43,
+       "max_us": 3.105,
+       "sum_us": 172.8
+      },
+      "coverage": {
+       "sum_measured_mean_us": 6787.9,
+       "ratio_of_step_dur": 0.997
+      }
+     }
+    },
+    "share": {
+     "decode": {
+      "prepare_over_step_p50": 0.4564,
+      "prepare_over_step_mean": 0.4564
+     }
+    },
+    "scope_inventory": [],
+    "warnings": []
+   }
+  },
+  "errors": []
+ },
+ {
+  "schema": "pi-point-v1",
+  "run_id": "selftest-plot-20260924T0000Z",
+  "tag": "r-no-analyzer",
+  "group": "R",
+  "note": "",
+  "workload": {
+   "requests": 8,
+   "concurrency": 8,
+   "prompt_tokens_target": 128,
+   "max_tokens": 256,
+   "seed": 1024,
+   "rounds": 2,
+   "temperature": 0.0,
+   "streaming": true
+  },
+  "service": {
+   "container": "pi-phase-chip3-selftest-plot-20260924T0000Z",
+   "server": {
+    "max_model_len": 32768,
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "async_scheduling": "on",
+    "num_speculative_tokens": 0,
+    "tensor_parallel_size": 1,
+    "prefix_caching": false,
+    "dtype": "bfloat16"
+   },
+   "model": {
+    "served_name": "qwen35-08b"
+   }
+  },
+  "ec": {
+   "ec_host_pid": 424242,
+   "ec_host_tid": 424242,
+   "ec_comm": "EngineCore"
+  },
+  "cpu": {
+   "on_cpu_ratio": 0.35,
+   "exec_ns_delta": 10500000000
+  },
+  "rounds": [
+   {
+    "round": 0,
+    "rc": 0,
+    "wall_s": 30.0,
+    "aggregate": {
+     "ttft_s_mean": 0.6,
+     "mean_itl_ms": 19.0,
+     "output_tps_aggregate": 400.0
+    }
+   },
+   {
+    "round": 1,
+    "rc": 0,
+    "wall_s": 30.6,
+    "aggregate": {
+     "ttft_s_mean": 0.606,
+     "mean_itl_ms": 19.38,
+     "output_tps_aggregate": 396.0
+    }
+   }
+  ],
+  "phases": {
+   "available": false,
+   "reason": "analyze_lite.py not found"
+  },
+  "errors": []
+ },
+ {
+  "schema": "not-a-point",
+  "tag": "x-foreign"
+ }
+]

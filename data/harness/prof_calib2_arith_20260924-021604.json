@@ -1,0 +1,860 @@
+{
+  "artifacts": {
+    "pmu": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/pmu/count.json",
+    "topdown": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/pmu/topdown.json",
+    "hotspots": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/perf/hotspots.json",
+    "annotate_txt": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/perf/annotate/_PyObject_Free.txt",
+    "annotate_json": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/perf/annotate/_PyObject_Free.json",
+    "flamegraph_svg": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/perf/flamegraph.svg"
+  },
+  "pmu": {
+    "counters": {
+      "CPU_CYCLES": 13378756206,
+      "INST_RETIRED": 50708760285,
+      "INST_SPEC": 54525691280,
+      "BR_PRED": 10989638798,
+      "BR_MIS_PRED": 45631598,
+      "L1D_CACHE_REFILL": 1522898
+    },
+    "ipc": 3.790244736073338,
+    "time_enabled": 4613490590,
+    "time_running": 4613490590,
+    "confidence": 1.0,
+    "wall_s": 4.717264
+  },
+  "topdown_meta": {
+    "mode": "split",
+    "split": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/pmu/topdown_split",
+    "retries": []
+  },
+  "topdown": {
+    "level1": {
+      "retiring": 64.88464959881311,
+      "bad_spec": 4.960368591662135,
+      "frontend_bound": 26.554848733609877,
+      "backend_bound": 3.600133075914883
+    },
+    "level2": {
+      "frontend": {
+        "frontend_latency_bound": 15.382882098584313,
+        "frontend_bandwidth_bound": 11.171966635025564
+      },
+      "backend": {
+        "resource_bound": 0.005462146243919366,
+        "core_bound": 3.5946709296709636,
+        "mem_bound": 0.0
+      }
+    },
+    "level3_mem": {
+      "mem_l1_bound": 0.0,
+      "mem_l2_bound": 0.0,
+      "mem_l3_dram_bound": 0.0,
+      "mem_mem_bound": 0.0,
+      "mem_store_bound": 0.0
+    },
+    "ooo_stall": {
+      "rob_stall_pct": null,
+      "ptag_stall_pct": null,
+      "mapq_stall_pct": null,
+      "pcbuf_stall_pct": null,
+      "other_stall_pct": null
+    },
+    "ipc": 3.893078975928787,
+    "confidence": {
+      "per_group": [
+        {
+          "file": "split_1.json",
+          "preset": "920b_topdown_full_1",
+          "counter": null,
+          "count": null,
+          "time_enabled": 4490675440,
+          "time_running": 4490675440,
+          "confidence": 1.0,
+          "useronly_forced": false,
+          "pmu": "920B"
+        }
+      ],
+      "min": 1.0,
+      "time_enabled_sum": 4490675440,
+      "time_running_sum": 4490675440,
+      "ratio": 1.0
+    },
+    "notes": [
+      "只合并了 1/9 个 preset 组，缺失分量按 0 处理"
+    ]
+  },
+  "symfs": {
+    "symfs": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/perf/symfs",
+    "copied": [
+      "/usr/lib/ld-linux-aarch64.so.1",
+      "/usr/lib/locale/C.utf8/LC_CTYPE",
+      "/usr/lib64/gconv/gconv-modules.cache",
+      "/usr/lib64/libbz2.so.1.0.8",
+      "/usr/lib64/libc.so.6",
+      "/usr/lib64/libcrypto.so.3.0.12",
+      "/usr/lib64/liblzma.so.5.4.7",
+      "/usr/lib64/libm.so.6",
+      "/usr/lib64/libz.so.1.2.13",
+      "/usr/local/python3.12.13/bin/python3.12",
+      "/usr/local/python3.12.13/lib/libpython3.12.so.1.0",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_blake2.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_bz2.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_hashlib.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_heapq.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_json.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_lzma.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_posixsubprocess.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_queue.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/_socket.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/array.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/fcntl.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/math.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/select.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/termios.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.13/lib/python3.12/lib-dynload/zlib.cpython-312-aarch64-linux-gnu.so"
+    ],
+    "existing": [],
+    "cached": [],
+    "n_dsos": 189
+  },
+  "caveats": [
+    "有 163 个 DSO 抽取失败（符号可能不全）",
+    "采样后噪声超阈 {'203': 35.2, '207': 41.32, '213': 18.44} load1/cpu=0.086"
+  ],
+  "hotspots_top": [
+    {
+      "overhead_pct": 24.53,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_Free"
+    },
+    {
+      "overhead_pct": 21.23,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_Malloc"
+    },
+    {
+      "overhead_pct": 11.23,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyEval_EvalFrameDefault"
+    },
+    {
+      "overhead_pct": 4.96,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] long_bitwise"
+    },
+    {
+      "overhead_pct": 4.79,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] k_mul"
+    },
+    {
+      "overhead_pct": 3.03,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] long_dealloc"
+    },
+    {
+      "overhead_pct": 2.86,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyErr_CheckSignals"
+    },
+    {
+      "overhead_pct": 2.7,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] x_add"
+    },
+    {
+      "overhead_pct": 2.26,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] long_rshift1"
+    },
+    {
+      "overhead_pct": 2.22,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyNumber_InPlaceXor"
+    },
+    {
+      "overhead_pct": 2.2,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyLong_New"
+    },
+    {
+      "overhead_pct": 2.13,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyObject_Free"
+    },
+    {
+      "overhead_pct": 2.1,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _Py_NewReference"
+    },
+    {
+      "overhead_pct": 1.5,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyObject_Malloc"
+    },
+    {
+      "overhead_pct": 1.42,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyNumber_Rshift"
+    },
+    {
+      "overhead_pct": 1.12,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyLong_Add"
+    },
+    {
+      "overhead_pct": 1.05,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyNumber_And"
+    },
+    {
+      "overhead_pct": 0.94,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyLong_Multiply"
+    },
+    {
+      "overhead_pct": 0.92,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] long_xor"
+    },
+    {
+      "overhead_pct": 0.76,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyLong_FromLong"
+    }
+  ],
+  "annotate": {
+    "symbol": "[.] _PyObject_Free",
+    "symbol_used": "_PyObject_Free",
+    "caliber_version": "prof-v1",
+    "kind": "annotate",
+    "file": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/perf/annotate/_PyObject_Free.txt",
+    "n_instructions": 167,
+    "sum_instr_pct": 99.99,
+    "hot_source_lines": [
+      {
+        "pct": 29.36,
+        "loc": "obmalloc.c:1129"
+      },
+      {
+        "pct": 23.23,
+        "loc": "obmalloc.c:1029"
+      },
+      {
+        "pct": 18.06,
+        "loc": "obmalloc.c:1126"
+      },
+      {
+        "pct": 13.49,
+        "loc": "pycore_pystate.h:27"
+      },
+      {
+        "pct": 4.41,
+        "loc": "obmalloc.c:1827"
+      },
+      {
+        "pct": 2.84,
+        "loc": "obmalloc.c:1017"
+      },
+      {
+        "pct": 2.56,
+        "loc": "pycore_pystate.h:133"
+      },
+      {
+        "pct": 2.46,
+        "loc": "obmalloc.c:1846"
+      },
+      {
+        "pct": 1.21,
+        "loc": "obmalloc.c:1808"
+      },
+      {
+        "pct": 0.82,
+        "loc": "obmalloc.c:1844"
+      }
+    ],
+    "top_instructions": [
+      {
+        "pct": 23.23,
+        "addr": "1c8850",
+        "mnemonic": "ubfx",
+        "operands": "x4, x1, #34, #15 // obmalloc.c:1029",
+        "src": "L1796 arena_map_get():"
+      },
+      {
+        "pct": 18.06,
+        "addr": "1c885c",
+        "mnemonic": "ubfx",
+        "operands": "x2, x1, #20, #14 // obmalloc.c:1126",
+        "src": "L1032 arena_map_is_used():"
+      },
+      {
+        "pct": 15.44,
+        "addr": "1c8870",
+        "mnemonic": "ldr",
+        "operands": "w4, [x6, #4] // obmalloc.c:1129",
+        "src": "L1032 arena_map_is_used():"
+      },
+      {
+        "pct": 13.92,
+        "addr": "1c88ac",
+        "mnemonic": "cmp",
+        "operands": "w2, #0x0 // obmalloc.c:1129",
+        "src": "L1860 arena_map_is_used():"
+      },
+      {
+        "pct": 8.59,
+        "addr": "1c8824",
+        "mnemonic": "ldr",
+        "operands": "x0, [x20, #48] // pycore_pystate.h:27",
+        "src": "L134 _PyInterpreterState_Main():"
+      },
+      {
+        "pct": 4.91,
+        "addr": "1c881c",
+        "mnemonic": "ldr",
+        "operands": "x20, [x20, #3192] // pycore_pystate.h:27",
+        "src": "L134 _PyInterpreterState_Main():"
+      },
+      {
+        "pct": 4.41,
+        "addr": "1c8898",
+        "mnemonic": "cbz",
+        "operands": "w1, 1c8928 <_PyObject_Free+0x138> // obmalloc.c:1827",
+        "src": "L1132 pymalloc_free():"
+      },
+      {
+        "pct": 2.84,
+        "addr": "1c8838",
+        "mnemonic": "lsr",
+        "operands": "x2, x1, #49 // obmalloc.c:1017",
+        "src": "L859 arena_map_get():"
+      },
+      {
+        "pct": 2.46,
+        "addr": "1c87f0",
+        "mnemonic": "cbz",
+        "operands": "x1, 1c88a8 <_PyObject_Free+0xb8> // obmalloc.c:1846",
+        "src": "L6 _PyObject_Free():"
+      },
+      {
+        "pct": 1.21,
+        "addr": "1c887c",
+        "mnemonic": "ldr",
+        "operands": "x2, [x3, #8] // obmalloc.c:1808",
+        "src": "L1132 pymalloc_free():"
+      },
+      {
+        "pct": 1.09,
+        "addr": "1c8820",
+        "mnemonic": "ldr",
+        "operands": "x19, [x2, #16] // pycore_pystate.h:133",
+        "src": "L29 _PyInterpreterState_GET():"
+      },
+      {
+        "pct": 0.92,
+        "addr": "1c8804",
+        "mnemonic": "ldr",
+        "operands": "x3, [x0, #3496] // pycore_pystate.h:133",
+        "src": "L1845 _PyInterpreterState_GET():"
+      },
+      {
+        "pct": 0.82,
+        "addr": "1c8810",
+        "mnemonic": "stp",
+        "operands": "x19, x20, [sp, #16] // obmalloc.c:1844",
+        "src": "L137 _PyObject_Free():"
+      },
+      {
+        "pct": 0.55,
+        "addr": "1c8814",
+        "mnemonic": "ldr",
+        "operands": "x2, [x2, x0] // pycore_pystate.h:133",
+        "src": "L1845 _PyInterpreterState_GET():"
+      },
+      {
+        "pct": 0.45,
+        "addr": "1c87f4",
+        "mnemonic": "stp",
+        "operands": "x29, x30, [sp, #-48]!",
+        "src": "L6 _PyObject_Free():"
+      },
+      {
+        "pct": 0.37,
+        "addr": "1c889c",
+        "mnemonic": "ldp",
+        "operands": "x19, x20, [sp, #16]",
+        "src": "L1828 _PyObject_Free():"
+      },
+      {
+        "pct": 0.36,
+        "addr": "1c87fc",
+        "mnemonic": "mov",
+        "operands": "x29, sp",
+        "src": "L134 _PyObject_Free():"
+      },
+      {
+        "pct": 0.18,
+        "addr": "1c87f8",
+        "mnemonic": "mrs",
+        "operands": "x2, tpidr_el0",
+        "src": "L1845 _PyInterpreterState_GET():"
+      },
+      {
+        "pct": 0.18,
+        "addr": "1c8848",
+        "mnemonic": "ldr",
+        "operands": "x2, [x2, #1096]",
+        "src": "L1796 arena_map_get():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8800",
+        "mnemonic": "adrp",
+        "operands": "x0, 542000 <PyImport_GetModule@@Base+0x2a08a0>",
+        "src": "L1845 _PyInterpreterState_GET():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8808",
+        "mnemonic": "add",
+        "operands": "x0, x0, #0xda8",
+        "src": "L1845 _PyInterpreterState_GET():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c880c",
+        "mnemonic": "blr",
+        "operands": "x3",
+        "src": "L1845 _PyInterpreterState_GET():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8818",
+        "mnemonic": "adrp",
+        "operands": "x20, 53f000 <initial+0x70150>",
+        "src": "L134 _PyInterpreterState_Main():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8828",
+        "mnemonic": "cmp",
+        "operands": "x19, x0",
+        "src": "L28 has_own_state():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c882c",
+        "mnemonic": "b.eq",
+        "operands": "1c8838 <_PyObject_Free+0x48>  // b.none",
+        "src": "L28 has_own_state():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8830",
+        "mnemonic": "ldr",
+        "operands": "x2, [x19, #1728]",
+        "src": "L28 has_own_state():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8834",
+        "mnemonic": "tbnz",
+        "operands": "w2, #5, 1c88d0 <_PyObject_Free+0xe0>",
+        "src": "L28 has_own_state():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c883c",
+        "mnemonic": "add",
+        "operands": "x0, x19, #0xf88",
+        "src": "L859 arena_map_get():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8840",
+        "mnemonic": "and",
+        "operands": "x3, x1, #0xffffffffffffc000",
+        "src": "L1019 pymalloc_free():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8844",
+        "mnemonic": "add",
+        "operands": "x2, x0, x2, lsl #3",
+        "src": "L1796 arena_map_get():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c884c",
+        "mnemonic": "cbz",
+        "operands": "x2, 1c88b8 <_PyObject_Free+0xc8>",
+        "src": "L1796 arena_map_get():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8854",
+        "mnemonic": "ldr",
+        "operands": "x4, [x2, x4, lsl #3]",
+        "src": "L1796 arena_map_get():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8858",
+        "mnemonic": "cbz",
+        "operands": "x4, 1c88b8 <_PyObject_Free+0xc8>",
+        "src": "L1796 arena_map_get():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8860",
+        "mnemonic": "and",
+        "operands": "w5, w1, #0xfffff",
+        "src": "L1032 arena_map_is_used():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8864",
+        "mnemonic": "lsl",
+        "operands": "x2, x2, #3",
+        "src": "L1032 arena_map_is_used():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8868",
+        "mnemonic": "add",
+        "operands": "x6, x4, x2",
+        "src": "L1032 arena_map_is_used():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c886c",
+        "mnemonic": "ldr",
+        "operands": "w2, [x4, x2]",
+        "src": "L1032 arena_map_is_used():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8874",
+        "mnemonic": "cmp",
+        "operands": "w4, w5",
+        "src": "L1032 arena_map_is_used():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8878",
+        "mnemonic": "b.le",
+        "operands": "1c88ac <_PyObject_Free+0xbc>",
+        "src": "L1032 arena_map_is_used():"
+      },
+      {
+        "pct": 0.0,
+        "addr": "1c8880",
+        "mnemonic": "str",
+        "operands": "x2, [x1]",
+        "src": "L1132 pymalloc_free():"
+      }
+    ]
+  },
+  "flamegraph_tool": "flamegraph-rs",
+  "caliber_version": "prof-v1",
+  "tag": "prof_calib2_arith",
+  "ts": "2026-09-24T02:16:44+0800",
+  "out": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604",
+  "cpus": "203,207,211,213",
+  "image": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+  "cmd": [
+    "python3",
+    "-m",
+    "pi_harness.profiling.microbench",
+    "--phase",
+    "arith",
+    "--threads",
+    "1",
+    "--warmup",
+    "1",
+    "--json",
+    "/tmp/microbench_arith.json",
+    "--iters",
+    "20000000"
+  ],
+  "stages": [
+    "pmu",
+    "topdown",
+    "perf"
+  ],
+  "passes": [
+    {
+      "name": "pmu",
+      "ts_start": "2026-09-24T02:16:10+0800",
+      "instruments": {
+        "pmu": {
+          "cmd": [
+            "sudo",
+            "-n",
+            "env",
+            "PYTHONPATH=/home/REMOTE_USER/projects/vllm/prepare-input-phase/harness",
+            "PI_LIBKPERFX=/home/REMOTE_USER/tools/libkperfx",
+            "PI_FLAMEGRAPH_RS=/home/REMOTE_USER/tools/cargo/bin/flamegraph",
+            "PI_PYSPY=/home/REMOTE_USER/.local/bin/py-spy",
+            "python3",
+            "-m",
+            "pi_harness.profiling.pmu",
+            "count",
+            "--pid",
+            "24996",
+            "--wait-exit",
+            "--timeout",
+            "1800.0",
+            "--ready-file",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/pmu/pmu.ready",
+            "--out",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/pmu/count.json",
+            "--events",
+            "cpu_cycles,inst_retired,inst_spec,br_pred,br_mis_pred,l1d_cache_refill"
+          ],
+          "pid": 25126,
+          "log": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/pmu/pmu.log",
+          "ready_file": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/pmu/pmu.ready"
+        }
+      },
+      "docker_run": {
+        "cmd": [
+          "docker",
+          "run",
+          "-d",
+          "--cidfile",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/pmu/container.cid",
+          "--name",
+          "pi-prof-prof_calib2_arith-pmu",
+          "--network",
+          "none",
+          "--cpuset-cpus",
+          "203,207,211,213",
+          "--user",
+          "1003:1003",
+          "-e",
+          "HOME=/tmp",
+          "-e",
+          "TORCH_DEVICE_BACKEND_AUTOLOAD=0",
+          "-e",
+          "PI_HARNESS_ROOT=/work/harness",
+          "-e",
+          "PYTHONPATH=/work/harness",
+          "-e",
+          "PYTHONDONTWRITEBYTECODE=1",
+          "-v",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase:/work",
+          "-w",
+          "/work",
+          "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+          "bash",
+          "-c",
+          "kill -STOP $$; exec python3 -m pi_harness.profiling.microbench --phase arith --threads 1 --warmup 1 --json /tmp/microbench_arith.json --iters 20000000"
+        ],
+        "rc": 0,
+        "stdout": "fd6285d075cfece258e47bc1d48bb607d758a507c3c41767728ca3a7d97cde9c",
+        "stderr": ""
+      },
+      "container": "fd6285d075cfece258e47bc1d48bb607d758a507c3c41767728ca3a7d97cde9c",
+      "container_name": "pi-prof-prof_calib2_arith-pmu",
+      "host_pid": 24996,
+      "gate": true,
+      "ready": {
+        "pmu": true
+      },
+      "target": {
+        "exit_code": 0,
+        "rc": 0,
+        "wall_s": 4.17,
+        "stderr": "",
+        "stopped_reason": "exit"
+      }
+    },
+    {
+      "name": "topdown_g1",
+      "ts_start": "2026-09-24T02:16:15+0800",
+      "instruments": {
+        "pmu": {
+          "cmd": [
+            "sudo",
+            "-n",
+            "env",
+            "PYTHONPATH=/home/REMOTE_USER/projects/vllm/prepare-input-phase/harness",
+            "PI_LIBKPERFX=/home/REMOTE_USER/tools/libkperfx",
+            "PI_FLAMEGRAPH_RS=/home/REMOTE_USER/tools/cargo/bin/flamegraph",
+            "PI_PYSPY=/home/REMOTE_USER/.local/bin/py-spy",
+            "python3",
+            "-m",
+            "pi_harness.profiling.pmu",
+            "count",
+            "--pid",
+            "25950",
+            "--wait-exit",
+            "--timeout",
+            "1800.0",
+            "--ready-file",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/topdown_g1/pmu.ready",
+            "--out",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/pmu/topdown_split/split_1.json",
+            "--preset",
+            "920b_topdown_full_1"
+          ],
+          "pid": 26068,
+          "log": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/topdown_g1/pmu.log",
+          "ready_file": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/topdown_g1/pmu.ready"
+        }
+      },
+      "docker_run": {
+        "cmd": [
+          "docker",
+          "run",
+          "-d",
+          "--cidfile",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/topdown_g1/container.cid",
+          "--name",
+          "pi-prof-prof_calib2_arith-topdown_g1",
+          "--network",
+          "none",
+          "--cpuset-cpus",
+          "203,207,211,213",
+          "--user",
+          "1003:1003",
+          "-e",
+          "HOME=/tmp",
+          "-e",
+          "TORCH_DEVICE_BACKEND_AUTOLOAD=0",
+          "-e",
+          "PI_HARNESS_ROOT=/work/harness",
+          "-e",
+          "PYTHONPATH=/work/harness",
+          "-e",
+          "PYTHONDONTWRITEBYTECODE=1",
+          "-v",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase:/work",
+          "-w",
+          "/work",
+          "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+          "bash",
+          "-c",
+          "kill -STOP $$; exec python3 -m pi_harness.profiling.microbench --phase arith --threads 1 --warmup 1 --json /tmp/microbench_arith.json --iters 20000000"
+        ],
+        "rc": 0,
+        "stdout": "76129b805abd5da60e03305329881e9311eec985fce1482384d862f5fd0240eb",
+        "stderr": ""
+      },
+      "container": "76129b805abd5da60e03305329881e9311eec985fce1482384d862f5fd0240eb",
+      "container_name": "pi-prof-prof_calib2_arith-topdown_g1",
+      "host_pid": 25950,
+      "gate": true,
+      "ready": {
+        "pmu": true
+      },
+      "target": {
+        "exit_code": 0,
+        "rc": 0,
+        "wall_s": 4.044,
+        "stderr": "",
+        "stopped_reason": "exit"
+      }
+    },
+    {
+      "name": "perf",
+      "ts_start": "2026-09-24T02:16:20+0800",
+      "instruments": {
+        "perf": {
+          "cmd": [
+            "sudo",
+            "-n",
+            "perf",
+            "record",
+            "-o",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/perf/perf.data",
+            "-F",
+            "999",
+            "-g",
+            "--call-graph",
+            "dwarf",
+            "-p",
+            "26903"
+          ],
+          "pid": 27045,
+          "log": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/perf/perf.log",
+          "ready_file": null,
+          "exit_code": -2
+        },
+        "pyspy": {
+          "cmd": [
+            "sudo",
+            "-n",
+            "/home/REMOTE_USER/.local/bin/py-spy",
+            "record",
+            "--pid",
+            "26903",
+            "--duration",
+            "12",
+            "--rate",
+            "199",
+            "--format",
+            "flamegraph",
+            "-o",
+            "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/perf/pyspy.svg",
+            "--native"
+          ],
+          "pid": 27072,
+          "svg": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/perf/pyspy.svg"
+        }
+      },
+      "docker_run": {
+        "cmd": [
+          "docker",
+          "run",
+          "-d",
+          "--cidfile",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/perf/container.cid",
+          "--name",
+          "pi-prof-prof_calib2_arith-perf",
+          "--network",
+          "none",
+          "--cpuset-cpus",
+          "203,207,211,213",
+          "--user",
+          "1003:1003",
+          "-e",
+          "HOME=/tmp",
+          "-e",
+          "TORCH_DEVICE_BACKEND_AUTOLOAD=0",
+          "-e",
+          "PI_HARNESS_ROOT=/work/harness",
+          "-e",
+          "PYTHONPATH=/work/harness",
+          "-e",
+          "PYTHONDONTWRITEBYTECODE=1",
+          "-v",
+          "/home/REMOTE_USER/projects/vllm/prepare-input-phase:/work",
+          "-w",
+          "/work",
+          "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+          "bash",
+          "-c",
+          "kill -STOP $$; exec python3 -m pi_harness.profiling.microbench --phase arith --threads 1 --warmup 1 --json /tmp/microbench_arith.json --iters 20000000"
+        ],
+        "rc": 0,
+        "stdout": "13fa22ef3325ac9f3a932b2243a22314c2891214d971c3743d8fd1f524e86f1a",
+        "stderr": ""
+      },
+      "container": "13fa22ef3325ac9f3a932b2243a22314c2891214d971c3743d8fd1f524e86f1a",
+      "container_name": "pi-prof-prof_calib2_arith-perf",
+      "host_pid": 26903,
+      "gate": true,
+      "target": {
+        "exit_code": 0,
+        "rc": 0,
+        "wall_s": 4.772,
+        "stderr": "",
+        "stopped_reason": "exit"
+      }
+    }
+  ],
+  "wall_s_total": 40.44
+}

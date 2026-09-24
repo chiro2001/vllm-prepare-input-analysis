@@ -1,0 +1,19 @@
+steps analysed      : 125 (tid 131)
+prepare input wall  : p50 3117.3 us   p99 7195.1 us
+unattributed        : 219.6 us (7.0 %)
+top sub-scopes (p50 us, share of prepare input):
+  pi: am.builder_build                1039.930   33.4%  (98% of steps)
+  pi: build_attention_metadata         292.020    9.4%  (98% of steps)
+  pi: in.slot_mapping                  138.210    4.4%  (98% of steps)
+  pi: in.positions_assembly            113.690    3.6%  (98% of steps)
+  pi: sync_input_prep                  102.110    3.3%  (100% of steps)
+  pi: prepare_inputs                   101.820    3.3%  (98% of steps)
+  pi: update_states                    100.660    3.2%  (100% of steps)
+  pi: in.block_table_commit             88.940    2.9%  (98% of steps)
+  pi: am.cm_base_pre                    78.060    2.5%  (98% of steps)
+  pi: am.group_loop                     73.460    2.4%  (98% of steps)
+  pi: in.prepare_input_ids              68.080    2.2%  (98% of steps)
+  pi: in.tokens_to_gpu                  63.890    2.0%  (98% of steps)
+wrote /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s1-on-S1b/per_step_subscope.csv
+wrote /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s1-on-S1b/summary.csv
+wrote /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s1-on-S1b/summary_groups.csv

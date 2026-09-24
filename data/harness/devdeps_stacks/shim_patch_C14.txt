@@ -1,0 +1,6 @@
+# C14 with torch.device('npu'): torch.zeros(2)
+# ok=True
+# value='cpu'
+# exc=None
+# tb
+

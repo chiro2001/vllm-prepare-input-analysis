@@ -1,0 +1,21 @@
+rank,symbol,address,instruction,pct
+1,gc_collect_main,2ebc0c,"ldr     x4, [x3]",31.59
+2,gc_collect_main,2ec698,"ldr     x0, [x0]",25.50
+3,gc_collect_main,2ebdb0,"ldr     x22, [x22]",16.92
+4,gc_collect_main,2ec658,"ldr     x22, [x22]",11.47
+5,_PyEval_EvalFrameDefault,10f008,"str     w0, [x25]",9.63
+6,_PyEval_EvalFrameDefault,113118,"str     x26, [x20, #56]",6.71
+7,gc_collect_main,2ebda0,"cmp     x28, x22",3.43
+8,_PyEval_EvalFrameDefault,10f800,"sub     x0, x0, #0x1",3.32
+9,_PyEval_EvalFrameDefault,1118a0,"str     x26, [x20, #56]",2.83
+10,gc_collect_main,2ec648,"cmp     x28, x22",2.59
+11,_PyEval_EvalFrameDefault,1119ec,"ldr     d0, [x27, #16]",2.40
+12,_PyEval_EvalFrameDefault,11485c,"str     x26, [x20, #56]",2.12
+13,_PyEval_EvalFrameDefault,1104a4,"ldr     w0, [x1]",1.98
+14,sgemm_kernel_ARMV8SVE,75a5e0,"fmla    z17.s, p0/m, z3.s, z8.s // libopenblas-24fd393f.so.0[75a5e0]",1.97
+15,gc_collect_main,2ebcf4,"ldr     x3, [x24, #24]",1.86
+16,sgemm_kernel_ARMV8SVE,75a4f8,"fmla    z17.s, p0/m, z3.s, z8.s // libopenblas-24fd393f.so.0[75a4f8]",1.84
+17,_PyEval_EvalFrameDefault,10d6ec,"ldrb    w28, [x0, #3]",1.84
+18,_PyEval_EvalFrameDefault,10d708,"str     w2, [x20, #64]",1.83
+19,sgemm_kernel_ARMV8SVE,75a328,"fmla    z17.s, p0/m, z3.s, z8.s // libopenblas-24fd393f.so.0[75a328]",1.82
+20,_PyEval_EvalFrameDefault,10f7bc,"str     x26, [x20, #56]",1.77

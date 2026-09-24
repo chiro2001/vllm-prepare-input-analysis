@@ -1,0 +1,230 @@
+{
+  "caliber_version": "prof-v1",
+  "kind": "self_overhead",
+  "perfdata": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_arith_20260924-020459/passes/perf/perf.data",
+  "cmd": [
+    "perf",
+    "report",
+    "--force",
+    "--stdio",
+    "--no-children",
+    "--sort",
+    "dso,symbol",
+    "-t",
+    "|",
+    "-i",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_arith_20260924-020459/passes/perf/perf.data",
+    "--symfs",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_arith_20260924-020459/passes/perf/symfs"
+  ],
+  "header": {
+    "samples": "5K of event 'cycles:P'",
+    "lost_samples": "0",
+    "event_count": "15438392286"
+  },
+  "total_symbols": 69,
+  "top": [
+    {
+      "overhead_pct": 24.13,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_Free"
+    },
+    {
+      "overhead_pct": 20.73,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_Malloc"
+    },
+    {
+      "overhead_pct": 11.3,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyEval_EvalFrameDefault"
+    },
+    {
+      "overhead_pct": 5.42,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] long_bitwise"
+    },
+    {
+      "overhead_pct": 5.2,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] k_mul"
+    },
+    {
+      "overhead_pct": 3.12,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] long_dealloc"
+    },
+    {
+      "overhead_pct": 2.98,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] x_add"
+    },
+    {
+      "overhead_pct": 2.34,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyErr_CheckSignals"
+    },
+    {
+      "overhead_pct": 2.3,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _Py_NewReference"
+    },
+    {
+      "overhead_pct": 2.14,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] long_rshift1"
+    },
+    {
+      "overhead_pct": 2.06,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyLong_New"
+    },
+    {
+      "overhead_pct": 1.93,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyObject_Free"
+    },
+    {
+      "overhead_pct": 1.91,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyNumber_InPlaceXor"
+    },
+    {
+      "overhead_pct": 1.38,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyNumber_Rshift"
+    },
+    {
+      "overhead_pct": 1.23,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] long_xor"
+    },
+    {
+      "overhead_pct": 1.16,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyObject_Malloc"
+    },
+    {
+      "overhead_pct": 1.1,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyLong_Multiply"
+    },
+    {
+      "overhead_pct": 0.94,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyNumber_And"
+    },
+    {
+      "overhead_pct": 0.77,
+      "dso": "ld-linux-aarch64.so.1",
+      "symbol": "[.] 0x00000000000127a0"
+    },
+    {
+      "overhead_pct": 0.7,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyLong_FromLong"
+    },
+    {
+      "overhead_pct": 0.67,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyErr_CheckSignalsTstate"
+    },
+    {
+      "overhead_pct": 0.67,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] long_rshift"
+    },
+    {
+      "overhead_pct": 0.66,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyLong_Add"
+    },
+    {
+      "overhead_pct": 0.49,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x000000000009aedc"
+    },
+    {
+      "overhead_pct": 0.47,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyThread_get_thread_ident"
+    },
+    {
+      "overhead_pct": 0.45,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyLong_AsSsize_t"
+    },
+    {
+      "overhead_pct": 0.43,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyErr_CheckSignals@plt"
+    },
+    {
+      "overhead_pct": 0.43,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] long_and"
+    },
+    {
+      "overhead_pct": 0.39,
+      "dso": "ld-linux-aarch64.so.1",
+      "symbol": "[.] 0x00000000000127a4"
+    },
+    {
+      "overhead_pct": 0.34,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyObject_Malloc@plt"
+    },
+    {
+      "overhead_pct": 0.3,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyLong_New@plt"
+    },
+    {
+      "overhead_pct": 0.21,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x000000000009aed0"
+    },
+    {
+      "overhead_pct": 0.21,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x000000000009af04"
+    },
+    {
+      "overhead_pct": 0.19,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x000000000009aeec"
+    },
+    {
+      "overhead_pct": 0.19,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x000000000009aef0"
+    },
+    {
+      "overhead_pct": 0.17,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x000000000009af00"
+    },
+    {
+      "overhead_pct": 0.15,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x000000000009aef4"
+    },
+    {
+      "overhead_pct": 0.09,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] memcpy@plt"
+    },
+    {
+      "overhead_pct": 0.07,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _Py_NewReference@plt"
+    },
+    {
+      "overhead_pct": 0.06,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] visit_decref"
+    }
+  ],
+  "sum_of_top_pct": 99.48,
+  "sum_all_pct": 100.06
+}

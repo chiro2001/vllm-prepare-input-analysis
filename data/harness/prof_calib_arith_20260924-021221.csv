@@ -1,0 +1,51 @@
+tag,ts,metric,value,source,note
+prof_calib_arith,2026-09-24T02:13:02+0800,ipc,3.8864369946866506,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_arith,2026-09-24T02:13:02+0800,time_enabled,4506807310,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_arith,2026-09-24T02:13:02+0800,time_running,4506807310,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_arith,2026-09-24T02:13:02+0800,confidence,1.0,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_arith,2026-09-24T02:13:02+0800,wall_s,4.532651,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_arith,2026-09-24T02:13:02+0800,counter.CPU_CYCLES,13069315812,pmu/count.json,libkperfx 区间增量
+prof_calib_arith,2026-09-24T02:13:02+0800,counter.INST_RETIRED,50793072467,pmu/count.json,libkperfx 区间增量
+prof_calib_arith,2026-09-24T02:13:02+0800,counter.INST_SPEC,54679735244,pmu/count.json,libkperfx 区间增量
+prof_calib_arith,2026-09-24T02:13:02+0800,counter.BR_PRED,11010432831,pmu/count.json,libkperfx 区间增量
+prof_calib_arith,2026-09-24T02:13:02+0800,counter.BR_MIS_PRED,45644668,pmu/count.json,libkperfx 区间增量
+prof_calib_arith,2026-09-24T02:13:02+0800,counter.L1D_CACHE_REFILL,1111540,pmu/count.json,libkperfx 区间增量
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level1.retiring,37.79959922772117,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level1.bad_spec,1.5473081377462254,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level1.frontend_bound,13.267741804534047,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level1.backend_bound,47.385350829998565,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level2.frontend.frontend_latency_bound,7.063561466776022,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level2.frontend.frontend_bandwidth_bound,6.204180337758025,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level2.backend.resource_bound,1.2719800973223585,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level2.backend.core_bound,46.11337073267621,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level2.backend.mem_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level3_mem.mem_l1_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level3_mem.mem_l2_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level3_mem.mem_l3_dram_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level3_mem.mem_mem_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.level3_mem.mem_store_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.ooo_stall.rob_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.ooo_stall.ptag_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.ooo_stall.mapq_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.ooo_stall.pcbuf_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,topdown.ooo_stall.other_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] _PyObject_Free,24.57,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] _PyObject_Malloc,21.94,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] _PyEval_EvalFrameDefault,10.74,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] long_bitwise,4.88,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] k_mul,4.88,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] x_add,2.97,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] long_dealloc,2.77,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] _PyLong_New,2.5,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] long_rshift1,2.44,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] PyErr_CheckSignals,2.33,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] PyNumber_InPlaceXor,2.12,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] _Py_NewReference,1.85,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] PyObject_Free,1.84,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] PyNumber_And,1.39,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] PyObject_Malloc,1.34,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] long_xor,1.28,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] PyNumber_Rshift,1.27,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] _PyLong_Add,0.93,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] PyLong_FromLong,0.79,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_arith,2026-09-24T02:13:02+0800,hotspot.[.] _PyErr_CheckSignalsTstate,0.7,perf/hotspots.json,libpython3.12.so.1.0

@@ -1,0 +1,93 @@
+{
+  "caliber_version": "prof-v1",
+  "ts_start": "2026-09-24T02:07:17+0800",
+  "pid": 4107793,
+  "events_spec": null,
+  "preset": "920b_topdown_full_7",
+  "multiplex_allowed": false,
+  "ts_running": "2026-09-24T02:07:17+0800",
+  "stopped_reason": "target_exit",
+  "ts_end": "2026-09-24T02:07:23+0800",
+  "wall_s": 5.559094,
+  "counters": {
+    "LD_CANCEL_INST_TYPE": 31309,
+    "LD_CANCEL_FWD_HZD": 625732635,
+    "LD_CANCEL_STRUCT_HZD": 654709656,
+    "LD_CANCEL_PIPELINE": 3497050,
+    "L2_BOUND_BUF": 654,
+    "L2_BOUND_SNP": 1002432,
+    "L2_BOUND_ARB": 1691371,
+    "DRAM_LOCAL": 0
+  },
+  "entries": [
+    {
+      "name": "LD_CANCEL_INST_TYPE",
+      "id": "ld_cancel_inst_type",
+      "config": 20627,
+      "delta": 31309,
+      "rate": 5671.739143548731
+    },
+    {
+      "name": "LD_CANCEL_FWD_HZD",
+      "id": "ld_cancel_fwd_hzd",
+      "config": 20628,
+      "delta": 625732635,
+      "rate": 113353741.0752624
+    },
+    {
+      "name": "LD_CANCEL_STRUCT_HZD",
+      "id": "ld_cancel_struct_hzd",
+      "config": 20629,
+      "delta": 654709656,
+      "rate": 118603033.74730985
+    },
+    {
+      "name": "LD_CANCEL_PIPELINE",
+      "id": "ld_cancel_pipeline",
+      "config": 20630,
+      "delta": 3497050,
+      "rate": 633503.3176386051
+    },
+    {
+      "name": "L2_BOUND_BUF",
+      "id": "l2_bound_buf",
+      "config": 28702,
+      "delta": 654,
+      "rate": 118.47447698364272
+    },
+    {
+      "name": "L2_BOUND_SNP",
+      "id": "l2_bound_snp",
+      "config": 28703,
+      "delta": 1002432,
+      "rate": 181594.20017074453
+    },
+    {
+      "name": "L2_BOUND_ARB",
+      "id": "l2_bound_arb",
+      "config": 28704,
+      "delta": 1691371,
+      "rate": 306398.0039912856
+    },
+    {
+      "name": "DRAM_LOCAL",
+      "id": "dram_local",
+      "config": 28705,
+      "delta": 0,
+      "rate": 0.0
+    }
+  ],
+  "time_enabled": 5520176300,
+  "time_running": 5520176300,
+  "confidence": 1.0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B",
+  "backend": "920B(counting)",
+  "derived": {
+    "cpu_cycles": null,
+    "inst_retired": null,
+    "ipc": null,
+    "cycles_per_sec": null
+  }
+}

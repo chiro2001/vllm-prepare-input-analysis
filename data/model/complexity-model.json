@@ -1,0 +1,707 @@
+{
+  "schema": "prepare-input-complexity-model/v1",
+  "generated_at": "2026-09-24",
+  "owner": "drivers_analysis",
+  "scope": {
+    "vllm": "0.26.0 (568afb3a13806beb53bb2e6bd518269357b237c0)",
+    "vllm_ascend": "0.26.0rc1 (f2f74a16c3c50a76f4349d807918e83edec1e35c)",
+    "hardware": "Kunpeng 920B / a3-22 / chip3 (Ascend910)",
+    "doc": "docs/07-bottleneck-analysis.md"
+  },
+  "evidence_notation": {
+    "proven": "有源码行号或本仓库微基准实测支撑",
+    "inferred": "由结构推出，必须给验证方法",
+    "pending": "只能由 chip3 真机 / replay harness 产生"
+  },
+  "notation": {
+    "B": "input_batch.num_reqs",
+    "T": "total_num_scheduled_tokens",
+    "m": "T/B，decode=1",
+    "S": "单请求已算 token 数（上下文长度）",
+    "P": "prompt 长度",
+    "W": "max_num_reqs 缓冲宽度",
+    "K": "max_num_blocks_per_req = cdiv(max_model_len, block_size)",
+    "G": "KV cache group 数",
+    "L": "模型层数",
+    "n": "num_spec_tokens（MTP draft 数）",
+    "R": "TP rank 数"
+  },
+  "assumptions": [
+    {
+      "id": "H1",
+      "text": "稳态、预热完成（Triton JIT / cudagraph capture / pinned 缓冲已分配）",
+      "risk": "一次性开销污染斜率",
+      "verify": "丢弃前 100 step；perf 中无 triton compile 帧"
+    },
+    {
+      "id": "H2",
+      "text": "worker 侧 RPC 串行处理（单 deque 循环）",
+      "risk": "流水形状",
+      "verify": "multiproc_executor.py worker_busy_loop"
+    },
+    {
+      "id": "H3",
+      "text": "异步调度默认开、max_concurrent_batches=2",
+      "risk": "max() vs 串行",
+      "verify": "启动日志 + engine_core.step is step_with_batch_queue"
+    },
+    {
+      "id": "H4",
+      "text": "H2D non_blocking、与计算同流、pinned 缓冲复用",
+      "risk": "重叠前提",
+      "verify": "vllm/v1/utils.py:139-142"
+    },
+    {
+      "id": "H5",
+      "text": "_prepare_inputs 内除 S17 外无 item/cpu/synchronize",
+      "risk": "CPU 段吸收 device 时间",
+      "verify": "火焰图无 aclrtSynchronize*"
+    },
+    {
+      "id": "H6",
+      "text": "采样与反序列化不计入 prepare_input",
+      "risk": "分母口径",
+      "verify": "scope 边界 01 文档 §1.2"
+    },
+    {
+      "id": "H7",
+      "text": "单 rank 视角，TP 单独讨论",
+      "risk": "—",
+      "verify": "§4.4"
+    }
+  ],
+  "pipeline": {
+    "async_scheduling_default": {
+      "value": true,
+      "evidence": "vllm/config/vllm.py:1059-1107 + UniProc/MultiprocExecutor.supports_async_scheduling()=True",
+      "status": "proven"
+    },
+    "max_concurrent_batches": {
+      "value": "2 (async on, pp<=1)",
+      "evidence": "vllm/config/vllm.py:512-522",
+      "status": "proven"
+    },
+    "engine_loop": {
+      "async_on": "step_with_batch_queue (core.py:617)，execute_model/sample_tokens non_block 入队，队列未满立即返回",
+      "async_off": "step() (core.py:576)，execute_model 后立即 future.result()",
+      "status": "proven"
+    },
+    "worker_main_thread": {
+      "behavior": "稳态不等 device；D2H 由 async_output_busy_loop 线程的 get_output() 完成",
+      "evidence": "multiproc_executor.py:956-988；gpu_model_runner.py:258-300 AsyncGPUModelRunnerOutput 在 copy stream 上非阻塞发起",
+      "status": "proven"
+    },
+    "prepare_inputs_event": {
+      "behavior": "synchronize_input_prep 入口等上一拍 record 点之前的流上工作（含 forward(N-1)），出口 record；把 CPU 领先量限制在约 1 拍",
+      "evidence": "gpu_model_runner.py:3808-3822；创建 :737-741；ascend record 点 model_runner_v1.py:1883",
+      "status": "proven",
+      "open_question": "Ascend 上 torch.npu.Event 语义是否与 CUDA 一致（待真机 A/B）"
+    },
+    "sync_points_in_prepare_input": [
+      {
+        "id": "S17",
+        "code": "num_accepted_tokens_event.synchronize()",
+        "trigger": "spec decode 且 hybrid 模型",
+        "effect": "把 device 时间吸收进 CPU wall",
+        "evidence": "gpu_model_runner.py:914-917/1583-1590/2088-2093；ascend:1101-1127"
+      }
+    ]
+  },
+  "criterion": {
+    "cpu_engine_step": "T_cpu = T_sched + T_rpc + T_prepare + T_launch_fwd + T_post",
+    "step_time": "T_step >= max(T_cpu, T_dev)",
+    "bottleneck_definition": "T_prepare > T_dev - (T_sched + T_rpc + T_launch_fwd + T_post) := B_cpu",
+    "decode_crossover": {
+      "model": "T_prepare ~ c_p + a*B ; T_dev ~ e + d*B ; T_cpu_other ~ c_o",
+      "condition": "B > (e - c_p - c_o)/(a - d)，仅当 a > d",
+      "regimes": {
+        "slope_limited": "a > d：大 B 时占比上升",
+        "floor_limited": "c_p + c_o > e：任何 B 都 CPU 受限",
+        "hidden": "a < d 且 c_p + c_o < e：无吞吐收益"
+      }
+    },
+    "chunked_crossover": {
+      "model": "T_dev ~ e' + beta*T + gamma*T*(S+T/2) ; T_prepare ~ c_p + a_T*T",
+      "solve": "c_p + a_T*T = e' + beta*T + gamma*T*(S+T/2) -> T_min",
+      "note": "小 chunk 区 T_prepare 出现不随 T 下降的平台（高度 = c_p）"
+    },
+    "tp_straggler": "T_step = max_r T_cpu,r + T_dev + T_comm ; E[max] ~ mu + sigma*sqrt(2 ln R)",
+    "async_off": "T_step ~ T_sched + T_rpc + T_prepare + T_dev + T_post + T_sample + T_sched_update（无掩盖）",
+    "share_definitions": {
+      "share_cpu": "T_prepare / T_cpu",
+      "share_step": "T_prepare / T_step",
+      "share_e2e": "端到端损失归因（仅 T_cpu > T_dev 时非零）"
+    }
+  },
+  "terms": [
+    {
+      "id": "C0",
+      "name": "固定底噪 c0",
+      "depends_on": [
+        "W",
+        "flags"
+      ],
+      "order": "O(1)",
+      "data_dependent": false,
+      "coefficient_source": "measured+inferred",
+      "measured": {
+        "cpu_only_replica_b1_us": 48.7,
+        "fit_intercept_us": 47.25,
+        "note": "含 numpy/ATen/.tolist()；不含真 H2D"
+      },
+      "predicted_full_us": [
+        75,
+        190
+      ],
+      "components": [
+        "8-12 次 numpy 调用开销",
+        "~12-15 次 ATen 调用（实测 1.6-2.3 us/次）",
+        ">=10 次 H2D/device op 入队",
+        "2 次 .tolist()"
+      ],
+      "status": "部分实测",
+      "verification": "真机 B=T=1 单点 phase wall；差值即 H2D/launch 合计"
+    },
+    {
+      "id": "A_B",
+      "name": "每请求线性项",
+      "depends_on": [
+        "B"
+      ],
+      "order": "O(B)",
+      "data_dependent": false,
+      "coefficient_source": "measured",
+      "measured": {
+        "us_per_req": 0.268,
+        "breakdown_ns_per_req": {
+          "num_tokens_list_comp(S16)": 128,
+          "compute_prev_positions(S7)": 39,
+          "np_array_of_list(S16)": 27,
+          "tolist_x2(metadata)": 16
+        }
+      },
+      "predicted_full_us_per_req": [
+        0.3,
+        0.6
+      ],
+      "status": "部分实测",
+      "verification": "真机 B 扫描的 prepare_input 斜率"
+    },
+    {
+      "id": "A_T",
+      "name": "每 token 线性项",
+      "depends_on": [
+        "T"
+      ],
+      "order": "O(T)",
+      "data_dependent": false,
+      "coefficient_source": "measured",
+      "measured": {
+        "ns_per_token": [
+          7.8,
+          8.8
+        ],
+        "note": "整段斜率（replica）；单算子系数见 primitives；去 D7 的 % 后约 6-7 ns/token",
+        "primitives": {
+          "np.subtract_out": 0.13,
+          "np.take": 0.76,
+          "torch.index_select_out": 1.29,
+          "np.gather": 1.07,
+          "np.repeat": 1.25
+        }
+      },
+      "status": "部分实测（不含 O(T) H2D 的 DMA 成本）",
+      "verification": "组 C chunk 扫描的 prepare_input 斜率"
+    },
+    {
+      "id": "A_K",
+      "name": "块表 H2D 字节项",
+      "depends_on": [
+        "B",
+        "K",
+        "G"
+      ],
+      "order": "O(B*K*G)",
+      "data_dependent": false,
+      "coefficient_source": "pending",
+      "formula": "bytes = B*K*G*4（int32）；commit_block_table -> copy_to_gpu(num_reqs)",
+      "evidence": "vllm_ascend/worker/block_table.py:288-289, 458-460",
+      "status": "pending",
+      "verification": "组 F（block_size / K 扫描）+ k_dma_per_B 标定"
+    },
+    {
+      "id": "A_L",
+      "name": "逐 layer metadata 赋值",
+      "depends_on": [
+        "L",
+        "G"
+      ],
+      "order": "O(L)",
+      "data_dependent": false,
+      "coefficient_source": "inferred",
+      "evidence": "model_runner_v1.py:3138-3139",
+      "status": "pending",
+      "verification": "不同层数模型的 prepare_input 对比"
+    },
+    {
+      "id": "A_N",
+      "name": "spec 元数据",
+      "depends_on": [
+        "B",
+        "n"
+      ],
+      "order": "O(B*n) + 5 次固定",
+      "data_dependent": true,
+      "coefficient_source": "measured-partial",
+      "measured": {
+        "extra_us_per_req": [
+          0.13,
+          0.16
+        ],
+        "note": "replica 中 5 次 H2D 只计次数未计成本；端点差 20.6us/128req=0.161，斜率差 0.134"
+      },
+      "evidence": "model_runner_v1.py:1366-1430 (5x pin_memory().to())",
+      "status": "部分实测",
+      "verification": "组 E（MTP on/off）"
+    },
+    {
+      "id": "A_C",
+      "name": "churn（请求进出/抢占）",
+      "depends_on": [
+        "B",
+        "S",
+        "removed",
+        "preempted"
+      ],
+      "order": "稳态 O(B)；churn O(B*S)",
+      "data_dependent": true,
+      "coefficient_source": "inferred",
+      "evidence": "InputBatch.condense() (gpu_input_batch.py:686-812)、swap_states() (569-679)",
+      "status": "pending",
+      "verification": "稳态 vs 高 churn 两组的 _update_states 时长"
+    },
+    {
+      "id": "A_DP",
+      "name": "DP all_reduce",
+      "depends_on": [
+        "dp_size",
+        "B"
+      ],
+      "order": "O(B)+1 次通信",
+      "data_dependent": true,
+      "coefficient_source": "inferred",
+      "evidence": "model_runner_v1.py:702-740（dp_size==1 短路）",
+      "status": "pending",
+      "verification": "DP=1 vs 2"
+    },
+    {
+      "id": "T_SYNC",
+      "name": "S17 同步等待",
+      "depends_on": [
+        "device"
+      ],
+      "order": "device 时间",
+      "data_dependent": true,
+      "coefficient_source": "proven",
+      "evidence": "gpu_model_runner.py:2088-2093",
+      "status": "proven（存在性）/ pending（量级）",
+      "verification": "GDN/Mamba 模型 vs 纯 attention；对比 perf on-CPU 与 phase wall"
+    }
+  ],
+  "second_order": [
+    {
+      "id": "E1",
+      "mechanism": "condense() 空位下沉",
+      "trigger": "batch_update_builder.removed 非空",
+      "order": "O(#removed * active_tokens)，最坏 O(B*S)",
+      "test": "高 churn vs 稳态"
+    },
+    {
+      "id": "E2",
+      "mechanism": "swap_states() 重排",
+      "trigger": "混合 batch 需按 query len 重排",
+      "order": "O(B*S)",
+      "test": "decode-only vs 混合"
+    },
+    {
+      "id": "E3",
+      "mechanism": "add_request() 整行写入",
+      "trigger": "新请求进入",
+      "order": "首拍 O(P)",
+      "test": "冷启动首拍 vs 稳态"
+    },
+    {
+      "id": "E4",
+      "mechanism": "spec 元数据 5x pin+H2D",
+      "trigger": "scheduled_spec_decode_tokens 非空",
+      "order": "固定 5 次 + O(B*n)",
+      "test": "MTP on/off"
+    },
+    {
+      "id": "E5",
+      "mechanism": "图模式 padding",
+      "trigger": "cudagraph_mode in {FULL, FULL_DECODE_ONLY}",
+      "order": "O(B) + torch.cat",
+      "test": "graph on/off"
+    },
+    {
+      "id": "E6",
+      "mechanism": "DP all_reduce",
+      "trigger": "dp_size > 1",
+      "order": "每步 1 次",
+      "test": "DP=1 vs 2"
+    },
+    {
+      "id": "E7",
+      "mechanism": "hybrid 模型 S17 同步",
+      "trigger": "spec + hybrid",
+      "order": "吸收 device 时间",
+      "test": "GDN vs attention"
+    },
+    {
+      "id": "E8",
+      "mechanism": "allowed_token_ids 惰性大分配",
+      "trigger": "请求带 allowed_token_ids 且 batch_update 非空",
+      "order": "首次 O(B*V) 字节 (V~151k)",
+      "test": "首次 vs 后续 step 的 P99"
+    },
+    {
+      "id": "E9",
+      "mechanism": "GIL/线程竞争",
+      "trigger": "异步调度 + 主线程/输出线程",
+      "order": "off-CPU 抖动",
+      "test": "perf sched / py-spy"
+    }
+  ],
+  "mechanisms": {
+    "hiding": [
+      {
+        "id": "H1",
+        "name": "async scheduling depth-2 流水",
+        "verify": "--async-scheduling true/false 对照"
+      },
+      {
+        "id": "H2",
+        "name": "D2H 移到独立线程",
+        "verify": "py-spy dump + 关异步对比"
+      },
+      {
+        "id": "H3",
+        "name": "大 T_dev（长上下文/大模型/大 chunk）",
+        "verify": "ISL/OSL 扫描看 share_step 下降"
+      },
+      {
+        "id": "H4",
+        "name": "图模式减少 launch",
+        "verify": "graph on/off"
+      },
+      {
+        "id": "H5",
+        "name": "H2D 先发起再算",
+        "verify": "火焰图中 commit_block_table 不可见"
+      },
+      {
+        "id": "H6",
+        "name": "prepare_inputs_event 限流 CPU 领先量",
+        "verify": "在 _prepare_inputs 末尾补 event 的 A/B"
+      }
+    ],
+    "amplifying": [
+      {
+        "id": "A1",
+        "name": "大 B decode",
+        "verify": "组 A 并发扫描"
+      },
+      {
+        "id": "A2",
+        "name": "请求 churn",
+        "verify": "稳态 vs 高 churn"
+      },
+      {
+        "id": "A3",
+        "name": "MTP/spec decode",
+        "verify": "组 E"
+      },
+      {
+        "id": "A4",
+        "name": "hybrid（GDN/Mamba）",
+        "verify": "模型对照"
+      },
+      {
+        "id": "A5",
+        "name": "每步新建 pinned 缓冲",
+        "verify": "火焰图 pin_memory/cudaHostAlloc 帧"
+      },
+      {
+        "id": "A6",
+        "name": "小 T 固定调用开销",
+        "verify": "B=T=1 单点对比 c0"
+      },
+      {
+        "id": "A7",
+        "name": "GIL/线程竞争",
+        "verify": "perf sched off-CPU"
+      },
+      {
+        "id": "A8",
+        "name": "NUMA 跨节点",
+        "verify": "numactl membind A/B",
+        "measured_hint": "512MB 工作集下跨 socket 惩罚 1.8-2.0x（data/model/microbench-numa-large.csv）"
+      },
+      {
+        "id": "A9",
+        "name": "TP 最大者决定",
+        "verify": "TP=2/4 rank 间分布"
+      },
+      {
+        "id": "A10",
+        "name": "DP all_reduce",
+        "verify": "DP=1 vs 2"
+      },
+      {
+        "id": "A11",
+        "name": "缓冲宽度税（W=max_num_reqs 过大）",
+        "verify": "改 --max-num-seqs 的 A/B"
+      }
+    ]
+  },
+  "measured_coefficients": {
+    "microbench": {
+      "numpy_call_overhead_us": {
+        "np.add_out": 0.42,
+        "np.nonzero": 0.54,
+        "np.subtract_out": 0.8,
+        "np.repeat": 1.2,
+        "np.take": 1.02,
+        "np.cumsum": 2.63,
+        "np.all": 3.57
+      },
+      "aten_call_overhead_us": {
+        "torch.add_out": 1.61,
+        "torch.empty": 1.61,
+        "torch.zeros": 2.3,
+        "torch.index_select_out": 1.02,
+        "torch.from_numpy": 1.0
+      },
+      "python_per_req_ns": {
+        "num_tokens_list_comp": 128,
+        "dict_get_loop": 39,
+        "np_array_of_list": 27,
+        "tolist": 7.9,
+        "dict_build": 47
+      },
+      "per_element_ns": {
+        "np.subtract_out": 0.13,
+        "np.take": 0.76,
+        "torch.index_select_out": 1.29,
+        "np.gather": 1.07,
+        "np.repeat": 1.25
+      },
+      "replica_fit": {
+        "c_p_us": 47.25,
+        "a_us_per_req": 0.2721,
+        "r2": 0.99937,
+        "mtp": {
+          "c_p_us": 50.42,
+          "a_us_per_req": 0.406
+        },
+        "a_T_ns_per_token": [
+          7.8,
+          8.8
+        ],
+        "note": "CPU-only，不含真 H2D；a_T 为整段斜率（6-8 个 O(T) 算子叠加），且含 D7 的 % (约 +1.5-2 ns/token)"
+      },
+      "ipc_profile": [
+        {
+          "config": "B=1,T=1",
+          "us_per_step": 48.0,
+          "ipc": 1.57,
+          "branch_miss_pct": 3.73,
+          "cache_miss_pct": 2.33
+        },
+        {
+          "config": "B=64,T=64",
+          "us_per_step": 64.3,
+          "ipc": 1.95,
+          "branch_miss_pct": 2.51,
+          "cache_miss_pct": 2.21
+        },
+        {
+          "config": "B=256,T=256",
+          "us_per_step": 118.9,
+          "ipc": 2.39,
+          "branch_miss_pct": 1.51,
+          "cache_miss_pct": 1.95
+        },
+        {
+          "config": "B=8,T=32768",
+          "us_per_step": 322.4,
+          "ipc": 2.93,
+          "branch_miss_pct": 0.82,
+          "cache_miss_pct": 2.07
+        }
+      ],
+      "numa_cross_socket_penalty": {
+        "workload": "512MB random gather / index_select",
+        "same_socket_remote": "1.05-1.09x",
+        "cross_socket": "1.80-1.99x"
+      }
+    }
+  },
+  "pending_coefficients": [
+    {
+      "id": "k_h2d_small",
+      "meaning": "单次小 H2D 的 CPU 入队开销",
+      "method": "真机循环 1000 次 copy_to_gpu(n) + perf"
+    },
+    {
+      "id": "k_dma_per_B",
+      "meaning": "块表 DMA 等效带宽",
+      "method": "组 F 的 B×K 扫描"
+    },
+    {
+      "id": "k_launch",
+      "meaning": "NPU kernel launch 的 CPU 时间",
+      "method": "graph off/on 差值 + perf"
+    },
+    {
+      "id": "k_pin",
+      "meaning": "Tensor.pin_memory() 真实成本（NPU 下）",
+      "method": "复现 attention_v1.py:330 并计时"
+    },
+    {
+      "id": "e,d",
+      "meaning": "device 固定项与每请求斜率",
+      "method": "组 A 的 forward phase wall 拟合"
+    },
+    {
+      "id": "beta,gamma",
+      "meaning": "chunk 线性/二次项",
+      "method": "组 C 的 forward phase wall 拟合"
+    },
+    {
+      "id": "sigma_rank",
+      "meaning": "TP 下 rank 间 CPU 时间标准差",
+      "method": "TP=2/4 对照"
+    }
+  ],
+  "predictions": [
+    {
+      "id": "P1",
+      "statement": "真机 decode 稳态下 T_prepare 对 B 的中位斜率落在 0.20-0.60 us/req",
+      "status": "CPU-only 部分已被微基准支持（0.268 us/req）",
+      "falsified_by": "实测斜率 >1 us/req（说明存在未识别的 O(B) 项）"
+    },
+    {
+      "id": "P2",
+      "statement": "存在 T_min：max_num_batched_tokens < T_min 时 prepare_input 的 phase wall 不随 chunk 变小而下降（出现平台，高度 = c_p）",
+      "status": "待验证",
+      "falsified_by": "chunk 512 的 phase wall 显著低于 chunk 2048"
+    },
+    {
+      "id": "P3",
+      "statement": "T_prepare 的内核外成本（H2D 入队 + pin + 固定调用）在 B=T=1 时占总 prepare 时间的 35-75%",
+      "status": "待验证",
+      "falsified_by": "真机 B=T=1 phase wall < 65 us"
+    },
+    {
+      "id": "P4",
+      "statement": "TP 增大不降低 prepare_input 的 CPU 时间（每 rank 一份），因此 TP>=4 时 0.8B 模型的 CPU/device 交叉点 B* 明显小于 TP=1",
+      "status": "待验证",
+      "falsified_by": "TP=4 的 prepare_input 单 rank 时间显著低于 TP=1"
+    }
+  ],
+  "replay": {
+    "verdict": "需要 record & replay",
+    "reason_ids": [
+      "data_dependent_controlflow_x9",
+      "6_of_9_need_request_level_semantics",
+      "attn_state_x5_changes_metadata_path",
+      "condense_order_gap"
+    ],
+    "layers": {
+      "L1": "SchedulerOutput 语义字段（必需）",
+      "L2": "InputBatch 进入前粘性数组（必需）",
+      "L3": "flags（必需）",
+      "L4": "逐步计时与 device 时间（可选）"
+    },
+    "stubs_required": [
+      "NPU 张量/拷贝",
+      "device op（仅计数）",
+      "torch.npu Event/Stream"
+    ],
+    "fidelity_criteria": {
+      "topdown_pp": 3,
+      "ipc_rel_pct": 10,
+      "hotspot_top20_overlap": 16,
+      "per_step_median_pct": 15
+    },
+    "known_deviations": [
+      {
+        "id": "D1",
+        "text": "不含真 H2D/device op",
+        "direction": "低估",
+        "us_per_step": [
+          25,
+          140
+        ]
+      },
+      {
+        "id": "D2",
+        "text": "不含 churn 突变路径",
+        "direction": "低估",
+        "note": "高 churn 可能翻倍"
+      },
+      {
+        "id": "D3",
+        "text": "_update_states 用 8 次数组自拷贝近似",
+        "direction": "±10 us"
+      },
+      {
+        "id": "D4",
+        "text": "缺 torch_npu 调用栈，topdown 分布会变",
+        "direction": "低估驱动占比"
+      },
+      {
+        "id": "D5",
+        "text": "numpy/torch 版本差异（2.4.6 / 2.9.0+cpu）",
+        "direction": "±5-20%"
+      },
+      {
+        "id": "D6",
+        "text": "逐 layer metadata 赋值用 dict 覆盖近似",
+        "direction": "小（us 级）"
+      },
+      {
+        "id": "D7",
+        "text": "replica 为防止缓冲越界多算了一次 %（token_indices）",
+        "direction": "高估",
+        "ns_per_token": [
+          1.5,
+          2.0
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "docs": [
+      "docs/07-bottleneck-analysis.md",
+      "docs/03-share-in-inference.md",
+      "plan/experiment-matrix-v2.md"
+    ],
+    "data": [
+      "data/model/microbench-numpy.csv",
+      "data/model/microbench-python.csv",
+      "data/model/microbench-torch.csv",
+      "data/model/microbench-composite.csv",
+      "data/model/microbench-numa.csv",
+      "data/model/microbench-numa-large.csv",
+      "data/model/ipc-summary.jsonl",
+      "data/model/microbench-meta.json"
+    ],
+    "scripts": [
+      "scripts/microbench_prepare_input.py",
+      "scripts/microbench_numa_ipc.py"
+    ]
+  }
+}

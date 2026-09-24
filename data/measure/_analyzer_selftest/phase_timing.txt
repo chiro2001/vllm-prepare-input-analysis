@@ -1,0 +1,41 @@
+log                     : /home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/smoke-qwen3508b-tp1-async-on-20260923T1740Z/lite-profiler/lite.log (50056 bytes)
+rows                    : 982 usable, 0 malformed
+threads                 : 3 writing to this log
+selected thread         : tid=131 pid=131 (915 rows, 66 prepare-input calls, anchor=prepare input x66)
+step rows per tid       : {'1': 0, '131': 66, '1131': 0}
+orphan rows folded to 0 : 6
+phase bands             : prefill(102.8 ms), decode(436.1 ms), idle(19.2 ms)
+steady phase step count : {'decode': 63, 'idle': 1} (warmup 2 steps excluded)
+
+core scopes, mean per step (us)
+  scope                 warmup      steady rows/step
+  prepare input         6935.2      3874.8      1.00
+  forward              46418.4      1084.2      0.97
+  post process           129.9       167.5      0.97
+  sample_token           120.7       154.7      0.97
+
+core scopes, mean per step by phase (us)
+  scope                    prefill          decode            idle
+  prepare input             6935.2          3932.8           221.1
+  forward                  46418.4          1084.2               -
+  post process               129.9           167.5               -
+  sample_token               120.7           154.7               -
+
+prepare input / Step:Model = 100.4% (mean of per-step ratios over 64 steps)
+
+top scopes by total time on the selected thread
+  scope                          rows    mean us     p90 us   total ms
+  Step:Model                       66     6876.2     5735.4     453.83
+  prepare input                    66     3967.6     4186.7     261.86
+  forward                          64     2500.9     1130.5     160.05
+  Step:Schedule                    65      334.9      521.4      21.77
+  post process                     64      166.3      368.6      10.64
+  sample_token                     64      153.6      391.1       9.83
+  async_state_update               64       81.3      192.4       5.21
+  Step:Output                      65       40.9       43.0       2.66
+  schedule: allocate_slots         63       39.8       40.7       2.51
+  schedule: make_cached_request_data     65       11.2       12.2       0.73
+  schedule: update_after_schedule     65        7.4        7.8       0.48
+  draft_token                      64        2.7        3.1       0.17
+  schedule: get_num_common_prefix_blocks     65        2.3        2.8       0.15
+  Input:Process                     1       28.8       28.8       0.03

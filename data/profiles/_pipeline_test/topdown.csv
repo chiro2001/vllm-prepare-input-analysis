@@ -1,0 +1,1 @@
+point,group,confidence_min,retiring,bad_spec,frontend_bound,backend_bound,frontend_latency_bound,frontend_bandwidth_bound,resource_bound,core_bound,mem_bound,mem_l1_bound,mem_l2_bound,mem_l3_dram_bound,mem_mem_bound,mem_store_bound,rob_stall_pct,ptag_stall_pct,mapq_stall_pct,pcbuf_stall_pct,other_stall_pct

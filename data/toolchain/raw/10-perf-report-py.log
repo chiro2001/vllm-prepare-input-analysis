@@ -1,0 +1,75 @@
+$ perf report --stdio -i /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-py.data --no-children --percent-limit 0.2 -g none
+# rc=0 wall_s=0.167
+
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2K of event 'cycles:P'
+# Event count (approx.): 8739692613
+#
+# Overhead  Command  Shared Object         Symbol                              
+# ........  .......  ....................  ....................................
+#
+    35.29%  python3  libpython3.11.so.1.0  [.] _PyEval_EvalFrameDefault
+    14.88%  python3  libpython3.11.so.1.0  [.] PyObject_Malloc
+     2.75%  python3  libpython3.11.so.1.0  [.] PyLong_FromLong
+     2.28%  python3  libpython3.11.so.1.0  [.] 0x0000000000177180
+     2.09%  python3  libpython3.11.so.1.0  [.] 0x00000000001476b4
+     1.86%  python3  libpython3.11.so.1.0  [.] _PyLong_New
+     1.59%  python3  libpython3.11.so.1.0  [.] 0x00000000001476c0
+     1.03%  python3  libpython3.11.so.1.0  [.] 0x00000000001bd844
+     0.90%  python3  libpython3.11.so.1.0  [.] 0x000000000017719c
+     0.90%  python3  libpython3.11.so.1.0  [.] 0x00000000001476a0
+     0.80%  python3  libpython3.11.so.1.0  [.] 0x00000000001869c8
+     0.76%  python3  libpython3.11.so.1.0  [.] 0x00000000001ab500
+     0.76%  python3  libpython3.11.so.1.0  [.] 0x00000000001476e0
+     0.75%  python3  libpython3.11.so.1.0  [.] 0x00000000001b9960
+     0.63%  python3  libpython3.11.so.1.0  [.] 0x00000000001a1cb4
+     0.60%  python3  libpython3.11.so.1.0  [.] 0x00000000001869cc
+     0.54%  python3  libpython3.11.so.1.0  [.] 0x00000000001ab4f8
+     0.53%  python3  libpython3.11.so.1.0  [.] 0x00000000001b8d58
+     0.53%  python3  libpython3.11.so.1.0  [.] 0x00000000001476e8
+     0.52%  python3  libpython3.11.so.1.0  [.] PyMem_Realloc
+     0.50%  python3  libpython3.11.so.1.0  [.] 0x000000000014767c
+     0.46%  python3  libpython3.11.so.1.0  [.] 0x00000000001b90dc
+     0.43%  python3  libpython3.11.so.1.0  [.] 0x00000000001ab4d4
+     0.43%  python3  libpython3.11.so.1.0  [.] PyObject_GC_Del
+     0.43%  python3  libpython3.11.so.1.0  [.] 0x0000000000153200
+     0.40%  python3  libpython3.11.so.1.0  [.] 0x00000000001869b4
+     0.40%  python3  libpython3.11.so.1.0  [.] 0x00000000001bdaf8
+     0.39%  python3  libpython3.11.so.1.0  [.] PyDict_GetItemWithError
+     0.39%  python3  libpython3.11.so.1.0  [.] 0x00000000001869b0
+     0.36%  python3  libpython3.11.so.1.0  [.] 0x00000000001bdaf0
+     0.34%  python3  libpython3.11.so.1.0  [.] 0x0000000000186990
+     0.33%  python3  libpython3.11.so.1.0  [.] 0x0000000000146a2c
+     0.33%  python3  libpython3.11.so.1.0  [.] 0x00000000001e5778
+     0.33%  python3  libpython3.11.so.1.0  [.] PyFunction_NewWithQualName
+     0.32%  python3  libpython3.11.so.1.0  [.] 0x000000000014ec4c
+     0.31%  python3  libpython3.11.so.1.0  [.] PyNumber_And
+     0.30%  python3  libpython3.11.so.1.0  [.] 0x00000000001b970c
+     0.30%  python3  libpython3.11.so.1.0  [.] 0x0000000000152e34
+     0.30%  python3  libpython3.11.so.1.0  [.] 0x00000000001bd850
+     0.30%  python3  libpython3.11.so.1.0  [.] 0x00000000001b9a9c
+     0.30%  python3  libpython3.11.so.1.0  [.] PyNumber_Remainder
+     0.27%  python3  libpython3.11.so.1.0  [.] 0x00000000001bd774
+     0.27%  python3  libpython3.11.so.1.0  [.] PyDict_SetItem
+     0.27%  python3  libpython3.11.so.1.0  [.] 0x00000000001b9094
+     0.27%  python3  libpython3.11.so.1.0  [.] 0x00000000001a1ca8
+     0.23%  python3  libpython3.11.so.1.0  [.] 0x00000000001b8db8
+     0.23%  python3  libpython3.11.so.1.0  [.] 0x0000000000147664
+     0.23%  python3  libpython3.11.so.1.0  [.] 0x0000000000186a84
+     0.23%  python3  libpython3.11.so.1.0  [.] 0x00000000001476dc
+     0.23%  python3  libpython3.11.so.1.0  [.] 0x00000000001e5878
+     0.23%  python3  libpython3.11.so.1.0  [.] PyList_New
+     0.23%  python3  libpython3.11.so.1.0  [.] PyObject_RichCompare
+     0.21%  python3  libpython3.11.so.1.0  [.] 0x00000000001850c0
+
+
+#
+# (Tip: For a higher level overview, try: perf report --sort comm,dso)
+#
+
+----- stderr -----
+

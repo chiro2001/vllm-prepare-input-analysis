@@ -1,0 +1,109 @@
+{
+  "generated_at": "2026-09-23T18:14:19+0000",
+  "uname": {
+    "system": "Linux",
+    "node": "6323f4583d7b",
+    "release": "6.6.0-159.4.3.154.oe2403sp4.aarch64",
+    "version": "#1 SMP Mon Jun 29 00:38:31 CST 2026",
+    "machine": "aarch64",
+    "processor": "aarch64"
+  },
+  "python": "3.12.13 (main, Aug  3 2026, 02:43:47) [GCC 12.3.1 (openEuler 12.3.1-105.oe2403sp3)]",
+  "executable": "/usr/local/python3.12.13/bin/python",
+  "cwd": "/work",
+  "environ_subset": {
+    "PYTHONPATH": "/usr/local/Ascend/cann-9.1.0/python/site-packages:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe:/work/harness",
+    "HOME": "/tmp",
+    "USER": "REMOTE_USER",
+    "LOGNAME": "REMOTE_USER",
+    "TORCH_DEVICE_BACKEND_AUTOLOAD": "0",
+    "TORCHINDUCTOR_CACHE_DIR": "/tmp/ti_cache",
+    "TRITON_CACHE_DIR": "/tmp/triton_cache",
+    "VLLM_PLUGINS": null,
+    "VLLM_TARGET_DEVICE": null,
+    "VLLM_USE_V1": null,
+    "OMP_NUM_THREADS": "1",
+    "PI_HARNESS_ROOT": "/work/harness"
+  },
+  "cgroup_cpuset": "200-215",
+  "nproc_visible": 640,
+  "npu_smi": {
+    "cmd": "command -v npu-smi || echo '<not found>'",
+    "rc": 0,
+    "stdout": "<not found>",
+    "stderr": "/usr/bin/id: cannot find name for user ID 1003\nwhoami: cannot find name for user ID 1003"
+  },
+  "davinci_dev": {
+    "cmd": "ls /dev/davinci* 2>&1 || true",
+    "rc": 0,
+    "stdout": "ls: cannot access '/dev/davinci*': No such file or directory",
+    "stderr": "/usr/bin/id: cannot find name for user ID 1003\nwhoami: cannot find name for user ID 1003"
+  },
+  "ascend_home": "/usr/local/Ascend/cann-9.1.0",
+  "ascend_toolkit": "ascend-toolkit\ncann\ncann-9.1.0\nnnal",
+  "numpy": "1.26.4",
+  "torch": "2.10.0+cpu",
+  "torch.version.cuda": null,
+  "torch_num_threads": 1,
+  "torch_num_interop_threads": 640,
+  "torch_npu": "2.10.0.post4",
+  "torch_npu_file": "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/__init__.py",
+  "triton": "3.2.0",
+  "pip_list": [
+    "PyYAML==6.0.3",
+    "decorator==5.1.1",
+    "numpy==1.26.4",
+    "requests==2.34.2",
+    "scipy==1.13.1",
+    "setuptools-scm==10.2.3",
+    "setuptools==80.10.2",
+    "torch==2.10.0+cpu",
+    "torch_npu==2.10.0.post4",
+    "torchaudio==2.10.0+cpu",
+    "torchvision==0.25.0+cpu",
+    "triton==3.5.0",
+    "triton_ascend==3.2.2",
+    "vllm==0.26.0+empty",
+    "vllm_ascend==0.26.0rc1"
+  ],
+  "vllm_files": [
+    "INFO 09-23 18:14:26 [__init__.py:52] Available plugins for group vllm.platform_plugins:",
+    "INFO 09-23 18:14:26 [__init__.py:54] - ascend -> vllm_ascend:register",
+    "INFO 09-23 18:14:26 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.",
+    "INFO 09-23 18:14:26 [__init__.py:237] Platform plugin ascend is activated",
+    "INFO 09-23 18:14:29 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.",
+    "/vllm-workspace/vllm/vllm/__init__.py",
+    "/vllm-workspace/vllm-ascend/vllm_ascend/__init__.py",
+    "[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory."
+  ],
+  "lscpu": "Architecture:                         aarch64\nCPU op-mode(s):                       64-bit\nByte Order:                           Little Endian\nCPU(s):                               640\nOn-line CPU(s) list:                  0-639\nVendor ID:                            HiSilicon\nModel name:                           unknown\nModel:                                0\nThread(s) per core:                   2\nCore(s) per cluster:                  80\nSocket(s):                            -\nCluster(s):                           4\nStepping:                             0x0\nFrequency boost:                      disabled\nCPU(s) scaling MHz:                   100%\nCPU max MHz:                          2900.0000\nCPU min MHz:                          400.0000\nBogoMIPS:                             200.00\nFlags:                                fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb dcpodp flagm2 frint svei8mm svef32mm svef64mm svebf16 i8mm bf16 dgh rng ecv\nL1d cache:                            20 MiB (320 instances)\nL1i cache:                            20 MiB (320 instances)\nL2 cache:                             400 MiB (320 instances)\nL3 cache:                             560 MiB (8 instances)\nNUMA node(s):                         8\nNUMA node0 CPU(s):                    0-79\nNUMA node1 CPU(s):                    80-159\nNUMA node2 CPU(s):                    160-239\nNUMA node3 CPU(s):                    240-319\nNUMA node4 CPU(s):                    320-399\nNUMA node5 CPU(s):                    400-479",
+  "source_commits": {
+    "vllm": "<no git>",
+    "vllm-ascend": "<no git>"
+  },
+  "probe_script_sha256": {
+    "harness/probes/collect_manifest.py": "43c32425598ed11cceeeb0aaf9c03318fd4319192f2e2e4b6b016ab00d257272",
+    "harness/probes/gen_devdeps_tables.py": "51296b2699800c8f06f447c7c71e61c4a417f3ff2b530e702c6204852c369b9a",
+    "harness/probes/import_gradient.py": "d9099371d7a8000fcda0511a1f075dac0080848ff7a67b9dfc2d70c649bf77ed",
+    "harness/probes/probe_dynamic_hits.py": "13081b1d1cd555838a7569f62fcd888c04dce97ac06a2eeb329cbadccc25170a",
+    "harness/probes/scope_prepare_input.py": "e4d70e6d28d34fd41c66153468a4ad72e1670df5f9643910de80dd5625155eb7",
+    "harness/probes/shim_patch_proposal.py": "3db45c8f638720b157b4f2ce5bfcaeb74e8e674d3b18bdc4e6e5b65485bb9617",
+    "harness/probes/smoke_shim.py": "0258cac073b45db3f9ab29b6460c482703abadd27c3f74b9856aa349feaf9715",
+    "harness/probes/collect_host_manifest.sh": "2ac9c321790ed8df1c7f156f96b24afa21aa83d2b8a014d297d29d6f64a59ee5",
+    "harness/probes/pull_data.sh": "e1bb34bae050726e9dda7cecd3ec4705549a1a4fef7e84b3da9b42b6eca4cbeb",
+    "harness/probes/push.sh": "3d0f97bfc35b28a670872da9bafcf67c894402d8a4ce27deca8aa03a11a2d1c0"
+  },
+  "harness_sha256": {
+    "/work/harness/scripts/pi-docker.sh": "fb429117052bb762e4799d532126e77c74d7b0ae3f0ba9441df86cc8b472a41a",
+    "/work/harness/INTERFACES.md": "deb2cec10e10f6330677cf2589856c84456505440fb284ab17a6f5b29740cafa",
+    "/work/harness/pi_harness/shim/__init__.py": "2072409af9ce8a854e64f687ee8cfec8b1e60b1ffbab8fa08701f1e9d16a79ad"
+  },
+  "source_sha256": {
+    "/work/refs/vllm-ascend/vllm_ascend/worker/model_runner_v1.py": "4699af75ac8b4b55283d55190365e93d13820a05888bfa65aea8746deabc4d3a",
+    "/work/refs/vllm-ascend/vllm_ascend/worker/block_table.py": "6c17cb4ce9a461c0b8f30bfa6bf3a91ad0eaf44d1bf08b780af59d2ae52071b7",
+    "/work/refs/vllm-ascend/vllm_ascend/ops/triton/compute_slot_mapping.py": "4b91c1d9a2e2ef594621b14d5d49bee6408980fccbb6701d768c920490871157",
+    "/work/refs/vllm/vllm/v1/utils.py": "10eda8e6aaa5405c3bd38efb3dbd2ccce6dad4690756c003abe9723a35a16111",
+    "/work/refs/vllm/vllm/v1/worker/gpu_model_runner.py": "81b7627fbe81f7aaa2f77b4bf085faa353c69d03662ebfe369536a9773bb70d0",
+    "/work/refs/vllm/vllm/v1/worker/gpu_input_batch.py": "ca9b8a627cb8e5109c804970a09597c6aa019a78957df399e8b3022bd493ecfc"
+  }
+}

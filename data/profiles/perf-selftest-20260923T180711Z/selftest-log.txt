@@ -1,0 +1,20 @@
+### final run 2026-09-23T18:35:39Z
+image=sha256:b2c6ff72ff93f82d447c4d33b4f099208f5f522f04eaba69766c2cdb4fb86b42
+host=174359 notram=175616 nons_host=175935 nons_ns=1
+host map: -rw-------. 1 root root 654341 Sep 24 02:35 /tmp/perf-174359.map
+notram map: ls: cannot access '/tmp/perf-175616.map': No such file or directory
+--- fp rc=0 :: [perf_capture.sh] outdir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp
+--- dwarf rc=0 :: [perf_capture.sh] outdir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf
+--- fp_notramp rc=0 :: [perf_capture.sh] outdir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp
+--- fp_nons rc=0 :: [perf_capture.sh] outdir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons
+### py-spy
+
+py-spy> Wrote flamegraph data to '/work/pyspy-native.svg'. Samples: 211 Errors: 783
+
+py-spy> Wrote flamegraph data to '/work/pyspy-nonative.svg'. Samples: 994 Errors: 0
+### sizes
+fp         bytes=5003968
+dwarf      bytes=128701316
+fp_notramp bytes=2228300
+fp_nons    bytes=2892732
+RUN8_DONE

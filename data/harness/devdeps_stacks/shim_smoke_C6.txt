@@ -1,0 +1,6 @@
+# C6: CpuGpuBuffer(1024, int32, device='npu') + copy_to_gpu()
+# ok=True  28.48 ms
+# value: {'cpu.device': 'cpu', 'gpu.device': 'cpu', 'copy_to_gpu': 'cpu', 'gpu[0:3]': [7, 7, 7]}
+# exc: None
+# ---- traceback ----
+

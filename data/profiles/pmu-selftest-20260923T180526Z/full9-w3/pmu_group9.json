@@ -1,0 +1,26 @@
+{
+  "count": 4,
+  "entries": [
+    {"name":"CONTEXT_SWITCHES","id":"context_switches","config":"0x3","delta":3,"rate":0.999994},
+    {"name":"CPU_MIGRATIONS","id":"cpu_migrations","config":"0x4","delta":0,"rate":0.000000},
+    {"name":"PAGE_FAULTS","id":"page_faults","config":"0x2","delta":0,"rate":0.000000},
+    {"name":"CPU_CLOCK","id":"cpu_clock","config":"0x0","delta":2999999100,"rate":999993293.376300}
+  ],
+  "time_enabled": 3000019220,
+  "time_running": 3000019220,
+  "confidence": 1.000000,
+  "sampled": false,
+  "sample_count": 0,
+  "lost_samples": 0,
+  "gated": false,
+  "iter_gated": false,
+  "iter_start_at": 0,
+  "iter_end_at": 0,
+  "iter_start_seen": 0,
+  "iter_end_seen": 0,
+  "roi_start_seen": 0,
+  "roi_end_seen": 0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B"
+}

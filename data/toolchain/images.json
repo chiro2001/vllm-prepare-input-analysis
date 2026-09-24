@@ -1,0 +1,73 @@
+{
+  "generated_utc": "2026-09-23T17:49:48Z",
+  "host": "host22",
+  "images": {
+    "baseline": {
+      "ref": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+      "image_id": "sha256:dc9a31b8330d399ad8e91dabaca25798c3d838c36851897bf9a1f77f793072ec",
+      "repo_digests": [
+        "quay.nju.edu.cn/ascend/vllm-ascend@sha256:24ae7427b6cad5ee29e0665e6f69a4d51c9f6178035e38f2ed161bb3d29fe81c"
+      ],
+      "created": "2026-09-03T17:17:10.52828522Z",
+      "vllm_commit": "568afb3a13806beb53bb2e6bd518269357b237c0",
+      "vllm_ascend_commit": "f2f74a16c3c50a76f4349d807918e83edec1e35c",
+      "worktree_dirty_lines_vllm": 0,
+      "worktree_dirty_lines_vllm_ascend": 0,
+      "role": "canonical image for all real-machine measurements (COORDINATION section 4)"
+    },
+    "liteprofiler": {
+      "ref": "local/vllm-ascend-liteprofiler:v0.26.0rc1-openeuler",
+      "image_id": "sha256:b2c6ff72ff93f82d447c4d33b4f099208f5f522f04eaba69766c2cdb4fb86b42",
+      "repo_digests": [],
+      "repo_digest_note": "locally built only, never pushed - identity is the image id + the two commit layer ids below, NOT a registry digest",
+      "created": "2026-09-14T12:38:18.57880616Z",
+      "vllm_commit": "13becedeaa0d3c0e097e432af7f5e5da4488a31a",
+      "vllm_ascend_commit": "fe3f1e85f1226c458fcae44a96d2e12259def25d",
+      "extra_layers_over_baseline": [
+        "sha256:b2c6ff72ff93f82d447c4d33b4f099208f5f522f04eaba69766c2cdb4fb86b42",
+        "sha256:de395fd981908c8a8d2478f722e0b5e862d608bea84b8d9929e1931271c9efa2"
+      ],
+      "extra_layer_count": 2,
+      "worktree_dirty_lines_vllm": 0,
+      "worktree_dirty_lines_vllm_ascend": 0,
+      "role": "phase-timing image (prepare input / forward / post process / sample_token)"
+    }
+  },
+  "patch_verification": {
+    "method": "git patch-id --stable of (git diff <baseline-commit>..<liteprofiler-HEAD>) vs the raw .patch file: identical ids prove the image contains exactly the patch content, nothing more; worktree dirty-line counts prove nothing is left uncommitted.",
+    "pairs": [
+      {
+        "repo": "vllm",
+        "baseline_commit": "568afb3a13806beb53bb2e6bd518269357b237c0",
+        "liteprofiler_commit": "13becedeaa0d3c0e097e432af7f5e5da4488a31a",
+        "head_vs_base_patch_id": "1f7a091bb2acc35fb09fa78ffef43c5170e65c5b",
+        "patch_file_patch_id": "1f7a091bb2acc35fb09fa78ffef43c5170e65c5b",
+        "verdict": "IDENTICAL-CONTENT",
+        "patch_file": "/home/REMOTE_USER/liteprofiler-vllm.patch",
+        "patch_sha256": "f283fb121bc099f531f433b5fff3431a2f3f92a168b6717168a7a01828520066",
+        "files_changed": 21
+      },
+      {
+        "repo": "vllm-ascend",
+        "baseline_commit": "f2f74a16c3c50a76f4349d807918e83edec1e35c",
+        "liteprofiler_commit": "fe3f1e85f1226c458fcae44a96d2e12259def25d",
+        "head_vs_base_patch_id": "b5c711f60077eaa4ae0bff058941a7e51c3bf147",
+        "patch_file_patch_id": "b5c711f60077eaa4ae0bff058941a7e51c3bf147",
+        "verdict": "IDENTICAL-CONTENT",
+        "patch_file": "/home/REMOTE_USER/liteprofiler-vllm-ascend.patch",
+        "patch_sha256": "5b7cec372d58f25785021fc03a171322f8cb2112bd283d456b6f9f6555cace35",
+        "files_changed": 2
+      }
+    ],
+    "conclusion": "the liteprofiler image differs from the baseline ONLY by the two LiteProfiler patches (committed on top of the baseline commits, worktrees clean)"
+  },
+  "raw_evidence": {
+    "images_inspect": "data/toolchain/raw/images-inspect.txt",
+    "images_patch_verification": "data/toolchain/raw/images-patch-verification.txt"
+  },
+  "notes": [
+    "The liteprofiler patch is COMMITTED inside the image, so the container worktree is clean - a naive `git status` comparison against the baseline shows nothing. Verify via the commit ancestry + patch-id, not via porcelain output.",
+    "Layer ids of the liteprofiler image are docker-commit layers created with the container cmd `sleep infinity`; they carry the source commits, there are no package-manager layers.",
+    "Do NOT rebuild either image (hard constraint in the task)."
+  ]
+}

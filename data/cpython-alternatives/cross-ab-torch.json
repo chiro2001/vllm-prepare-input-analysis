@@ -1,0 +1,286 @@
+{
+  "configs": {
+    "cp312": {
+      "py.plain": [
+        30.36,
+        33.8,
+        33.83
+      ],
+      "py.plain_reuse": [
+        32.99,
+        31.32,
+        34.26
+      ],
+      "py.slots": [
+        33.87,
+        32.22,
+        36.71
+      ],
+      "py.manual_dict": [
+        30.86,
+        33.98,
+        32.37
+      ],
+      "py.manual_slots": [
+        30.88,
+        31.69,
+        32.3
+      ],
+      "py.namedtuple": [
+        31.26,
+        32.8,
+        33.73
+      ],
+      "py.dict": [
+        31.23,
+        31.74,
+        33.83
+      ]
+    },
+    "cp312-malloc": {
+      "py.plain": [
+        33.08,
+        33.61,
+        31.09
+      ],
+      "py.plain_reuse": [
+        31.26,
+        31.77,
+        29.6
+      ],
+      "py.slots": [
+        33.01,
+        36.38,
+        35.22
+      ],
+      "py.manual_dict": [
+        33.36,
+        52.87,
+        30.83
+      ],
+      "py.manual_slots": [
+        33.81,
+        47.04,
+        31.03
+      ],
+      "py.namedtuple": [
+        36.8,
+        52.66,
+        31.93
+      ],
+      "py.dict": [
+        35.21,
+        35.77,
+        31.05
+      ]
+    },
+    "cp313": {
+      "py.plain": [
+        30.61,
+        31.84,
+        32.55
+      ],
+      "py.plain_reuse": [
+        35.97,
+        30.24,
+        29.17
+      ],
+      "py.slots": [
+        30.6,
+        31.42,
+        33.18
+      ],
+      "py.manual_dict": [
+        30.67,
+        33.95,
+        31.23
+      ],
+      "py.manual_slots": [
+        31.87,
+        30.98,
+        35.01
+      ],
+      "py.namedtuple": [
+        37.6,
+        35.07,
+        31.86
+      ],
+      "py.dict": [
+        31.57,
+        32.67,
+        33.54
+      ]
+    },
+    "cp314": {
+      "py.plain": [
+        31.38,
+        29.25,
+        37.22
+      ],
+      "py.plain_reuse": [
+        30.63,
+        35.66,
+        29.6
+      ],
+      "py.slots": [
+        31.07,
+        29.48,
+        34.66
+      ],
+      "py.manual_dict": [
+        31.76,
+        33.43,
+        30.21
+      ],
+      "py.manual_slots": [
+        31.75,
+        33.46,
+        34.89
+      ],
+      "py.namedtuple": [
+        34.67,
+        30.04,
+        35.8
+      ],
+      "py.dict": [
+        31.33,
+        32.93,
+        29.99
+      ]
+    },
+    "cp314-malloc": {
+      "py.plain": [
+        32.36,
+        30.69,
+        31.88
+      ],
+      "py.plain_reuse": [
+        33.39,
+        32.3,
+        32.73
+      ],
+      "py.slots": [
+        32.95,
+        30.53,
+        34.05
+      ],
+      "py.manual_dict": [
+        34.11,
+        30.15,
+        35.12
+      ],
+      "py.manual_slots": [
+        32.7,
+        30.67,
+        32.14
+      ],
+      "py.namedtuple": [
+        36.19,
+        35.12,
+        32.52
+      ],
+      "py.dict": [
+        33.17,
+        31.05,
+        35.2
+      ]
+    },
+    "cp314-jit": {
+      "py.plain": [
+        31.35,
+        31.33,
+        31.2
+      ],
+      "py.plain_reuse": [
+        32.75,
+        33.27,
+        27.62
+      ],
+      "py.slots": [
+        31.52,
+        30.58,
+        30.2
+      ],
+      "py.manual_dict": [
+        30.88,
+        30.59,
+        29.93
+      ],
+      "py.manual_slots": [
+        31.68,
+        30.23,
+        29.38
+      ],
+      "py.namedtuple": [
+        35.26,
+        35.18,
+        31.52
+      ],
+      "py.dict": [
+        33.14,
+        31.04,
+        31.13
+      ]
+    },
+    "cp314t-gil": {},
+    "cp314t-nogil": {}
+  },
+  "medians": {
+    "cp312": {
+      "py.plain": 33.8,
+      "py.plain_reuse": 32.99,
+      "py.slots": 33.87,
+      "py.manual_dict": 32.37,
+      "py.manual_slots": 31.69,
+      "py.namedtuple": 32.8,
+      "py.dict": 31.74
+    },
+    "cp312-malloc": {
+      "py.plain": 33.08,
+      "py.plain_reuse": 31.26,
+      "py.slots": 35.22,
+      "py.manual_dict": 33.36,
+      "py.manual_slots": 33.81,
+      "py.namedtuple": 36.8,
+      "py.dict": 35.21
+    },
+    "cp313": {
+      "py.plain": 31.84,
+      "py.plain_reuse": 30.24,
+      "py.slots": 31.42,
+      "py.manual_dict": 31.23,
+      "py.manual_slots": 31.87,
+      "py.namedtuple": 35.07,
+      "py.dict": 32.67
+    },
+    "cp314": {
+      "py.plain": 31.38,
+      "py.plain_reuse": 30.63,
+      "py.slots": 31.07,
+      "py.manual_dict": 31.76,
+      "py.manual_slots": 33.46,
+      "py.namedtuple": 34.67,
+      "py.dict": 31.33
+    },
+    "cp314-malloc": {
+      "py.plain": 31.88,
+      "py.plain_reuse": 32.73,
+      "py.slots": 32.95,
+      "py.manual_dict": 34.11,
+      "py.manual_slots": 32.14,
+      "py.namedtuple": 35.12,
+      "py.dict": 33.17
+    },
+    "cp314-jit": {
+      "py.plain": 31.33,
+      "py.plain_reuse": 32.75,
+      "py.slots": 30.58,
+      "py.manual_dict": 30.59,
+      "py.manual_slots": 30.23,
+      "py.namedtuple": 35.18,
+      "py.dict": 31.13
+    },
+    "cp314t-gil": {},
+    "cp314t-nogil": {}
+  }
+}

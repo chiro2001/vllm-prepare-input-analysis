@@ -1,0 +1,119 @@
+{
+  "schema": "pi-pmu-group-meta-v1",
+  "tag": "selftest-full-20260923T180526Z",
+  "group": 7,
+  "preset": "920b_topdown_full_7",
+  "events": [
+    "ld_cancel_inst_type",
+    "ld_cancel_fwd_hzd",
+    "ld_cancel_struct_hzd",
+    "ld_cancel_pipeline",
+    "l2_bound_buf",
+    "l2_bound_snp",
+    "l2_bound_arb",
+    "dram_local"
+  ],
+  "tid": 4160170,
+  "pid": 0,
+  "status": "ok",
+  "attempts": 1,
+  "rc": 0,
+  "timed_out": false,
+  "error": null,
+  "outer_wall_s": 3.1419,
+  "inner_wall_s": 3.015065,
+  "started_at_utc": "2026-09-23T18:13:28Z",
+  "finished_at_utc": "2026-09-23T18:13:31Z",
+  "confidence": 1.0,
+  "time_enabled": 3000080540,
+  "time_running": 3000080540,
+  "useronly_forced": false,
+  "counters": [
+    {
+      "name": "LD_CANCEL_INST_TYPE",
+      "id": "ld_cancel_inst_type",
+      "config": "0x5093",
+      "delta": 10440,
+      "rate": 3479.906576
+    },
+    {
+      "name": "LD_CANCEL_FWD_HZD",
+      "id": "ld_cancel_fwd_hzd",
+      "config": "0x5094",
+      "delta": 256539,
+      "rate": 85510.704323
+    },
+    {
+      "name": "LD_CANCEL_STRUCT_HZD",
+      "id": "ld_cancel_struct_hzd",
+      "config": "0x5095",
+      "delta": 303555,
+      "rate": 101182.283593
+    },
+    {
+      "name": "LD_CANCEL_PIPELINE",
+      "id": "ld_cancel_pipeline",
+      "config": "0x5096",
+      "delta": 61958,
+      "rate": 20652.112226
+    },
+    {
+      "name": "L2_BOUND_BUF",
+      "id": "l2_bound_buf",
+      "config": "0x701e",
+      "delta": 1112,
+      "rate": 370.656716
+    },
+    {
+      "name": "L2_BOUND_SNP",
+      "id": "l2_bound_snp",
+      "config": "0x701f",
+      "delta": 13793446,
+      "rate": 4597691.900631
+    },
+    {
+      "name": "L2_BOUND_ARB",
+      "id": "l2_bound_arb",
+      "config": "0x7020",
+      "delta": 25210491,
+      "rate": 8403271.400174
+    },
+    {
+      "name": "DRAM_LOCAL",
+      "id": "dram_local",
+      "config": "0x7021",
+      "delta": 0,
+      "rate": 0.0
+    }
+  ],
+  "counters_map": {
+    "LD_CANCEL_INST_TYPE": 10440,
+    "LD_CANCEL_FWD_HZD": 256539,
+    "LD_CANCEL_STRUCT_HZD": 303555,
+    "LD_CANCEL_PIPELINE": 61958,
+    "L2_BOUND_BUF": 1112,
+    "L2_BOUND_SNP": 13793446,
+    "L2_BOUND_ARB": 25210491,
+    "DRAM_LOCAL": 0
+  },
+  "cmd": [
+    "sudo",
+    "-n",
+    "/usr/bin/python3",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+    "--inner",
+    "--tid",
+    "4160170",
+    "--group",
+    "7",
+    "--window",
+    "3.000000",
+    "--preset-prefix",
+    "920b_topdown_full_",
+    "--kperfx-python",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/python",
+    "--quiet"
+  ],
+  "stderr_tail": "KPERFX_META {\"group\": 7, \"preset\": \"920b_topdown_full_7\", \"events\": [\"ld_cancel_inst_type\", \"ld_cancel_fwd_hzd\", \"ld_cancel_struct_hzd\", \"ld_cancel_pipeline\", \"l2_bound_buf\", \"l2_bound_snp\", \"l2_bound_arb\", \"dram_local\"], \"tid\": 4160170, \"window_requested_s\": 3.0, \"wall_s\": 3.015065, \"started_at_utc\": \"2026-09-23T18:13:28Z\", \"finished_at_utc\": \"2026-09-23T18:13:31Z\", \"time_enabled_ns\": 3000080540, \"time_running_ns\": 3000080540, \"confidence\": 1.0, \"useronly_forced\": false, \"instances\": 1, \"counters\": 8, \"raw_json_writer\": \"kperfx_ctx_write_output\"}\n",
+  "raw_json_writer": "kperfx_ctx_write_output"
+}

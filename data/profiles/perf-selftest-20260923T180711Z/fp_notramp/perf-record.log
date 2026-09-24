@@ -1,0 +1,43 @@
+# stage=record utc=2026-09-23T18:07:29Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data -e cycles -F 999 -g --call-graph fp -t 4105969 -- sleep 8
+scripts/measure/perf_capture.sh: line 317: sudo -n: command not found
+# perf record exit=127
+# stage=record utc=2026-09-23T18:08:28Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data -e cycles -F 999 -g --call-graph fp -t 4105969 -- sleep 8
+scripts/measure/perf_capture.sh: line 320: sudo -n: command not found
+# perf record exit=127
+# stage=record utc=2026-09-23T18:09:24Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data -e cycles -F 999 -g --call-graph fp -t 4105969 -- sleep 8
+[ perf record: Woken up 7 times to write data ]
+[ perf record: Captured and wrote 1.753 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data (8066 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:11:30Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data -e cycles -F 999 -g --call-graph fp -t 4105969 -- sleep 8
+[ perf record: Woken up 7 times to write data ]
+[ perf record: Captured and wrote 1.725 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data (7968 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:14:21Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data -e cycles -F 999 -g --call-graph fp -t 4167749 -- sleep 8
+[ perf record: Woken up 7 times to write data ]
+[ perf record: Captured and wrote 1.753 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data (8044 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:18:11Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data -e cycles -F 999 -g --call-graph fp -t 38504 -- sleep 8
+[ perf record: Woken up 7 times to write data ]
+[ perf record: Captured and wrote 1.752 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data (8055 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:25:01Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data -e cycles -F 999 -g --call-graph fp -t 94436 -- sleep 8
+[ perf record: Woken up 7 times to write data ]
+[ perf record: Captured and wrote 1.763 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data (8081 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:25:35Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data -e cycles -F 999 -g --call-graph fp -t 94436 -- sleep 8
+[ perf record: Woken up 7 times to write data ]
+[ perf record: Captured and wrote 1.754 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data (8066 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:36:48Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data -e cycles -F 999 -g --call-graph fp -t 175616 -- sleep 8
+[ perf record: Woken up 7 times to write data ]
+[ perf record: Captured and wrote 1.750 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp/perf.data (7972 samples) ]
+# perf record exit=0

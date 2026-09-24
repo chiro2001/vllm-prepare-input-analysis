@@ -1,0 +1,26 @@
+$ perf stat -e instructions,branch-misses,L1-dcache-loads,L1-dcache-load-misses,L1-icache-loads,L1-icache-load-misses,dTLB-loads,dTLB-load-misses,iTLB-loads -- taskset -c 122 /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/probe_load --duration-ms 1500
+# rc=0 wall_s=1.526
+
+probe_load done kind=mixed threads=1 duration_ms=1500 acc=2344064413887
+
+----- stderr -----
+
+ Performance counter stats for 'taskset -c 122 /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/probe_load --duration-ms 1500':
+
+     7,984,407,942      instructions                                                            (88.81%)
+        47,847,806      branch-misses                                                           (88.81%)
+       700,237,976      L1-dcache-loads                                                         (88.81%)
+         3,625,752      L1-dcache-load-misses            #    0.52% of all L1-dcache accesses   (88.81%)
+     1,466,296,004      L1-icache-loads                                                         (88.80%)
+           123,144      L1-icache-load-misses            #    0.01% of all L1-icache accesses   (88.91%)
+       713,610,770      dTLB-loads                                                              (89.07%)
+            28,072      dTLB-load-misses                 #    0.00% of all dTLB cache accesses  (89.08%)
+     1,467,005,938      iTLB-loads                                                              (88.91%)
+
+       1.501604600 seconds time elapsed
+
+       1.497395000 seconds user
+       0.000000000 seconds sys
+
+
+

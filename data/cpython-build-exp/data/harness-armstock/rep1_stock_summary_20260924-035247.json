@@ -1,0 +1,172 @@
+{
+  "config": {
+    "preset": "realmachine",
+    "model_profile": "qwen35-0.8b",
+    "model_path": "/models/Qwen3.5-0.8B",
+    "hf_config_path": null,
+    "dtype": "bfloat16",
+    "hidden_size": null,
+    "num_hidden_layers": null,
+    "num_attention_heads": null,
+    "num_key_value_heads": null,
+    "max_model_len": 2048,
+    "max_num_reqs": 8,
+    "max_num_batched_tokens": 2048,
+    "block_size": 128,
+    "enable_chunked_prefill": true,
+    "enable_prefix_caching": true,
+    "num_spec_tokens": 0,
+    "async_scheduling": true,
+    "has_gdn": true,
+    "pin_memory": false,
+    "device": "cpu",
+    "batch": 1,
+    "isl": 128,
+    "osl": 64,
+    "prefix_hit_ratio": 0.0,
+    "arrival": "simultaneous",
+    "steps": 200,
+    "seed": 0,
+    "shuffle_values": false,
+    "op_cost_us": 0.0,
+    "triton_launch_us": 0.0,
+    "slot_mapping_mode": "cpu_fallback",
+    "trace_path": null,
+    "extra": {
+      "chunk_size": 2048
+    }
+  },
+  "meta": {
+    "model_profile": "qwen35-0.8b",
+    "model_config_dir": "/tmp/pi_models/qwen35-0.8b-hx-lx-m2048",
+    "vocab_size": 248320,
+    "max_model_len": 2048,
+    "dtype": "torch.bfloat16",
+    "max_num_tokens": 2048,
+    "max_num_reqs": 8,
+    "block_size": 128,
+    "num_spec_tokens": 0,
+    "max_num_blocks_per_req": 16,
+    "use_async_scheduling": true,
+    "use_async_spec_decode": false,
+    "has_gdn": true,
+    "readonly_attrs_skipped": [],
+    "attr_audit": {}
+  },
+  "steps_run": 62,
+  "wall_s": 0.03305326006375253,
+  "prepare_inputs_us": {
+    "p50": 466.9849877245724,
+    "p90": 485.0920639000833,
+    "p99": 520.8090099040419,
+    "mean": 471.37596336523853,
+    "sum": 29225.30972864479
+  },
+  "update_states_us": {
+    "p50": 19.149971194565296,
+    "p90": 20.224961917847395,
+    "mean": 21.954513936033173
+  },
+  "scope_total_us": {
+    "p50": 486.08495853841305,
+    "p90": 504.55002347007394,
+    "mean": 493.45838394196284
+  },
+  "substeps": [
+    {
+      "substep": "NPUModelRunner._prepare_inputs",
+      "calls": 62,
+      "total_us": 28871.170827187598,
+      "share_of_scope_pct": 94.36744024488358
+    },
+    {
+      "substep": "MultiGroupBlockTable.compute_slot_mapping",
+      "calls": 62,
+      "total_us": 6295.75049970299,
+      "share_of_scope_pct": 20.57810064695917
+    },
+    {
+      "substep": "BlockTable.compute_slot_mapping",
+      "calls": 62,
+      "total_us": 6145.070306956768,
+      "share_of_scope_pct": 20.085591902849753
+    },
+    {
+      "substep": "NPUModelRunner._build_attn_state",
+      "calls": 62,
+      "total_us": 1396.990497596562,
+      "share_of_scope_pct": 4.566161105613036
+    },
+    {
+      "substep": "MultiGroupBlockTable.commit_block_table",
+      "calls": 62,
+      "total_us": 1337.0802626013756,
+      "share_of_scope_pct": 4.370340314180452
+    },
+    {
+      "substep": "NPUModelRunner._update_states",
+      "calls": 62,
+      "total_us": 1290.669897571206,
+      "share_of_scope_pct": 4.21864479151036
+    },
+    {
+      "substep": "BlockTable.commit_block_table",
+      "calls": 62,
+      "total_us": 1247.1494264900684,
+      "share_of_scope_pct": 4.076395089246432
+    },
+    {
+      "substep": "GPUModelRunner._get_cumsum_and_arange",
+      "calls": 62,
+      "total_us": 993.7698487192392,
+      "share_of_scope_pct": 3.248206225425014
+    },
+    {
+      "substep": "GPUModelRunner._update_states",
+      "calls": 62,
+      "total_us": 955.2204282954335,
+      "share_of_scope_pct": 3.1222047497629077
+    },
+    {
+      "substep": "GPUModelRunner._prepare_input_ids",
+      "calls": 62,
+      "total_us": 913.5196451097727,
+      "share_of_scope_pct": 2.985902824600525
+    },
+    {
+      "substep": "GPUModelRunner._compute_prev_positions",
+      "calls": 62,
+      "total_us": 137.51036021858454,
+      "share_of_scope_pct": 0.44946222578406464
+    },
+    {
+      "substep": "InputBatch.refresh_metadata",
+      "calls": 62,
+      "total_us": 131.3196262344718,
+      "share_of_scope_pct": 0.4292273789600629
+    },
+    {
+      "substep": "InputBatch.condense",
+      "calls": 62,
+      "total_us": 112.22041212022305,
+      "share_of_scope_pct": 0.36680026239320157
+    },
+    {
+      "substep": "InputBatch.update_req_spec_token_ids",
+      "calls": 62,
+      "total_us": 64.31969814002514,
+      "share_of_scope_pct": 0.21023342998899197
+    },
+    {
+      "substep": "GPUModelRunner._may_reorder_batch",
+      "calls": 62,
+      "total_us": 30.559836886823177,
+      "share_of_scope_pct": 0.09988696331618768
+    }
+  ],
+  "host": {
+    "node": "b19fe48a3bc8",
+    "torch": "2.10.0+cpu",
+    "numpy": "1.26.4"
+  }
+}

@@ -1,0 +1,2 @@
+[ perf record: Woken up 175 times to write data ]
+[ perf record: Captured and wrote 43.502 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_arith_20260924-020459/passes/perf/perf.data (5326 samples) ]

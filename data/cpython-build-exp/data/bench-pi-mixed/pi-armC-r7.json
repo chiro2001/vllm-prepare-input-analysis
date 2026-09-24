@@ -1,0 +1,32 @@
+{
+ "best_seconds": 0.7298197100171819,
+ "cpu_affinity": [
+  200,
+  201,
+  202,
+  203
+ ],
+ "env_OMP_NUM_THREADS": "1",
+ "executable": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/build-armC/Python-3.12.13/python",
+ "label": "armC",
+ "measurements": [
+  {
+   "ns_per_step": 182454.92750429548,
+   "round": 0,
+   "seconds": 0.7298197100171819,
+   "steps": 4000
+  }
+ ],
+ "median_ns_per_step": 182454.92750429548,
+ "median_seconds": 0.7298197100171819,
+ "min_ns_per_step": 182454.92750429548,
+ "mode": "interleaved",
+ "numpy": "1.26.4",
+ "phase_measurements": {},
+ "platform": "Linux-6.6.0-159.4.3.154.oe2403sp4.aarch64-aarch64-with-glibc2.38",
+ "python": "3.12.13 (main, Sep 24 2026, 03:52:42) [GCC 12.3.1 (openEuler 12.3.1-111.oe2403sp3)]",
+ "reqs": 64,
+ "rounds_requested": 1,
+ "steps": 4000,
+ "work_digest": 77232000
+}

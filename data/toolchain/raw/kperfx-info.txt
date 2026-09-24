@@ -1,0 +1,11 @@
+libkperfx      : 1.0.0
+pmu            : 920B
+backend        : 920B(counting)
+cpu part (MIDR): 0xd02
+arch           : aarch64
+kernel         : Linux 6.6.0-159.4.3.154.oe2403sp4.aarch64
+nproc          : 640
+paranoid       : 2 (kernel bits unavailable -> events fall back to user only)
+group limit    : 8 counter(s) per group (cached (/tmp/.kperfx-group-limit-2-0))
+named events   : see `./kperfx events`
+presets        : see `./kperfx presets`

@@ -1,0 +1,108 @@
+{
+  "schema": "pi-pmu-selftest-v1",
+  "stamp": "20260923T180526Z-dram",
+  "cpu": 200,
+  "workload": "libkperfx workload_gen --kind dram",
+  "pid": 4180344,
+  "tid": 4180345,
+  "groups": [
+    1,
+    2,
+    7,
+    8
+  ],
+  "sweep_window_s": 5.0,
+  "perf_window_s": 5.0,
+  "target": {
+    "tid": 4180345,
+    "comm": "workload_gen",
+    "state": "R",
+    "cpu": 200,
+    "cpus_allowed": [
+      200
+    ]
+  },
+  "tid_selection": {
+    "source": "schedstat_runtime_ns",
+    "delta": {
+      "4180344": 0,
+      "4180345": 399033210
+    }
+  },
+  "perf": {
+    "cycles": 14502830383,
+    "instructions": 20900063005,
+    "running_pct": {
+      "cycles": null,
+      "instructions": null
+    },
+    "attempts": [
+      {
+        "cmd": [
+          "sudo",
+          "-n",
+          "perf",
+          "stat",
+          "-t",
+          "4180345",
+          "-e",
+          "cycles,instructions",
+          "--",
+          "sleep",
+          "5.000"
+        ],
+        "rc": 0,
+        "events": [
+          "cycles",
+          "instructions"
+        ],
+        "counts": {
+          "cycles": 14502830383,
+          "instructions": 20900063005
+        },
+        "running_pct": {
+          "cycles": null,
+          "instructions": null
+        },
+        "raw": "\n Performance counter stats for thread id '4180345':\n\n    14,502,830,383      cycles                                                                \n    20,900,063,005      instructions                     #    1.44  insn per cycle            \n\n       5.001246020 seconds time elapsed\n\n",
+        "timed_out": false
+      }
+    ],
+    "window_s": 5.0
+  },
+  "sweep": {
+    "rc": 0,
+    "dir": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/kind-dram/sweep-g1278-w5",
+    "cpu_cycles": 14499636362,
+    "inst_retired": 20896982942,
+    "ipc": 1.4412073806737582,
+    "cpi": 0.6938626691826296,
+    "cpu_ghz": 2.899941888107116,
+    "per_group_confidence": {
+      "1": 1.0,
+      "2": 1.0,
+      "7": 1.0,
+      "8": 1.0
+    },
+    "manifest": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/kind-dram/sweep-g1278-w5/manifest.json"
+  },
+  "comparison": [
+    {
+      "metric": "cycles",
+      "perf": 14502830383,
+      "kperfx": 14499636362,
+      "rel_err": 0.00022023432086360078,
+      "measured": true,
+      "pass_5pct": true
+    },
+    {
+      "metric": "instructions",
+      "perf": 20900063005,
+      "kperfx": 20896982942,
+      "rel_err": 0.00014737099114309584,
+      "measured": true,
+      "pass_5pct": true
+    }
+  ],
+  "verdict_ok": true
+}

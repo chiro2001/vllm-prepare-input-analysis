@@ -1,0 +1,64 @@
+# step_id     : A4e_import_order_ops_first_only
+# title       : 只先 import vllm_ascend.ops，再 import worker.model_runner_v1（不显式 import vllm）
+# cwd         : /work
+# returncode  : 1
+# duration_s  : 12.74
+# extra env   : {}
+# env overrides: {}
+# ---- COMMAND (python -c) ----
+import vllm_ascend.ops
+print("ops first OK")
+import vllm_ascend.worker.model_runner_v1 as m
+print("model_runner_v1 OK (no explicit import vllm):", m.__file__)
+# ---- STDOUT ----
+INFO 09-23 17:46:55 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 17:46:55 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-23 17:46:55 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-23 17:46:55 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-23 17:46:58 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.rtGetSocVersion failed, 0x7bc80ops first OK
+[ERROR] 2026-09-23-17:47:05 (PID:78, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+
+# ---- STDERR ----
+can not use command: npu-smi info
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+  File "/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py", line 152, in <module>
+    from vllm_ascend.patch.worker.patch_draft_quarot import patch_load_weights
+  File "/vllm-workspace/vllm-ascend/vllm_ascend/patch/worker/__init__.py", line 23, in <module>
+    import vllm_ascend.patch.worker.patch_triton
+  File "/vllm-workspace/vllm-ascend/vllm_ascend/patch/worker/patch_triton.py", line 2, in <module>
+    import vllm.third_party.flash_linear_attention.ops as fla_ops
+  File "/vllm-workspace/vllm/vllm/third_party/flash_linear_attention/ops/__init__.py", line 9, in <module>
+    from .chunk import chunk_gated_delta_rule
+  File "/vllm-workspace/vllm/vllm/third_party/flash_linear_attention/ops/chunk.py", line 13, in <module>
+    from .chunk_delta_h import chunk_gated_delta_rule_fwd_h
+  File "/vllm-workspace/vllm/vllm/third_party/flash_linear_attention/ops/chunk_delta_h.py", line 15, in <module>
+    from .index import prepare_chunk_indices, prepare_chunk_offsets
+  File "/vllm-workspace/vllm/vllm/third_party/flash_linear_attention/ops/index.py", line 14, in <module>
+    from .utils import tensor_cache
+  File "/vllm-workspace/vllm/vllm/third_party/flash_linear_attention/ops/utils.py", line 143, in <module>
+    device = "cuda" if current_platform.is_cuda_alike() else get_available_device()
+                                                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm/vllm/third_party/flash_linear_attention/ops/utils.py", line 123, in get_available_device
+    return triton.runtime.driver.active.get_current_target().backend
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/triton/backends/ascend/driver.py", line 237, in get_current_target
+    arch = self.utils.get_arch()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/triton/backends/ascend/driver.py", line 151, in get_arch
+    return self._load_mod().get_arch()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SystemError: <built-in function get_arch> returned NULL without setting an exception
+
+# ---- END ----

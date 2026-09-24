@@ -1,0 +1,30 @@
+attn builder p50 : 1022.4 us (33.6% of prepare input)
+  pi: am.build.qsl_h2d                                31.520 us    3.1%
+  pi: am.build.backend_metadata                       14.460 us    1.4%
+  pi: am.build.tolist                                  9.140 us    0.9%
+  pi: am.build.split_decodes                           8.840 us    0.9%
+  pi: am.build.seq_lens_select                         8.150 us    0.8%
+  pi: am.build.metadata_ctor                           6.590 us    0.6%
+  pi: am.build.fia_pad                                 1.900 us    0.2%
+  pi: am.build.attn_mask                               1.180 us    0.1%
+  pi: am.builder_build (unattributed residual)       940.580 us   92.0%
+wrote /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s1-on-attn-20260923T183356Z/attn_builder_breakdown.csv
+steps analysed      : 125 (tid 131)
+prepare input wall  : p50 3039.3 us   p99 6667.2 us
+unattributed        : 213.0 us (7.0 %)
+top sub-scopes (p50 us, share of prepare input):
+  pi: am.builder_build                 939.710   30.9%  (98% of steps)
+  pi: build_attention_metadata         280.710    9.2%  (98% of steps)
+  pi: in.slot_mapping                  134.630    4.4%  (98% of steps)
+  pi: in.positions_assembly            109.840    3.6%  (98% of steps)
+  pi: sync_input_prep                  100.030    3.3%  (100% of steps)
+  pi: update_states                     99.620    3.3%  (100% of steps)
+  pi: prepare_inputs                    94.260    3.1%  (98% of steps)
+  pi: in.block_table_commit             86.260    2.8%  (98% of steps)
+  pi: am.cm_base_pre                    74.880    2.5%  (98% of steps)
+  pi: in.prepare_input_ids              66.450    2.2%  (98% of steps)
+  pi: am.group_loop                     65.950    2.2%  (98% of steps)
+  pi: in.tokens_to_gpu                  61.080    2.0%  (98% of steps)
+wrote /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s1-on-attn-20260923T183356Z/per_step_subscope.csv
+wrote /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s1-on-attn-20260923T183356Z/summary.csv
+wrote /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s1-on-attn-20260923T183356Z/summary_groups.csv

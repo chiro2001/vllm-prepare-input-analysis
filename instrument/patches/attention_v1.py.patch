@@ -1,0 +1,229 @@
+--- instrument/baseline/attention_v1.py.image	2026-09-24 02:22:52.964698436 +0800
++++ instrument/patched/attention_v1.py	2026-09-24 02:35:54.746505953 +0800
+@@ -63,6 +63,13 @@
+ from vllm_ascend.device.device_op import DeviceOperator
+ from vllm_ascend.memcache_comm_fence import record_attention_compute_start
+ from vllm_ascend.utils import is_950, weak_ref_tensors
++# --- prepare_input sub-scope instrumentation (opt-in, PI_SUBSCOPE=on) -------
++# Second level inside the largest single sub-scope found by the model-runner
++# probes: `pi: am.builder_build` (AscendAttentionMetadataBuilder.build).
++# Inert unless PI_SUBSCOPE=on, exactly like the model-runner probes.
++# See instrument/README.md §6 and agents/subscope_instrumentation/REPORT.md.
++from vllm_ascend.worker.pi_subscope import pi_note, pi_scope
++# ---------------------------------------------------------------------------
+ 
+ # default max value of sliding window size
+ SWA_INT_MAX = 2147483647
+@@ -298,39 +305,97 @@
+         num_actual_tokens = common_attn_metadata.num_actual_tokens
+         query_start_loc_cpu = common_attn_metadata.query_start_loc_cpu[: num_reqs + 1]
+ 
+-        num_decodes, num_prefills, num_decode_tokens, num_prefill_tokens = self._split_decodes_and_prefills(
+-            common_attn_metadata
++        # Structural identity of every builder instance that is actually used.
++        # `pi: am.builder_build` is called once per (kv_cache_group, attn_group),
++        # so without this the 1 ms/step cannot be attributed to a backend.
++        pi_note(
++            f"attn_group/{type(self).__module__}.{type(self).__qualname__}/"
++            f"{len(self.layer_names)}layers",
++            {
++                "builder_class": f"{type(self).__module__}.{type(self).__qualname__}",
++                "n_layers": len(self.layer_names),
++                "layer_names_sample": list(self.layer_names[:4]),
++                "kv_cache_spec_class": f"{type(self.kv_cache_spec).__module__}."
++                                       f"{type(self.kv_cache_spec).__qualname__}",
++                "kv_cache_spec_block_size": getattr(self.kv_cache_spec, "block_size", None),
++                "metadata_cls": f"{self.metadata_cls.__module__}."
++                                f"{self.metadata_cls.__qualname__}",
++                "decode_threshold": getattr(self, "decode_threshold", None),
++                "model_runner_type": self.model_config.runner_type,
++            },
+         )
+ 
+-        block_table = common_attn_metadata.block_table_tensor
+-        # Prefer _seq_lens_cpu (always available, updated during draft
+-        # iterations) over seq_lens_cpu (None in async spec decode mode).
+-        if common_attn_metadata._seq_lens_cpu is not None:
+-            seq_lens = common_attn_metadata._seq_lens_cpu[:num_reqs]
+-        elif common_attn_metadata.seq_lens_cpu is not None:
+-            seq_lens = common_attn_metadata.seq_lens_cpu[:num_reqs]
+-        else:
+-            seq_lens = common_attn_metadata.seq_lens[:num_reqs].to("cpu")
+-
+-        slot_mapping = common_attn_metadata.slot_mapping[:num_actual_tokens]
+-        # this slot_mapping override doesn't work since vllm will override it again. We should fix it vllm.
+-        # see: https://github.com/vllm-project/vllm/blob/ce88756b967c2c5006746a424c15dd59a284ed8c/vllm/model_executor/layers/attention/cross_attention.py#L117
+-        if isinstance(self.kv_cache_spec, CrossAttentionSpec):
+-            seq_lens = common_attn_metadata.seq_lens
+-            slot_mapping = common_attn_metadata.slot_mapping.to(torch.int32)
+-        elif self.speculative_config and self.speculative_config.parallel_drafting:
+-            seq_lens = common_attn_metadata.seq_lens
++        with pi_scope("pi: am.build.split_decodes"):
++            num_decodes, num_prefills, num_decode_tokens, num_prefill_tokens = self._split_decodes_and_prefills(
++                common_attn_metadata
++            )
++
++        with pi_scope("pi: am.build.seq_lens_select"):
++            block_table = common_attn_metadata.block_table_tensor
++            # Prefer _seq_lens_cpu (always available, updated during draft
++            # iterations) over seq_lens_cpu (None in async spec decode mode).
++            if common_attn_metadata._seq_lens_cpu is not None:
++                seq_lens = common_attn_metadata._seq_lens_cpu[:num_reqs]
++            elif common_attn_metadata.seq_lens_cpu is not None:
++                seq_lens = common_attn_metadata.seq_lens_cpu[:num_reqs]
++            else:
++                seq_lens = common_attn_metadata.seq_lens[:num_reqs].to("cpu")
++
++            slot_mapping = common_attn_metadata.slot_mapping[:num_actual_tokens]
++            # this slot_mapping override doesn't work since vllm will override it again. We should fix it vllm.
++            # see: https://github.com/vllm-project/vllm/blob/ce88756b967c2c5006746a424c15dd59a284ed8c/vllm/model_executor/layers/attention/cross_attention.py#L117
++            if isinstance(self.kv_cache_spec, CrossAttentionSpec):
++                seq_lens = common_attn_metadata.seq_lens
++                slot_mapping = common_attn_metadata.slot_mapping.to(torch.int32)
++            elif self.speculative_config and self.speculative_config.parallel_drafting:
++                seq_lens = common_attn_metadata.seq_lens
+ 
+         attn_state = common_attn_metadata.attn_state
+ 
+         # Get attn_mask from singleton AttentionMaskBuilder
+-        attn_mask = self.attn_mask_builder.get_attention_mask(common_attn_metadata.causal, self.model_config)
++        with pi_scope("pi: am.build.attn_mask"):
++            attn_mask = self.attn_mask_builder.get_attention_mask(common_attn_metadata.causal, self.model_config)
++        # Which mask path was taken?  In attention_mask.py:
++        #   not causal            -> None
++        #   runner_type pooling   -> get_attn_mask(2048, bool)   (cached tensor)
++        #   otherwise (generate)  -> get_splitfuse_attn_mask()   (cached 2048x2048)
++        # A plain uncached get_attn_mask would rebuild an O(S^2) tensor every
++        # step, so the measured cost of this scope is the cache-hit evidence.
++        try:
++            pi_note(
++                "attn_mask_path",
++                {
++                    "path": (
++                        "none (non-causal)"
++                        if not common_attn_metadata.causal
++                        else (
++                            "get_attn_mask (cached full matrix, pooling runner)"
++                            if self.model_config.runner_type == "pooling"
++                            else "get_splitfuse_attn_mask (cached 2048x2048 int8)"
++                        )
++                    ),
++                    "causal": bool(common_attn_metadata.causal),
++                    "runner_type": self.model_config.runner_type,
++                    "builder_class": f"{type(self.attn_mask_builder).__module__}."
++                                     f"{type(self.attn_mask_builder).__qualname__}",
++                    "returned_none": attn_mask is None,
++                    "cached_splitfuse_present": (
++                        getattr(self.attn_mask_builder, "chunked_prefill_attn_mask", None)
++                        is not None
++                    ),
++                    "seq_len_cached": getattr(self.attn_mask_builder, "_seq_len_cached", None),
++                },
++            )
++        except Exception:
++            pass
+ 
+         # TODO: Yet another unnecessary H2D while we already have a query_start_loc on device
+-        query_start_loc = query_start_loc_cpu.pin_memory().to(self.device, non_blocking=True)
++        with pi_scope("pi: am.build.qsl_h2d"):
++            query_start_loc = query_start_loc_cpu.pin_memory().to(self.device, non_blocking=True)
+ 
+-        actual_seq_lengths_q = query_start_loc_cpu[1:].tolist()
+-        seq_lens_list = seq_lens.tolist()
++        with pi_scope("pi: am.build.tolist"):
++            actual_seq_lengths_q = query_start_loc_cpu[1:].tolist()
++            seq_lens_list = seq_lens.tolist()
+         # flashcomm1/SP (or cudagraph) padding makes the model runner insert a
+         # dummy padding request into query_start_loc to satisfy the FIA TND-layout
+         # constraint (sum of q lengths == hidden_states.shape[0]), bumping the
+@@ -351,47 +416,50 @@
+         # seq_lens tensor (not seq_lens_list) as actual_seq_kvlen during graph
+         # capture, and _get_fia_params derives the PrefillCacheHit batch size from
+         # seq_lens.shape[0], so the tensor has to carry the dummy request too.
+-        num_reqs_fia = len(actual_seq_lengths_q)
+-        if len(seq_lens_list) < num_reqs_fia:
+-            padding_len = num_reqs_fia - len(seq_lens_list)
+-            seq_lens_list = seq_lens_list + [1] * padding_len
+-            seq_lens = torch.cat([seq_lens, seq_lens.new_ones(padding_len)])
+-        if block_table is not None and block_table.shape[0] < num_reqs_fia:
+-            block_table = torch.cat(
+-                [
+-                    block_table,
+-                    block_table.new_zeros((num_reqs_fia - block_table.shape[0], block_table.shape[1])),
+-                ],
+-                dim=0,
++        with pi_scope("pi: am.build.fia_pad"):
++            num_reqs_fia = len(actual_seq_lengths_q)
++            if len(seq_lens_list) < num_reqs_fia:
++                padding_len = num_reqs_fia - len(seq_lens_list)
++                seq_lens_list = seq_lens_list + [1] * padding_len
++                seq_lens = torch.cat([seq_lens, seq_lens.new_ones(padding_len)])
++            if block_table is not None and block_table.shape[0] < num_reqs_fia:
++                block_table = torch.cat(
++                    [
++                        block_table,
++                        block_table.new_zeros((num_reqs_fia - block_table.shape[0], block_table.shape[1])),
++                    ],
++                    dim=0,
++                )
++
++        with pi_scope("pi: am.build.backend_metadata"):
++            backend_metadata = self._build_backend_metadata(
++                common_attn_metadata,
++                block_table=block_table,
++                query_lens=query_start_loc_cpu[1:] - query_start_loc_cpu[:-1],
++                seq_lens=seq_lens,
++                num_decodes=num_decodes,
++                num_prefills=num_prefills,
++            )
++        with pi_scope("pi: am.build.metadata_ctor"):
++            attn_metadata = self.metadata_cls(
++                num_actual_tokens=num_actual_tokens,
++                num_decode_tokens=num_decode_tokens,
++                block_tables=block_table,
++                query_start_loc=query_start_loc,
++                seq_lens=seq_lens,
++                seq_lens_cpu=seq_lens,
++                seq_lens_list=seq_lens_list,
++                max_query_len=common_attn_metadata.max_query_len,
++                actual_seq_lengths_q=actual_seq_lengths_q,
++                slot_mapping=slot_mapping,
++                attn_mask=attn_mask,
++                attn_state=attn_state,
++                num_prefills=num_prefills,
++                num_decodes=num_decodes,
++                causal=common_attn_metadata.causal,
++                model_runner_type=self.model_config.runner_type,
++                **backend_metadata,
+             )
+-
+-        backend_metadata = self._build_backend_metadata(
+-            common_attn_metadata,
+-            block_table=block_table,
+-            query_lens=query_start_loc_cpu[1:] - query_start_loc_cpu[:-1],
+-            seq_lens=seq_lens,
+-            num_decodes=num_decodes,
+-            num_prefills=num_prefills,
+-        )
+-        attn_metadata = self.metadata_cls(
+-            num_actual_tokens=num_actual_tokens,
+-            num_decode_tokens=num_decode_tokens,
+-            block_tables=block_table,
+-            query_start_loc=query_start_loc,
+-            seq_lens=seq_lens,
+-            seq_lens_cpu=seq_lens,
+-            seq_lens_list=seq_lens_list,
+-            max_query_len=common_attn_metadata.max_query_len,
+-            actual_seq_lengths_q=actual_seq_lengths_q,
+-            slot_mapping=slot_mapping,
+-            attn_mask=attn_mask,
+-            attn_state=attn_state,
+-            num_prefills=num_prefills,
+-            num_decodes=num_decodes,
+-            causal=common_attn_metadata.causal,
+-            model_runner_type=self.model_config.runner_type,
+-            **backend_metadata,
+-        )
+         return attn_metadata
+ 
+     def build_for_graph_capture(

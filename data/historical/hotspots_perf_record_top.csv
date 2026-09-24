@@ -1,0 +1,31 @@
+rank,symbol,dso,category,overhead_percent,samples,period,tags
+1,_PyEval_EvalFrameDefault,libpython3.12.so.1.0,user,10.33,12989,8883156930,python_eval
+2,eventfd_write+0x214,[kernel.kallsyms],kernel,2.06,2591,1771719013,kernel_syscall
+3,pthread_mutex_lock,libc.so.6,user,2.04,2561,1755653446,lock_or_sync
+4,unicodekeys_lookup_unicode,libpython3.12.so.1.0,user,1.88,2366,1619430792,python_eval
+5,_PyType_Lookup,libpython3.12.so.1.0,user,1.56,1962,1343429228,python_eval
+6,_PyObject_Malloc,libpython3.12.so.1.0,user,1.5,1887,1289102957,allocator
+7,_PyObject_GenericGetAttrWithDict,libpython3.12.so.1.0,user,1.28,1609,1103786824,python_eval
+8,malloc,libc.so.6,user,1.19,1485,1019672854,allocator
+9,_PyObject_Free,libpython3.12.so.1.0,user,1.06,1331,909553798,allocator
+10,_Py_dict_lookup,libpython3.12.so.1.0,user,0.8,1011,691471087,python_eval
+11,_PyFrame_ClearExceptCode,libpython3.12.so.1.0,user,0.62,776,531303486,python_frame
+12,0x0000000000083e78,libc.so.6,user,0.59,742,508641777,
+13,PyType_IsSubtype,libpython3.12.so.1.0,user,0.55,693,473689038,python_eval
+14,initialize_locals,libpython3.12.so.1.0,user,0.52,657,449951160,python_eval
+15,PyObject_GetAttr,libpython3.12.so.1.0,user,0.51,635,435236837,python_eval
+16,tupledealloc,libpython3.12.so.1.0,user,0.49,611,417572516,allocator
+17,c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const,libtorch_cpu.so,user,0.47,585,400351724,torch_dispatch
+18,pthread_rwlock_rdlock,libc.so.6,user,0.43,539,369091862,lock_or_sync
+19,0x00000000000127a0,ld-linux-aarch64.so.1,user,0.42,530,362524496,loader
+20,cfree,libc.so.6,user,0.42,527,361350652,allocator
+21,"torch::FunctionSignature::parse(_object*, _object*, _object*, _object**, std::vector<_object*, std::allocator<_object*> >&, bool)",libtorch_python.so,user,0.4,505,345750689,torch_dispatch
+22,el0_svc+0x34,[kernel.kallsyms],kernel,0.38,480,328940978,kernel_syscall
+23,"torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)",libtorch_cpu.so,user,0.37,473,322547535,torch_dispatch
+24,handle_softirqs+0xb0,[kernel.kallsyms],kernel,0.37,464,315867426,kernel_syscall
+25,0x0000000000083e70,libc.so.6,user,0.37,460,316362641,
+26,subtype_dealloc,libpython3.12.so.1.0,user,0.36,456,312238451,
+27,tuple_alloc,libpython3.12.so.1.0,user,0.31,394,269134774,
+28,_PyObject_GetMethod,libpython3.12.so.1.0,user,0.31,386,263531631,
+29,PyObject_GC_UnTrack,libpython3.12.so.1.0,user,0.31,385,263670285,
+30,_PyThreadState_UncheckedGet,libpython3.12.so.1.0,user,0.3,377,257947780,

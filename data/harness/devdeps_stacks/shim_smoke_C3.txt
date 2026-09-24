@@ -1,0 +1,6 @@
+# C3: import vllm
+# ok=True  0.01 ms
+# value: '0.26.0'
+# exc: None
+# ---- traceback ----
+

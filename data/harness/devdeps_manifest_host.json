@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-09-24T01:58:32+0800",
+  "hostname": "host22",
+  "image_ref": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+  "image_repodigests": [
+    "quay.nju.edu.cn/ascend/vllm-ascend@sha256:24ae7427b6cad5ee29e0665e6f69a4d51c9f6178035e38f2ed161bb3d29fe81c"
+  ],
+  "image_id": "sha256:dc9a31b8330d399ad8e91dabaca25798c3d838c36851897bf9a1f77f793072ec",
+  "image_created": "2026-09-03T17:17:10.52828522Z",
+  "docker_run_template": "docker run --rm --network none --user $(id -u):$(id -g) --cpuset-cpus 200-215 -e HOME=/tmp -e USER=REMOTE_USER -e LOGNAME=REMOTE_USER -e TORCHINDUCTOR_CACHE_DIR=/tmp/ti_cache -e TRITON_CACHE_DIR=/tmp/triton_cache -e TORCH_DEVICE_BACKEND_AUTOLOAD=0 -e PI_HARNESS_ROOT=/work/harness -e PYTHONPATH=/work/harness -e PYTHONDONTWRITEBYTECODE=1 -v /home/REMOTE_USER/projects/vllm/prepare-input-phase:/work -w /work quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler bash -c <cmd>",
+  "no_npu_devices_mounted": "yes (pi-docker.sh 从不传 --device /dev/davinci*)",
+  "cpuset_used_by_probes": "200-215 (默认)",
+  "host_cpu_model": "Model name:                           unknown",
+  "host_nproc": "640",
+  "host_numa": "NUMA node(s):                         8",
+  "pi_docker_sha256": "fb429117052bb762e4799d532126e77c74d7b0ae3f0ba9441df86cc8b472a41a"
+}

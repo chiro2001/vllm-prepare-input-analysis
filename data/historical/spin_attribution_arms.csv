@@ -1,0 +1,6 @@
+model,arm_key,arm,n_windows,run_ids,cycles_mean,instructions_mean,ipc_mean,frontend_bound_mean_pct,bad_spec_mean_pct,retiring_mean_pct,backend_bound_mean_pct,source_file
+qwen38-27b,A,A  MTP-off graph (baseline),5,tdb_qwen38-27b_tp1_graph_mtp-off_e1b_20260915T020833Z_4,15349193488.6,11888687247.6,0.7751,57.5746,8.8468,12.918,20.6606,HIST_PROJECT/reports/spin-attribution/windows.csv
+qwen38-27b,B,B  MTP-on graph (unpatched),5,tdb_qwen38-27b_tp1_graph_mtp-on_e1b_20260915T020833Z_5,65980142894.4,72083239522.8,1.0925,24.8324,3.8565,18.2087,53.1024,HIST_PROJECT/reports/spin-attribution/windows.csv
+qwen38-27b,C,C  patch #1+#2 (spin-free),5,tdb_qwen38-27b_tp1_graph_mtp-on_sf3_20260915T094031Z_0,33151194540.2,30413183224.0,0.9174,42.302,6.2832,15.2901,36.1246,HIST_PROJECT/reports/spin-attribution/windows.csv
+qwen38-27b,C1,C1  patch #2 only (wrong-site control),5,tdb_qwen38-27b_tp1_graph_mtp-on_sf1_20260915T091225Z_0,65843232723.8,72196696531.2,1.0965,25.1919,3.9317,18.2752,52.6012,HIST_PROJECT/reports/spin-attribution/windows.csv
+qwen38-27b,C2,C2  patch #1 only,5,tdb_qwen38-27b_tp1_graph_mtp-on_sf2_20260915T092701Z_0,32598303150.4,30095531340.2,0.9234,42.0235,6.2622,15.3897,36.3246,HIST_PROJECT/reports/spin-attribution/windows.csv

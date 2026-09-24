@@ -1,0 +1,4 @@
+{"batch": 1, "tokens": 1, "steps": 125000, "elapsed_s": 6.004, "us_per_step": 48.032, "affinity": [200, 201, 202, 203], "torch": "2.9.0+cpu", "numpy": "2.4.6", "python": "3.11.16", "label": "B1-T1"}
+{"batch": 64, "tokens": 64, "steps": 93400, "elapsed_s": 6.002, "us_per_step": 64.26, "affinity": [200, 201, 202, 203], "torch": "2.9.0+cpu", "numpy": "2.4.6", "python": "3.11.16", "label": "B64-T64"}
+{"batch": 256, "tokens": 256, "steps": 50600, "elapsed_s": 6.015, "us_per_step": 118.88, "affinity": [200, 201, 202, 203], "torch": "2.9.0+cpu", "numpy": "2.4.6", "python": "3.11.16", "label": "B256-T256"}
+{"batch": 8, "tokens": 32768, "steps": 18800, "elapsed_s": 6.061, "us_per_step": 322.369, "affinity": [200, 201, 202, 203], "torch": "2.9.0+cpu", "numpy": "2.4.6", "python": "3.11.16", "label": "B8-T32768"}

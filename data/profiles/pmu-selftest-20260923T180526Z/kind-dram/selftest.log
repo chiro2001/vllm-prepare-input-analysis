@@ -1,0 +1,20 @@
+[2026-09-23T18:06:38Z] selftest cpu=200 groups=[1, 2, 7, 8] sweep_window=5.0s perf_window=5.0s full9_window=3.0s workload=55s dir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/kind-dram
+[2026-09-23T18:06:38Z] --list-groups rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/kind-dram/list-groups.txt
+[2026-09-23T18:06:40Z] workload=libkperfx workload_gen --kind dram pid=4099643 busy_tid=4099644 cpu=200 selection={"source": "schedstat_runtime_ns", "delta": {"4099643": 0, "4099644": 402804300}}
+[2026-09-23T18:06:40Z] target={"tid": 4099644, "comm": "workload_gen", "state": "R", "cpu": 200, "cpus_allowed": [200]}
+[2026-09-23T18:06:45Z] perf attempt 1 events=['cycles', 'instructions'] rc=0 counts=[('cycles', 14504685956), ('instructions', 24099599570)]
+[2026-09-23T18:07:06Z] sweep rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/kind-dram/sweep-g1278-w5
+[2026-09-23T18:07:06Z] compare cycles: perf=14504685956 kperfx=14499716070 rel_err=0.0343% pass=True
+[2026-09-23T18:07:06Z] compare instructions: perf=24099599570 kperfx=24229567174 rel_err=0.5393% pass=True
+[2026-09-23T18:07:06Z] selftest artifacts in /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/kind-dram
+[2026-09-23T18:07:06Z] selftest verdict: PASS
+[2026-09-23T18:13:38Z] selftest cpu=200 groups=[1, 2, 7, 8] sweep_window=5.0s perf_window=5.0s full9_window=3.0s workload=55s dir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/kind-dram
+[2026-09-23T18:13:38Z] --list-groups rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/kind-dram/list-groups.txt
+[2026-09-23T18:13:39Z] workload=libkperfx workload_gen --kind dram pid=4180344 busy_tid=4180345 cpu=200 selection={"source": "schedstat_runtime_ns", "delta": {"4180344": 0, "4180345": 399033210}}
+[2026-09-23T18:13:39Z] target={"tid": 4180345, "comm": "workload_gen", "state": "R", "cpu": 200, "cpus_allowed": [200]}
+[2026-09-23T18:13:45Z] perf attempt 1 events=['cycles', 'instructions'] rc=0 counts=[('cycles', 14502830383), ('instructions', 20900063005)]
+[2026-09-23T18:14:05Z] sweep rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/kind-dram/sweep-g1278-w5
+[2026-09-23T18:14:05Z] compare cycles: perf=14502830383 kperfx=14499636362 rel_err=0.0220% pass=True
+[2026-09-23T18:14:05Z] compare instructions: perf=20900063005 kperfx=20896982942 rel_err=0.0147% pass=True
+[2026-09-23T18:14:06Z] selftest artifacts in /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/kind-dram
+[2026-09-23T18:14:06Z] selftest verdict: PASS

@@ -1,0 +1,254 @@
+{
+  "caliber_version": "prof-v1",
+  "tag": "prof_realmachine",
+  "ts": "2026-09-24T03:16:15+0800",
+  "cmd": [
+    "python3",
+    "-m",
+    "pi_harness.runner._replay_main",
+    "--preset",
+    "realmachine",
+    "--batch",
+    "1",
+    "--isl",
+    "128",
+    "--osl",
+    "64",
+    "--steady-seconds",
+    "240"
+  ],
+  "host": {
+    "hostname": "host22",
+    "user": "REMOTE_USER",
+    "kernel": "6.6.0-159.4.3.154.oe2403sp4.aarch64",
+    "arch": "aarch64",
+    "python": "3.11.6",
+    "nproc_affinity": 640,
+    "cpu_model": {
+      "BogoMIPS": "200.00",
+      "CPU implementer": "0x48",
+      "CPU architecture": "8",
+      "CPU variant": "0x0",
+      "CPU part": "0xd02",
+      "CPU revision": "0"
+    },
+    "lscpu": {
+      "Architecture": "aarch64",
+      "CPU(s)": "640",
+      "Thread(s) per core": "2",
+      "Core(s) per socket": "80",
+      "Socket(s)": "4",
+      "NUMA node(s)": "8",
+      "CPU max MHz": "2900.0000",
+      "CPU min MHz": "400.0000",
+      "L1d cache": "20 MiB (320 instances)",
+      "L2 cache": "400 MiB (320 instances)",
+      "L3 cache": "560 MiB (8 instances)",
+      "Model name": "unknown"
+    },
+    "mem_total_kb": 2111115680,
+    "uptime": "495982.18 295777542.78",
+    "loadavg": [
+      "46.88",
+      "49.66",
+      "51.41"
+    ],
+    "perf_event_paranoid": "2",
+    "perf_event_max_sample_rate": "38250",
+    "ts": "2026-09-24T03:16:15+0800"
+  },
+  "cpu": {
+    "cpus": [
+      201,
+      202,
+      205,
+      207,
+      208,
+      210,
+      212,
+      214
+    ],
+    "cpuset": "201-202,205,207-208,210,212,214",
+    "n_cpus": 8,
+    "n_physical_cores": 8,
+    "smt_engaged": false,
+    "smt_sibling_groups": {},
+    "numa_nodes": [
+      2
+    ],
+    "per_cpu": {
+      "201": {
+        "thread_siblings_list": "200-201",
+        "numa_node": 2,
+        "scaling_cur_freq_khz": 2900004,
+        "scaling_max_freq_khz": 2900000,
+        "cpuinfo_max_freq_khz": 2900000
+      },
+      "202": {
+        "thread_siblings_list": "202-203",
+        "numa_node": 2,
+        "scaling_cur_freq_khz": 2899995,
+        "scaling_max_freq_khz": 2900000,
+        "cpuinfo_max_freq_khz": 2900000
+      },
+      "205": {
+        "thread_siblings_list": "204-205",
+        "numa_node": 2,
+        "scaling_cur_freq_khz": 2899993,
+        "scaling_max_freq_khz": 2900000,
+        "cpuinfo_max_freq_khz": 2900000
+      },
+      "207": {
+        "thread_siblings_list": "206-207",
+        "numa_node": 2,
+        "scaling_cur_freq_khz": 2899995,
+        "scaling_max_freq_khz": 2900000,
+        "cpuinfo_max_freq_khz": 2900000
+      },
+      "208": {
+        "thread_siblings_list": "208-209",
+        "numa_node": 2,
+        "scaling_cur_freq_khz": 2900022,
+        "scaling_max_freq_khz": 2900000,
+        "cpuinfo_max_freq_khz": 2900000
+      },
+      "210": {
+        "thread_siblings_list": "210-211",
+        "numa_node": 2,
+        "scaling_cur_freq_khz": 2899980,
+        "scaling_max_freq_khz": 2900000,
+        "cpuinfo_max_freq_khz": 2900000
+      },
+      "212": {
+        "thread_siblings_list": "212-213",
+        "numa_node": 2,
+        "scaling_cur_freq_khz": 2899991,
+        "scaling_max_freq_khz": 2900000,
+        "cpuinfo_max_freq_khz": 2900000
+      },
+      "214": {
+        "thread_siblings_list": "214-215",
+        "numa_node": 2,
+        "scaling_cur_freq_khz": 2899997,
+        "scaling_max_freq_khz": 2900000,
+        "cpuinfo_max_freq_khz": 2900000
+      }
+    },
+    "scaling_cur_freq_khz_min": 2899980,
+    "scaling_cur_freq_khz_max": 2900022,
+    "scaling_cur_freq_khz_mean": 2899997.125,
+    "governor": "performance"
+  },
+  "top_procs": [
+    {
+      "pid": 1022870,
+      "user": "OTHER_USER",
+      "pcpu": 180.0,
+      "pmem": 0.3,
+      "comm": "python"
+    },
+    {
+      "pid": 1015672,
+      "user": "OTHER_USER",
+      "pcpu": 179.0,
+      "pmem": 0.3,
+      "comm": "python"
+    },
+    {
+      "pid": 1021396,
+      "user": "OTHER_USER",
+      "pcpu": 178.0,
+      "pmem": 0.4,
+      "comm": "python"
+    },
+    {
+      "pid": 1017086,
+      "user": "OTHER_USER",
+      "pcpu": 178.0,
+      "pmem": 0.5,
+      "comm": "python"
+    },
+    {
+      "pid": 1022811,
+      "user": "OTHER_USER",
+      "pcpu": 178.0,
+      "pmem": 0.4,
+      "comm": "python"
+    },
+    {
+      "pid": 1017036,
+      "user": "OTHER_USER",
+      "pcpu": 178.0,
+      "pmem": 0.4,
+      "comm": "python"
+    },
+    {
+      "pid": 1018517,
+      "user": "OTHER_USER",
+      "pcpu": 177.0,
+      "pmem": 0.5,
+      "comm": "python"
+    },
+    {
+      "pid": 1012923,
+      "user": "OTHER_USER",
+      "pcpu": 177.0,
+      "pmem": 0.5,
+      "comm": "python"
+    },
+    {
+      "pid": 1014184,
+      "user": "OTHER_USER",
+      "pcpu": 176.0,
+      "pmem": 0.3,
+      "comm": "python"
+    },
+    {
+      "pid": 1012954,
+      "user": "OTHER_USER",
+      "pcpu": 174.0,
+      "pmem": 0.5,
+      "comm": "python"
+    },
+    {
+      "pid": 1018573,
+      "user": "OTHER_USER",
+      "pcpu": 174.0,
+      "pmem": 0.5,
+      "comm": "python"
+    },
+    {
+      "pid": 1020065,
+      "user": "OTHER_USER",
+      "pcpu": 174.0,
+      "pmem": 0.3,
+      "comm": "python"
+    }
+  ],
+  "image": {
+    "image": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+    "image_id": "sha256:dc9a31b8330d399ad8e91dabaca25798c3d838c36851897bf9a1f77f793072ec",
+    "repo_digests": [
+      "quay.nju.edu.cn/ascend/vllm-ascend@sha256:24ae7427b6cad5ee29e0665e6f69a4d51c9f6178035e38f2ed161bb3d29fe81c"
+    ],
+    "created": "2026-09-03T17:17:10.52828522Z"
+  },
+  "script_sha256": {
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/harness/pi_harness/profiling/collect.py": "dfd8bc7b668d600c32fc558c46bd4d72c06a63f5e91087b49d0d1ff93aca2812"
+  },
+  "extra": {
+    "stages": [
+      "pmu",
+      "topdown",
+      "perf"
+    ],
+    "cpus_arg": "201-202,205,207-208,210,212,214",
+    "docker_args": [],
+    "callgraph": "dwarf",
+    "perf_freq": 999,
+    "topdown_level": "full",
+    "topdown_mode": "split",
+    "gate": false,
+    "out": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_realmachine_20260924-031609"
+  }
+}

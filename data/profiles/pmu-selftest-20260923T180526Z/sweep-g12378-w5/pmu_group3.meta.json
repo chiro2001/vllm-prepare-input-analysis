@@ -1,0 +1,119 @@
+{
+  "schema": "pi-pmu-group-meta-v1",
+  "tag": "selftest-20260923T180526Z",
+  "group": 3,
+  "preset": "920b_topdown_full_3",
+  "events": [
+    "br_mis_pred",
+    "o3_flush",
+    "nuke_flush",
+    "bp_misp_br_ind",
+    "bp_misp_br_blr",
+    "bp_misp_br_bl",
+    "bp_misp_br_ret",
+    "if_sp_flush"
+  ],
+  "tid": 4160170,
+  "pid": 0,
+  "status": "ok",
+  "attempts": 1,
+  "rc": 0,
+  "timed_out": false,
+  "error": null,
+  "outer_wall_s": 5.1334,
+  "inner_wall_s": 5.01618,
+  "started_at_utc": "2026-09-23T18:12:54Z",
+  "finished_at_utc": "2026-09-23T18:12:59Z",
+  "confidence": 1.0,
+  "time_enabled": 5000014580,
+  "time_running": 5000014580,
+  "useronly_forced": false,
+  "counters": [
+    {
+      "name": "BR_MIS_PRED",
+      "id": "br_mis_pred",
+      "config": "0x10",
+      "delta": 81268,
+      "rate": 16253.552605
+    },
+    {
+      "name": "O3_FLUSH",
+      "id": "o3_flush",
+      "config": "0x2010",
+      "delta": 324515,
+      "rate": 64902.810743
+    },
+    {
+      "name": "NUKE_FLUSH",
+      "id": "nuke_flush",
+      "config": "0x200f",
+      "delta": 3639,
+      "rate": 727.797878
+    },
+    {
+      "name": "BP_MISP_BR_IND",
+      "id": "bp_misp_br_ind",
+      "config": "0x1010",
+      "delta": 253,
+      "rate": 50.599852
+    },
+    {
+      "name": "BP_MISP_BR_BLR",
+      "id": "bp_misp_br_blr",
+      "config": "0x1013",
+      "delta": 209,
+      "rate": 41.799878
+    },
+    {
+      "name": "BP_MISP_BR_BL",
+      "id": "bp_misp_br_bl",
+      "config": "0x1016",
+      "delta": 199,
+      "rate": 39.799884
+    },
+    {
+      "name": "BP_MISP_BR_RET",
+      "id": "bp_misp_br_ret",
+      "config": "0x100d",
+      "delta": 44,
+      "rate": 8.799974
+    },
+    {
+      "name": "IF_SP_FLUSH",
+      "id": "if_sp_flush",
+      "config": "0x104f",
+      "delta": 128337,
+      "rate": 25667.325154
+    }
+  ],
+  "counters_map": {
+    "BR_MIS_PRED": 81268,
+    "O3_FLUSH": 324515,
+    "NUKE_FLUSH": 3639,
+    "BP_MISP_BR_IND": 253,
+    "BP_MISP_BR_BLR": 209,
+    "BP_MISP_BR_BL": 199,
+    "BP_MISP_BR_RET": 44,
+    "IF_SP_FLUSH": 128337
+  },
+  "cmd": [
+    "sudo",
+    "-n",
+    "/usr/bin/python3",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+    "--inner",
+    "--tid",
+    "4160170",
+    "--group",
+    "3",
+    "--window",
+    "5.000000",
+    "--preset-prefix",
+    "920b_topdown_full_",
+    "--kperfx-python",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/python",
+    "--quiet"
+  ],
+  "stderr_tail": "KPERFX_META {\"group\": 3, \"preset\": \"920b_topdown_full_3\", \"events\": [\"br_mis_pred\", \"o3_flush\", \"nuke_flush\", \"bp_misp_br_ind\", \"bp_misp_br_blr\", \"bp_misp_br_bl\", \"bp_misp_br_ret\", \"if_sp_flush\"], \"tid\": 4160170, \"window_requested_s\": 5.0, \"wall_s\": 5.01618, \"started_at_utc\": \"2026-09-23T18:12:54Z\", \"finished_at_utc\": \"2026-09-23T18:12:59Z\", \"time_enabled_ns\": 5000014580, \"time_running_ns\": 5000014580, \"confidence\": 1.0, \"useronly_forced\": false, \"instances\": 1, \"counters\": 8, \"raw_json_writer\": \"kperfx_ctx_write_output\"}\n",
+  "raw_json_writer": "kperfx_ctx_write_output"
+}

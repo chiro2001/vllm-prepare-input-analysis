@@ -1,0 +1,24 @@
+$ perf stat -e task-clock,cycles,instructions,branches,branch-misses,cycles:u,cycles:k -- taskset -c 122 /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/probe_load --duration-ms 2500
+# rc=0 wall_s=2.610
+
+probe_load done kind=mixed threads=1 duration_ms=2500 acc=3925476510555
+
+----- stderr -----
+
+ Performance counter stats for 'taskset -c 122 /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/probe_load --duration-ms 2500':
+
+          2,500.77 msec task-clock                       #    1.000 CPUs utilized             
+     7,252,159,710      cycles                           #    2.900 GHz                       
+    13,465,579,081      instructions                     #    1.86  insn per cycle            
+     1,535,281,633      branches                         #  613.924 M/sec                     
+        80,374,997      branch-misses                    #    5.24% of all branches           
+     7,235,316,568      cycles:u                                                              
+        16,843,142      cycles:k                                                              
+
+       2.501473140 seconds time elapsed
+
+       2.496553000 seconds user
+       0.000000000 seconds sys
+
+
+

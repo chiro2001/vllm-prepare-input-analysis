@@ -1,0 +1,45 @@
+$ bash -lc KPERFX_EVENTS=CPU_CYCLES,INST_RETIRED,INST_SPEC,BR_MIS_PRED,BR_PRED,STALL_FRONTEND,STALL_BACKEND,L1D_TLB,L1I_TLB,L1D_CACHE,L1D_CACHE_REFILL,L1I_CACHE_REFILL,LD_RETIRED,ST_RETIRED,MEM_ACCESS,TOTAL_RESOURCE_STALL KPERFX_MULTIPLEX=1 KPERFX_FORMAT=json /home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/kperfx run -- taskset -c 122 /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/probe_load --duration-ms 1500
+# rc=0 wall_s=1.569
+
+probe_load done kind=mixed threads=1 duration_ms=1500 acc=2361125148405
+{
+  "count": 16,
+  "entries": [
+    {"name":"CPU_CYCLES","id":"CPU_CYCLES","config":"0x11","delta":2171040172,"rate":723082068.462715},
+    {"name":"INST_RETIRED","id":"INST_RETIRED","config":"0x8","delta":4014443321,"rate":1337042039.899670},
+    {"name":"INST_SPEC","id":"INST_SPEC","config":"0x1b","delta":6676798976,"rate":2223760608.643319},
+    {"name":"BR_MIS_PRED","id":"BR_MIS_PRED","config":"0x10","delta":24044021,"rate":8008051.008483},
+    {"name":"BR_PRED","id":"BR_PRED","config":"0x12","delta":523903983,"rate":174490357.474369},
+    {"name":"STALL_FRONTEND","id":"STALL_FRONTEND","config":"0x23","delta":113427283,"rate":37777852.049688},
+    {"name":"STALL_BACKEND","id":"STALL_BACKEND","config":"0x24","delta":928345968,"rate":309192953.427515},
+    {"name":"L1D_TLB","id":"L1D_TLB","config":"0x25","delta":358058142,"rate":119254090.866853},
+    {"name":"L1I_TLB","id":"L1I_TLB","config":"0x26","delta":739072052,"rate":246153781.489375},
+    {"name":"L1D_CACHE","id":"L1D_CACHE","config":"0x4","delta":353452814,"rate":117720250.019900},
+    {"name":"L1D_CACHE_REFILL","id":"L1D_CACHE_REFILL","config":"0x3","delta":1808775,"rate":602426.793042},
+    {"name":"L1I_CACHE_REFILL","id":"L1I_CACHE_REFILL","config":"0x1","delta":60187,"rate":20045.755494},
+    {"name":"LD_RETIRED","id":"LD_RETIRED","config":"0x6","delta":0,"rate":0.000000},
+    {"name":"ST_RETIRED","id":"ST_RETIRED","config":"0x7","delta":0,"rate":0.000000},
+    {"name":"MEM_ACCESS","id":"MEM_ACCESS","config":"0x13","delta":353452814,"rate":117720250.019900},
+    {"name":"TOTAL_RESOURCE_STALL","id":"TOTAL_RESOURCE_STALL","config":"0x7000","delta":51660632,"rate":17205981.320115}
+  ],
+  "time_enabled": 3002481000,
+  "time_running": 1501240500,
+  "confidence": 0.500000,
+  "sampled": false,
+  "sample_count": 0,
+  "lost_samples": 0,
+  "gated": false,
+  "iter_gated": false,
+  "iter_start_at": 0,
+  "iter_end_at": 0,
+  "iter_start_seen": 0,
+  "iter_end_seen": 0,
+  "roi_start_seen": 0,
+  "roi_end_seen": 0,
+  "useronly_forced": false,
+  "instances": 2,
+  "pmu": "920B"
+}
+
+----- stderr -----
+

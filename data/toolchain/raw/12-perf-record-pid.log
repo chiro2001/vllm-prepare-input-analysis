@@ -1,0 +1,8 @@
+$ perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-pid.data -F 499 -g --call-graph fp -p 3965468 -- sleep 1.5
+# rc=0 wall_s=2.906
+
+
+----- stderr -----
+[ perf record: Woken up 1 times to write data ]
+[ perf record: Captured and wrote 0.141 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-pid.data (745 samples) ]
+

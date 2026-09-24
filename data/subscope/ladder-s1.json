@@ -1,0 +1,96 @@
+{
+  "scenario": "s1",
+  "stamp": "S1b",
+  "arms": {
+    "A": {
+      "run_id": "sub-s1-baseline-S1b",
+      "prepare_input_mean_us": 2720.0,
+      "step_p50_us": 4915.0,
+      "forward_mean_us": 830.6,
+      "n_steps": 63.0,
+      "share_pct": 55.340793489318415,
+      "prepare_input_p50_us_independent": 2757.6,
+      "phases": [
+        "draft_token",
+        "forward",
+        "n_steps",
+        "post process",
+        "prepare input",
+        "sample_token",
+        "step_dur"
+      ]
+    },
+    "B": {
+      "run_id": "sub-s1-mounted-off-S1b",
+      "prepare_input_mean_us": 2767.1,
+      "step_p50_us": 4979.0,
+      "forward_mean_us": 838.1,
+      "n_steps": 63.0,
+      "share_pct": 55.57541675035148,
+      "prepare_input_p50_us_independent": 2806.2,
+      "phases": [
+        "draft_token",
+        "forward",
+        "n_steps",
+        "post process",
+        "prepare input",
+        "sample_token",
+        "step_dur"
+      ]
+    },
+    "C": {
+      "run_id": "sub-s1-on-S1b",
+      "prepare_input_mean_us": 3110.9,
+      "step_p50_us": 5440.0,
+      "forward_mean_us": 868.3,
+      "n_steps": 63.0,
+      "share_pct": 57.185661764705884,
+      "prepare_input_p50_us_independent": 3072.6,
+      "phases": [
+        "draft_token",
+        "forward",
+        "n_steps",
+        "post process",
+        "prepare input",
+        "sample_token",
+        "step_dur"
+      ]
+    },
+    "D1": {
+      "run_id": "sub-s1-mounted-off-pystack-20260923T183356Z",
+      "prepare_input_mean_us": 3474.7,
+      "step_p50_us": 6187.0,
+      "forward_mean_us": 956.2,
+      "n_steps": 63.0,
+      "share_pct": 56.16130596411831,
+      "prepare_input_p50_us_independent": 3484.8,
+      "phases": [
+        "draft_token",
+        "forward",
+        "n_steps",
+        "post process",
+        "prepare input",
+        "sample_token",
+        "step_dur"
+      ]
+    },
+    "D2": {
+      "run_id": "sub-s1-mounted-off-2-20260923T183356Z",
+      "prepare_input_mean_us": 2871.0,
+      "step_p50_us": 5089.0,
+      "forward_mean_us": 849.2,
+      "n_steps": 63.0,
+      "share_pct": 56.41579878168599,
+      "prepare_input_p50_us_independent": 2909.5,
+      "phases": [
+        "draft_token",
+        "forward",
+        "n_steps",
+        "post process",
+        "prepare input",
+        "sample_token",
+        "step_dur"
+      ]
+    }
+  }
+}

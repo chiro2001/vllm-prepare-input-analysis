@@ -1,0 +1,230 @@
+{
+  "caliber_version": "prof-v1",
+  "kind": "self_overhead",
+  "perfdata": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_hash_20260924-021336/passes/perf/perf.data",
+  "cmd": [
+    "perf",
+    "report",
+    "--force",
+    "--stdio",
+    "--no-children",
+    "--sort",
+    "dso,symbol",
+    "-t",
+    "|",
+    "-i",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_hash_20260924-021336/passes/perf/perf.data",
+    "--symfs",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_hash_20260924-021336/passes/perf/symfs"
+  ],
+  "header": {
+    "samples": "4K of event 'cycles:P'",
+    "lost_samples": "0",
+    "event_count": "11856333870"
+  },
+  "total_symbols": 160,
+  "top": [
+    {
+      "overhead_pct": 7.34,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ff54"
+    },
+    {
+      "overhead_pct": 7.26,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x00000000002300d4"
+    },
+    {
+      "overhead_pct": 6.31,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ffd8"
+    },
+    {
+      "overhead_pct": 6.02,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ffa0"
+    },
+    {
+      "overhead_pct": 5.42,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ffbc"
+    },
+    {
+      "overhead_pct": 5.35,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000023002c"
+    },
+    {
+      "overhead_pct": 5.32,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x00000000002300fc"
+    },
+    {
+      "overhead_pct": 5.04,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x0000000000230048"
+    },
+    {
+      "overhead_pct": 5.01,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x0000000000230080"
+    },
+    {
+      "overhead_pct": 4.92,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x0000000000230010"
+    },
+    {
+      "overhead_pct": 4.78,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022fff4"
+    },
+    {
+      "overhead_pct": 4.75,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x00000000002300b8"
+    },
+    {
+      "overhead_pct": 3.92,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000023009c"
+    },
+    {
+      "overhead_pct": 3.89,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x0000000000230064"
+    },
+    {
+      "overhead_pct": 3.49,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ff84"
+    },
+    {
+      "overhead_pct": 1.49,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x00000000002300e8"
+    },
+    {
+      "overhead_pct": 1.47,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b4c"
+    },
+    {
+      "overhead_pct": 1.3,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ff50"
+    },
+    {
+      "overhead_pct": 1.27,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x00000000001e7c94"
+    },
+    {
+      "overhead_pct": 1.17,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] EVP_DigestFinal_ex"
+    },
+    {
+      "overhead_pct": 1.1,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x000000000022ef80"
+    },
+    {
+      "overhead_pct": 0.88,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] CRYPTO_atomic_load"
+    },
+    {
+      "overhead_pct": 0.56,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099b44"
+    },
+    {
+      "overhead_pct": 0.49,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] CRYPTO_malloc"
+    },
+    {
+      "overhead_pct": 0.44,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] SHA256_Final"
+    },
+    {
+      "overhead_pct": 0.39,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyEval_EvalFrameDefault"
+    },
+    {
+      "overhead_pct": 0.39,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_Free"
+    },
+    {
+      "overhead_pct": 0.38,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyBytes_FromStringAndSize"
+    },
+    {
+      "overhead_pct": 0.37,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] EVP_MD_free"
+    },
+    {
+      "overhead_pct": 0.36,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] _PyObject_Malloc"
+    },
+    {
+      "overhead_pct": 0.34,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] PyBuffer_FillInfo"
+    },
+    {
+      "overhead_pct": 0.32,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] EVP_MD_CTX_free"
+    },
+    {
+      "overhead_pct": 0.32,
+      "dso": "_hashlib.cpython-312-aarch64-linux-gnu.so",
+      "symbol": "[.] py_evp_fromname"
+    },
+    {
+      "overhead_pct": 0.29,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] EVP_DigestUpdate"
+    },
+    {
+      "overhead_pct": 0.29,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] 0x0000000000294c50"
+    },
+    {
+      "overhead_pct": 0.27,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x0000000000099a40"
+    },
+    {
+      "overhead_pct": 0.27,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] EVP_PKEY_CTX_free"
+    },
+    {
+      "overhead_pct": 0.27,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] OPENSSL_cleanse"
+    },
+    {
+      "overhead_pct": 0.27,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] EVP_MD_up_ref"
+    },
+    {
+      "overhead_pct": 0.24,
+      "dso": "libcrypto.so.3.0.12",
+      "symbol": "[.] OPENSSL_init_crypto"
+    }
+  ],
+  "sum_of_top_pct": 93.76,
+  "sum_all_pct": 99.74
+}

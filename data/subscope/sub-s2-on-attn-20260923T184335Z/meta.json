@@ -1,0 +1,32 @@
+{
+  "raw": "data/subscope/sub-s2-on-attn-20260923T184335Z/raw.csv",
+  "worker_tid": 131,
+  "steps_total": 125,
+  "steps_analysed": 123,
+  "steps_dropped_as_warmup": 0,
+  "n_probe_names": 43,
+  "prepare_input_wall_us": {
+    "p50": 4227.93,
+    "p90": 4715.65,
+    "p99": 11622.15,
+    "mean": 4641.216,
+    "min": 160.47
+  },
+  "phases": [
+    "decode",
+    "prefill",
+    "prefill+decode",
+    "unknown"
+  ],
+  "unattributed_us_p50": 301.79,
+  "unattributed_pct_p50": 7.14,
+  "invariant_max_abs_residual_us": 0.0,
+  "probe_floor_us": 2.2,
+  "scopes_below_probe_floor": [
+    "pi: am.build.fia_pad",
+    "pi: ubatch_slices",
+    "pi: am.build.attn_mask",
+    "pi: sanitize_placeholder_ids",
+    "pi: in.mrope_drift"
+  ]
+}

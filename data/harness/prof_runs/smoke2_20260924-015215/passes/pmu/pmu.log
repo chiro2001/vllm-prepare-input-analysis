@@ -1,0 +1,1 @@
+{"counters": {"CPU_CYCLES": 1110083284, "INST_RETIRED": 4223505895, "INST_SPEC": 4586308590, "BR_PRED": 917827468, "BR_MIS_PRED": 4311259, "L1D_CACHE_REFILL": 1009698}, "confidence": 1.0, "ipc": 3.804674798616281, "stopped_reason": "target_exit"}

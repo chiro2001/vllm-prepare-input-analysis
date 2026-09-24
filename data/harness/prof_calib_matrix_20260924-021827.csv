@@ -1,0 +1,2 @@
+phase,caliber,ipc,confidence,retiring,bad_spec,frontend_bound,backend_bound,top_hot,flamegraph,pyspy,run_dir
+full_arith,prof-v1,3.873658698078046,1.0,63.85728061861492,4.671659654508847,28.266256814123686,3.204802912752541,[.] _PyObject_Free,True,False,/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_full_arith_20260924-021827

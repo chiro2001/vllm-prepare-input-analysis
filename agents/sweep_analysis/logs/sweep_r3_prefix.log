@@ -1,0 +1,172 @@
+[run] 2026-09-24T02:50:07+08:00 :: --sweep prefix_hit_ratio --isl 1024 --steps 80 --repeat 3 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+can not use command: npu-smi info
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+INFO 09-23 18:50:21 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 18:50:21 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-23 18:50:21 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-23 18:50:21 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-23 18:50:21 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+INFO 09-23 18:50:54 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:54 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:54 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 09-23 18:50:54 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=2048.
+INFO 09-23 18:50:54 [vllm.py:1109] Asynchronous scheduling is enabled.
+INFO 09-23 18:50:54 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:54 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:54 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+INFO 09-23 18:50:54 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:54 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] prefix_hit_ratio=0.0 rep=0 pi_p50=492.8us us_p50=44.2us steps=80
+INFO 09-23 18:50:54 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:54 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:54 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:54 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:54 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:54 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] prefix_hit_ratio=0.0 rep=1 pi_p50=494.8us us_p50=45.6us steps=80
+INFO 09-23 18:50:54 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:54 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:54 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:54 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:54 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:54 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] prefix_hit_ratio=0.0 rep=2 pi_p50=494.0us us_p50=45.7us steps=80
+INFO 09-23 18:50:54 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:54 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:54 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:54 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:54 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:54 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] prefix_hit_ratio=0.25 rep=0 pi_p50=498.8us us_p50=46.0us steps=80
+INFO 09-23 18:50:54 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:54 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:54 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:54 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:54 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:54 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] prefix_hit_ratio=0.25 rep=1 pi_p50=501.9us us_p50=46.8us steps=80
+INFO 09-23 18:50:54 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:54 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:54 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:54 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:54 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:54 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] prefix_hit_ratio=0.25 rep=2 pi_p50=482.7us us_p50=43.0us steps=80
+INFO 09-23 18:50:55 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:55 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:55 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:55 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:55 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:55 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] prefix_hit_ratio=0.5 rep=0 pi_p50=504.4us us_p50=46.3us steps=80
+INFO 09-23 18:50:55 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:55 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:55 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:55 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:55 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:55 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] prefix_hit_ratio=0.5 rep=1 pi_p50=506.8us us_p50=47.0us steps=80
+INFO 09-23 18:50:55 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:55 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:55 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:55 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:55 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:55 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] prefix_hit_ratio=0.5 rep=2 pi_p50=487.4us us_p50=43.3us steps=80
+INFO 09-23 18:50:55 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:55 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:55 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:55 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:55 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:55 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] prefix_hit_ratio=0.75 rep=0 pi_p50=493.3us us_p50=44.8us steps=80
+INFO 09-23 18:50:55 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:55 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:55 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:55 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:55 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:55 [ascend_config.py:922] The number of redundant experts is 0
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[sweep] prefix_hit_ratio=0.75 rep=1 pi_p50=494.3us us_p50=45.7us steps=80
+INFO 09-23 18:50:55 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:55 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:55 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:55 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:55 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:55 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] prefix_hit_ratio=0.75 rep=2 pi_p50=500.0us us_p50=45.8us steps=80
+INFO 09-23 18:50:55 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:55 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:55 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:55 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:55 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:55 [ascend_config.py:922] The number of redundant experts is 0
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[sweep] prefix_hit_ratio=1.0 rep=0 pi_p50=503.1us us_p50=46.2us steps=80
+INFO 09-23 18:50:55 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:55 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:55 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:55 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:55 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:55 [ascend_config.py:922] The number of redundant experts is 0
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[sweep] prefix_hit_ratio=1.0 rep=1 pi_p50=504.8us us_p50=46.6us steps=80
+INFO 09-23 18:50:55 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:50:55 [model.py:1788] Using max model len 262144
+INFO 09-23 18:50:55 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:50:55 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:50:55 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:50:55 [ascend_config.py:922] The number of redundant experts is 0
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[sweep] prefix_hit_ratio=1.0 rep=2 pi_p50=503.0us us_p50=46.7us steps=80
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.rtGetAiCoreCount failed, 0x7bc78[sweep] wrote /work/data/harness/sweep_r3_prefix_sweep_prefix_hit_ratio_20260923-185055.csv (15 rows)

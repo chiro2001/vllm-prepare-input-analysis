@@ -1,0 +1,204 @@
+[run] 2026-09-24T02:33:51+08:00 :: --batch 16 --isl 1024 --block-size 32 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+can not use command: npu-smi info
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+INFO 09-23 18:34:05 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 18:34:05 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-23 18:34:05 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-23 18:34:05 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-23 18:34:05 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_interleaved', 'mrope_section'}
+INFO 09-23 18:34:40 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:34:40 [model.py:1788] Using max model len 262144
+INFO 09-23 18:34:40 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 09-23 18:34:40 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=2048.
+INFO 09-23 18:34:40 [vllm.py:1109] Asynchronous scheduling is enabled.
+INFO 09-23 18:34:40 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:34:40 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:34:40 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+INFO 09-23 18:34:40 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:34:40 [ascend_config.py:922] The number of redundant experts is 0
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.rtGetAiCoreCount failed, 0x7bc78{
+  "config": {
+    "model_profile": "qwen35-0.8b",
+    "model_path": "/models/Qwen3.5-0.8B",
+    "hf_config_path": null,
+    "dtype": "bfloat16",
+    "hidden_size": null,
+    "num_hidden_layers": null,
+    "num_attention_heads": null,
+    "num_key_value_heads": null,
+    "max_model_len": null,
+    "max_num_reqs": 64,
+    "max_num_batched_tokens": 16384,
+    "block_size": 32,
+    "enable_chunked_prefill": true,
+    "enable_prefix_caching": true,
+    "num_spec_tokens": 0,
+    "async_scheduling": false,
+    "has_gdn": true,
+    "pin_memory": false,
+    "device": "cpu",
+    "batch": 16,
+    "isl": 1024,
+    "osl": 128,
+    "prefix_hit_ratio": 0.0,
+    "arrival": "simultaneous",
+    "steps": 80,
+    "seed": 0,
+    "shuffle_values": false,
+    "op_cost_us": 0.0,
+    "triton_launch_us": 0.0,
+    "slot_mapping_mode": "cpu_fallback",
+    "trace_path": null,
+    "extra": {
+      "chunk_size": 16384
+    }
+  },
+  "meta": {
+    "model_profile": "qwen35-0.8b",
+    "model_config_dir": "/tmp/pi_models/qwen35-0.8b-hx-lx-mx",
+    "vocab_size": 248320,
+    "max_model_len": 262144,
+    "dtype": "torch.bfloat16",
+    "max_num_tokens": 16384,
+    "max_num_reqs": 64,
+    "block_size": 32,
+    "num_spec_tokens": 0,
+    "max_num_blocks_per_req": 8192,
+    "use_async_scheduling": false,
+    "use_async_spec_decode": false,
+    "has_gdn": true,
+    "readonly_attrs_skipped": [],
+    "attr_audit": {}
+  },
+  "steps_run": 80,
+  "wall_s": 0.05033681000350043,
+  "prepare_inputs_us": {
+    "p50": 517.2200035303831,
+    "p90": 537.8209985792637,
+    "p99": 640.6631716527036,
+    "mean": 523.8392506726086,
+    "sum": 41907.14005380869
+  },
+  "update_states_us": {
+    "p50": 45.76498758979142,
+    "p90": 46.37603415176273,
+    "mean": 45.92662080540322
+  },
+  "scope_total_us": {
+    "p50": 563.020003028214,
+    "p90": 586.0220233444124,
+    "mean": 569.905497104628
+  },
+  "substeps": [
+    {
+      "substep": "NPUModelRunner._prepare_inputs",
+      "calls": 80,
+      "total_us": 41285.50988389179,
+      "share_of_scope_pct": 90.55341213069632
+    },
+    {
+      "substep": "MultiGroupBlockTable.compute_slot_mapping",
+      "calls": 80,
+      "total_us": 8655.71986651048,
+      "share_of_scope_pct": 18.98498942036304
+    },
+    {
+      "substep": "BlockTable.compute_slot_mapping",
+      "calls": 80,
+      "total_us": 8426.939777564257,
+      "share_of_scope_pct": 18.483195504291587
+    },
+    {
+      "substep": "NPUModelRunner._update_states",
+      "calls": 80,
+      "total_us": 3571.1399978026748,
+      "share_of_scope_pct": 7.832745990224795
+    },
+    {
+      "substep": "MultiGroupBlockTable.commit_block_table",
+      "calls": 80,
+      "total_us": 3417.780506424606,
+      "share_of_scope_pct": 7.496375547762836
+    },
+    {
+      "substep": "GPUModelRunner._update_states",
+      "calls": 80,
+      "total_us": 3347.2097711637616,
+      "share_of_scope_pct": 7.341589500735359
+    },
+    {
+      "substep": "BlockTable.commit_block_table",
+      "calls": 80,
+      "total_us": 3271.469962783158,
+      "share_of_scope_pct": 7.175465887334988
+    },
+    {
+      "substep": "NPUModelRunner._build_attn_state",
+      "calls": 80,
+      "total_us": 1919.83999684453,
+      "share_of_scope_pct": 4.210873571579337
+    },
+    {
+      "substep": "GPUModelRunner._get_cumsum_and_arange",
+      "calls": 80,
+      "total_us": 1363.1302281282842,
+      "share_of_scope_pct": 2.9898163709895518
+    },
+    {
+      "substep": "GPUModelRunner._prepare_input_ids",
+      "calls": 80,
+      "total_us": 1201.7999542877078,
+      "share_of_scope_pct": 2.6359632438917133
+    },
+    {
+      "substep": "InputBatch.update_req_spec_token_ids",
+      "calls": 1280,
+      "total_us": 643.1596120819449,
+      "share_of_scope_pct": 1.4106716274660451
+    },
+    {
+      "substep": "GPUModelRunner._compute_prev_positions",
+      "calls": 80,
+      "total_us": 195.63018577173352,
+      "share_of_scope_pct": 0.42908470519590836
+    },
+    {
+      "substep": "InputBatch.refresh_metadata",
+      "calls": 80,
+      "total_us": 184.67969493940473,
+      "share_of_scope_pct": 0.4050664888250317
+    },
+    {
+      "substep": "InputBatch.condense",
+      "calls": 80,
+      "total_us": 155.97970923408866,
+      "share_of_scope_pct": 0.34211748708017065
+    },
+    {
+      "substep": "GPUModelRunner._may_reorder_batch",
+      "calls": 80,
+      "total_us": 41.150080505758524,
+      "share_of_scope_pct": 0.09025636863220993
+    }
+  ],
+  "host": {
+    "node": "a957909af0bf",
+    "torch": "2.10.0+cpu",
+    "numpy": "1.26.4"
+  }
+}
+[cli] wrote /work/data/harness/sweep_d_blocksize_32_per_step_20260923-183440.csv
+[cli] wrote /work/data/harness/sweep_d_blocksize_32_summary_20260923-183440.json
+[cli] wrote /work/data/harness/sweep_d_blocksize_32_substep_20260923-183440.csv

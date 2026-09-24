@@ -1,0 +1,128 @@
+
+Sorted summary for file /usr/local/python3.12.13/lib/libpython3.12.so.1.0
+----------------------------------------------
+
+   64.37 typeobject.c:4734
+    9.25 typeobject.c:4726
+    6.67 typeobject.c:4739
+    5.69 typeobject.c:4775
+    4.73 typeobject.c:4747
+    4.18 typeobject.c:4772
+    3.85 pycore_pystate.h:133
+ Percent |	Source code & Disassembly of libpython3.12.so.1.0 for cycles (315 samples, percent: local period)
+-----------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3      Disassembly of section .text:
+         :
+         : 5      00000000001e00e0 <_PyType_Lookup>:
+         : 6      _PyType_Lookup():
+    2.22 :   1e00e0: stp     x29, x30, [sp, #-80]! // typeobject.c:4726
+         : 4727   _PyInterpreterState_GET():
+    1.27 :   1e00e4: mrs     x2, tpidr_el0 // pycore_pystate.h:133
+         : 134    _PyType_Lookup():
+    0.00 :   1e00e8: mov     x29, sp
+    0.95 :   1e00ec: stp     x19, x20, [sp, #16] // typeobject.c:4726
+    0.00 :   1e00f0: mov     x20, x0
+         : 4729   _PyInterpreterState_GET():
+    0.00 :   1e00f4: adrp    x0, 542000 <PyImport_GetModule@@Base+0x2a08a0>
+    0.63 :   1e00f8: ldr     x3, [x0, #3496] // pycore_pystate.h:133
+    0.00 :   1e00fc: add     x0, x0, #0xda8
+    0.00 :   1e0100: blr     x3
+    1.94 :   1e0104: ldr     x0, [x2, x0]
+         : 138    _PyType_Lookup():
+    0.00 :   1e0108: mov     x19, x1
+    2.57 :   1e010c: stp     x21, x22, [sp, #32] // typeobject.c:4726
+    0.00 :   1e0110: asr     x22, x1, #3
+    0.32 :   1e0114: ldr     w1, [x20, #384]
+    3.51 :   1e0118: str     x23, [sp, #48]
+    0.00 :   1e011c: mov     w2, #0x18                       // #24
+         : 4728   _PyInterpreterState_GET():
+    0.00 :   1e0120: ldr     x23, [x0, #16]
+         : 134    _PyType_Lookup():
+    0.00 :   1e0124: eor     w0, w1, w22
+    0.00 :   1e0128: and     w0, w0, #0xfff
+    0.00 :   1e012c: umaddl  x2, w0, w2, x23
+    2.22 :   1e0130: add     x2, x2, #0x40, lsl #12 // typeobject.c:4734
+    0.00 :   1e0134: ldr     w3, [x2, #13264]
+    0.00 :   1e0138: cmp     w1, w3
+    0.00 :   1e013c: b.ne    1e014c <_PyType_Lookup+0x6c>  // b.any
+   62.15 :   1e0140: ldr     x1, [x2, #13272]
+    0.00 :   1e0144: cmp     x1, x19
+    0.00 :   1e0148: b.eq    1e0218 <_PyType_Lookup+0x138>  // b.none
+    4.73 :   1e014c: mov     x1, x19 // typeobject.c:4747
+    0.00 :   1e0150: add     x2, sp, #0x4c
+    0.00 :   1e0154: mov     x0, x20
+    0.00 :   1e0158: bl      1dfec0 <find_name_in_mro>
+    0.00 :   1e015c: ldr     w1, [sp, #76]
+    0.00 :   1e0160: mov     x21, x0
+    0.00 :   1e0164: cbnz    w1, 1e0238 <_PyType_Lookup+0x158>
+    0.00 :   1e0168: ldr     x1, [x19, #8]
+    0.00 :   1e016c: adrp    x0, 53f000 <initial+0x70150>
+    0.00 :   1e0170: ldr     x0, [x0, #2840]
+    0.00 :   1e0174: cmp     x1, x0
+    0.00 :   1e0178: b.eq    1e0194 <_PyType_Lookup+0xb4>  // b.none
+    3.79 :   1e017c: ldp     x19, x20, [sp, #16] // typeobject.c:4775
+    0.00 :   1e0180: mov     x0, x21
+    0.97 :   1e0184: ldp     x21, x22, [sp, #32]
+    0.93 :   1e0188: ldr     x23, [sp, #48]
+    0.32 :   1e018c: ldp     x29, x30, [sp], #80
+    0.00 :   1e0190: ret
+    0.00 :   1e0194: ldr     x0, [x19, #16]
+    0.00 :   1e0198: cmp     x0, #0x64
+    0.00 :   1e019c: b.gt    1e017c <_PyType_Lookup+0x9c>
+    0.00 :   1e01a0: mov     x1, x20
+    0.00 :   1e01a4: mov     x0, x23
+    0.00 :   1e01a8: bl      1daf20 <assign_version_tag>
+    0.00 :   1e01ac: cbz     w0, 1e017c <_PyType_Lookup+0x9c>
+    0.32 :   1e01b0: ldr     w3, [x20, #384]
+    0.00 :   1e01b4: mov     w6, #0x18                       // #24
+         : 4767   Py_INCREF():
+    0.00 :   1e01b8: ldr     w0, [x19]
+         : 643    _PyType_Lookup():
+    0.00 :   1e01bc: add     x4, x23, #0x43, lsl #12
+    0.00 :   1e01c0: eor     w1, w3, w22
+    0.00 :   1e01c4: add     x4, x4, #0x3d0
+    0.00 :   1e01c8: and     w5, w1, #0xfff
+         : 4766   Py_INCREF():
+    0.00 :   1e01cc: adds    w2, w0, #0x1
+         : 644    _PyType_Lookup():
+    0.00 :   1e01d0: ubfiz   x0, x5, #1, #12
+    0.00 :   1e01d4: umaddl  x1, w5, w6, x23
+    0.00 :   1e01d8: add     x0, x0, x5
+    0.00 :   1e01dc: add     x1, x1, #0x40, lsl #12
+    0.00 :   1e01e0: add     x0, x4, x0, lsl #3
+    0.00 :   1e01e4: str     w3, [x1, #13264]
+    0.00 :   1e01e8: str     x21, [x0, #16]
+    0.00 :   1e01ec: ldr     x0, [x1, #13272]
+         : 4773   Py_INCREF():
+    0.00 :   1e01f0: b.eq    1e01f8 <_PyType_Lookup+0x118>  // b.none
+    0.00 :   1e01f4: str     w2, [x19]
+         : 647    _Py_IsImmortal():
+    0.32 :   1e01f8: ldr     x2, [x0]
+         : 243    _PyType_Lookup():
+    4.18 :   1e01fc: str     x19, [x1, #13272] // typeobject.c:4772
+         : 4773   Py_DECREF():
+    0.00 :   1e0200: tbnz    w2, #31, 1e017c <_PyType_Lookup+0x9c>
+    0.00 :   1e0204: sub     x2, x2, #0x1
+    0.00 :   1e0208: str     x2, [x0]
+    0.00 :   1e020c: cbnz    x2, 1e017c <_PyType_Lookup+0x9c>
+    0.00 :   1e0210: bl      10c0b0 <_Py_Dealloc@plt>
+    0.00 :   1e0214: b       1e017c <_PyType_Lookup+0x9c>
+         : 707    _PyType_Lookup():
+    6.67 :   1e0218: mov     w1, w0 // typeobject.c:4739
+    0.00 :   1e021c: ubfiz   x0, x0, #1, #12
+    0.00 :   1e0220: add     x0, x0, x1
+    0.00 :   1e0224: add     x23, x23, #0x43, lsl #12
+    0.00 :   1e0228: add     x23, x23, #0x3d0
+    0.00 :   1e022c: add     x0, x23, x0, lsl #3
+    0.00 :   1e0230: ldr     x21, [x0, #16]
+    0.00 :   1e0234: b       1e017c <_PyType_Lookup+0x9c>
+    0.00 :   1e0238: cmn     w1, #0x1
+    0.00 :   1e023c: b.eq    1e0248 <_PyType_Lookup+0x168>  // b.none
+    0.00 :   1e0240: mov     x21, #0x0                       // #0
+    0.00 :   1e0244: b       1e017c <_PyType_Lookup+0x9c>
+    0.00 :   1e0248: mov     x21, #0x0                       // #0
+    0.00 :   1e024c: bl      10c1f0 <PyErr_Clear@plt>
+    0.00 :   1e0250: b       1e017c <_PyType_Lookup+0x9c>

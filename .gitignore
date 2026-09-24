@@ -1,0 +1,40 @@
+# ---- 第三方源码（upstream vLLM，Apache-2.0；不属于本项目产出，且体积 39 MB）----
+# 需要时按 docs/00-INDEX.md 记录的 commit 自行 clone：
+#   git clone https://github.com/vllm-project/vllm && git checkout 568afb3a1
+/refs/
+
+# ---- 含内部基础设施标识的日志（COS 桶名 / 上传路径）----
+/coscli.log
+/coscli_output/
+
+# ---- 嵌套 git 仓库（会携带提交者邮箱等元数据）----
+**/.git/
+
+# ---- 第三方工具副本与其编译产物 ----
+# libkperfx 是内部 PMU 采集库，不属于本项目产出；已在 a3-22 就位
+# （tools/libkperfx），此处不重复分发。编译产物内的调试路径会带出内部用户名。
+/agents/env_toolchain/staging/
+
+# ---- 压缩的 perf 原始数据（含采集时的宿主路径）----
+# 约定：原始 perf 采样只在 a3-22 留档，不进任何分发渠道。
+**/perf.script.gz
+
+# ---- 环境与缓存 ----
+.conda/
+.venv/
+*/.venv/
+.mypy_cache/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# ---- 工具中断残留 ----
+.*.txt.??????
+*.tmp
+
+# ---- 大体积原始采样（约定只在 a3-22 留档，不进任何分发渠道）----
+perf.data
+perf.data.*
+*.perf.data
+symfs/

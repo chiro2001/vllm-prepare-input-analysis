@@ -1,0 +1,331 @@
+{
+  "caliber_version": "prof-v1",
+  "kind": "annotate",
+  "file": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_arith_20260924-021221/passes/perf/annotate/_PyObject_Free.txt",
+  "n_instructions": 167,
+  "sum_instr_pct": 100.0,
+  "hot_source_lines": [
+    {
+      "pct": 27.97,
+      "loc": "obmalloc.c:1129"
+    },
+    {
+      "pct": 23.42,
+      "loc": "obmalloc.c:1029"
+    },
+    {
+      "pct": 18.05,
+      "loc": "obmalloc.c:1126"
+    },
+    {
+      "pct": 11.16,
+      "loc": "pycore_pystate.h:27"
+    },
+    {
+      "pct": 5.01,
+      "loc": "obmalloc.c:1827"
+    },
+    {
+      "pct": 4.3,
+      "loc": "obmalloc.c:1017"
+    },
+    {
+      "pct": 3.66,
+      "loc": "pycore_pystate.h:133"
+    },
+    {
+      "pct": 1.79,
+      "loc": "obmalloc.c:1846"
+    },
+    {
+      "pct": 1.6,
+      "loc": "obmalloc.c:1844"
+    },
+    {
+      "pct": 1.51,
+      "loc": "obmalloc.c:1808"
+    }
+  ],
+  "top_instructions": [
+    {
+      "pct": 23.42,
+      "addr": "1c8850",
+      "mnemonic": "ubfx",
+      "operands": "x4, x1, #34, #15 // obmalloc.c:1029",
+      "src": "L1796 arena_map_get():"
+    },
+    {
+      "pct": 18.05,
+      "addr": "1c885c",
+      "mnemonic": "ubfx",
+      "operands": "x2, x1, #20, #14 // obmalloc.c:1126",
+      "src": "L1032 arena_map_is_used():"
+    },
+    {
+      "pct": 14.26,
+      "addr": "1c8870",
+      "mnemonic": "ldr",
+      "operands": "w4, [x6, #4] // obmalloc.c:1129",
+      "src": "L1032 arena_map_is_used():"
+    },
+    {
+      "pct": 13.71,
+      "addr": "1c88ac",
+      "mnemonic": "cmp",
+      "operands": "w2, #0x0 // obmalloc.c:1129",
+      "src": "L1860 arena_map_is_used():"
+    },
+    {
+      "pct": 6.81,
+      "addr": "1c8824",
+      "mnemonic": "ldr",
+      "operands": "x0, [x20, #48] // pycore_pystate.h:27",
+      "src": "L134 _PyInterpreterState_Main():"
+    },
+    {
+      "pct": 5.01,
+      "addr": "1c8898",
+      "mnemonic": "cbz",
+      "operands": "w1, 1c8928 <_PyObject_Free+0x138> // obmalloc.c:1827",
+      "src": "L1132 pymalloc_free():"
+    },
+    {
+      "pct": 4.35,
+      "addr": "1c881c",
+      "mnemonic": "ldr",
+      "operands": "x20, [x20, #3192] // pycore_pystate.h:27",
+      "src": "L134 _PyInterpreterState_Main():"
+    },
+    {
+      "pct": 4.3,
+      "addr": "1c8838",
+      "mnemonic": "lsr",
+      "operands": "x2, x1, #49 // obmalloc.c:1017",
+      "src": "L859 arena_map_get():"
+    },
+    {
+      "pct": 1.79,
+      "addr": "1c87f0",
+      "mnemonic": "cbz",
+      "operands": "x1, 1c88a8 <_PyObject_Free+0xb8> // obmalloc.c:1846",
+      "src": "L6 _PyObject_Free():"
+    },
+    {
+      "pct": 1.61,
+      "addr": "1c8804",
+      "mnemonic": "ldr",
+      "operands": "x3, [x0, #3496] // pycore_pystate.h:133",
+      "src": "L1845 _PyInterpreterState_GET():"
+    },
+    {
+      "pct": 1.52,
+      "addr": "1c8820",
+      "mnemonic": "ldr",
+      "operands": "x19, [x2, #16] // pycore_pystate.h:133",
+      "src": "L29 _PyInterpreterState_GET():"
+    },
+    {
+      "pct": 1.51,
+      "addr": "1c887c",
+      "mnemonic": "ldr",
+      "operands": "x2, [x3, #8] // obmalloc.c:1808",
+      "src": "L1132 pymalloc_free():"
+    },
+    {
+      "pct": 1.07,
+      "addr": "1c8810",
+      "mnemonic": "stp",
+      "operands": "x19, x20, [sp, #16] // obmalloc.c:1844",
+      "src": "L137 _PyObject_Free():"
+    },
+    {
+      "pct": 0.54,
+      "addr": "1c87f4",
+      "mnemonic": "stp",
+      "operands": "x29, x30, [sp, #-48]! // obmalloc.c:1844",
+      "src": "L6 _PyObject_Free():"
+    },
+    {
+      "pct": 0.53,
+      "addr": "1c8814",
+      "mnemonic": "ldr",
+      "operands": "x2, [x2, x0] // pycore_pystate.h:133",
+      "src": "L1845 _PyInterpreterState_GET():"
+    },
+    {
+      "pct": 0.45,
+      "addr": "1c889c",
+      "mnemonic": "ldp",
+      "operands": "x19, x20, [sp, #16]",
+      "src": "L1828 _PyObject_Free():"
+    },
+    {
+      "pct": 0.36,
+      "addr": "1c87f8",
+      "mnemonic": "mrs",
+      "operands": "x2, tpidr_el0",
+      "src": "L1845 _PyInterpreterState_GET():"
+    },
+    {
+      "pct": 0.35,
+      "addr": "1c8848",
+      "mnemonic": "ldr",
+      "operands": "x2, [x2, #1096]",
+      "src": "L1796 arena_map_get():"
+    },
+    {
+      "pct": 0.18,
+      "addr": "1c87fc",
+      "mnemonic": "mov",
+      "operands": "x29, sp",
+      "src": "L134 _PyObject_Free():"
+    },
+    {
+      "pct": 0.09,
+      "addr": "1c8880",
+      "mnemonic": "str",
+      "operands": "x2, [x1]",
+      "src": "L1132 pymalloc_free():"
+    },
+    {
+      "pct": 0.09,
+      "addr": "1c8890",
+      "mnemonic": "str",
+      "operands": "w1, [x3]",
+      "src": "L1132 pymalloc_free():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8800",
+      "mnemonic": "adrp",
+      "operands": "x0, 542000 <PyImport_GetModule@@Base+0x2a08a0>",
+      "src": "L1845 _PyInterpreterState_GET():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8808",
+      "mnemonic": "add",
+      "operands": "x0, x0, #0xda8",
+      "src": "L1845 _PyInterpreterState_GET():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c880c",
+      "mnemonic": "blr",
+      "operands": "x3",
+      "src": "L1845 _PyInterpreterState_GET():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8818",
+      "mnemonic": "adrp",
+      "operands": "x20, 53f000 <initial+0x70150>",
+      "src": "L134 _PyInterpreterState_Main():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8828",
+      "mnemonic": "cmp",
+      "operands": "x19, x0",
+      "src": "L28 has_own_state():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c882c",
+      "mnemonic": "b.eq",
+      "operands": "1c8838 <_PyObject_Free+0x48>  // b.none",
+      "src": "L28 has_own_state():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8830",
+      "mnemonic": "ldr",
+      "operands": "x2, [x19, #1728]",
+      "src": "L28 has_own_state():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8834",
+      "mnemonic": "tbnz",
+      "operands": "w2, #5, 1c88d0 <_PyObject_Free+0xe0>",
+      "src": "L28 has_own_state():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c883c",
+      "mnemonic": "add",
+      "operands": "x0, x19, #0xf88",
+      "src": "L859 arena_map_get():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8840",
+      "mnemonic": "and",
+      "operands": "x3, x1, #0xffffffffffffc000",
+      "src": "L1019 pymalloc_free():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8844",
+      "mnemonic": "add",
+      "operands": "x2, x0, x2, lsl #3",
+      "src": "L1796 arena_map_get():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c884c",
+      "mnemonic": "cbz",
+      "operands": "x2, 1c88b8 <_PyObject_Free+0xc8>",
+      "src": "L1796 arena_map_get():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8854",
+      "mnemonic": "ldr",
+      "operands": "x4, [x2, x4, lsl #3]",
+      "src": "L1796 arena_map_get():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8858",
+      "mnemonic": "cbz",
+      "operands": "x4, 1c88b8 <_PyObject_Free+0xc8>",
+      "src": "L1796 arena_map_get():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8860",
+      "mnemonic": "and",
+      "operands": "w5, w1, #0xfffff",
+      "src": "L1032 arena_map_is_used():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8864",
+      "mnemonic": "lsl",
+      "operands": "x2, x2, #3",
+      "src": "L1032 arena_map_is_used():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8868",
+      "mnemonic": "add",
+      "operands": "x6, x4, x2",
+      "src": "L1032 arena_map_is_used():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c886c",
+      "mnemonic": "ldr",
+      "operands": "w2, [x4, x2]",
+      "src": "L1032 arena_map_is_used():"
+    },
+    {
+      "pct": 0.0,
+      "addr": "1c8874",
+      "mnemonic": "cmp",
+      "operands": "w4, w5",
+      "src": "L1032 arena_map_is_used():"
+    }
+  ]
+}

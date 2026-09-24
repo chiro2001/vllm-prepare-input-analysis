@@ -1,0 +1,87 @@
+# hostnoise_gate 2026-09-24T02:42:08+08:00  host=host22  cpus=200-215  chip3=npu1/chip1
+[chip3]   BUSY  (npu-smi info -t proc-mem -i 1 -c 1)
+          	Process id:216438  Process name:VLLMEngineCor     Process memory(MB):3443
+[chip3]   HBM usage rate: 20%
+[residue] none (no msprof/DevKit/perf process)
+[cpu]     slice 200-215: mean 25.15%  max 100.00%  hot(>20%)=[200, 208, 210, 214]
+[cpu]     43 unrelated process(es) with affinity on the slice (top 8 below); threshold for 'quiet' is mean<=2.0% and no hot cpu
+          pid=1021396   cpu= 200.92%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1012954   cpu= 200.62%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1015732   cpu= 200.62%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1018573   cpu= 200.62%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1020004   cpu= 200.62%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1022870   cpu= 200.62%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1015672   cpu= 200.33%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1018517   cpu= 200.33%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+[cpu]     verdict: NOISY
+[cpu]     idle CPUs (<5% busy): 12 of 16  -> recommended taskset: 201-207,209,211-213,215
+[cpu]     note: affinity alone does NOT evict other tenants - foreign processes with a wide Cpus_allowed_list can still land on these CPUs.
+[gate]    wrote data/harness/sweep_noise_pre.json
+[gate]    CLOSED - fix the items above (or wait) before measuring
+[run] sweep_r3_isl :: --sweep isl --batch 16 --steps 80 --repeat 3 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+[run] ok sweep_r3_isl (68s)
+[run] sweep_r3_batch :: --sweep batch --isl 1024 --steps 80 --repeat 3 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+[run] ok sweep_r3_batch (196s)
+[run] sweep_r3_chunk :: --sweep chunk_size --isl 1024 --steps 80 --repeat 3 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+[run] ok sweep_r3_chunk (68s)
+[run] sweep_r3_block :: --sweep block_size --isl 1024 --steps 80 --repeat 3 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+[run] ok sweep_r3_block (65s)
+[run] sweep_r3_spec :: --sweep spec_k --isl 1024 --steps 80 --repeat 3 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+[run] ok sweep_r3_spec (68s)
+[run] sweep_r3_prefix :: --sweep prefix_hit_ratio --isl 1024 --steps 80 --repeat 3 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+[run] ok sweep_r3_prefix (64s)
+# hostnoise_gate 2026-09-24T02:51:19+08:00  host=host22  cpus=200-215  chip3=npu1/chip1
+[chip3]   FREE  (npu-smi info -t proc-mem -i 1 -c 1)
+[chip3]   HBM usage rate: 4%
+[residue] none (no msprof/DevKit/perf process)
+[cpu]     slice 200-215: mean 7.23%  max 100.00%  hot(>20%)=[209]
+[cpu]     41 unrelated process(es) with affinity on the slice (top 8 below); threshold for 'quiet' is mean<=2.0% and no hot cpu
+          pid=1018517   cpu= 200.63%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1012923   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1012954   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1015732   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1017036   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1017086   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1018573   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1020065   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+[cpu]     verdict: NOISY
+[cpu]     idle CPUs (<5% busy): 14 of 16  -> recommended taskset: 200-208,210-213,215
+[cpu]     note: affinity alone does NOT evict other tenants - foreign processes with a wide Cpus_allowed_list can still land on these CPUs.
+[gate]    wrote data/harness/sweep_noise_post.json
+[gate]    CLOSED - fix the items above (or wait) before measuring
+[run] sweep_mode_cpu :: --batch 16 --isl 1024 --steps 200 --slot-mapping-mode cpu_fallback --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_mode_cpu_per_step_20260923-185222.csv
+  [cli] wrote /work/data/harness/sweep_mode_cpu_summary_20260923-185222.json
+  [cli] wrote /work/data/harness/sweep_mode_cpu_substep_20260923-185222.csv
+[run] ok sweep_mode_cpu (62s)
+[run] sweep_mode_noop :: --batch 16 --isl 1024 --steps 200 --slot-mapping-mode noop --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_mode_noop_per_step_20260923-185321.csv
+  [cli] wrote /work/data/harness/sweep_mode_noop_summary_20260923-185321.json
+  [cli] wrote /work/data/harness/sweep_mode_noop_substep_20260923-185321.csv
+[run] ok sweep_mode_noop (62s)
+[run] sweep_mode_inj15 :: --batch 16 --isl 1024 --steps 200 --slot-mapping-mode inject:15 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_mode_inj15_per_step_20260923-185428.csv
+  [cli] wrote /work/data/harness/sweep_mode_inj15_summary_20260923-185428.json
+  [cli] wrote /work/data/harness/sweep_mode_inj15_substep_20260923-185428.csv
+[run] ok sweep_mode_inj15 (63s)
+# hostnoise_gate 2026-09-24T02:54:52+08:00  host=host22  cpus=200-215  chip3=npu1/chip1
+[chip3]   BUSY  (npu-smi info -t proc-mem -i 1 -c 1)
+          	Process id:314596  Process name:VLLMEngineCor     Process memory(MB):1893
+[chip3]   HBM usage rate: 9%
+[residue] none (no msprof/DevKit/perf process)
+[cpu]     slice 200-215: mean 6.63%  max 58.88%  hot(>20%)=[210, 211]
+[cpu]     41 unrelated process(es) with affinity on the slice (top 8 below); threshold for 'quiet' is mean<=2.0% and no hot cpu
+          pid=1012954   cpu= 201.21%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1021396   cpu= 201.21%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1012923   cpu= 200.91%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1015672   cpu= 200.91%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1015732   cpu= 200.91%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1018573   cpu= 200.91%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1020004   cpu= 200.91%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1022811   cpu= 200.91%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+[cpu]     verdict: NOISY
+[cpu]     idle CPUs (<5% busy): 14 of 16  -> recommended taskset: 200-209,212-215
+[cpu]     note: affinity alone does NOT evict other tenants - foreign processes with a wide Cpus_allowed_list can still land on these CPUs.
+[gate]    wrote data/harness/sweep_noise_final.json
+[gate]    CLOSED - fix the items above (or wait) before measuring
+agents/sweep_analysis/run_remote.sh: line 172: unexpected EOF while looking for matching `"'

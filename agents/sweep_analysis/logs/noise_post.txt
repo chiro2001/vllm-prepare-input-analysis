@@ -1,0 +1,19 @@
+# hostnoise_gate 2026-09-24T02:51:19+08:00  host=host22  cpus=200-215  chip3=npu1/chip1
+[chip3]   FREE  (npu-smi info -t proc-mem -i 1 -c 1)
+[chip3]   HBM usage rate: 4%
+[residue] none (no msprof/DevKit/perf process)
+[cpu]     slice 200-215: mean 7.23%  max 100.00%  hot(>20%)=[209]
+[cpu]     41 unrelated process(es) with affinity on the slice (top 8 below); threshold for 'quiet' is mean<=2.0% and no hot cpu
+          pid=1018517   cpu= 200.63%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1012923   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1012954   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1015732   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1017036   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1017086   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1018573   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+          pid=1020065   cpu= 200.34%  threads=59   uid=1002   cpus_allowed=[0, 639] overlap=[200, 215] fullslice=False  python
+[cpu]     verdict: NOISY
+[cpu]     idle CPUs (<5% busy): 14 of 16  -> recommended taskset: 200-208,210-213,215
+[cpu]     note: affinity alone does NOT evict other tenants - foreign processes with a wide Cpus_allowed_list can still land on these CPUs.
+[gate]    wrote data/harness/sweep_noise_post.json
+[gate]    CLOSED - fix the items above (or wait) before measuring

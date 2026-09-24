@@ -1,0 +1,220 @@
+{
+  "schema": "pi-pmu-topdown-v1",
+  "tag": "selftest-20260923T180526Z",
+  "preset_prefix": "920b_topdown_full_",
+  "issue_width": 6,
+  "groups_requested": [
+    1,
+    2,
+    3,
+    7,
+    8
+  ],
+  "groups_used": [
+    1,
+    2,
+    3,
+    7,
+    8
+  ],
+  "groups_missing": [],
+  "complete_for_request": true,
+  "complete_topdown_tree": false,
+  "l1_topdown_pct": {
+    "frontend_bound": 0.04163236314093975,
+    "bad_spec": 0.007589844481596953,
+    "retiring": 22.161815468713385,
+    "backend_bound": 77.78896232366408
+  },
+  "subitems_pct": {
+    "resource_bound": 0.24755199216567647,
+    "core_bound": 77.09824001237259,
+    "mem_bound": 0.4431703191258246,
+    "mem_l1_bound": 0.09312881919281375,
+    "mem_l2_bound": 0.009514885235583108,
+    "mem_l3_dram_bound": 0.3405255571587065,
+    "mem_mem_bound": 0.0,
+    "mem_store_bound": 1.0575387212543737e-06,
+    "frontend_latency_bound": 0.0347985926061341,
+    "frontend_bandwidth_bound": 0.006833770534805654,
+    "rob_stall_pct": 100.0,
+    "ptag_stall_pct": 0.0,
+    "mapq_stall_pct": 0.0,
+    "pcbuf_stall_pct": 0.0,
+    "other_stall_pct": 0.0
+  },
+  "coverage": {
+    "l1_topdown_pct": {
+      "needs_groups": [
+        1
+      ],
+      "complete": true
+    },
+    "frontend_latency_bound": {
+      "needs_groups": [
+        1
+      ],
+      "complete": true
+    },
+    "frontend_bandwidth_bound": {
+      "needs_groups": [
+        1
+      ],
+      "complete": true
+    },
+    "resource_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "core_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "mem_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "mem_l1_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "mem_l2_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "mem_l3_dram_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "mem_mem_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "mem_store_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "ooo_stall_split": {
+      "needs_groups": [
+        2,
+        4,
+        5
+      ],
+      "complete": false
+    }
+  },
+  "coverage_incomplete": [
+    "ooo_stall_split"
+  ],
+  "per_group_confidence": {
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0,
+    "7": 1.0,
+    "8": 1.0
+  },
+  "merged_counters_by_config": {
+    "0x11": 14498074842,
+    "0x8": 19278219558,
+    "0x1b": 19284821846,
+    "0x2011": 36215347,
+    "0x2012": 5045126,
+    "0x7000": 46114380,
+    "0x7001": 14490651992,
+    "0x7002": 0,
+    "0x7003": 153357,
+    "0x7004": 3946,
+    "0x7005": 82554277,
+    "0x7006": 197,
+    "0x7007": 65206092,
+    "0x7008": 63433644,
+    "0x7009": 0,
+    "0x2004": 347044,
+    "0x10": 81268,
+    "0x2010": 324515,
+    "0x200f": 3639,
+    "0x1010": 253,
+    "0x1013": 209,
+    "0x1016": 199,
+    "0x100d": 44,
+    "0x104f": 128337,
+    "0x5093": 10107,
+    "0x5094": 345136,
+    "0x5095": 248451,
+    "0x5096": 21687,
+    "0x701e": 76,
+    "0x701f": 446269,
+    "0x7020": 1586442,
+    "0x7021": 0,
+    "0x7022": 0,
+    "0x7023": 0,
+    "0x50a0": 311845,
+    "0x50a2": 1330339,
+    "0x50a3": 43642590,
+    "0x50a4": 174195
+  },
+  "counter_group_owner": {
+    "0x11": 1,
+    "0x8": 1,
+    "0x1b": 1,
+    "0x2011": 1,
+    "0x2012": 1,
+    "0x7000": 1,
+    "0x7001": 1,
+    "0x7002": 1,
+    "0x7003": 2,
+    "0x7004": 2,
+    "0x7005": 2,
+    "0x7006": 2,
+    "0x7007": 2,
+    "0x7008": 2,
+    "0x7009": 2,
+    "0x2004": 2,
+    "0x10": 3,
+    "0x2010": 3,
+    "0x200f": 3,
+    "0x1010": 3,
+    "0x1013": 3,
+    "0x1016": 3,
+    "0x100d": 3,
+    "0x104f": 3,
+    "0x5093": 7,
+    "0x5094": 7,
+    "0x5095": 7,
+    "0x5096": 7,
+    "0x701e": 7,
+    "0x701f": 7,
+    "0x7020": 7,
+    "0x7021": 7,
+    "0x7022": 8,
+    "0x7023": 8,
+    "0x50a0": 8,
+    "0x50a2": 8,
+    "0x50a3": 8,
+    "0x50a4": 8
+  }
+}

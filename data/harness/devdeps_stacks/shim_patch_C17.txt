@@ -1,0 +1,6 @@
+# C17 torch.accelerator.* 基本调用
+# ok=True
+# value={'synchronize': None, 'current_device_index': 0, 'device_count': 1, 'is_available': True, 'current_accelerator': 'cpu', 'empty_cache': None}
+# exc=None
+# tb
+

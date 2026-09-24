@@ -1,0 +1,136 @@
+libkperfx 1.0.0  pmu=920B  backend=920B(counting)
+preset family: 920b_topdown_full  groups=9  pattern: 920b_topdown_full_<1..9>
+
+group 1: 8 events
+    cpu_cycles
+    inst_retired
+    inst_spec
+    fetch_bubble
+    fetch_bubble_max
+    total_resource_stall
+    exec_stall
+    fdiv_fsqrt_stall
+    role: L1 topdown buckets + IPC backbone (cycles, inst_retired, inst_spec, fetch_bubble, exec_stall, total_resource_stall)
+
+group 2: 8 events
+    exe_stall_div
+    fsu_stall
+    mem_stall_anyload
+    mem_stall_anystore
+    memstall_l1miss
+    memstall_l2miss
+    memstall_l3miss
+    rob_stall
+    role: memory-stall hierarchy = L1/L2/LLC/DRAM bound split (mem_stall_anyload, memstall_l1miss/l2miss/l3miss)
+
+group 3: 8 events
+    br_mis_pred
+    o3_flush
+    nuke_flush
+    bp_misp_br_ind
+    bp_misp_br_blr
+    bp_misp_br_bl
+    bp_misp_br_ret
+    if_sp_flush
+    role: bad-spec attribution (branch mispredicts, o3/nuke/if flushes)
+
+group 4: 8 events
+    l2i_tlb
+    l2i_tlb_refill
+    l2i_cache
+    l2i_cache_refill
+    pcbuf_stall
+    int_ptag_stall
+    cc_ptag_stall
+    vfp_single_ptag_stall
+    role: instruction side: L2I cache + iTLB + pcbuf/ptag stalls
+
+group 5: 8 events
+    vfp_pair_ptag_stall
+    vpd_ptag_stall
+    int_mpq_stall
+    vfp_mpq_stall
+    cc_mpq_stall
+    ports_0_serialize
+    ports_0_nonserialize
+    ports_1
+    role: ptag/mpq stall split + ports 0-1
+
+group 6: 8 events
+    ports_2
+    ports_3
+    ports_4
+    ports_5
+    ports_6
+    ld_cancel_dtlb_miss
+    ld_cancel_misalign
+    ld_cancel_lq_full
+    role: ports 2-6 + load cancels (dtlb/misalign/lq-full)
+
+group 7: 8 events
+    ld_cancel_inst_type
+    ld_cancel_fwd_hzd
+    ld_cancel_struct_hzd
+    ld_cancel_pipeline
+    l2_bound_buf
+    l2_bound_snp
+    l2_bound_arb
+    dram_local
+    role: L2 bottleneck reasons (buf/snp/arb) + DRAM_LOCAL + load cancels
+
+group 8: 6 events
+    dram_remote
+    dram_remote_cache
+    st_sca_full
+    st_head_no_pgen
+    st_order_fail
+    st_bound_pipeline
+    role: DRAM_REMOTE / DRAM_REMOTE_CACHE (NUMA!) + store stalls
+
+group 9: 4 events
+    context_switches
+    cpu_migrations
+    page_faults
+    cpu_clock
+    role: software events (context switches, migrations, page faults, cpu clock)
+
+cache-level coverage on 920B:
+  L1D      no dedicated cache counter in the presets; L1 stalls live in group 2 (mem_stall_anyload / memstall_l1miss).  Direct access/refill counters l1d_cache,l1d_cache_refill exist but sit in no preset group
+  L1I      group 4 (l2i_* is the instruction-cache hierarchy; l1i_cache_refill is available as a custom event only)
+  L2       group 2 (memstall_l1miss = L1-miss traffic, memstall_l2miss = L2 miss) + group 7 (l2_bound_buf/snp/arb) + group 4 (l2i_*)
+  LLC/L3   group 2 only, and only as the derived topdown slot (memstall_l2miss - memstall_l3miss); there is no L3 access/fill counter and no L3C uncore PMU on this kernel
+  DRAM     group 2 (memstall_l3miss = LLC miss), group 7 (dram_local), group 8 (dram_remote, dram_remote_cache); no DDRC uncore PMU
+
+formula:
+issue_width = 6
+frontend_bound        = fetch_bubble / (6 * cpu_cycles) * 100
+retiring              = inst_retired / (6 * cpu_cycles) * 100
+bad_spec              = (inst_spec - inst_retired) / (6 * cpu_cycles) * 100
+backend_bound         = 100 - frontend_bound - bad_spec - retiring
+resource_bound        = total_resource_stall / exec_stall * backend_bound
+core_bound            = (exec_stall - mem_stall_anystore - mem_stall_anyload
+                         - total_resource_stall) / exec_stall * backend_bound
+mem_bound             = (mem_stall_anyload + mem_stall_anystore) / exec_stall
+                         * backend_bound
+mem_l1_bound          = (mem_stall_anyload - memstall_l1miss) / exec_stall
+                         * backend_bound
+mem_l2_bound          = (memstall_l1miss - memstall_l2miss) / exec_stall
+                         * backend_bound
+mem_l3_dram_bound     = (memstall_l2miss - memstall_l3miss) / exec_stall
+                         * backend_bound
+mem_mem_bound         = memstall_l3miss / exec_stall * backend_bound
+mem_store_bound       = mem_stall_anystore / exec_stall * backend_bound
+total_ooo_stall       = rob_stall + pcbuf_stall + int_ptag_stall
+                      + cc_ptag_stall + vfp_single_ptag_stall
+                      + vfp_pair_ptag_stall + vpd_ptag_stall + int_mpq_stall
+                      + vfp_mpq_stall + cc_mpq_stall
+rob_stall%            = rob_stall / total_ooo_stall * 100
+ptag_stall%           = (int_ptag + cc_ptag + vfp_single + vfp_pair + vpd)
+                         / total_ooo_stall * 100
+mapq_stall%           = (int_mpq + vfp_mpq + cc_mpq) / total_ooo_stall * 100
+pcbuf_stall%          = pcbuf_stall / total_ooo_stall * 100
+other_stall%          = 100 - rob_stall% - ptag_stall% - mapq_stall%
+                         - pcbuf_stall%
+frontend_latency_bound     = fetch_bubble_max / cpu_cycles * 100
+frontend_bandwidth_bound   = frontend_bound - frontend_latency_bound
+

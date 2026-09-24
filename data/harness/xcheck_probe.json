@@ -1,0 +1,24 @@
+{
+  "trace": "data/harness/trace_synth_probe.jsonl",
+  "steps": 0,
+  "steps_matching": 0,
+  "match_ratio": 0.0,
+  "first_mismatch": null,
+  "runner_meta": {
+    "model_profile": "qwen35-0.8b",
+    "model_config_dir": "/tmp/pi_models/qwen35-0.8b-hx-lx-m8192",
+    "vocab_size": 248320,
+    "max_model_len": 8192,
+    "dtype": "torch.bfloat16",
+    "max_num_tokens": 2048,
+    "max_num_reqs": 256,
+    "block_size": 128,
+    "num_spec_tokens": 0,
+    "max_num_blocks_per_req": 64,
+    "use_async_scheduling": false,
+    "use_async_spec_decode": false,
+    "has_gdn": false,
+    "readonly_attrs_skipped": []
+  },
+  "per_step": []
+}

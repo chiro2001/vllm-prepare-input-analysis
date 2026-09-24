@@ -1,0 +1,9 @@
+$ perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-c.data -F 999 -g --call-graph fp -- taskset -c 122 /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/probe_load --duration-ms 3000
+# rc=0 wall_s=4.417
+
+probe_load done kind=mixed threads=1 duration_ms=3000 acc=4763581894741
+
+----- stderr -----
+[ perf record: Woken up 6 times to write data ]
+[ perf record: Captured and wrote 0.321 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-c.data (2957 samples) ]
+

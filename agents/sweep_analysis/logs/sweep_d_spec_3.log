@@ -1,0 +1,76 @@
+[run] 2026-09-24T02:38:05+08:00 :: --batch 16 --isl 1024 --spec-k 3 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+can not use command: npu-smi info
+INFO 09-23 18:38:22 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 18:38:22 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-23 18:38:22 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-23 18:38:22 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-23 18:38:22 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+INFO 09-23 18:38:57 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:38:57 [model.py:1788] Using max model len 262144
+INFO 09-23 18:38:57 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 09-23 18:38:57 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=2048.
+INFO 09-23 18:38:57 [vllm.py:1109] Asynchronous scheduling is enabled.
+INFO 09-23 18:38:57 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:38:57 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:38:57 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+INFO 09-23 18:38:57 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:38:57 [ascend_config.py:922] The number of redundant experts is 0
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.rtGetAiCoreCount failed, 0x7bc78Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/harness/pi_harness/runner/cli.py", line 226, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/work/harness/pi_harness/runner/cli.py", line 209, in main
+    summary, rl = run_one(cfg, timing=not a.no_timing, warmup=a.warmup)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/harness/pi_harness/runner/cli.py", line 125, in run_one
+    return rl.run(warmup=warmup), rl
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/work/harness/pi_harness/runner/replay.py", line 136, in run
+    f"num_scheduled_tokens 中：{missing[:8]}"
+^^^^^^^^^^^^^^^^^^
+  File "/work/harness/pi_harness/runner/replay.py", line 81, in _one_step
+    if sch_out.total_num_scheduled_tokens == 0:
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/harness/pi_harness/runner/timer.py", line 35, in wrapper
+    return __orig(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py", line 1293, in _prepare_inputs
+    spec_decode_metadata = self._calc_spec_decode_metadata(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py", line 1412, in _calc_spec_decode_metadata
+    cu_num_draft_tokens = torch.from_numpy(cu_num_draft_tokens).pin_memory().to(self.device, non_blocking=True)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008
+[ERROR] 2026-09-23-18:38:57 (PID:1, Device:0, RankID:-1) ERR00100 PTA call acl api failed
+[Error]: Failed to obtain the SOC version. 
+        Rectify the fault based on the error information in the ascend log.
+[PID: 1] 2026-09-23-18:38:57.777.269 Invalid_Argument(EE1001): The argument is invalid. Reason: rtGetDevMsg execution failed, the feature is not supported.
+        Solution: 1. Check the input parameter range of the function. 2. Check the function invocation relationship.
+TraceBack (most recent call last):
+        rtGetAiCoreCount execution failed, reason=[runtime internel error][FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:69]
+        [Init][Version]init SoC version failed.[FUNC:ReportInnerError][FILE:log_inner.cpp][LINE:132]
+        chipType=0 does not support get device msg feature.[FUNC:GetDevMsg][FILE:api_impl.cc][LINE:6119]
+        The argument is invalid. Reason: rtGetDevMsg execution failed, the feature is not supported.
+
+[PID: 1] 2026-09-23-18:38:22.770.909 Invalid_Argument(EE1001): The argument is invalid. Reason: rtGetDevMsg execution failed, the feature is not supported.
+        Solution: 1. Check the input parameter range of the function. 2. Check the function invocation relationship.
+TraceBack (most recent call last):
+        [Init][Version]init SoC version failed.[FUNC:ReportInnerError][FILE:log_inner.cpp][LINE:132]
+        chipType=0 does not support get device msg feature.[FUNC:GetDevMsg][FILE:api_impl.cc][LINE:6119]
+        The argument is invalid. Reason: rtGetDevMsg execution failed, the feature is not supported.
+

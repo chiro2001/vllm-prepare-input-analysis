@@ -1,0 +1,119 @@
+{
+  "caliber_version": "prof-v1",
+  "ts_start": "2026-09-24T02:16:55+0800",
+  "cpus": [
+    203,
+    207,
+    211,
+    213
+  ],
+  "window_s": 5.0,
+  "busy_pct": {
+    "203": 46.71,
+    "207": 22.69,
+    "211": 39.24,
+    "213": 2.6
+  },
+  "busy_pct_max": 46.71,
+  "busy_threshold_pct": 5.0,
+  "hot_cpus": {
+    "203": 46.71,
+    "207": 22.69,
+    "211": 39.24
+  },
+  "loadavg": [
+    "55.32",
+    "53.51",
+    "51.74"
+  ],
+  "load1_per_cpu": 0.086,
+  "load_threshold_per_cpu": 0.5,
+  "top_procs": [
+    {
+      "pid": 1022870,
+      "user": "OTHER_USER",
+      "pcpu": 180.0,
+      "pmem": 0.3,
+      "comm": "python"
+    },
+    {
+      "pid": 1015672,
+      "user": "OTHER_USER",
+      "pcpu": 179.0,
+      "pmem": 0.3,
+      "comm": "python"
+    },
+    {
+      "pid": 1021396,
+      "user": "OTHER_USER",
+      "pcpu": 178.0,
+      "pmem": 0.4,
+      "comm": "python"
+    },
+    {
+      "pid": 1017086,
+      "user": "OTHER_USER",
+      "pcpu": 178.0,
+      "pmem": 0.5,
+      "comm": "python"
+    },
+    {
+      "pid": 1022811,
+      "user": "OTHER_USER",
+      "pcpu": 178.0,
+      "pmem": 0.4,
+      "comm": "python"
+    },
+    {
+      "pid": 1017036,
+      "user": "OTHER_USER",
+      "pcpu": 178.0,
+      "pmem": 0.4,
+      "comm": "python"
+    },
+    {
+      "pid": 1018517,
+      "user": "OTHER_USER",
+      "pcpu": 177.0,
+      "pmem": 0.5,
+      "comm": "python"
+    },
+    {
+      "pid": 1012923,
+      "user": "OTHER_USER",
+      "pcpu": 177.0,
+      "pmem": 0.5,
+      "comm": "python"
+    },
+    {
+      "pid": 1014184,
+      "user": "OTHER_USER",
+      "pcpu": 176.0,
+      "pmem": 0.3,
+      "comm": "python"
+    },
+    {
+      "pid": 1012954,
+      "user": "OTHER_USER",
+      "pcpu": 174.0,
+      "pmem": 0.5,
+      "comm": "python"
+    },
+    {
+      "pid": 1020065,
+      "user": "OTHER_USER",
+      "pcpu": 174.0,
+      "pmem": 0.3,
+      "comm": "python"
+    },
+    {
+      "pid": 1018573,
+      "user": "OTHER_USER",
+      "pcpu": 174.0,
+      "pmem": 0.5,
+      "comm": "python"
+    }
+  ],
+  "ok": false,
+  "ts_end": "2026-09-24T02:16:55+0800"
+}

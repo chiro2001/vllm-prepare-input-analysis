@@ -1,0 +1,30 @@
+{
+  "count": 8,
+  "entries": [
+    {"name":"PORTS_2","id":"ports_2","config":"0x700d","delta":2226990268,"rate":742168380.738749},
+    {"name":"PORTS_3","id":"ports_3","config":"0x700e","delta":1480672700,"rate":493450050.480001},
+    {"name":"PORTS_4","id":"ports_4","config":"0x700f","delta":975382043,"rate":325056522.184570},
+    {"name":"PORTS_5","id":"ports_5","config":"0x7010","delta":531981416,"rate":177288509.864214},
+    {"name":"PORTS_6","id":"ports_6","config":"0x7011","delta":302488679,"rate":100807595.035810},
+    {"name":"LD_CANCEL_DTLB_MISS","id":"ld_cancel_dtlb_miss","config":"0x5090","delta":124843,"rate":41605.268100},
+    {"name":"LD_CANCEL_MISALIGN","id":"ld_cancel_misalign","config":"0x5091","delta":1807,"rate":602.202122},
+    {"name":"LD_CANCEL_LQ_FULL","id":"ld_cancel_lq_full","config":"0x5092","delta":0,"rate":0.000000}
+  ],
+  "time_enabled": 3000653660,
+  "time_running": 3000653660,
+  "confidence": 1.000000,
+  "sampled": false,
+  "sample_count": 0,
+  "lost_samples": 0,
+  "gated": false,
+  "iter_gated": false,
+  "iter_start_at": 0,
+  "iter_end_at": 0,
+  "iter_start_seen": 0,
+  "iter_end_seen": 0,
+  "roi_start_seen": 0,
+  "roi_end_seen": 0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B"
+}

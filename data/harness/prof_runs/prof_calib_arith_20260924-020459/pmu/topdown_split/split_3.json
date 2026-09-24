@@ -1,0 +1,93 @@
+{
+  "caliber_version": "prof-v1",
+  "ts_start": "2026-09-24T02:05:51+0800",
+  "pid": 4092831,
+  "events_spec": null,
+  "preset": "920b_topdown_full_3",
+  "multiplex_allowed": false,
+  "ts_running": "2026-09-24T02:05:51+0800",
+  "stopped_reason": "target_exit",
+  "ts_end": "2026-09-24T02:05:56+0800",
+  "wall_s": 5.539532,
+  "counters": {
+    "BR_MIS_PRED": 55446237,
+    "O3_FLUSH": 946612,
+    "NUKE_FLUSH": 933015,
+    "BP_MISP_BR_IND": 85846,
+    "BP_MISP_BR_BLR": 35350,
+    "BP_MISP_BR_BL": 1042,
+    "BP_MISP_BR_RET": 18892,
+    "IF_SP_FLUSH": 3562037
+  },
+  "entries": [
+    {
+      "name": "BR_MIS_PRED",
+      "id": "br_mis_pred",
+      "config": 16,
+      "delta": 55446237,
+      "rate": 10050647.644608183
+    },
+    {
+      "name": "O3_FLUSH",
+      "id": "o3_flush",
+      "config": 8208,
+      "delta": 946612,
+      "rate": 171590.79106049778
+    },
+    {
+      "name": "NUKE_FLUSH",
+      "id": "nuke_flush",
+      "config": 8207,
+      "delta": 933015,
+      "rate": 169126.08536687717
+    },
+    {
+      "name": "BP_MISP_BR_IND",
+      "id": "bp_misp_br_ind",
+      "config": 4112,
+      "delta": 85846,
+      "rate": 15561.16238689082
+    },
+    {
+      "name": "BP_MISP_BR_BLR",
+      "id": "bp_misp_br_blr",
+      "config": 4115,
+      "delta": 35350,
+      "rate": 6407.836013053497
+    },
+    {
+      "name": "BP_MISP_BR_BL",
+      "id": "bp_misp_br_bl",
+      "config": 4118,
+      "delta": 1042,
+      "rate": 188.88161600004932
+    },
+    {
+      "name": "BP_MISP_BR_RET",
+      "id": "bp_misp_br_ret",
+      "config": 4109,
+      "delta": 18892,
+      "rate": 3424.5215829874587
+    },
+    {
+      "name": "IF_SP_FLUSH",
+      "id": "if_sp_flush",
+      "config": 4175,
+      "delta": 3562037,
+      "rate": 645684.553562349
+    }
+  ],
+  "time_enabled": 5516683000,
+  "time_running": 5516683000,
+  "confidence": 1.0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B",
+  "backend": "920B(counting)",
+  "derived": {
+    "cpu_cycles": null,
+    "inst_retired": null,
+    "ipc": null,
+    "cycles_per_sec": null
+  }
+}

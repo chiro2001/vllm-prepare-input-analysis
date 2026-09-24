@@ -1,0 +1,506 @@
+{
+  "chip3": {
+    "addressed_as": "npu1/chip1",
+    "free": false
+  },
+  "cpu": {
+    "cpus": "200-215",
+    "sample_s": 3.38,
+    "per_cpu_busy_pct": {
+      "200": 0.0,
+      "201": 2.14,
+      "202": 2.66,
+      "203": 0.0,
+      "204": 0.3,
+      "205": 0.0,
+      "206": 0.3,
+      "207": 0.0,
+      "208": 0.0,
+      "209": 0.0,
+      "210": 58.88,
+      "211": 40.95,
+      "212": 0.92,
+      "213": 0.0,
+      "214": 0.0,
+      "215": 0.0
+    },
+    "mean_busy_pct": 6.63,
+    "max_busy_pct": 58.88,
+    "hot_cpus": [
+      210,
+      211
+    ],
+    "offenders_on_slice": [
+      {
+        "pid": 1012954,
+        "comm": "python",
+        "cpu_pct": 201.21,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1021396,
+        "comm": "python",
+        "cpu_pct": 201.21,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1012923,
+        "comm": "python",
+        "cpu_pct": 200.91,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1015672,
+        "comm": "python",
+        "cpu_pct": 200.91,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1015732,
+        "comm": "python",
+        "cpu_pct": 200.91,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1018573,
+        "comm": "python",
+        "cpu_pct": 200.91,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1020004,
+        "comm": "python",
+        "cpu_pct": 200.91,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1022811,
+        "comm": "python",
+        "cpu_pct": 200.91,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1018517,
+        "comm": "python",
+        "cpu_pct": 200.62,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1021448,
+        "comm": "python",
+        "cpu_pct": 200.62,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1017036,
+        "comm": "python",
+        "cpu_pct": 199.43,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1022870,
+        "comm": "python",
+        "cpu_pct": 199.43,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1017086,
+        "comm": "python",
+        "cpu_pct": 198.84,
+        "threads": 59,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1008087,
+        "comm": "python",
+        "cpu_pct": 133.75,
+        "threads": 46,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1009202,
+        "comm": "python",
+        "cpu_pct": 133.15,
+        "threads": 46,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1010257,
+        "comm": "python",
+        "cpu_pct": 131.67,
+        "threads": 46,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1008086,
+        "comm": "python",
+        "cpu_pct": 130.79,
+        "threads": 46,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1011596,
+        "comm": "python",
+        "cpu_pct": 130.49,
+        "threads": 46,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1010258,
+        "comm": "python",
+        "cpu_pct": 130.19,
+        "threads": 46,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1009201,
+        "comm": "python",
+        "cpu_pct": 129.31,
+        "threads": 46,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 1011597,
+        "comm": "python",
+        "cpu_pct": 128.42,
+        "threads": 46,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 316537,
+        "comm": "python",
+        "cpu_pct": 99.42,
+        "threads": 3,
+        "uid": 1003,
+        "allowed_first_last": [
+          200,
+          215
+        ],
+        "n_cpus_allowed": 16,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": true
+      },
+      {
+        "pid": 381170,
+        "comm": "python",
+        "cpu_pct": 44.98,
+        "threads": 66,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 331876,
+        "comm": "python",
+        "cpu_pct": 42.91,
+        "threads": 66,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      },
+      {
+        "pid": 400198,
+        "comm": "python",
+        "cpu_pct": 41.72,
+        "threads": 66,
+        "uid": 1002,
+        "allowed_first_last": [
+          0,
+          639
+        ],
+        "n_cpus_allowed": 640,
+        "intersects_slice": 16,
+        "overlap_first_last": [
+          200,
+          215
+        ],
+        "oversubscribes_slice": false
+      }
+    ],
+    "n_offenders_on_slice": 41,
+    "quiet_mean_threshold": 2.0,
+    "slice_quiet": false,
+    "quiet_cpus": [
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      212,
+      213,
+      214,
+      215
+    ]
+  },
+  "gate_open": false
+}

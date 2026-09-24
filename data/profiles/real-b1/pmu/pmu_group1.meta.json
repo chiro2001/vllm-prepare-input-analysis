@@ -1,0 +1,119 @@
+{
+  "schema": "pi-pmu-group-meta-v1",
+  "tag": "real-b1",
+  "group": 1,
+  "preset": "920b_topdown_full_1",
+  "events": [
+    "cpu_cycles",
+    "inst_retired",
+    "inst_spec",
+    "fetch_bubble",
+    "fetch_bubble_max",
+    "total_resource_stall",
+    "exec_stall",
+    "fdiv_fsqrt_stall"
+  ],
+  "tid": 704908,
+  "pid": 704908,
+  "status": "ok",
+  "attempts": 1,
+  "rc": 0,
+  "timed_out": false,
+  "error": null,
+  "outer_wall_s": 3.133,
+  "inner_wall_s": 3.015451,
+  "started_at_utc": "2026-09-23T20:29:21Z",
+  "finished_at_utc": "2026-09-23T20:29:24Z",
+  "confidence": 1.0,
+  "time_enabled": 2850546620,
+  "time_running": 2850546620,
+  "useronly_forced": false,
+  "counters": [
+    {
+      "name": "CPU_CYCLES",
+      "id": "cpu_cycles",
+      "config": "0x11",
+      "delta": 8234970671,
+      "rate": 2888909310.664072
+    },
+    {
+      "name": "INST_RETIRED",
+      "id": "inst_retired",
+      "config": "0x8",
+      "delta": 6347341352,
+      "rate": 2226710241.279969
+    },
+    {
+      "name": "INST_SPEC",
+      "id": "inst_spec",
+      "config": "0x1b",
+      "delta": 11799137229,
+      "rate": 4139254256.083698
+    },
+    {
+      "name": "FETCH_BUBBLE",
+      "id": "fetch_bubble",
+      "config": "0x2011",
+      "delta": 32615553672,
+      "rate": 11441859411.511747
+    },
+    {
+      "name": "FETCH_BUBBLE_MAX",
+      "id": "fetch_bubble_max",
+      "config": "0x2012",
+      "delta": 4931633353,
+      "rate": 1730065847.160219
+    },
+    {
+      "name": "TOTAL_RESOURCE_STALL",
+      "id": "total_resource_stall",
+      "config": "0x7000",
+      "delta": 395601229,
+      "rate": 138780831.095476
+    },
+    {
+      "name": "EXEC_STALL",
+      "id": "exec_stall",
+      "config": "0x7001",
+      "delta": 8042050582,
+      "rate": 2821231031.822241
+    },
+    {
+      "name": "FDIV_FSQRT_STALL",
+      "id": "fdiv_fsqrt_stall",
+      "config": "0x7002",
+      "delta": 8549,
+      "rate": 2999.073911
+    }
+  ],
+  "counters_map": {
+    "CPU_CYCLES": 8234970671,
+    "INST_RETIRED": 6347341352,
+    "INST_SPEC": 11799137229,
+    "FETCH_BUBBLE": 32615553672,
+    "FETCH_BUBBLE_MAX": 4931633353,
+    "TOTAL_RESOURCE_STALL": 395601229,
+    "EXEC_STALL": 8042050582,
+    "FDIV_FSQRT_STALL": 8549
+  },
+  "cmd": [
+    "sudo",
+    "-n",
+    "/usr/bin/python3",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+    "--inner",
+    "--tid",
+    "704908",
+    "--group",
+    "1",
+    "--window",
+    "3.000000",
+    "--preset-prefix",
+    "920b_topdown_full_",
+    "--kperfx-python",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/python",
+    "--quiet"
+  ],
+  "stderr_tail": "KPERFX_META {\"group\": 1, \"preset\": \"920b_topdown_full_1\", \"events\": [\"cpu_cycles\", \"inst_retired\", \"inst_spec\", \"fetch_bubble\", \"fetch_bubble_max\", \"total_resource_stall\", \"exec_stall\", \"fdiv_fsqrt_stall\"], \"tid\": 704908, \"window_requested_s\": 3.0, \"wall_s\": 3.015451, \"started_at_utc\": \"2026-09-23T20:29:21Z\", \"finished_at_utc\": \"2026-09-23T20:29:24Z\", \"time_enabled_ns\": 2850546620, \"time_running_ns\": 2850546620, \"confidence\": 1.0, \"useronly_forced\": false, \"instances\": 1, \"counters\": 8, \"raw_json_writer\": \"kperfx_ctx_write_output\"}\n",
+  "raw_json_writer": "kperfx_ctx_write_output"
+}

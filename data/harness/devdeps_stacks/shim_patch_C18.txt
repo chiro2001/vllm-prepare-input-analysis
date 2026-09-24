@@ -1,0 +1,6 @@
+# C18 torch.zeros_like(cpu_t, device='npu')
+# ok=True
+# value='cpu'
+# exc=None
+# tb
+

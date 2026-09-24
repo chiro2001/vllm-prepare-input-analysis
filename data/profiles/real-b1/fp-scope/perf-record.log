@@ -1,0 +1,5 @@
+# stage=record utc=2026-09-23T20:31:23Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/real-b1/fp-scope/perf.data -e cycles -F 999 -g --call-graph fp -t 704908 -- sleep 20
+[ perf record: Woken up 59 times to write data ]
+[ perf record: Captured and wrote 15.006 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/real-b1/fp-scope/perf.data (19564 samples) ]
+# perf record exit=0

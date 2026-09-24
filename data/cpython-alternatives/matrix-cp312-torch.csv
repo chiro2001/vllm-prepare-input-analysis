@@ -1,0 +1,7 @@
+label,python_label,python_bin,python,python_impl,variant,tensor_backend,iters,rounds,median_ns,min_ns,p10_ns,p90_ns,us_per_iter,checksum,numpy,torch,gil_enabled,affinity,error
+cp312:plain:torch,cp312,.venv/bin/python,3.12.14,cpython,plain,torch,3000,7,37559.089,34609.100666666665,34609.100666666665,41303.888333333336,37.559089,8673000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:slots:torch,cp312,.venv/bin/python,3.12.14,cpython,slots,torch,3000,7,36585.01466666667,35506.06533333333,35506.06533333333,41148.49933333333,36.58501466666667,8673000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:manual_dict:torch,cp312,.venv/bin/python,3.12.14,cpython,manual_dict,torch,3000,7,37021.37933333333,36035.6,36035.6,38253.83433333333,37.02137933333333,8673000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:manual_slots:torch,cp312,.venv/bin/python,3.12.14,cpython,manual_slots,torch,3000,7,36488.983,34543.69266666667,34543.69266666667,38178.60733333333,36.488983,8673000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:namedtuple:torch,cp312,.venv/bin/python,3.12.14,cpython,namedtuple,torch,3000,7,38296.784,35882.612,35882.612,39047.68,38.296784,8673000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:dict:torch,cp312,.venv/bin/python,3.12.14,cpython,dict,torch,3000,7,37009.714,35389.23133333334,35389.23133333334,47063.257,37.009714,8673000,2.3.5,2.13.0+cpu,True,"4,5,6,7",

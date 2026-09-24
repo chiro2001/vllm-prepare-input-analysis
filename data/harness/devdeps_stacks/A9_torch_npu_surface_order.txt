@@ -1,0 +1,80 @@
+# step_id     : A9_torch_npu_surface
+# title       : torch_npu 顶层子模块可导入性（profiler / op_plugin / multiprocessing / acl）
+# cwd         : /work
+# returncode  : 0
+# duration_s  : 5.69
+# extra env   : {}
+# env overrides: {}
+# ---- COMMAND (python -c) ----
+# torch_npu 顶层 API 面（哪些子模块可 import / 需要 CANN 才有）
+
+import importlib, json, traceback
+import torch_npu
+
+print("torch_npu.__file__ =", torch_npu.__file__)
+print("torch_npu.__version__ =", getattr(torch_npu, "__version__", None))
+print("dir(torch_npu) =", sorted(n for n in dir(torch_npu) if not n.startswith("_"))[:80])
+
+for mod in [
+    "torch_npu.npu",
+    "torch_npu.npu.utils",
+    "torch_npu.utils",
+    "torch_npu.profiler",
+    "torch_npu.profiler.dynamic_profile",
+    "torch_npu.op_plugin",
+    "torch_npu.op_plugin.atb",
+    "torch_npu.op_plugin.atb._atb_ops",
+    "torch_npu.multiprocessing",
+    "torch_npu.multiprocessing.reductions",
+    "torch_npu._inductor",
+    "torch_npu.distributed",
+    "torch_npu.asd",
+]:
+    try:
+        m = importlib.import_module(mod)
+        print(f"OK   import {mod}  ->  {getattr(m, '__file__', '<no file>')}")
+    except BaseException as e:
+        loc = traceback.format_exc().splitlines()
+        loc = [l.strip() for l in loc if l.strip().startswith("File ")]
+        print(f"FAIL import {mod}  ->  {type(e).__name__}: {e}   @ {loc[-1] if loc else ''}")
+
+try:
+    import acl
+    print("OK   import acl ->", acl.__file__)
+    print("acl.init() ->", acl.init())
+except BaseException as e:
+    print("FAIL import acl ->", type(e).__name__, e)
+# ---- STDOUT ----
+torch_npu.__file__ = /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/__init__.py
+torch_npu.__version__ = 2.10.0.post4
+dir(torch_npu) = ['Format', 'HiFloat8Tensor', 'ORG_AUTOLOAD', 'ParallelStore', 'asd', 'atb', 'atexit', 'attention_worker_scheduler', 'attention_worker_scheduler_', 'batch_norm_gather_stats_update', 'batch_norm_reduce', 'bfloat16', 'bool', 'complex128', 'complex32', 'complex64', 'contrib', 'copy_memory_', 'ctypes', 'distributed', 'dropout_with_byte_mask', 'dynamo', 'empty_with_format', 'empty_with_swapped_memory', 'erase_stream', 'fast_gelu', 'ffn_worker_scheduler', 'ffn_worker_scheduler_', 'fft_c2r_backward', 'fft_r2c_backward', 'float16', 'float32', 'float4_e1m2fn_x2', 'float4_e2m1fn_x2', 'float64', 'float6_e2m3', 'float6_e3m2', 'float8_e4m3fn', 'float8_e5m2', 'float8_e8m0fnu', 'fused_cross_entropy_loss_with_max_sum', 'fused_linear_cross_entropy_loss_with_max_sum_grad', 'fused_linear_online_max_sum', 'get_npu_format', 'get_storage_size', 'hifloat8', 'int16', 'int32', 'int4', 'int64', 'int8', 'kl_div_backward', 'kl_div_target_backward', 'l1_loss_backward', 'matmul_checksum', 'matmul_double_backward', 'multiprocessing', 'npu', 'npu_add_layer_norm', 'npu_add_layer_norm_backward', 'npu_add_quant_gmm', 'npu_add_quant_gmm_', 'npu_add_quant_matmul', 'npu_add_quant_matmul_', 'npu_add_rms_norm', 'npu_add_rms_norm_cast', 'npu_add_rms_norm_dynamic_mx_quant', 'npu_add_rms_norm_dynamic_quant', 'npu_add_rms_norm_quant', 'npu_add_rms_norm_v2', 'npu_add_rms_norm_v2_functional', 'npu_advance_step_flashattn', 'npu_all_gather_base_mm', 'npu_all_gather_quant_mm', 'npu_all_to_all_matmul', 'npu_all_to_all_quant_matmul', 'npu_alloc_float_status', 'npu_alltoallv_gmm', 'npu_alltoallv_quant_gmm', 'npu_anchor_response_flags']
+OK   import torch_npu.npu  ->  /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py
+OK   import torch_npu.npu.utils  ->  /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/utils.py
+OK   import torch_npu.utils  ->  /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/__init__.py
+OK   import torch_npu.profiler  ->  /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/profiler/__init__.py
+OK   import torch_npu.profiler.dynamic_profile  ->  /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/profiler/dynamic_profile.py
+OK   import torch_npu.op_plugin  ->  /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/op_plugin/__init__.py
+OK   import torch_npu.op_plugin.atb  ->  /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/op_plugin/atb/__init__.py
+OK   import torch_npu.op_plugin.atb._atb_ops  ->  /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/op_plugin/atb/_atb_ops.py
+OK   import torch_npu.multiprocessing  ->  None
+OK   import torch_npu.multiprocessing.reductions  ->  /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/multiprocessing/reductions.py
+FAIL import torch_npu._inductor  ->  SystemError: <built-in function get_arch> returned NULL without setting an exception   @ File "/usr/local/python3.12.13/lib/python3.12/site-packages/triton/backends/ascend/driver.py", line 151, in get_arch
+OK   import torch_npu.distributed  ->  /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/distributed/__init__.py
+OK   import torch_npu.asd  ->  /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/asd/__init__.py
+OK   import acl -> /usr/local/Ascend/cann-9.1.0/python/site-packages/acl.so
+acl.init() -> 500000
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.rtGetSocVersion failed, 0x7bc80
+# ---- STDERR ----
+can not use command: npu-smi info
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+
+# ---- END ----

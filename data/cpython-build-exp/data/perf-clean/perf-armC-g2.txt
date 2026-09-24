@@ -1,0 +1,16 @@
+# started on Thu Sep 24 12:02:00 2026
+
+
+ Performance counter stats for 'taskset -c 200-203 env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONHASHSEED=0 LD_LIBRARY_PATH=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/build-armC/Python-3.12.13 PYTHONPATH=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/pydeps /home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/build-armC/Python-3.12.13/python /home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/scripts/pi_sim_bench.py --steps 4000 --rounds 5 --reqs 64 --mode interleaved --label perf-armC-g2':
+
+     4,445,520,005      L1-icache-loads                                                       
+       334,154,269      L1-icache-load-misses            #    7.52% of all L1-icache accesses 
+     4,445,520,005      iTLB-loads                                                            
+        34,521,681      iTLB-load-misses                 #    0.78% of all iTLB cache accesses
+
+       3.780149690 seconds time elapsed
+
+       3.763251000 seconds user
+       0.011937000 seconds sys
+
+

@@ -1,0 +1,24 @@
+# arm=C
+configure_extra='--enable-optimizations --with-lto --with-computed-gotos'
+configure_full='./configure --prefix=/work/prefix-armC --enable-shared --enable-optimizations --with-lto --with-computed-gotos'
+make_jobs=16
+date_start=2026-09-24T03:41:34+00:00
+hostname=
+os=PRETTY_NAME="openEuler 24.03 (LTS-SP3)"
+kernel=Linux 6.6.0-159.4.3.154.oe2403sp4.aarch64
+gcc=gcc (GCC) 12.3.1 (openEuler 12.3.1-111.oe2403sp3)
+ld=GNU ld (GNU Binutils) 2.41
+make=GNU Make 4.4.1
+container_cpuset=200-239
+container_affinity=pid 1's current affinity list: 200-239
+image=image=quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler
+image_id=sha256:dc9a31b8330d399ad8e91dabaca25798c3d838c36851897bf9a1f77f793072ec
+repo_digest=quay.nju.edu.cn/ascend/vllm-ascend@sha256:24ae7427b6cad5ee29e0665e6f69a4d51c9f6178035e38f2ed161bb3d29fe81c
+host_gcc=gcc (GCC) 12.3.1 (openEuler 12.3.1-110.oe2403sp4)
+host_os=PRETTY_NAME="openEuler 24.03 (LTS-SP4)"
+configure_rc=0
+configure_seconds=44
+161:#define HAVE_COMPUTED_GOTOS 1
+1710:#define USE_COMPUTED_GOTOS 1
+make_rc=0
+make_seconds=813

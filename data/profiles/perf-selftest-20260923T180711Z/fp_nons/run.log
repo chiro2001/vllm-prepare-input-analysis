@@ -1,0 +1,2 @@
+[perf_capture.sh] ok: tid=94648 samples=8041 unknown=1.31% py_frames=762
+[perf_capture.sh] outdir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons

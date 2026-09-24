@@ -1,0 +1,30 @@
+{
+  "count": 8,
+  "entries": [
+    {"name":"BR_MIS_PRED","id":"br_mis_pred","config":"0x10","delta":39435,"rate":13154.705937},
+    {"name":"O3_FLUSH","id":"o3_flush","config":"0x2010","delta":44503,"rate":14845.286631},
+    {"name":"NUKE_FLUSH","id":"nuke_flush","config":"0x200f","delta":1578,"rate":526.388385},
+    {"name":"BP_MISP_BR_IND","id":"bp_misp_br_ind","config":"0x1010","delta":142,"rate":47.368283},
+    {"name":"BP_MISP_BR_BLR","id":"bp_misp_br_blr","config":"0x1013","delta":124,"rate":41.363853},
+    {"name":"BP_MISP_BR_BL","id":"bp_misp_br_bl","config":"0x1016","delta":118,"rate":39.362376},
+    {"name":"BP_MISP_BR_RET","id":"bp_misp_br_ret","config":"0x100d","delta":18,"rate":6.004430},
+    {"name":"IF_SP_FLUSH","id":"if_sp_flush","config":"0x104f","delta":60188,"rate":20077.480434}
+  ],
+  "time_enabled": 2997786510,
+  "time_running": 2997786510,
+  "confidence": 1.000000,
+  "sampled": false,
+  "sample_count": 0,
+  "lost_samples": 0,
+  "gated": false,
+  "iter_gated": false,
+  "iter_start_at": 0,
+  "iter_end_at": 0,
+  "iter_start_seen": 0,
+  "iter_end_seen": 0,
+  "roi_start_seen": 0,
+  "roi_end_seen": 0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B"
+}

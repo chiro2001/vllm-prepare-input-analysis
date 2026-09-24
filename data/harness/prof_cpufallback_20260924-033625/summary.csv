@@ -1,0 +1,32 @@
+tag,ts,metric,value,source,note
+prof_cpufallback,2026-09-24T03:43:11+0800,ipc,0.8066317967810153,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_cpufallback,2026-09-24T03:43:11+0800,time_enabled,29999325590,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_cpufallback,2026-09-24T03:43:11+0800,time_running,29999325590,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_cpufallback,2026-09-24T03:43:11+0800,confidence,1.0,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_cpufallback,2026-09-24T03:43:11+0800,wall_s,30.074614,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_cpufallback,2026-09-24T03:43:11+0800,counter.CPU_CYCLES,86997014090,pmu/count.json,libkperfx 区间增量
+prof_cpufallback,2026-09-24T03:43:11+0800,counter.INST_RETIRED,70174557790,pmu/count.json,libkperfx 区间增量
+prof_cpufallback,2026-09-24T03:43:11+0800,counter.INST_SPEC,111881820444,pmu/count.json,libkperfx 区间增量
+prof_cpufallback,2026-09-24T03:43:11+0800,counter.BR_PRED,17590936665,pmu/count.json,libkperfx 区间增量
+prof_cpufallback,2026-09-24T03:43:11+0800,counter.BR_MIS_PRED,1228180392,pmu/count.json,libkperfx 区间增量
+prof_cpufallback,2026-09-24T03:43:11+0800,counter.L1D_CACHE_REFILL,1200344229,pmu/count.json,libkperfx 区间增量
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] _PyEval_EvalFrameDefault,9.8,perf/hotspots.json,libpython3.12.so.1.0
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] _PyObject_Malloc,1.51,perf/hotspots.json,libpython3.12.so.1.0
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] pthread_mutex_lock,1.11,perf/hotspots.json,libc.so.6
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] _PyType_Lookup,1.06,perf/hotspots.json,libpython3.12.so.1.0
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] unicodekeys_lookup_unicode,1.05,perf/hotspots.json,libpython3.12.so.1.0
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] _PyObject_Free,1.02,perf/hotspots.json,libpython3.12.so.1.0
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] _PyObject_GenericGetAttrWithDict,0.93,perf/hotspots.json,libpython3.12.so.1.0
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] tupledealloc,0.81,perf/hotspots.json,libpython3.12.so.1.0
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] malloc,0.8,perf/hotspots.json,libc.so.6
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] ufunc_generic_fastcall,0.79,perf/hotspots.json,_multiarray_umath.cpython-312-aarch64-linux-gnu.so
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const,0.73,perf/hotspots.json,libtorch_cpu.so
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] PyType_IsSubtype,0.72,perf/hotspots.json,libpython3.12.so.1.0
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] _Py_dict_lookup,0.68,perf/hotspots.json,libpython3.12.so.1.0
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] tuple_alloc,0.58,perf/hotspots.json,libpython3.12.so.1.0
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] _PyFrame_ClearExceptCode,0.58,perf/hotspots.json,libpython3.12.so.1.0
+prof_cpufallback,2026-09-24T03:43:11+0800,hotspot.[.] 0x0000000000083e78,0.57,perf/hotspots.json,libc.so.6
+prof_cpufallback,2026-09-24T03:43:11+0800,"hotspot.[.] torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)",0.54,perf/hotspots.json,libtorch_cpu.so
+prof_cpufallback,2026-09-24T03:43:11+0800,"hotspot.[.] at::_ops::as_strided::call(at::Tensor const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, std::optional<c10::SymInt>)",0.52,perf/hotspots.json,libtorch_cpu.so
+prof_cpufallback,2026-09-24T03:43:11+0800,"hotspot.[.] at::native::as_strided_tensorimpl(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, std::optional<long>)",0.51,perf/hotspots.json,libtorch_cpu.so
+prof_cpufallback,2026-09-24T03:43:11+0800,"hotspot.[.] torch::FunctionSignature::parse(_object*, _object*, _object*, _object**, std::vector<_object*, std::allocator<_object*> >&, bool)",0.5,perf/hotspots.json,libtorch_python.so

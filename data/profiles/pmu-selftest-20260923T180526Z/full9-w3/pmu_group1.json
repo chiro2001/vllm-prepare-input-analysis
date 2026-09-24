@@ -1,0 +1,30 @@
+{
+  "count": 8,
+  "entries": [
+    {"name":"CPU_CYCLES","id":"cpu_cycles","config":"0x11","delta":8701324001,"rate":2899920420.961449},
+    {"name":"INST_RETIRED","id":"inst_retired","config":"0x8","delta":11529523800,"rate":3842484374.531803},
+    {"name":"INST_SPEC","id":"inst_spec","config":"0x1b","delta":11534112837,"rate":3844013778.804913},
+    {"name":"FETCH_BUBBLE","id":"fetch_bubble","config":"0x2011","delta":130419374,"rate":43465316.991775},
+    {"name":"FETCH_BUBBLE_MAX","id":"fetch_bubble_max","config":"0x2012","delta":20566999,"rate":6854435.071162},
+    {"name":"TOTAL_RESOURCE_STALL","id":"total_resource_stall","config":"0x7000","delta":514644549,"rate":171517373.334228},
+    {"name":"EXEC_STALL","id":"exec_stall","config":"0x7001","delta":8333454153,"rate":2777319161.159081},
+    {"name":"FDIV_FSQRT_STALL","id":"fdiv_fsqrt_stall","config":"0x7002","delta":103,"rate":34.327167}
+  ],
+  "time_enabled": 3000538890,
+  "time_running": 3000538890,
+  "confidence": 1.000000,
+  "sampled": false,
+  "sample_count": 0,
+  "lost_samples": 0,
+  "gated": false,
+  "iter_gated": false,
+  "iter_start_at": 0,
+  "iter_end_at": 0,
+  "iter_start_seen": 0,
+  "iter_end_seen": 0,
+  "roi_start_seen": 0,
+  "roi_end_seen": 0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B"
+}

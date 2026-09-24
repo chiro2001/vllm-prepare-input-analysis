@@ -1,0 +1,6 @@
+# C16 torch.npu.config.allow_internal_format 读写
+# ok=True
+# value='<read FAILED>'
+# exc=None
+# tb
+

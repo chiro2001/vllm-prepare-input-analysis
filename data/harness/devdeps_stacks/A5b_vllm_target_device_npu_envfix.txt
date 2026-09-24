@@ -1,0 +1,51 @@
+# step_id     : A5b_vllm_target_device_npu
+# title       : VLLM_TARGET_DEVICE=npu 下的 current_platform 解析
+# cwd         : /work
+# returncode  : 0
+# duration_s  : 4.97
+# extra env   : {"USER": "probe", "LOGNAME": "probe"}
+# env overrides: {"VLLM_TARGET_DEVICE": "npu"}
+# ---- COMMAND (python -c) ----
+import os, sys
+import vllm.envs as envs
+print("VLLM_TARGET_DEVICE env =", repr(os.environ.get("VLLM_TARGET_DEVICE")))
+print("envs.VLLM_TARGET_DEVICE =", repr(envs.VLLM_TARGET_DEVICE))
+print("VLLM_USE_V1 env =", repr(os.environ.get("VLLM_USE_V1")))
+print("envs.VLLM_USE_V1 =", repr(getattr(envs, "VLLM_USE_V1", "<missing>")))
+try:
+    from vllm.platforms import current_platform
+    print("current_platform =", type(current_platform), current_platform)
+    print("device_name =", getattr(current_platform, "device_name", None))
+    print("device_type =", getattr(current_platform, "device_type", None))
+except BaseException as e:
+    import traceback; traceback.print_exc()
+    print("current_platform resolution FAILED:", type(e).__name__, e)
+    raise SystemExit(3)
+# ---- STDOUT ----
+INFO 09-23 17:45:35 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 17:45:35 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-23 17:45:35 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-23 17:45:35 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-23 17:45:38 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+VLLM_TARGET_DEVICE env = 'npu'
+envs.VLLM_TARGET_DEVICE = 'npu'
+VLLM_USE_V1 env = None
+envs.VLLM_USE_V1 = '<missing>'
+current_platform = <class 'vllm_ascend.platform.NPUPlatform'> <vllm_ascend.platform.NPUPlatform object at 0xffff73fc92b0>
+device_name = npu
+device_type = npu
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.
+# ---- STDERR ----
+can not use command: npu-smi info
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+
+# ---- END ----

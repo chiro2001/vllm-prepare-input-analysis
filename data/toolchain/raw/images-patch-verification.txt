@@ -1,0 +1,45 @@
+### inside local/vllm-ascend-liteprofiler:v0.26.0rc1-openeuler
+--- /vllm-workspace/vllm
+13becedeaa0d3c0e097e432af7f5e5da4488a31a
+worktree_dirty_lines=0
+--- /vllm-workspace/vllm-ascend
+fe3f1e85f1226c458fcae44a96d2e12259def25d
+worktree_dirty_lines=0
+--- patch-id check for vllm
+HEAD-vs-base patch-id : 1f7a091bb2acc35fb09fa78ffef43c5170e65c5b
+patch-file  patch-id : 1f7a091bb2acc35fb09fa78ffef43c5170e65c5b
+diffstat base..HEAD:
+    10	0	vllm/benchmarks/latency.py
+    4	0	vllm/benchmarks/throughput.py
+    10	0	vllm/config/profiler.py
+    7	3	vllm/entrypoints/openai/chat_completion/serving.py
+    7	3	vllm/entrypoints/openai/completion/serving.py
+    12	1	vllm/entrypoints/serve/profile/api_router.py
+    7	0	vllm/envs.py
+    61	0	vllm/profiler/wrapper.py
+    27	20	vllm/renderers/base.py
+    270	0	vllm/utils/lite_profiler.py
+    330	0	vllm/utils/lite_profiler_report.py
+    825	0	vllm/utils/perf_topdown.py
+    193	0	vllm/utils/python_stack_sampler.py
+    272	0	vllm/utils/topdown_torch.py
+    29	13	vllm/v1/engine/async_llm.py
+    119	69	vllm/v1/engine/core.py
+    27	12	vllm/v1/engine/llm_engine.py
+    7	0	vllm/v1/engine/output_processor.py
+    5	0	vllm/v1/spec_decode/eagle.py
+    6	1	vllm/v1/utils.py
+    49	1	vllm/v1/worker/gpu_model_runner.py
+--- patch-id check for vllm-ascend
+HEAD-vs-base patch-id : b5c711f60077eaa4ae0bff058941a7e51c3bf147
+patch-file  patch-id : b5c711f60077eaa4ae0bff058941a7e51c3bf147
+diffstat base..HEAD:
+    5	2	vllm_ascend/spec_decode/llm_base_proposer.py
+    45	22	vllm_ascend/worker/model_runner_v1.py
+### inside quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler (baseline)
+--- /vllm-workspace/vllm
+568afb3a13806beb53bb2e6bd518269357b237c0
+worktree_dirty_lines=0
+--- /vllm-workspace/vllm-ascend
+f2f74a16c3c50a76f4349d807918e83edec1e35c
+worktree_dirty_lines=0

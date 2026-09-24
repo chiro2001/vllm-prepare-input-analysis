@@ -1,0 +1,56 @@
+{
+ "best_seconds": 0.7227181199705228,
+ "cpu_affinity": [
+  200,
+  201,
+  202,
+  203
+ ],
+ "env_OMP_NUM_THREADS": "1",
+ "executable": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/build-armC/Python-3.12.13/python",
+ "label": "perf-armC-g1",
+ "measurements": [
+  {
+   "ns_per_step": 181069.8350018356,
+   "round": 0,
+   "seconds": 0.7242793400073424,
+   "steps": 4000
+  },
+  {
+   "ns_per_step": 180839.46997649036,
+   "round": 1,
+   "seconds": 0.7233578799059615,
+   "steps": 4000
+  },
+  {
+   "ns_per_step": 181048.36498969235,
+   "round": 2,
+   "seconds": 0.7241934599587694,
+   "steps": 4000
+  },
+  {
+   "ns_per_step": 181233.08999929577,
+   "round": 3,
+   "seconds": 0.7249323599971831,
+   "steps": 4000
+  },
+  {
+   "ns_per_step": 180679.5299926307,
+   "round": 4,
+   "seconds": 0.7227181199705228,
+   "steps": 4000
+  }
+ ],
+ "median_ns_per_step": 181048.36498969235,
+ "median_seconds": 0.7241934599587694,
+ "min_ns_per_step": 180679.5299926307,
+ "mode": "interleaved",
+ "numpy": "1.26.4",
+ "phase_measurements": {},
+ "platform": "Linux-6.6.0-159.4.3.154.oe2403sp4.aarch64-aarch64-with-glibc2.38",
+ "python": "3.12.13 (main, Sep 24 2026, 03:52:42) [GCC 12.3.1 (openEuler 12.3.1-111.oe2403sp3)]",
+ "reqs": 64,
+ "rounds_requested": 5,
+ "steps": 4000,
+ "work_digest": 386160000
+}

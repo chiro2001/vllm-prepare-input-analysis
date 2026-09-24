@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-09-14T10:00:05.245098+00:00",
+  "decode_after_release_seconds": 29.8870381800225,
+  "event_set": "ipc",
+  "measured_output_tokens": 7167,
+  "ranks": [
+    {
+      "chip": 15,
+      "derived": {
+        "ipc": 0.7872482502010797
+      },
+      "event_set": "ipc",
+      "events": {
+        "cycles": {
+          "per_decode_second": 2771942612.780429,
+          "per_measured_output_token": 11559251.388447048,
+          "time_enabled_ns": 28667403000.0,
+          "time_running_percent": 100.0,
+          "unit": "",
+          "value": 82845154701.0
+        },
+        "instructions": {
+          "per_decode_second": 2182206971.5692015,
+          "per_measured_output_token": 9100000.42918934,
+          "time_enabled_ns": 28667403000.0,
+          "time_running_percent": 100.0,
+          "unit": "",
+          "value": 65219703076.0
+        }
+      },
+      "pid": 3797212,
+      "rank": 0,
+      "tid": 3797212
+    }
+  ],
+  "schema_version": 1,
+  "scope": "exact_worker_main_tid",
+  "tokens_observed_before_release": 1,
+  "total_output_tokens": 7168
+}

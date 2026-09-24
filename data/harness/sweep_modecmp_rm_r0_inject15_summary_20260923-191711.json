@@ -1,0 +1,82 @@
+{
+  "config": {
+    "preset": "realmachine",
+    "model_profile": "qwen35-0.8b",
+    "model_path": "/models/Qwen3.5-0.8B",
+    "hf_config_path": null,
+    "dtype": "bfloat16",
+    "hidden_size": null,
+    "num_hidden_layers": null,
+    "num_attention_heads": null,
+    "num_key_value_heads": null,
+    "max_model_len": 2048,
+    "max_num_reqs": 8,
+    "max_num_batched_tokens": 2048,
+    "block_size": 128,
+    "enable_chunked_prefill": true,
+    "enable_prefix_caching": false,
+    "num_spec_tokens": 0,
+    "async_scheduling": true,
+    "has_gdn": true,
+    "pin_memory": false,
+    "device": "cpu",
+    "batch": 1,
+    "isl": 128,
+    "osl": 64,
+    "prefix_hit_ratio": 0.0,
+    "arrival": "simultaneous",
+    "steps": 200,
+    "seed": 0,
+    "shuffle_values": false,
+    "op_cost_us": 0.0,
+    "triton_launch_us": 0.0,
+    "slot_mapping_mode": "inject:15",
+    "trace_path": null,
+    "extra": {
+      "chunk_size": 2048,
+      "preset": "realmachine"
+    }
+  },
+  "meta": {
+    "model_profile": "qwen35-0.8b",
+    "model_config_dir": "/tmp/pi_models/qwen35-0.8b-hx-lx-m2048",
+    "vocab_size": 248320,
+    "max_model_len": 2048,
+    "dtype": "torch.bfloat16",
+    "max_num_tokens": 2048,
+    "max_num_reqs": 8,
+    "block_size": 128,
+    "num_spec_tokens": 0,
+    "max_num_blocks_per_req": 16,
+    "use_async_scheduling": true,
+    "use_async_spec_decode": false,
+    "has_gdn": true,
+    "readonly_attrs_skipped": [],
+    "attr_audit": {}
+  },
+  "steps_run": 62,
+  "wall_s": 0.033900709997396916,
+  "prepare_inputs_us": {
+    "p50": 487.354991491884,
+    "p90": 499.3709677364677,
+    "p99": 578.4557171864436,
+    "mean": 491.37112857293215,
+    "sum": 30465.009971521795
+  },
+  "update_states_us": {
+    "p50": 20.719977328553796,
+    "p90": 21.367025328800082,
+    "mean": 20.692094920143003
+  },
+  "scope_total_us": {
+    "p50": 508.23501078411937,
+    "p90": 519.5569770876318,
+    "mean": 512.1846747164044
+  },
+  "substeps": [],
+  "host": {
+    "node": "dbbd385d9a17",
+    "torch": "2.10.0+cpu",
+    "numpy": "1.26.4"
+  }
+}

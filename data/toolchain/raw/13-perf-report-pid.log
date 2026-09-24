@@ -1,0 +1,44 @@
+$ perf report --stdio -i /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-pid.data --no-children
+# rc=0 wall_s=0.168
+
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 745  of event 'cycles:P'
+# Event count (approx.): 4561975427
+#
+# Overhead  Command     Shared Object      Symbol                       
+# ........  ..........  .................  .............................
+#
+    59.28%  probe_load  probe_load         [.] probe_hot_branch
+            |
+            ---probe_hot_branch
+               worker
+               0xffffb911f874
+               0xffffb9187c8c
+
+    32.85%  probe_load  probe_load         [.] probe_hot_pointer_chase
+            |
+            ---probe_hot_pointer_chase
+               worker
+               0xffffb911f874
+               0xffffb9187c8c
+
+     7.87%  probe_load  probe_load         [.] probe_hot_fp
+            |
+            ---probe_hot_fp
+               worker
+               0xffffb911f874
+               0xffffb9187c8c
+
+     0.00%  probe_load  [kernel.kallsyms]  [k] finish_task_switch.isra.0
+
+
+#
+# (Tip: For a higher level overview, try: perf report --sort comm,dso)
+#
+
+----- stderr -----
+

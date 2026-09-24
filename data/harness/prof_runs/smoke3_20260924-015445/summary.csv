@@ -1,0 +1,32 @@
+tag,ts,metric,value,source,note
+smoke3,2026-09-24T01:55:01+0800,ipc,3.7092828052543916,pmu/count.json,CPU busy cycles 口径，不是 wall time
+smoke3,2026-09-24T01:55:01+0800,time_enabled,561510180,pmu/count.json,CPU busy cycles 口径，不是 wall time
+smoke3,2026-09-24T01:55:01+0800,time_running,561510180,pmu/count.json,CPU busy cycles 口径，不是 wall time
+smoke3,2026-09-24T01:55:01+0800,confidence,1.0,pmu/count.json,CPU busy cycles 口径，不是 wall time
+smoke3,2026-09-24T01:55:01+0800,wall_s,0.669673,pmu/count.json,CPU busy cycles 口径，不是 wall time
+smoke3,2026-09-24T01:55:01+0800,counter.CPU_CYCLES,1627745082,pmu/count.json,libkperfx 区间增量
+smoke3,2026-09-24T01:55:01+0800,counter.INST_RETIRED,6037766844,pmu/count.json,libkperfx 区间增量
+smoke3,2026-09-24T01:55:01+0800,counter.INST_SPEC,6491735176,pmu/count.json,libkperfx 区间增量
+smoke3,2026-09-24T01:55:01+0800,counter.BR_PRED,1309159058,pmu/count.json,libkperfx 区间增量
+smoke3,2026-09-24T01:55:01+0800,counter.BR_MIS_PRED,5965355,pmu/count.json,libkperfx 区间增量
+smoke3,2026-09-24T01:55:01+0800,counter.L1D_CACHE_REFILL,1047855,pmu/count.json,libkperfx 区间增量
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x00000000001c95e8,7.77,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x00000000001c95dc,5.84,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x00000000001c95fc,5.68,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x00000000001c8870,5.33,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x00000000001c885c,3.88,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x00000000001c8850,3.49,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x00000000001c8824,2.27,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x00000000001c95a8,1.88,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x00000000001c887c,1.87,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x0000000000115928,1.67,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x00000000001c8898,1.62,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x0000000000306808,1.58,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x000000000019eaa0,1.37,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x000000000011427c,1.34,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x00000000001c8ce0,1.29,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x000000000019eaf4,1.21,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x0000000000114274,1.08,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x0000000000112438,1.07,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x0000000000113110,1.07,perf/hotspots.json,libpython3.12.so.1.0
+smoke3,2026-09-24T01:55:01+0800,hotspot.[.] 0x00000000001a2854,1.07,perf/hotspots.json,libpython3.12.so.1.0

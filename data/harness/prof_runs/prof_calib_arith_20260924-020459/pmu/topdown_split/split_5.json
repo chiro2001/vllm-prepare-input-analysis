@@ -1,0 +1,93 @@
+{
+  "caliber_version": "prof-v1",
+  "ts_start": "2026-09-24T02:06:03+0800",
+  "pid": 4095058,
+  "events_spec": null,
+  "preset": "920b_topdown_full_5",
+  "multiplex_allowed": false,
+  "ts_running": "2026-09-24T02:06:03+0800",
+  "stopped_reason": "target_exit",
+  "ts_end": "2026-09-24T02:07:10+0800",
+  "wall_s": 67.445544,
+  "counters": {
+    "VFP_PAIR_PTAG_STALL": 0,
+    "VPD_PTAG_STALL": 0,
+    "INT_MPQ_STALL": 13831542097,
+    "VFP_MPQ_STALL": 0,
+    "CC_MPQ_STALL": 6206314,
+    "PORTS_0_SERIALIZE": 92843837483,
+    "PORTS_0_NONSERIALIZE": 44854294339,
+    "PORTS_1": 21761804080
+  },
+  "entries": [
+    {
+      "name": "VFP_PAIR_PTAG_STALL",
+      "id": "vfp_pair_ptag_stall",
+      "config": 8201,
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "VPD_PTAG_STALL",
+      "id": "vpd_ptag_stall",
+      "config": 8202,
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "INT_MPQ_STALL",
+      "id": "int_mpq_stall",
+      "config": 8203,
+      "delta": 13831542097,
+      "rate": 205511451.49864426
+    },
+    {
+      "name": "VFP_MPQ_STALL",
+      "id": "vfp_mpq_stall",
+      "config": 8204,
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "CC_MPQ_STALL",
+      "id": "cc_mpq_stall",
+      "config": 8205,
+      "delta": 6206314,
+      "rate": 92214.48987043898
+    },
+    {
+      "name": "PORTS_0_SERIALIZE",
+      "id": "ports_0_serialize",
+      "config": 28682,
+      "delta": 92843837483,
+      "rate": 1379489840.686241
+    },
+    {
+      "name": "PORTS_0_NONSERIALIZE",
+      "id": "ports_0_nonserialize",
+      "config": 28683,
+      "delta": 44854294339,
+      "rate": 666452885.073073
+    },
+    {
+      "name": "PORTS_1",
+      "id": "ports_1",
+      "config": 28684,
+      "delta": 21761804080,
+      "rate": 323340659.5118516
+    }
+  ],
+  "time_enabled": 67303023730,
+  "time_running": 67303023730,
+  "confidence": 1.0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B",
+  "backend": "920B(counting)",
+  "derived": {
+    "cpu_cycles": null,
+    "inst_retired": null,
+    "ipc": null,
+    "cycles_per_sec": null
+  }
+}

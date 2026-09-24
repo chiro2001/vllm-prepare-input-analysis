@@ -1,0 +1,66 @@
+$ bash -lc perf annotate --stdio -i /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-c.data -s probe_hot_branch 2>&1 | head -60
+# rc=0 wall_s=0.205
+
+ Percent |	Source code & Disassembly of probe_load for cycles:P (1674 samples, percent: local period)
+----------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3      Disassembly of section .text:
+         :
+         : 5      0000000000400d50 <probe_hot_branch>:
+         : 6      probe_hot_branch():
+         :
+         : 54     /* Unpredictable branch + integer ALU chain.  This is the function that is
+         : 55     * expected to dominate the flame graph; it is exported so `perf annotate -s
+         : 56     * probe_hot_branch` works. */
+         : 57     NOINLINE uint64_t probe_hot_branch(uint64_t state, const uint32_t *tab, uint32_t n)
+         : 58     {
+    0.00 :   400d50: mov     x3, x0
+         : 55     uint64_t acc = 0;
+         : 56     for (uint32_t i = 0; i < n; i++) {
+    0.00 :   400d54: cbz     w2, 400dd4 <probe_hot_branch+0x84>
+    0.00 :   400d58: mov     w7, #0x0                        // #0
+         : 54     uint64_t acc = 0;
+    0.00 :   400d5c: mov     x0, #0x0                        // #0
+    0.00 :   400d60: b       400d78 <probe_hot_branch+0x28>
+         : 65     uint32_t v = tab[idx];
+         : 66     /* data dependent branch: mirrors CPython's type/ob_type tests */
+         : 67     if ((v & 0x7u) == 0x3u)
+         : 68     acc += v * 3u + i;
+         : 69     else if ((v & 0x1fu) == 0x7u)
+         : 70     acc ^= (uint64_t)v << (i & 7);
+   24.77 :   400d64: cmp     w10, #0x7
+         : 55     for (uint32_t i = 0; i < n; i++) {
+    0.00 :   400d68: add     w7, w7, #0x1
+         : 65     acc ^= (uint64_t)v << (i & 7);
+    0.00 :   400d6c: csel    x0, x6, x5, ne  // ne = any
+         : 55     for (uint32_t i = 0; i < n; i++) {
+    0.00 :   400d70: cmp     w2, w7
+    2.04 :   400d74: b.eq    400dd0 <probe_hot_branch+0x80>  // b.none
+         : 56     state ^= state << 13;
+   11.37 :   400d78: eor     x3, x3, x3, lsl #13
+         : 65     acc ^= (uint64_t)v << (i & 7);
+    0.00 :   400d7c: and     w8, w7, #0x7
+         : 57     state ^= state >> 7;
+    0.00 :   400d80: eor     x3, x3, x3, lsr #7
+         : 60     uint32_t v = tab[idx];
+    0.00 :   400d84: and     x4, x3, #0x3fff
+         : 59     uint32_t idx = (uint32_t)(state & TABLE_MASK);
+    0.54 :   400d88: and     w6, w3, #0x3fff
+         : 58     state ^= state << 17;
+    0.00 :   400d8c: eor     x3, x3, x3, lsl #17
+         : 60     uint32_t v = tab[idx];
+    0.00 :   400d90: ldr     w4, [x1, x4, lsl #2]
+         : 65     acc ^= (uint64_t)v << (i & 7);
+    0.00 :   400d94: mov     w5, w4
+    0.00 :   400d98: eor     w6, w6, w4
+         : 62     if ((v & 0x7u) == 0x3u)
+    0.00 :   400d9c: and     w9, w4, #0x7
+         : 64     else if ((v & 0x1fu) == 0x7u)
+   43.10 :   400da0: and     w10, w4, #0x1f
+         : 65     acc ^= (uint64_t)v << (i & 7);
+    0.00 :   400da4: lsl     x5, x5, x8
+
+----- stderr -----
+

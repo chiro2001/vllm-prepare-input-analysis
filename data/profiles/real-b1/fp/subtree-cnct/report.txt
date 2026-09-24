@@ -1,0 +1,110 @@
+# subtree breakdown: compute_num_computed_tokens
+
+- perf.data: data/profiles/real-b1/fp/perf.data
+- thread: 704908
+- samples of tid: 19569
+- samples containing the match: 520 (2.66% of the thread's samples)
+- nested matches (recursion/repeats in one stack): 0
+
+## leaf class (where the cycles were actually spent)
+
+| class | % of matched samples |
+|---|---:|
+| other | 48.46 |
+| libc | 15.58 |
+| cpython_runtime | 12.31 |
+| aten_op_dispatch | 9.23 |
+| kernel | 7.50 |
+| allocator | 3.85 |
+| copy_h2d | 1.73 |
+| ascend_driver | 1.35 |
+
+## direct callees
+
+| callee | % |
+|---|---:|
+| _PyEval_EvalFrameDefault+0x2b0c (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 67.69 |
+| _PyEval_EvalFrameDefault+0x3c68 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 21.54 |
+| _PyEval_EvalFrameDefault+0x40e4 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 4.81 |
+| _PyEval_EvalFrameDefault+0x2b34 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 1.92 |
+| _PyEval_EvalFrameDefault+0x12a4 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 1.92 |
+| _PyEval_EvalFrameDefault+0x1918 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.38 |
+| _PyEval_EvalFrameDefault+0x2bd0 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.19 |
+| _PyEval_EvalFrameDefault+0x3c53 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.19 |
+| _PyEval_EvalFrameDefault+0x4e04 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.19 |
+| _PyEval_EvalFrameDefault+0xbc (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.19 |
+| _PyEval_EvalFrameDefault+0x4260 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.19 |
+| _PyEval_EvalFrameDefault+0x3c54 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.19 |
+| _PyEval_EvalFrameDefault+0x40c4 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.19 |
+| _PyEval_EvalFrameDefault+0x2b58 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.19 |
+| _PyEval_EvalFrameDefault+0x1944 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.19 |
+
+## subtree (inclusive)
+
+| symbol | % |
+|---|---:|
+| [unknown] (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so) | 438.08 |
+| _PyEval_EvalFrameDefault+0x2b0c (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 67.69 |
+| PyNumber_Subtract+0xa4 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 67.50 |
+| slot_nb_subtract+0xcc (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 67.31 |
+| vectorcall_maybe.constprop.0+0x88 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 67.12 |
+| method_vectorcall_VARARGS_KEYWORDS+0xb4 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 66.15 |
+| _object* torch::autograd::TypeError_to_NotImplemented_<&torch::autograd::THPVariable_sub>(_object*, _object*, _object*)+0x10 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_python.so) | 66.15 |
+| torch::autograd::THPVariable_sub(_object*, _object*, _object*)+0x1c8 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_python.so) | 62.12 |
+| at::_ops::sub_Tensor::call(at::Tensor const&, at::Tensor const&, c10::Scalar const&)+0x184 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so) | 61.35 |
+| _PyEval_EvalFrameDefault+0x3c68 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 21.54 |
+| at_npu::native::OpPreparation::apply_tensor_without_format(c10::ArrayRef<long>, c10::TensorOptions const&)+0xf0 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so) | 20.96 |
+| at::Tensor c10::callUnboxedKernelFunction<at::Tensor, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt>(void*, c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, long&&, std::optional<c10::SymInt>&&, std::optional<c10::SymInt>&&, c10::SymInt&&) [clone .isra.0]+0x84 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so) | 19.62 |
+| torch::autograd::THPVariable_getitem(_object*, _object*)+0x5f0 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_python.so) | 12.50 |
+| at::indexing::get_item(at::Tensor const&, c10::ArrayRef<at::indexing::TensorIndex> const&, bool)+0x284 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_python.so) | 11.92 |
+| at::indexing::impl::applySlice(at::Tensor const&, long, c10::SymInt, c10::SymInt, c10::SymInt, bool, c10::Device const&, std::optional<c10::ArrayRef<c10::SymInt> > const&)+0x158 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_python.so) | 11.54 |
+| at::_ops::slice_Tensor::call(at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)+0x24c (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so) | 11.54 |
+| c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt), &torch::ADInplaceOrView::(anonymous namespace)::slice_Tensor>, at::Tensor, c10::guts::typelist::typelist<c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt> >, at::Tensor (c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)+0x88 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so) | 11.15 |
+| at_npu::native::OpCommand::RunOpApiV2(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::function<int ()> const&, bool)+0x228 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so) | 10.00 |
+| torch::ADInplaceOrView::(anonymous namespace)::slice_Tensor(c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)+0xa8 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so) | 8.27 |
+| at::_ops::slice_Tensor::redispatch(c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)+0xfc (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so) | 8.27 |
+| at::Tensor c10::Dispatcher::redispatch<at::Tensor, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt>(c10::TypedOperatorHandle<at::Tensor (at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)> const&, c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt) const [clone .isra.0]+0xcc (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so) | 8.27 |
+| eventfd_write+0x18 (/usr/lib64/libc.so.6) | 8.08 |
+| c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd_Tensor_slice>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt> >, at::Tensor (at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)+0xd0 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so) | 8.08 |
+| write+0x53 (/usr/lib64/libc.so.6) | 7.69 |
+| write+0x6c (/usr/lib64/libc.so.6) | 7.69 |
+| [unknown] (/usr/lib64/libc.so.6) | 7.50 |
+| el0t_64_sync+0x188 ([kernel.kallsyms]) | 7.50 |
+| el0t_64_sync_handler+0x100 ([kernel.kallsyms]) | 7.50 |
+| el0_svc+0x44 ([kernel.kallsyms]) | 6.73 |
+| do_el0_svc+0x48 ([kernel.kallsyms]) | 6.73 |
+
+## leaves (top)
+
+| leaf | % |
+|---|---:|
+| [unknown] (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so) | 25.96 |
+| [unknown] (/usr/lib64/libc.so.6) | 7.31 |
+| [unknown] (/usr/lib/ld-linux-aarch64.so.1) | 3.65 |
+| eventfd_write+0x214 ([kernel.kallsyms]) | 3.46 |
+| pthread_mutex_lock+0x78 (/usr/lib64/libc.so.6) | 1.15 |
+| __fget_files+0x68 ([kernel.kallsyms]) | 0.96 |
+| at::RecordFunction::~RecordFunction()+0x0 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so) | 0.77 |
+| el0_svc+0x34 ([kernel.kallsyms]) | 0.77 |
+| op::internal::OpExecCacheManager::GetOpExecCache(unsigned long)+0x4c (/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libnnopbase.so) | 0.58 |
+| malloc+0x158 (/usr/lib64/libc.so.6) | 0.58 |
+| malloc+0xb8 (/usr/lib64/libc.so.6) | 0.58 |
+| Py_IsInitialized+0x8 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.58 |
+| c10_npu::GetDevice(int*)+0x40 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so) | 0.58 |
+| c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::retain_()+0x30 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so) | 0.38 |
+| [unknown] ([vdso]) | 0.38 |
+| PyNumber_AsSsize_t+0x94 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.38 |
+| malloc+0x150 (/usr/lib64/libc.so.6) | 0.38 |
+| c10::SymBool::expect_true(char const*, long) const+0x0 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libc10.so) | 0.38 |
+| c10::TensorImpl::~TensorImpl()+0x0 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libc10.so) | 0.38 |
+| c10::operator<(c10::SymInt const&, int)+0x0 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libc10.so) | 0.38 |
+| _PyType_Lookup+0x138 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.38 |
+| write+0xc (/usr/lib64/libc.so.6) | 0.38 |
+| c10_npu::current_device()+0x54 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so) | 0.38 |
+| add_param_to_buf(c10::Scalar const&)+0x0 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so) | 0.38 |
+| std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)+0x124 (/usr/lib64/libstdc++.so.6.0.30) | 0.38 |
+| _PyObjectDict_SetItem+0x30 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.38 |
+| _Py_NewReference+0x14 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0) | 0.38 |
+| clock_gettime+0x0 (/usr/lib64/libc.so.6) | 0.38 |
+| op::internal::OpGetLogSequence()+0x1c (/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libnnopbase.so) | 0.38 |
+| c10::intrusive_ptr<c10::StorageImpl, c10::detail::intrusive_target_default_null_type<c10::StorageImpl> >::reset_not_null_(c10::StorageImpl*)+0x168 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libc10.so) | 0.38 |

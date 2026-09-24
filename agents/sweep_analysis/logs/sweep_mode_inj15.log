@@ -1,0 +1,204 @@
+[run] 2026-09-24T02:53:37+08:00 :: --batch 16 --isl 1024 --steps 200 --slot-mapping-mode inject:15 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+can not use command: npu-smi info
+INFO 09-23 18:53:54 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 18:53:54 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-23 18:53:54 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-23 18:53:54 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-23 18:53:54 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+INFO 09-23 18:54:28 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:54:28 [model.py:1788] Using max model len 262144
+INFO 09-23 18:54:28 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 09-23 18:54:28 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=2048.
+INFO 09-23 18:54:28 [vllm.py:1109] Asynchronous scheduling is enabled.
+INFO 09-23 18:54:28 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:54:28 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:54:28 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+INFO 09-23 18:54:28 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:54:28 [ascend_config.py:922] The number of redundant experts is 0
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.rtGetAiCoreCount failed, 0x7bc78{
+  "config": {
+    "model_profile": "qwen35-0.8b",
+    "model_path": "/models/Qwen3.5-0.8B",
+    "hf_config_path": null,
+    "dtype": "bfloat16",
+    "hidden_size": null,
+    "num_hidden_layers": null,
+    "num_attention_heads": null,
+    "num_key_value_heads": null,
+    "max_model_len": null,
+    "max_num_reqs": 64,
+    "max_num_batched_tokens": 16384,
+    "block_size": 128,
+    "enable_chunked_prefill": true,
+    "enable_prefix_caching": true,
+    "num_spec_tokens": 0,
+    "async_scheduling": false,
+    "has_gdn": true,
+    "pin_memory": false,
+    "device": "cpu",
+    "batch": 16,
+    "isl": 1024,
+    "osl": 128,
+    "prefix_hit_ratio": 0.0,
+    "arrival": "simultaneous",
+    "steps": 200,
+    "seed": 0,
+    "shuffle_values": false,
+    "op_cost_us": 0.0,
+    "triton_launch_us": 0.0,
+    "slot_mapping_mode": "inject:15",
+    "trace_path": null,
+    "extra": {
+      "chunk_size": 16384
+    }
+  },
+  "meta": {
+    "model_profile": "qwen35-0.8b",
+    "model_config_dir": "/tmp/pi_models/qwen35-0.8b-hx-lx-mx",
+    "vocab_size": 248320,
+    "max_model_len": 262144,
+    "dtype": "torch.bfloat16",
+    "max_num_tokens": 16384,
+    "max_num_reqs": 64,
+    "block_size": 128,
+    "num_spec_tokens": 0,
+    "max_num_blocks_per_req": 2048,
+    "use_async_scheduling": false,
+    "use_async_spec_decode": false,
+    "has_gdn": true,
+    "readonly_attrs_skipped": [],
+    "attr_audit": {}
+  },
+  "steps_run": 126,
+  "wall_s": 0.1050411100150086,
+  "prepare_inputs_us": {
+    "p50": 678.8450118619949,
+    "p90": 700.0099867582321,
+    "p99": 954.6850196784362,
+    "mean": 684.7181763973028,
+    "sum": 86274.49022606015
+  },
+  "update_states_us": {
+    "p50": 65.5899930279702,
+    "p90": 66.9099681545049,
+    "mean": 65.22412554153965
+  },
+  "scope_total_us": {
+    "p50": 744.990014936775,
+    "p90": 766.8799953535199,
+    "mean": 750.1196828559928
+  },
+  "substeps": [
+    {
+      "substep": "NPUModelRunner._prepare_inputs",
+      "calls": 126,
+      "total_us": 85024.08023923635,
+      "share_of_scope_pct": 89.95821640671883
+    },
+    {
+      "substep": "MultiGroupBlockTable.compute_slot_mapping",
+      "calls": 126,
+      "total_us": 19777.639186941087,
+      "share_of_scope_pct": 20.925379504097396
+    },
+    {
+      "substep": "BlockTable.compute_slot_mapping",
+      "calls": 126,
+      "total_us": 19336.370460223407,
+      "share_of_scope_pct": 20.45850297335584
+    },
+    {
+      "substep": "NPUModelRunner._update_states",
+      "calls": 126,
+      "total_us": 7999.789901077747,
+      "share_of_scope_pct": 8.464035472121907
+    },
+    {
+      "substep": "GPUModelRunner._update_states",
+      "calls": 126,
+      "total_us": 7571.51999277994,
+      "share_of_scope_pct": 8.010912110096276
+    },
+    {
+      "substep": "MultiGroupBlockTable.commit_block_table",
+      "calls": 126,
+      "total_us": 4259.900248143822,
+      "share_of_scope_pct": 4.507111718413092
+    },
+    {
+      "substep": "NPUModelRunner._build_attn_state",
+      "calls": 126,
+      "total_us": 4075.1900523900986,
+      "share_of_scope_pct": 4.311682379861153
+    },
+    {
+      "substep": "BlockTable.commit_block_table",
+      "calls": 126,
+      "total_us": 3980.329493060708,
+      "share_of_scope_pct": 4.211316851641329
+    },
+    {
+      "substep": "GPUModelRunner._get_cumsum_and_arange",
+      "calls": 126,
+      "total_us": 3292.740206234157,
+      "share_of_scope_pct": 3.4838252317468017
+    },
+    {
+      "substep": "GPUModelRunner._prepare_input_ids",
+      "calls": 126,
+      "total_us": 2636.41047058627,
+      "share_of_scope_pct": 2.789407224195916
+    },
+    {
+      "substep": "InputBatch.update_req_spec_token_ids",
+      "calls": 2016,
+      "total_us": 1508.3387843333185,
+      "share_of_scope_pct": 1.5958710331698207
+    },
+    {
+      "substep": "InputBatch.refresh_metadata",
+      "calls": 126,
+      "total_us": 401.74025343731046,
+      "share_of_scope_pct": 0.42505413238596923
+    },
+    {
+      "substep": "GPUModelRunner._compute_prev_positions",
+      "calls": 126,
+      "total_us": 364.49998151510954,
+      "share_of_scope_pct": 0.38565272479418866
+    },
+    {
+      "substep": "InputBatch.condense",
+      "calls": 126,
+      "total_us": 282.55017241463065,
+      "share_of_scope_pct": 0.298947186306656
+    },
+    {
+      "substep": "GPUModelRunner._may_reorder_batch",
+      "calls": 126,
+      "total_us": 90.95051791518927,
+      "share_of_scope_pct": 0.09622857842032961
+    }
+  ],
+  "host": {
+    "node": "0224c011ba3b",
+    "torch": "2.10.0+cpu",
+    "numpy": "1.26.4"
+  }
+}
+[cli] wrote /work/data/harness/sweep_mode_inj15_per_step_20260923-185428.csv
+[cli] wrote /work/data/harness/sweep_mode_inj15_summary_20260923-185428.json
+[cli] wrote /work/data/harness/sweep_mode_inj15_substep_20260923-185428.csv

@@ -1,0 +1,77 @@
+920B: are the L3-miss / DRAM counters alive?            (a3-22, 2026-09-23T18:1x UTC)
+============================================================================
+
+Question
+--------
+The 920b_topdown_full tree reads its L3/LLC and DRAM information from four
+counters: memstall_l3miss (group 2), dram_local (group 7), dram_remote and
+dram_remote_cache (group 8).  They reported 0 in the ALU selftest sweep, which
+could mean either "this workload does not touch DRAM" or "these events are dead
+on this box".  This probe separates the two.
+
+Method
+------
+A streaming load that provably misses L2/L3: libkperfx `workload_gen --kind
+dram` walks a 256 MiB buffer with a 64-byte stride (one byte per cache line,
+4,194,304 lines per pass) for the whole window, pinned to one core.
+`--kind l3` (8 MiB buffer) is used as a second data point.
+
+Reproduction (a3-22; the PMU part needs root, so `sudo -n`):
+
+    cd ~/projects/vllm/prepare-input-phase
+    P=$(taskset -c 201 tools/libkperfx/build/workload_gen --kind dram \
+                --threads 1 --duration-ms 30000 >/dev/null 2>&1 & echo $!)
+    sleep 1
+    T=$(ls /proc/$P/task | tail -1)     # the busy pthread, NOT the process leader
+    sudo -n python3 - "$T" <<'PY'
+    import sys, time
+    sys.path.insert(0, "tools/libkperfx/python")
+    import kperfx
+    s = kperfx.Session(events="l1d_cache_refill,mem_access,memstall_l1miss,"
+                              "memstall_l2miss,memstall_l3miss,dram_local,dram_remote",
+                       target="tid", pid=int(sys.argv[1]), mode="count")
+    s.start(); time.sleep(5); r = s.stop()
+    print("conf", r.confidence, "t_en", r.time_enabled, "t_run", r.time_running,
+          "useronly_forced", r.useronly_forced)
+    print(s.results)
+    PY
+
+Raw results
+-----------
+kind=dram (256 MiB stream, 5 s window)
+  conf=1.0000 t_en=4999634420 t_run=4999634420 useronly_forced=0
+  {"L1D_CACHE_REFILL": 655607875, "MEM_ACCESS": 2016598738,
+   "MEMSTALL_L1MISS": 5193085722, "MEMSTALL_L2MISS": 5123932158,
+   "MEMSTALL_L3MISS": 0, "DRAM_LOCAL": 0, "DRAM_REMOTE": 0}
+
+kind=l3 (8 MiB stream, 5 s window)
+  conf=1.0000 t_en=4999828700 t_run=4999828700 useronly_forced=0
+  {"L1D_CACHE_REFILL": 595084367, "MEM_ACCESS": 3159579644,
+   "MEMSTALL_L1MISS": 3199092181, "MEMSTALL_L2MISS": 2991172832,
+   "MEMSTALL_L3MISS": 0, "DRAM_LOCAL": 0, "DRAM_REMOTE": 0}
+
+Same picture in the 4-group sweep (`--selftest --selftest-kind dram`, see
+kind-dram/sweep-g1278-w5/libkperfx.json): MEMSTALL_L2MISS 4.31e9 while
+MEMSTALL_L3MISS, DRAM_LOCAL, DRAM_REMOTE, DRAM_REMOTE_CACHE stay at 0, with
+L2_BOUND_ARB 78.7e6 and L2_BOUND_SNP 75.3e6 counting normally in the same group.
+
+Interpretation
+--------------
+* memstall_l1miss / memstall_l2miss / l1d_cache_refill / mem_access are alive
+  and scale with the working set -> the memory-stall half of group 2 is usable.
+* memstall_l3miss and the three DRAM counters read 0 even under a 256 MiB
+  streaming load, so on this 920B/kernel they cannot be used as absolute
+  DRAM-traffic evidence.  (The library's own README already warns that these
+  counters are workload dependent; this probe shows they stay 0 in the two
+  workloads that should light them up.)
+* Consequence for the topdown tree:
+      mem_l2_bound       = (memstall_l1miss - memstall_l2miss)   -> usable
+      mem_l3_dram_bound  = (memstall_l2miss - memstall_l3miss)   -> == memstall_l2miss
+      mem_mem_bound      =  memstall_l3miss                      -> always 0
+  i.e. everything below L2 lands in the L3/DRAM slot and the DRAM slot is
+  permanently empty.  Report it that way instead of claiming "0 % DRAM bound".
+* kperfx verify (see l3-dram-probe-verify.txt) additionally shows that a
+  zero in the probe's own ALU load is NOT proof of a dead event (it marks
+  MEMSTALL_L1MISS as NOT-COUNTING although the dram load counts 5.19e9 of it).
+* There is no fallback through uncore: `kperfx uncore` lists only hisi_pcie*
+  PMUs on this kernel (no L3C / DDRC), and most of them fail to open.

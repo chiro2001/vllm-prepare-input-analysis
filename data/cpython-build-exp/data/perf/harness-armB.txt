@@ -1,0 +1,16 @@
+# started on Thu Sep 24 03:48:18 2026
+
+
+ Performance counter stats for 'bash -c cd /work/harness && python -m pi_harness.runner.cli --preset realmachine --batch 1 --isl 128 --steps 200 --out /work/exp-cpython/data/harness-armB --tag prelim2_armB --steps 200':
+
+       99035092604      cycles:u                                                              
+      147067786717      instructions:u                   #    1.49  insn per cycle            
+       31890810572      branches:u                                                            
+        1136301188      branch-misses:u                  #    3.56% of all branches           
+
+      39.978815240 seconds time elapsed
+
+      34.187232000 seconds user
+       4.958899000 seconds sys
+
+

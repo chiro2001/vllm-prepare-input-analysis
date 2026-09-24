@@ -1,0 +1,251 @@
+--- instrument/baseline/gdn_attn_builder.py.image	2026-09-24 03:09:16.284144132 +0800
++++ instrument/patched/gdn_attn_builder.py	2026-09-24 03:22:40.629197385 +0800
+@@ -39,6 +39,14 @@
+     prepare_final_chunk_indices,
+     prepare_update_chunk_offsets,
+ )
++# --- prepare_input sub-scope instrumentation (opt-in, PI_SUBSCOPE=on) -------
++# This is the *real* GDN builder for Ascend (AscendGDNAttentionMetadataBuilder,
++# subclasses core GDNAttentionMetadataBuilder and overrides build()).  On
++# Qwen3.5-0.8B decode it is 3 of the 4 `pi: am.builder_build` calls and the
++# single largest sub-scope of `prepare input`.  The probes are inert unless
++# PI_SUBSCOPE=on and do not change the returned metadata.
++from vllm_ascend.worker.pi_subscope import lazy, pi_note, pi_scope
++# ---------------------------------------------------------------------------
+ 
+ _GDN_CHUNK_SIZE = 64
+ # Keep this aligned with solve_tril.LARGE_BLOCK_T in ops/triton/fla/solve_tril.py.
+@@ -130,16 +138,20 @@
+     num_sequences: int,
+     out: torch.Tensor | None = None,
+ ) -> torch.Tensor:
+-    actual_seq_lengths = (
+-        torch.empty_like(query_start_loc[: num_sequences + 1]) if out is None else out[: num_sequences + 1]
+-    )
+-    actual_seq_lengths[:1].copy_(query_start_loc[:1])
+-    torch.sub(
+-        query_start_loc[1 : num_sequences + 1],
+-        query_start_loc[:num_sequences],
+-        out=actual_seq_lengths[1:],
+-    )
+-    return actual_seq_lengths
++    # Pure device-op segment (empty_like / copy_ / sub(out=)); split out because
++    # the GDN builder's per-class residual hides how much of its cost is device
++    # dispatch rather than Python.
++    with pi_scope("pi: gdnb.build_actual_seq_lengths"):
++        actual_seq_lengths = (
++            torch.empty_like(query_start_loc[: num_sequences + 1]) if out is None else out[: num_sequences + 1]
++        )
++        actual_seq_lengths[:1].copy_(query_start_loc[:1])
++        torch.sub(
++            query_start_loc[1 : num_sequences + 1],
++            query_start_loc[:num_sequences],
++            out=actual_seq_lengths[1:],
++        )
++        return actual_seq_lengths
+ 
+ 
+ def _compact_empty_segments(cu_seqlens_host, initial_state, device=None):
+@@ -536,18 +548,53 @@
+         num_decode_draft_tokens_cpu: torch.Tensor | None = None,
+         fast_build: bool = False,
+     ) -> GDNAttentionMetadata:
+-        m = _treat_single_token_prefills_with_state_as_decodes(common_attn_metadata)
++        pi_note(
++            "ascend_gdn_builder",
++            # `lazy(...)` so the diagnostic dict is built inside pi_note()'s
++            # try/except: this builder has no `layer_names`, and an un-guarded
++            # expression here once crashed engine startup.
++            lazy(
++                lambda: {
++                    "class": f"{type(self).__module__}.{type(self).__qualname__}",
++                    "n_layers": len(getattr(self, "layer_names", ()) or ()),
++                    "layer_names_sample": list(getattr(self, "layer_names", ())[:4]),
++                    "kv_cache_spec_class": f"{type(self.kv_cache_spec).__module__}."
++                                           f"{type(self.kv_cache_spec).__qualname__}",
++                    "kv_cache_spec_block_size": getattr(
++                        self.kv_cache_spec, "block_size", None
++                    ),
++                    "mamba_cache_mode": getattr(
++                        getattr(self, "vllm_config", None), "cache_config", None
++                    )
++                    and self.vllm_config.cache_config.mamba_cache_mode,
++                    "use_spec_decode": getattr(self, "use_spec_decode", None),
++                    "use_full_cuda_graph": getattr(self, "use_full_cuda_graph", None),
++                    "decode_cudagraph_max_bs": getattr(
++                        self, "decode_cudagraph_max_bs", None
++                    ),
++                    "num_spec": getattr(self, "num_spec", None),
++                    "all_public_attrs": sorted(
++                        a for a in vars(self) if not a.startswith("_")
++                    )[:40],
++                }
++            ),
++        )
++
++        with pi_scope("pi: gdnb.treat_single_token"):
++            m = _treat_single_token_prefills_with_state_as_decodes(common_attn_metadata)
+ 
+         query_start_loc = m.query_start_loc
+         query_start_loc_cpu = m.query_start_loc_cpu
+-        context_lens_tensor = m.compute_num_computed_tokens()
++        with pi_scope("pi: gdnb.compute_num_computed_tokens"):
++            context_lens_tensor = m.compute_num_computed_tokens()
+         nums_dict, batch_ptr, token_chunk_offset_ptr = None, None, None
+-        block_table_tensor = mamba_get_block_table_tensor(
+-            m.block_table_tensor,
+-            m.seq_lens,
+-            self.kv_cache_spec,
+-            self.vllm_config.cache_config.mamba_cache_mode,
+-        )
++        with pi_scope("pi: gdnb.mamba_block_table"):
++            block_table_tensor = mamba_get_block_table_tensor(
++                m.block_table_tensor,
++                m.seq_lens,
++                self.kv_cache_spec,
++                self.vllm_config.cache_config.mamba_cache_mode,
++            )
+ 
+         spec_sequence_masks_cpu: torch.Tensor | None = None
+         spec_sequence_indices: torch.Tensor | None = None
+@@ -582,11 +629,12 @@
+                 )
+ 
+         if spec_sequence_masks is None:
+-            num_decodes, num_prefills, num_decode_tokens, num_prefill_tokens = split_decodes_and_prefills(
+-                m,
+-                decode_threshold=1,
+-                treat_short_extends_as_decodes=False,
+-            )
++            with pi_scope("pi: gdnb.split_decodes"):
++                num_decodes, num_prefills, num_decode_tokens, num_prefill_tokens = split_decodes_and_prefills(
++                    m,
++                    decode_threshold=1,
++                    treat_short_extends_as_decodes=False,
++                )
+             num_spec_decode_tokens = 0
+             spec_token_indx = None
+             non_spec_token_indx = None
+@@ -845,56 +893,74 @@
+             and num_spec_decodes == 0
+             and num_decodes <= self.decode_cudagraph_max_bs
+         ):
+-            graph_batch_size = m.num_reqs
+-            (
+-                non_spec_state_indices_tensor,
+-                non_spec_query_start_loc,
+-            ) = self._pad_non_spec_decode_graph_inputs(
+-                non_spec_state_indices_tensor,
+-                non_spec_query_start_loc,
++            with pi_scope("pi: gdnb.pad_graph_inputs"):
++                graph_batch_size = m.num_reqs
++                (
++                    non_spec_state_indices_tensor,
++                    non_spec_query_start_loc,
++                ) = self._pad_non_spec_decode_graph_inputs(
++                    non_spec_state_indices_tensor,
++                    non_spec_query_start_loc,
++                    num_decode_tokens=num_decode_tokens,
++                    graph_batch_size=graph_batch_size,
++                )
++                non_spec_conv1d_cache_indices = non_spec_state_indices_tensor
++
++        with pi_scope("pi: gdnb.ctor"):
++                attn_metadata = GDNAttentionMetadata(
++                num_prefills=num_prefills,
++                num_prefill_tokens=num_prefill_tokens,
++                num_decodes=num_decodes,
+                 num_decode_tokens=num_decode_tokens,
+-                graph_batch_size=graph_batch_size,
++                num_spec_decodes=num_spec_decodes,
++                num_spec_decode_tokens=num_spec_decode_tokens,
++                num_actual_tokens=m.num_actual_tokens,
++                has_initial_state=has_initial_state,
++                chunk_indices=chunk_indices,
++                chunk_offsets=chunk_offsets,
++                prefill_query_start_loc=prefill_query_start_loc,
++                prefill_state_indices=prefill_state_indices,
++                prefill_has_initial_state=prefill_has_initial_state,
++                spec_query_start_loc=spec_query_start_loc,
++                non_spec_query_start_loc=non_spec_query_start_loc,
++                spec_state_indices_tensor=spec_state_indices_tensor,
++                non_spec_state_indices_tensor=non_spec_state_indices_tensor,
++                spec_sequence_masks=spec_sequence_masks,
++                spec_token_indx=spec_token_indx,
++                non_spec_token_indx=non_spec_token_indx,
++                num_accepted_tokens=num_accepted_tokens,
++                nums_dict=nums_dict,
++                batch_ptr=batch_ptr,
++                token_chunk_offset_ptr=token_chunk_offset_ptr,
++            )
++        with pi_scope("pi: gdnb.attach_prefill"):
++            attn_metadata = self._attach_non_spec_prefill_metadata(
++                attn_metadata,
++                non_spec_chunked_prefill_metadata,
++                non_spec_conv1d_cache_indices,
++            )
++        with pi_scope("pi: gdnb.attach_spec"):
++            attn_metadata = self._attach_spec_decode_metadata(
++                attn_metadata,
++            )
++        pi_note(
++            "ascend_gdn_batch_shape",
++            {
++                "num_prefills_seen": num_prefills,
++                "num_decodes_seen": num_decodes,
++                "num_spec_decodes_seen": num_spec_decodes,
++                "num_reqs": m.num_reqs,
++                "use_full_cuda_graph": self.use_full_cuda_graph,
++            },
++        )
++        # A `return` inside a `with` block is legal and keeps the statement
++        # shape that verify_patch.py checks (stripping the `with` restores the
++        # original bare `return self._attach_...`).
++        with pi_scope("pi: gdnb.attach_decode"):
++            return self._attach_non_spec_decode_metadata(
++                attn_metadata,
++                non_spec_conv1d_cache_indices,
+             )
+-            non_spec_conv1d_cache_indices = non_spec_state_indices_tensor
+-
+-        attn_metadata = GDNAttentionMetadata(
+-            num_prefills=num_prefills,
+-            num_prefill_tokens=num_prefill_tokens,
+-            num_decodes=num_decodes,
+-            num_decode_tokens=num_decode_tokens,
+-            num_spec_decodes=num_spec_decodes,
+-            num_spec_decode_tokens=num_spec_decode_tokens,
+-            num_actual_tokens=m.num_actual_tokens,
+-            has_initial_state=has_initial_state,
+-            chunk_indices=chunk_indices,
+-            chunk_offsets=chunk_offsets,
+-            prefill_query_start_loc=prefill_query_start_loc,
+-            prefill_state_indices=prefill_state_indices,
+-            prefill_has_initial_state=prefill_has_initial_state,
+-            spec_query_start_loc=spec_query_start_loc,
+-            non_spec_query_start_loc=non_spec_query_start_loc,
+-            spec_state_indices_tensor=spec_state_indices_tensor,
+-            non_spec_state_indices_tensor=non_spec_state_indices_tensor,
+-            spec_sequence_masks=spec_sequence_masks,
+-            spec_token_indx=spec_token_indx,
+-            non_spec_token_indx=non_spec_token_indx,
+-            num_accepted_tokens=num_accepted_tokens,
+-            nums_dict=nums_dict,
+-            batch_ptr=batch_ptr,
+-            token_chunk_offset_ptr=token_chunk_offset_ptr,
+-        )
+-        attn_metadata = self._attach_non_spec_prefill_metadata(
+-            attn_metadata,
+-            non_spec_chunked_prefill_metadata,
+-            non_spec_conv1d_cache_indices,
+-        )
+-        attn_metadata = self._attach_spec_decode_metadata(
+-            attn_metadata,
+-        )
+-        return self._attach_non_spec_decode_metadata(
+-            attn_metadata,
+-            non_spec_conv1d_cache_indices,
+-        )
+ 
+     def _build_prefill_has_initial_state_and_causal_conv1d_meta(
+         self,

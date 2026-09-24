@@ -1,0 +1,2 @@
+[ perf record: Woken up 7 times to write data ]
+[ perf record: Captured and wrote 1.523 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke2_20260924-015215/passes/perf/perf.data (179 samples) ]

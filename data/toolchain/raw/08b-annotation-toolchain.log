@@ -1,0 +1,11 @@
+$ bash -lc for t in objdump addr2line nm readelf gdb; do printf '%-10s %s\n' "$t" "$(command -v $t || echo MISSING)"; done
+# rc=0 wall_s=0.050
+
+objdump    /usr/bin/objdump
+addr2line  /usr/bin/addr2line
+nm         /usr/bin/nm
+readelf    /usr/bin/readelf
+gdb        MISSING
+
+----- stderr -----
+

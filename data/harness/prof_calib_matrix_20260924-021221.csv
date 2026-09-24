@@ -1,0 +1,4 @@
+phase,caliber,ipc,confidence,retiring,bad_spec,frontend_bound,backend_bound,top_hot,flamegraph,pyspy,run_dir
+arith,prof-v1,3.8864369946866506,1.0,37.79959922772117,1.5473081377462254,13.267741804534047,47.385350829998565,[.] _PyObject_Free,True,False,/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_arith_20260924-021221
+memcpy,prof-v1,2.6616351227518527,1.0,40.72224849761616,0.41341648414111326,7.901662636704608,50.96267238153812,[.] 0x0000000000099b4c,True,False,/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_memcpy_20260924-021302
+hash,prof-v1,1.0627429398124508,1.0,17.809951040056063,0.20503069790311126,14.722936098319806,67.26208216372102,[.] 0x000000000022ff54,True,False,/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib_hash_20260924-021336

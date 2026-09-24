@@ -1,0 +1,161 @@
+--- instrument/baseline/sfa_v1.py.image	2026-09-24 02:54:18.769319809 +0800
++++ instrument/patched/sfa_v1.py	2026-09-24 02:55:00.549661430 +0800
+@@ -26,6 +26,13 @@
+ from vllm_ascend.attention.attention_mask import AttentionMaskBuilder
+ from vllm_ascend.attention.attention_v1 import AscendAttentionState
+ from vllm_ascend.attention.mla_v1 import MLAPO_MAX_SUPPORTED_TOKENS
++# --- prepare_input sub-scope instrumentation (opt-in, PI_SUBSCOPE=on) -------
++# `AscendSFAMetadataBuilder.build()` does NOT call the base
++# AscendAttentionMetadataBuilder.build(), so the probes there never fire for
++# SFA groups.  These probes attribute the residual that showed up inside
++# `pi: am.builder_build` (940 us/step unanswered on B=1 decode).
++from vllm_ascend.worker.pi_subscope import pi_note, pi_scope
++# ---------------------------------------------------------------------------
+ from vllm_ascend.attention.utils import (
+     SFA_QSFA_TILE_SIZE,
+     AscendCommonAttentionMetadata,
+@@ -305,10 +312,11 @@
+         **kwargs,
+     ) -> AscendSFAMetadata:
+         # common_prefix_len / fast_build are unused; kept for API compatibility.
+-        return self._build_with_metadata_view(
+-            common_attn_metadata,
+-            lambda: self._build(common_attn_metadata, draft_index=None),
+-        )
++        with pi_scope("pi: sfa.build"):
++            return self._build_with_metadata_view(
++                common_attn_metadata,
++                lambda: self._build(common_attn_metadata, draft_index=None),
++            )
+ 
+     def build_for_drafting(
+         self,
+@@ -341,32 +349,48 @@
+         common_attn_metadata: AscendCommonAttentionMetadata,
+         draft_index: int | None = None,
+     ) -> AscendSFAMetadata:
++        pi_note(
++            "sfa_builder_seen",
++            {
++                "class": f"{type(self).__module__}.{type(self).__qualname__}",
++                "n_layers": len(self.layer_names),
++                "layer_names_sample": list(self.layer_names[:4]),
++                "kernel_block_size": getattr(self, "kernel_block_size", None),
++                "rope_dim": getattr(self, "rope_dim", None),
++                "enable_dsa_cp": getattr(self, "enable_dsa_cp", None),
++                "draft_index_is_none": draft_index is None,
++            },
++        )
+         num_reqs = common_attn_metadata.num_reqs
+         num_actual_tokens = common_attn_metadata.num_actual_tokens
+         num_input_tokens = common_attn_metadata.num_input_tokens
+ 
+-        block_table = common_attn_metadata.block_table_tensor[:num_reqs]
+-        slot_mapping = common_attn_metadata.slot_mapping[:num_input_tokens]
+-        input_positions = common_attn_metadata.positions[:num_input_tokens].long()
++        with pi_scope("pi: sfa.slice_inputs"):
++            block_table = common_attn_metadata.block_table_tensor[:num_reqs]
++            slot_mapping = common_attn_metadata.slot_mapping[:num_input_tokens]
++            input_positions = common_attn_metadata.positions[:num_input_tokens].long()
+ 
+         block_size = self.kernel_block_size
+ 
+-        cum_query_lens = common_attn_metadata.query_start_loc[1 : num_reqs + 1]
+-        seq_lens = common_attn_metadata.seq_lens[:num_reqs]
+-
+-        # Prefer _seq_lens_cpu (always available, updated during draft
+-        # iterations) over seq_lens_cpu (None in async spec decode mode).
+-        if common_attn_metadata._seq_lens_cpu is not None:
+-            seq_lens_cpu = common_attn_metadata._seq_lens_cpu[:num_reqs]
+-        elif common_attn_metadata.seq_lens_cpu is not None:
+-            seq_lens_cpu = common_attn_metadata.seq_lens_cpu[:num_reqs]
+-        else:
+-            seq_lens_cpu = common_attn_metadata.seq_lens[:num_reqs].to("cpu")
++        with pi_scope("pi: sfa.seq_lens_select"):
++            cum_query_lens = common_attn_metadata.query_start_loc[1 : num_reqs + 1]
++            seq_lens = common_attn_metadata.seq_lens[:num_reqs]
++
++            # Prefer _seq_lens_cpu (always available, updated during draft
++            # iterations) over seq_lens_cpu (None in async spec decode mode).
++            if common_attn_metadata._seq_lens_cpu is not None:
++                seq_lens_cpu = common_attn_metadata._seq_lens_cpu[:num_reqs]
++            elif common_attn_metadata.seq_lens_cpu is not None:
++                seq_lens_cpu = common_attn_metadata.seq_lens_cpu[:num_reqs]
++            else:
++                seq_lens_cpu = common_attn_metadata.seq_lens[:num_reqs].to("cpu")
+ 
+-        cos, sin = get_cos_and_sin_mla(input_positions, use_cache=(draft_index is None))
++        with pi_scope("pi: sfa.get_cos_sin"):
++            cos, sin = get_cos_and_sin_mla(input_positions, use_cache=(draft_index is None))
+ 
+         dsa_cp_context = None
+         if self.enable_dsa_cp:
++            pi_note("sfa_dsa_cp_path_taken", True)
+             global_tp_size = get_tp_group().world_size
+             num_tokens = num_input_tokens
+             num_tokens_pad = _round_up(num_tokens, global_tp_size)
+@@ -457,35 +481,37 @@
+                 actual_seq_lengths_key=actual_seq_lengths_key,
+             )
+ 
+-        if get_ascend_config().c8_enable_reshape_optim:
+-            torch.ops._C_ascend.store_kv_block_metadata(
+-                slot_mapping,
+-                common_attn_metadata.group_len,
+-                common_attn_metadata.group_key_idx,
+-                common_attn_metadata.group_key_cache_idx,
+-                block_size,
++        with pi_scope("pi: sfa.store_kv_block_metadata"):
++            if get_ascend_config().c8_enable_reshape_optim:
++                torch.ops._C_ascend.store_kv_block_metadata(
++                    slot_mapping,
++                    common_attn_metadata.group_len,
++                    common_attn_metadata.group_key_idx,
++                    common_attn_metadata.group_key_cache_idx,
++                    block_size,
++                )
++
++        with pi_scope("pi: sfa.metadata_ctor"):
++            return self.metadata_cls(  # type: ignore
++                num_input_tokens=common_attn_metadata.num_input_tokens,
++                num_actual_tokens=num_actual_tokens,
++                cum_query_lens=cum_query_lens,
++                seq_lens=seq_lens,
++                seq_lens_cpu=seq_lens_cpu,
++                slot_mapping=slot_mapping,
++                head_dim=self.model_config.get_head_size(),
++                attn_mask=self.attn_mask_builder.get_attention_mask(common_attn_metadata.causal, self.model_config),
++                attn_state=common_attn_metadata.attn_state,
++                block_table=block_table,
++                sin=sin[:num_input_tokens],
++                cos=cos[:num_input_tokens],
++                dsa_cp_context=dsa_cp_context,
++                block_size=block_size,
++                group_len=common_attn_metadata.group_len,
++                group_key_idx=common_attn_metadata.group_key_idx,
++                group_key_cache_idx=common_attn_metadata.group_key_cache_idx,
+             )
+ 
+-        return self.metadata_cls(  # type: ignore
+-            num_input_tokens=common_attn_metadata.num_input_tokens,
+-            num_actual_tokens=num_actual_tokens,
+-            cum_query_lens=cum_query_lens,
+-            seq_lens=seq_lens,
+-            seq_lens_cpu=seq_lens_cpu,
+-            slot_mapping=slot_mapping,
+-            head_dim=self.model_config.get_head_size(),
+-            attn_mask=self.attn_mask_builder.get_attention_mask(common_attn_metadata.causal, self.model_config),
+-            attn_state=common_attn_metadata.attn_state,
+-            block_table=block_table,
+-            sin=sin[:num_input_tokens],
+-            cos=cos[:num_input_tokens],
+-            dsa_cp_context=dsa_cp_context,
+-            block_size=block_size,
+-            group_len=common_attn_metadata.group_len,
+-            group_key_idx=common_attn_metadata.group_key_idx,
+-            group_key_cache_idx=common_attn_metadata.group_key_cache_idx,
+-        )
+-
+     def build_for_graph_capture(
+         self,
+         common_attn_metadata: AscendCommonAttentionMetadata,

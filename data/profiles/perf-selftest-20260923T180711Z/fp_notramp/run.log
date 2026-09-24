@@ -1,0 +1,2 @@
+[perf_capture.sh] ok: tid=94436 samples=8066 unknown=1.19% py_frames=0
+[perf_capture.sh] outdir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_notramp

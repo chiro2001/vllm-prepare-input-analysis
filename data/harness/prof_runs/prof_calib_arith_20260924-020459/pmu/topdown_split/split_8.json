@@ -1,0 +1,77 @@
+{
+  "caliber_version": "prof-v1",
+  "ts_start": "2026-09-24T02:07:23+0800",
+  "pid": 4108599,
+  "events_spec": null,
+  "preset": "920b_topdown_full_8",
+  "multiplex_allowed": false,
+  "ts_running": "2026-09-24T02:07:23+0800",
+  "stopped_reason": "target_exit",
+  "ts_end": "2026-09-24T02:07:29+0800",
+  "wall_s": 5.536859,
+  "counters": {
+    "DRAM_REMOTE": 0,
+    "DRAM_REMOTE_CACHE": 0,
+    "ST_SCA_FULL": 1971812359,
+    "ST_HEAD_NO_PGEN": 2185929,
+    "ST_ORDER_FAIL": 19823979947,
+    "ST_BOUND_PIPELINE": 7372637
+  },
+  "entries": [
+    {
+      "name": "DRAM_REMOTE",
+      "id": "dram_remote",
+      "config": 28706,
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "DRAM_REMOTE_CACHE",
+      "id": "dram_remote_cache",
+      "config": 28707,
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "ST_SCA_FULL",
+      "id": "st_sca_full",
+      "config": 20640,
+      "delta": 1971812359,
+      "rate": 357664624.22847897
+    },
+    {
+      "name": "ST_HEAD_NO_PGEN",
+      "id": "st_head_no_pgen",
+      "config": 20642,
+      "delta": 2185929,
+      "rate": 396502.9790013274
+    },
+    {
+      "name": "ST_ORDER_FAIL",
+      "id": "st_order_fail",
+      "config": 20643,
+      "delta": 19823979947,
+      "rate": 3595847396.9868536
+    },
+    {
+      "name": "ST_BOUND_PIPELINE",
+      "id": "st_bound_pipeline",
+      "config": 20644,
+      "delta": 7372637,
+      "rate": 1337313.5786182485
+    }
+  ],
+  "time_enabled": 5513020370,
+  "time_running": 5513020370,
+  "confidence": 1.0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B",
+  "backend": "920B(counting)",
+  "derived": {
+    "cpu_cycles": null,
+    "inst_retired": null,
+    "ipc": null,
+    "cycles_per_sec": null
+  }
+}

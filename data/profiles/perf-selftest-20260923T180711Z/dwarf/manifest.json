@@ -1,0 +1,110 @@
+{
+  "annotate": {
+    "no_debug_info": [
+      "sgemm_kernel_ARMV8SVE"
+    ],
+    "ok": true,
+    "symbols": [
+      "sgemm_kernel_ARMV8SVE",
+      "gc_collect_main",
+      "_PyEval_EvalFrameDefault"
+    ]
+  },
+  "call_graph": "dwarf,8192",
+  "call_graph_requested": "dwarf",
+  "cmd": [
+    "bash",
+    "perf_capture.sh",
+    "--tid",
+    "174359",
+    "--seconds",
+    "15",
+    "--freq",
+    "999",
+    "--call-graph",
+    "dwarf",
+    "--name",
+    "selftest-dwarf",
+    "--outdir",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf"
+  ],
+  "error": null,
+  "event": "cycles",
+  "finished_utc": "2026-09-23T18:36:47Z",
+  "freq": 999,
+  "kernel_version": "6.6.0-159.4.3.154.oe2403sp4.aarch64",
+  "lost_samples": 0,
+  "name": "selftest-dwarf",
+  "notes": [
+    "target: host TID 174359, comm 'python3'",
+    "perf event 'cycles', -F 999, -g --call-graph dwarf,8192, window 15s",
+    "perf.data 123M (128701316 bytes)",
+    "perf.data kept root-owned mode 0644 (perf's owner check); raw data is not uploaded",
+    "PERF-NOTE-SRC: sgemm_kernel_ARMV8SVE -- source lines found: none (no debug info for this dso/symbol)",
+    "PERF-NOTE-SRC: gc_collect_main -- source lines found: yes",
+    "PERF-NOTE-SRC: _PyEval_EvalFrameDefault -- source lines found: yes"
+  ],
+  "ok": true,
+  "outdir": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf",
+  "perf_data_bytes": 128701316,
+  "perf_record_cmd": [
+    "sudo",
+    "-n",
+    "perf",
+    "record",
+    "-o",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data",
+    "-e",
+    "cycles",
+    "-F",
+    "999",
+    "-g",
+    "--call-graph",
+    "dwarf,8192",
+    "-t",
+    "174359",
+    "--",
+    "sleep",
+    "15"
+  ],
+  "perf_version": "perf version 6.6.0-159.4.13.167.oe2403sp4.aarch64",
+  "sample_count": 14991,
+  "seconds": 15,
+  "started_utc": "2026-09-23T18:36:11Z",
+  "symbol_quality": {
+    "dso_self_pct": {
+      "_multiarray_umath.cpython-312-aarch64-linux-gnu.so": 3.48,
+      "ld-linux-aarch64.so.1": 0.36,
+      "libc.so.6": 1.35,
+      "libm.so.6": 0.43,
+      "libopenblas-24fd393f.so.0": 23.14,
+      "libpython3.12.so.1.0": 68.43,
+      "libtorch_cpu.so": 1.97,
+      "libtorch_python.so": 0.33
+    },
+    "python_frames": {
+      "mean_frames_per_sample": 7.24,
+      "note": "self/leaf symbolisation can be ~100% while every Python caller is still missing; use samples_with_py_frame_pct. samples_with_unknown_frame_pct is ~100% whenever the unresolved libc bottom frame (__libc_start_call_main) is present, so unknown_frame_line_pct is the useful one",
+      "py_frame_lines": 0,
+      "py_leaf_samples": 0,
+      "samples_total": 14991,
+      "samples_with_py_frame_pct": 0.0,
+      "samples_with_py_leaf_pct": 0.0,
+      "samples_with_unknown_frame_pct": 24.23,
+      "unknown_frame_line_pct": 3.37,
+      "unknown_frame_lines": 3660
+    },
+    "resolved_pct": 98.76,
+    "top_dso": [
+      "libpython3.12.so.1.0",
+      "libopenblas-24fd393f.so.0",
+      "_multiarray_umath.cpython-312-aarch64-linux-gnu.so",
+      "libtorch_cpu.so",
+      "libc.so.6"
+    ],
+    "unknown_pct": 1.24
+  },
+  "tid": 174359,
+  "title": "selftest-dwarf",
+  "tools_bin": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/bin"
+}

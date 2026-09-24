@@ -1,0 +1,21 @@
+rank,overhead_pct,dso,symbol
+1,9.8,libpython3.12.so.1.0,[.] _PyEval_EvalFrameDefault
+2,1.51,libpython3.12.so.1.0,[.] _PyObject_Malloc
+3,1.11,libc.so.6,[.] pthread_mutex_lock
+4,1.06,libpython3.12.so.1.0,[.] _PyType_Lookup
+5,1.05,libpython3.12.so.1.0,[.] unicodekeys_lookup_unicode
+6,1.02,libpython3.12.so.1.0,[.] _PyObject_Free
+7,0.93,libpython3.12.so.1.0,[.] _PyObject_GenericGetAttrWithDict
+8,0.81,libpython3.12.so.1.0,[.] tupledealloc
+9,0.8,libc.so.6,[.] malloc
+10,0.79,_multiarray_umath.cpython-312-aarch64-linux-gnu.so,[.] ufunc_generic_fastcall
+11,0.73,libtorch_cpu.so,[.] c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const
+12,0.72,libpython3.12.so.1.0,[.] PyType_IsSubtype
+13,0.68,libpython3.12.so.1.0,[.] _Py_dict_lookup
+14,0.58,libpython3.12.so.1.0,[.] tuple_alloc
+15,0.58,libpython3.12.so.1.0,[.] _PyFrame_ClearExceptCode
+16,0.57,libc.so.6,[.] 0x0000000000083e78
+17,0.54,libtorch_cpu.so,"[.] torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)"
+18,0.52,libtorch_cpu.so,"[.] at::_ops::as_strided::call(at::Tensor const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, std::optional<c10::SymInt>)"
+19,0.51,libtorch_cpu.so,"[.] at::native::as_strided_tensorimpl(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, std::optional<long>)"
+20,0.5,libtorch_python.so,"[.] torch::FunctionSignature::parse(_object*, _object*, _object*, _object**, std::vector<_object*, std::allocator<_object*> >&, bool)"

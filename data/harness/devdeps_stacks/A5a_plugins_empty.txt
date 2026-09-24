@@ -1,0 +1,56 @@
+# step_id     : A5a_plugins_empty
+# title       : VLLM_PLUGINS=""（空串）vs unset 对 general plugin 加载的影响
+# cwd         : /work
+# returncode  : 1
+# duration_s  : 2.74
+# env overrides: {"VLLM_PLUGINS": ""}
+# ---- COMMAND (python -c) ----
+import os, sys, logging
+logging.basicConfig(level=logging.INFO, stream=sys.stdout)
+import vllm, vllm.envs as envs, vllm.plugins as vplugins
+from importlib.metadata import entry_points
+
+print("VLLM_PLUGINS repr =", repr(envs.VLLM_PLUGINS))
+for group in ("vllm.general_plugins", "vllm.platform_plugins", "vllm.io_processor_plugins"):
+    eps = list(entry_points(group=group))
+    print(f"group {group}: {[(e.name, e.value) for e in eps]}")
+allowed = envs.VLLM_PLUGINS
+eps = list(entry_points(group="vllm.general_plugins"))
+print("general plugins that pass the allowlist:", [e.name for e in eps if allowed is None or e.name in allowed])
+loaded = vplugins.load_plugins_by_group("vllm.general_plugins")
+print("load_plugins_by_group('vllm.general_plugins') ->", sorted(loaded))
+# ---- STDOUT ----
+INFO 09-23 17:42:21 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 17:42:21 [__init__.py:54] - ascend -> vllm_ascend:register
+WARNING:triton.tools.get_ascend_devices:can not use command: npu-smi info
+
+# ---- STDERR ----
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+  File "/vllm-workspace/vllm/vllm/__init__.py", line 14, in <module>
+    import vllm.env_override  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm/vllm/env_override.py", line 567, in <module>
+    from torch._dynamo.convert_frame import GraphCaptureOutput
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_dynamo/__init__.py", line 13, in <module>
+    from . import (
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_dynamo/aot_compile.py", line 16, in <module>
+    from torch._dynamo.package import SystemInfo
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_dynamo/package.py", line 1157, in <module>
+    DynamoCache = DiskDynamoCache(os.path.join(cache_dir(), "dynamo"))
+                                               ^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_dynamo/package.py", line 1154, in cache_dir
+    return cache_dir()
+           ^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_inductor/runtime/cache_dir_utils.py", line 17, in cache_dir
+    os.environ["TORCHINDUCTOR_CACHE_DIR"] = cache_dir = default_cache_dir()
+                                                        ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_inductor/runtime/cache_dir_utils.py", line 23, in default_cache_dir
+    sanitized_username = re.sub(r'[\\/:*?"<>|]', "_", getpass.getuser())
+                                                      ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/getpass.py", line 169, in getuser
+    return pwd.getpwuid(os.getuid())[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'getpwuid(): uid not found: 1003'
+
+# ---- END ----

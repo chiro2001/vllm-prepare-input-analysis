@@ -1,0 +1,77 @@
+{
+  "caliber_version": "prof-v1",
+  "ts_start": "2026-09-24T02:16:10+0800",
+  "pid": 24996,
+  "events_spec": "cpu_cycles,inst_retired,inst_spec,br_pred,br_mis_pred,l1d_cache_refill",
+  "preset": null,
+  "multiplex_allowed": false,
+  "ts_running": "2026-09-24T02:16:10+0800",
+  "stopped_reason": "target_exit",
+  "ts_end": "2026-09-24T02:16:15+0800",
+  "wall_s": 4.717264,
+  "counters": {
+    "CPU_CYCLES": 13378756206,
+    "INST_RETIRED": 50708760285,
+    "INST_SPEC": 54525691280,
+    "BR_PRED": 10989638798,
+    "BR_MIS_PRED": 45631598,
+    "L1D_CACHE_REFILL": 1522898
+  },
+  "entries": [
+    {
+      "name": "CPU_CYCLES",
+      "id": "cpu_cycles",
+      "config": 17,
+      "delta": 13378756206,
+      "rate": 2899920557.9825406
+    },
+    {
+      "name": "INST_RETIRED",
+      "id": "inst_retired",
+      "config": 8,
+      "delta": 50708760285,
+      "rate": 10991408629.924181
+    },
+    {
+      "name": "INST_SPEC",
+      "id": "inst_spec",
+      "config": 27,
+      "delta": 54525691280,
+      "rate": 11818749863.322037
+    },
+    {
+      "name": "BR_PRED",
+      "id": "br_pred",
+      "config": 18,
+      "delta": 10989638798,
+      "rate": 2382065939.79419
+    },
+    {
+      "name": "BR_MIS_PRED",
+      "id": "br_mis_pred",
+      "config": 16,
+      "delta": 45631598,
+      "rate": 9890905.185524613
+    },
+    {
+      "name": "L1D_CACHE_REFILL",
+      "id": "l1d_cache_refill",
+      "config": 3,
+      "delta": 1522898,
+      "rate": 330096.69582961046
+    }
+  ],
+  "time_enabled": 4613490590,
+  "time_running": 4613490590,
+  "confidence": 1.0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B",
+  "backend": "920B(counting)",
+  "derived": {
+    "cpu_cycles": 13378756206.0,
+    "inst_retired": 50708760285.0,
+    "ipc": 3.790244736073338,
+    "cycles_per_sec": 2836126238.8537083
+  }
+}

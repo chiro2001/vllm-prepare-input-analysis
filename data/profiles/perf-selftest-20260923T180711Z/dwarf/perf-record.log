@@ -1,0 +1,43 @@
+# stage=record utc=2026-09-23T18:07:29Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data -e cycles -F 999 -g --call-graph dwarf,8192 -t 4104653 -- sleep 15
+scripts/measure/perf_capture.sh: line 317: sudo -n: command not found
+# perf record exit=127
+# stage=record utc=2026-09-23T18:08:28Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data -e cycles -F 999 -g --call-graph dwarf,8192 -t 4104653 -- sleep 15
+scripts/measure/perf_capture.sh: line 320: sudo -n: command not found
+# perf record exit=127
+# stage=record utc=2026-09-23T18:09:07Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data -e cycles -F 999 -g --call-graph dwarf,8192 -t 4104653 -- sleep 15
+[ perf record: Woken up 480 times to write data ]
+[ perf record: Captured and wrote 120.240 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data (14717 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:11:01Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data -e cycles -F 999 -g --call-graph dwarf,8192 -t 4104653 -- sleep 15
+[ perf record: Woken up 489 times to write data ]
+[ perf record: Captured and wrote 122.731 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data (15036 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:13:48Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data -e cycles -F 999 -g --call-graph dwarf,8192 -t 4166397 -- sleep 15
+[ perf record: Woken up 488 times to write data ]
+[ perf record: Captured and wrote 122.324 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data (14986 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:17:34Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data -e cycles -F 999 -g --call-graph dwarf,8192 -t 37283 -- sleep 15
+[ perf record: Woken up 489 times to write data ]
+[ perf record: Captured and wrote 122.707 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data (15033 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:24:31Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data -e cycles -F 999 -g --call-graph dwarf,8192 -t 93128 -- sleep 15
+[ perf record: Woken up 490 times to write data ]
+[ perf record: Captured and wrote 122.723 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data (15035 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:24:58Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data -e cycles -F 999 -g --call-graph dwarf,8192 -t 93128 -- sleep 15
+[ perf record: Woken up 490 times to write data ]
+[ perf record: Captured and wrote 122.837 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data (15049 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:36:11Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data -e cycles -F 999 -g --call-graph dwarf,8192 -t 174359 -- sleep 15
+[ perf record: Woken up 489 times to write data ]
+[ perf record: Captured and wrote 122.364 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/perf.data (14991 samples) ]
+# perf record exit=0

@@ -1,0 +1,12 @@
+measure_start=2026-09-14T17:59:31,249160250+08:00
+measure_end=2026-09-14T18:00:01,227273870+08:00
+decode_ready_file=/home/REMOTE_USER/projects/vllm/HIST_PROJECT/runs/20260914T0953Z-qwen35-08b-tp1-mtp-off-long-decode-b1-perf-stat-r1/barrier/stat-ipc.ready.json
+decode_release_file=/home/REMOTE_USER/projects/vllm/HIST_PROJECT/runs/20260914T0953Z-qwen35-08b-tp1-mtp-off-long-decode-b1-perf-stat-r1/barrier/stat-ipc.release.json
+ready_seen_at=2026-09-14T17:59:31,247277070+08:00
+enable_ack_at=2026-09-14T17:59:31,248261550+08:00
+release_written_at=2026-09-14T17:59:31,274646110+08:00
+barrier_semantics=client_read_barrier
+server_pause_guaranteed=false
+warmup_artifact=/home/REMOTE_USER/projects/vllm/HIST_PROJECT/runs/20260914T0953Z-qwen35-08b-tp1-mtp-off-long-decode-b1-perf-stat-r1/warmup/summary.json
+workload_rc=0
+perf_rc=130

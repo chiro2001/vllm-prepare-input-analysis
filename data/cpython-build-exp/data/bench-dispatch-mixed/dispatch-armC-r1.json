@@ -1,0 +1,72 @@
+{
+ "cpu_affinity": [
+  200,
+  201,
+  202,
+  203
+ ],
+ "env_OMP_NUM_THREADS": "1",
+ "executable": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/build-armC/Python-3.12.13/python",
+ "iters": 200000,
+ "kernels": {
+  "attr_loop": {
+   "median_ns_per_iter": 59.192050248384476,
+   "min_ns_per_iter": 59.192050248384476,
+   "rounds": [
+    {
+     "ns_per_iter": 59.192050248384476,
+     "round": 0,
+     "seconds": 0.011838410049676895
+    }
+   ]
+  },
+  "branch_loop": {
+   "median_ns_per_iter": 67.96670029871166,
+   "min_ns_per_iter": 67.96670029871166,
+   "rounds": [
+    {
+     "ns_per_iter": 67.96670029871166,
+     "round": 0,
+     "seconds": 0.013593340059742332
+    }
+   ]
+  },
+  "call_loop": {
+   "median_ns_per_iter": 108.62720024306327,
+   "min_ns_per_iter": 108.62720024306327,
+   "rounds": [
+    {
+     "ns_per_iter": 108.62720024306327,
+     "round": 0,
+     "seconds": 0.021725440048612654
+    }
+   ]
+  },
+  "global_loop": {
+   "median_ns_per_iter": 50.61314965132624,
+   "min_ns_per_iter": 50.61314965132624,
+   "rounds": [
+    {
+     "ns_per_iter": 50.61314965132624,
+     "round": 0,
+     "seconds": 0.010122629930265248
+    }
+   ]
+  },
+  "int_loop": {
+   "median_ns_per_iter": 88.03509990684688,
+   "min_ns_per_iter": 88.03509990684688,
+   "rounds": [
+    {
+     "ns_per_iter": 88.03509990684688,
+     "round": 0,
+     "seconds": 0.017607019981369376
+    }
+   ]
+  }
+ },
+ "label": "armC",
+ "platform": "Linux-6.6.0-159.4.3.154.oe2403sp4.aarch64-aarch64-with-glibc2.38",
+ "python": "3.12.13 (main, Sep 24 2026, 03:52:42) [GCC 12.3.1 (openEuler 12.3.1-111.oe2403sp3)]",
+ "work_digest": 60013000041
+}

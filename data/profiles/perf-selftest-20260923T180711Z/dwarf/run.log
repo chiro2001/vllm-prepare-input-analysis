@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf/hotspots.csv'
+[perf_capture.sh] ok: tid=93128 samples=15035 unknown=1.15% py_frames=0
+[perf_capture.sh] outdir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf
+[perf_capture.sh] ok: tid=93128 samples=15049 unknown=1.28% py_frames=0
+[perf_capture.sh] outdir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/dwarf

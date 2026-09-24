@@ -1,0 +1,4 @@
+# started on Mon Sep 14 18:20:20 2026
+
+VLLM::Worker-4149971,85037968134,,cycles,29421556250,100.00,,
+VLLM::Worker-4149971,65034569724,,instructions,29421556250,100.00,0.76,insn per cycle

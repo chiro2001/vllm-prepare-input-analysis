@@ -1,0 +1,108 @@
+# step_id     : A7_hostinfo_manifest
+# title       : numpy / uname / lscpu 摘要 / 线程配置
+# cwd         : /work
+# returncode  : 0
+# duration_s  : 1.93
+# env overrides: {}
+# ---- COMMAND (python -c) ----
+import json, os, platform, subprocess, sys
+
+def sh(cmd):
+    p = subprocess.run(["bash", "-lc", cmd], capture_output=True, text=True)
+    return p.stdout.strip(), p.returncode
+
+import numpy
+info = {
+    "python": sys.version,
+    "executable": sys.executable,
+    "numpy.__version__": numpy.__version__,
+    "uname_a": platform.uname()._asdict(),
+    "os_release": dict(
+        l.split("=", 1) for l in open("/etc/os-release").read().splitlines() if "=" in l
+    ),
+    "lscpu_summary": {},
+    "cgroup_cpuset": None,
+    "nproc": os.cpu_count(),
+    "threads_env": {k: os.environ.get(k) for k in
+                    ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "ATEN_CPU_SECTION", "OPENBLAS_NUM_THREADS")},
+    "torch_threads": None,
+    "env_PYTHONPATH": os.environ.get("PYTHONPATH"),
+    "cwd": os.getcwd(),
+}
+out, _ = sh("lscpu")
+keep = ("Architecture", "Model name", "CPU(s)", "Thread(s) per core", "Core(s) per socket",
+        "Socket(s)", "NUMA node(s)", "CPU max MHz", "CPU min MHz", "L1d cache", "L2 cache",
+        "L3 cache", "BogoMIPS", "Flags")
+for line in out.splitlines():
+    if ":" not in line:
+        continue
+    k, v = line.split(":", 1)
+    if k.strip() in keep:
+        info["lscpu_summary"][k.strip()] = v.strip()[:400]
+try:
+    cs, _ = sh("cat /sys/fs/cgroup/cpuset.cpus.effective 2>/dev/null || cat /sys/fs/cgroup/cpuset/cpuset.cpus 2>/dev/null")
+    info["cgroup_cpuset"] = cs
+except Exception:
+    pass
+try:
+    import torch
+    info["torch_threads"] = torch.get_num_threads()
+    info["torch.__version__"] = torch.__version__
+    info["torch_interop_threads"] = torch.get_num_interop_threads()
+except Exception:
+    pass
+print(json.dumps(info, indent=2, ensure_ascii=False, default=str))
+# ---- STDOUT ----
+{
+  "python": "3.12.13 (main, Aug  3 2026, 02:43:47) [GCC 12.3.1 (openEuler 12.3.1-105.oe2403sp3)]",
+  "executable": "/usr/local/python3.12.13/bin/python",
+  "numpy.__version__": "1.26.4",
+  "uname_a": {
+    "system": "Linux",
+    "node": "c12385977c90",
+    "release": "6.6.0-159.4.3.154.oe2403sp4.aarch64",
+    "version": "#1 SMP Mon Jun 29 00:38:31 CST 2026",
+    "machine": "aarch64",
+    "processor": "aarch64"
+  },
+  "os_release": {
+    "NAME": "\"openEuler\"",
+    "VERSION": "\"24.03 (LTS-SP3)\"",
+    "ID": "\"openEuler\"",
+    "VERSION_ID": "\"24.03\"",
+    "PRETTY_NAME": "\"openEuler 24.03 (LTS-SP3)\"",
+    "ANSI_COLOR": "\"0;31\""
+  },
+  "lscpu_summary": {
+    "Architecture": "aarch64",
+    "CPU(s)": "640",
+    "Model name": "unknown",
+    "Thread(s) per core": "2",
+    "Socket(s)": "-",
+    "CPU max MHz": "2900.0000",
+    "CPU min MHz": "400.0000",
+    "BogoMIPS": "200.00",
+    "Flags": "fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb dcpodp flagm2 frint svei8mm svef32mm svef64mm svebf16 i8mm bf16 dgh rng ecv",
+    "L1d cache": "20 MiB (320 instances)",
+    "L2 cache": "400 MiB (320 instances)",
+    "L3 cache": "560 MiB (8 instances)",
+    "NUMA node(s)": "8"
+  },
+  "cgroup_cpuset": "200-215",
+  "nproc": 640,
+  "threads_env": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": null,
+    "ATEN_CPU_SECTION": null,
+    "OPENBLAS_NUM_THREADS": null
+  },
+  "torch_threads": 1,
+  "env_PYTHONPATH": "/usr/local/Ascend/cann-9.1.0/python/site-packages:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe:/work/harness",
+  "cwd": "/work",
+  "torch.__version__": "2.10.0+cpu",
+  "torch_interop_threads": 640
+}
+
+# ---- STDERR ----
+
+# ---- END ----

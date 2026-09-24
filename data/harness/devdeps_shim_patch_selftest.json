@@ -1,0 +1,176 @@
+{
+  "generated_at": "2026-09-23T17:54:00+0000",
+  "shim_report": {
+    "installed": true,
+    "device": "cpu",
+    "pin_memory_available": false,
+    "calls": {
+      "CpuGpuBuffer.copy_to_gpu": 2
+    },
+    "degraded_copy_bytes": {
+      "copy_to_gpu": 4352
+    },
+    "warnings": []
+  },
+  "patch_report": {
+    "patched": [
+      "Module.to",
+      "Tensor.npu",
+      "Tensor.npu_",
+      "Tensor.pin_memory",
+      "Tensor.to",
+      "torch.accelerator.current_accelerator",
+      "torch.accelerator.current_device_index",
+      "torch.accelerator.current_stream",
+      "torch.accelerator.default_stream",
+      "torch.accelerator.device_count",
+      "torch.accelerator.empty_cache",
+      "torch.accelerator.get_memory_info",
+      "torch.accelerator.is_available",
+      "torch.accelerator.memory_allocated",
+      "torch.accelerator.memory_reserved",
+      "torch.accelerator.memory_stats",
+      "torch.accelerator.reset_peak_memory_stats",
+      "torch.accelerator.set_device_index",
+      "torch.accelerator.set_stream",
+      "torch.accelerator.stream",
+      "torch.accelerator.synchronize",
+      "torch.arange",
+      "torch.as_tensor",
+      "torch.asarray",
+      "torch.empty",
+      "torch.empty_like",
+      "torch.empty_strided",
+      "torch.eye",
+      "torch.full",
+      "torch.full_like",
+      "torch.linspace",
+      "torch.ones",
+      "torch.ones_like",
+      "torch.rand",
+      "torch.rand_like",
+      "torch.randint",
+      "torch.randn",
+      "torch.randn_like",
+      "torch.randperm",
+      "torch.scalar_tensor",
+      "torch.tensor",
+      "torch.zeros",
+      "torch.zeros_like"
+    ],
+    "calls": {
+      "pin_memory_downgraded": 3,
+      "zeros": 10,
+      "device_remapped": 11,
+      "zeros_like": 3,
+      "Tensor.npu": 1,
+      "Tensor.to": 3,
+      "accelerator.synchronize": 1,
+      "accelerator.current_device_index": 1,
+      "accelerator.device_count": 1,
+      "accelerator.is_available": 1,
+      "accelerator.current_accelerator": 1,
+      "accelerator.empty_cache": 1,
+      "empty": 1,
+      "tensor": 1,
+      "arange": 1,
+      "ones": 1
+    },
+    "pin_memory_supported": false
+  },
+  "cases": [
+    {
+      "id": "C6",
+      "title": "CpuGpuBuffer(1024,int32,device=npu)+copy_to_gpu",
+      "ok": true,
+      "value": "'cpu=cpu gpu=cpu'",
+      "ms": 26.49
+    },
+    {
+      "id": "C7",
+      "title": "CpuGpuBuffer(device=npu:0, pin_memory=True)",
+      "ok": true,
+      "value": "'cpu=cpu gpu=cpu'",
+      "ms": 0.15
+    },
+    {
+      "id": "C8",
+      "title": "Tensor.npu()",
+      "ok": true,
+      "value": "'cpu'",
+      "ms": 0.06
+    },
+    {
+      "id": "C9",
+      "title": "Tensor.to('npu')",
+      "ok": true,
+      "value": "'cpu'",
+      "ms": 0.03
+    },
+    {
+      "id": "C10",
+      "title": "Tensor.to(device('npu:0'))",
+      "ok": true,
+      "value": "'cpu'",
+      "ms": 0.03
+    },
+    {
+      "id": "C11",
+      "title": "torch.zeros(device='npu')",
+      "ok": true,
+      "value": "'cpu'",
+      "ms": 0.02
+    },
+    {
+      "id": "C12",
+      "title": "torch.zeros(device='npu:0')",
+      "ok": true,
+      "value": "'cpu'",
+      "ms": 0.02
+    },
+    {
+      "id": "C13",
+      "title": "torch.zeros(pin_memory=True)",
+      "ok": true,
+      "value": "'(4,)'",
+      "ms": 0.02
+    },
+    {
+      "id": "C14",
+      "title": "with torch.device('npu'): torch.zeros(2)",
+      "ok": true,
+      "value": "'cpu'",
+      "ms": 0.07
+    },
+    {
+      "id": "C16",
+      "title": "torch.npu.config.allow_internal_format 读写",
+      "ok": true,
+      "value": "'<read FAILED>'",
+      "ms": 0.03
+    },
+    {
+      "id": "C17",
+      "title": "torch.accelerator.* 基本调用",
+      "ok": true,
+      "value": "{'synchronize': None, 'current_device_index': 0, 'device_count': 1, 'is_available': True, 'current_accelerator': 'cpu', 'empty_cache': None}",
+      "ms": 0.02
+    },
+    {
+      "id": "C18",
+      "title": "torch.zeros_like(cpu_t, device='npu')",
+      "ok": true,
+      "value": "'cpu'",
+      "ms": 0.04
+    },
+    {
+      "id": "C19",
+      "title": "torch.empty(4, device='npu') / torch.tensor([1], device='npu')",
+      "ok": true,
+      "value": "['cpu', 'cpu', 'cpu', 'cpu']",
+      "ms": 0.31
+    }
+  ],
+  "passed": 13,
+  "failed": 0
+}

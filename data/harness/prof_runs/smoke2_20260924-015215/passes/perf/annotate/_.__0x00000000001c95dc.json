@@ -1,0 +1,9 @@
+{
+  "caliber_version": "prof-v1",
+  "kind": "annotate",
+  "file": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke2_20260924-015215/passes/perf/annotate/_.__0x00000000001c95dc.txt",
+  "n_instructions": 0,
+  "sum_instr_pct": 0,
+  "hot_source_lines": [],
+  "top_instructions": []
+}

@@ -1,0 +1,11 @@
+{
+ "description": "worker \u4e3b\u7ebf\u7a0b\u7684 perf stat\uff1acycles/instructions/IPC \u4e0e task-clock/\u4e0a\u4e0b\u6587\u5207\u6362/\u7f3a\u9875\u3002",
+ "tier": "historical-measured",
+ "scope": "exact_worker_main_tid",
+ "host": "a3-21",
+ "config": "qwen35-08b / TP1 / graph(FULL_DECODE_ONLY) / MTP-off / chip15 / ISL128 OSL7168 C1",
+ "runs": "runs/2026091{4}T09xxZ-qwen35-08b-tp1-mtp-off-long-decode-b1-perf-stat-r1",
+ "excluded": "20260914T0946Z \u4e00\u8f6e\u4e3a <not counted>\uff08time_enabled=0\uff09\uff0c\u672a\u8fdb\u5165\u672c\u8868",
+ "confidence": "\u6240\u6709\u4e8b\u4ef6\u7684 time_running_percent = 100.0\uff08\u65e0 multiplexing\uff09",
+ "note": "per_decode_second \u7684\u5206\u6bcd\u662f decode_after_release_seconds\uff1bper_measured_output_token \u7684\u5206\u6bcd\u662f measured_output_tokens\u3002"
+}

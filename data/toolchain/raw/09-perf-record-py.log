@@ -1,0 +1,9 @@
+$ perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-py.data -F 999 -g --call-graph dwarf,32768 -- taskset -c 122 /usr/bin/python3 /home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/synth/probe_load.py --duration-ms 3000 --reqs 64 --tokens 512
+# rc=0 wall_s=4.440
+
+probe_load.py done iters=7337 total_tokens=240418816 reqs=64 tokens=512 numpy=False
+
+----- stderr -----
+[ perf record: Woken up 380 times to write data ]
+[ perf record: Captured and wrote 94.685 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-py.data (2995 samples) ]
+

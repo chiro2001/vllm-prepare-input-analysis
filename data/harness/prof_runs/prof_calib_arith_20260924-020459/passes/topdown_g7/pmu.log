@@ -1,0 +1,1 @@
+{"counters": {"LD_CANCEL_INST_TYPE": 31309, "LD_CANCEL_FWD_HZD": 625732635, "LD_CANCEL_STRUCT_HZD": 654709656, "LD_CANCEL_PIPELINE": 3497050, "L2_BOUND_BUF": 654, "L2_BOUND_SNP": 1002432, "L2_BOUND_ARB": 1691371, "DRAM_LOCAL": 0}, "confidence": 1.0, "ipc": null, "stopped_reason": "target_exit"}

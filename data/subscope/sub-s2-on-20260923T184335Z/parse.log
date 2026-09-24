@@ -1,0 +1,22 @@
+attn builder p50 : 1028.7 us (24.6% of prepare input)
+  pi: am.builder_build (unattributed residual)      1028.700 us  100.0%
+wrote /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s2-on-20260923T184335Z/attn_builder_breakdown.csv
+steps analysed      : 125 (tid 131)
+prepare input wall  : p50 4176.3 us   p99 11675.8 us
+unattributed        : 277.5 us (6.7 %)
+top sub-scopes (p50 us, share of prepare input):
+  pi: am.builder_build                1028.700   24.6%  (98% of steps)
+  pi: in.mrope_positions               751.820   18.0%  (98% of steps)
+  pi: build_attention_metadata         290.150    7.0%  (98% of steps)
+  pi: in.prepare_input_ids             235.930    5.7%  (98% of steps)
+  pi: update_states                    181.300    4.3%  (100% of steps)
+  pi: in.slot_mapping                  137.120    3.3%  (98% of steps)
+  pi: in.positions_assembly            111.900    2.7%  (98% of steps)
+  pi: sync_input_prep                  107.820    2.6%  (100% of steps)
+  pi: prepare_inputs                   106.810    2.6%  (98% of steps)
+  pi: in.block_table_commit             87.700    2.1%  (98% of steps)
+  pi: am.cm_base_pre                    76.320    1.8%  (98% of steps)
+  pi: in.discard_mask                   73.530    1.8%  (98% of steps)
+wrote /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s2-on-20260923T184335Z/per_step_subscope.csv
+wrote /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s2-on-20260923T184335Z/summary.csv
+wrote /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s2-on-20260923T184335Z/summary_groups.csv

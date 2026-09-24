@@ -1,0 +1,93 @@
+{
+  "caliber_version": "prof-v1",
+  "ts_start": "2026-09-24T02:05:45+0800",
+  "pid": 4092190,
+  "events_spec": null,
+  "preset": "920b_topdown_full_2",
+  "multiplex_allowed": false,
+  "ts_running": "2026-09-24T02:05:45+0800",
+  "stopped_reason": "target_exit",
+  "ts_end": "2026-09-24T02:05:50+0800",
+  "wall_s": 5.639176,
+  "counters": {
+    "EXE_STALL_DIV": 49187,
+    "FSU_STALL": 394412,
+    "MEM_STALL_ANYLOAD": 416682606,
+    "MEM_STALL_ANYSTORE": 1960,
+    "MEMSTALL_L1MISS": 41489570,
+    "MEMSTALL_L2MISS": 37339849,
+    "MEMSTALL_L3MISS": 0,
+    "ROB_STALL": 1663911
+  },
+  "entries": [
+    {
+      "name": "EXE_STALL_DIV",
+      "id": "exe_stall_div",
+      "config": 28675,
+      "delta": 49187,
+      "rate": 8767.795215619482
+    },
+    {
+      "name": "FSU_STALL",
+      "id": "fsu_stall",
+      "config": 28676,
+      "delta": 394412,
+      "rate": 70305.64268166205
+    },
+    {
+      "name": "MEM_STALL_ANYLOAD",
+      "id": "mem_stall_anyload",
+      "config": 28677,
+      "delta": 416682606,
+      "rate": 74275474.4001191
+    },
+    {
+      "name": "MEM_STALL_ANYSTORE",
+      "id": "mem_stall_anystore",
+      "config": 28678,
+      "delta": 1960,
+      "rate": 349.3784663145584
+    },
+    {
+      "name": "MEMSTALL_L1MISS",
+      "id": "memstall_l1miss",
+      "config": 28679,
+      "delta": 41489570,
+      "rate": 7395695.068699242
+    },
+    {
+      "name": "MEMSTALL_L2MISS",
+      "id": "memstall_l2miss",
+      "config": 28680,
+      "delta": 37339849,
+      "rate": 6655989.375529183
+    },
+    {
+      "name": "MEMSTALL_L3MISS",
+      "id": "memstall_l3miss",
+      "config": 28681,
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "ROB_STALL",
+      "id": "rob_stall",
+      "config": 8196,
+      "delta": 1663911,
+      "rate": 296599.3230938384
+    }
+  ],
+  "time_enabled": 5609962230,
+  "time_running": 5609962230,
+  "confidence": 1.0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B",
+  "backend": "920B(counting)",
+  "derived": {
+    "cpu_cycles": null,
+    "inst_retired": null,
+    "ipc": null,
+    "cycles_per_sec": null
+  }
+}

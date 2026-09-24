@@ -1,0 +1,36 @@
+# step_id     : A3b_import_vllm_C
+# title       : import vllm._C
+# cwd         : /work
+# returncode  : 1
+# duration_s  : 5.19
+# extra env   : {"USER": "probe", "LOGNAME": "probe"}
+# env overrides: {}
+# ---- COMMAND (python -c) ----
+import vllm._C as C
+print("vllm._C OK:", C.__file__)
+print("has ops:", len([x for x in dir(C) if not x.startswith('_')]))
+# ---- STDOUT ----
+INFO 09-23 17:44:59 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 17:44:59 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-23 17:44:59 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-23 17:44:59 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-23 17:45:02 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.[ERROR] 2026-09-23-17:45:02 (PID:86, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+
+# ---- STDERR ----
+can not use command: npu-smi info
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'vllm._C'
+
+# ---- END ----

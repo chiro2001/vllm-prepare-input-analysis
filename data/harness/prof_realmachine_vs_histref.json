@@ -1,0 +1,14 @@
+{
+  "caliber_version": "prof-v1",
+  "a": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_realmachine_20260924-031609/summary.json",
+  "reference_check": {
+    "ref_ipc": "0.719..0.89",
+    "ref_frontend_bound": "56.0..65.0",
+    "measured_ipc": 0.9488826385094149,
+    "measured_frontend_bound": 72.1098021994206,
+    "ipc_in_range": false,
+    "ipc_delta": 0.1444,
+    "frontend_in_range": false,
+    "frontend_delta_pp": 11.61
+  }
+}

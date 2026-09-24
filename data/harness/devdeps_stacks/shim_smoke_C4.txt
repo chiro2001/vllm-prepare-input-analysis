@@ -1,0 +1,6 @@
+# C4: import vllm_ascend.ops
+# ok=True  6359.99 ms
+# value: '/vllm-workspace/vllm-ascend/vllm_ascend/ops/__init__.py'
+# exc: None
+# ---- traceback ----
+

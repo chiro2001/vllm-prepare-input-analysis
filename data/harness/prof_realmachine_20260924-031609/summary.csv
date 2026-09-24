@@ -1,0 +1,51 @@
+tag,ts,metric,value,source,note
+prof_realmachine,2026-09-24T03:35:54+0800,ipc,0.9488826385094149,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_realmachine,2026-09-24T03:35:54+0800,time_enabled,29999639890,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_realmachine,2026-09-24T03:35:54+0800,time_running,29999639890,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_realmachine,2026-09-24T03:35:54+0800,confidence,1.0,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_realmachine,2026-09-24T03:35:54+0800,wall_s,30.060664,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_realmachine,2026-09-24T03:35:54+0800,counter.CPU_CYCLES,86997939180,pmu/count.json,libkperfx 区间增量
+prof_realmachine,2026-09-24T03:35:54+0800,counter.INST_RETIRED,82550834074,pmu/count.json,libkperfx 区间增量
+prof_realmachine,2026-09-24T03:35:54+0800,counter.INST_SPEC,125616294018,pmu/count.json,libkperfx 区间增量
+prof_realmachine,2026-09-24T03:35:54+0800,counter.BR_PRED,20165215374,pmu/count.json,libkperfx 区间增量
+prof_realmachine,2026-09-24T03:35:54+0800,counter.BR_MIS_PRED,1176860231,pmu/count.json,libkperfx 区间增量
+prof_realmachine,2026-09-24T03:35:54+0800,counter.L1D_CACHE_REFILL,1171364138,pmu/count.json,libkperfx 区间增量
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level1.retiring,15.936663948178559,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level1.bad_spec,8.14306205796743,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level1.frontend_bound,72.1098021994206,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level1.backend_bound,3.810471794433411,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level2.frontend.frontend_latency_bound,64.74787753792886,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level2.frontend.frontend_bandwidth_bound,7.3619246614917415,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level2.backend.resource_bound,0.061205310043663884,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level2.backend.core_bound,2.8716584541482026,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level2.backend.mem_bound,0.8776080302415445,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level3_mem.mem_l1_bound,0.4505740135708026,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level3_mem.mem_l2_bound,0.18596175992951067,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level3_mem.mem_l3_dram_bound,0.24100840059565648,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level3_mem.mem_mem_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.level3_mem.mem_store_bound,6.385614557478864e-05,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.ooo_stall.rob_stall_pct,4.226594593117111,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.ooo_stall.ptag_stall_pct,81.68548614705021,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.ooo_stall.mapq_stall_pct,13.46768460139379,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.ooo_stall.pcbuf_stall_pct,0.6202346584388908,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,topdown.ooo_stall.other_stall_pct,-6.994405055138486e-15,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] _PyEval_EvalFrameDefault,11.43,perf/hotspots.json,libpython3.12.so.1.0
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] _PyObject_Malloc,1.63,perf/hotspots.json,libpython3.12.so.1.0
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] unicodekeys_lookup_unicode,1.38,perf/hotspots.json,libpython3.12.so.1.0
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] _PyType_Lookup,1.37,perf/hotspots.json,libpython3.12.so.1.0
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] _PyObject_Free,1.23,perf/hotspots.json,libpython3.12.so.1.0
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] pthread_mutex_lock,1.12,perf/hotspots.json,libc.so.6
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] _PyObject_GenericGetAttrWithDict,0.9,perf/hotspots.json,libpython3.12.so.1.0
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] tupledealloc,0.82,perf/hotspots.json,libpython3.12.so.1.0
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] PyType_IsSubtype,0.79,perf/hotspots.json,libpython3.12.so.1.0
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] _Py_dict_lookup,0.76,perf/hotspots.json,libpython3.12.so.1.0
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const,0.71,perf/hotspots.json,libtorch_cpu.so
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] 0x0000000000083e78,0.68,perf/hotspots.json,libc.so.6
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] malloc,0.64,perf/hotspots.json,libc.so.6
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] tuple_alloc,0.64,perf/hotspots.json,libpython3.12.so.1.0
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] _PyFrame_ClearExceptCode,0.59,perf/hotspots.json,libpython3.12.so.1.0
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] 0x00000000000127a0,0.58,perf/hotspots.json,ld-linux-aarch64.so.1
+prof_realmachine,2026-09-24T03:35:54+0800,"hotspot.[.] torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)",0.54,perf/hotspots.json,libtorch_cpu.so
+prof_realmachine,2026-09-24T03:35:54+0800,"hotspot.[.] torch::autograd::THPVariable_getitem(_object*, _object*)",0.53,perf/hotspots.json,libtorch_python.so
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] initialize_locals,0.51,perf/hotspots.json,libpython3.12.so.1.0
+prof_realmachine,2026-09-24T03:35:54+0800,hotspot.[.] 0x0000000000083e70,0.5,perf/hotspots.json,libc.so.6

@@ -1,0 +1,6 @@
+# C5: from vllm_ascend.worker.model_runner_v1 import NPUModelRunner
+# ok=True  14281.59 ms
+# value: {'cls': "<class 'vllm_ascend.worker.model_runner_v1.NPUModelRunner'>", 'mro': ['NPUModelRunner', 'GPUModelRunner', 'LoRAModelRunnerMixin', 'KVConnectorModelRunnerMixin', 'ECConnectorModelRunnerMixin', 'object']}
+# exc: None
+# ---- traceback ----
+

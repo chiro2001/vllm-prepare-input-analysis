@@ -1,0 +1,6 @@
+# C10: Tensor.to(device('npu:0'))
+# ok=True  0.04 ms
+# value: 'cpu'
+# exc: None
+# ---- traceback ----
+

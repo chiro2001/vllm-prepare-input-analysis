@@ -1,0 +1,11 @@
+{
+ "description": "\u6bcf\u4e2a (\u6a21\u578b,TP,\u6a21\u5f0f,MTP,rank) \u7684 decode \u6bcf\u6b65 phase \u5747\u503c\uff08\u6beb\u79d2/\u6b65\uff09\u4e0e\u5360 step \u5468\u671f\u767e\u5206\u6bd4\u3002",
+ "derived_from": "data/historical/phase_per_step_windows.csv\uff08\u672c agent \u751f\u6210\uff09",
+ "upstream": "HIST_PROJECT/reports/lite-traces/<run>/lite.trace.json.gz",
+ "tier": "historical-measured",
+ "caveats": [
+  "w*/m4/v4b \u6ce2\u6b21\u7528\u5e26 schedule \u63d2\u6869\u7684\u955c\u50cf\uff1be1x/m1x \u6ca1\u6709 Step:Schedule\uff0c\u6b65\u6570\u9000\u5316\u4e3a prepare input \u8ba1\u6570\u3002",
+  "\u8fd9\u4e9b\u6ce2\u6b21\u6ca1\u6709 wait scope\uff1aprepare input / forward \u7684\u5899\u949f\u5305\u542b device \u7b49\u5f85\uff0cgraph+MTP-on \u81c2\u5c24\u5176\u4e0d\u80fd\u8bfb\u6210 CPU \u4fa7\u8017\u65f6\u3002",
+  "step_period_us = \u7a97\u53e3\u5899\u949f / \u7a97\u53e3\u5185\u6b65\u6570\uff0c\u542b\u672a\u63d2\u6869\u7684\u7a7a\u9699\uff1bnamed_coverage_pct \u7ed9\u51fa\u5df2\u63d2\u6869\u4f5c\u7528\u57df\u5bf9 step \u5468\u671f\u7684\u8986\u76d6\u7387\u3002"
+ ]
+}

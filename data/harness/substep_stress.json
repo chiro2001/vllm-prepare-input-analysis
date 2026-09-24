@@ -1,0 +1,87 @@
+{
+  "n_steps": 16282,
+  "scope_us_per_step": 462.232184972275,
+  "prepare_inputs_us_per_step": 409.704115766114,
+  "update_states_us_per_step": 52.528069206161,
+  "leaf_sum_us_per_step": 81.3747752071932,
+  "inline_residual_us_per_step": 380.8574097650818,
+  "inline_residual_share_pct": 82.39525981686582,
+  "rows": [
+    {
+      "function": "(inline code in _prepare_inputs / _update_states)",
+      "us_per_step": 380.8574097650818,
+      "share_of_scope_pct": 82.39525981686582
+    },
+    {
+      "function": "NPUModelRunner._build_attn_state",
+      "us_per_step": 25.63707103218095,
+      "share_of_scope_pct": 5.546362167255549
+    },
+    {
+      "function": "GPUModelRunner._get_cumsum_and_arange",
+      "us_per_step": 18.42281431790925,
+      "share_of_scope_pct": 3.985619114561281
+    },
+    {
+      "function": "GPUModelRunner._prepare_input_ids",
+      "us_per_step": 15.447574167193983,
+      "share_of_scope_pct": 3.3419512248201713
+    },
+    {
+      "function": "InputBatch.update_req_spec_token_ids",
+      "us_per_step": 8.105071239903737,
+      "share_of_scope_pct": 1.753463195209975
+    },
+    {
+      "function": "InputBatch.add_request",
+      "us_per_step": 4.9794435177864145,
+      "share_of_scope_pct": 1.0772602340715598
+    },
+    {
+      "function": "InputBatch.refresh_metadata",
+      "us_per_step": 2.903696378957704,
+      "share_of_scope_pct": 0.6281900035004853
+    },
+    {
+      "function": "GPUModelRunner._compute_prev_positions",
+      "us_per_step": 2.260459162271527,
+      "share_of_scope_pct": 0.48903110509431774
+    },
+    {
+      "function": "InputBatch.condense",
+      "us_per_step": 1.9441829961888741,
+      "share_of_scope_pct": 0.42060744781445447
+    },
+    {
+      "function": "BlockTable.append_row",
+      "us_per_step": 1.0668554487082766,
+      "share_of_scope_pct": 0.23080509825863113
+    },
+    {
+      "function": "GPUModelRunner._may_reorder_batch",
+      "us_per_step": 0.4286675446205406,
+      "share_of_scope_pct": 0.09273857566760575
+    },
+    {
+      "function": "BlockTable.add_row",
+      "us_per_step": 0.17893940147194137,
+      "share_of_scope_pct": 0.03871201688014743
+    }
+  ],
+  "preset": "stress",
+  "summary": {
+    "steps_run": 16282,
+    "prepare_inputs_us": {
+      "p50": 412.5300038140267,
+      "p90": 425.4390252754092,
+      "p99": 650.435591232963,
+      "mean": 417.36651735152407,
+      "sum": 6795561.635517515
+    },
+    "update_states_us": {
+      "p50": 46.50000482797623,
+      "p90": 47.640001866966486,
+      "mean": 53.80106717536857
+    }
+  }
+}

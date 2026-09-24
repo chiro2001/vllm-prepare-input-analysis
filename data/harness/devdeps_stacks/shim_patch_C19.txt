@@ -1,0 +1,6 @@
+# C19 torch.empty(4, device='npu') / torch.tensor([1], device='npu')
+# ok=True
+# value=['cpu', 'cpu', 'cpu', 'cpu']
+# exc=None
+# tb
+

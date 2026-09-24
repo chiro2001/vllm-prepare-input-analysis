@@ -1,0 +1,142 @@
+[run] 2026-09-24T02:48:59+08:00 :: --sweep spec_k --isl 1024 --steps 80 --repeat 3 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+can not use command: npu-smi info
+INFO 09-23 18:49:16 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 18:49:16 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-23 18:49:16 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-23 18:49:16 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-23 18:49:16 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+INFO 09-23 18:49:50 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:49:50 [model.py:1788] Using max model len 262144
+INFO 09-23 18:49:50 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 09-23 18:49:50 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=2048.
+INFO 09-23 18:49:50 [vllm.py:1109] Asynchronous scheduling is enabled.
+INFO 09-23 18:49:50 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:49:50 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:49:50 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+INFO 09-23 18:49:50 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:49:50 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] spec_k=0 rep=0 pi_p50=488.1us us_p50=42.9us steps=80
+INFO 09-23 18:49:50 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:49:50 [model.py:1788] Using max model len 262144
+INFO 09-23 18:49:50 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:49:50 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:49:50 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:49:50 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] spec_k=0 rep=1 pi_p50=503.4us us_p50=44.4us steps=80
+INFO 09-23 18:49:50 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:49:50 [model.py:1788] Using max model len 262144
+INFO 09-23 18:49:50 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:49:50 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:49:50 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:49:50 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] spec_k=0 rep=2 pi_p50=517.0us us_p50=46.9us steps=80
+INFO 09-23 18:49:50 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:49:50 [model.py:1788] Using max model len 262144
+INFO 09-23 18:49:50 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:49:50 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:49:50 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:49:50 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] spec_k=1 rep=0 pi_p50=509.0us us_p50=46.3us steps=80
+INFO 09-23 18:49:50 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:49:50 [model.py:1788] Using max model len 262144
+INFO 09-23 18:49:50 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:49:50 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:49:50 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:49:50 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] spec_k=1 rep=1 pi_p50=515.5us us_p50=46.8us steps=80
+INFO 09-23 18:49:51 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:49:51 [model.py:1788] Using max model len 262144
+INFO 09-23 18:49:51 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:49:51 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:49:51 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:49:51 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] spec_k=1 rep=2 pi_p50=516.8us us_p50=47.6us steps=80
+INFO 09-23 18:49:51 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:49:51 [model.py:1788] Using max model len 262144
+INFO 09-23 18:49:51 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:49:51 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:49:51 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:49:51 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] spec_k=2 rep=0 pi_p50=512.7us us_p50=47.6us steps=80
+INFO 09-23 18:49:51 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:49:51 [model.py:1788] Using max model len 262144
+INFO 09-23 18:49:51 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:49:51 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:49:51 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:49:51 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] spec_k=2 rep=1 pi_p50=520.1us us_p50=48.0us steps=80
+INFO 09-23 18:49:51 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:49:51 [model.py:1788] Using max model len 262144
+INFO 09-23 18:49:51 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:49:51 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:49:51 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:49:51 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] spec_k=2 rep=2 pi_p50=506.6us us_p50=47.2us steps=80
+INFO 09-23 18:49:51 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:49:51 [model.py:1788] Using max model len 262144
+INFO 09-23 18:49:51 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:49:51 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:49:51 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:49:51 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] spec_k=3 rep=0 pi_p50=522.4us us_p50=48.0us steps=80
+INFO 09-23 18:49:51 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:49:51 [model.py:1788] Using max model len 262144
+INFO 09-23 18:49:51 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:49:51 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:49:51 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:49:51 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] spec_k=3 rep=1 pi_p50=506.3us us_p50=47.0us steps=80
+INFO 09-23 18:49:51 [model.py:623] Resolved architecture: LlamaForCausalLM
+INFO 09-23 18:49:51 [model.py:1788] Using max model len 262144
+INFO 09-23 18:49:51 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-23 18:49:51 [platform.py:420] Model config is missing. Skipping Ascend-specific config updates.
+INFO 09-23 18:49:51 [ascend_config.py:921] Dynamic EPLB is False
+INFO 09-23 18:49:51 [ascend_config.py:922] The number of redundant experts is 0
+[sweep] spec_k=3 rep=2 pi_p50=509.6us us_p50=46.9us steps=80
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.rtGetAiCoreCount failed, 0x7bc78[sweep] wrote /work/data/harness/sweep_r3_spec_sweep_spec_k_20260923-184951.csv (12 rows)
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}

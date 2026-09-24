@@ -1,0 +1,1 @@
+{"counters": {"DRAM_REMOTE": 0, "DRAM_REMOTE_CACHE": 0, "ST_SCA_FULL": 1971812359, "ST_HEAD_NO_PGEN": 2185929, "ST_ORDER_FAIL": 19823979947, "ST_BOUND_PIPELINE": 7372637}, "confidence": 1.0, "ipc": null, "stopped_reason": "target_exit"}

@@ -1,0 +1,226 @@
+
+Sorted summary for file /usr/local/python3.12.13/lib/libpython3.12.so.1.0
+----------------------------------------------
+
+   28.48 dictobject.c:940
+   26.43 dictobject.c:968
+   16.64 dictobject.c:949
+    5.13 dictobject.c:945
+    4.53 unicodeobject.h:282
+    4.29 dictobject.c:928
+    3.30 dictobject.c:964
+    2.42 dictobject.c:956
+    0.91 dictobject.c:348
+    0.91 dictobject.c:932
+    0.91 dictobject.c:941
+    0.90 pycore_dict.h:135
+    0.60 unicodeobject.h:250
+    0.60 eq.h:11
+ Percent |	Source code & Disassembly of libpython3.12.so.1.0 for cycles (330 samples, percent: local period)
+-----------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3      Disassembly of section .text:
+         :
+         : 5      000000000010d3c0 <unicodekeys_lookup_unicode>:
+         : 6      unicodekeys_lookup_unicode():
+    0.95 :   10d3c0: stp     x29, x30, [sp, #-96]! // dictobject.c:928
+    0.00 :   10d3c4: mov     x29, sp
+    1.21 :   10d3c8: stp     x19, x20, [sp, #16]
+    0.00 :   10d3cc: stp     x21, x22, [sp, #32]
+    0.00 :   10d3d0: mov     x21, x2
+    0.91 :   10d3d4: stp     x23, x24, [sp, #48]
+         : 929    _DK_ENTRIES():
+    0.00 :   10d3d8: add     x24, x0, #0x20
+         : 135    unicodekeys_lookup_unicode():
+    0.00 :   10d3dc: stp     x25, x26, [sp, #64]
+         : 929    _DK_ENTRIES():
+    0.00 :   10d3e0: mov     x26, #0x1                       // #1
+         : 136    unicodekeys_lookup_unicode():
+    0.00 :   10d3e4: mov     x25, x1
+    1.22 :   10d3e8: str     x27, [sp, #80]
+    0.00 :   10d3ec: mov     x27, x2
+    0.00 :   10d3f0: ldrb    w22, [x0, #8]
+         : 931    _DK_ENTRIES():
+    0.90 :   10d3f4: ldrb    w0, [x0, #9] // pycore_dict.h:135
+         : 136    unicodekeys_lookup_unicode():
+    0.00 :   10d3f8: lsl     x23, x26, x22
+    0.00 :   10d3fc: sub     x23, x23, #0x1
+         : 932    _DK_ENTRIES():
+    0.00 :   10d400: lsl     x26, x26, x0
+         : 136    unicodekeys_lookup_unicode():
+    0.91 :   10d404: and     x19, x23, x2 // dictobject.c:932
+         : 933    _DK_ENTRIES():
+    0.00 :   10d408: add     x26, x24, x26
+         : 137    dictkeys_get_index():
+    0.00 :   10d40c: cmp     w22, #0x7
+    0.00 :   10d410: b.gt    10d494 <unicodekeys_lookup_unicode+0xd4>
+    0.30 :   10d414: nop
+    0.30 :   10d418: ldrsb   x20, [x24, x19]
+         : 347    unicodekeys_lookup_unicode():
+    0.00 :   10d41c: tbnz    x20, #63, 10d4a4 <unicodekeys_lookup_unicode+0xe4>
+   16.37 :   10d420: lsl     x0, x20, #4 // dictobject.c:940
+    0.59 :   10d424: ldr     x0, [x26, x0]
+    0.00 :   10d428: cmp     x0, x25
+    0.00 :   10d42c: b.eq    10d4ac <unicodekeys_lookup_unicode+0xec>  // b.none
+   11.52 :   10d430: ldr     x1, [x0, #24]
+    0.00 :   10d434: cmp     x27, x1
+    0.00 :   10d438: b.eq    10d524 <unicodekeys_lookup_unicode+0x164>  // b.none
+   16.64 :   10d43c: add     x19, x19, x19, lsl #2 // dictobject.c:949
+    0.00 :   10d440: add     x19, x19, x21, lsr #5
+    0.00 :   10d444: add     x19, x19, #0x1
+    0.00 :   10d448: and     x19, x19, x23
+         : 953    dictkeys_get_index():
+    0.00 :   10d44c: cmp     w22, #0x7
+    0.00 :   10d450: b.gt    10d4cc <unicodekeys_lookup_unicode+0x10c>
+    0.33 :   10d454: ldrsb   x20, [x24, x19]
+         : 347    unicodekeys_lookup_unicode():
+    0.00 :   10d458: tbnz    x20, #63, 10d4dc <unicodekeys_lookup_unicode+0x11c>
+    0.91 :   10d45c: lsl     x0, x20, #4 // dictobject.c:956
+    0.30 :   10d460: ldr     x0, [x26, x0]
+    0.00 :   10d464: cmp     x0, x25
+    0.00 :   10d468: b.eq    10d4ac <unicodekeys_lookup_unicode+0xec>  // b.none
+    1.51 :   10d46c: ldr     x1, [x0, #24]
+    0.00 :   10d470: cmp     x27, x1
+    0.00 :   10d474: b.eq    10d578 <unicodekeys_lookup_unicode+0x1b8>  // b.none
+    3.30 :   10d478: lsr     x21, x21, #10 // dictobject.c:964
+    0.00 :   10d47c: add     x19, x19, x19, lsl #2
+    0.00 :   10d480: add     x0, x21, #0x1
+    0.00 :   10d484: add     x19, x19, x0
+    0.00 :   10d488: and     x19, x19, x23
+         : 969    dictkeys_get_index():
+    0.00 :   10d48c: cmp     w22, #0x7
+    0.00 :   10d490: b.le    10d418 <unicodekeys_lookup_unicode+0x58>
+    0.91 :   10d494: cmp     w22, #0xf // dictobject.c:348
+    0.00 :   10d498: b.gt    10d504 <unicodekeys_lookup_unicode+0x144>
+    0.30 :   10d49c: ldrsh   x20, [x24, x19, lsl #1]
+         : 351    unicodekeys_lookup_unicode():
+    0.00 :   10d4a0: tbz     x20, #63, 10d420 <unicodekeys_lookup_unicode+0x60>
+    5.13 :   10d4a4: cmn     x20, #0x1 // dictobject.c:945
+    0.00 :   10d4a8: b.ne    10d43c <unicodekeys_lookup_unicode+0x7c>  // b.any
+   21.87 :   10d4ac: ldp     x21, x22, [sp, #32] // dictobject.c:968
+    0.00 :   10d4b0: mov     x0, x20
+    2.43 :   10d4b4: ldp     x19, x20, [sp, #16]
+    0.60 :   10d4b8: ldp     x23, x24, [sp, #48]
+    0.60 :   10d4bc: ldp     x25, x26, [sp, #64]
+    0.30 :   10d4c0: ldr     x27, [sp, #80]
+    0.93 :   10d4c4: ldp     x29, x30, [sp], #96
+    0.00 :   10d4c8: ret
+         : 976    dictkeys_get_index():
+    0.00 :   10d4cc: cmp     w22, #0xf
+    0.00 :   10d4d0: b.gt    10d514 <unicodekeys_lookup_unicode+0x154>
+    0.00 :   10d4d4: ldrsh   x20, [x24, x19, lsl #1]
+         : 351    unicodekeys_lookup_unicode():
+    0.00 :   10d4d8: tbz     x20, #63, 10d45c <unicodekeys_lookup_unicode+0x9c>
+    0.30 :   10d4dc: cmn     x20, #0x1
+    0.00 :   10d4e0: b.ne    10d478 <unicodekeys_lookup_unicode+0xb8>  // b.any
+    0.00 :   10d4e4: ldp     x21, x22, [sp, #32]
+    0.00 :   10d4e8: mov     x0, x20
+    0.00 :   10d4ec: ldp     x19, x20, [sp, #16]
+    0.00 :   10d4f0: ldp     x23, x24, [sp, #48]
+    0.00 :   10d4f4: ldp     x25, x26, [sp, #64]
+    0.00 :   10d4f8: ldr     x27, [sp, #80]
+    0.00 :   10d4fc: ldp     x29, x30, [sp], #96
+    0.00 :   10d500: ret
+         : 976    dictkeys_get_index():
+    0.00 :   10d504: cmp     w22, #0x1f
+    0.00 :   10d508: b.le    10d5cc <unicodekeys_lookup_unicode+0x20c>
+    0.00 :   10d50c: ldr     x20, [x24, x19, lsl #3]
+    0.00 :   10d510: b       10d41c <unicodekeys_lookup_unicode+0x5c>
+    0.00 :   10d514: cmp     w22, #0x1f
+    0.00 :   10d518: b.le    10d5d4 <unicodekeys_lookup_unicode+0x214>
+    0.00 :   10d51c: ldr     x20, [x24, x19, lsl #3]
+    0.00 :   10d520: b       10d458 <unicodekeys_lookup_unicode+0x98>
+         : 357    PyUnicode_GET_LENGTH():
+    3.93 :   10d524: ldr     x3, [x0, #16] // unicodeobject.h:282
+         : 283    unicode_eq():
+    0.31 :   10d528: ldr     x1, [x25, #16]
+    0.00 :   10d52c: cmp     x3, x1
+    0.00 :   10d530: b.ne    10d43c <unicodekeys_lookup_unicode+0x7c>  // b.any
+    0.60 :   10d534: cbz     x3, 10d4ac <unicodekeys_lookup_unicode+0xec> // eq.h:11
+    0.00 :   10d538: ldr     w1, [x0, #32]
+    0.00 :   10d53c: ldr     w2, [x25, #32]
+    0.00 :   10d540: eor     w1, w1, w2
+    0.00 :   10d544: tst     w1, #0x1c
+    0.00 :   10d548: b.ne    10d43c <unicodekeys_lookup_unicode+0x7c>  // b.any
+         : 18     PyUnicode_IS_COMPACT():
+    0.29 :   10d54c: ldr     x2, [x0, #32]
+         : 222    PyUnicode_DATA():
+    0.00 :   10d550: tbnz    w2, #5, 10d5dc <unicodekeys_lookup_unicode+0x21c>
+         : 265    PyUnicode_IS_COMPACT():
+    0.00 :   10d554: ldr     x1, [x25, #32]
+         : 222    _PyUnicode_NONCOMPACT_DATA():
+    0.00 :   10d558: ldr     x0, [x0, #56]
+         : 259    PyUnicode_DATA():
+    0.00 :   10d55c: tbnz    w1, #5, 10d5f4 <unicodekeys_lookup_unicode+0x234>
+         : 265    _PyUnicode_NONCOMPACT_DATA():
+    0.00 :   10d560: ldr     x1, [x25, #56]
+         : 259    unicode_eq():
+    0.00 :   10d564: ubfx    x2, x2, #2, #3
+    0.00 :   10d568: mul     x2, x2, x3
+    0.00 :   10d56c: bl      10b110 <memcmp@plt>
+         : 17     unicodekeys_lookup_unicode():
+    0.00 :   10d570: cbnz    w0, 10d43c <unicodekeys_lookup_unicode+0x7c>
+    0.91 :   10d574: b       10d4ac <unicodekeys_lookup_unicode+0xec> // dictobject.c:941
+         : 943    PyUnicode_GET_LENGTH():
+    0.61 :   10d578: ldr     x3, [x0, #16] // unicodeobject.h:282
+         : 283    unicode_eq():
+    0.00 :   10d57c: ldr     x1, [x25, #16]
+    0.00 :   10d580: cmp     x3, x1
+    0.00 :   10d584: b.ne    10d478 <unicodekeys_lookup_unicode+0xb8>  // b.any
+    0.30 :   10d588: cbz     x3, 10d4ac <unicodekeys_lookup_unicode+0xec>
+    0.00 :   10d58c: ldr     w1, [x0, #32]
+    0.30 :   10d590: ldr     w2, [x25, #32]
+    0.00 :   10d594: eor     w1, w1, w2
+    0.00 :   10d598: tst     w1, #0x1c
+    0.00 :   10d59c: b.ne    10d478 <unicodekeys_lookup_unicode+0xb8>  // b.any
+         : 18     PyUnicode_IS_COMPACT():
+    0.00 :   10d5a0: ldr     x2, [x0, #32]
+         : 222    PyUnicode_DATA():
+    0.00 :   10d5a4: tbnz    w2, #5, 10d61c <unicodekeys_lookup_unicode+0x25c>
+         : 265    _PyUnicode_NONCOMPACT_DATA():
+    0.00 :   10d5a8: ldr     x0, [x0, #56]
+         : 259    PyUnicode_IS_COMPACT():
+    0.00 :   10d5ac: ldr     x1, [x25, #32]
+         : 222    PyUnicode_DATA():
+    0.00 :   10d5b0: tbnz    w1, #5, 10d608 <unicodekeys_lookup_unicode+0x248>
+         : 265    _PyUnicode_NONCOMPACT_DATA():
+    0.00 :   10d5b4: ldr     x1, [x25, #56]
+         : 259    unicode_eq():
+    0.00 :   10d5b8: ubfx    x2, x2, #2, #3
+    0.00 :   10d5bc: mul     x2, x2, x3
+    0.00 :   10d5c0: bl      10b110 <memcmp@plt>
+         : 17     unicodekeys_lookup_unicode():
+    0.00 :   10d5c4: cbnz    w0, 10d478 <unicodekeys_lookup_unicode+0xb8>
+    0.30 :   10d5c8: b       10d4ac <unicodekeys_lookup_unicode+0xec>
+         : 959    dictkeys_get_index():
+    0.00 :   10d5cc: ldrsw   x20, [x24, x19, lsl #2]
+    0.00 :   10d5d0: b       10d41c <unicodekeys_lookup_unicode+0x5c>
+    0.00 :   10d5d4: ldrsw   x20, [x24, x19, lsl #2]
+    0.00 :   10d5d8: b       10d458 <unicodekeys_lookup_unicode+0x98>
+         : 364    _PyUnicode_COMPACT_DATA():
+    0.30 :   10d5dc: add     x1, x0, #0x28
+    0.00 :   10d5e0: tst     w2, #0x40
+    0.00 :   10d5e4: add     x0, x0, #0x38
+    0.00 :   10d5e8: csel    x0, x0, x1, eq  // eq = none
+         : 254    PyUnicode_IS_COMPACT():
+    0.00 :   10d5ec: ldr     x1, [x25, #32]
+         : 222    PyUnicode_DATA():
+    0.00 :   10d5f0: tbz     w1, #5, 10d560 <unicodekeys_lookup_unicode+0x1a0>
+         : 265    _PyUnicode_COMPACT_DATA():
+    0.60 :   10d5f4: tst     w1, #0x40 // unicodeobject.h:250
+    0.00 :   10d5f8: add     x4, x25, #0x28
+    0.00 :   10d5fc: add     x1, x25, #0x38
+    0.00 :   10d600: csel    x1, x1, x4, eq  // eq = none
+    0.00 :   10d604: b       10d564 <unicodekeys_lookup_unicode+0x1a4>
+    0.00 :   10d608: tst     w1, #0x40
+    0.00 :   10d60c: add     x4, x25, #0x28
+    0.00 :   10d610: add     x1, x25, #0x38
+    0.00 :   10d614: csel    x1, x1, x4, eq  // eq = none
+    0.00 :   10d618: b       10d5b8 <unicodekeys_lookup_unicode+0x1f8>
+    0.00 :   10d61c: add     x1, x0, #0x28
+    0.00 :   10d620: tst     w2, #0x40
+    0.00 :   10d624: add     x0, x0, #0x38
+    0.00 :   10d628: csel    x0, x0, x1, eq  // eq = none
+    0.00 :   10d62c: b       10d5ac <unicodekeys_lookup_unicode+0x1ec>

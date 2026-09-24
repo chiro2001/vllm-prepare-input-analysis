@@ -1,0 +1,14 @@
+[pgrid] realmachine batch=1 rep=0 pi_net_p50=  408.0 (raw   509.3, triton   99.8) us_p50=  21.4 scope_net=  430.7 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=37.2s
+[pgrid] realmachine batch=1 rep=1 pi_net_p50=  414.8 (raw   513.5, triton   97.6) us_p50=  22.1 scope_net=  438.6 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine batch=1 rep=2 pi_net_p50=  412.9 (raw   509.6, triton   97.1) us_p50=  22.6 scope_net=  435.1 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] wrote /work/data/harness/sweep_rmcpu_realmachine_20260923-191425.csv (3 rows)
+[pgrid] realmachine batch=1 rep=0 pi_net_p50=  375.2 (raw   375.7, triton    0.6) us_p50=  18.7 scope_net=  393.8 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=36.7s
+[pgrid] realmachine batch=1 rep=1 pi_net_p50=  383.8 (raw   384.3, triton    0.5) us_p50=  19.7 scope_net=  403.9 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine batch=1 rep=2 pi_net_p50=  381.6 (raw   382.1, triton    0.5) us_p50=  19.7 scope_net=  401.8 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] wrote /work/data/harness/sweep_rmnoop_realmachine_20260923-191508.csv (3 rows)
+[pgrid] realmachine batch=1 rep=0 pi_net_p50=  375.6 (raw   478.8, triton  103.0) us_p50=  18.2 scope_net=  394.6 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=36.6s
+[pgrid] realmachine batch=1 rep=1 pi_net_p50=  381.1 (raw   483.2, triton  101.9) us_p50=  19.4 scope_net=  400.3 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine batch=1 rep=2 pi_net_p50=  384.5 (raw   485.3, triton  100.9) us_p50=  19.9 scope_net=  404.4 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] wrote /work/data/harness/sweep_rminj_realmachine_20260923-191552.csv (3 rows)
+agents/sweep_analysis/run_remote.sh: line 265: syntax error near unexpected token `)'
+agents/sweep_analysis/run_remote.sh: line 265: `phase2) phase2 ;;'

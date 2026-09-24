@@ -1,0 +1,31 @@
+rank,dso,symbol,self_pct,samples
+1,libpython3.12.so.1.0,_PyEval_EvalFrameDefault,10.35,2026
+2,[kernel.kallsyms],eventfd_write,1.93,380
+3,libc.so.6,pthread_mutex_lock,1.78,348
+4,libpython3.12.so.1.0,unicodekeys_lookup_unicode,1.68,330
+5,libpython3.12.so.1.0,_PyType_Lookup,1.67,328
+6,libpython3.12.so.1.0,_PyObject_GenericGetAttrWithDict,1.36,267
+7,libpython3.12.so.1.0,_PyObject_Malloc,1.16,228
+8,libc.so.6,malloc,1.06,206
+9,libpython3.12.so.1.0,_PyFunction_Vectorcall,0.95,186
+10,libpython3.12.so.1.0,initialize_locals,0.89,175
+11,libpython3.12.so.1.0,_PyObject_Free,0.84,164
+12,libpython3.12.so.1.0,_Py_dict_lookup,0.82,159
+13,libpython3.12.so.1.0,PyUnstable_Code_GetExtra,0.75,147
+14,libpython3.12.so.1.0,PyType_IsSubtype,0.61,119
+15,libpython3.12.so.1.0,_PyFrame_ClearExceptCode,0.63,117
+16,libpython3.12.so.1.0,PyObject_GetAttr,0.55,105
+17,libc.so.6,0x0000000000083e78,0.52,103
+18,libpython3.12.so.1.0,PyObject_Vectorcall,0.50,99
+19,libpython3.12.so.1.0,tupledealloc,0.48,94
+20,libtorch_python.so,"torch::FunctionSignature::parse(_object*, _object*, _object*, _object**, std::vector<_object*, std::allocator<_object*> >&, bool)",0.43,85
+21,ld-linux-aarch64.so.1,0x00000000000127a0,0.41,81
+22,libc.so.6,cfree,0.40,79
+23,libtorch_cpu.so,c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const,0.39,78
+24,libpython3.12.so.1.0,_PyEvalFramePushAndInit,0.40,78
+25,[kernel.kallsyms],__fget_files,0.40,76
+26,libpython3.12.so.1.0,_PyObject_GetMethod,0.37,73
+27,libc.so.6,pthread_rwlock_rdlock,0.36,71
+28,libpython3.12.so.1.0,subtype_dealloc,0.35,69
+29,[kernel.kallsyms],el0_svc,0.32,63
+30,libpython3.12.so.1.0,PyObject_GC_UnTrack,0.31,61

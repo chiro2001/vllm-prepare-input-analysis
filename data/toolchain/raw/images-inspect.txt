@@ -1,0 +1,23 @@
+### docker inspect (format: Id|RepoDigests|Created)
+--- quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler
+sha256:dc9a31b8330d399ad8e91dabaca25798c3d838c36851897bf9a1f77f793072ec|["quay.nju.edu.cn/ascend/vllm-ascend@sha256:24ae7427b6cad5ee29e0665e6f69a4d51c9f6178035e38f2ed161bb3d29fe81c"]|2026-09-03T17:17:10.52828522Z
+--- local/vllm-ascend-liteprofiler:v0.26.0rc1-openeuler
+sha256:b2c6ff72ff93f82d447c4d33b4f099208f5f522f04eaba69766c2cdb4fb86b42|[]|2026-09-14T12:38:18.57880616Z
+
+### docker history --no-trunc (top 6 of each)
+--- local/vllm-ascend-liteprofiler:v0.26.0rc1-openeuler
+sha256:b2c6ff72ff93f82d447c4d33b4f099208f5f522f04eaba69766c2cdb4fb86b42|-lc sleep infinity
+sha256:de395fd981908c8a8d2478f722e0b5e862d608bea84b8d9929e1931271c9efa2|-lc sleep infinity
+sha256:dc9a31b8330d399ad8e91dabaca25798c3d838c36851897bf9a1f77f793072ec|CMD ["/bin/bash"]
+<missing>|RUN |23 PIP_INDEX_URL=https://pypi.org/simple MOONCAKE_INDEX_URL=https://mirrors.aliyun.com/pypi/web/simple PYTORCH_INDEX_URL=https://download.pytorch.org/whl/cpu/ ASCEND_INDEX_URL=https://mirrors.huaweicloud.com/ascend/repos/pypi APTMIRROR= GIT_PROXY= PIP_TRUSTED_HOST= MOONCAKE_TAG=0.3.11.post1 VLLM_REPO=https://github.com/vllm-project/vllm.git VLLM_TAG=v0.26.0 VLLM_COMMIT= SOC_VERSION=ascend910_9391 COMPILE_CUSTOM_KERNELS=1 BUILD_TYPE=release MEMCACHE_VERSION=1.2.0 MEMCACHE_DATE=20260725.3 MEMFABRIC_VERSION=1.2.0 MEMFABRIC_DATE=20260725.3 TORCH_NPU_VERSION=26.1.0 TORCH_NPU_DATE=20260715.4 TRITON_ASCEND_VERSION= TRITON_ASCEND_PACKAGE_VERSION=3.2.2 DAILY_DEPS_MODE=full /bin/bash -c if [ "$BUILD_TYPE" = "daily" ]; then         bash /tmp/install_daily_deps.sh;     else         echo "Building release version without daily packages";     fi && rm -f /tmp/install_daily_deps.sh # buildkit
+<missing>|COPY .github/workflows/scripts/install_daily_deps.sh /tmp/ # buildkit
+<missing>|ARG DAILY_DEPS_MODE=full
+--- quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler
+sha256:dc9a31b8330d399ad8e91dabaca25798c3d838c36851897bf9a1f77f793072ec|CMD ["/bin/bash"]
+<missing>|RUN |23 PIP_INDEX_URL=https://pypi.org/simple MOONCAKE_INDEX_URL=https://mirrors.aliyun.com/pypi/web/simple PYTORCH_INDEX_URL=https://download.pytorch.org/whl/cpu/ ASCEND_INDEX_URL=https://mirrors.huaweicloud.com/ascend/repos/pypi APTMIRROR= GIT_PROXY= PIP_TRUSTED_HOST= MOONCAKE_TAG=0.3.11.post1 VLLM_REPO=https://github.com/vllm-project/vllm.git VLLM_TAG=v0.26.0 VLLM_COMMIT= SOC_VERSION=ascend910_9391 COMPILE_CUSTOM_KERNELS=1 BUILD_TYPE=release MEMCACHE_VERSION=1.2.0 MEMCACHE_DATE=20260725.3 MEMFABRIC_VERSION=1.2.0 MEMFABRIC_DATE=20260725.3 TORCH_NPU_VERSION=26.1.0 TORCH_NPU_DATE=20260715.4 TRITON_ASCEND_VERSION= TRITON_ASCEND_PACKAGE_VERSION=3.2.2 DAILY_DEPS_MODE=full /bin/bash -c if [ "$BUILD_TYPE" = "daily" ]; then         bash /tmp/install_daily_deps.sh;     else         echo "Building release version without daily packages";     fi && rm -f /tmp/install_daily_deps.sh # buildkit
+<missing>|COPY .github/workflows/scripts/install_daily_deps.sh /tmp/ # buildkit
+<missing>|ARG DAILY_DEPS_MODE=full
+<missing>|ARG TRITON_ASCEND_PACKAGE_VERSION=3.2.2
+<missing>|ARG TRITON_ASCEND_VERSION=
+f283fb121bc099f531f433b5fff3431a2f3f92a168b6717168a7a01828520066  /home/REMOTE_USER/liteprofiler-vllm.patch
+5b7cec372d58f25785021fc03a171322f8cb2112bd283d456b6f9f6555cace35  /home/REMOTE_USER/liteprofiler-vllm-ascend.patch

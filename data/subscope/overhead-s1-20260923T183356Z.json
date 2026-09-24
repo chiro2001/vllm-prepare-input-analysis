@@ -1,0 +1,103 @@
+{
+  "schema": "prepare-input-overhead-ladder/v1",
+  "scenario": "s1",
+  "stamp": "20260923T183356Z",
+  "warmup_steps_dropped": 2,
+  "runs": {
+    "D1": "sub-s1-mounted-off-pystack-20260923T183356Z",
+    "D2": "sub-s1-mounted-off-2-20260923T183356Z",
+    "C2": "sub-s1-on-attn-20260923T183356Z"
+  },
+  "modes": [
+    "D1",
+    "D2",
+    "C2"
+  ],
+  "per_run": {
+    "D1": {
+      "run_id": "sub-s1-mounted-off-pystack-20260923T183356Z",
+      "phase_timing_csv": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/sub-s1-mounted-off-pystack-20260923T183356Z/lite-profiler/phase_timing.csv",
+      "available": true,
+      "prepare_input": {
+        "n": 64,
+        "p50": 3484.78,
+        "p90": 3659.41,
+        "p99": 3700.0,
+        "mean": 3422.789
+      },
+      "step": {
+        "n": 64,
+        "p50": 4947.73,
+        "p90": 5096.71,
+        "p99": 5254.06,
+        "mean": 4752.95
+      }
+    },
+    "D2": {
+      "run_id": "sub-s1-mounted-off-2-20260923T183356Z",
+      "phase_timing_csv": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/sub-s1-mounted-off-2-20260923T183356Z/lite-profiler/phase_timing.csv",
+      "available": true,
+      "prepare_input": {
+        "n": 64,
+        "p50": 2909.48,
+        "p90": 2934.13,
+        "p99": 2946.07,
+        "mean": 2828.53
+      },
+      "step": {
+        "n": 64,
+        "p50": 4131.89,
+        "p90": 4153.56,
+        "p99": 4169.55,
+        "mean": 3974.818
+      }
+    },
+    "C2": {
+      "run_id": "sub-s1-on-attn-20260923T183356Z",
+      "phase_timing_csv": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/sub-s1-on-attn-20260923T183356Z/lite-profiler/phase_timing.csv",
+      "available": true,
+      "prepare_input": {
+        "n": 64,
+        "p50": 2990.73,
+        "p90": 3016.58,
+        "p99": 3035.88,
+        "mean": 2906.504
+      },
+      "step": {
+        "n": 64,
+        "p50": 4344.97,
+        "p90": 4378.94,
+        "p99": 4471.85,
+        "mean": 4184.352
+      }
+    }
+  },
+  "deltas": {
+    "prepare_input": {
+      "D1_us": 3484.78,
+      "D2_us": 2909.48,
+      "C2_us": 2990.73,
+      "D2_minus_D1_us": -575.3,
+      "D2_vs_D1_pct": -16.51,
+      "C2_minus_D2_us": 81.25,
+      "C2_vs_D2_pct": 2.79,
+      "last_vs_first_abs_us": -494.05
+    },
+    "step": {
+      "D1_us": 4947.73,
+      "D2_us": 4131.89,
+      "C2_us": 4344.97,
+      "D2_minus_D1_us": -815.84,
+      "D2_vs_D1_pct": -16.49,
+      "C2_minus_D2_us": 213.08,
+      "C2_vs_D2_pct": 5.16,
+      "last_vs_first_abs_us": -602.76
+    }
+  },
+  "interpretation": {
+    "B_minus_A": "cost of bind-mounting the instrumented module (import only)",
+    "C_minus_B": "cost of the probes themselves (PI_SUBSCOPE=on)",
+    "D_minus_C": "cost of the pystack sampler inside the prepare-input window",
+    "budget": "task requires C-B <= 5% of prepare input"
+  }
+}

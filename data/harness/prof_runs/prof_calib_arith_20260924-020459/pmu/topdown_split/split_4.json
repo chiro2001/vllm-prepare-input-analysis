@@ -1,0 +1,93 @@
+{
+  "caliber_version": "prof-v1",
+  "ts_start": "2026-09-24T02:05:57+0800",
+  "pid": 4093734,
+  "events_spec": null,
+  "preset": "920b_topdown_full_4",
+  "multiplex_allowed": false,
+  "ts_running": "2026-09-24T02:05:57+0800",
+  "stopped_reason": "target_exit",
+  "ts_end": "2026-09-24T02:06:02+0800",
+  "wall_s": 5.461573,
+  "counters": {
+    "L2I_TLB": 999081,
+    "L2I_TLB_REFILL": 8046,
+    "L2I_CACHE": 2005391,
+    "L2I_CACHE_REFILL": 254848,
+    "PC_BUF_STALL": 2125343,
+    "INT_PTAG_STALL": 615202891,
+    "CC_PTAG_STALL": 0,
+    "VFP_SINGLE_PTAG_STALL": 614
+  },
+  "entries": [
+    {
+      "name": "L2I_TLB",
+      "id": "l2i_tlb",
+      "config": 48,
+      "delta": 999081,
+      "rate": 183818.36524932037
+    },
+    {
+      "name": "L2I_TLB_REFILL",
+      "id": "l2i_tlb_refill",
+      "config": 46,
+      "delta": 8046,
+      "rate": 1480.36302041179
+    },
+    {
+      "name": "L2I_CACHE",
+      "id": "l2i_cache",
+      "config": 39,
+      "delta": 2005391,
+      "rate": 368966.7757726349
+    },
+    {
+      "name": "L2I_CACHE_REFILL",
+      "id": "l2i_cache_refill",
+      "config": 40,
+      "delta": 254848,
+      "rate": 46888.83358512353
+    },
+    {
+      "name": "PC_BUF_STALL",
+      "id": "pcbuf_stall",
+      "config": 8197,
+      "delta": 2125343,
+      "rate": 391036.43834092165
+    },
+    {
+      "name": "INT_PTAG_STALL",
+      "id": "int_ptag_stall",
+      "config": 8198,
+      "delta": 615202891,
+      "rate": 113189610.9727598
+    },
+    {
+      "name": "CC_PTAG_STALL",
+      "id": "cc_ptag_stall",
+      "config": 8199,
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "VFP_SINGLE_PTAG_STALL",
+      "id": "vfp_single_ptag_stall",
+      "config": 8200,
+      "delta": 614,
+      "rate": 112.96829412538393
+    }
+  ],
+  "time_enabled": 5435153330,
+  "time_running": 5435153330,
+  "confidence": 1.0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B",
+  "backend": "920B(counting)",
+  "derived": {
+    "cpu_cycles": null,
+    "inst_retired": null,
+    "ipc": null,
+    "cycles_per_sec": null
+  }
+}

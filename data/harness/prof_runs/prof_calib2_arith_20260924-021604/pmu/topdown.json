@@ -1,0 +1,78 @@
+{
+  "caliber_version": "prof-v1",
+  "pmu": "920B",
+  "issue_width": 6,
+  "groups_present": 1,
+  "level1": {
+    "retiring": 64.88464959881311,
+    "bad_spec": 4.960368591662135,
+    "frontend_bound": 26.554848733609877,
+    "backend_bound": 3.600133075914883
+  },
+  "level1_sum": 100.0,
+  "level2": {
+    "frontend": {
+      "frontend_latency_bound": 15.382882098584313,
+      "frontend_bandwidth_bound": 11.171966635025564
+    },
+    "backend": {
+      "resource_bound": 0.005462146243919366,
+      "core_bound": 3.5946709296709636,
+      "mem_bound": 0.0
+    }
+  },
+  "level3_mem": {
+    "mem_l1_bound": 0.0,
+    "mem_l2_bound": 0.0,
+    "mem_l3_dram_bound": 0.0,
+    "mem_mem_bound": 0.0,
+    "mem_store_bound": 0.0
+  },
+  "ooo_stall": {
+    "rob_stall_pct": null,
+    "ptag_stall_pct": null,
+    "mapq_stall_pct": null,
+    "pcbuf_stall_pct": null,
+    "other_stall_pct": null
+  },
+  "ipc": 3.893078975928787,
+  "raw": {
+    "cpu_cycles": 13022538814.0,
+    "inst_retired": 50697772070.0,
+    "inst_spec": 54573567621.0,
+    "bad_spec_inst": 3875795551.0,
+    "dispatch_slots": 78135232884.0
+  },
+  "counters": {
+    "0x11": 13022538814,
+    "0x8": 50697772070,
+    "0x1b": 54573567621,
+    "0x2011": 20748692900,
+    "0x2012": 2003241792,
+    "0x7000": 15758529,
+    "0x7001": 10386540189,
+    "0x7002": 14
+  },
+  "confidence": {
+    "per_group": [
+      {
+        "file": "split_1.json",
+        "preset": "920b_topdown_full_1",
+        "counter": null,
+        "count": null,
+        "time_enabled": 4490675440,
+        "time_running": 4490675440,
+        "confidence": 1.0,
+        "useronly_forced": false,
+        "pmu": "920B"
+      }
+    ],
+    "min": 1.0,
+    "time_enabled_sum": 4490675440,
+    "time_running_sum": 4490675440,
+    "ratio": 1.0
+  },
+  "notes": [
+    "只合并了 1/9 个 preset 组，缺失分量按 0 处理"
+  ]
+}

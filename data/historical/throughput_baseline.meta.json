@@ -1,0 +1,13 @@
+{
+ "description": "\u5386\u53f2\u6ce2\u6b21\u7684\u541e\u5410\u4e0e\u6bcf\u6b65 token \u6570\u57fa\u7ebf\u3002",
+ "tier": "historical-measured",
+ "sources": [
+  "HIST_PROJECT/reports/mode-campaign-815/per-config.csv",
+  "HIST_PROJECT/reports/mtp-attribution/tokens-per-step.csv",
+  "HIST_PROJECT/reports/mtp-attribution/attribution.csv"
+ ],
+ "gaps": [
+  "\u6ca1\u6709 service_ttft / service_tpot \u7684\u771f\u673a\u5b9e\u6d4b\uff08\u5386\u53f2 run \u91cc\u7f3a benchmark \u7ed3\u679c\uff1breports/dataset/long-table.csv \u53ea\u6709 7 \u884c\u4e14\u6765\u81ea 2026-09-14 \u7684\u65e9\u671f run\uff09\u3002",
+  "\u541e\u5410\u53e3\u5f84\u662f lite.log \u6d3e\u751f\u7684\u5355\u8bf7\u6c42\u957f decode\uff0c\u4e0d\u662f\u541e\u5410\u57fa\u51c6\u3002"
+ ]
+}

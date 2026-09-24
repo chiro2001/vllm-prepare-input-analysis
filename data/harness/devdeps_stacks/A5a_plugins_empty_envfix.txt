@@ -1,0 +1,36 @@
+# step_id     : A5a_plugins_empty
+# title       : VLLM_PLUGINS=""（空串）vs unset 对 general plugin 加载的影响
+# cwd         : /work
+# returncode  : 0
+# duration_s  : 3.79
+# extra env   : {"USER": "probe", "LOGNAME": "probe"}
+# env overrides: {"VLLM_PLUGINS": ""}
+# ---- COMMAND (python -c) ----
+import os, sys, logging
+logging.basicConfig(level=logging.INFO, stream=sys.stdout)
+import vllm, vllm.envs as envs, vllm.plugins as vplugins
+from importlib.metadata import entry_points
+
+print("VLLM_PLUGINS repr =", repr(envs.VLLM_PLUGINS))
+for group in ("vllm.general_plugins", "vllm.platform_plugins", "vllm.io_processor_plugins"):
+    eps = list(entry_points(group=group))
+    print(f"group {group}: {[(e.name, e.value) for e in eps]}")
+allowed = envs.VLLM_PLUGINS
+eps = list(entry_points(group="vllm.general_plugins"))
+print("general plugins that pass the allowlist:", [e.name for e in eps if allowed is None or e.name in allowed])
+loaded = vplugins.load_plugins_by_group("vllm.general_plugins")
+print("load_plugins_by_group('vllm.general_plugins') ->", sorted(loaded))
+# ---- STDOUT ----
+INFO 09-23 17:45:26 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-23 17:45:26 [__init__.py:54] - ascend -> vllm_ascend:register
+WARNING:triton.tools.get_ascend_devices:can not use command: npu-smi info
+VLLM_PLUGINS repr = ['']
+group vllm.general_plugins: [('msserviceprofiler', 'ms_service_profiler.patcher.vllm:register_service_profiler'), ('arctic_inference', 'arctic_inference.vllm.plugin:arctic_inference_plugin'), ('ascend_kv_connector', 'vllm_ascend:register_connector'), ('ascend_model', 'vllm_ascend:register_model'), ('ascend_model_loader', 'vllm_ascend:register_model_loader'), ('ascend_service_profiling', 'vllm_ascend:register_service_profiling'), ('lora_filesystem_resolver', 'vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver'), ('lora_hf_hub_resolver', 'vllm.plugins.lora_resolvers.hf_hub_resolver:register_hf_hub_resolver')]
+group vllm.platform_plugins: [('ascend', 'vllm_ascend:register')]
+group vllm.io_processor_plugins: []
+general plugins that pass the allowlist: []
+load_plugins_by_group('vllm.general_plugins') -> []
+
+# ---- STDERR ----
+
+# ---- END ----

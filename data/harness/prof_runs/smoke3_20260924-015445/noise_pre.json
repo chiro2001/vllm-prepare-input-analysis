@@ -1,0 +1,115 @@
+{
+  "caliber_version": "prof-v1",
+  "ts_start": "2026-09-24T01:54:51+0800",
+  "cpus": [
+    204,
+    206,
+    210,
+    212
+  ],
+  "window_s": 5.0,
+  "busy_pct": {
+    "204": 0.41,
+    "206": 0.2,
+    "210": 0.4,
+    "212": 0.0
+  },
+  "busy_pct_max": 0.41,
+  "busy_threshold_pct": 5.0,
+  "hot_cpus": {},
+  "loadavg": [
+    "48.05",
+    "47.58",
+    "48.65"
+  ],
+  "load1_per_cpu": 0.075,
+  "load_threshold_per_cpu": 0.5,
+  "top_procs": [
+    {
+      "pid": 1022870,
+      "user": "OTHER_USER",
+      "pcpu": 180.0,
+      "pmem": 0.3,
+      "comm": "python"
+    },
+    {
+      "pid": 1015672,
+      "user": "OTHER_USER",
+      "pcpu": 179.0,
+      "pmem": 0.3,
+      "comm": "python"
+    },
+    {
+      "pid": 1021396,
+      "user": "OTHER_USER",
+      "pcpu": 178.0,
+      "pmem": 0.4,
+      "comm": "python"
+    },
+    {
+      "pid": 1017086,
+      "user": "OTHER_USER",
+      "pcpu": 178.0,
+      "pmem": 0.4,
+      "comm": "python"
+    },
+    {
+      "pid": 1022811,
+      "user": "OTHER_USER",
+      "pcpu": 178.0,
+      "pmem": 0.4,
+      "comm": "python"
+    },
+    {
+      "pid": 1017036,
+      "user": "OTHER_USER",
+      "pcpu": 178.0,
+      "pmem": 0.4,
+      "comm": "python"
+    },
+    {
+      "pid": 1018517,
+      "user": "OTHER_USER",
+      "pcpu": 177.0,
+      "pmem": 0.5,
+      "comm": "python"
+    },
+    {
+      "pid": 1012923,
+      "user": "OTHER_USER",
+      "pcpu": 177.0,
+      "pmem": 0.5,
+      "comm": "python"
+    },
+    {
+      "pid": 1014184,
+      "user": "OTHER_USER",
+      "pcpu": 176.0,
+      "pmem": 0.3,
+      "comm": "python"
+    },
+    {
+      "pid": 1020065,
+      "user": "OTHER_USER",
+      "pcpu": 174.0,
+      "pmem": 0.3,
+      "comm": "python"
+    },
+    {
+      "pid": 1012954,
+      "user": "OTHER_USER",
+      "pcpu": 174.0,
+      "pmem": 0.5,
+      "comm": "python"
+    },
+    {
+      "pid": 1018573,
+      "user": "OTHER_USER",
+      "pcpu": 174.0,
+      "pmem": 0.5,
+      "comm": "python"
+    }
+  ],
+  "ok": true,
+  "ts_end": "2026-09-24T01:54:51+0800"
+}

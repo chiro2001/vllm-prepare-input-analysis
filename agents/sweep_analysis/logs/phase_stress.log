@@ -1,0 +1,34 @@
+[pgrid] stress isl=64 rep=0 pi_net_p50=  380.9 (raw   381.4, triton    0.5) us_p50=  67.6 scope_net=  448.5 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=37.0s
+[pgrid] stress isl=128 rep=0 pi_net_p50=  390.2 (raw   390.8, triton    0.6) us_p50=  68.5 scope_net=  459.8 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress isl=256 rep=0 pi_net_p50=  392.2 (raw   392.8, triton    0.6) us_p50=  69.4 scope_net=  461.4 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress isl=512 rep=0 pi_net_p50=  398.1 (raw   398.7, triton    0.6) us_p50=  70.6 scope_net=  468.6 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress isl=1024 rep=0 pi_net_p50=  397.2 (raw   397.7, triton    0.6) us_p50=  69.8 scope_net=  467.2 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress isl=2048 rep=0 pi_net_p50=  399.5 (raw   400.0, triton    0.6) us_p50=  70.9 scope_net=  470.3 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress batch=1 rep=0 pi_net_p50=  374.6 (raw   375.2, triton    0.5) us_p50=  19.4 scope_net=  394.5 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=1 wall=0.0s
+[pgrid] stress batch=2 rep=0 pi_net_p50=  376.9 (raw   377.5, triton    0.6) us_p50=  21.7 scope_net=  398.8 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=2 wall=0.0s
+[pgrid] stress batch=4 rep=0 pi_net_p50=  379.9 (raw   380.6, triton    0.6) us_p50=  25.1 scope_net=  405.3 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=4 wall=0.1s
+[pgrid] stress batch=8 rep=0 pi_net_p50=  383.5 (raw   384.1, triton    0.6) us_p50=  31.6 scope_net=  415.3 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=8 wall=0.1s
+[pgrid] stress batch=16 rep=0 pi_net_p50=  394.5 (raw   395.0, triton    0.6) us_p50=  44.4 scope_net=  438.9 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=16 wall=0.1s
+[pgrid] stress batch=32 rep=0 pi_net_p50=  401.9 (raw   402.4, triton    0.6) us_p50=  71.5 scope_net=  474.2 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress batch=64 rep=0 pi_net_p50=  422.0 (raw   422.7, triton    0.7) us_p50= 122.2 scope_net=  544.9 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=64 wall=0.3s
+[pgrid] stress chunk_size=128 rep=0 pi_net_p50=  402.0 (raw   402.5, triton    0.6) us_p50=  71.7 scope_net=  474.3 steps=80 pref=13/dec=67 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress chunk_size=256 rep=0 pi_net_p50=  385.1 (raw   385.6, triton    0.5) us_p50=  67.2 scope_net=  452.8 steps=80 pref=5/dec=75 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress chunk_size=512 rep=0 pi_net_p50=  391.1 (raw   391.6, triton    0.6) us_p50=  69.5 scope_net=  461.1 steps=80 pref=1/dec=79 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress chunk_size=1024 rep=0 pi_net_p50=  394.5 (raw   395.1, triton    0.6) us_p50=  69.5 scope_net=  464.5 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress chunk_size=2048 rep=0 pi_net_p50=  396.2 (raw   396.8, triton    0.6) us_p50=  69.9 scope_net=  466.4 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress chunk_size=8192 rep=0 pi_net_p50=  395.8 (raw   396.3, triton    0.6) us_p50=  70.0 scope_net=  466.5 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress block_size=32 rep=0 pi_net_p50=  389.9 (raw   390.4, triton    0.5) us_p50=  66.8 scope_net=  456.8 steps=80 pref=0/dec=80 MML=32768 blk/req=1024 tok/step=32 wall=0.1s
+[pgrid] stress block_size=64 rep=0 pi_net_p50=  391.8 (raw   392.3, triton    0.5) us_p50=  68.8 scope_net=  461.1 steps=80 pref=0/dec=80 MML=32768 blk/req=512 tok/step=32 wall=0.1s
+[pgrid] stress block_size=128 rep=0 pi_net_p50=  392.8 (raw   393.4, triton    0.6) us_p50=  69.6 scope_net=  463.3 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress block_size=256 rep=0 pi_net_p50=  392.0 (raw   392.5, triton    0.6) us_p50=  70.3 scope_net=  462.8 steps=80 pref=0/dec=80 MML=32768 blk/req=128 tok/step=32 wall=0.1s
+[pgrid] stress spec_k=0 rep=0 pi_net_p50=  398.8 (raw   399.3, triton    0.6) us_p50=  71.4 scope_net=  470.1 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress spec_k=1 rep=0 pi_net_p50=  558.2 (raw   558.7, triton    0.5) us_p50= 226.1 scope_net=  785.9 steps=66 pref=0/dec=66 MML=32768 blk/req=256 tok/step=64 wall=0.2s
+[pgrid] stress spec_k=2 rep=0 pi_net_p50=  578.9 (raw   579.5, triton    0.6) us_p50= 232.2 scope_net=  813.9 steps=45 pref=0/dec=45 MML=32768 blk/req=256 tok/step=96 wall=0.1s
+[pgrid] stress spec_k=3 rep=0 pi_net_p50=  555.4 (raw   556.0, triton    0.6) us_p50= 229.1 scope_net=  790.4 steps=34 pref=0/dec=34 MML=32768 blk/req=256 tok/step=128 wall=0.1s
+[pgrid] stress prefix_hit_ratio=0.0 rep=0 pi_net_p50=  411.9 (raw   412.4, triton    0.5) us_p50=  69.1 scope_net=  481.8 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress prefix_hit_ratio=0.25 rep=0 pi_net_p50=  410.4 (raw   411.0, triton    0.5) us_p50=  69.2 scope_net=  480.5 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress prefix_hit_ratio=0.5 rep=0 pi_net_p50=  417.9 (raw   418.4, triton    0.5) us_p50=  69.5 scope_net=  488.3 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress prefix_hit_ratio=0.75 rep=0 pi_net_p50=  406.3 (raw   406.8, triton    0.5) us_p50=  68.8 scope_net=  476.6 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] stress prefix_hit_ratio=1.0 rep=0 pi_net_p50=  400.1 (raw   400.7, triton    0.5) us_p50=  69.1 scope_net=  469.2 steps=80 pref=0/dec=80 MML=32768 blk/req=256 tok/step=32 wall=0.1s
+[pgrid] wrote /work/data/harness/sweep_stress_stress_20260923-191424.csv (32 rows)
+[run] phase phase_stress done

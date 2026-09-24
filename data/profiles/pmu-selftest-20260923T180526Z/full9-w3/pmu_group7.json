@@ -1,0 +1,30 @@
+{
+  "count": 8,
+  "entries": [
+    {"name":"LD_CANCEL_INST_TYPE","id":"ld_cancel_inst_type","config":"0x5093","delta":10440,"rate":3479.906576},
+    {"name":"LD_CANCEL_FWD_HZD","id":"ld_cancel_fwd_hzd","config":"0x5094","delta":256539,"rate":85510.704323},
+    {"name":"LD_CANCEL_STRUCT_HZD","id":"ld_cancel_struct_hzd","config":"0x5095","delta":303555,"rate":101182.283593},
+    {"name":"LD_CANCEL_PIPELINE","id":"ld_cancel_pipeline","config":"0x5096","delta":61958,"rate":20652.112226},
+    {"name":"L2_BOUND_BUF","id":"l2_bound_buf","config":"0x701e","delta":1112,"rate":370.656716},
+    {"name":"L2_BOUND_SNP","id":"l2_bound_snp","config":"0x701f","delta":13793446,"rate":4597691.900631},
+    {"name":"L2_BOUND_ARB","id":"l2_bound_arb","config":"0x7020","delta":25210491,"rate":8403271.400174},
+    {"name":"DRAM_LOCAL","id":"dram_local","config":"0x7021","delta":0,"rate":0.000000}
+  ],
+  "time_enabled": 3000080540,
+  "time_running": 3000080540,
+  "confidence": 1.000000,
+  "sampled": false,
+  "sample_count": 0,
+  "lost_samples": 0,
+  "gated": false,
+  "iter_gated": false,
+  "iter_start_at": 0,
+  "iter_end_at": 0,
+  "iter_start_seen": 0,
+  "iter_end_seen": 0,
+  "roi_start_seen": 0,
+  "roi_end_seen": 0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B"
+}

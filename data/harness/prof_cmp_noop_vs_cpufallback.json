@@ -1,0 +1,164 @@
+{
+  "caliber_version": "prof-v1",
+  "a": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_realmachine_20260924-031609/summary.json",
+  "b": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_cpufallback_20260924-033625/summary.json",
+  "hotspots": {
+    "n": 20,
+    "a_tag": "prof_realmachine",
+    "b_tag": "prof_cpufallback",
+    "a_top": [
+      "_PyEval_EvalFrameDefault",
+      "_PyObject_Malloc",
+      "unicodekeys_lookup_unicode",
+      "_PyType_Lookup",
+      "_PyObject_Free",
+      "pthread_mutex_lock",
+      "_PyObject_GenericGetAttrWithDict",
+      "tupledealloc",
+      "PyType_IsSubtype",
+      "_Py_dict_lookup",
+      "c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const",
+      "0x0000000000083e78",
+      "malloc",
+      "tuple_alloc",
+      "_PyFrame_ClearExceptCode",
+      "0x00000000000127a0",
+      "torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)",
+      "torch::autograd::THPVariable_getitem(_object*, _object*)",
+      "initialize_locals",
+      "0x0000000000083e70"
+    ],
+    "b_top": [
+      "_PyEval_EvalFrameDefault",
+      "_PyObject_Malloc",
+      "pthread_mutex_lock",
+      "_PyType_Lookup",
+      "unicodekeys_lookup_unicode",
+      "_PyObject_Free",
+      "_PyObject_GenericGetAttrWithDict",
+      "tupledealloc",
+      "malloc",
+      "ufunc_generic_fastcall",
+      "c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const",
+      "PyType_IsSubtype",
+      "_Py_dict_lookup",
+      "tuple_alloc",
+      "_PyFrame_ClearExceptCode",
+      "0x0000000000083e78",
+      "torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)",
+      "at::_ops::as_strided::call(at::Tensor const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, std::optional<c10::SymInt>)",
+      "at::native::as_strided_tensorimpl(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, std::optional<long>)",
+      "torch::FunctionSignature::parse(_object*, _object*, _object*, _object**, std::vector<_object*, std::allocator<_object*> >&, bool)"
+    ],
+    "intersection": [
+      "_PyEval_EvalFrameDefault",
+      "_PyObject_Malloc",
+      "unicodekeys_lookup_unicode",
+      "_PyType_Lookup",
+      "_PyObject_Free",
+      "pthread_mutex_lock",
+      "_PyObject_GenericGetAttrWithDict",
+      "tupledealloc",
+      "PyType_IsSubtype",
+      "_Py_dict_lookup",
+      "c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const",
+      "0x0000000000083e78",
+      "tuple_alloc",
+      "malloc",
+      "_PyFrame_ClearExceptCode",
+      "torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)"
+    ],
+    "overlap_ratio": 0.8,
+    "only_a": [
+      "0x00000000000127a0",
+      "torch::autograd::THPVariable_getitem(_object*, _object*)",
+      "initialize_locals",
+      "0x0000000000083e70"
+    ],
+    "only_b": [
+      "ufunc_generic_fastcall",
+      "at::_ops::as_strided::call(at::Tensor const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, std::optional<c10::SymInt>)",
+      "at::native::as_strided_tensorimpl(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, std::optional<long>)",
+      "torch::FunctionSignature::parse(_object*, _object*, _object*, _object**, std::vector<_object*, std::allocator<_object*> >&, bool)"
+    ],
+    "shared_pct": {
+      "_PyEval_EvalFrameDefault": {
+        "a": 11.43,
+        "b": 9.8
+      },
+      "_PyObject_Malloc": {
+        "a": 1.63,
+        "b": 1.51
+      },
+      "unicodekeys_lookup_unicode": {
+        "a": 1.38,
+        "b": 1.05
+      },
+      "_PyType_Lookup": {
+        "a": 1.37,
+        "b": 1.06
+      },
+      "_PyObject_Free": {
+        "a": 1.23,
+        "b": 1.02
+      },
+      "pthread_mutex_lock": {
+        "a": 1.12,
+        "b": 1.11
+      },
+      "_PyObject_GenericGetAttrWithDict": {
+        "a": 0.9,
+        "b": 0.93
+      },
+      "tupledealloc": {
+        "a": 0.82,
+        "b": 0.81
+      },
+      "PyType_IsSubtype": {
+        "a": 0.79,
+        "b": 0.72
+      },
+      "_Py_dict_lookup": {
+        "a": 0.76,
+        "b": 0.68
+      },
+      "c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const": {
+        "a": 0.71,
+        "b": 0.73
+      },
+      "0x0000000000083e78": {
+        "a": 0.68,
+        "b": 0.57
+      },
+      "tuple_alloc": {
+        "a": 0.64,
+        "b": 0.58
+      },
+      "malloc": {
+        "a": 0.64,
+        "b": 0.8
+      },
+      "_PyFrame_ClearExceptCode": {
+        "a": 0.59,
+        "b": 0.58
+      },
+      "torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)": {
+        "a": 0.54,
+        "b": 0.54
+      }
+    }
+  },
+  "topdown_level1": {
+    "a": {
+      "retiring": 15.936663948178559,
+      "bad_spec": 8.14306205796743,
+      "frontend_bound": 72.1098021994206,
+      "backend_bound": 3.810471794433411
+    },
+    "b": null
+  },
+  "ipc": {
+    "a": 0.9488826385094149,
+    "b": 0.8066317967810153
+  }
+}

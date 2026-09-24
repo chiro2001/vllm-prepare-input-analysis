@@ -1,0 +1,3447 @@
+def MetaNative.__init__(self, num_reqs, num_actual_tokens, max_query_len, query_start_loc, seq_lens, block_table, slot_mapping, spec_decode, num_decode_tokens, num_prefill_tokens, num_computed_tokens, seq_lens_np, max_seq_len, kv_cache_dtype, block_size, num_kv_heads, head_size, causal, sliding_window, token_ids, positions, workspace):
+    self :: mypyc_variant.MetaNative
+    num_reqs, num_actual_tokens, max_query_len :: int
+    query_start_loc, seq_lens, block_table, slot_mapping :: object
+    spec_decode :: bool
+    num_decode_tokens, num_prefill_tokens :: int
+    num_computed_tokens, seq_lens_np :: object
+    max_seq_len :: int
+    kv_cache_dtype :: str
+    block_size, num_kv_heads, head_size :: int
+    causal :: bool
+    sliding_window :: int
+    token_ids, positions, workspace :: object
+L0:
+    inc_ref num_reqs :: int
+    self.num_reqs = num_reqs
+    inc_ref num_actual_tokens :: int
+    self.num_actual_tokens = num_actual_tokens
+    inc_ref max_query_len :: int
+    self.max_query_len = max_query_len
+    inc_ref query_start_loc
+    self.query_start_loc = query_start_loc
+    inc_ref seq_lens
+    self.seq_lens = seq_lens
+    inc_ref block_table
+    self.block_table = block_table
+    inc_ref slot_mapping
+    self.slot_mapping = slot_mapping
+    self.spec_decode = spec_decode
+    inc_ref num_decode_tokens :: int
+    self.num_decode_tokens = num_decode_tokens
+    inc_ref num_prefill_tokens :: int
+    self.num_prefill_tokens = num_prefill_tokens
+    inc_ref num_computed_tokens
+    self.num_computed_tokens = num_computed_tokens
+    inc_ref seq_lens_np
+    self.seq_lens_np = seq_lens_np
+    inc_ref max_seq_len :: int
+    self.max_seq_len = max_seq_len
+    inc_ref kv_cache_dtype
+    self.kv_cache_dtype = kv_cache_dtype
+    inc_ref block_size :: int
+    self.block_size = block_size
+    inc_ref num_kv_heads :: int
+    self.num_kv_heads = num_kv_heads
+    inc_ref head_size :: int
+    self.head_size = head_size
+    self.causal = causal
+    inc_ref sliding_window :: int
+    self.sliding_window = sliding_window
+    inc_ref token_ids
+    self.token_ids = token_ids
+    inc_ref positions
+    self.positions = positions
+    inc_ref workspace
+    self.workspace = workspace
+    return 1
+
+def _kwargs(inp):
+    inp, r0 :: dict
+    r1 :: str
+    r2 :: object
+    r3 :: list
+    r4 :: ptr
+    r5 :: native_int
+    r6 :: list
+    r7 :: native_int
+    r8 :: ptr
+    r9 :: native_int
+    r10 :: bit
+    r11, r12 :: ptr
+    r13 :: native_int
+    r14 :: ptr
+    r15 :: object
+    r16 :: str
+    r17 :: object
+    r18 :: native_int
+    r19 :: list
+L0:
+    r0 = mypyc_variant.globals :: static
+    r1 = 'FIELDS'
+    r2 = CPyDict_GetItem(r0, r1)
+    if is_error(r2) goto L10 (error at _kwargs:110) else goto L1
+L1:
+    r3 = cast(list, r2)
+    if is_error(r3) goto L10 (error at _kwargs:110) else goto L2
+L2:
+    r4 = get_element_ptr r3 ob_size :: PyVarObject
+    r5 = load_mem r4 :: native_int*
+    r6 = PyList_New(r5)
+    if is_error(r6) goto L11 (error at _kwargs:110) else goto L3
+L3:
+    r7 = 0
+L4:
+    r8 = get_element_ptr r3 ob_size :: PyVarObject
+    r9 = load_mem r8 :: native_int*
+    r10 = r7 < r9 :: signed
+    if r10 goto L5 else goto L12 :: bool
+L5:
+    r11 = get_element_ptr r3 ob_item :: PyListObject
+    r12 = load_mem r11 :: ptr*
+    r13 = r7 * 8
+    r14 = r12 + r13
+    r15 = load_mem r14 :: builtins.object*
+    r16 = cast(str, r15)
+    if is_error(r16) goto L13 (error at _kwargs:110) else goto L6
+L6:
+    r17 = CPyDict_GetItem(inp, r16)
+    dec_ref r16
+    if is_error(r17) goto L13 (error at _kwargs:110) else goto L7
+L7:
+    CPyList_SetItemUnsafe(r6, r7, r17)
+L8:
+    r18 = r7 + 1
+    r7 = r18
+    goto L4
+L9:
+    return r6
+L10:
+    r19 = <error> :: list
+    return r19
+L11:
+    dec_ref r3
+    goto L10
+L12:
+    dec_ref r3
+    goto L9
+L13:
+    dec_ref r3
+    dec_ref r6
+    goto L10
+
+def small_ops(inp, mode):
+    inp :: dict
+    mode, r0, r1 :: str
+    r2 :: bool
+    r3 :: tuple[int, int, float, int, float, float, bool, int]
+    r4 :: object
+    r5 :: str
+    r6, r7 :: object
+    r8 :: str
+    r9 :: object
+    r10 :: object[1]
+    r11 :: object_ptr
+    r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24 :: object
+    r25 :: str
+    r26, r27 :: object
+    r28 :: str
+    r29, r30 :: object
+    r31 :: object[2]
+    r32 :: object_ptr
+    r33, r34, r35 :: object
+    r36 :: str
+    r37, r38 :: object
+    r39 :: str
+    r40, r41 :: object
+    r42 :: object[2]
+    r43 :: object_ptr
+    r44, r45, r46, r47, r48 :: object
+    r49 :: object[1]
+    r50 :: object_ptr
+    r51 :: object
+    r52 :: float
+    r53 :: bit
+    r54 :: str
+    r55 :: bool
+    r56, r57 :: object
+    r58 :: str
+    r59 :: object
+    r60 :: object[1]
+    r61 :: object_ptr
+    r62, t, r63, r64, t2 :: object
+    r65 :: str
+    r66 :: object[1]
+    r67 :: object_ptr
+    r68, r69 :: object
+    r70 :: object[1]
+    r71 :: object_ptr
+    r72 :: object
+    r73 :: float
+    r74 :: bit
+    s :: float
+    r75 :: object
+    r76 :: str
+    r77, r78, r79 :: object
+    r80 :: str
+    r81, r82 :: object
+    r83 :: object[2]
+    r84 :: object_ptr
+    r85, r86, ar :: object
+    r87 :: str
+    r88 :: object[1]
+    r89 :: object_ptr
+    r90, cl, r91 :: object
+    r92 :: str
+    r93, r94 :: object
+    r95 :: object[2]
+    r96 :: object_ptr
+    r97, r98, cs, r99 :: object
+    r100 :: str
+    r101, r102 :: object
+    r103 :: str
+    r104, r105 :: object
+    r106 :: object[2]
+    r107 :: object_ptr
+    r108, r109, fz :: object
+    r110 :: str
+    r111, r112, r113, r114, r115, r116, ws, r117, r118, r119 :: object
+    r120 :: object[1]
+    r121 :: object_ptr
+    r122 :: object
+    r123 :: int
+    r124 :: str
+    r125 :: object[1]
+    r126 :: object_ptr
+    r127, r128 :: object
+    r129 :: object[1]
+    r130 :: object_ptr
+    r131 :: object
+    r132 :: int
+    r133 :: str
+    r134 :: object[1]
+    r135 :: object_ptr
+    r136, r137 :: object
+    r138 :: object[1]
+    r139 :: object_ptr
+    r140 :: object
+    r141 :: float
+    r142 :: bit
+    r143, r144, r145, r146 :: object
+    r147 :: object[1]
+    r148 :: object_ptr
+    r149 :: object
+    r150 :: int
+    r151 :: float
+    r152, r153 :: object
+    r154 :: str
+    r155 :: object[1]
+    r156 :: object_ptr
+    r157 :: object
+    r158 :: i32
+    r159 :: bit
+    r160 :: bool
+    r161, r162, r163 :: object
+    r164 :: object[1]
+    r165 :: object_ptr
+    r166 :: object
+    r167 :: int
+    r168, r169, r170 :: object
+    r171 :: object[1]
+    r172 :: object_ptr
+    r173 :: object
+    r174, r175 :: int
+    r176 :: str
+    r177 :: object[1]
+    r178 :: object_ptr
+    r179, r180 :: object
+    r181 :: object[1]
+    r182 :: object_ptr
+    r183 :: object
+    r184, r185 :: int
+    r186 :: str
+    r187, r188, r189, r190 :: object
+    r191 :: object[1]
+    r192 :: object_ptr
+    r193 :: object
+    r194, r195 :: int
+    r196 :: str
+    r197, r198, r199, r200 :: object
+    r201 :: object[1]
+    r202 :: object_ptr
+    r203 :: object
+    r204, r205 :: int
+    r206 :: tuple[int, int, float, int, float, float, bool, int]
+    r207, r208 :: object
+    r209 :: str
+    r210 :: object
+    r211 :: object[1]
+    r212 :: object_ptr
+    r213 :: object
+    r214 :: str
+    r215 :: object
+    r216 :: object[2]
+    r217 :: object_ptr
+    r218 :: object
+    r219 :: str
+    r220 :: object[1]
+    r221 :: object_ptr
+    r222, r223 :: object
+    r224 :: object[1]
+    r225 :: object_ptr
+    r226 :: object
+    r227 :: float
+    r228 :: bit
+    r229 :: object
+    r230 :: str
+    r231, r232, r233 :: object
+    r234 :: str
+    r235, r236 :: object
+    r237 :: object[2]
+    r238 :: object_ptr
+    r239, r240 :: object
+    r241 :: str
+    r242 :: object[1]
+    r243 :: object_ptr
+    r244, r245 :: object
+    r246 :: str
+    r247, r248 :: object
+    r249 :: object[2]
+    r250 :: object_ptr
+    r251, r252 :: object
+    r253 :: str
+    r254, r255 :: object
+    r256 :: str
+    r257, r258 :: object
+    r259 :: object[2]
+    r260 :: object_ptr
+    r261, r262 :: object
+    r263 :: str
+    r264, r265, r266, r267, r268, r269, r270, r271, r272 :: object
+    r273 :: object[1]
+    r274 :: object_ptr
+    r275 :: object
+    r276 :: int
+    r277 :: str
+    r278 :: object[1]
+    r279 :: object_ptr
+    r280, r281 :: object
+    r282 :: object[1]
+    r283 :: object_ptr
+    r284 :: object
+    r285 :: int
+    r286 :: str
+    r287 :: object[1]
+    r288 :: object_ptr
+    r289, r290 :: object
+    r291 :: object[1]
+    r292 :: object_ptr
+    r293 :: object
+    r294 :: float
+    r295 :: bit
+    r296, r297, r298, r299 :: object
+    r300 :: object[1]
+    r301 :: object_ptr
+    r302 :: object
+    r303 :: int
+    r304 :: float
+    r305, r306 :: object
+    r307 :: str
+    r308 :: object[1]
+    r309 :: object_ptr
+    r310 :: object
+    r311 :: i32
+    r312 :: bit
+    r313 :: bool
+    r314, r315, r316 :: object
+    r317 :: object[1]
+    r318 :: object_ptr
+    r319 :: object
+    r320 :: int
+    r321, r322, r323 :: object
+    r324 :: object[1]
+    r325 :: object_ptr
+    r326 :: object
+    r327, r328 :: int
+    r329 :: str
+    r330 :: object[1]
+    r331 :: object_ptr
+    r332, r333 :: object
+    r334 :: object[1]
+    r335 :: object_ptr
+    r336 :: object
+    r337, r338 :: int
+    r339 :: str
+    r340, r341, r342, r343 :: object
+    r344 :: object[1]
+    r345 :: object_ptr
+    r346 :: object
+    r347, r348 :: int
+    r349 :: str
+    r350, r351, r352, r353 :: object
+    r354 :: object[1]
+    r355 :: object_ptr
+    r356 :: object
+    r357, r358 :: int
+    r359 :: tuple[int, int, float, int, float, float, bool, int]
+    r360 :: object
+    r361 :: tuple
+L0:
+    if is_error(mode) goto L1 else goto L130
+L1:
+    r0 = 'torch'
+    inc_ref r0
+    mode = r0
+L2:
+    r1 = 'none'
+    r2 = CPyStr_EqualLiteral(mode, r1, 4)
+    if r2 goto L131 else goto L4 :: bool
+L3:
+    r3 = (0, 0, 0.0, 0, 0.0, 0.0, 1, 0)
+    r4 = box(tuple[int, int, float, int, float, float, bool, int], r3)
+    return r4
+L4:
+    r5 = 'seq_lens_np'
+    r6 = CPyDict_GetItem(inp, r5)
+    if is_error(r6) goto L132 (error at small_ops:116) else goto L5
+L5:
+    r7 = numpy :: module
+    r8 = 'cumsum'
+    r9 = CPyObject_GetAttr(r7, r8)
+    if is_error(r9) goto L133 (error at small_ops:117) else goto L6
+L6:
+    r10 = [r6]
+    r11 = load_address r10
+    r12 = PyObject_Vectorcall(r9, r11, 1, 0)
+    dec_ref r9
+    if is_error(r12) goto L133 (error at small_ops:117) else goto L7
+L7:
+    r13 = load_address _Py_NoneStruct
+    r14 = load_address _Py_NoneStruct
+    r15 = object 1
+    r16 = PySlice_New(r15, r13, r14)
+    if is_error(r16) goto L134 (error at small_ops:118) else goto L8
+L8:
+    r17 = PyObject_GetItem(r6, r16)
+    dec_ref r16
+    if is_error(r17) goto L134 (error at small_ops:118) else goto L9
+L9:
+    r18 = load_address _Py_NoneStruct
+    r19 = load_address _Py_NoneStruct
+    r20 = object -1
+    r21 = PySlice_New(r18, r20, r19)
+    if is_error(r21) goto L135 (error at small_ops:118) else goto L10
+L10:
+    r22 = PyObject_GetItem(r6, r21)
+    dec_ref r21
+    if is_error(r22) goto L135 (error at small_ops:118) else goto L11
+L11:
+    r23 = PyNumber_Subtract(r17, r22)
+    dec_ref r17
+    dec_ref r22
+    if is_error(r23) goto L134 (error at small_ops:118) else goto L12
+L12:
+    r24 = numpy :: module
+    r25 = 'int64'
+    r26 = CPyObject_GetAttr(r24, r25)
+    if is_error(r26) goto L136 (error at small_ops:119) else goto L13
+L13:
+    r27 = numpy :: module
+    r28 = 'zeros'
+    r29 = CPyObject_GetAttr(r27, r28)
+    if is_error(r29) goto L137 (error at small_ops:119) else goto L14
+L14:
+    r30 = object 1
+    r31 = [r30, r26]
+    r32 = load_address r31
+    r33 = ('dtype',)
+    r34 = PyObject_Vectorcall(r29, r32, 1, r33)
+    dec_ref r29
+    if is_error(r34) goto L137 (error at small_ops:119) else goto L15
+L15:
+    dec_ref r26
+    r35 = numpy :: module
+    r36 = 'int32'
+    r37 = CPyObject_GetAttr(r35, r36)
+    if is_error(r37) goto L138 (error at small_ops:120) else goto L16
+L16:
+    r38 = numpy :: module
+    r39 = 'arange'
+    r40 = CPyObject_GetAttr(r38, r39)
+    if is_error(r40) goto L139 (error at small_ops:120) else goto L17
+L17:
+    r41 = object 1
+    r42 = [r41, r37]
+    r43 = load_address r42
+    r44 = ('dtype',)
+    r45 = PyObject_Vectorcall(r40, r43, 1, r44)
+    dec_ref r40
+    if is_error(r45) goto L139 (error at small_ops:120) else goto L18
+L18:
+    dec_ref r37
+    r46 = object -1
+    r47 = PyObject_GetItem(r6, r46)
+    if is_error(r47) goto L140 (error at small_ops:121) else goto L19
+L19:
+    r48 = load_address PyFloat_Type
+    r49 = [r47]
+    r50 = load_address r49
+    r51 = PyObject_Vectorcall(r48, r50, 1, 0)
+    if is_error(r51) goto L141 (error at small_ops:121) else goto L20
+L20:
+    dec_ref r47
+    r52 = unbox(float, r51)
+    dec_ref r51
+    r53 = r52 == -113.0
+    if r53 goto L22 else goto L21 :: bool
+L21:
+    r54 = 'numpy'
+    r55 = CPyStr_EqualLiteral(mode, r54, 5)
+    dec_ref mode
+    if r55 goto L23 else goto L76 :: bool
+L22:
+    r56 = PyErr_Occurred()
+    if not is_error(r56) goto L140 (error at small_ops:121) else goto L21
+L23:
+    r57 = numpy :: module
+    r58 = 'asarray'
+    r59 = CPyObject_GetAttr(r57, r58)
+    if is_error(r59) goto L142 (error at small_ops:123) else goto L24
+L24:
+    r60 = [r6]
+    r61 = load_address r60
+    r62 = PyObject_Vectorcall(r59, r61, 1, 0)
+    dec_ref r59
+    if is_error(r62) goto L142 (error at small_ops:123) else goto L25
+L25:
+    dec_ref r6
+    t = r62
+    r63 = object 2
+    r64 = PyNumber_Multiply(t, r63)
+    if is_error(r64) goto L143 (error at small_ops:124) else goto L26
+L26:
+    t2 = r64
+    r65 = 'sum'
+    r66 = [t2]
+    r67 = load_address r66
+    r68 = PyObject_VectorcallMethod(r65, r67, 9223372036854775809, 0)
+    if is_error(r68) goto L144 (error at small_ops:125) else goto L27
+L27:
+    dec_ref t2
+    r69 = load_address PyFloat_Type
+    r70 = [r68]
+    r71 = load_address r70
+    r72 = PyObject_Vectorcall(r69, r71, 1, 0)
+    if is_error(r72) goto L145 (error at small_ops:125) else goto L28
+L28:
+    dec_ref r68
+    r73 = unbox(float, r72)
+    dec_ref r72
+    r74 = r73 == -113.0
+    if r74 goto L30 else goto L29 :: bool
+L29:
+    s = r73
+    r75 = numpy :: module
+    r76 = 'int32'
+    r77 = CPyObject_GetAttr(r75, r76)
+    if is_error(r77) goto L143 (error at small_ops:126) else goto L31
+L30:
+    r78 = PyErr_Occurred()
+    if not is_error(r78) goto L143 (error at small_ops:125) else goto L29
+L31:
+    r79 = numpy :: module
+    r80 = 'arange'
+    r81 = CPyObject_GetAttr(r79, r80)
+    if is_error(r81) goto L146 (error at small_ops:126) else goto L32
+L32:
+    r82 = object 1
+    r83 = [r82, r77]
+    r84 = load_address r83
+    r85 = ('dtype',)
+    r86 = PyObject_Vectorcall(r81, r84, 1, r85)
+    dec_ref r81
+    if is_error(r86) goto L146 (error at small_ops:126) else goto L33
+L33:
+    dec_ref r77
+    ar = r86
+    r87 = 'copy'
+    r88 = [t]
+    r89 = load_address r88
+    r90 = PyObject_VectorcallMethod(r87, r89, 9223372036854775809, 0)
+    if is_error(r90) goto L147 (error at small_ops:127) else goto L34
+L34:
+    cl = r90
+    r91 = numpy :: module
+    r92 = 'cumsum'
+    r93 = CPyObject_GetAttr(r91, r92)
+    if is_error(r93) goto L148 (error at small_ops:128) else goto L35
+L35:
+    r94 = object 0
+    r95 = [t, r94]
+    r96 = load_address r95
+    r97 = ('axis',)
+    r98 = PyObject_Vectorcall(r93, r96, 1, r97)
+    dec_ref r93
+    if is_error(r98) goto L148 (error at small_ops:128) else goto L36
+L36:
+    cs = r98
+    r99 = numpy :: module
+    r100 = 'float32'
+    r101 = CPyObject_GetAttr(r99, r100)
+    if is_error(r101) goto L149 (error at small_ops:129) else goto L37
+L37:
+    r102 = numpy :: module
+    r103 = 'zeros'
+    r104 = CPyObject_GetAttr(r102, r103)
+    if is_error(r104) goto L150 (error at small_ops:129) else goto L38
+L38:
+    r105 = object 1
+    r106 = [r105, r101]
+    r107 = load_address r106
+    r108 = ('dtype',)
+    r109 = PyObject_Vectorcall(r104, r107, 1, r108)
+    dec_ref r104
+    if is_error(r109) goto L150 (error at small_ops:129) else goto L39
+L39:
+    dec_ref r101
+    fz = r109
+    r110 = 'workspace'
+    r111 = CPyDict_GetItem(inp, r110)
+    if is_error(r111) goto L151 (error at small_ops:130) else goto L40
+L40:
+    r112 = load_address _Py_NoneStruct
+    r113 = load_address _Py_NoneStruct
+    r114 = object 2
+    r115 = PySlice_New(r112, r114, r113)
+    if is_error(r115) goto L152 (error at small_ops:130) else goto L41
+L41:
+    r116 = PyObject_GetItem(r111, r115)
+    dec_ref r111
+    dec_ref r115
+    if is_error(r116) goto L151 (error at small_ops:130) else goto L42
+L42:
+    ws = r116
+    r117 = object -1
+    r118 = PyObject_GetItem(r12, r117)
+    dec_ref r12
+    if is_error(r118) goto L153 (error at small_ops:131) else goto L43
+L43:
+    r119 = load_address PyLong_Type
+    r120 = [r118]
+    r121 = load_address r120
+    r122 = PyObject_Vectorcall(r119, r121, 1, 0)
+    if is_error(r122) goto L154 (error at small_ops:131) else goto L44
+L44:
+    dec_ref r118
+    r123 = unbox(int, r122)
+    dec_ref r122
+    if is_error(r123) goto L153 (error at small_ops:131) else goto L45
+L45:
+    r124 = 'sum'
+    r125 = [r23]
+    r126 = load_address r125
+    r127 = PyObject_VectorcallMethod(r124, r126, 9223372036854775809, 0)
+    if is_error(r127) goto L155 (error at small_ops:131) else goto L46
+L46:
+    dec_ref r23
+    r128 = load_address PyLong_Type
+    r129 = [r127]
+    r130 = load_address r129
+    r131 = PyObject_Vectorcall(r128, r130, 1, 0)
+    if is_error(r131) goto L156 (error at small_ops:131) else goto L47
+L47:
+    dec_ref r127
+    r132 = unbox(int, r131)
+    dec_ref r131
+    if is_error(r132) goto L157 (error at small_ops:131) else goto L48
+L48:
+    r133 = 'sum'
+    r134 = [r34]
+    r135 = load_address r134
+    r136 = PyObject_VectorcallMethod(r133, r135, 9223372036854775809, 0)
+    if is_error(r136) goto L158 (error at small_ops:131) else goto L49
+L49:
+    dec_ref r34
+    r137 = load_address PyFloat_Type
+    r138 = [r136]
+    r139 = load_address r138
+    r140 = PyObject_Vectorcall(r137, r139, 1, 0)
+    if is_error(r140) goto L159 (error at small_ops:131) else goto L50
+L50:
+    dec_ref r136
+    r141 = unbox(float, r140)
+    dec_ref r140
+    r142 = r141 == -113.0
+    if r142 goto L52 else goto L51 :: bool
+L51:
+    r143 = object -1
+    r144 = PyObject_GetItem(r45, r143)
+    dec_ref r45
+    if is_error(r144) goto L160 (error at small_ops:131) else goto L53
+L52:
+    r145 = PyErr_Occurred()
+    if not is_error(r145) goto L161 (error at small_ops:131) else goto L51
+L53:
+    r146 = load_address PyLong_Type
+    r147 = [r144]
+    r148 = load_address r147
+    r149 = PyObject_Vectorcall(r146, r148, 1, 0)
+    if is_error(r149) goto L162 (error at small_ops:131) else goto L54
+L54:
+    dec_ref r144
+    r150 = unbox(int, r149)
+    dec_ref r149
+    if is_error(r150) goto L160 (error at small_ops:131) else goto L55
+L55:
+    r151 = s
+    r152 = object 0
+    r153 = PyObject_RichCompare(t, r152, 4)
+    dec_ref t
+    if is_error(r153) goto L163 (error at small_ops:132) else goto L56
+L56:
+    r154 = 'any'
+    r155 = [r153]
+    r156 = load_address r155
+    r157 = PyObject_VectorcallMethod(r154, r156, 9223372036854775809, 0)
+    if is_error(r157) goto L164 (error at small_ops:132) else goto L57
+L57:
+    dec_ref r153
+    r158 = PyObject_IsTrue(r157)
+    dec_ref r157
+    r159 = r158 >= 0 :: signed
+    if not r159 goto L163 (error at small_ops:132) else goto L58 :: bool
+L58:
+    r160 = truncate r158: i32 to builtins.bool
+    r161 = object -1
+    r162 = PyObject_GetItem(cs, r161)
+    dec_ref cs
+    if is_error(r162) goto L165 (error at small_ops:133) else goto L59
+L59:
+    r163 = load_address PyLong_Type
+    r164 = [r162]
+    r165 = load_address r164
+    r166 = PyObject_Vectorcall(r163, r165, 1, 0)
+    if is_error(r166) goto L166 (error at small_ops:133) else goto L60
+L60:
+    dec_ref r162
+    r167 = unbox(int, r166)
+    dec_ref r166
+    if is_error(r167) goto L165 (error at small_ops:133) else goto L61
+L61:
+    r168 = object -1
+    r169 = PyObject_GetItem(ar, r168)
+    dec_ref ar
+    if is_error(r169) goto L167 (error at small_ops:133) else goto L62
+L62:
+    r170 = load_address PyLong_Type
+    r171 = [r169]
+    r172 = load_address r171
+    r173 = PyObject_Vectorcall(r170, r172, 1, 0)
+    if is_error(r173) goto L168 (error at small_ops:133) else goto L63
+L63:
+    dec_ref r169
+    r174 = unbox(int, r173)
+    dec_ref r173
+    if is_error(r174) goto L167 (error at small_ops:133) else goto L64
+L64:
+    r175 = CPyTagged_Add(r167, r174)
+    dec_ref r167 :: int
+    dec_ref r174 :: int
+    r176 = 'max'
+    r177 = [cl]
+    r178 = load_address r177
+    r179 = PyObject_VectorcallMethod(r176, r178, 9223372036854775809, 0)
+    if is_error(r179) goto L169 (error at small_ops:133) else goto L65
+L65:
+    dec_ref cl
+    r180 = load_address PyLong_Type
+    r181 = [r179]
+    r182 = load_address r181
+    r183 = PyObject_Vectorcall(r180, r182, 1, 0)
+    if is_error(r183) goto L170 (error at small_ops:133) else goto L66
+L66:
+    dec_ref r179
+    r184 = unbox(int, r183)
+    dec_ref r183
+    if is_error(r184) goto L171 (error at small_ops:133) else goto L67
+L67:
+    r185 = CPyTagged_Add(r175, r184)
+    dec_ref r175 :: int
+    dec_ref r184 :: int
+    r186 = 'shape'
+    r187 = CPyObject_GetAttr(fz, r186)
+    dec_ref fz
+    if is_error(r187) goto L172 (error at small_ops:133) else goto L68
+L68:
+    r188 = object 0
+    r189 = PyObject_GetItem(r187, r188)
+    dec_ref r187
+    if is_error(r189) goto L172 (error at small_ops:133) else goto L69
+L69:
+    r190 = load_address PyLong_Type
+    r191 = [r189]
+    r192 = load_address r191
+    r193 = PyObject_Vectorcall(r190, r192, 1, 0)
+    if is_error(r193) goto L173 (error at small_ops:133) else goto L70
+L70:
+    dec_ref r189
+    r194 = unbox(int, r193)
+    dec_ref r193
+    if is_error(r194) goto L172 (error at small_ops:133) else goto L71
+L71:
+    r195 = CPyTagged_Add(r185, r194)
+    dec_ref r185 :: int
+    dec_ref r194 :: int
+    r196 = 'shape'
+    r197 = CPyObject_GetAttr(ws, r196)
+    dec_ref ws
+    if is_error(r197) goto L174 (error at small_ops:133) else goto L72
+L72:
+    r198 = object 0
+    r199 = PyObject_GetItem(r197, r198)
+    dec_ref r197
+    if is_error(r199) goto L174 (error at small_ops:133) else goto L73
+L73:
+    r200 = load_address PyLong_Type
+    r201 = [r199]
+    r202 = load_address r201
+    r203 = PyObject_Vectorcall(r200, r202, 1, 0)
+    if is_error(r203) goto L175 (error at small_ops:133) else goto L74
+L74:
+    dec_ref r199
+    r204 = unbox(int, r203)
+    dec_ref r203
+    if is_error(r204) goto L174 (error at small_ops:133) else goto L75
+L75:
+    r205 = CPyTagged_Add(r195, r204)
+    dec_ref r195 :: int
+    dec_ref r204 :: int
+    r206 = (r123, r132, r141, r150, r52, r151, r160, r205)
+    r207 = box(tuple[int, int, float, int, float, float, bool, int], r206)
+    return r207
+L76:
+    r208 = torch :: module
+    r209 = 'from_numpy'
+    r210 = CPyObject_GetAttr(r208, r209)
+    if is_error(r210) goto L142 (error at small_ops:134) else goto L77
+L77:
+    r211 = [r6]
+    r212 = load_address r211
+    r213 = PyObject_Vectorcall(r210, r212, 1, 0)
+    dec_ref r210
+    if is_error(r213) goto L142 (error at small_ops:134) else goto L78
+L78:
+    dec_ref r6
+    t = r213
+    r214 = 'mul'
+    r215 = object 2
+    r216 = [t, r215]
+    r217 = load_address r216
+    r218 = PyObject_VectorcallMethod(r214, r217, 9223372036854775810, 0)
+    if is_error(r218) goto L143 (error at small_ops:135) else goto L79
+L79:
+    t2 = r218
+    r219 = 'sum'
+    r220 = [t2]
+    r221 = load_address r220
+    r222 = PyObject_VectorcallMethod(r219, r221, 9223372036854775809, 0)
+    if is_error(r222) goto L144 (error at small_ops:136) else goto L80
+L80:
+    dec_ref t2
+    r223 = load_address PyFloat_Type
+    r224 = [r222]
+    r225 = load_address r224
+    r226 = PyObject_Vectorcall(r223, r225, 1, 0)
+    if is_error(r226) goto L176 (error at small_ops:136) else goto L81
+L81:
+    dec_ref r222
+    r227 = unbox(float, r226)
+    dec_ref r226
+    r228 = r227 == -113.0
+    if r228 goto L83 else goto L82 :: bool
+L82:
+    s = r227
+    r229 = torch :: module
+    r230 = 'int32'
+    r231 = CPyObject_GetAttr(r229, r230)
+    if is_error(r231) goto L143 (error at small_ops:137) else goto L84
+L83:
+    r232 = PyErr_Occurred()
+    if not is_error(r232) goto L143 (error at small_ops:136) else goto L82
+L84:
+    r233 = torch :: module
+    r234 = 'arange'
+    r235 = CPyObject_GetAttr(r233, r234)
+    if is_error(r235) goto L177 (error at small_ops:137) else goto L85
+L85:
+    r236 = object 1
+    r237 = [r236, r231]
+    r238 = load_address r237
+    r239 = ('dtype',)
+    r240 = PyObject_Vectorcall(r235, r238, 1, r239)
+    dec_ref r235
+    if is_error(r240) goto L177 (error at small_ops:137) else goto L86
+L86:
+    dec_ref r231
+    ar = r240
+    r241 = 'clone'
+    r242 = [t]
+    r243 = load_address r242
+    r244 = PyObject_VectorcallMethod(r241, r243, 9223372036854775809, 0)
+    if is_error(r244) goto L147 (error at small_ops:138) else goto L87
+L87:
+    cl = r244
+    r245 = torch :: module
+    r246 = 'cumsum'
+    r247 = CPyObject_GetAttr(r245, r246)
+    if is_error(r247) goto L148 (error at small_ops:139) else goto L88
+L88:
+    r248 = object 0
+    r249 = [t, r248]
+    r250 = load_address r249
+    r251 = PyObject_Vectorcall(r247, r250, 2, 0)
+    dec_ref r247
+    if is_error(r251) goto L148 (error at small_ops:139) else goto L89
+L89:
+    cs = r251
+    r252 = torch :: module
+    r253 = 'float32'
+    r254 = CPyObject_GetAttr(r252, r253)
+    if is_error(r254) goto L149 (error at small_ops:140) else goto L90
+L90:
+    r255 = torch :: module
+    r256 = 'zeros'
+    r257 = CPyObject_GetAttr(r255, r256)
+    if is_error(r257) goto L178 (error at small_ops:140) else goto L91
+L91:
+    r258 = object 1
+    r259 = [r258, r254]
+    r260 = load_address r259
+    r261 = ('dtype',)
+    r262 = PyObject_Vectorcall(r257, r260, 1, r261)
+    dec_ref r257
+    if is_error(r262) goto L178 (error at small_ops:140) else goto L92
+L92:
+    dec_ref r254
+    fz = r262
+    r263 = 'workspace'
+    r264 = CPyDict_GetItem(inp, r263)
+    if is_error(r264) goto L151 (error at small_ops:141) else goto L93
+L93:
+    r265 = load_address _Py_NoneStruct
+    r266 = load_address _Py_NoneStruct
+    r267 = object 2
+    r268 = PySlice_New(r265, r267, r266)
+    if is_error(r268) goto L179 (error at small_ops:141) else goto L94
+L94:
+    r269 = PyObject_GetItem(r264, r268)
+    dec_ref r264
+    dec_ref r268
+    if is_error(r269) goto L151 (error at small_ops:141) else goto L95
+L95:
+    ws = r269
+    r270 = object -1
+    r271 = PyObject_GetItem(r12, r270)
+    dec_ref r12
+    if is_error(r271) goto L153 (error at small_ops:142) else goto L96
+L96:
+    r272 = load_address PyLong_Type
+    r273 = [r271]
+    r274 = load_address r273
+    r275 = PyObject_Vectorcall(r272, r274, 1, 0)
+    if is_error(r275) goto L180 (error at small_ops:142) else goto L97
+L97:
+    dec_ref r271
+    r276 = unbox(int, r275)
+    dec_ref r275
+    if is_error(r276) goto L153 (error at small_ops:142) else goto L98
+L98:
+    r277 = 'sum'
+    r278 = [r23]
+    r279 = load_address r278
+    r280 = PyObject_VectorcallMethod(r277, r279, 9223372036854775809, 0)
+    if is_error(r280) goto L181 (error at small_ops:142) else goto L99
+L99:
+    dec_ref r23
+    r281 = load_address PyLong_Type
+    r282 = [r280]
+    r283 = load_address r282
+    r284 = PyObject_Vectorcall(r281, r283, 1, 0)
+    if is_error(r284) goto L182 (error at small_ops:142) else goto L100
+L100:
+    dec_ref r280
+    r285 = unbox(int, r284)
+    dec_ref r284
+    if is_error(r285) goto L183 (error at small_ops:142) else goto L101
+L101:
+    r286 = 'sum'
+    r287 = [r34]
+    r288 = load_address r287
+    r289 = PyObject_VectorcallMethod(r286, r288, 9223372036854775809, 0)
+    if is_error(r289) goto L184 (error at small_ops:142) else goto L102
+L102:
+    dec_ref r34
+    r290 = load_address PyFloat_Type
+    r291 = [r289]
+    r292 = load_address r291
+    r293 = PyObject_Vectorcall(r290, r292, 1, 0)
+    if is_error(r293) goto L185 (error at small_ops:142) else goto L103
+L103:
+    dec_ref r289
+    r294 = unbox(float, r293)
+    dec_ref r293
+    r295 = r294 == -113.0
+    if r295 goto L105 else goto L104 :: bool
+L104:
+    r296 = object -1
+    r297 = PyObject_GetItem(r45, r296)
+    dec_ref r45
+    if is_error(r297) goto L186 (error at small_ops:142) else goto L106
+L105:
+    r298 = PyErr_Occurred()
+    if not is_error(r298) goto L187 (error at small_ops:142) else goto L104
+L106:
+    r299 = load_address PyLong_Type
+    r300 = [r297]
+    r301 = load_address r300
+    r302 = PyObject_Vectorcall(r299, r301, 1, 0)
+    if is_error(r302) goto L188 (error at small_ops:142) else goto L107
+L107:
+    dec_ref r297
+    r303 = unbox(int, r302)
+    dec_ref r302
+    if is_error(r303) goto L186 (error at small_ops:142) else goto L108
+L108:
+    r304 = s
+    r305 = object 0
+    r306 = PyObject_RichCompare(t, r305, 4)
+    dec_ref t
+    if is_error(r306) goto L189 (error at small_ops:143) else goto L109
+L109:
+    r307 = 'any'
+    r308 = [r306]
+    r309 = load_address r308
+    r310 = PyObject_VectorcallMethod(r307, r309, 9223372036854775809, 0)
+    if is_error(r310) goto L190 (error at small_ops:143) else goto L110
+L110:
+    dec_ref r306
+    r311 = PyObject_IsTrue(r310)
+    dec_ref r310
+    r312 = r311 >= 0 :: signed
+    if not r312 goto L189 (error at small_ops:143) else goto L111 :: bool
+L111:
+    r313 = truncate r311: i32 to builtins.bool
+    r314 = object -1
+    r315 = PyObject_GetItem(cs, r314)
+    dec_ref cs
+    if is_error(r315) goto L191 (error at small_ops:144) else goto L112
+L112:
+    r316 = load_address PyLong_Type
+    r317 = [r315]
+    r318 = load_address r317
+    r319 = PyObject_Vectorcall(r316, r318, 1, 0)
+    if is_error(r319) goto L192 (error at small_ops:144) else goto L113
+L113:
+    dec_ref r315
+    r320 = unbox(int, r319)
+    dec_ref r319
+    if is_error(r320) goto L191 (error at small_ops:144) else goto L114
+L114:
+    r321 = object -1
+    r322 = PyObject_GetItem(ar, r321)
+    dec_ref ar
+    if is_error(r322) goto L193 (error at small_ops:144) else goto L115
+L115:
+    r323 = load_address PyLong_Type
+    r324 = [r322]
+    r325 = load_address r324
+    r326 = PyObject_Vectorcall(r323, r325, 1, 0)
+    if is_error(r326) goto L194 (error at small_ops:144) else goto L116
+L116:
+    dec_ref r322
+    r327 = unbox(int, r326)
+    dec_ref r326
+    if is_error(r327) goto L193 (error at small_ops:144) else goto L117
+L117:
+    r328 = CPyTagged_Add(r320, r327)
+    dec_ref r320 :: int
+    dec_ref r327 :: int
+    r329 = 'max'
+    r330 = [cl]
+    r331 = load_address r330
+    r332 = PyObject_VectorcallMethod(r329, r331, 9223372036854775809, 0)
+    if is_error(r332) goto L195 (error at small_ops:144) else goto L118
+L118:
+    dec_ref cl
+    r333 = load_address PyLong_Type
+    r334 = [r332]
+    r335 = load_address r334
+    r336 = PyObject_Vectorcall(r333, r335, 1, 0)
+    if is_error(r336) goto L196 (error at small_ops:144) else goto L119
+L119:
+    dec_ref r332
+    r337 = unbox(int, r336)
+    dec_ref r336
+    if is_error(r337) goto L197 (error at small_ops:144) else goto L120
+L120:
+    r338 = CPyTagged_Add(r328, r337)
+    dec_ref r328 :: int
+    dec_ref r337 :: int
+    r339 = 'shape'
+    r340 = CPyObject_GetAttr(fz, r339)
+    dec_ref fz
+    if is_error(r340) goto L198 (error at small_ops:144) else goto L121
+L121:
+    r341 = object 0
+    r342 = PyObject_GetItem(r340, r341)
+    dec_ref r340
+    if is_error(r342) goto L198 (error at small_ops:144) else goto L122
+L122:
+    r343 = load_address PyLong_Type
+    r344 = [r342]
+    r345 = load_address r344
+    r346 = PyObject_Vectorcall(r343, r345, 1, 0)
+    if is_error(r346) goto L199 (error at small_ops:144) else goto L123
+L123:
+    dec_ref r342
+    r347 = unbox(int, r346)
+    dec_ref r346
+    if is_error(r347) goto L198 (error at small_ops:144) else goto L124
+L124:
+    r348 = CPyTagged_Add(r338, r347)
+    dec_ref r338 :: int
+    dec_ref r347 :: int
+    r349 = 'shape'
+    r350 = CPyObject_GetAttr(ws, r349)
+    dec_ref ws
+    if is_error(r350) goto L200 (error at small_ops:144) else goto L125
+L125:
+    r351 = object 0
+    r352 = PyObject_GetItem(r350, r351)
+    dec_ref r350
+    if is_error(r352) goto L200 (error at small_ops:144) else goto L126
+L126:
+    r353 = load_address PyLong_Type
+    r354 = [r352]
+    r355 = load_address r354
+    r356 = PyObject_Vectorcall(r353, r355, 1, 0)
+    if is_error(r356) goto L201 (error at small_ops:144) else goto L127
+L127:
+    dec_ref r352
+    r357 = unbox(int, r356)
+    dec_ref r356
+    if is_error(r357) goto L200 (error at small_ops:144) else goto L128
+L128:
+    r358 = CPyTagged_Add(r348, r357)
+    dec_ref r348 :: int
+    dec_ref r357 :: int
+    r359 = (r276, r285, r294, r303, r52, r304, r313, r358)
+    r360 = box(tuple[int, int, float, int, float, float, bool, int], r359)
+    return r360
+L129:
+    r361 = <error> :: tuple
+    return r361
+L130:
+    inc_ref mode
+    goto L2
+L131:
+    dec_ref mode
+    goto L3
+L132:
+    dec_ref mode
+    goto L129
+L133:
+    dec_ref mode
+    dec_ref r6
+    goto L129
+L134:
+    dec_ref mode
+    dec_ref r6
+    dec_ref r12
+    goto L129
+L135:
+    dec_ref mode
+    dec_ref r6
+    dec_ref r12
+    dec_ref r17
+    goto L129
+L136:
+    dec_ref mode
+    dec_ref r6
+    dec_ref r12
+    dec_ref r23
+    goto L129
+L137:
+    dec_ref mode
+    dec_ref r6
+    dec_ref r12
+    dec_ref r23
+    dec_ref r26
+    goto L129
+L138:
+    dec_ref mode
+    dec_ref r6
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    goto L129
+L139:
+    dec_ref mode
+    dec_ref r6
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r37
+    goto L129
+L140:
+    dec_ref mode
+    dec_ref r6
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    goto L129
+L141:
+    dec_ref mode
+    dec_ref r6
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref r47
+    goto L129
+L142:
+    dec_ref r6
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    goto L129
+L143:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    goto L129
+L144:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref t2
+    goto L129
+L145:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref r68
+    goto L129
+L146:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref r77
+    goto L129
+L147:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    goto L129
+L148:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    goto L129
+L149:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    goto L129
+L150:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref r101
+    goto L129
+L151:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    goto L129
+L152:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref r111
+    goto L129
+L153:
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    goto L129
+L154:
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r118
+    goto L129
+L155:
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    goto L129
+L156:
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r127
+    goto L129
+L157:
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    goto L129
+L158:
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    goto L129
+L159:
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r136
+    goto L129
+L160:
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    goto L129
+L161:
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    goto L129
+L162:
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r144
+    goto L129
+L163:
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    goto L129
+L164:
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    dec_ref r153
+    goto L129
+L165:
+    dec_ref ar
+    dec_ref cl
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    goto L129
+L166:
+    dec_ref ar
+    dec_ref cl
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    dec_ref r162
+    goto L129
+L167:
+    dec_ref cl
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    dec_ref r167 :: int
+    goto L129
+L168:
+    dec_ref cl
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    dec_ref r167 :: int
+    dec_ref r169
+    goto L129
+L169:
+    dec_ref cl
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    dec_ref r175 :: int
+    goto L129
+L170:
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    dec_ref r175 :: int
+    dec_ref r179
+    goto L129
+L171:
+    dec_ref fz
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    dec_ref r175 :: int
+    goto L129
+L172:
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    dec_ref r185 :: int
+    goto L129
+L173:
+    dec_ref ws
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    dec_ref r185 :: int
+    dec_ref r189
+    goto L129
+L174:
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    dec_ref r195 :: int
+    goto L129
+L175:
+    dec_ref r123 :: int
+    dec_ref r132 :: int
+    dec_ref r150 :: int
+    dec_ref r195 :: int
+    dec_ref r199
+    goto L129
+L176:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref r222
+    goto L129
+L177:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref r231
+    goto L129
+L178:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref r254
+    goto L129
+L179:
+    dec_ref r12
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref r264
+    goto L129
+L180:
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r271
+    goto L129
+L181:
+    dec_ref r23
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    goto L129
+L182:
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r280
+    goto L129
+L183:
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    goto L129
+L184:
+    dec_ref r34
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    goto L129
+L185:
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r289
+    goto L129
+L186:
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    goto L129
+L187:
+    dec_ref r45
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    goto L129
+L188:
+    dec_ref t
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r297
+    goto L129
+L189:
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    goto L129
+L190:
+    dec_ref ar
+    dec_ref cl
+    dec_ref cs
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    dec_ref r306
+    goto L129
+L191:
+    dec_ref ar
+    dec_ref cl
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    goto L129
+L192:
+    dec_ref ar
+    dec_ref cl
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    dec_ref r315
+    goto L129
+L193:
+    dec_ref cl
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    dec_ref r320 :: int
+    goto L129
+L194:
+    dec_ref cl
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    dec_ref r320 :: int
+    dec_ref r322
+    goto L129
+L195:
+    dec_ref cl
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    dec_ref r328 :: int
+    goto L129
+L196:
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    dec_ref r328 :: int
+    dec_ref r332
+    goto L129
+L197:
+    dec_ref fz
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    dec_ref r328 :: int
+    goto L129
+L198:
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    dec_ref r338 :: int
+    goto L129
+L199:
+    dec_ref ws
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    dec_ref r338 :: int
+    dec_ref r342
+    goto L129
+L200:
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    dec_ref r348 :: int
+    goto L129
+L201:
+    dec_ref r276 :: int
+    dec_ref r285 :: int
+    dec_ref r303 :: int
+    dec_ref r348 :: int
+    dec_ref r352
+    goto L129
+
+def _read_scalars(m):
+    m :: object
+    r0 :: str
+    r1 :: object
+    r2 :: str
+    r3, r4 :: object
+    r5 :: str
+    r6, r7 :: object
+    r8 :: str
+    r9, r10 :: object
+    r11 :: str
+    r12, r13 :: object
+    r14 :: str
+    r15, r16 :: object
+    r17 :: str
+    r18, r19 :: object
+    r20 :: str
+    r21, r22 :: object
+    r23 :: str
+    r24, r25 :: object
+    r26 :: str
+    r27, r28 :: object
+    r29 :: str
+    r30, r31 :: object
+    r32 :: object[1]
+    r33 :: object_ptr
+    r34 :: object
+    r35 :: int
+    r36, r37 :: object
+    r38 :: str
+    r39, r40 :: object
+    r41 :: object[1]
+    r42 :: object_ptr
+    r43 :: object
+    r44 :: int
+    r45, r46 :: object
+    r47, r48 :: int
+L0:
+    r0 = 'num_reqs'
+    r1 = CPyObject_GetAttr(m, r0)
+    if is_error(r1) goto L29 (error at _read_scalars:148) else goto L1
+L1:
+    r2 = 'num_actual_tokens'
+    r3 = CPyObject_GetAttr(m, r2)
+    if is_error(r3) goto L30 (error at _read_scalars:148) else goto L2
+L2:
+    r4 = PyNumber_Add(r1, r3)
+    dec_ref r1
+    dec_ref r3
+    if is_error(r4) goto L29 (error at _read_scalars:148) else goto L3
+L3:
+    r5 = 'max_query_len'
+    r6 = CPyObject_GetAttr(m, r5)
+    if is_error(r6) goto L31 (error at _read_scalars:148) else goto L4
+L4:
+    r7 = PyNumber_Add(r4, r6)
+    dec_ref r4
+    dec_ref r6
+    if is_error(r7) goto L29 (error at _read_scalars:148) else goto L5
+L5:
+    r8 = 'num_decode_tokens'
+    r9 = CPyObject_GetAttr(m, r8)
+    if is_error(r9) goto L32 (error at _read_scalars:148) else goto L6
+L6:
+    r10 = PyNumber_Add(r7, r9)
+    dec_ref r7
+    dec_ref r9
+    if is_error(r10) goto L29 (error at _read_scalars:148) else goto L7
+L7:
+    r11 = 'num_prefill_tokens'
+    r12 = CPyObject_GetAttr(m, r11)
+    if is_error(r12) goto L33 (error at _read_scalars:149) else goto L8
+L8:
+    r13 = PyNumber_Add(r10, r12)
+    dec_ref r10
+    dec_ref r12
+    if is_error(r13) goto L29 (error at _read_scalars:148) else goto L9
+L9:
+    r14 = 'max_seq_len'
+    r15 = CPyObject_GetAttr(m, r14)
+    if is_error(r15) goto L34 (error at _read_scalars:149) else goto L10
+L10:
+    r16 = PyNumber_Add(r13, r15)
+    dec_ref r13
+    dec_ref r15
+    if is_error(r16) goto L29 (error at _read_scalars:148) else goto L11
+L11:
+    r17 = 'block_size'
+    r18 = CPyObject_GetAttr(m, r17)
+    if is_error(r18) goto L35 (error at _read_scalars:149) else goto L12
+L12:
+    r19 = PyNumber_Add(r16, r18)
+    dec_ref r16
+    dec_ref r18
+    if is_error(r19) goto L29 (error at _read_scalars:148) else goto L13
+L13:
+    r20 = 'num_kv_heads'
+    r21 = CPyObject_GetAttr(m, r20)
+    if is_error(r21) goto L36 (error at _read_scalars:149) else goto L14
+L14:
+    r22 = PyNumber_Add(r19, r21)
+    dec_ref r19
+    dec_ref r21
+    if is_error(r22) goto L29 (error at _read_scalars:148) else goto L15
+L15:
+    r23 = 'head_size'
+    r24 = CPyObject_GetAttr(m, r23)
+    if is_error(r24) goto L37 (error at _read_scalars:150) else goto L16
+L16:
+    r25 = PyNumber_Add(r22, r24)
+    dec_ref r22
+    dec_ref r24
+    if is_error(r25) goto L29 (error at _read_scalars:148) else goto L17
+L17:
+    r26 = 'sliding_window'
+    r27 = CPyObject_GetAttr(m, r26)
+    if is_error(r27) goto L38 (error at _read_scalars:150) else goto L18
+L18:
+    r28 = PyNumber_Add(r25, r27)
+    dec_ref r25
+    dec_ref r27
+    if is_error(r28) goto L29 (error at _read_scalars:148) else goto L19
+L19:
+    r29 = 'spec_decode'
+    r30 = CPyObject_GetAttr(m, r29)
+    if is_error(r30) goto L39 (error at _read_scalars:150) else goto L20
+L20:
+    r31 = load_address PyLong_Type
+    r32 = [r30]
+    r33 = load_address r32
+    r34 = PyObject_Vectorcall(r31, r33, 1, 0)
+    if is_error(r34) goto L40 (error at _read_scalars:150) else goto L21
+L21:
+    dec_ref r30
+    r35 = unbox(int, r34)
+    dec_ref r34
+    if is_error(r35) goto L39 (error at _read_scalars:150) else goto L22
+L22:
+    r36 = box(int, r35)
+    r37 = PyNumber_Add(r28, r36)
+    dec_ref r28
+    dec_ref r36
+    if is_error(r37) goto L29 (error at _read_scalars:148) else goto L23
+L23:
+    r38 = 'causal'
+    r39 = CPyObject_GetAttr(m, r38)
+    if is_error(r39) goto L41 (error at _read_scalars:150) else goto L24
+L24:
+    r40 = load_address PyLong_Type
+    r41 = [r39]
+    r42 = load_address r41
+    r43 = PyObject_Vectorcall(r40, r42, 1, 0)
+    if is_error(r43) goto L42 (error at _read_scalars:150) else goto L25
+L25:
+    dec_ref r39
+    r44 = unbox(int, r43)
+    dec_ref r43
+    if is_error(r44) goto L41 (error at _read_scalars:150) else goto L26
+L26:
+    r45 = box(int, r44)
+    r46 = PyNumber_Add(r37, r45)
+    dec_ref r37
+    dec_ref r45
+    if is_error(r46) goto L29 (error at _read_scalars:148) else goto L27
+L27:
+    r47 = unbox(int, r46)
+    dec_ref r46
+    if is_error(r47) goto L29 (error at _read_scalars:148) else goto L28
+L28:
+    return r47
+L29:
+    r48 = <error> :: int
+    return r48
+L30:
+    dec_ref r1
+    goto L29
+L31:
+    dec_ref r4
+    goto L29
+L32:
+    dec_ref r7
+    goto L29
+L33:
+    dec_ref r10
+    goto L29
+L34:
+    dec_ref r13
+    goto L29
+L35:
+    dec_ref r16
+    goto L29
+L36:
+    dec_ref r19
+    goto L29
+L37:
+    dec_ref r22
+    goto L29
+L38:
+    dec_ref r25
+    goto L29
+L39:
+    dec_ref r28
+    goto L29
+L40:
+    dec_ref r28
+    dec_ref r30
+    goto L29
+L41:
+    dec_ref r37
+    goto L29
+L42:
+    dec_ref r37
+    dec_ref r39
+    goto L29
+
+def _read_containers(m):
+    m :: object
+    r0 :: str
+    r1 :: object
+    r2, acc :: int
+    r3 :: str
+    r4, r5, r6, r7 :: object
+    r8 :: object[1]
+    r9 :: object_ptr
+    r10 :: object
+    r11, r12 :: int
+    r13 :: str
+    r14, r15, r16, r17 :: object
+    r18 :: object[1]
+    r19 :: object_ptr
+    r20 :: object
+    r21, r22 :: int
+    r23 :: str
+    r24, r25, r26, r27 :: object
+    r28 :: object[1]
+    r29 :: object_ptr
+    r30 :: object
+    r31, r32 :: int
+    r33 :: str
+    r34 :: object
+    r35 :: str
+    r36, r37, r38, r39 :: object
+    r40 :: object[1]
+    r41 :: object_ptr
+    r42 :: object
+    r43, r44 :: int
+    r45 :: str
+    r46 :: object
+    r47 :: str
+    r48, r49 :: object
+    r50 :: str
+    r51, r52, r53, r54 :: object
+    r55 :: int
+    r56 :: str
+    r57, r58, r59, r60 :: object
+    r61 :: object[1]
+    r62 :: object_ptr
+    r63 :: object
+    r64, r65 :: int
+    r66 :: str
+    r67 :: object
+    r68 :: str
+    r69, r70, r71, r72 :: object
+    r73 :: object[1]
+    r74 :: object_ptr
+    r75 :: object
+    r76, r77 :: int
+    r78 :: str
+    r79, r80, r81, r82 :: object
+    r83 :: object[1]
+    r84 :: object_ptr
+    r85 :: object
+    r86, r87 :: int
+    r88 :: str
+    r89, r90, r91, r92 :: object
+    r93 :: object[1]
+    r94 :: object_ptr
+    r95 :: object
+    r96, r97 :: int
+    r98 :: str
+    r99, r100, r101, r102 :: object
+    r103 :: object[1]
+    r104 :: object_ptr
+    r105 :: object
+    r106, r107, r108 :: int
+L0:
+    r0 = 'kv_cache_dtype'
+    r1 = CPyObject_GetAttr(m, r0)
+    if is_error(r1) goto L48 (error at _read_containers:155) else goto L1
+L1:
+    r2 = CPyObject_Size(r1)
+    dec_ref r1
+    if is_error(r2) goto L48 (error at _read_containers:155) else goto L2
+L2:
+    acc = r2
+    r3 = 'query_start_loc'
+    r4 = CPyObject_GetAttr(m, r3)
+    if is_error(r4) goto L49 (error at _read_containers:156) else goto L3
+L3:
+    r5 = object -1
+    r6 = PyObject_GetItem(r4, r5)
+    dec_ref r4
+    if is_error(r6) goto L49 (error at _read_containers:156) else goto L4
+L4:
+    r7 = load_address PyLong_Type
+    r8 = [r6]
+    r9 = load_address r8
+    r10 = PyObject_Vectorcall(r7, r9, 1, 0)
+    if is_error(r10) goto L50 (error at _read_containers:156) else goto L5
+L5:
+    dec_ref r6
+    r11 = unbox(int, r10)
+    dec_ref r10
+    if is_error(r11) goto L49 (error at _read_containers:156) else goto L6
+L6:
+    r12 = CPyTagged_Add(acc, r11)
+    dec_ref acc :: int
+    dec_ref r11 :: int
+    acc = r12
+    r13 = 'slot_mapping'
+    r14 = CPyObject_GetAttr(m, r13)
+    if is_error(r14) goto L49 (error at _read_containers:157) else goto L7
+L7:
+    r15 = object -1
+    r16 = PyObject_GetItem(r14, r15)
+    dec_ref r14
+    if is_error(r16) goto L49 (error at _read_containers:157) else goto L8
+L8:
+    r17 = load_address PyLong_Type
+    r18 = [r16]
+    r19 = load_address r18
+    r20 = PyObject_Vectorcall(r17, r19, 1, 0)
+    if is_error(r20) goto L51 (error at _read_containers:157) else goto L9
+L9:
+    dec_ref r16
+    r21 = unbox(int, r20)
+    dec_ref r20
+    if is_error(r21) goto L49 (error at _read_containers:157) else goto L10
+L10:
+    r22 = CPyTagged_Add(acc, r21)
+    dec_ref acc :: int
+    dec_ref r21 :: int
+    acc = r22
+    r23 = 'token_ids'
+    r24 = CPyObject_GetAttr(m, r23)
+    if is_error(r24) goto L49 (error at _read_containers:158) else goto L11
+L11:
+    r25 = object -1
+    r26 = PyObject_GetItem(r24, r25)
+    dec_ref r24
+    if is_error(r26) goto L49 (error at _read_containers:158) else goto L12
+L12:
+    r27 = load_address PyLong_Type
+    r28 = [r26]
+    r29 = load_address r28
+    r30 = PyObject_Vectorcall(r27, r29, 1, 0)
+    if is_error(r30) goto L52 (error at _read_containers:158) else goto L13
+L13:
+    dec_ref r26
+    r31 = unbox(int, r30)
+    dec_ref r30
+    if is_error(r31) goto L49 (error at _read_containers:158) else goto L14
+L14:
+    r32 = CPyTagged_Add(acc, r31)
+    dec_ref acc :: int
+    dec_ref r31 :: int
+    acc = r32
+    r33 = 'workspace'
+    r34 = CPyObject_GetAttr(m, r33)
+    if is_error(r34) goto L49 (error at _read_containers:159) else goto L15
+L15:
+    r35 = 'shape'
+    r36 = CPyObject_GetAttr(r34, r35)
+    dec_ref r34
+    if is_error(r36) goto L49 (error at _read_containers:159) else goto L16
+L16:
+    r37 = object 0
+    r38 = PyObject_GetItem(r36, r37)
+    dec_ref r36
+    if is_error(r38) goto L49 (error at _read_containers:159) else goto L17
+L17:
+    r39 = load_address PyLong_Type
+    r40 = [r38]
+    r41 = load_address r40
+    r42 = PyObject_Vectorcall(r39, r41, 1, 0)
+    if is_error(r42) goto L53 (error at _read_containers:159) else goto L18
+L18:
+    dec_ref r38
+    r43 = unbox(int, r42)
+    dec_ref r42
+    if is_error(r43) goto L49 (error at _read_containers:159) else goto L19
+L19:
+    r44 = CPyTagged_Add(acc, r43)
+    dec_ref acc :: int
+    dec_ref r43 :: int
+    acc = r44
+    r45 = 'num_reqs'
+    r46 = CPyObject_GetAttr(m, r45)
+    if is_error(r46) goto L49 (error at _read_containers:160) else goto L20
+L20:
+    r47 = 'num_actual_tokens'
+    r48 = CPyObject_GetAttr(m, r47)
+    if is_error(r48) goto L54 (error at _read_containers:160) else goto L21
+L21:
+    r49 = PyNumber_Add(r46, r48)
+    dec_ref r46
+    dec_ref r48
+    if is_error(r49) goto L49 (error at _read_containers:160) else goto L22
+L22:
+    r50 = 'max_query_len'
+    r51 = CPyObject_GetAttr(m, r50)
+    if is_error(r51) goto L55 (error at _read_containers:160) else goto L23
+L23:
+    r52 = PyNumber_Add(r49, r51)
+    dec_ref r49
+    dec_ref r51
+    if is_error(r52) goto L49 (error at _read_containers:160) else goto L24
+L24:
+    r53 = box(int, acc)
+    r54 = PyNumber_InPlaceAdd(r53, r52)
+    dec_ref r53
+    dec_ref r52
+    if is_error(r54) goto L48 (error at _read_containers:160) else goto L25
+L25:
+    r55 = unbox(int, r54)
+    dec_ref r54
+    if is_error(r55) goto L48 (error at _read_containers:160) else goto L26
+L26:
+    acc = r55
+    r56 = 'seq_lens_np'
+    r57 = CPyObject_GetAttr(m, r56)
+    if is_error(r57) goto L49 (error at _read_containers:161) else goto L27
+L27:
+    r58 = object -1
+    r59 = PyObject_GetItem(r57, r58)
+    dec_ref r57
+    if is_error(r59) goto L49 (error at _read_containers:161) else goto L28
+L28:
+    r60 = load_address PyLong_Type
+    r61 = [r59]
+    r62 = load_address r61
+    r63 = PyObject_Vectorcall(r60, r62, 1, 0)
+    if is_error(r63) goto L56 (error at _read_containers:161) else goto L29
+L29:
+    dec_ref r59
+    r64 = unbox(int, r63)
+    dec_ref r63
+    if is_error(r64) goto L49 (error at _read_containers:161) else goto L30
+L30:
+    r65 = CPyTagged_Add(acc, r64)
+    dec_ref acc :: int
+    dec_ref r64 :: int
+    acc = r65
+    r66 = 'block_table'
+    r67 = CPyObject_GetAttr(m, r66)
+    if is_error(r67) goto L49 (error at _read_containers:162) else goto L31
+L31:
+    r68 = 'shape'
+    r69 = CPyObject_GetAttr(r67, r68)
+    dec_ref r67
+    if is_error(r69) goto L49 (error at _read_containers:162) else goto L32
+L32:
+    r70 = object 1
+    r71 = PyObject_GetItem(r69, r70)
+    dec_ref r69
+    if is_error(r71) goto L49 (error at _read_containers:162) else goto L33
+L33:
+    r72 = load_address PyLong_Type
+    r73 = [r71]
+    r74 = load_address r73
+    r75 = PyObject_Vectorcall(r72, r74, 1, 0)
+    if is_error(r75) goto L57 (error at _read_containers:162) else goto L34
+L34:
+    dec_ref r71
+    r76 = unbox(int, r75)
+    dec_ref r75
+    if is_error(r76) goto L49 (error at _read_containers:162) else goto L35
+L35:
+    r77 = CPyTagged_Add(acc, r76)
+    dec_ref acc :: int
+    dec_ref r76 :: int
+    acc = r77
+    r78 = 'positions'
+    r79 = CPyObject_GetAttr(m, r78)
+    if is_error(r79) goto L49 (error at _read_containers:163) else goto L36
+L36:
+    r80 = object -1
+    r81 = PyObject_GetItem(r79, r80)
+    dec_ref r79
+    if is_error(r81) goto L49 (error at _read_containers:163) else goto L37
+L37:
+    r82 = load_address PyLong_Type
+    r83 = [r81]
+    r84 = load_address r83
+    r85 = PyObject_Vectorcall(r82, r84, 1, 0)
+    if is_error(r85) goto L58 (error at _read_containers:163) else goto L38
+L38:
+    dec_ref r81
+    r86 = unbox(int, r85)
+    dec_ref r85
+    if is_error(r86) goto L49 (error at _read_containers:163) else goto L39
+L39:
+    r87 = CPyTagged_Add(acc, r86)
+    dec_ref acc :: int
+    dec_ref r86 :: int
+    acc = r87
+    r88 = 'num_computed_tokens'
+    r89 = CPyObject_GetAttr(m, r88)
+    if is_error(r89) goto L49 (error at _read_containers:164) else goto L40
+L40:
+    r90 = object -1
+    r91 = PyObject_GetItem(r89, r90)
+    dec_ref r89
+    if is_error(r91) goto L49 (error at _read_containers:164) else goto L41
+L41:
+    r92 = load_address PyLong_Type
+    r93 = [r91]
+    r94 = load_address r93
+    r95 = PyObject_Vectorcall(r92, r94, 1, 0)
+    if is_error(r95) goto L59 (error at _read_containers:164) else goto L42
+L42:
+    dec_ref r91
+    r96 = unbox(int, r95)
+    dec_ref r95
+    if is_error(r96) goto L49 (error at _read_containers:164) else goto L43
+L43:
+    r97 = CPyTagged_Add(acc, r96)
+    dec_ref acc :: int
+    dec_ref r96 :: int
+    acc = r97
+    r98 = 'seq_lens'
+    r99 = CPyObject_GetAttr(m, r98)
+    if is_error(r99) goto L49 (error at _read_containers:165) else goto L44
+L44:
+    r100 = object -1
+    r101 = PyObject_GetItem(r99, r100)
+    dec_ref r99
+    if is_error(r101) goto L49 (error at _read_containers:165) else goto L45
+L45:
+    r102 = load_address PyLong_Type
+    r103 = [r101]
+    r104 = load_address r103
+    r105 = PyObject_Vectorcall(r102, r104, 1, 0)
+    if is_error(r105) goto L60 (error at _read_containers:165) else goto L46
+L46:
+    dec_ref r101
+    r106 = unbox(int, r105)
+    dec_ref r105
+    if is_error(r106) goto L49 (error at _read_containers:165) else goto L47
+L47:
+    r107 = CPyTagged_Add(acc, r106)
+    dec_ref acc :: int
+    dec_ref r106 :: int
+    acc = r107
+    return acc
+L48:
+    r108 = <error> :: int
+    return r108
+L49:
+    dec_ref acc :: int
+    goto L48
+L50:
+    dec_ref acc :: int
+    dec_ref r6
+    goto L48
+L51:
+    dec_ref acc :: int
+    dec_ref r16
+    goto L48
+L52:
+    dec_ref acc :: int
+    dec_ref r26
+    goto L48
+L53:
+    dec_ref acc :: int
+    dec_ref r38
+    goto L48
+L54:
+    dec_ref acc :: int
+    dec_ref r46
+    goto L48
+L55:
+    dec_ref acc :: int
+    dec_ref r49
+    goto L48
+L56:
+    dec_ref acc :: int
+    dec_ref r59
+    goto L48
+L57:
+    dec_ref acc :: int
+    dec_ref r71
+    goto L48
+L58:
+    dec_ref acc :: int
+    dec_ref r81
+    goto L48
+L59:
+    dec_ref acc :: int
+    dec_ref r91
+    goto L48
+L60:
+    dec_ref acc :: int
+    dec_ref r101
+    goto L48
+
+def run_mypyc_native(inp, mode):
+    inp :: dict
+    mode, r0 :: str
+    r1 :: list
+    r2 :: object
+    r3 :: tuple
+    r4 :: object
+    r5 :: mypyc_variant.MetaNative
+    r6 :: tuple
+    r7, r8, r9, acc :: int
+    r10, r11 :: object
+    r12 :: object[1]
+    r13 :: object_ptr
+    r14 :: object
+    r15 :: int
+    r16, r17 :: object
+    r18 :: object[1]
+    r19 :: object_ptr
+    r20 :: object
+    r21, r22 :: int
+    r23, r24 :: object
+    r25 :: object[1]
+    r26 :: object_ptr
+    r27 :: object
+    r28, r29 :: int
+    r30, r31 :: object
+    r32 :: object[1]
+    r33 :: object_ptr
+    r34 :: object
+    r35, r36 :: int
+    r37, r38 :: object
+    r39 :: object[1]
+    r40 :: object_ptr
+    r41 :: object
+    r42, r43 :: int
+    r44 :: ptr
+    r45 :: native_int
+    r46 :: short_int
+    r47, r48, r49 :: int
+L0:
+    if is_error(mode) goto L1 else goto L26
+L1:
+    r0 = 'torch'
+    inc_ref r0
+    mode = r0
+L2:
+    r1 = _kwargs(inp)
+    if is_error(r1) goto L27 (error at run_mypyc_native:170) else goto L3
+L3:
+    r2 = mypyc_variant.MetaNative :: type
+    r3 = PyList_AsTuple(r1)
+    dec_ref r1
+    if is_error(r3) goto L27 (error at run_mypyc_native:170) else goto L4
+L4:
+    r4 = PyObject_CallObject(r2, r3)
+    dec_ref r3
+    if is_error(r4) goto L27 (error at run_mypyc_native:170) else goto L5
+L5:
+    r5 = cast(mypyc_variant.MetaNative, r4)
+    if is_error(r5) goto L27 (error at run_mypyc_native:170) else goto L6
+L6:
+    r6 = small_ops(inp, mode)
+    dec_ref mode
+    if is_error(r6) goto L28 (error at run_mypyc_native:171) else goto L7
+L7:
+    r7 = _read_scalars(r5)
+    if is_error(r7) goto L29 (error at run_mypyc_native:172) else goto L8
+L8:
+    r8 = _read_containers(r5)
+    dec_ref r5
+    if is_error(r8) goto L30 (error at run_mypyc_native:172) else goto L9
+L9:
+    r9 = CPyTagged_Add(r7, r8)
+    dec_ref r7 :: int
+    dec_ref r8 :: int
+    acc = r9
+    r10 = CPySequenceTuple_GetItem(r6, 0)
+    if is_error(r10) goto L31 (error at run_mypyc_native:173) else goto L10
+L10:
+    r11 = load_address PyLong_Type
+    r12 = [r10]
+    r13 = load_address r12
+    r14 = PyObject_Vectorcall(r11, r13, 1, 0)
+    if is_error(r14) goto L32 (error at run_mypyc_native:173) else goto L11
+L11:
+    dec_ref r10
+    r15 = unbox(int, r14)
+    dec_ref r14
+    if is_error(r15) goto L31 (error at run_mypyc_native:173) else goto L12
+L12:
+    r16 = CPySequenceTuple_GetItem(r6, 2)
+    if is_error(r16) goto L33 (error at run_mypyc_native:173) else goto L13
+L13:
+    r17 = load_address PyLong_Type
+    r18 = [r16]
+    r19 = load_address r18
+    r20 = PyObject_Vectorcall(r17, r19, 1, 0)
+    if is_error(r20) goto L34 (error at run_mypyc_native:173) else goto L14
+L14:
+    dec_ref r16
+    r21 = unbox(int, r20)
+    dec_ref r20
+    if is_error(r21) goto L33 (error at run_mypyc_native:173) else goto L15
+L15:
+    r22 = CPyTagged_Add(r15, r21)
+    dec_ref r15 :: int
+    dec_ref r21 :: int
+    r23 = CPySequenceTuple_GetItem(r6, 6)
+    if is_error(r23) goto L35 (error at run_mypyc_native:173) else goto L16
+L16:
+    r24 = load_address PyLong_Type
+    r25 = [r23]
+    r26 = load_address r25
+    r27 = PyObject_Vectorcall(r24, r26, 1, 0)
+    if is_error(r27) goto L36 (error at run_mypyc_native:173) else goto L17
+L17:
+    dec_ref r23
+    r28 = unbox(int, r27)
+    dec_ref r27
+    if is_error(r28) goto L35 (error at run_mypyc_native:173) else goto L18
+L18:
+    r29 = CPyTagged_Add(r22, r28)
+    dec_ref r22 :: int
+    dec_ref r28 :: int
+    r30 = CPySequenceTuple_GetItem(r6, 8)
+    if is_error(r30) goto L37 (error at run_mypyc_native:173) else goto L19
+L19:
+    r31 = load_address PyLong_Type
+    r32 = [r30]
+    r33 = load_address r32
+    r34 = PyObject_Vectorcall(r31, r33, 1, 0)
+    if is_error(r34) goto L38 (error at run_mypyc_native:173) else goto L20
+L20:
+    dec_ref r30
+    r35 = unbox(int, r34)
+    dec_ref r34
+    if is_error(r35) goto L37 (error at run_mypyc_native:173) else goto L21
+L21:
+    r36 = CPyTagged_Add(r29, r35)
+    dec_ref r29 :: int
+    dec_ref r35 :: int
+    r37 = CPySequenceTuple_GetItem(r6, 14)
+    if is_error(r37) goto L39 (error at run_mypyc_native:173) else goto L22
+L22:
+    r38 = load_address PyLong_Type
+    r39 = [r37]
+    r40 = load_address r39
+    r41 = PyObject_Vectorcall(r38, r40, 1, 0)
+    if is_error(r41) goto L40 (error at run_mypyc_native:173) else goto L23
+L23:
+    dec_ref r37
+    r42 = unbox(int, r41)
+    dec_ref r41
+    if is_error(r42) goto L39 (error at run_mypyc_native:173) else goto L24
+L24:
+    r43 = CPyTagged_Add(r36, r42)
+    dec_ref r36 :: int
+    dec_ref r42 :: int
+    r44 = get_element_ptr r6 ob_size :: PyVarObject
+    r45 = load_mem r44 :: native_int*
+    dec_ref r6
+    r46 = r45 << 1
+    r47 = CPyTagged_Add(r43, r46)
+    dec_ref r43 :: int
+    r48 = CPyTagged_Add(acc, r47)
+    dec_ref acc :: int
+    dec_ref r47 :: int
+    acc = r48
+    return acc
+L25:
+    r49 = <error> :: int
+    return r49
+L26:
+    inc_ref mode
+    goto L2
+L27:
+    dec_ref mode
+    goto L25
+L28:
+    dec_ref r5
+    goto L25
+L29:
+    dec_ref r5
+    dec_ref r6
+    goto L25
+L30:
+    dec_ref r6
+    dec_ref r7 :: int
+    goto L25
+L31:
+    dec_ref r6
+    dec_ref acc :: int
+    goto L25
+L32:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r10
+    goto L25
+L33:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r15 :: int
+    goto L25
+L34:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r15 :: int
+    dec_ref r16
+    goto L25
+L35:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r22 :: int
+    goto L25
+L36:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r22 :: int
+    dec_ref r23
+    goto L25
+L37:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r29 :: int
+    goto L25
+L38:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r29 :: int
+    dec_ref r30
+    goto L25
+L39:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r36 :: int
+    goto L25
+L40:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r36 :: int
+    dec_ref r37
+    goto L25
+
+def run_mypyc_dataclass(inp, mode):
+    inp :: dict
+    mode, r0 :: str
+    r1 :: list
+    r2 :: object
+    r3 :: tuple
+    r4 :: object
+    r5 :: mypyc_variant.MetaDataclass
+    r6 :: tuple
+    r7, r8, r9, acc :: int
+    r10, r11 :: object
+    r12 :: object[1]
+    r13 :: object_ptr
+    r14 :: object
+    r15 :: int
+    r16, r17 :: object
+    r18 :: object[1]
+    r19 :: object_ptr
+    r20 :: object
+    r21, r22 :: int
+    r23, r24 :: object
+    r25 :: object[1]
+    r26 :: object_ptr
+    r27 :: object
+    r28, r29 :: int
+    r30, r31 :: object
+    r32 :: object[1]
+    r33 :: object_ptr
+    r34 :: object
+    r35, r36 :: int
+    r37, r38 :: object
+    r39 :: object[1]
+    r40 :: object_ptr
+    r41 :: object
+    r42, r43 :: int
+    r44 :: ptr
+    r45 :: native_int
+    r46 :: short_int
+    r47, r48, r49 :: int
+L0:
+    if is_error(mode) goto L1 else goto L26
+L1:
+    r0 = 'torch'
+    inc_ref r0
+    mode = r0
+L2:
+    r1 = _kwargs(inp)
+    if is_error(r1) goto L27 (error at run_mypyc_dataclass:178) else goto L3
+L3:
+    r2 = mypyc_variant.MetaDataclass :: type
+    r3 = PyList_AsTuple(r1)
+    dec_ref r1
+    if is_error(r3) goto L27 (error at run_mypyc_dataclass:178) else goto L4
+L4:
+    r4 = PyObject_CallObject(r2, r3)
+    dec_ref r3
+    if is_error(r4) goto L27 (error at run_mypyc_dataclass:178) else goto L5
+L5:
+    r5 = cast(mypyc_variant.MetaDataclass, r4)
+    if is_error(r5) goto L27 (error at run_mypyc_dataclass:178) else goto L6
+L6:
+    r6 = small_ops(inp, mode)
+    dec_ref mode
+    if is_error(r6) goto L28 (error at run_mypyc_dataclass:179) else goto L7
+L7:
+    r7 = _read_scalars(r5)
+    if is_error(r7) goto L29 (error at run_mypyc_dataclass:180) else goto L8
+L8:
+    r8 = _read_containers(r5)
+    dec_ref r5
+    if is_error(r8) goto L30 (error at run_mypyc_dataclass:180) else goto L9
+L9:
+    r9 = CPyTagged_Add(r7, r8)
+    dec_ref r7 :: int
+    dec_ref r8 :: int
+    acc = r9
+    r10 = CPySequenceTuple_GetItem(r6, 0)
+    if is_error(r10) goto L31 (error at run_mypyc_dataclass:181) else goto L10
+L10:
+    r11 = load_address PyLong_Type
+    r12 = [r10]
+    r13 = load_address r12
+    r14 = PyObject_Vectorcall(r11, r13, 1, 0)
+    if is_error(r14) goto L32 (error at run_mypyc_dataclass:181) else goto L11
+L11:
+    dec_ref r10
+    r15 = unbox(int, r14)
+    dec_ref r14
+    if is_error(r15) goto L31 (error at run_mypyc_dataclass:181) else goto L12
+L12:
+    r16 = CPySequenceTuple_GetItem(r6, 2)
+    if is_error(r16) goto L33 (error at run_mypyc_dataclass:181) else goto L13
+L13:
+    r17 = load_address PyLong_Type
+    r18 = [r16]
+    r19 = load_address r18
+    r20 = PyObject_Vectorcall(r17, r19, 1, 0)
+    if is_error(r20) goto L34 (error at run_mypyc_dataclass:181) else goto L14
+L14:
+    dec_ref r16
+    r21 = unbox(int, r20)
+    dec_ref r20
+    if is_error(r21) goto L33 (error at run_mypyc_dataclass:181) else goto L15
+L15:
+    r22 = CPyTagged_Add(r15, r21)
+    dec_ref r15 :: int
+    dec_ref r21 :: int
+    r23 = CPySequenceTuple_GetItem(r6, 6)
+    if is_error(r23) goto L35 (error at run_mypyc_dataclass:181) else goto L16
+L16:
+    r24 = load_address PyLong_Type
+    r25 = [r23]
+    r26 = load_address r25
+    r27 = PyObject_Vectorcall(r24, r26, 1, 0)
+    if is_error(r27) goto L36 (error at run_mypyc_dataclass:181) else goto L17
+L17:
+    dec_ref r23
+    r28 = unbox(int, r27)
+    dec_ref r27
+    if is_error(r28) goto L35 (error at run_mypyc_dataclass:181) else goto L18
+L18:
+    r29 = CPyTagged_Add(r22, r28)
+    dec_ref r22 :: int
+    dec_ref r28 :: int
+    r30 = CPySequenceTuple_GetItem(r6, 8)
+    if is_error(r30) goto L37 (error at run_mypyc_dataclass:181) else goto L19
+L19:
+    r31 = load_address PyLong_Type
+    r32 = [r30]
+    r33 = load_address r32
+    r34 = PyObject_Vectorcall(r31, r33, 1, 0)
+    if is_error(r34) goto L38 (error at run_mypyc_dataclass:181) else goto L20
+L20:
+    dec_ref r30
+    r35 = unbox(int, r34)
+    dec_ref r34
+    if is_error(r35) goto L37 (error at run_mypyc_dataclass:181) else goto L21
+L21:
+    r36 = CPyTagged_Add(r29, r35)
+    dec_ref r29 :: int
+    dec_ref r35 :: int
+    r37 = CPySequenceTuple_GetItem(r6, 14)
+    if is_error(r37) goto L39 (error at run_mypyc_dataclass:181) else goto L22
+L22:
+    r38 = load_address PyLong_Type
+    r39 = [r37]
+    r40 = load_address r39
+    r41 = PyObject_Vectorcall(r38, r40, 1, 0)
+    if is_error(r41) goto L40 (error at run_mypyc_dataclass:181) else goto L23
+L23:
+    dec_ref r37
+    r42 = unbox(int, r41)
+    dec_ref r41
+    if is_error(r42) goto L39 (error at run_mypyc_dataclass:181) else goto L24
+L24:
+    r43 = CPyTagged_Add(r36, r42)
+    dec_ref r36 :: int
+    dec_ref r42 :: int
+    r44 = get_element_ptr r6 ob_size :: PyVarObject
+    r45 = load_mem r44 :: native_int*
+    dec_ref r6
+    r46 = r45 << 1
+    r47 = CPyTagged_Add(r43, r46)
+    dec_ref r43 :: int
+    r48 = CPyTagged_Add(acc, r47)
+    dec_ref acc :: int
+    dec_ref r47 :: int
+    acc = r48
+    return acc
+L25:
+    r49 = <error> :: int
+    return r49
+L26:
+    inc_ref mode
+    goto L2
+L27:
+    dec_ref mode
+    goto L25
+L28:
+    dec_ref r5
+    goto L25
+L29:
+    dec_ref r5
+    dec_ref r6
+    goto L25
+L30:
+    dec_ref r6
+    dec_ref r7 :: int
+    goto L25
+L31:
+    dec_ref r6
+    dec_ref acc :: int
+    goto L25
+L32:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r10
+    goto L25
+L33:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r15 :: int
+    goto L25
+L34:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r15 :: int
+    dec_ref r16
+    goto L25
+L35:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r22 :: int
+    goto L25
+L36:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r22 :: int
+    dec_ref r23
+    goto L25
+L37:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r29 :: int
+    goto L25
+L38:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r29 :: int
+    dec_ref r30
+    goto L25
+L39:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r36 :: int
+    goto L25
+L40:
+    dec_ref r6
+    dec_ref acc :: int
+    dec_ref r36 :: int
+    dec_ref r37
+    goto L25
+
+def __top_level__():
+    r0, r1 :: object
+    r2 :: bit
+    r3 :: str
+    r4, r5 :: object
+    r6 :: str
+    r7 :: dict
+    r8, r9 :: object
+    r10 :: str
+    r11 :: dict
+    r12, r13 :: object
+    r14 :: str
+    r15 :: dict
+    r16 :: object
+    r17, r18 :: object_ptr
+    r19 :: object_ptr[2]
+    r20 :: c_ptr
+    r21 :: native_int[2]
+    r22 :: c_ptr
+    r23 :: object
+    r24 :: dict
+    r25, r26 :: str
+    r27 :: bit
+    r28, r29, r30, r31, r32, r33, r34, r35, r36, r37, r38, r39, r40, r41, r42, r43, r44, r45, r46, r47, r48, r49 :: str
+    r50 :: list
+    r51 :: dict
+    r52 :: str
+    r53 :: i32
+    r54 :: bit
+    r55 :: object
+    r56 :: str
+    r57, r58 :: object
+    r59, r60 :: bool
+    r61, r62, r63, r64, r65, r66, r67, r68, r69, r70, r71, r72, r73, r74, r75, r76, r77, r78, r79, r80, r81, r82, r83 :: str
+    r84 :: tuple
+    r85 :: i32
+    r86 :: bit
+    r87 :: dict
+    r88 :: str
+    r89 :: i32
+    r90 :: bit
+    r91 :: bool
+    r92 :: object
+    r93 :: str
+    r94, r95 :: object
+    r96, r97 :: bool
+    r98, r99, r100, r101, r102, r103, r104, r105, r106, r107, r108, r109, r110, r111, r112, r113, r114, r115, r116, r117, r118, r119, r120 :: str
+    r121 :: tuple
+    r122 :: i32
+    r123 :: bit
+    r124 :: dict
+    r125 :: str
+    r126 :: i32
+    r127 :: bit
+    r128 :: dict
+    r129 :: tuple[]
+    r130 :: dict
+    r131, r132 :: object
+    r133 :: str
+    r134 :: i32
+    r135 :: bit
+    r136 :: object
+    r137 :: str
+    r138 :: i32
+    r139 :: bit
+    r140 :: object
+    r141 :: str
+    r142 :: i32
+    r143 :: bit
+    r144 :: object
+    r145 :: str
+    r146 :: i32
+    r147 :: bit
+    r148 :: object
+    r149 :: str
+    r150 :: i32
+    r151 :: bit
+    r152 :: object
+    r153 :: str
+    r154 :: i32
+    r155 :: bit
+    r156 :: object
+    r157 :: str
+    r158 :: i32
+    r159 :: bit
+    r160 :: object
+    r161 :: str
+    r162 :: i32
+    r163 :: bit
+    r164 :: object
+    r165 :: str
+    r166 :: i32
+    r167 :: bit
+    r168 :: object
+    r169 :: str
+    r170 :: i32
+    r171 :: bit
+    r172 :: object
+    r173 :: str
+    r174 :: i32
+    r175 :: bit
+    r176 :: object
+    r177 :: str
+    r178 :: i32
+    r179 :: bit
+    r180 :: object
+    r181 :: str
+    r182 :: i32
+    r183 :: bit
+    r184 :: object
+    r185 :: str
+    r186 :: i32
+    r187 :: bit
+    r188 :: object
+    r189 :: str
+    r190 :: i32
+    r191 :: bit
+    r192 :: object
+    r193 :: str
+    r194 :: i32
+    r195 :: bit
+    r196 :: object
+    r197 :: str
+    r198 :: i32
+    r199 :: bit
+    r200 :: object
+    r201 :: str
+    r202 :: i32
+    r203 :: bit
+    r204 :: object
+    r205 :: str
+    r206 :: i32
+    r207 :: bit
+    r208 :: object
+    r209 :: str
+    r210 :: i32
+    r211 :: bit
+    r212 :: object
+    r213 :: str
+    r214 :: i32
+    r215 :: bit
+    r216 :: object
+    r217 :: str
+    r218 :: i32
+    r219 :: bit
+    r220 :: bool
+    r221 :: str
+    r222 :: i32
+    r223 :: bit
+    r224, r225 :: str
+    r226 :: i32
+    r227 :: bit
+    r228, r229 :: str
+    r230 :: i32
+    r231 :: bit
+    r232 :: dict
+    r233 :: str
+    r234 :: object
+    r235 :: str
+    r236 :: bit
+    r237 :: None
+L0:
+    r0 = builtins :: module
+    r1 = load_address _Py_NoneStruct
+    r2 = r0 != r1
+    if r2 goto L3 else goto L1 :: bool
+L1:
+    r3 = 'builtins'
+    r4 = PyImport_Import(r3)
+    if is_error(r4) goto L53 (error at <module>:1) else goto L2
+L2:
+    builtins = r4 :: module
+    dec_ref r4
+L3:
+    r5 = ('annotations',)
+    r6 = '__future__'
+    r7 = mypyc_variant.globals :: static
+    r8 = CPyImport_ImportFromMany(r6, r5, r5, r7)
+    if is_error(r8) goto L53 (error at <module>:11) else goto L4
+L4:
+    __future__ = r8 :: module
+    dec_ref r8
+    r9 = ('dataclass',)
+    r10 = 'dataclasses'
+    r11 = mypyc_variant.globals :: static
+    r12 = CPyImport_ImportFromMany(r10, r9, r9, r11)
+    if is_error(r12) goto L53 (error at <module>:13) else goto L5
+L5:
+    dataclasses = r12 :: module
+    dec_ref r12
+    r13 = ('Any',)
+    r14 = 'typing'
+    r15 = mypyc_variant.globals :: static
+    r16 = CPyImport_ImportFromMany(r14, r13, r13, r15)
+    if is_error(r16) goto L53 (error at <module>:14) else goto L6
+L6:
+    typing = r16 :: module
+    dec_ref r16
+    r17 = load_address numpy :: module
+    r18 = load_address torch :: module
+    r19 = [r17, r18]
+    r20 = load_address r19
+    r21 = [16, 17]
+    r22 = load_address r21
+    r23 = (('numpy', 'numpy', 'np'), ('torch', 'torch', 'torch'))
+    r24 = mypyc_variant.globals :: static
+    r25 = 'mypyc_variant.py'
+    r26 = '<module>'
+    r27 = CPyImport_ImportMany(r23, r20, r24, r25, r26, r22)
+    if not r27 goto L53 else goto L7 :: bool
+L7:
+    r28 = 'num_reqs'
+    r29 = 'num_actual_tokens'
+    r30 = 'max_query_len'
+    r31 = 'query_start_loc'
+    r32 = 'seq_lens'
+    r33 = 'block_table'
+    r34 = 'slot_mapping'
+    r35 = 'spec_decode'
+    r36 = 'num_decode_tokens'
+    r37 = 'num_prefill_tokens'
+    r38 = 'num_computed_tokens'
+    r39 = 'seq_lens_np'
+    r40 = 'max_seq_len'
+    r41 = 'kv_cache_dtype'
+    r42 = 'block_size'
+    r43 = 'num_kv_heads'
+    r44 = 'head_size'
+    r45 = 'causal'
+    r46 = 'sliding_window'
+    r47 = 'token_ids'
+    r48 = 'positions'
+    r49 = 'workspace'
+    inc_ref r28
+    inc_ref r29
+    inc_ref r30
+    inc_ref r31
+    inc_ref r32
+    inc_ref r33
+    inc_ref r34
+    inc_ref r35
+    inc_ref r36
+    inc_ref r37
+    inc_ref r38
+    inc_ref r39
+    inc_ref r40
+    inc_ref r41
+    inc_ref r42
+    inc_ref r43
+    inc_ref r44
+    inc_ref r45
+    inc_ref r46
+    inc_ref r47
+    inc_ref r48
+    inc_ref r49
+    r50 = CPyList_Build(22, r28, r29, r30, r31, r32, r33, r34, r35, r36, r37, r38, r39, r40, r41, r42, r43, r44, r45, r46, r47, r48, r49)
+    if is_error(r50) goto L53 (error at <module>:19) else goto L8
+L8:
+    r51 = mypyc_variant.globals :: static
+    r52 = 'FIELDS'
+    r53 = CPyDict_SetItem(r51, r52, r50)
+    dec_ref r50
+    r54 = r53 >= 0 :: signed
+    if not r54 goto L53 (error at <module>:19) else goto L9 :: bool
+L9:
+    r55 = <error> :: object
+    r56 = 'mypyc_variant'
+    r57 = mypyc_variant.MetaNative_template :: type
+    r58 = CPyType_FromTemplate(r57, r55, r56)
+    if is_error(r58) goto L53 (error at <module>:28) else goto L10
+L10:
+    r59 = MetaNative_trait_vtable_setup()
+    if is_error(r59) goto L54 (error at <module>:28) else goto L11
+L11:
+    r60 = MetaNative_coroutine_setup(r58)
+    if is_error(r60) goto L54 (error at <module>:28) else goto L12
+L12:
+    r61 = '__mypyc_attrs__'
+    r62 = 'num_reqs'
+    r63 = 'num_actual_tokens'
+    r64 = 'max_query_len'
+    r65 = 'query_start_loc'
+    r66 = 'seq_lens'
+    r67 = 'block_table'
+    r68 = 'slot_mapping'
+    r69 = 'spec_decode'
+    r70 = 'num_decode_tokens'
+    r71 = 'num_prefill_tokens'
+    r72 = 'num_computed_tokens'
+    r73 = 'seq_lens_np'
+    r74 = 'max_seq_len'
+    r75 = 'kv_cache_dtype'
+    r76 = 'block_size'
+    r77 = 'num_kv_heads'
+    r78 = 'head_size'
+    r79 = 'causal'
+    r80 = 'sliding_window'
+    r81 = 'token_ids'
+    r82 = 'positions'
+    r83 = 'workspace'
+    r84 = PyTuple_Pack(22, r62, r63, r64, r65, r66, r67, r68, r69, r70, r71, r72, r73, r74, r75, r76, r77, r78, r79, r80, r81, r82, r83)
+    if is_error(r84) goto L54 (error at <module>:28) else goto L13
+L13:
+    r85 = PyObject_SetAttr(r58, r61, r84)
+    dec_ref r84
+    r86 = r85 >= 0 :: signed
+    if not r86 goto L54 (error at <module>:28) else goto L14 :: bool
+L14:
+    mypyc_variant.MetaNative = r58 :: type
+    r87 = mypyc_variant.globals :: static
+    r88 = 'MetaNative'
+    r89 = PyDict_SetItem(r87, r88, r58)
+    r90 = r89 >= 0 :: signed
+    if not r90 goto L54 (error at <module>:28) else goto L15 :: bool
+L15:
+    r91 = CPy_InitSubclass(r58)
+    dec_ref r58
+    if not r91 goto L53 (error at <module>:28) else goto L16 :: bool
+L16:
+    r92 = <error> :: object
+    r93 = 'mypyc_variant'
+    r94 = mypyc_variant.MetaDataclass_template :: type
+    r95 = CPyType_FromTemplate(r94, r92, r93)
+    if is_error(r95) goto L53 (error at <module>:84) else goto L17
+L17:
+    r96 = MetaDataclass_trait_vtable_setup()
+    if is_error(r96) goto L55 (error at <module>:84) else goto L18
+L18:
+    r97 = MetaDataclass_coroutine_setup(r95)
+    if is_error(r97) goto L55 (error at <module>:84) else goto L19
+L19:
+    r98 = '__mypyc_attrs__'
+    r99 = 'num_reqs'
+    r100 = 'num_actual_tokens'
+    r101 = 'max_query_len'
+    r102 = 'query_start_loc'
+    r103 = 'seq_lens'
+    r104 = 'block_table'
+    r105 = 'slot_mapping'
+    r106 = 'spec_decode'
+    r107 = 'num_decode_tokens'
+    r108 = 'num_prefill_tokens'
+    r109 = 'num_computed_tokens'
+    r110 = 'seq_lens_np'
+    r111 = 'max_seq_len'
+    r112 = 'kv_cache_dtype'
+    r113 = 'block_size'
+    r114 = 'num_kv_heads'
+    r115 = 'head_size'
+    r116 = 'causal'
+    r117 = 'sliding_window'
+    r118 = 'token_ids'
+    r119 = 'positions'
+    r120 = 'workspace'
+    r121 = PyTuple_Pack(22, r99, r100, r101, r102, r103, r104, r105, r106, r107, r108, r109, r110, r111, r112, r113, r114, r115, r116, r117, r118, r119, r120)
+    if is_error(r121) goto L55 (error at <module>:84) else goto L20
+L20:
+    r122 = PyObject_SetAttr(r95, r98, r121)
+    dec_ref r121
+    r123 = r122 >= 0 :: signed
+    if not r123 goto L55 (error at <module>:84) else goto L21 :: bool
+L21:
+    mypyc_variant.MetaDataclass = r95 :: type
+    r124 = mypyc_variant.globals :: static
+    r125 = 'MetaDataclass'
+    r126 = PyDict_SetItem(r124, r125, r95)
+    r127 = r126 >= 0 :: signed
+    if not r127 goto L55 (error at <module>:84) else goto L22 :: bool
+L22:
+    r128 = PyDict_New()
+    if is_error(r128) goto L55 (error at <module>:84) else goto L23
+L23:
+    r129 = ()
+    r130 = PyDict_New()
+    if is_error(r130) goto L56 (error at <module>:84) else goto L24
+L24:
+    r131 = load_address PyType_Type
+    r132 = load_address PyLong_Type
+    r133 = 'num_reqs'
+    r134 = PyDict_SetItem(r130, r133, r132)
+    r135 = r134 >= 0 :: signed
+    if not r135 goto L57 (error at <module>:85) else goto L25 :: bool
+L25:
+    r136 = load_address PyLong_Type
+    r137 = 'num_actual_tokens'
+    r138 = PyDict_SetItem(r130, r137, r136)
+    r139 = r138 >= 0 :: signed
+    if not r139 goto L57 (error at <module>:86) else goto L26 :: bool
+L26:
+    r140 = load_address PyLong_Type
+    r141 = 'max_query_len'
+    r142 = PyDict_SetItem(r130, r141, r140)
+    r143 = r142 >= 0 :: signed
+    if not r143 goto L57 (error at <module>:87) else goto L27 :: bool
+L27:
+    r144 = load_address PyType_Type
+    r145 = 'query_start_loc'
+    r146 = PyDict_SetItem(r130, r145, r144)
+    r147 = r146 >= 0 :: signed
+    if not r147 goto L57 (error at <module>:88) else goto L28 :: bool
+L28:
+    r148 = load_address PyType_Type
+    r149 = 'seq_lens'
+    r150 = PyDict_SetItem(r130, r149, r148)
+    r151 = r150 >= 0 :: signed
+    if not r151 goto L57 (error at <module>:89) else goto L29 :: bool
+L29:
+    r152 = load_address PyType_Type
+    r153 = 'block_table'
+    r154 = PyDict_SetItem(r130, r153, r152)
+    r155 = r154 >= 0 :: signed
+    if not r155 goto L57 (error at <module>:90) else goto L30 :: bool
+L30:
+    r156 = load_address PyType_Type
+    r157 = 'slot_mapping'
+    r158 = PyDict_SetItem(r130, r157, r156)
+    r159 = r158 >= 0 :: signed
+    if not r159 goto L57 (error at <module>:91) else goto L31 :: bool
+L31:
+    r160 = load_address PyBool_Type
+    r161 = 'spec_decode'
+    r162 = PyDict_SetItem(r130, r161, r160)
+    r163 = r162 >= 0 :: signed
+    if not r163 goto L57 (error at <module>:92) else goto L32 :: bool
+L32:
+    r164 = load_address PyLong_Type
+    r165 = 'num_decode_tokens'
+    r166 = PyDict_SetItem(r130, r165, r164)
+    r167 = r166 >= 0 :: signed
+    if not r167 goto L57 (error at <module>:93) else goto L33 :: bool
+L33:
+    r168 = load_address PyLong_Type
+    r169 = 'num_prefill_tokens'
+    r170 = PyDict_SetItem(r130, r169, r168)
+    r171 = r170 >= 0 :: signed
+    if not r171 goto L57 (error at <module>:94) else goto L34 :: bool
+L34:
+    r172 = load_address PyType_Type
+    r173 = 'num_computed_tokens'
+    r174 = PyDict_SetItem(r130, r173, r172)
+    r175 = r174 >= 0 :: signed
+    if not r175 goto L57 (error at <module>:95) else goto L35 :: bool
+L35:
+    r176 = load_address PyType_Type
+    r177 = 'seq_lens_np'
+    r178 = PyDict_SetItem(r130, r177, r176)
+    r179 = r178 >= 0 :: signed
+    if not r179 goto L57 (error at <module>:96) else goto L36 :: bool
+L36:
+    r180 = load_address PyLong_Type
+    r181 = 'max_seq_len'
+    r182 = PyDict_SetItem(r130, r181, r180)
+    r183 = r182 >= 0 :: signed
+    if not r183 goto L57 (error at <module>:97) else goto L37 :: bool
+L37:
+    r184 = load_address PyUnicode_Type
+    r185 = 'kv_cache_dtype'
+    r186 = PyDict_SetItem(r130, r185, r184)
+    r187 = r186 >= 0 :: signed
+    if not r187 goto L57 (error at <module>:98) else goto L38 :: bool
+L38:
+    r188 = load_address PyLong_Type
+    r189 = 'block_size'
+    r190 = PyDict_SetItem(r130, r189, r188)
+    r191 = r190 >= 0 :: signed
+    if not r191 goto L57 (error at <module>:99) else goto L39 :: bool
+L39:
+    r192 = load_address PyLong_Type
+    r193 = 'num_kv_heads'
+    r194 = PyDict_SetItem(r130, r193, r192)
+    r195 = r194 >= 0 :: signed
+    if not r195 goto L57 (error at <module>:100) else goto L40 :: bool
+L40:
+    r196 = load_address PyLong_Type
+    r197 = 'head_size'
+    r198 = PyDict_SetItem(r130, r197, r196)
+    r199 = r198 >= 0 :: signed
+    if not r199 goto L57 (error at <module>:101) else goto L41 :: bool
+L41:
+    r200 = load_address PyBool_Type
+    r201 = 'causal'
+    r202 = PyDict_SetItem(r130, r201, r200)
+    r203 = r202 >= 0 :: signed
+    if not r203 goto L57 (error at <module>:102) else goto L42 :: bool
+L42:
+    r204 = load_address PyLong_Type
+    r205 = 'sliding_window'
+    r206 = PyDict_SetItem(r130, r205, r204)
+    r207 = r206 >= 0 :: signed
+    if not r207 goto L57 (error at <module>:103) else goto L43 :: bool
+L43:
+    r208 = load_address PyType_Type
+    r209 = 'token_ids'
+    r210 = PyDict_SetItem(r130, r209, r208)
+    r211 = r210 >= 0 :: signed
+    if not r211 goto L57 (error at <module>:104) else goto L44 :: bool
+L44:
+    r212 = load_address PyType_Type
+    r213 = 'positions'
+    r214 = PyDict_SetItem(r130, r213, r212)
+    r215 = r214 >= 0 :: signed
+    if not r215 goto L57 (error at <module>:105) else goto L45 :: bool
+L45:
+    r216 = load_address PyType_Type
+    r217 = 'workspace'
+    r218 = PyDict_SetItem(r130, r217, r216)
+    r219 = r218 >= 0 :: signed
+    if not r219 goto L57 (error at <module>:106) else goto L46 :: bool
+L46:
+    r220 = CPy_InitSubclass(r95)
+    if not r220 goto L57 (error at <module>:84) else goto L47 :: bool
+L47:
+    r221 = '__annotations__'
+    r222 = CPyDict_SetItem(r128, r221, r130)
+    r223 = r222 >= 0 :: signed
+    if not r223 goto L57 (error at <module>:84) else goto L48 :: bool
+L48:
+    r224 = 'mypyc filler docstring'
+    r225 = '__doc__'
+    r226 = CPyDict_SetItem(r128, r225, r224)
+    r227 = r226 >= 0 :: signed
+    if not r227 goto L57 (error at <module>:84) else goto L49 :: bool
+L49:
+    r228 = 'mypyc_variant'
+    r229 = '__module__'
+    r230 = CPyDict_SetItem(r128, r229, r228)
+    r231 = r230 >= 0 :: signed
+    if not r231 goto L57 (error at <module>:84) else goto L50 :: bool
+L50:
+    r232 = mypyc_variant.globals :: static
+    r233 = 'dataclass'
+    r234 = CPyDict_GetItem(r232, r233)
+    if is_error(r234) goto L57 (error at <module>:83) else goto L51
+L51:
+    r235 = 'dataclasses'
+    r236 = CPyDataclass_SleightOfHand(r234, r95, r128, r130, r235)
+    dec_ref r234
+    dec_ref r95
+    dec_ref r128
+    dec_ref r130
+    if not r236 goto L53 (error at <module>:84) else goto L52 :: bool
+L52:
+    return 1
+L53:
+    r237 = <error> :: None
+    return r237
+L54:
+    dec_ref r58
+    goto L53
+L55:
+    dec_ref r95
+    goto L53
+L56:
+    dec_ref r95
+    dec_ref r128
+    goto L53
+L57:
+    dec_ref r95
+    dec_ref r128
+    dec_ref r130
+    goto L53

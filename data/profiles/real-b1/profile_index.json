@@ -1,0 +1,181 @@
+{
+  "schema": "pi-profile-index-v1",
+  "run_id": "real-b1",
+  "target": {
+    "host": "a3-22",
+    "chip": 3,
+    "device": "/dev/davinci3",
+    "engine_host_tid": 704908,
+    "cpuset": "120-159",
+    "worker_main_cpus": "122-157"
+  },
+  "service": {
+    "container": "pi-phase-chip3-prof-real-b1",
+    "model": "Qwen3.5-0.8B",
+    "tp": 1,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "max_num_seqs": 1,
+    "max_model_len": 2048,
+    "max_num_batched_tokens": 2048,
+    "mtp": "off",
+    "async_scheduling": "on",
+    "pid_host": "on",
+    "python_perf_support": "on (+7.4% interpreter trampoline caveat)"
+  },
+  "perf": {
+    "call_graph": "fp",
+    "freq": 999,
+    "samples": 19569,
+    "unknown_pct": 15.09,
+    "python_frame_lines": 13487,
+    "flame": "fp/flame.svg",
+    "flame_in_scope": "fp-scope/scope-attr/flame-in-scope.svg",
+    "hotspots": "fp/hotspots.csv",
+    "srcline": "fp/hotspots_srcline.csv",
+    "instr": "fp/hotspots_instr.csv"
+  },
+  "scope_attribution": {
+    "samples_of_tid": 19564,
+    "samples_in_scope": 10761,
+    "sample_share_in_scope": 0.55,
+    "wallclock_union_fraction": 0.5488,
+    "clock_agreement_pp": 0.124
+  },
+  "subtrees": {
+    "AscendGDNAttentionMetadataBuilder.build": {
+      "samples": 3956,
+      "pct_of_thread_samples": 20.216,
+      "leaf_class_pct": {
+        "allocator": 5.46,
+        "ascend_driver": 1.163,
+        "aten_op_dispatch": 13.296,
+        "copy_h2d": 3.185,
+        "cpython_runtime": 16.86,
+        "d2h_sync": 0.152,
+        "kernel": 5.41,
+        "libc": 13.043,
+        "other": 41.254,
+        "python_frame": 0.177
+      },
+      "d2h_sync_pct": 0.152,
+      "top_subtree": [
+        "AscendGDNAttentionMetadataBuilder._attach_non_spec_decode_metadata:perf-704908.map)",
+        "AscendGDNAttentionMetadataBuilder._pad_non_spec_decode_graph_inputs:perf-704908.map)",
+        "CommonAttentionMetadata.compute_num_computed_tokens:perf-704908.map)",
+        "PyNumber_Subtract+0xa4 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "PyObject_Vectorcall+0x54 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "[unknown] (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so)",
+        "_PyEval_EvalFrameDefault+0x2818 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "_PyEval_EvalFrameDefault+0x2b0c (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)"
+      ]
+    },
+    "_pad_non_spec_decode_graph_inputs": {
+      "samples": 1170,
+      "pct_of_thread_samples": 5.979,
+      "leaf_class_pct": {
+        "allocator": 4.615,
+        "ascend_driver": 1.709,
+        "aten_op_dispatch": 16.41,
+        "copy_h2d": 2.051,
+        "cpython_runtime": 11.111,
+        "kernel": 7.265,
+        "libc": 13.419,
+        "other": 43.419
+      },
+      "d2h_sync_pct": 0,
+      "top_subtree": [
+        "PyObject_Vectorcall+0x54 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "[unknown] (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so)",
+        "_PyEval_EvalFrameDefault+0x3470 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "_PyEval_EvalFrameDefault+0x3c68 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "at::Tensor c10::Dispatcher::redispatch<at::Tensor, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt>(c10::TypedOperatorHandle<at::Tensor (at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)> const&, c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt) const [clone .isra.0]+0xcc (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)",
+        "at::Tensor c10::callUnboxedKernelFunction<at::Tensor, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt>(void*, c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, long&&, std::optional<c10::SymInt>&&, std::optional<c10::SymInt>&&, c10::SymInt&&) [clone .isra.0]+0x84 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)",
+        "at::_ops::as_strided::call(at::Tensor const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, std::optional<c10::SymInt>)+0x1d8 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)",
+        "at::_ops::copy_::call(at::Tensor&, at::Tensor const&, bool)+0x178 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)"
+      ]
+    },
+    "_attach_non_spec_decode_metadata": {
+      "samples": 797,
+      "pct_of_thread_samples": 4.073,
+      "leaf_class_pct": {
+        "allocator": 5.897,
+        "ascend_driver": 1.631,
+        "aten_op_dispatch": 13.802,
+        "copy_h2d": 3.262,
+        "cpython_runtime": 16.562,
+        "kernel": 7.654,
+        "libc": 11.794,
+        "other": 39.398
+      },
+      "d2h_sync_pct": 0,
+      "top_subtree": [
+        "PyObject_Vectorcall+0x54 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "[unknown] (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so)",
+        "_PyEval_EvalFrameDefault+0x3470 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "_PyEval_EvalFrameDefault+0x3c68 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "_PyObject_MakeTpCall+0x84 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "_build_actual_seq_lengths:perf-704908.map)",
+        "at::Tensor c10::Dispatcher::redispatch<at::Tensor, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt>(c10::TypedOperatorHandle<at::Tensor (at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)> const&, c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt) const [clone .isra.0]+0xcc (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)",
+        "at::Tensor c10::callUnboxedKernelFunction<at::Tensor, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt>(void*, c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, long&&, std::optional<c10::SymInt>&&, std::optional<c10::SymInt>&&, c10::SymInt&&) [clone .isra.0]+0x84 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)"
+      ]
+    },
+    "compute_num_computed_tokens": {
+      "samples": 520,
+      "pct_of_thread_samples": 2.657,
+      "leaf_class_pct": {
+        "allocator": 3.846,
+        "ascend_driver": 1.346,
+        "aten_op_dispatch": 9.231,
+        "copy_h2d": 1.731,
+        "cpython_runtime": 12.308,
+        "kernel": 7.5,
+        "libc": 15.577,
+        "other": 48.462
+      },
+      "d2h_sync_pct": 0,
+      "top_subtree": [
+        "PyNumber_Subtract+0xa4 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "[unknown] (/usr/lib64/libc.so.6)",
+        "[unknown] (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so)",
+        "_PyEval_EvalFrameDefault+0x2b0c (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "_PyEval_EvalFrameDefault+0x3c68 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "_object* torch::autograd::TypeError_to_NotImplemented_<&torch::autograd::THPVariable_sub>(_object*, _object*, _object*)+0x10 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_python.so)",
+        "at::Tensor c10::Dispatcher::redispatch<at::Tensor, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt>(c10::TypedOperatorHandle<at::Tensor (at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt)> const&, c10::DispatchKeySet, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt) const [clone .isra.0]+0xcc (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)",
+        "at::Tensor c10::callUnboxedKernelFunction<at::Tensor, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt>(void*, c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, long&&, std::optional<c10::SymInt>&&, std::optional<c10::SymInt>&&, c10::SymInt&&) [clone .isra.0]+0x84 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)"
+      ]
+    },
+    "AscendAttentionMetadataBuilder.build": {
+      "samples": 366,
+      "pct_of_thread_samples": 1.87,
+      "leaf_class_pct": {
+        "allocator": 7.377,
+        "ascend_driver": 1.913,
+        "aten_op_dispatch": 11.202,
+        "copy_h2d": 4.372,
+        "cpython_runtime": 27.322,
+        "kernel": 2.459,
+        "libc": 8.197,
+        "other": 35.792,
+        "python_frame": 1.366
+      },
+      "d2h_sync_pct": 0,
+      "top_subtree": [
+        "AscendAttentionMetadataBuilder._split_decodes_and_prefills:perf-704908.map)",
+        "PyObject_Vectorcall+0x54 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "[unknown] (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so)",
+        "_PyEval_EvalFrameDefault+0x3470 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "_PyEval_EvalFrameDefault+0x3c68 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+        "at::Tensor c10::callUnboxedKernelFunction<at::Tensor, at::Tensor const&, long, std::optional<c10::SymInt>, std::optional<c10::SymInt>, c10::SymInt>(void*, c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, long&&, std::optional<c10::SymInt>&&, std::optional<c10::SymInt>&&, c10::SymInt&&) [clone .isra.0]+0x84 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)",
+        "at::_ops::_to_copy::call(at::Tensor const&, std::optional<c10::ScalarType>, std::optional<c10::Layout>, std::optional<c10::Device>, std::optional<bool>, bool, std::optional<c10::MemoryFormat>)+0x1e4 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)",
+        "at::_ops::_to_copy::redispatch(c10::DispatchKeySet, at::Tensor const&, std::optional<c10::ScalarType>, std::optional<c10::Layout>, std::optional<c10::Device>, std::optional<bool>, bool, std::optional<c10::MemoryFormat>)+0xe4 (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)"
+      ]
+    }
+  },
+  "topdown": {
+    "frontend_bound": 66.01,
+    "bad_spec": 11.034,
+    "retiring": 12.846,
+    "backend_bound": 10.11,
+    "ipc": 0.7708
+  }
+}

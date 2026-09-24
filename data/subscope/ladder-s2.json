@@ -1,0 +1,114 @@
+{
+  "scenario": "s2",
+  "stamp": "20260923T184335Z",
+  "arms": {
+    "A": {
+      "run_id": "sub-s2-baseline-20260923T184335Z",
+      "prepare_input_mean_us": 3895.1,
+      "step_p50_us": 10073.0,
+      "forward_mean_us": 1093.6,
+      "n_steps": 63.0,
+      "share_pct": 38.66871835600119,
+      "prepare_input_p50_us_independent": 3873.6,
+      "phases": [
+        "draft_token",
+        "forward",
+        "n_steps",
+        "post process",
+        "prepare input",
+        "sample_token",
+        "step_dur"
+      ]
+    },
+    "B": {
+      "run_id": "sub-s2-mounted-off-20260923T184335Z",
+      "prepare_input_mean_us": 3813.8,
+      "step_p50_us": 10050.0,
+      "forward_mean_us": 1092.1,
+      "n_steps": 63.0,
+      "share_pct": 37.94825870646766,
+      "prepare_input_p50_us_independent": 3862.2,
+      "phases": [
+        "draft_token",
+        "forward",
+        "n_steps",
+        "post process",
+        "prepare input",
+        "sample_token",
+        "step_dur"
+      ]
+    },
+    "C": {
+      "run_id": "sub-s2-on-20260923T184335Z",
+      "prepare_input_mean_us": 4065.2,
+      "step_p50_us": 10457.0,
+      "forward_mean_us": 1098.4,
+      "n_steps": 63.0,
+      "share_pct": 38.87539447260208,
+      "prepare_input_p50_us_independent": 4121.3,
+      "phases": [
+        "draft_token",
+        "forward",
+        "n_steps",
+        "post process",
+        "prepare input",
+        "sample_token",
+        "step_dur"
+      ]
+    },
+    "D1": {
+      "run_id": "sub-s2-mounted-off-pystack-20260923T184335Z",
+      "prepare_input_mean_us": 4745.0,
+      "step_p50_us": 12489.0,
+      "forward_mean_us": 1227.0,
+      "n_steps": 63.0,
+      "share_pct": 37.99343422211546,
+      "prepare_input_p50_us_independent": 4806.6,
+      "phases": [
+        "draft_token",
+        "forward",
+        "n_steps",
+        "post process",
+        "prepare input",
+        "sample_token",
+        "step_dur"
+      ]
+    },
+    "D2": {
+      "run_id": "sub-s2-mounted-off-2-20260923T184335Z",
+      "prepare_input_mean_us": 3908.2,
+      "step_p50_us": 10255.0,
+      "forward_mean_us": 1138.1,
+      "n_steps": 63.0,
+      "share_pct": 38.11019015114578,
+      "prepare_input_p50_us_independent": 3960.6,
+      "phases": [
+        "draft_token",
+        "forward",
+        "n_steps",
+        "post process",
+        "prepare input",
+        "sample_token",
+        "step_dur"
+      ]
+    },
+    "C2": {
+      "run_id": "sub-s2-on-attn-20260923T184335Z",
+      "prepare_input_mean_us": 4181.7,
+      "step_p50_us": 10619.0,
+      "forward_mean_us": 1125.8,
+      "n_steps": 63.0,
+      "share_pct": 39.37941425746304,
+      "prepare_input_p50_us_independent": 4179.3,
+      "phases": [
+        "draft_token",
+        "forward",
+        "n_steps",
+        "post process",
+        "prepare input",
+        "sample_token",
+        "step_dur"
+      ]
+    }
+  }
+}

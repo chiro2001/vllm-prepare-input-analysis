@@ -1,0 +1,184 @@
+{
+  "schema": "prepare-input-overhead-ladder/v1",
+  "scenario": "s2",
+  "stamp": "20260923T184335Z",
+  "warmup_steps_dropped": 2,
+  "runs": {
+    "A": "sub-s2-baseline-20260923T184335Z",
+    "B": "sub-s2-mounted-off-20260923T184335Z",
+    "C": "sub-s2-on-20260923T184335Z",
+    "D1": "sub-s2-mounted-off-pystack-20260923T184335Z",
+    "D2": "sub-s2-mounted-off-2-20260923T184335Z",
+    "C2": "sub-s2-on-attn-20260923T184335Z"
+  },
+  "modes": [
+    "A",
+    "B",
+    "C",
+    "D1",
+    "D2",
+    "C2"
+  ],
+  "per_run": {
+    "A": {
+      "run_id": "sub-s2-baseline-20260923T184335Z",
+      "phase_timing_csv": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/sub-s2-baseline-20260923T184335Z/lite-profiler/phase_timing.csv",
+      "available": true,
+      "prepare_input": {
+        "n": 68,
+        "p50": 3877.42,
+        "p90": 4211.91,
+        "p99": 9742.79,
+        "mean": 4067.413
+      },
+      "step": {
+        "n": 68,
+        "p50": 5356.3,
+        "p90": 5715.05,
+        "p99": 76258.03,
+        "mean": 7377.672
+      }
+    },
+    "B": {
+      "run_id": "sub-s2-mounted-off-20260923T184335Z",
+      "phase_timing_csv": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/sub-s2-mounted-off-20260923T184335Z/lite-profiler/phase_timing.csv",
+      "available": true,
+      "prepare_input": {
+        "n": 68,
+        "p50": 3865.2,
+        "p90": 3922.68,
+        "p99": 9589.06,
+        "mean": 3986.961
+      },
+      "step": {
+        "n": 68,
+        "p50": 5341.47,
+        "p90": 5411.27,
+        "p99": 75954.87,
+        "mean": 7279.613
+      }
+    },
+    "C": {
+      "run_id": "sub-s2-on-20260923T184335Z",
+      "phase_timing_csv": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/sub-s2-on-20260923T184335Z/lite-profiler/phase_timing.csv",
+      "available": true,
+      "prepare_input": {
+        "n": 68,
+        "p50": 4122.01,
+        "p90": 4153.31,
+        "p99": 9939.21,
+        "mean": 4240.062
+      },
+      "step": {
+        "n": 68,
+        "p50": 5749.49,
+        "p90": 5834.16,
+        "p99": 80054.15,
+        "mean": 7745.878
+      }
+    },
+    "D1": {
+      "run_id": "sub-s2-mounted-off-pystack-20260923T184335Z",
+      "phase_timing_csv": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/sub-s2-mounted-off-pystack-20260923T184335Z/lite-profiler/phase_timing.csv",
+      "available": true,
+      "prepare_input": {
+        "n": 68,
+        "p50": 4808.84,
+        "p90": 4849.32,
+        "p99": 11921.7,
+        "mean": 4971.302
+      },
+      "step": {
+        "n": 68,
+        "p50": 6626.64,
+        "p90": 6727.3,
+        "p99": 111510.9,
+        "mean": 9523.119
+      }
+    },
+    "D2": {
+      "run_id": "sub-s2-mounted-off-2-20260923T184335Z",
+      "phase_timing_csv": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/sub-s2-mounted-off-2-20260923T184335Z/lite-profiler/phase_timing.csv",
+      "available": true,
+      "prepare_input": {
+        "n": 68,
+        "p50": 3964.3,
+        "p90": 4046.96,
+        "p99": 9884.99,
+        "mean": 4087.831
+      },
+      "step": {
+        "n": 68,
+        "p50": 5483.78,
+        "p90": 5554.27,
+        "p99": 78135.58,
+        "mean": 7483.001
+      }
+    },
+    "C2": {
+      "run_id": "sub-s2-on-attn-20260923T184335Z",
+      "phase_timing_csv": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/sub-s2-on-attn-20260923T184335Z/lite-profiler/phase_timing.csv",
+      "available": true,
+      "prepare_input": {
+        "n": 68,
+        "p50": 4185.4,
+        "p90": 4634.92,
+        "p99": 9978.86,
+        "mean": 4351.487
+      },
+      "step": {
+        "n": 68,
+        "p50": 5865.78,
+        "p90": 6334.21,
+        "p99": 78294.87,
+        "mean": 7887.92
+      }
+    }
+  },
+  "deltas": {
+    "prepare_input": {
+      "A_us": 3877.42,
+      "B_us": 3865.2,
+      "C_us": 4122.01,
+      "D1_us": 4808.84,
+      "D2_us": 3964.3,
+      "C2_us": 4185.4,
+      "B_minus_A_us": -12.22,
+      "B_vs_A_pct": -0.32,
+      "C_minus_B_us": 256.81,
+      "C_vs_B_pct": 6.64,
+      "D1_minus_C_us": 686.83,
+      "D1_vs_C_pct": 16.66,
+      "D2_minus_D1_us": -844.54,
+      "D2_vs_D1_pct": -17.56,
+      "C2_minus_D2_us": 221.1,
+      "C2_vs_D2_pct": 5.58,
+      "last_vs_first_abs_us": 307.98
+    },
+    "step": {
+      "A_us": 5356.3,
+      "B_us": 5341.47,
+      "C_us": 5749.49,
+      "D1_us": 6626.64,
+      "D2_us": 5483.78,
+      "C2_us": 5865.78,
+      "B_minus_A_us": -14.83,
+      "B_vs_A_pct": -0.28,
+      "C_minus_B_us": 408.02,
+      "C_vs_B_pct": 7.64,
+      "D1_minus_C_us": 877.15,
+      "D1_vs_C_pct": 15.26,
+      "D2_minus_D1_us": -1142.86,
+      "D2_vs_D1_pct": -17.25,
+      "C2_minus_D2_us": 382.0,
+      "C2_vs_D2_pct": 6.97,
+      "last_vs_first_abs_us": 509.48
+    }
+  },
+  "interpretation": {
+    "B_minus_A": "cost of bind-mounting the instrumented module (import only)",
+    "C_minus_B": "cost of the probes themselves (PI_SUBSCOPE=on)",
+    "D_minus_C": "cost of the pystack sampler inside the prepare-input window",
+    "budget": "task requires C-B <= 5% of prepare input"
+  }
+}

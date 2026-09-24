@@ -1,0 +1,48 @@
+[pgrid] realmachine batch=1 rep=0 pi_net_p50=  364.3 (raw   364.8, triton    0.5) us_p50=  17.0 scope_net=  381.2 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=36.8s
+[pgrid] realmachine batch=1 rep=1 pi_net_p50=  370.3 (raw   370.7, triton    0.4) us_p50=  18.6 scope_net=  388.7 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine batch=1 rep=2 pi_net_p50=  370.4 (raw   370.9, triton    0.5) us_p50=  18.0 scope_net=  388.7 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine batch=2 rep=0 pi_net_p50=  374.4 (raw   374.8, triton    0.5) us_p50=  20.3 scope_net=  394.8 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=2 wall=0.0s
+[pgrid] realmachine batch=2 rep=1 pi_net_p50=  373.1 (raw   373.6, triton    0.5) us_p50=  20.8 scope_net=  394.3 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=2 wall=0.0s
+[pgrid] realmachine batch=2 rep=2 pi_net_p50=  373.7 (raw   374.1, triton    0.5) us_p50=  21.1 scope_net=  394.8 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=2 wall=0.0s
+[pgrid] realmachine batch=4 rep=0 pi_net_p50=  375.2 (raw   375.7, triton    0.5) us_p50=  24.3 scope_net=  399.5 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=4 wall=0.0s
+[pgrid] realmachine batch=4 rep=1 pi_net_p50=  375.8 (raw   376.2, triton    0.5) us_p50=  24.7 scope_net=  400.4 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=4 wall=0.0s
+[pgrid] realmachine batch=4 rep=2 pi_net_p50=  378.9 (raw   379.4, triton    0.5) us_p50=  24.6 scope_net=  404.1 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=4 wall=0.0s
+[pgrid] realmachine batch=8 rep=0 pi_net_p50=  377.1 (raw   377.6, triton    0.5) us_p50=  30.9 scope_net=  408.1 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=8 wall=0.0s
+[pgrid] realmachine batch=8 rep=1 pi_net_p50=  378.5 (raw   379.0, triton    0.5) us_p50=  30.8 scope_net=  409.6 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=8 wall=0.0s
+[pgrid] realmachine batch=8 rep=2 pi_net_p50=  377.1 (raw   377.6, triton    0.5) us_p50=  30.9 scope_net=  408.4 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=8 wall=0.0s
+[pgrid] wrote /work/data/harness/sweep_rm_realmachine_20260923-190428.csv (12 rows)
+[pgrid] realmachine isl=64 rep=0 pi_net_p50=  373.9 (raw   374.4, triton    0.6) us_p50=  17.3 scope_net=  391.2 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=36.5s
+[pgrid] realmachine isl=64 rep=1 pi_net_p50=  378.3 (raw   378.8, triton    0.5) us_p50=  18.2 scope_net=  396.8 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=64 rep=2 pi_net_p50=  375.4 (raw   375.9, triton    0.5) us_p50=  18.2 scope_net=  393.7 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=128 rep=0 pi_net_p50=  374.6 (raw   375.0, triton    0.5) us_p50=  18.1 scope_net=  392.8 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=128 rep=1 pi_net_p50=  375.5 (raw   376.0, triton    0.5) us_p50=  18.4 scope_net=  394.2 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=128 rep=2 pi_net_p50=  376.7 (raw   377.2, triton    0.5) us_p50=  18.5 scope_net=  395.8 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=256 rep=0 pi_net_p50=  375.9 (raw   376.4, triton    0.5) us_p50=  18.7 scope_net=  394.8 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=256 rep=1 pi_net_p50=  376.4 (raw   376.9, triton    0.5) us_p50=  18.9 scope_net=  395.5 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=256 rep=2 pi_net_p50=  398.9 (raw   399.5, triton    0.5) us_p50=  19.2 scope_net=  418.5 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=512 rep=0 pi_net_p50=  404.2 (raw   404.6, triton    0.5) us_p50=  19.4 scope_net=  423.5 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=512 rep=1 pi_net_p50=  393.2 (raw   393.7, triton    0.5) us_p50=  19.0 scope_net=  412.4 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=512 rep=2 pi_net_p50=  377.6 (raw   378.2, triton    0.5) us_p50=  18.8 scope_net=  396.4 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=1024 rep=0 pi_net_p50=  377.6 (raw   378.1, triton    0.6) us_p50=  18.7 scope_net=  396.4 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=1024 rep=1 pi_net_p50=  379.2 (raw   379.8, triton    0.6) us_p50=  19.0 scope_net=  398.3 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine isl=1024 rep=2 pi_net_p50=  377.8 (raw   378.3, triton    0.6) us_p50=  18.7 scope_net=  396.4 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] wrote /work/data/harness/sweep_rm_realmachine_20260923-190512.csv (15 rows)
+[pgrid] realmachine batch=1 rep=0 pi_net_p50=  370.3 (raw   370.9, triton    0.5) us_p50=  17.3 scope_net=  387.7 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=36.6s
+[pgrid] realmachine batch=1 rep=1 pi_net_p50=  383.3 (raw   383.8, triton    0.5) us_p50=  19.0 scope_net=  402.5 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine batch=1 rep=2 pi_net_p50=  379.1 (raw   379.7, triton    0.6) us_p50=  19.2 scope_net=  398.5 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=1 wall=0.0s
+[pgrid] realmachine batch=8 rep=0 pi_net_p50=  385.2 (raw   385.8, triton    0.6) us_p50=  31.4 scope_net=  416.6 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=8 wall=0.0s
+[pgrid] realmachine batch=8 rep=1 pi_net_p50=  385.1 (raw   385.7, triton    0.6) us_p50=  31.7 scope_net=  417.2 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=8 wall=0.0s
+[pgrid] realmachine batch=8 rep=2 pi_net_p50=  386.6 (raw   387.2, triton    0.6) us_p50=  32.0 scope_net=  418.6 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=8 wall=0.0s
+[pgrid] realmachine batch=16 rep=0 pi_net_p50=  391.0 (raw   391.6, triton    0.7) us_p50=  46.3 scope_net=  437.4 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=16 wall=0.0s
+[pgrid] realmachine batch=16 rep=1 pi_net_p50=  390.4 (raw   391.1, triton    0.7) us_p50=  45.1 scope_net=  435.9 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=16 wall=0.0s
+[pgrid] realmachine batch=16 rep=2 pi_net_p50=  390.7 (raw   391.3, triton    0.7) us_p50=  45.1 scope_net=  436.1 steps=62 pref=0/dec=62 MML=2048 blk/req=16 tok/step=16 wall=0.0s
+[pgrid] realmachine batch=32 rep=0 pi_net_p50=  399.8 (raw   400.4, triton    0.6) us_p50=  71.8 scope_net=  471.8 steps=64 pref=0/dec=64 MML=2048 blk/req=16 tok/step=32 wall=0.0s
+[pgrid] realmachine batch=32 rep=1 pi_net_p50=  401.0 (raw   401.7, triton    0.7) us_p50=  72.1 scope_net=  473.6 steps=64 pref=0/dec=64 MML=2048 blk/req=16 tok/step=32 wall=0.0s
+[pgrid] realmachine batch=32 rep=2 pi_net_p50=  400.0 (raw   400.6, triton    0.6) us_p50=  71.5 scope_net=  471.8 steps=64 pref=0/dec=64 MML=2048 blk/req=16 tok/step=32 wall=0.1s
+[pgrid] realmachine batch=64 rep=0 pi_net_p50=  413.0 (raw   413.6, triton    0.7) us_p50= 124.9 scope_net=  538.1 steps=66 pref=0/dec=66 MML=2048 blk/req=16 tok/step=64 wall=0.1s
+[pgrid] realmachine batch=64 rep=1 pi_net_p50=  413.8 (raw   414.5, triton    0.6) us_p50= 126.0 scope_net=  540.6 steps=66 pref=0/dec=66 MML=2048 blk/req=16 tok/step=64 wall=0.1s
+[pgrid] realmachine batch=64 rep=2 pi_net_p50=  419.3 (raw   420.0, triton    0.7) us_p50= 124.9 scope_net=  544.8 steps=66 pref=0/dec=66 MML=2048 blk/req=16 tok/step=64 wall=0.1s
+[pgrid] wrote /work/data/harness/sweep_rm64_realmachine_20260923-190556.csv (15 rows)
+[pgrid] realmachine batch=1 rep=0 pi_net_p50=  375.9 (raw   376.5, triton    0.6) us_p50=  18.5 scope_net=  394.8 steps=26869 pref=413/dec=26456 MML=2048 blk/req=16 tok/step=1 wall=49.2s
+[pgrid] wrote /work/data/harness/sweep_rmsteady_realmachine_20260923-190652.csv (1 rows)
+[run] phase phase_rm done

@@ -1,0 +1,227 @@
+{
+  "caliber_version": "prof-v1",
+  "kind": "self_overhead",
+  "perfdata": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke2_20260924-015215/passes/perf/perf.data",
+  "cmd": [
+    "perf",
+    "report",
+    "--stdio",
+    "--no-children",
+    "--sort",
+    "dso,symbol",
+    "-t",
+    "|",
+    "-i",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/smoke2_20260924-015215/passes/perf/perf.data"
+  ],
+  "header": {
+    "samples": "179  of event 'cycles:P'",
+    "lost_samples": "0",
+    "event_count": "649173235"
+  },
+  "total_symbols": 101,
+  "top": [
+    {
+      "overhead_pct": 7.43,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c95dc"
+    },
+    {
+      "overhead_pct": 7.21,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c8850"
+    },
+    {
+      "overhead_pct": 5.25,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c9594"
+    },
+    {
+      "overhead_pct": 4.66,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c8870"
+    },
+    {
+      "overhead_pct": 4.31,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x0000000000151d58"
+    },
+    {
+      "overhead_pct": 3.68,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c88ac"
+    },
+    {
+      "overhead_pct": 3.36,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c95e8"
+    },
+    {
+      "overhead_pct": 3.07,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c885c"
+    },
+    {
+      "overhead_pct": 2.71,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c95fc"
+    },
+    {
+      "overhead_pct": 2.56,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001118ac"
+    },
+    {
+      "overhead_pct": 1.89,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001a366c"
+    },
+    {
+      "overhead_pct": 1.87,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x000000000009aedc"
+    },
+    {
+      "overhead_pct": 1.82,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c95bc"
+    },
+    {
+      "overhead_pct": 1.56,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c9584"
+    },
+    {
+      "overhead_pct": 1.38,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x0000000000112438"
+    },
+    {
+      "overhead_pct": 1.34,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c8824"
+    },
+    {
+      "overhead_pct": 1.16,
+      "dso": "ld-linux-aarch64.so.1",
+      "symbol": "[.] 0x00000000000127a0"
+    },
+    {
+      "overhead_pct": 1.08,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001a0d50"
+    },
+    {
+      "overhead_pct": 1.08,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x000000000019fd5c"
+    },
+    {
+      "overhead_pct": 0.97,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c8898"
+    },
+    {
+      "overhead_pct": 0.94,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c8ce0"
+    },
+    {
+      "overhead_pct": 0.9,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001a3584"
+    },
+    {
+      "overhead_pct": 0.9,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c35a8"
+    },
+    {
+      "overhead_pct": 0.9,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001a300c"
+    },
+    {
+      "overhead_pct": 0.89,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c3584"
+    },
+    {
+      "overhead_pct": 0.89,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001a27c4"
+    },
+    {
+      "overhead_pct": 0.89,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x0000000000112448"
+    },
+    {
+      "overhead_pct": 0.89,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c95ec"
+    },
+    {
+      "overhead_pct": 0.89,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x000000000011427c"
+    },
+    {
+      "overhead_pct": 0.86,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001a35e8"
+    },
+    {
+      "overhead_pct": 0.76,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001142b8"
+    },
+    {
+      "overhead_pct": 0.71,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x000000000019fdbc"
+    },
+    {
+      "overhead_pct": 0.62,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001505fc"
+    },
+    {
+      "overhead_pct": 0.62,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x0000000000306800"
+    },
+    {
+      "overhead_pct": 0.59,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c95a8"
+    },
+    {
+      "overhead_pct": 0.59,
+      "dso": "libc.so.6",
+      "symbol": "[.] 0x000000000009aef0"
+    },
+    {
+      "overhead_pct": 0.57,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001a20ec"
+    },
+    {
+      "overhead_pct": 0.54,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001aa158"
+    },
+    {
+      "overhead_pct": 0.54,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001a190c"
+    },
+    {
+      "overhead_pct": 0.53,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "[.] 0x00000000001c8838"
+    }
+  ],
+  "sum_of_top_pct": 73.41,
+  "sum_all_pct": 100.05
+}

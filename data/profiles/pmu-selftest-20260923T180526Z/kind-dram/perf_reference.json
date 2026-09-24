@@ -1,0 +1,41 @@
+{
+  "cycles": 14502830383,
+  "instructions": 20900063005,
+  "running_pct": {
+    "cycles": null,
+    "instructions": null
+  },
+  "attempts": [
+    {
+      "cmd": [
+        "sudo",
+        "-n",
+        "perf",
+        "stat",
+        "-t",
+        "4180345",
+        "-e",
+        "cycles,instructions",
+        "--",
+        "sleep",
+        "5.000"
+      ],
+      "rc": 0,
+      "events": [
+        "cycles",
+        "instructions"
+      ],
+      "counts": {
+        "cycles": 14502830383,
+        "instructions": 20900063005
+      },
+      "running_pct": {
+        "cycles": null,
+        "instructions": null
+      },
+      "raw": "\n Performance counter stats for thread id '4180345':\n\n    14,502,830,383      cycles                                                                \n    20,900,063,005      instructions                     #    1.44  insn per cycle            \n\n       5.001246020 seconds time elapsed\n\n",
+      "timed_out": false
+    }
+  ],
+  "window_s": 5.0
+}

@@ -1,0 +1,12 @@
+mkdir -p build
+cc -O2 -g -std=gnu11 -Wall -Wextra -Wno-unused-parameter -fPIC -Iinclude -c -o build/kperfx_ctx.o src/kperfx_ctx.c
+cc -O2 -g -std=gnu11 -Wall -Wextra -Wno-unused-parameter -fPIC -Iinclude -c -o build/kperfx_events.o src/kperfx_events.c
+cc -O2 -g -std=gnu11 -Wall -Wextra -Wno-unused-parameter -fPIC -Iinclude -c -o build/kperfx_session.o src/kperfx_session.c
+cc -O2 -g -std=gnu11 -Wall -Wextra -Wno-unused-parameter -fPIC -Iinclude -c -o build/kperfx_probe.o src/kperfx_probe.c
+cc -O2 -g -std=gnu11 -Wall -Wextra -Wno-unused-parameter -fPIC -Iinclude -c -o build/kperfx_cli.o src/kperfx_cli.c
+cc -O2 -g -std=gnu11 -Wall -Wextra -Wno-unused-parameter -fPIC -Iinclude -Iexamples -c -o build/workloads.o examples/workloads.c
+cc -shared -o libkperfx.so build/kperfx_ctx.o build/kperfx_events.o build/kperfx_session.o build/kperfx_probe.o -lpthread -lm
+ar rcs libkperfx.a build/kperfx_ctx.o build/kperfx_events.o build/kperfx_session.o build/kperfx_probe.o
+cc -O2 -g -std=gnu11 -Wall -Wextra -Wno-unused-parameter -fPIC -Iinclude -Iexamples -o build/iter_gate_demo examples/iter_gate_demo.c build/workloads.o libkperfx.a -lpthread -lm
+cc -O2 -g -std=gnu11 -Wall -Wextra -Wno-unused-parameter -fPIC -Iinclude -Iexamples -o build/workload_gen examples/workload_gen.c build/workloads.o libkperfx.a -lpthread -lm
+cc -O2 -g -std=gnu11 -Wall -Wextra -Wno-unused-parameter -fPIC -Iinclude -o kperfx build/kperfx_cli.o libkperfx.a -lpthread -lm

@@ -1,0 +1,43 @@
+{
+  "raw": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s2-on-20260923T184335Z/raw.csv",
+  "worker_tid": 131,
+  "steps_total": 125,
+  "steps_analysed": 125,
+  "steps_dropped_as_warmup": 0,
+  "n_probe_names": 35,
+  "prepare_input_wall_us": {
+    "p50": 4176.28,
+    "p90": 4555.67,
+    "p99": 11675.83,
+    "mean": 33141.665,
+    "min": 157.25
+  },
+  "phases": [
+    "decode",
+    "prefill",
+    "prefill+decode",
+    "unknown"
+  ],
+  "unattributed_us_p50": 277.52,
+  "unattributed_pct_p50": 6.65,
+  "invariant_max_abs_residual_us": 0.0,
+  "probe_floor_us": null,
+  "scopes_below_probe_floor": [],
+  "cross_check_engine_steps": {
+    "source": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/runs/sub-s2-on-20260923T184335Z/lite-profiler/phase_timing.csv",
+    "column": "prepare_input",
+    "n_liteprofiler": 70,
+    "n_subscope": 125,
+    "liteprofiler_p50_us": 4122.01,
+    "subscope_p50_us": 4176.28,
+    "delta_pct": 1.32
+  },
+  "attn_builder": {
+    "scope": "pi: am.builder_build",
+    "incl_us_p50": 1028.7,
+    "children_accounted_us_p50": 0,
+    "residual_us_p50": 1028.7,
+    "breakdown_csv": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/subscope/sub-s2-on-20260923T184335Z/attn_builder_breakdown.csv",
+    "n_steps_with_builder": 123
+  }
+}

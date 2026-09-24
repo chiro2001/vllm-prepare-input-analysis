@@ -1,0 +1,13 @@
+pmu=920B backend=920B(counting)
+EVENTS CONFIDENCE   CYCLES         VERDICT
+1      1.0000       21000153       ok
+2      1.0000       21000921       ok
+3      1.0000       21000872       ok
+4      1.0000       21000154       ok
+5      1.0000       21000161       ok
+6      1.0000       21000158       ok
+7      1.0000       21000106       ok
+8      1.0000       21000183       ok
+9      0.0011       0              not scheduled
+10     0.0011       0              not scheduled
+group limit = 8 counter(s) per group (cached (/tmp/.kperfx-group-limit-2-0))

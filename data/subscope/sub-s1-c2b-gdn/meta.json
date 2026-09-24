@@ -1,0 +1,45 @@
+{
+  "raw": "data/subscope/sub-s1-c2b-gdn/raw.csv",
+  "worker_tid": 131,
+  "steps_total": 125,
+  "steps_analysed": 123,
+  "steps_dropped_as_warmup": 0,
+  "n_probe_names": 45,
+  "prepare_input_wall_us": {
+    "p50": 3096.33,
+    "p90": 3162.55,
+    "p99": 5231.69,
+    "mean": 3103.947,
+    "min": 178.07
+  },
+  "phases": [
+    "decode",
+    "prefill",
+    "unknown"
+  ],
+  "unattributed_us_p50": 207.57,
+  "unattributed_pct_p50": 6.7,
+  "invariant_max_abs_residual_us": 0.0,
+  "probe_floor_us": 2.2,
+  "scopes_below_probe_floor": [
+    "pi: am.build.fia_pad",
+    "pi: ubatch_slices",
+    "pi: am.build.attn_mask",
+    "pi: sanitize_placeholder_ids",
+    "pi: tokens_list",
+    "pi: in.mrope_drift"
+  ],
+  "builder_by_class": {
+    "csv": "data/subscope/sub-s1-c2b-gdn/builder_by_class.csv",
+    "total_us_p50": 944.82,
+    "note": "self_us is exclusive; the sum is the total time spent inside `pi: am.builder_build` (its own self_us is ~0 when the per-class probes are mounted)"
+  },
+  "attn_builder": {
+    "scope": "pi: am.builder_build",
+    "incl_us_p50": 1049.95,
+    "children_accounted_us_p50": 85.12,
+    "residual_us_p50": 964.83,
+    "breakdown_csv": "data/subscope/sub-s1-c2b-gdn/attn_builder_breakdown.csv",
+    "n_steps_with_builder": 121
+  }
+}

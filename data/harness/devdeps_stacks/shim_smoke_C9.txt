@@ -1,0 +1,6 @@
+# C9: Tensor.to('npu')
+# ok=True  0.08 ms
+# value: 'cpu'
+# exc: None
+# ---- traceback ----
+

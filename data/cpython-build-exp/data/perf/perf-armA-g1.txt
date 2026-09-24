@@ -1,0 +1,16 @@
+# started on Thu Sep 24 11:56:23 2026
+
+
+ Performance counter stats for 'taskset -c 200-203 env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONHASHSEED=0 LD_LIBRARY_PATH=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/build-armA/Python-3.12.13 PYTHONPATH=/home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/pydeps /home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/build-armA/Python-3.12.13/python /home/REMOTE_USER/projects/vllm/prepare-input-phase/exp-cpython/scripts/pi_sim_bench.py --steps 4000 --rounds 3 --reqs 64 --mode interleaved --label perf-armA-g1':
+
+     9,445,947,040      cycles                                                                
+    21,797,388,508      instructions                     #    2.31  insn per cycle            
+     4,770,834,742      branches                                                              
+        60,978,753      branch-misses                    #    1.28% of all branches           
+
+       3.304983260 seconds time elapsed
+
+       3.232820000 seconds user
+       0.023869000 seconds sys
+
+

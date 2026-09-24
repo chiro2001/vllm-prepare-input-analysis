@@ -1,0 +1,51 @@
+tag,ts,metric,value,source,note
+prof_calib2_arith,2026-09-24T02:16:50+0800,ipc,3.790244736073338,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib2_arith,2026-09-24T02:16:50+0800,time_enabled,4613490590,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib2_arith,2026-09-24T02:16:50+0800,time_running,4613490590,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib2_arith,2026-09-24T02:16:50+0800,confidence,1.0,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib2_arith,2026-09-24T02:16:50+0800,wall_s,4.717264,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib2_arith,2026-09-24T02:16:50+0800,counter.CPU_CYCLES,13378756206,pmu/count.json,libkperfx 区间增量
+prof_calib2_arith,2026-09-24T02:16:50+0800,counter.INST_RETIRED,50708760285,pmu/count.json,libkperfx 区间增量
+prof_calib2_arith,2026-09-24T02:16:50+0800,counter.INST_SPEC,54525691280,pmu/count.json,libkperfx 区间增量
+prof_calib2_arith,2026-09-24T02:16:50+0800,counter.BR_PRED,10989638798,pmu/count.json,libkperfx 区间增量
+prof_calib2_arith,2026-09-24T02:16:50+0800,counter.BR_MIS_PRED,45631598,pmu/count.json,libkperfx 区间增量
+prof_calib2_arith,2026-09-24T02:16:50+0800,counter.L1D_CACHE_REFILL,1522898,pmu/count.json,libkperfx 区间增量
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level1.retiring,64.88464959881311,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level1.bad_spec,4.960368591662135,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level1.frontend_bound,26.554848733609877,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level1.backend_bound,3.600133075914883,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level2.frontend.frontend_latency_bound,15.382882098584313,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level2.frontend.frontend_bandwidth_bound,11.171966635025564,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level2.backend.resource_bound,0.005462146243919366,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level2.backend.core_bound,3.5946709296709636,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level2.backend.mem_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level3_mem.mem_l1_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level3_mem.mem_l2_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level3_mem.mem_l3_dram_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level3_mem.mem_mem_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.level3_mem.mem_store_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.ooo_stall.rob_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.ooo_stall.ptag_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.ooo_stall.mapq_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.ooo_stall.pcbuf_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,topdown.ooo_stall.other_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] _PyObject_Free,24.53,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] _PyObject_Malloc,21.23,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] _PyEval_EvalFrameDefault,11.23,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] long_bitwise,4.96,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] k_mul,4.79,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] long_dealloc,3.03,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] PyErr_CheckSignals,2.86,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] x_add,2.7,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] long_rshift1,2.26,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] PyNumber_InPlaceXor,2.22,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] _PyLong_New,2.2,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] PyObject_Free,2.13,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] _Py_NewReference,2.1,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] PyObject_Malloc,1.5,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] PyNumber_Rshift,1.42,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] _PyLong_Add,1.12,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] PyNumber_And,1.05,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] _PyLong_Multiply,0.94,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] long_xor,0.92,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib2_arith,2026-09-24T02:16:50+0800,hotspot.[.] PyLong_FromLong,0.76,perf/hotspots.json,libpython3.12.so.1.0

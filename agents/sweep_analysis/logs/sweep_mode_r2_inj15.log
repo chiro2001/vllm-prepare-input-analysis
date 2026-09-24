@@ -1,0 +1,14 @@
+[run] 2026-09-24T02:59:10+08:00 :: --batch 16 --isl 1024 --steps 200 --slot-mapping-mode inject:15 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/harness/pi_harness/runner/cli.py", line 239, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/work/harness/pi_harness/runner/cli.py", line 221, in main
+    cfg = cfg_from_args(a)
+          ^^^^^^^^^^^^^^^^
+  File "/work/harness/pi_harness/runner/cli.py", line 121, in cfg_from_args
+    if a.num_spec_tokens is not None:
+       ^^^^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'num_spec_tokens'

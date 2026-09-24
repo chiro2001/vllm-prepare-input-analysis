@@ -1,0 +1,6 @@
+# C13 torch.zeros(pin_memory=True)
+# ok=True
+# value='(4,)'
+# exc=None
+# tb
+

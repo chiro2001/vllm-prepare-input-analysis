@@ -1,0 +1,6 @@
+# C8: Tensor.npu()
+# ok=True  0.03 ms
+# value: {'device': 'cpu', 'type': 'Tensor'}
+# exc: None
+# ---- traceback ----
+

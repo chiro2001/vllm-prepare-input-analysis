@@ -1,0 +1,153 @@
+# step_id     : A8_device_runtime_probes
+# title       : 运行时设备交互探针：逐条独立子进程调用 torch.npu.* / torch_npu.*（记录 aclInit 失败点）
+# cwd         : /work
+# returncode  : 0
+# duration_s  : 163.70
+# extra env   : {}
+# env overrides: {}
+# ---- COMMAND (python -c) ----
+import json, os, subprocess, sys, textwrap
+
+CHILD = textwrap.dedent(r"""
+import json, os, sys, traceback
+import torch, torch_npu
+expr = os.environ["PI_PROBE_EXPR"]
+g = {"torch": torch, "torch_npu": torch_npu}
+frame_depth = 0
+try:
+    v = eval(expr, g)
+    rec = {"ok": True, "value": repr(v)[:200]}
+except BaseException as e:
+    tb = traceback.format_exc().splitlines()
+    frames = [l.strip() for l in tb if l.strip().startswith("File ")]
+    rec = {"ok": False, "exc": f"{type(e).__name__}: {e}"[:400],
+           "raise_site": frames[-1][:240] if frames else ""}
+sys.stdout.write("__RESULT__" + json.dumps(rec) + "\n")
+""")
+
+PROBES = [
+    ("torch.npu.is_available()",                      "torch.npu.is_available()"),
+    ("torch.npu.device_count()",                      "torch.npu.device_count()"),
+    ("torch.npu.current_device()",                    "torch.npu.current_device()"),
+    ("torch.npu.get_device_name(0)",                  "torch.npu.get_device_name(0)"),
+    ("torch.npu.get_device_properties(0)",            "torch.npu.get_device_properties(0)"),
+    ("torch.npu.current_stream()",                    "torch.npu.current_stream()"),
+    ("torch.npu.default_stream()",                    "torch.npu.default_stream()"),
+    ("torch.npu.Stream()",                            "torch.npu.Stream()"),
+    ("torch.npu.Event()",                             "torch.npu.Event()"),
+    ("torch.npu.Event(enable_timing=True)",           "torch.npu.Event(enable_timing=True)"),
+    ("torch.npu.ExternalEvent()",                     "torch.npu.ExternalEvent()"),
+    ("torch.npu.synchronize()",                       "torch.npu.synchronize()"),
+    ("torch.npu.mem_get_info()",                      "torch.npu.mem_get_info()"),
+    ("torch.npu.empty_cache()",                       "torch.npu.empty_cache()"),
+    ("torch.npu.memory_allocated()",                  "torch.npu.memory_allocated()"),
+    ("torch.npu.set_device(0)",                       "torch.npu.set_device(0)"),
+    ("torch.npu.is_current_stream_capturing()",       "torch.npu.is_current_stream_capturing()"),
+    ("torch.npu.config.allow_internal_format=True",   "setattr(torch.npu.config,'allow_internal_format',True)"),
+    ("torch.zeros(4, device='npu')",                  "torch.zeros(4, device='npu')"),
+    ("torch.zeros(4, device='npu:0')",                "torch.zeros(4, device='npu:0')"),
+    ("torch.zeros(4).npu()",                          "torch.zeros(4).npu()"),
+    ("torch.zeros(4).to('npu')",                      "torch.zeros(4).to('npu')"),
+    ("torch.zeros(4, pin_memory=True)",               "torch.zeros(4, pin_memory=True)"),
+    ("hasattr(torch.Tensor,'npu')",                   "hasattr(torch.Tensor,'npu')"),
+    ("torch_npu.npu.is_available()",                  "torch_npu.npu.is_available()"),
+    ("torch_npu.npu.current_device()",                "torch_npu.npu.current_device()"),
+    ("torch_npu.utils.get_cann_version()",            "__import__('torch_npu.utils',fromlist=['x']).get_cann_version()"),
+    ("import acl",                                    "__import__('acl').__name__"),
+    ("import torch_npu.profiler.dynamic_profile",     "__import__('torch_npu.profiler.dynamic_profile',fromlist=['x']).__name__"),
+    ("import torch_npu.op_plugin.atb._atb_ops",       "__import__('torch_npu.op_plugin.atb._atb_ops',fromlist=['x']).__name__"),
+]
+
+results = []
+for name, expr in PROBES:
+    env = dict(os.environ, PI_PROBE_EXPR=expr)
+    try:
+        p = subprocess.run([sys.executable, "-c", CHILD], capture_output=True,
+                           text=True, env=env, timeout=180)
+        rc, out, err = p.returncode, p.stdout, p.stderr
+    except subprocess.TimeoutExpired:
+        rc, out, err = -999, "", "(timeout>180s)"
+    rec = {"api": name, "child_rc": rc}
+    for line in out.splitlines():
+        if line.startswith("__RESULT__"):
+            rec.update(json.loads(line[len("__RESULT__"):]))
+    if "ok" not in rec:
+        rec["ok"] = False
+        rec["exc"] = f"subprocess died rc={rc} (signal/crash)" if rc < 0 else "no result"
+        rec["stderr_tail"] = "\n".join(err.strip().splitlines()[-6:])[:500]
+    results.append(rec)
+    print(json.dumps(rec, ensure_ascii=False), flush=True)
+
+print("\n=== SUMMARY (api / ok / detail) ===", flush=True)
+for r in results:
+    print(f"{'OK  ' if r['ok'] else 'FAIL'} {r['api']:44s} "
+          f"{(r.get('value') or r.get('exc') or '')[:120]}", flush=True)
+# ---- STDOUT ----
+{"api": "torch.npu.is_available()", "child_rc": 0, "ok": true, "value": "False"}
+{"api": "torch.npu.device_count()", "child_rc": 0, "ok": true, "value": "0"}
+{"api": "torch.npu.current_device()", "child_rc": 0, "ok": false, "exc": "RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008\n[ERROR] 2026-09-23-17:47:48 (PID:75, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Failed to obtain the SOC version. \n        Rectify the fault based on the error information in the ascend log.\n[PID: 75] 2026-09-23-17:47:48.455.109 Invalid_Argument(EE", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 273, in _lazy_init"}
+{"api": "torch.npu.get_device_name(0)", "child_rc": 0, "ok": false, "exc": "AssertionError: Invalid device id\n[ERROR] 2026-09-23-17:47:53 (PID:82, Device:-1, RankID:-1) ERR00003 PTA invalid value", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 483, in get_device_name"}
+{"api": "torch.npu.get_device_properties(0)", "child_rc": 0, "ok": false, "exc": "AssertionError: Invalid device id\n[ERROR] 2026-09-23-17:47:58 (PID:86, Device:-1, RankID:-1) ERR00003 PTA invalid value", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 490, in get_device_properties"}
+{"api": "torch.npu.current_stream()", "child_rc": 0, "ok": false, "exc": "RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008\n[ERROR] 2026-09-23-17:48:04 (PID:90, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Failed to obtain the SOC version. \n        Rectify the fault based on the error information in the ascend log.\n[PID: 90] 2026-09-23-17:48:04.367.557 Invalid_Argument(EE", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 273, in _lazy_init"}
+{"api": "torch.npu.default_stream()", "child_rc": 0, "ok": false, "exc": "RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008\n[ERROR] 2026-09-23-17:48:10 (PID:97, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Failed to obtain the SOC version. \n        Rectify the fault based on the error information in the ascend log.\n[PID: 97] 2026-09-23-17:48:10.234.458 Invalid_Argument(EE", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 273, in _lazy_init"}
+{"api": "torch.npu.Stream()", "child_rc": 0, "ok": false, "exc": "TypeError: '<' not supported between instances of 'NoneType' and 'int'", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/utils.py\", line 112, in __enter__"}
+{"api": "torch.npu.Event()", "child_rc": 0, "ok": true, "value": "<torch_npu.npu.Event uninitialized>"}
+{"api": "torch.npu.Event(enable_timing=True)", "child_rc": 0, "ok": true, "value": "<torch_npu.npu.Event uninitialized>"}
+{"api": "torch.npu.ExternalEvent()", "child_rc": 0, "ok": false, "exc": "RuntimeError: LazySetDevice:../torch_npu/csrc/core/npu/NPUFunctions.cpp:366 NPU function error: err, error code is 107001\n[ERROR] 2026-09-23-17:48:30 (PID:116, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Invalid device ID.\n        Check whether the device ID is valid.\n[PID: 116] 2026-09-23-17:48:30.800.441 Invalid_Argument(EE1003): Specifying the device used for computation by t", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/streams.py\", line 228, in __new__"}
+{"api": "torch.npu.synchronize()", "child_rc": 0, "ok": false, "exc": "RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008\n[ERROR] 2026-09-23-17:48:36 (PID:120, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Failed to obtain the SOC version. \n        Rectify the fault based on the error information in the ascend log.\n[PID: 120] 2026-09-23-17:48:36.127.212 Invalid_Argument(", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 273, in _lazy_init"}
+{"api": "torch.npu.mem_get_info()", "child_rc": 0, "ok": false, "exc": "RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008\n[ERROR] 2026-09-23-17:48:41 (PID:127, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Failed to obtain the SOC version. \n        Rectify the fault based on the error information in the ascend log.\n[PID: 127] 2026-09-23-17:48:41.962.637 Invalid_Argument(", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 273, in _lazy_init"}
+{"api": "torch.npu.empty_cache()", "child_rc": 0, "ok": true, "value": "None"}
+{"api": "torch.npu.memory_allocated()", "child_rc": 0, "ok": true, "value": "0"}
+{"api": "torch.npu.set_device(0)", "child_rc": 0, "ok": false, "exc": "RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008\n[ERROR] 2026-09-23-17:48:57 (PID:142, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Failed to obtain the SOC version. \n        Rectify the fault based on the error information in the ascend log.\n[PID: 142] 2026-09-23-17:48:57.845.716 Invalid_Argument(", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 273, in _lazy_init"}
+{"api": "torch.npu.is_current_stream_capturing()", "child_rc": 0, "ok": true, "value": "False"}
+{"api": "torch.npu.config.allow_internal_format=True", "child_rc": 0, "ok": true, "value": "None"}
+{"api": "torch.zeros(4, device='npu')", "child_rc": 0, "ok": false, "exc": "RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008\n[ERROR] 2026-09-23-17:49:14 (PID:157, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Failed to obtain the SOC version. \n        Rectify the fault based on the error information in the ascend log.\n[PID: 157] 2026-09-23-17:49:14.038.729 Invalid_Argument(", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 273, in _lazy_init"}
+{"api": "torch.zeros(4, device='npu:0')", "child_rc": 0, "ok": false, "exc": "RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008\n[ERROR] 2026-09-23-17:49:19 (PID:164, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Failed to obtain the SOC version. \n        Rectify the fault based on the error information in the ascend log.\n[PID: 164] 2026-09-23-17:49:19.893.643 Invalid_Argument(", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 273, in _lazy_init"}
+{"api": "torch.zeros(4).npu()", "child_rc": 0, "ok": false, "exc": "RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008\n[ERROR] 2026-09-23-17:49:25 (PID:171, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Failed to obtain the SOC version. \n        Rectify the fault based on the error information in the ascend log.\n[PID: 171] 2026-09-23-17:49:25.915.660 Invalid_Argument(", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 273, in _lazy_init"}
+{"api": "torch.zeros(4).to('npu')", "child_rc": 0, "ok": false, "exc": "RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008\n[ERROR] 2026-09-23-17:49:31 (PID:178, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Failed to obtain the SOC version. \n        Rectify the fault based on the error information in the ascend log.\n[PID: 178] 2026-09-23-17:49:31.759.285 Invalid_Argument(", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 273, in _lazy_init"}
+{"api": "torch.zeros(4, pin_memory=True)", "child_rc": 0, "ok": false, "exc": "RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008\n[ERROR] 2026-09-23-17:49:37 (PID:185, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Failed to obtain the SOC version. \n        Rectify the fault based on the error information in the ascend log.\n[PID: 185] 2026-09-23-17:49:37.823.700 Invalid_Argument(", "raise_site": "File \"<string>\", line 1, in <module>"}
+{"api": "hasattr(torch.Tensor,'npu')", "child_rc": 0, "ok": true, "value": "True"}
+{"api": "torch_npu.npu.is_available()", "child_rc": 0, "ok": true, "value": "False"}
+{"api": "torch_npu.npu.current_device()", "child_rc": 0, "ok": false, "exc": "RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error code is 507008\n[ERROR] 2026-09-23-17:49:54 (PID:200, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: Failed to obtain the SOC version. \n        Rectify the fault based on the error information in the ascend log.\n[PID: 200] 2026-09-23-17:49:54.680.087 Invalid_Argument(", "raise_site": "File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/npu/__init__.py\", line 273, in _lazy_init"}
+{"api": "torch_npu.utils.get_cann_version()", "child_rc": 0, "ok": true, "value": "'9.1.0'"}
+{"api": "import acl", "child_rc": 0, "ok": true, "value": "'acl'"}
+{"api": "import torch_npu.profiler.dynamic_profile", "child_rc": 0, "ok": true, "value": "'torch_npu.profiler.dynamic_profile'"}
+{"api": "import torch_npu.op_plugin.atb._atb_ops", "child_rc": 0, "ok": true, "value": "'torch_npu.op_plugin.atb._atb_ops'"}
+
+=== SUMMARY (api / ok / detail) ===
+OK   torch.npu.is_available()                     False
+OK   torch.npu.device_count()                     0
+FAIL torch.npu.current_device()                   RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error cod
+FAIL torch.npu.get_device_name(0)                 AssertionError: Invalid device id
+[ERROR] 2026-09-23-17:47:53 (PID:82, Device:-1, RankID:-1) ERR00003 PTA invalid value
+FAIL torch.npu.get_device_properties(0)           AssertionError: Invalid device id
+[ERROR] 2026-09-23-17:47:58 (PID:86, Device:-1, RankID:-1) ERR00003 PTA invalid value
+FAIL torch.npu.current_stream()                   RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error cod
+FAIL torch.npu.default_stream()                   RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error cod
+FAIL torch.npu.Stream()                           TypeError: '<' not supported between instances of 'NoneType' and 'int'
+OK   torch.npu.Event()                            <torch_npu.npu.Event uninitialized>
+OK   torch.npu.Event(enable_timing=True)          <torch_npu.npu.Event uninitialized>
+FAIL torch.npu.ExternalEvent()                    RuntimeError: LazySetDevice:../torch_npu/csrc/core/npu/NPUFunctions.cpp:366 NPU function error: err, error code is 10700
+FAIL torch.npu.synchronize()                      RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error cod
+FAIL torch.npu.mem_get_info()                     RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error cod
+OK   torch.npu.empty_cache()                      None
+OK   torch.npu.memory_allocated()                 0
+FAIL torch.npu.set_device(0)                      RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error cod
+OK   torch.npu.is_current_stream_capturing()      False
+OK   torch.npu.config.allow_internal_format=True  None
+FAIL torch.zeros(4, device='npu')                 RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error cod
+FAIL torch.zeros(4, device='npu:0')               RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error cod
+FAIL torch.zeros(4).npu()                         RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error cod
+FAIL torch.zeros(4).to('npu')                     RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error cod
+FAIL torch.zeros(4, pin_memory=True)              RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error cod
+OK   hasattr(torch.Tensor,'npu')                  True
+OK   torch_npu.npu.is_available()                 False
+FAIL torch_npu.npu.current_device()               RuntimeError: Initialize:../torch_npu/csrc/core/npu/sys_ctrl/npu_sys_ctrl.cpp:165 NPU function error: aclInit, error cod
+OK   torch_npu.utils.get_cann_version()           '9.1.0'
+OK   import acl                                   'acl'
+OK   import torch_npu.profiler.dynamic_profile    'torch_npu.profiler.dynamic_profile'
+OK   import torch_npu.op_plugin.atb._atb_ops      'torch_npu.op_plugin.atb._atb_ops'
+
+# ---- STDERR ----
+
+# ---- END ----

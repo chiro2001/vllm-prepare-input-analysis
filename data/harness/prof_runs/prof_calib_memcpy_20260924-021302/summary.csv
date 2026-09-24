@@ -1,0 +1,51 @@
+tag,ts,metric,value,source,note
+prof_calib_memcpy,2026-09-24T02:13:36+0800,ipc,2.6616351227518527,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_memcpy,2026-09-24T02:13:36+0800,time_enabled,3687730440,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_memcpy,2026-09-24T02:13:36+0800,time_running,3687730440,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_memcpy,2026-09-24T02:13:36+0800,confidence,1.0,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_memcpy,2026-09-24T02:13:36+0800,wall_s,3.714257,pmu/count.json,CPU busy cycles 口径，不是 wall time
+prof_calib_memcpy,2026-09-24T02:13:36+0800,counter.CPU_CYCLES,10694169340,pmu/count.json,libkperfx 区间增量
+prof_calib_memcpy,2026-09-24T02:13:36+0800,counter.INST_RETIRED,28463976724,pmu/count.json,libkperfx 区间增量
+prof_calib_memcpy,2026-09-24T02:13:36+0800,counter.INST_SPEC,28737763675,pmu/count.json,libkperfx 区间增量
+prof_calib_memcpy,2026-09-24T02:13:36+0800,counter.BR_PRED,3918431501,pmu/count.json,libkperfx 区间增量
+prof_calib_memcpy,2026-09-24T02:13:36+0800,counter.BR_MIS_PRED,3958093,pmu/count.json,libkperfx 区间增量
+prof_calib_memcpy,2026-09-24T02:13:36+0800,counter.L1D_CACHE_REFILL,286391415,pmu/count.json,libkperfx 区间增量
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level1.retiring,40.72224849761616,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level1.bad_spec,0.41341648414111326,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level1.frontend_bound,7.901662636704608,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level1.backend_bound,50.96267238153812,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level2.frontend.frontend_latency_bound,2.372556437784408,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level2.frontend.frontend_bandwidth_bound,5.5291061989202,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level2.backend.resource_bound,2.7310874491434585,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level2.backend.core_bound,48.23158493239466,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level2.backend.mem_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level3_mem.mem_l1_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level3_mem.mem_l2_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level3_mem.mem_l3_dram_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level3_mem.mem_mem_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.level3_mem.mem_store_bound,0.0,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.ooo_stall.rob_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.ooo_stall.ptag_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.ooo_stall.mapq_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.ooo_stall.pcbuf_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,topdown.ooo_stall.other_stall_pct,,pmu/topdown.json,百分点（占 dispatch slots = 6*cycles）
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] 0x0000000000099b4c,45.29,perf/hotspots.json,libc.so.6
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] 0x0000000000099b44,31.46,perf/hotspots.json,libc.so.6
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] _PyEval_EvalFrameDefault,4.12,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] 0x0000000000099b5c,4.1,perf/hotspots.json,libc.so.6
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] 0x0000000000099b48,2.74,perf/hotspots.json,libc.so.6
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] _PyObject_Malloc,1.68,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] slice_dealloc,1.38,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] _PyObject_Free,1.28,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] 0x0000000000099b40,0.98,perf/hotspots.json,libc.so.6
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] PyObject_GetItem,0.81,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] PyObject_SetItem,0.69,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] PyNumber_And,0.63,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] bytearray_ass_subscript,0.57,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] 0x0000000000099a40,0.57,perf/hotspots.json,libc.so.6
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] _PyBuildSlice_ConsumeRefs,0.41,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] PySlice_Unpack,0.27,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] bytearray_subscript,0.25,perf/hotspots.json,libpython3.12.so.1.0
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] 0x0000000000099b70,0.24,perf/hotspots.json,libc.so.6
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] 0x0000000000099b28,0.24,perf/hotspots.json,libc.so.6
+prof_calib_memcpy,2026-09-24T02:13:36+0800,hotspot.[.] PyNumber_AsSsize_t,0.22,perf/hotspots.json,libpython3.12.so.1.0

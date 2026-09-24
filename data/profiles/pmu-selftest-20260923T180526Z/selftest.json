@@ -1,0 +1,142 @@
+{
+  "schema": "pi-pmu-selftest-v1",
+  "stamp": "20260923T180526Z",
+  "cpu": 200,
+  "workload": "libkperfx workload_gen --kind alu",
+  "pid": 4160169,
+  "tid": 4160170,
+  "groups": [
+    1,
+    2,
+    3,
+    7,
+    8
+  ],
+  "sweep_window_s": 5.0,
+  "perf_window_s": 5.0,
+  "target": {
+    "tid": 4160170,
+    "comm": "workload_gen",
+    "state": "R",
+    "cpu": 200,
+    "cpus_allowed": [
+      200
+    ]
+  },
+  "tid_selection": {
+    "source": "schedstat_runtime_ns",
+    "delta": {
+      "4160169": 0,
+      "4160170": 398753820
+    }
+  },
+  "perf": {
+    "cycles": 14501769283,
+    "instructions": 19238718943,
+    "running_pct": {
+      "cycles": null,
+      "instructions": null
+    },
+    "attempts": [
+      {
+        "cmd": [
+          "sudo",
+          "-n",
+          "perf",
+          "stat",
+          "-t",
+          "4160170",
+          "-e",
+          "cycles,instructions",
+          "--",
+          "sleep",
+          "5.000"
+        ],
+        "rc": 0,
+        "events": [
+          "cycles",
+          "instructions"
+        ],
+        "counts": {
+          "cycles": 14501769283,
+          "instructions": 19238718943
+        },
+        "running_pct": {
+          "cycles": null,
+          "instructions": null
+        },
+        "raw": "\n Performance counter stats for thread id '4160170':\n\n    14,501,769,283      cycles                                                                \n    19,238,718,943      instructions                     #    1.33  insn per cycle            \n\n       5.001083410 seconds time elapsed\n\n",
+        "timed_out": false
+      }
+    ],
+    "window_s": 5.0
+  },
+  "sweep": {
+    "rc": 0,
+    "dir": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/sweep-g12378-w5",
+    "cpu_cycles": 14498074842,
+    "inst_retired": 19278219558,
+    "ipc": 1.3297089281228032,
+    "cpi": 0.7520442849186063,
+    "cpu_ghz": 2.899928456466001,
+    "per_group_confidence": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "7": 1.0,
+      "8": 1.0
+    },
+    "manifest": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/sweep-g12378-w5/manifest.json"
+  },
+  "comparison": [
+    {
+      "metric": "cycles",
+      "perf": 14501769283,
+      "kperfx": 14498074842,
+      "rel_err": 0.00025475794904080323,
+      "measured": true,
+      "pass_5pct": true
+    },
+    {
+      "metric": "instructions",
+      "perf": 19238718943,
+      "kperfx": 19278219558,
+      "rel_err": 0.00205318322477871,
+      "measured": true,
+      "pass_5pct": true
+    }
+  ],
+  "full9": {
+    "rc": 0,
+    "dir": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/full9-w3",
+    "all_confident": true,
+    "min_confidence": 1.0,
+    "per_group_confidence": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0,
+      "6": 1.0,
+      "7": 1.0,
+      "8": 1.0,
+      "9": 1.0
+    },
+    "low_confidence_groups": [],
+    "zero_counting_events": [
+      "CPU_MIGRATIONS",
+      "DRAM_LOCAL",
+      "DRAM_REMOTE",
+      "DRAM_REMOTE_CACHE",
+      "LD_CANCEL_LQ_FULL",
+      "MEMSTALL_L3MISS",
+      "PAGE_FAULTS",
+      "VFP_MPQ_STALL",
+      "VFP_PAIR_PTAG_STALL",
+      "VFP_SINGLE_PTAG_STALL",
+      "VPD_PTAG_STALL"
+    ],
+    "wall_s": 28.413
+  },
+  "verdict_ok": true
+}

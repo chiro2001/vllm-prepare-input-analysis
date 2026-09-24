@@ -1,0 +1,667 @@
+[
+  {
+    "tag": "_test",
+    "rc": 0,
+    "point": {
+      "schema": "pi-point-v1",
+      "run_id": "_pipeline_test",
+      "tag": "_test",
+      "group": "R",
+      "workload": {
+        "requests": 1,
+        "concurrency": 1,
+        "prompt_tokens_target": 128,
+        "max_tokens": 64,
+        "rounds": 1
+      },
+      "service": {
+        "server": {}
+      },
+      "ec": {},
+      "cpu": {
+        "on_cpu_ratio": 0.95
+      },
+      "rounds": [
+        {
+          "aggregate": {
+            "ttft_s_mean": 0.12,
+            "output_tps_aggregate": 200.0,
+            "mean_itl_ms": 5.0
+          }
+        }
+      ],
+      "phases": {
+        "summary": {
+          "by_phase": {
+            "all": {
+              "coverage": {
+                "ratio_of_step_dur": 1.064,
+                "sum_measured_mean_us": 5693.686
+              },
+              "draft_token": {
+                "max_us": 3.33,
+                "mean_us": 2.691,
+                "min_us": 2.31,
+                "n": 62,
+                "p50_us": 2.56,
+                "p90_us": 3.147,
+                "p99_us": 3.318,
+                "sum_us": 166.83
+              },
+              "forward": {
+                "max_us": 1189.44,
+                "mean_us": 1084.158,
+                "min_us": 881.04,
+                "n": 62,
+                "p50_us": 1099.43,
+                "p90_us": 1128.983,
+                "p99_us": 1170.664,
+                "sum_us": 67217.82
+              },
+              "n_steps": 64,
+              "post process": {
+                "max_us": 396.82,
+                "mean_us": 167.488,
+                "min_us": 113.82,
+                "n": 62,
+                "p50_us": 117.405,
+                "p90_us": 368.761,
+                "p99_us": 395.155,
+                "sum_us": 10384.26
+              },
+              "prepare input": {
+                "max_us": 4297.48,
+                "mean_us": 3874.838,
+                "min_us": 221.06,
+                "n": 64,
+                "p50_us": 4088.565,
+                "p90_us": 4180.231,
+                "p99_us": 4277.188,
+                "sum_us": 247989.62
+              },
+              "sample_token": {
+                "max_us": 413.14,
+                "mean_us": 154.657,
+                "min_us": 106.65,
+                "n": 62,
+                "p50_us": 110.52,
+                "p90_us": 395.244,
+                "p99_us": 410.676,
+                "sum_us": 9588.72
+              },
+              "step_dur": {
+                "mean_us": 5351.794,
+                "p50_us": 5569.74,
+                "p90_us": 5693.216,
+                "p99_us": 5875.556
+              }
+            },
+            "decode": {
+              "coverage": {
+                "ratio_of_step_dur": 1.059,
+                "sum_measured_mean_us": 5751.682
+              },
+              "draft_token": {
+                "max_us": 3.33,
+                "mean_us": 2.691,
+                "min_us": 2.31,
+                "n": 62,
+                "p50_us": 2.56,
+                "p90_us": 3.147,
+                "p99_us": 3.318,
+                "sum_us": 166.83
+              },
+              "forward": {
+                "max_us": 1189.44,
+                "mean_us": 1084.158,
+                "min_us": 881.04,
+                "n": 62,
+                "p50_us": 1099.43,
+                "p90_us": 1128.983,
+                "p99_us": 1170.664,
+                "sum_us": 67217.82
+              },
+              "n_steps": 63,
+              "post process": {
+                "max_us": 396.82,
+                "mean_us": 167.488,
+                "min_us": 113.82,
+                "n": 62,
+                "p50_us": 117.405,
+                "p90_us": 368.761,
+                "p99_us": 395.155,
+                "sum_us": 10384.26
+              },
+              "prepare input": {
+                "max_us": 4297.48,
+                "mean_us": 3932.834,
+                "min_us": 281.56,
+                "n": 63,
+                "p50_us": 4090.98,
+                "p90_us": 4181.954,
+                "p99_us": 4277.51,
+                "sum_us": 247768.56
+              },
+              "sample_token": {
+                "max_us": 413.14,
+                "mean_us": 154.657,
+                "min_us": 106.65,
+                "n": 62,
+                "p50_us": 110.52,
+                "p90_us": 395.244,
+                "p99_us": 410.676,
+                "sum_us": 9588.72
+              },
+              "step_dur": {
+                "mean_us": 5429.927,
+                "p50_us": 5570.47,
+                "p90_us": 5694.384,
+                "p99_us": 5875.891
+              }
+            },
+            "idle": {
+              "coverage": {
+                "ratio_of_step_dur": 0.515,
+                "sum_measured_mean_us": 221.06
+              },
+              "draft_token": {
+                "n": 0
+              },
+              "forward": {
+                "n": 0
+              },
+              "n_steps": 1,
+              "post process": {
+                "n": 0
+              },
+              "prepare input": {
+                "max_us": 221.06,
+                "mean_us": 221.06,
+                "min_us": 221.06,
+                "n": 1,
+                "p50_us": 221.06,
+                "p90_us": 221.06,
+                "p99_us": 221.06,
+                "sum_us": 221.06
+              },
+              "sample_token": {
+                "n": 0
+              },
+              "step_dur": {
+                "mean_us": 429.37,
+                "p50_us": 429.37,
+                "p90_us": 429.37,
+                "p99_us": 429.37
+              }
+            }
+          },
+          "lite_log": "data/measure/_pipeline_test/points/_test/lite.log",
+          "malformed": 0,
+          "n_steps": 66,
+          "orphans": 652,
+          "rows": 982,
+          "schema": "pi-lite-summary-v1",
+          "scope_inventory": [
+            {
+              "mean_us": 6876.2,
+              "n": 66,
+              "p50_us": 5605.67,
+              "p90_us": 5742.375,
+              "scope": "Step:Model",
+              "sum_us": 453829.22
+            },
+            {
+              "mean_us": 3967.576,
+              "n": 66,
+              "p50_us": 4088.565,
+              "p90_us": 4186.73,
+              "scope": "prepare input",
+              "sum_us": 261860.0
+            },
+            {
+              "mean_us": 2500.855,
+              "n": 64,
+              "p50_us": 1099.43,
+              "p90_us": 1130.468,
+              "scope": "forward",
+              "sum_us": 160054.71
+            },
+            {
+              "mean_us": 334.914,
+              "n": 65,
+              "p50_us": 323.09,
+              "p90_us": 521.412,
+              "scope": "Step:Schedule",
+              "sum_us": 21769.41
+            },
+            {
+              "mean_us": 166.312,
+              "n": 64,
+              "p50_us": 117.405,
+              "p90_us": 368.583,
+              "scope": "post process",
+              "sum_us": 10643.96
+            },
+            {
+              "mean_us": 153.595,
+              "n": 64,
+              "p50_us": 110.52,
+              "p90_us": 391.132,
+              "scope": "sample_token",
+              "sum_us": 9830.07
+            },
+            {
+              "mean_us": 81.347,
+              "n": 64,
+              "p50_us": 48.475,
+              "p90_us": 192.367,
+              "scope": "async_state_update",
+              "sum_us": 5206.19
+            },
+            {
+              "mean_us": 40.854,
+              "n": 65,
+              "p50_us": 39.05,
+              "p90_us": 43.006,
+              "scope": "Step:Output",
+              "sum_us": 2655.52
+            },
+            {
+              "mean_us": 39.805,
+              "n": 63,
+              "p50_us": 39.16,
+              "p90_us": 40.684,
+              "scope": "schedule: allocate_slots",
+              "sum_us": 2507.71
+            },
+            {
+              "mean_us": 11.18,
+              "n": 65,
+              "p50_us": 10.7,
+              "p90_us": 12.246,
+              "scope": "schedule: make_cached_request_data",
+              "sum_us": 726.73
+            },
+            {
+              "mean_us": 7.401,
+              "n": 65,
+              "p50_us": 7.17,
+              "p90_us": 7.796,
+              "scope": "schedule: update_after_schedule",
+              "sum_us": 481.05
+            },
+            {
+              "mean_us": 2.684,
+              "n": 64,
+              "p50_us": 2.555,
+              "p90_us": 3.141,
+              "scope": "draft_token",
+              "sum_us": 171.75
+            },
+            {
+              "mean_us": 2.348,
+              "n": 65,
+              "p50_us": 2.27,
+              "p90_us": 2.76,
+              "scope": "schedule: get_num_common_prefix_blocks",
+              "sum_us": 152.63
+            },
+            {
+              "mean_us": 28.79,
+              "n": 1,
+              "p50_us": 28.79,
+              "p90_us": 28.79,
+              "scope": "Input:Process",
+              "sum_us": 28.79
+            }
+          ],
+          "selected_tid": 131,
+          "share": {
+            "all": {
+              "prepare_over_step_mean": 0.722,
+              "prepare_over_step_p50": 0.736
+            },
+            "decode": {
+              "prepare_over_step_mean": 0.725,
+              "prepare_over_step_p50": 0.736
+            },
+            "idle": {
+              "prepare_over_step_mean": 0.515,
+              "prepare_over_step_p50": 0.515
+            }
+          },
+          "steps_by_phase": {
+            "decode": 63,
+            "idle": 1,
+            "prefill": 0,
+            "prefill+decode": 0
+          },
+          "tids": {
+            "1": 66,
+            "1131": 1,
+            "131": 915
+          },
+          "warnings": [
+            "step_scope=Step:Model: 132 anchor rows for 66 steps; 66 secondary anchor rows were folded into the nearest preceding step as orphans (the async batch-queue path emits two Step:Model scopes per engine-core iteration: the execute_model dispatch and the batch_queue wait). Step windows use the dispatch anchors only.",
+            "62 of 66 steps have measured scopes summing to more than the step scope itself (scopes that run outside the step window are folded in by the orphan rule); other_us is clamped to 0 for those steps"
+          ]
+        },
+        "loop_summary": {
+          "by_phase": {
+            "all": {
+              "coverage": {
+                "ratio_of_step_dur": 0.843,
+                "sum_measured_mean_us": 5692.679
+              },
+              "draft_token": {
+                "max_us": 3.33,
+                "mean_us": 2.691,
+                "min_us": 2.31,
+                "n": 62,
+                "p50_us": 2.56,
+                "p90_us": 3.147,
+                "p99_us": 3.318,
+                "sum_us": 166.83
+              },
+              "forward": {
+                "max_us": 1189.44,
+                "mean_us": 1084.158,
+                "min_us": 881.04,
+                "n": 62,
+                "p50_us": 1099.43,
+                "p90_us": 1128.983,
+                "p99_us": 1170.664,
+                "sum_us": 67217.82
+              },
+              "n_steps": 64,
+              "post process": {
+                "max_us": 396.82,
+                "mean_us": 167.488,
+                "min_us": 113.82,
+                "n": 62,
+                "p50_us": 117.405,
+                "p90_us": 368.761,
+                "p99_us": 395.155,
+                "sum_us": 10384.26
+              },
+              "prepare input": {
+                "max_us": 4297.48,
+                "mean_us": 3874.838,
+                "min_us": 221.06,
+                "n": 64,
+                "p50_us": 4088.565,
+                "p90_us": 4180.231,
+                "p99_us": 4277.188,
+                "sum_us": 247989.62
+              },
+              "sample_token": {
+                "max_us": 413.14,
+                "mean_us": 154.657,
+                "min_us": 106.65,
+                "n": 62,
+                "p50_us": 110.52,
+                "p90_us": 395.244,
+                "p99_us": 410.676,
+                "sum_us": 9588.72
+              },
+              "step_dur": {
+                "mean_us": 6754.707,
+                "p50_us": 6988.0,
+                "p90_us": 7216.7,
+                "p99_us": 7371.15
+              }
+            },
+            "decode": {
+              "coverage": {
+                "ratio_of_step_dur": 0.839,
+                "sum_measured_mean_us": 5753.582
+              },
+              "draft_token": {
+                "max_us": 3.33,
+                "mean_us": 2.691,
+                "min_us": 2.31,
+                "n": 62,
+                "p50_us": 2.56,
+                "p90_us": 3.147,
+                "p99_us": 3.318,
+                "sum_us": 166.83
+              },
+              "forward": {
+                "max_us": 1189.44,
+                "mean_us": 1084.158,
+                "min_us": 881.04,
+                "n": 62,
+                "p50_us": 1099.43,
+                "p90_us": 1128.983,
+                "p99_us": 1170.664,
+                "sum_us": 67217.82
+              },
+              "n_steps": 63,
+              "post process": {
+                "max_us": 396.82,
+                "mean_us": 167.488,
+                "min_us": 113.82,
+                "n": 62,
+                "p50_us": 117.405,
+                "p90_us": 368.761,
+                "p99_us": 395.155,
+                "sum_us": 10384.26
+              },
+              "prepare input": {
+                "max_us": 4297.48,
+                "mean_us": 3932.834,
+                "min_us": 281.56,
+                "n": 63,
+                "p50_us": 4090.98,
+                "p90_us": 4181.954,
+                "p99_us": 4277.51,
+                "sum_us": 247768.56
+              },
+              "sample_token": {
+                "max_us": 413.14,
+                "mean_us": 154.657,
+                "min_us": 106.65,
+                "n": 62,
+                "p50_us": 110.52,
+                "p90_us": 395.244,
+                "p99_us": 410.676,
+                "sum_us": 9588.72
+              },
+              "step_dur": {
+                "mean_us": 6859.603,
+                "p50_us": 6991.0,
+                "p90_us": 7216.8,
+                "p99_us": 7372.1
+              }
+            },
+            "idle": {
+              "coverage": {
+                "ratio_of_step_dur": 2.512,
+                "sum_measured_mean_us": 367.39
+              },
+              "draft_token": {
+                "n": 0
+              },
+              "forward": {
+                "n": 0
+              },
+              "n_steps": 1,
+              "post process": {
+                "n": 0
+              },
+              "prepare input": {
+                "max_us": 221.06,
+                "mean_us": 221.06,
+                "min_us": 221.06,
+                "n": 1,
+                "p50_us": 221.06,
+                "p90_us": 221.06,
+                "p99_us": 221.06,
+                "sum_us": 221.06
+              },
+              "sample_token": {
+                "n": 0
+              },
+              "step_dur": {
+                "mean_us": 146.25,
+                "p50_us": 146.25,
+                "p90_us": 146.25,
+                "p99_us": 146.25
+              }
+            }
+          },
+          "lite_log": "data/measure/_pipeline_test/points/_test/lite.log",
+          "malformed": 0,
+          "n_steps": 66,
+          "orphans": 7,
+          "rows": 982,
+          "schema": "pi-lite-summary-v1",
+          "scope_inventory": [
+            {
+              "mean_us": 6876.2,
+              "n": 66,
+              "p50_us": 5605.67,
+              "p90_us": 5742.375,
+              "scope": "Step:Model",
+              "sum_us": 453829.22
+            },
+            {
+              "mean_us": 3967.576,
+              "n": 66,
+              "p50_us": 4088.565,
+              "p90_us": 4186.73,
+              "scope": "prepare input",
+              "sum_us": 261860.0
+            },
+            {
+              "mean_us": 2500.855,
+              "n": 64,
+              "p50_us": 1099.43,
+              "p90_us": 1130.468,
+              "scope": "forward",
+              "sum_us": 160054.71
+            },
+            {
+              "mean_us": 329.84,
+              "n": 66,
+              "p50_us": 322.885,
+              "p90_us": 517.815,
+              "scope": "Step:Schedule",
+              "sum_us": 21769.41
+            },
+            {
+              "mean_us": 166.312,
+              "n": 64,
+              "p50_us": 117.405,
+              "p90_us": 368.583,
+              "scope": "post process",
+              "sum_us": 10643.96
+            },
+            {
+              "mean_us": 153.595,
+              "n": 64,
+              "p50_us": 110.52,
+              "p90_us": 391.132,
+              "scope": "sample_token",
+              "sum_us": 9830.07
+            },
+            {
+              "mean_us": 81.347,
+              "n": 64,
+              "p50_us": 48.475,
+              "p90_us": 192.367,
+              "scope": "async_state_update",
+              "sum_us": 5206.19
+            },
+            {
+              "mean_us": 40.854,
+              "n": 65,
+              "p50_us": 39.05,
+              "p90_us": 43.006,
+              "scope": "Step:Output",
+              "sum_us": 2655.52
+            },
+            {
+              "mean_us": 39.805,
+              "n": 63,
+              "p50_us": 39.16,
+              "p90_us": 40.684,
+              "scope": "schedule: allocate_slots",
+              "sum_us": 2507.71
+            },
+            {
+              "mean_us": 11.011,
+              "n": 66,
+              "p50_us": 10.69,
+              "p90_us": 12.235,
+              "scope": "schedule: make_cached_request_data",
+              "sum_us": 726.73
+            },
+            {
+              "mean_us": 7.289,
+              "n": 66,
+              "p50_us": 7.185,
+              "p90_us": 7.845,
+              "scope": "schedule: update_after_schedule",
+              "sum_us": 481.05
+            },
+            {
+              "mean_us": 2.684,
+              "n": 64,
+              "p50_us": 2.555,
+              "p90_us": 3.141,
+              "scope": "draft_token",
+              "sum_us": 171.75
+            },
+            {
+              "mean_us": 2.313,
+              "n": 66,
+              "p50_us": 2.27,
+              "p90_us": 2.725,
+              "scope": "schedule: get_num_common_prefix_blocks",
+              "sum_us": 152.63
+            },
+            {
+              "mean_us": 28.79,
+              "n": 1,
+              "p50_us": 28.79,
+              "p90_us": 28.79,
+              "scope": "Input:Process",
+              "sum_us": 28.79
+            }
+          ],
+          "selected_tid": 131,
+          "share": {
+            "all": {
+              "prepare_over_step_mean": 0.584,
+              "prepare_over_step_p50": 0.585
+            },
+            "decode": {
+              "prepare_over_step_mean": 0.569,
+              "prepare_over_step_p50": 0.585
+            },
+            "idle": {
+              "prepare_over_step_mean": 1.512,
+              "prepare_over_step_p50": 1.512
+            }
+          },
+          "steps_by_phase": {
+            "decode": 63,
+            "idle": 1,
+            "prefill": 0,
+            "prefill+decode": 0
+          },
+          "tids": {
+            "1": 66,
+            "1131": 1,
+            "131": 915
+          },
+          "warnings": [
+            "no 'Step:Schedule' row contains a 'prepare input' row; every 'Step:Schedule' row is treated as one step",
+            "1 of 66 steps have measured scopes summing to more than the step scope itself (scopes that run outside the step window are folded in by the orphan rule); other_us is clamped to 0 for those steps"
+          ]
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,119 @@
+{
+  "schema": "pi-pmu-group-meta-v1",
+  "tag": "real-b1",
+  "group": 3,
+  "preset": "920b_topdown_full_3",
+  "events": [
+    "br_mis_pred",
+    "o3_flush",
+    "nuke_flush",
+    "bp_misp_br_ind",
+    "bp_misp_br_blr",
+    "bp_misp_br_bl",
+    "bp_misp_br_ret",
+    "if_sp_flush"
+  ],
+  "tid": 704908,
+  "pid": 704908,
+  "status": "ok",
+  "attempts": 1,
+  "rc": 0,
+  "timed_out": false,
+  "error": null,
+  "outer_wall_s": 3.1332,
+  "inner_wall_s": 3.014915,
+  "started_at_utc": "2026-09-23T20:29:27Z",
+  "finished_at_utc": "2026-09-23T20:29:30Z",
+  "confidence": 1.0,
+  "time_enabled": 2852349960,
+  "time_running": 2852349960,
+  "useronly_forced": false,
+  "counters": [
+    {
+      "name": "BR_MIS_PRED",
+      "id": "br_mis_pred",
+      "config": "0x10",
+      "delta": 129645849,
+      "rate": 45452294.009533
+    },
+    {
+      "name": "O3_FLUSH",
+      "id": "o3_flush",
+      "config": "0x2010",
+      "delta": 2639035,
+      "rate": 925214.309958
+    },
+    {
+      "name": "NUKE_FLUSH",
+      "id": "nuke_flush",
+      "config": "0x200f",
+      "delta": 2382968,
+      "rate": 835440.262737
+    },
+    {
+      "name": "BP_MISP_BR_IND",
+      "id": "bp_misp_br_ind",
+      "config": "0x1010",
+      "delta": 11302451,
+      "rate": 3962505.007625
+    },
+    {
+      "name": "BP_MISP_BR_BLR",
+      "id": "bp_misp_br_blr",
+      "config": "0x1013",
+      "delta": 1596507,
+      "rate": 559716.382067
+    },
+    {
+      "name": "BP_MISP_BR_BL",
+      "id": "bp_misp_br_bl",
+      "config": "0x1016",
+      "delta": 363536,
+      "rate": 127451.40151
+    },
+    {
+      "name": "BP_MISP_BR_RET",
+      "id": "bp_misp_br_ret",
+      "config": "0x100d",
+      "delta": 1229509,
+      "rate": 431051.244497
+    },
+    {
+      "name": "IF_SP_FLUSH",
+      "id": "if_sp_flush",
+      "config": "0x104f",
+      "delta": 130402124,
+      "rate": 45717435.037319
+    }
+  ],
+  "counters_map": {
+    "BR_MIS_PRED": 129645849,
+    "O3_FLUSH": 2639035,
+    "NUKE_FLUSH": 2382968,
+    "BP_MISP_BR_IND": 11302451,
+    "BP_MISP_BR_BLR": 1596507,
+    "BP_MISP_BR_BL": 363536,
+    "BP_MISP_BR_RET": 1229509,
+    "IF_SP_FLUSH": 130402124
+  },
+  "cmd": [
+    "sudo",
+    "-n",
+    "/usr/bin/python3",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+    "--inner",
+    "--tid",
+    "704908",
+    "--group",
+    "3",
+    "--window",
+    "3.000000",
+    "--preset-prefix",
+    "920b_topdown_full_",
+    "--kperfx-python",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/python",
+    "--quiet"
+  ],
+  "stderr_tail": "KPERFX_META {\"group\": 3, \"preset\": \"920b_topdown_full_3\", \"events\": [\"br_mis_pred\", \"o3_flush\", \"nuke_flush\", \"bp_misp_br_ind\", \"bp_misp_br_blr\", \"bp_misp_br_bl\", \"bp_misp_br_ret\", \"if_sp_flush\"], \"tid\": 704908, \"window_requested_s\": 3.0, \"wall_s\": 3.014915, \"started_at_utc\": \"2026-09-23T20:29:27Z\", \"finished_at_utc\": \"2026-09-23T20:29:30Z\", \"time_enabled_ns\": 2852349960, \"time_running_ns\": 2852349960, \"confidence\": 1.0, \"useronly_forced\": false, \"instances\": 1, \"counters\": 8, \"raw_json_writer\": \"kperfx_ctx_write_output\"}\n",
+  "raw_json_writer": "kperfx_ctx_write_output"
+}

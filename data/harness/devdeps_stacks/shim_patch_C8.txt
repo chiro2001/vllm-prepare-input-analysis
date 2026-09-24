@@ -1,0 +1,6 @@
+# C8 Tensor.npu()
+# ok=True
+# value='cpu'
+# exc=None
+# tb
+

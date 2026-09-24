@@ -1,0 +1,377 @@
+{
+  "boot_epoch": 1789694993.0,
+  "capture_span_us": 20089938,
+  "implied_scope_time_fraction": 0.5487994537364924,
+  "leaf_top_in_scope": [
+    [
+      "[unknown] (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so)",
+      848
+    ],
+    [
+      "[unknown] (/usr/lib64/libc.so.6)",
+      381
+    ],
+    [
+      "[unknown] (/usr/lib/ld-linux-aarch64.so.1)",
+      217
+    ],
+    [
+      "eventfd_write+0x214 ([kernel.kallsyms])",
+      212
+    ],
+    [
+      "_PyType_Lookup+0x60 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      114
+    ],
+    [
+      "[unknown] (/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libruntime_v100.so)",
+      85
+    ],
+    [
+      "pthread_mutex_lock+0x78 (/usr/lib64/libc.so.6)",
+      77
+    ],
+    [
+      "_PyFunction_Vectorcall+0x38 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      69
+    ],
+    [
+      "el0_svc+0x34 ([kernel.kallsyms])",
+      62
+    ],
+    [
+      "_PyObject_Malloc+0x88 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      47
+    ],
+    [
+      "_Py_dict_lookup+0x40 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      45
+    ],
+    [
+      "PyUnstable_Code_GetExtra+0x34 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      45
+    ],
+    [
+      "malloc+0x158 (/usr/lib64/libc.so.6)",
+      42
+    ],
+    [
+      "_PyEval_EvalFrameDefault+0x8abc (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      39
+    ],
+    [
+      "PyObject_GetAttr+0xc (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      35
+    ],
+    [
+      "_PyObject_Malloc+0x74 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      32
+    ],
+    [
+      "_PyEvalFramePushAndInit+0x48 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      30
+    ],
+    [
+      "PyObject_Vectorcall+0x4c (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      29
+    ],
+    [
+      "_PyObject_GenericGetAttrWithDict+0x74 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      28
+    ],
+    [
+      "unicodekeys_lookup_unicode+0x60 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      28
+    ],
+    [
+      "_PyEval_EvalFrameDefault+0x2450 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      28
+    ],
+    [
+      "unicodekeys_lookup_unicode+0xec (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      26
+    ],
+    [
+      "__fget_files+0x8c ([kernel.kallsyms])",
+      26
+    ],
+    [
+      "_PyObject_Free+0x80 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      26
+    ],
+    [
+      "pthread_mutex_lock+0x70 (/usr/lib64/libc.so.6)",
+      26
+    ],
+    [
+      "_PyObject_Free+0x60 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      25
+    ],
+    [
+      "pthread_mutex_lock+0x14 (/usr/lib64/libc.so.6)",
+      25
+    ],
+    [
+      "torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)+0x1ac (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)",
+      23
+    ],
+    [
+      "_PyObject_Malloc+0x68 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      22
+    ],
+    [
+      "_PyEval_EvalFrameDefault+0x8ab0 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      21
+    ],
+    [
+      "_PyObject_GenericGetAttrWithDict+0xc4 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      21
+    ],
+    [
+      "pthread_mutex_lock+0x0 (/usr/lib64/libc.so.6)",
+      20
+    ],
+    [
+      "c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const+0xac (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)",
+      19
+    ],
+    [
+      "_PyObject_GetMethod+0xa8 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      19
+    ],
+    [
+      "_PyEval_EvalFrameDefault+0xb2dc (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      19
+    ],
+    [
+      "unicodekeys_lookup_unicode+0x7c (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      19
+    ],
+    [
+      "pthread_rwlock_rdlock+0x4c (/usr/lib64/libc.so.6)",
+      18
+    ],
+    [
+      "malloc+0xb8 (/usr/lib64/libc.so.6)",
+      18
+    ],
+    [
+      "unicodekeys_lookup_unicode+0x70 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      17
+    ],
+    [
+      "operator new(unsigned long)+0x0 (/usr/lib64/libstdc++.so.6.0.30)",
+      17
+    ]
+  ],
+  "leaf_top_outside_scope": [
+    [
+      "[unknown] (/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so)",
+      625
+    ],
+    [
+      "[unknown] (/usr/lib64/libc.so.6)",
+      328
+    ],
+    [
+      "eventfd_write+0x214 ([kernel.kallsyms])",
+      170
+    ],
+    [
+      "[unknown] (/usr/lib/ld-linux-aarch64.so.1)",
+      161
+    ],
+    [
+      "_PyType_Lookup+0x60 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      82
+    ],
+    [
+      "[unknown] (/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libruntime_v100.so)",
+      59
+    ],
+    [
+      "el0_svc+0x34 ([kernel.kallsyms])",
+      54
+    ],
+    [
+      "_PyFunction_Vectorcall+0x38 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      53
+    ],
+    [
+      "pthread_mutex_lock+0x78 (/usr/lib64/libc.so.6)",
+      46
+    ],
+    [
+      "_PyObject_Malloc+0x88 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      45
+    ],
+    [
+      "unicodekeys_lookup_unicode+0xec (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      34
+    ],
+    [
+      "PyUnstable_Code_GetExtra+0x34 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      34
+    ],
+    [
+      "_PyEval_EvalFrameDefault+0x8abc (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      33
+    ],
+    [
+      "PyObject_Vectorcall+0x4c (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      31
+    ],
+    [
+      "unicodekeys_lookup_unicode+0x60 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      31
+    ],
+    [
+      "_PyObject_Malloc+0x74 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      29
+    ],
+    [
+      "malloc+0x158 (/usr/lib64/libc.so.6)",
+      26
+    ],
+    [
+      "_Py_dict_lookup+0x40 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      26
+    ],
+    [
+      "pthread_mutex_lock+0x14 (/usr/lib64/libc.so.6)",
+      25
+    ],
+    [
+      "_PyEval_EvalFrameDefault+0x8ab0 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      24
+    ],
+    [
+      "_PyEval_EvalFrameDefault+0x2450 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      23
+    ],
+    [
+      "pthread_mutex_lock+0x70 (/usr/lib64/libc.so.6)",
+      23
+    ],
+    [
+      "_PyObject_GenericGetAttrWithDict+0x74 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      22
+    ],
+    [
+      "_PyObject_Malloc+0x68 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      21
+    ],
+    [
+      "tuple_alloc+0x5c (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      21
+    ],
+    [
+      "PyObject_GetAttr+0xc (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      21
+    ],
+    [
+      "_PyEvalFramePushAndInit+0x48 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      21
+    ],
+    [
+      "_PyObject_GenericGetAttrWithDict+0xc4 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      20
+    ],
+    [
+      "_PyObject_Free+0x60 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      20
+    ],
+    [
+      "_PyObject_Free+0x80 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      18
+    ],
+    [
+      "_PyObject_GetMethod+0xa8 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      18
+    ],
+    [
+      "_PyEval_EvalFrameDefault+0x2c3c (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      17
+    ],
+    [
+      "unicodekeys_lookup_unicode+0x7c (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      17
+    ],
+    [
+      "_PyObject_GetMethod+0x4c (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      15
+    ],
+    [
+      "_PyEval_EvalFrameDefault+0xb2f0 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      15
+    ],
+    [
+      "operator new(unsigned long)+0x0 (/usr/lib64/libstdc++.so.6.0.30)",
+      15
+    ],
+    [
+      "_PyEval_EvalFrameDefault+0x2bd0 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      15
+    ],
+    [
+      "unicodekeys_lookup_unicode+0x70 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      15
+    ],
+    [
+      "torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*, std::optional<torch::autograd::ViewInfo>, std::optional<torch::autograd::ViewInfo>, bool, torch::autograd::CreationMeta)+0x1ac (/usr/local/python3.12.13/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)",
+      14
+    ],
+    [
+      "_PyEval_EvalFrameDefault+0x2e74 (/usr/local/python3.12.13/lib/libpython3.12.so.1.0)",
+      13
+    ]
+  ],
+  "lite_log": "data/profiles/real-b1/lite.log",
+  "method_note": "perf sample ns-since-boot + /proc/stat btime -> epoch us; a sample is attributed to the innermost lite.log scope whose [start, start+dur) contains it. Scope time fraction and sample share should agree; a large gap means the two clocks disagree (report it, do not hide it).",
+  "per_scope_samples": {
+    "Step:Model": 1038,
+    "Step:Output": 146,
+    "Step:Schedule": 634,
+    "async_state_update": 203,
+    "draft_token": 11,
+    "forward": 3325,
+    "post process": 450,
+    "prepare input": 10761,
+    "sample_token": 403,
+    "schedule: allocate_slots": 165,
+    "schedule: get_num_common_prefix_blocks": 9,
+    "schedule: make_cached_request_data": 38,
+    "schedule: update_after_schedule": 23
+  },
+  "perf_data": "data/profiles/real-b1/fp-scope/perf.data",
+  "renders": {
+    "in_scope": {
+      "bytes": 4532632,
+      "ok": true,
+      "rc": 0,
+      "stderr": ""
+    },
+    "outside_scope": {
+      "bytes": 19573689,
+      "ok": true,
+      "rc": 0,
+      "stderr": ""
+    }
+  },
+  "sample_share_in_scope": 0.5500408914332447,
+  "samples_in_scope": 10761,
+  "samples_of_target_tid": 19564,
+  "samples_other_tids": 0,
+  "samples_outside_scope": 8803,
+  "samples_total": 19564,
+  "schema": "pi-scope-attribution-v1",
+  "scope_window_overlap_ratio": 1.0,
+  "scope_window_total_us": 11025347,
+  "scope_window_union_us": 11025347.0,
+  "scope_window_union_whole_log_us": 48580472.0,
+  "scope_windows": 17020,
+  "scope_windows_in_capture": 3856,
+  "started_utc": "2026-09-23T20:35:58Z",
+  "target_scope": "prepare input",
+  "target_tid": 704908
+}

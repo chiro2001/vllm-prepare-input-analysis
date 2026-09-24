@@ -1,0 +1,48 @@
+# stage=record utc=2026-09-23T18:07:29Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data -e cycles -F 999 -g --call-graph fp -t 4106603 -- sleep 8
+scripts/measure/perf_capture.sh: line 317: sudo -n: command not found
+# perf record exit=127
+# stage=record utc=2026-09-23T18:08:28Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data -e cycles -F 999 -g --call-graph fp -t 4106603 -- sleep 8
+scripts/measure/perf_capture.sh: line 320: sudo -n: command not found
+# perf record exit=127
+# stage=record utc=2026-09-23T18:09:34Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data -e cycles -F 999 -g --call-graph fp -t 4106603 -- sleep 8
+[ perf record: Woken up 10 times to write data ]
+[ perf record: Captured and wrote 2.408 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data (8068 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:11:46Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data -e cycles -F 999 -g --call-graph fp -t 4106603 -- sleep 8
+[ perf record: Woken up 10 times to write data ]
+[ perf record: Captured and wrote 2.397 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data (8074 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:14:42Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data -e cycles -F 999 -g --call-graph fp -t 4168171 -- sleep 8
+[ perf record: Woken up 9 times to write data ]
+[ perf record: Captured and wrote 2.333 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data (7899 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:18:34Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data -e cycles -F 999 -g --call-graph fp -t 39440 -- sleep 8
+[ perf record: Woken up 10 times to write data ]
+[ perf record: Captured and wrote 2.385 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data (8048 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:25:24Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data -e cycles -F 999 -g --call-graph fp -t 94648 -- sleep 8
+[ perf record: Woken up 9 times to write data ]
+[ perf record: Captured and wrote 2.375 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data (8016 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:25:58Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data -e cycles -F 999 -g --call-graph fp -t 94648 -- sleep 8
+[ perf record: Woken up 10 times to write data ]
+[ perf record: Captured and wrote 2.389 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data (8041 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:37:11Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data -e cycles -F 999 -g --call-graph fp -t 175935 -- sleep 8
+[ perf record: Woken up 10 times to write data ]
+[ perf record: Captured and wrote 2.384 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data (8045 samples) ]
+# perf record exit=0
+# stage=record utc=2026-09-23T18:45:22Z
+# cmd: sudo -n perf record -o /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data -e cycles -F 999 -g --call-graph fp -t 175935 -- sleep 8
+[ perf record: Woken up 10 times to write data ]
+[ perf record: Captured and wrote 2.387 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp_nons/perf.data (8046 samples) ]
+# perf record exit=0

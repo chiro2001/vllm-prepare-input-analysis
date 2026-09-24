@@ -1,0 +1,6 @@
+# C12: torch.zeros(device='npu:0')
+# ok=True  0.02 ms
+# value: 'cpu'
+# exc: None
+# ---- traceback ----
+

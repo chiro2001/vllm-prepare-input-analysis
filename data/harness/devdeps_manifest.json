@@ -1,0 +1,932 @@
+{
+  "generated_at": "2026-09-23T18:15:06+0000",
+  "owner": "probe_devdeps",
+  "script_sha256": {
+    "gen_devdeps_tables.py": "51296b2699800c8f06f447c7c71e61c4a417f3ff2b530e702c6204852c369b9a",
+    "scope_prepare_input.py": "e4d70e6d28d34fd41c66153468a4ad72e1670df5f9643910de80dd5625155eb7",
+    "import_gradient.py": "d9099371d7a8000fcda0511a1f075dac0080848ff7a67b9dfc2d70c649bf77ed",
+    "smoke_shim.py": "0258cac073b45db3f9ab29b6460c482703abadd27c3f74b9856aa349feaf9715",
+    "probe_dynamic_hits.py": "13081b1d1cd555838a7569f62fcd888c04dce97ac06a2eeb329cbadccc25170a",
+    "shim_patch_proposal.py": "3db45c8f638720b157b4f2ce5bfcaeb74e8e674d3b18bdc4e6e5b65485bb9617",
+    "collect_manifest.py": "43c32425598ed11cceeeb0aaf9c03318fd4319192f2e2e4b6b016ab00d257272"
+  },
+  "image": {
+    "generated_at": "2026-09-24T01:58:32+0800",
+    "hostname": "host22",
+    "image_ref": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+    "image_repodigests": [
+      "quay.nju.edu.cn/ascend/vllm-ascend@sha256:24ae7427b6cad5ee29e0665e6f69a4d51c9f6178035e38f2ed161bb3d29fe81c"
+    ],
+    "image_id": "sha256:dc9a31b8330d399ad8e91dabaca25798c3d838c36851897bf9a1f77f793072ec",
+    "image_created": "2026-09-03T17:17:10.52828522Z",
+    "docker_run_template": "docker run --rm --network none --user $(id -u):$(id -g) --cpuset-cpus 200-215 -e HOME=/tmp -e USER=REMOTE_USER -e LOGNAME=REMOTE_USER -e TORCHINDUCTOR_CACHE_DIR=/tmp/ti_cache -e TRITON_CACHE_DIR=/tmp/triton_cache -e TORCH_DEVICE_BACKEND_AUTOLOAD=0 -e PI_HARNESS_ROOT=/work/harness -e PYTHONPATH=/work/harness -e PYTHONDONTWRITEBYTECODE=1 -v /home/REMOTE_USER/projects/vllm/prepare-input-phase:/work -w /work quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler bash -c <cmd>",
+    "no_npu_devices_mounted": "yes (pi-docker.sh 从不传 --device /dev/davinci*)",
+    "cpuset_used_by_probes": "200-215 (默认)",
+    "host_cpu_model": "Model name:                           unknown",
+    "host_nproc": "640",
+    "host_numa": "NUMA node(s):                         8",
+    "pi_docker_sha256": "fb429117052bb762e4799d532126e77c74d7b0ae3f0ba9441df86cc8b472a41a"
+  },
+  "container": {
+    "generated_at": "2026-09-23T18:14:19+0000",
+    "uname": {
+      "system": "Linux",
+      "node": "6323f4583d7b",
+      "release": "6.6.0-159.4.3.154.oe2403sp4.aarch64",
+      "version": "#1 SMP Mon Jun 29 00:38:31 CST 2026",
+      "machine": "aarch64",
+      "processor": "aarch64"
+    },
+    "python": "3.12.13 (main, Aug  3 2026, 02:43:47) [GCC 12.3.1 (openEuler 12.3.1-105.oe2403sp3)]",
+    "executable": "/usr/local/python3.12.13/bin/python",
+    "cwd": "/work",
+    "environ_subset": {
+      "PYTHONPATH": "/usr/local/Ascend/cann-9.1.0/python/site-packages:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe:/work/harness",
+      "HOME": "/tmp",
+      "USER": "REMOTE_USER",
+      "LOGNAME": "REMOTE_USER",
+      "TORCH_DEVICE_BACKEND_AUTOLOAD": "0",
+      "TORCHINDUCTOR_CACHE_DIR": "/tmp/ti_cache",
+      "TRITON_CACHE_DIR": "/tmp/triton_cache",
+      "VLLM_PLUGINS": null,
+      "VLLM_TARGET_DEVICE": null,
+      "VLLM_USE_V1": null,
+      "OMP_NUM_THREADS": "1",
+      "PI_HARNESS_ROOT": "/work/harness"
+    },
+    "cgroup_cpuset": "200-215",
+    "nproc_visible": 640,
+    "npu_smi": {
+      "cmd": "command -v npu-smi || echo '<not found>'",
+      "rc": 0,
+      "stdout": "<not found>",
+      "stderr": "/usr/bin/id: cannot find name for user ID 1003\nwhoami: cannot find name for user ID 1003"
+    },
+    "davinci_dev": {
+      "cmd": "ls /dev/davinci* 2>&1 || true",
+      "rc": 0,
+      "stdout": "ls: cannot access '/dev/davinci*': No such file or directory",
+      "stderr": "/usr/bin/id: cannot find name for user ID 1003\nwhoami: cannot find name for user ID 1003"
+    },
+    "ascend_home": "/usr/local/Ascend/cann-9.1.0",
+    "ascend_toolkit": "ascend-toolkit\ncann\ncann-9.1.0\nnnal",
+    "numpy": "1.26.4",
+    "torch": "2.10.0+cpu",
+    "torch.version.cuda": null,
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 640,
+    "torch_npu": "2.10.0.post4",
+    "torch_npu_file": "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/__init__.py",
+    "triton": "3.2.0",
+    "pip_list": [
+      "PyYAML==6.0.3",
+      "decorator==5.1.1",
+      "numpy==1.26.4",
+      "requests==2.34.2",
+      "scipy==1.13.1",
+      "setuptools-scm==10.2.3",
+      "setuptools==80.10.2",
+      "torch==2.10.0+cpu",
+      "torch_npu==2.10.0.post4",
+      "torchaudio==2.10.0+cpu",
+      "torchvision==0.25.0+cpu",
+      "triton==3.5.0",
+      "triton_ascend==3.2.2",
+      "vllm==0.26.0+empty",
+      "vllm_ascend==0.26.0rc1"
+    ],
+    "vllm_files": [
+      "INFO 09-23 18:14:26 [__init__.py:52] Available plugins for group vllm.platform_plugins:",
+      "INFO 09-23 18:14:26 [__init__.py:54] - ascend -> vllm_ascend:register",
+      "INFO 09-23 18:14:26 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.",
+      "INFO 09-23 18:14:26 [__init__.py:237] Platform plugin ascend is activated",
+      "INFO 09-23 18:14:29 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.",
+      "/vllm-workspace/vllm/vllm/__init__.py",
+      "/vllm-workspace/vllm-ascend/vllm_ascend/__init__.py",
+      "[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory."
+    ],
+    "lscpu": "Architecture:                         aarch64\nCPU op-mode(s):                       64-bit\nByte Order:                           Little Endian\nCPU(s):                               640\nOn-line CPU(s) list:                  0-639\nVendor ID:                            HiSilicon\nModel name:                           unknown\nModel:                                0\nThread(s) per core:                   2\nCore(s) per cluster:                  80\nSocket(s):                            -\nCluster(s):                           4\nStepping:                             0x0\nFrequency boost:                      disabled\nCPU(s) scaling MHz:                   100%\nCPU max MHz:                          2900.0000\nCPU min MHz:                          400.0000\nBogoMIPS:                             200.00\nFlags:                                fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb dcpodp flagm2 frint svei8mm svef32mm svef64mm svebf16 i8mm bf16 dgh rng ecv\nL1d cache:                            20 MiB (320 instances)\nL1i cache:                            20 MiB (320 instances)\nL2 cache:                             400 MiB (320 instances)\nL3 cache:                             560 MiB (8 instances)\nNUMA node(s):                         8\nNUMA node0 CPU(s):                    0-79\nNUMA node1 CPU(s):                    80-159\nNUMA node2 CPU(s):                    160-239\nNUMA node3 CPU(s):                    240-319\nNUMA node4 CPU(s):                    320-399\nNUMA node5 CPU(s):                    400-479",
+    "source_commits": {
+      "vllm": "<no git>",
+      "vllm-ascend": "<no git>"
+    },
+    "probe_script_sha256": {
+      "harness/probes/collect_manifest.py": "43c32425598ed11cceeeb0aaf9c03318fd4319192f2e2e4b6b016ab00d257272",
+      "harness/probes/gen_devdeps_tables.py": "51296b2699800c8f06f447c7c71e61c4a417f3ff2b530e702c6204852c369b9a",
+      "harness/probes/import_gradient.py": "d9099371d7a8000fcda0511a1f075dac0080848ff7a67b9dfc2d70c649bf77ed",
+      "harness/probes/probe_dynamic_hits.py": "13081b1d1cd555838a7569f62fcd888c04dce97ac06a2eeb329cbadccc25170a",
+      "harness/probes/scope_prepare_input.py": "e4d70e6d28d34fd41c66153468a4ad72e1670df5f9643910de80dd5625155eb7",
+      "harness/probes/shim_patch_proposal.py": "3db45c8f638720b157b4f2ce5bfcaeb74e8e674d3b18bdc4e6e5b65485bb9617",
+      "harness/probes/smoke_shim.py": "0258cac073b45db3f9ab29b6460c482703abadd27c3f74b9856aa349feaf9715",
+      "harness/probes/collect_host_manifest.sh": "2ac9c321790ed8df1c7f156f96b24afa21aa83d2b8a014d297d29d6f64a59ee5",
+      "harness/probes/pull_data.sh": "e1bb34bae050726e9dda7cecd3ec4705549a1a4fef7e84b3da9b42b6eca4cbeb",
+      "harness/probes/push.sh": "3d0f97bfc35b28a670872da9bafcf67c894402d8a4ce27deca8aa03a11a2d1c0"
+    },
+    "harness_sha256": {
+      "/work/harness/scripts/pi-docker.sh": "fb429117052bb762e4799d532126e77c74d7b0ae3f0ba9441df86cc8b472a41a",
+      "/work/harness/INTERFACES.md": "deb2cec10e10f6330677cf2589856c84456505440fb284ab17a6f5b29740cafa",
+      "/work/harness/pi_harness/shim/__init__.py": "2072409af9ce8a854e64f687ee8cfec8b1e60b1ffbab8fa08701f1e9d16a79ad"
+    },
+    "source_sha256": {
+      "/work/refs/vllm-ascend/vllm_ascend/worker/model_runner_v1.py": "4699af75ac8b4b55283d55190365e93d13820a05888bfa65aea8746deabc4d3a",
+      "/work/refs/vllm-ascend/vllm_ascend/worker/block_table.py": "6c17cb4ce9a461c0b8f30bfa6bf3a91ad0eaf44d1bf08b780af59d2ae52071b7",
+      "/work/refs/vllm-ascend/vllm_ascend/ops/triton/compute_slot_mapping.py": "4b91c1d9a2e2ef594621b14d5d49bee6408980fccbb6701d768c920490871157",
+      "/work/refs/vllm/vllm/v1/utils.py": "10eda8e6aaa5405c3bd38efb3dbd2ccce6dad4690756c003abe9723a35a16111",
+      "/work/refs/vllm/vllm/v1/worker/gpu_model_runner.py": "81b7627fbe81f7aaa2f77b4bf085faa353c69d03662ebfe369536a9773bb70d0",
+      "/work/refs/vllm/vllm/v1/worker/gpu_input_batch.py": "ca9b8a627cb8e5109c804970a09597c6aa019a78957df399e8b3022bd493ecfc"
+    }
+  },
+  "artifacts": [
+    "devdeps_apilist.json",
+    "devdeps_apilist.md",
+    "devdeps_dynamic_hits.json",
+    "devdeps_imports.json",
+    "devdeps_imports_devapi.json",
+    "devdeps_imports_envfix.json",
+    "devdeps_imports_order.json",
+    "devdeps_manifest.json",
+    "devdeps_manifest_container.json",
+    "devdeps_manifest_host.json",
+    "devdeps_matrix.json",
+    "devdeps_matrix.md",
+    "devdeps_scope.json",
+    "devdeps_scope_boundary.md",
+    "devdeps_shim_patch_selftest.json",
+    "devdeps_shim_report.json",
+    "devdeps_shim_smoke.json",
+    "devdeps_stacks"
+  ],
+  "logs": [
+    {
+      "log": "devdeps_stacks/A1_torch_basic.txt",
+      "meta": [
+        "# step_id     : A1_torch_basic",
+        "# title       : import torch（autoload=0）：版本 / backend / torch.npu 存在性 / torch.zeros(device='npu')",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 1.64",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A1_torch_basic_envfix.txt",
+      "meta": [
+        "# step_id     : A1_torch_basic",
+        "# title       : import torch（autoload=0）：版本 / backend / torch.npu 存在性 / torch.zeros(device='npu')",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 1.60",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A2a_import_torch_npu_autoload0.txt",
+      "meta": [
+        "# step_id     : A2a_import_torch_npu_autoload0",
+        "# title       : import torch_npu，TORCH_DEVICE_BACKEND_AUTOLOAD=0",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 3.04",
+        "# env overrides: {\"TORCH_DEVICE_BACKEND_AUTOLOAD\": \"0\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A2a_import_torch_npu_autoload0_envfix.txt",
+      "meta": [
+        "# step_id     : A2a_import_torch_npu_autoload0",
+        "# title       : import torch_npu，TORCH_DEVICE_BACKEND_AUTOLOAD=0",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 5.03",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {\"TORCH_DEVICE_BACKEND_AUTOLOAD\": \"0\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A2b_import_torch_npu_autoload1.txt",
+      "meta": [
+        "# step_id     : A2b_import_torch_npu_autoload1",
+        "# title       : import torch_npu，TORCH_DEVICE_BACKEND_AUTOLOAD=1",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 3.09",
+        "# env overrides: {\"TORCH_DEVICE_BACKEND_AUTOLOAD\": \"1\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A2b_import_torch_npu_autoload1_envfix.txt",
+      "meta": [
+        "# step_id     : A2b_import_torch_npu_autoload1",
+        "# title       : import torch_npu，TORCH_DEVICE_BACKEND_AUTOLOAD=1",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 5.07",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {\"TORCH_DEVICE_BACKEND_AUTOLOAD\": \"1\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A2c_torch_with_autoload1.txt",
+      "meta": [
+        "# step_id     : A2c_torch_with_autoload1",
+        "# title       : 只 import torch，TORCH_DEVICE_BACKEND_AUTOLOAD=1（看是否自动挂载）",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 3.06",
+        "# env overrides: {\"TORCH_DEVICE_BACKEND_AUTOLOAD\": \"1\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A2c_torch_with_autoload1_envfix.txt",
+      "meta": [
+        "# step_id     : A2c_torch_with_autoload1",
+        "# title       : 只 import torch，TORCH_DEVICE_BACKEND_AUTOLOAD=1（看是否自动挂载）",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 5.05",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {\"TORCH_DEVICE_BACKEND_AUTOLOAD\": \"1\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A3a_import_vllm.txt",
+      "meta": [
+        "# step_id     : A3a_import_vllm",
+        "# title       : import vllm + vllm.v1.worker.gpu_model_runner",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 3.17",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A3a_import_vllm_envfix.txt",
+      "meta": [
+        "# step_id     : A3a_import_vllm",
+        "# title       : import vllm + vllm.v1.worker.gpu_model_runner",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 13.12",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A3b_import_vllm_C.txt",
+      "meta": [
+        "# step_id     : A3b_import_vllm_C",
+        "# title       : import vllm._C",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 3.17",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A3b_import_vllm_C_envfix.txt",
+      "meta": [
+        "# step_id     : A3b_import_vllm_C",
+        "# title       : import vllm._C",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 5.19",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A4a_import_vllm_ascend.txt",
+      "meta": [
+        "# step_id     : A4a_import_vllm_ascend",
+        "# title       : import vllm_ascend",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 3.19",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A4a_import_vllm_ascend_envfix.txt",
+      "meta": [
+        "# step_id     : A4a_import_vllm_ascend",
+        "# title       : import vllm_ascend",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 4.97",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A4b_import_vllm_ascend_platform.txt",
+      "meta": [
+        "# step_id     : A4b_import_vllm_ascend_platform",
+        "# title       : import vllm_ascend.platform",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 3.20",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A4b_import_vllm_ascend_platform_envfix.txt",
+      "meta": [
+        "# step_id     : A4b_import_vllm_ascend_platform",
+        "# title       : import vllm_ascend.platform",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 4.99",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A4c_import_vllm_ascend_model_runner_v1.txt",
+      "meta": [
+        "# step_id     : A4c_import_vllm_ascend_model_runner_v1",
+        "# title       : import vllm_ascend.worker.model_runner_v1（目标模块）",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 3.17",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A4c_import_vllm_ascend_model_runner_v1_envfix.txt",
+      "meta": [
+        "# step_id     : A4c_import_vllm_ascend_model_runner_v1",
+        "# title       : import vllm_ascend.worker.model_runner_v1（目标模块）",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 12.11",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A4d_import_order_vllm_then_ops_then_worker_order.txt",
+      "meta": [
+        "# step_id     : A4d_import_order_vllm_then_ops_then_worker",
+        "# title       : 正确导入顺序验证：import vllm → vllm_ascend.ops → worker.model_runner_v1",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 22.14",
+        "# extra env   : {}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A4e_import_order_ops_first_only_order.txt",
+      "meta": [
+        "# step_id     : A4e_import_order_ops_first_only",
+        "# title       : 只先 import vllm_ascend.ops，再 import worker.model_runner_v1（不显式 import vllm）",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 12.74",
+        "# extra env   : {}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A4f_import_order_reversed_counterexample_order.txt",
+      "meta": [
+        "# step_id     : A4f_import_order_reversed_counterexample",
+        "# title       : 反例：直接 import worker.model_runner_v1（循环导入）",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 12.13",
+        "# extra env   : {}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A5a2_plugins_unset.txt",
+      "meta": [
+        "# step_id     : A5a2_plugins_unset",
+        "# title       : VLLM_PLUGINS unset（全部插件）",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 3.39",
+        "# env overrides: {\"VLLM_PLUGINS\": \"<unset>\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A5a2_plugins_unset_envfix.txt",
+      "meta": [
+        "# step_id     : A5a2_plugins_unset",
+        "# title       : VLLM_PLUGINS unset（全部插件）",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 5.59",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {\"VLLM_PLUGINS\": \"<unset>\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A5a_plugins_empty.txt",
+      "meta": [
+        "# step_id     : A5a_plugins_empty",
+        "# title       : VLLM_PLUGINS=\"\"（空串）vs unset 对 general plugin 加载的影响",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 2.74",
+        "# env overrides: {\"VLLM_PLUGINS\": \"\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A5a_plugins_empty_envfix.txt",
+      "meta": [
+        "# step_id     : A5a_plugins_empty",
+        "# title       : VLLM_PLUGINS=\"\"（空串）vs unset 对 general plugin 加载的影响",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 3.79",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {\"VLLM_PLUGINS\": \"\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A5b2_vllm_target_device_unset.txt",
+      "meta": [
+        "# step_id     : A5b2_vllm_target_device_unset",
+        "# title       : VLLM_TARGET_DEVICE unset（默认 cuda）下的 current_platform 解析",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 3.19",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A5b2_vllm_target_device_unset_envfix.txt",
+      "meta": [
+        "# step_id     : A5b2_vllm_target_device_unset",
+        "# title       : VLLM_TARGET_DEVICE unset（默认 cuda）下的 current_platform 解析",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 5.18",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A5b_vllm_target_device_npu.txt",
+      "meta": [
+        "# step_id     : A5b_vllm_target_device_npu",
+        "# title       : VLLM_TARGET_DEVICE=npu 下的 current_platform 解析",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 3.19",
+        "# env overrides: {\"VLLM_TARGET_DEVICE\": \"npu\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A5b_vllm_target_device_npu_envfix.txt",
+      "meta": [
+        "# step_id     : A5b_vllm_target_device_npu",
+        "# title       : VLLM_TARGET_DEVICE=npu 下的 current_platform 解析",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 4.97",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {\"VLLM_TARGET_DEVICE\": \"npu\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A5c_vllm_use_v1_0.txt",
+      "meta": [
+        "# step_id     : A5c_vllm_use_v1_0",
+        "# title       : VLLM_USE_V1=0",
+        "# cwd         : /work",
+        "# returncode  : 1",
+        "# duration_s  : 3.19",
+        "# env overrides: {\"VLLM_USE_V1\": \"0\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A5c_vllm_use_v1_0_envfix.txt",
+      "meta": [
+        "# step_id     : A5c_vllm_use_v1_0",
+        "# title       : VLLM_USE_V1=0",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 5.18",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {\"VLLM_USE_V1\": \"0\"}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A6_env_npu_smi.txt",
+      "meta": [
+        "# step_id     : A6_env_npu_smi",
+        "# title       : 无卡容器里 npu-smi / ascend-dmi / /dev/davinci* 的情况",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 0.74",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A6_env_npu_smi_envfix.txt",
+      "meta": [
+        "# step_id     : A6_env_npu_smi",
+        "# title       : 无卡容器里 npu-smi / ascend-dmi / /dev/davinci* 的情况",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 0.74",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A7_hostinfo_manifest.txt",
+      "meta": [
+        "# step_id     : A7_hostinfo_manifest",
+        "# title       : numpy / uname / lscpu 摘要 / 线程配置",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 1.93",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A7_hostinfo_manifest_envfix.txt",
+      "meta": [
+        "# step_id     : A7_hostinfo_manifest",
+        "# title       : numpy / uname / lscpu 摘要 / 线程配置",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 1.93",
+        "# extra env   : {\"USER\": \"probe\", \"LOGNAME\": \"probe\"}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A8_device_runtime_probes_devapi.txt",
+      "meta": [
+        "# step_id     : A8_device_runtime_probes",
+        "# title       : 运行时设备交互探针：逐条独立子进程调用 torch.npu.* / torch_npu.*（记录 aclInit 失败点）",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 163.70",
+        "# extra env   : {}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/A9_torch_npu_surface_order.txt",
+      "meta": [
+        "# step_id     : A9_torch_npu_surface",
+        "# title       : torch_npu 顶层子模块可导入性（profiler / op_plugin / multiprocessing / acl）",
+        "# cwd         : /work",
+        "# returncode  : 0",
+        "# duration_s  : 5.69",
+        "# extra env   : {}",
+        "# env overrides: {}",
+        "# ---- COMMAND (python -c) ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C10.txt",
+      "meta": [
+        "# C10 Tensor.to(device('npu:0'))",
+        "# ok=True",
+        "# value='cpu'",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C11.txt",
+      "meta": [
+        "# C11 torch.zeros(device='npu')",
+        "# ok=True",
+        "# value='cpu'",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C12.txt",
+      "meta": [
+        "# C12 torch.zeros(device='npu:0')",
+        "# ok=True",
+        "# value='cpu'",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C13.txt",
+      "meta": [
+        "# C13 torch.zeros(pin_memory=True)",
+        "# ok=True",
+        "# value='(4,)'",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C14.txt",
+      "meta": [
+        "# C14 with torch.device('npu'): torch.zeros(2)",
+        "# ok=True",
+        "# value='cpu'",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C16.txt",
+      "meta": [
+        "# C16 torch.npu.config.allow_internal_format 读写",
+        "# ok=True",
+        "# value='<read FAILED>'",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C17.txt",
+      "meta": [
+        "# C17 torch.accelerator.* 基本调用",
+        "# ok=True",
+        "# value={'synchronize': None, 'current_device_index': 0, 'device_count': 1, 'is_available': True, 'current_accelerator': 'cpu', 'empty_cache': None}",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C18.txt",
+      "meta": [
+        "# C18 torch.zeros_like(cpu_t, device='npu')",
+        "# ok=True",
+        "# value='cpu'",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C19.txt",
+      "meta": [
+        "# C19 torch.empty(4, device='npu') / torch.tensor([1], device='npu')",
+        "# ok=True",
+        "# value=['cpu', 'cpu', 'cpu', 'cpu']",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C6.txt",
+      "meta": [
+        "# C6 CpuGpuBuffer(1024,int32,device=npu)+copy_to_gpu",
+        "# ok=True",
+        "# value='cpu=cpu gpu=cpu'",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C7.txt",
+      "meta": [
+        "# C7 CpuGpuBuffer(device=npu:0, pin_memory=True)",
+        "# ok=True",
+        "# value='cpu=cpu gpu=cpu'",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C8.txt",
+      "meta": [
+        "# C8 Tensor.npu()",
+        "# ok=True",
+        "# value='cpu'",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_patch_C9.txt",
+      "meta": [
+        "# C9 Tensor.to('npu')",
+        "# ok=True",
+        "# value='cpu'",
+        "# exc=None",
+        "# tb"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C0.txt",
+      "meta": [
+        "# C0: install(device='cpu') 幂等 + import torch_npu 命中",
+        "# ok=True  5435.53 ms",
+        "# value: {'installed': True, 'torch_npu': '/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/__init__.py'}",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C1.txt",
+      "meta": [
+        "# C1: import torch_npu 可用",
+        "# ok=True  0.01 ms",
+        "# value: '/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/__init__.py'",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C10.txt",
+      "meta": [
+        "# C10: Tensor.to(device('npu:0'))",
+        "# ok=True  0.04 ms",
+        "# value: 'cpu'",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C11.txt",
+      "meta": [
+        "# C11: torch.zeros(device='npu')",
+        "# ok=True  0.03 ms",
+        "# value: 'cpu'",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C12.txt",
+      "meta": [
+        "# C12: torch.zeros(device='npu:0')",
+        "# ok=True  0.02 ms",
+        "# value: 'cpu'",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C13.txt",
+      "meta": [
+        "# C13: torch.zeros(pin_memory=True)",
+        "# ok=True  1.4 ms",
+        "# value: {'shape': (4,), 'str': 'tensor([0., 0., 0., 0.])'}",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C14.txt",
+      "meta": [
+        "# C14: with torch.device('npu'): torch.zeros(2)",
+        "# ok=True  0.09 ms",
+        "# value: 'cpu'",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C15.txt",
+      "meta": [
+        "# C15: torch.npu Stream/Event 语义（record/synchronize/stream ctx）",
+        "# ok=True  0.04 ms",
+        "# value: 'ok'",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C16.txt",
+      "meta": [
+        "# C16: torch.npu.config.allow_internal_format 读写",
+        "# ok=False  0.75 ms",
+        "# value: None",
+        "# exc: AttributeError: '_npuConfig' object has no attribute 'allow_internal_format'",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C2.txt",
+      "meta": [
+        "# C2: torch.npu.* 基本命名空间（is_available/current_stream/Event/Stream/synchronize/mem_get_info）",
+        "# ok=True  0.07 ms",
+        "# value: {'npu.is_available': True, 'npu.device_count': 1, 'npu.current_device': 0, 'npu.current_stream': '<CpuShimStream>', 'npu.synchronize': None, 'npu.Event': '<CpuShimEvent>', 'npu.Stream': '<CpuShimStream>', 'npu.empty_cache': None, 'npu.mem_get_info': (1099511627776, 1099511627776)}",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C3.txt",
+      "meta": [
+        "# C3: import vllm",
+        "# ok=True  0.01 ms",
+        "# value: '0.26.0'",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C4.txt",
+      "meta": [
+        "# C4: import vllm_ascend.ops",
+        "# ok=True  6359.99 ms",
+        "# value: '/vllm-workspace/vllm-ascend/vllm_ascend/ops/__init__.py'",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C5.txt",
+      "meta": [
+        "# C5: from vllm_ascend.worker.model_runner_v1 import NPUModelRunner",
+        "# ok=True  14281.59 ms",
+        "# value: {'cls': \"<class 'vllm_ascend.worker.model_runner_v1.NPUModelRunner'>\", 'mro': ['NPUModelRunner', 'GPUModelRunner', 'LoRAModelRunnerMixin', 'KVConnectorModelRunnerMixin', 'ECConnectorModelRunnerMixin', 'object']}",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C6.txt",
+      "meta": [
+        "# C6: CpuGpuBuffer(1024, int32, device='npu') + copy_to_gpu()",
+        "# ok=True  28.48 ms",
+        "# value: {'cpu.device': 'cpu', 'gpu.device': 'cpu', 'copy_to_gpu': 'cpu', 'gpu[0:3]': [7, 7, 7]}",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C7.txt",
+      "meta": [
+        "# C7: CpuGpuBuffer(device='npu:0', pin_memory=True)",
+        "# ok=True  0.18 ms",
+        "# value: {'cpu.device': 'cpu', 'gpu.device': 'cpu', 'cpu.is_pinned': False}",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C8.txt",
+      "meta": [
+        "# C8: Tensor.npu()",
+        "# ok=True  0.03 ms",
+        "# value: {'device': 'cpu', 'type': 'Tensor'}",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    },
+    {
+      "log": "devdeps_stacks/shim_smoke_C9.txt",
+      "meta": [
+        "# C9: Tensor.to('npu')",
+        "# ok=True  0.08 ms",
+        "# value: 'cpu'",
+        "# exc: None",
+        "# ---- traceback ----"
+      ]
+    }
+  ],
+  "run_entrypoint": "ssh a3-22 'cd ~/projects/vllm/prepare-input-phase && bash harness/scripts/pi-docker.sh \"<cmd>\"'",
+  "notes": [
+    "无卡容器：不挂任何 /dev/davinci*；--network none；绑核 200-215（不使用 120-159）",
+    "TORCH_DEVICE_BACKEND_AUTOLOAD=0；PYTHONPATH=/work/harness；cwd=/work",
+    "容器内 uid 无 passwd 条目，必须给 USER/LOGNAME（pi-docker.sh 已加）"
+  ]
+}

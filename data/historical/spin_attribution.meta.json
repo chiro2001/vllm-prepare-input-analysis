@@ -1,0 +1,13 @@
+{
+ "description": "graph+MTP-on \u81ea\u65cb\u5f52\u56e0\u4e94\u81c2\uff1a\u53ea\u5dee\u300cspec-decode event \u8bb0\u5f55\u5728\u54ea\u4e2a\u6d41\u300d\u3002",
+ "tier": "historical-measured",
+ "arms": {
+  "A": "MTP-off \u57fa\u7ebf\uff08\u65e0\u81ea\u65cb\u53c2\u7167\uff09",
+  "B": "MTP-on \u4e0a\u6e38\uff08\u81ea\u65cb\uff09",
+  "C1": "\u53ea\u6539 valid_sampled_token_count_event",
+  "C2": "\u53ea\u6539 num_accepted_tokens_event",
+  "C": "\u4e24\u5904\u90fd\u6539"
+ },
+ "source": "HIST_PROJECT/reports/spin-attribution/{README.md,windows.csv,figures/}",
+ "conclusion": "\u628a\u7b49\u5f85\u6539\u56de\u9ed8\u8ba4\u6d41\u53ea\u6d88\u6389\u7ea6 50% \u7684\u989d\u5916\u5468\u671f\uff1b\u6b8b\u4f59\u7ea6 9 ms/\u6b65\u672a\u5f52\u56e0\u3002"
+}

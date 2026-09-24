@@ -1,0 +1,6 @@
+# C6 CpuGpuBuffer(1024,int32,device=npu)+copy_to_gpu
+# ok=True
+# value='cpu=cpu gpu=cpu'
+# exc=None
+# tb
+

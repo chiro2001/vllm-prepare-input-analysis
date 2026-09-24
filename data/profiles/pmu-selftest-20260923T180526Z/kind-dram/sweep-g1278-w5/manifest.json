@@ -1,0 +1,146 @@
+{
+  "schema": "pi-pmu-sweep-manifest-v1",
+  "tag": "selftest-20260923T180526Z-dram",
+  "command": {
+    "outer": [
+      "/usr/bin/python3",
+      "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+      "--tid",
+      "4180345",
+      "--window",
+      "5.000",
+      "--groups",
+      "1-2,7-8",
+      "--tag",
+      "selftest-20260923T180526Z-dram",
+      "--outdir",
+      "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/kind-dram/sweep-g1278-w5",
+      "--kperfx-python",
+      "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/python"
+    ],
+    "inner_template": [
+      "sudo",
+      "-n",
+      "/usr/bin/python3",
+      "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+      "--inner",
+      "..."
+    ],
+    "sudo": true
+  },
+  "tid": 4180345,
+  "pid": 0,
+  "groups": [
+    1,
+    2,
+    7,
+    8
+  ],
+  "window_s": 5.0,
+  "preset_prefix": "920b_topdown_full_",
+  "retries": 1,
+  "confidence_threshold": 0.99,
+  "script": {
+    "path": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+    "sha256": "d984fd655a82bad90d6a90aa4f74df9d6a73a04cb35158c220458ba26826a073"
+  },
+  "script_sha256": "d984fd655a82bad90d6a90aa4f74df9d6a73a04cb35158c220458ba26826a073",
+  "python": "/usr/bin/python3",
+  "python_version": "3.11.6",
+  "kperfx_python_dir": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/python",
+  "kperfx": {
+    "kperfx_version": "1.0.0",
+    "pmu": "920B",
+    "backend": "920B(counting)",
+    "preset_groups": 9
+  },
+  "host": {
+    "hostname": "host22",
+    "nproc": 640,
+    "kernel": "6.6.0-159.4.3.154.oe2403sp4.aarch64",
+    "perf_event_paranoid": "2"
+  },
+  "target": {
+    "tid": 4180345,
+    "comm": "workload_gen",
+    "state": "R",
+    "cpu": 200,
+    "cpus_allowed": [
+      200
+    ]
+  },
+  "conflicts": [],
+  "refused": null,
+  "started_at_utc": "2026-09-23T18:13:45Z",
+  "finished_at_utc": "2026-09-23T18:14:05Z",
+  "wall_s": 20.71,
+  "groups_ok": [
+    1,
+    2,
+    7,
+    8
+  ],
+  "groups_failed": [],
+  "per_group": {
+    "1": {
+      "status": "ok",
+      "attempts": 1,
+      "confidence": 1.0,
+      "time_enabled_ns": 4999974800,
+      "time_running_ns": 4999974800,
+      "useronly_forced": false,
+      "wall_s": 5.1281,
+      "error": null
+    },
+    "2": {
+      "status": "ok",
+      "attempts": 1,
+      "confidence": 1.0,
+      "time_enabled_ns": 4999933920,
+      "time_running_ns": 4999933920,
+      "useronly_forced": false,
+      "wall_s": 5.1317,
+      "error": null
+    },
+    "7": {
+      "status": "ok",
+      "attempts": 1,
+      "confidence": 1.0,
+      "time_enabled_ns": 4999933600,
+      "time_running_ns": 4999933600,
+      "useronly_forced": false,
+      "wall_s": 5.1306,
+      "error": null
+    },
+    "8": {
+      "status": "ok",
+      "attempts": 1,
+      "confidence": 1.0,
+      "time_enabled_ns": 5000525890,
+      "time_running_ns": 5000525890,
+      "useronly_forced": false,
+      "wall_s": 5.1354,
+      "error": null
+    }
+  },
+  "min_confidence": 1.0,
+  "mean_confidence": 1.0,
+  "all_confident": true,
+  "low_confidence_groups": [],
+  "zero_counting_events": [
+    "DRAM_LOCAL",
+    "DRAM_REMOTE",
+    "DRAM_REMOTE_CACHE",
+    "FDIV_FSQRT_STALL",
+    "FSU_STALL",
+    "MEMSTALL_L3MISS",
+    "MEM_STALL_ANYSTORE"
+  ],
+  "exit_code": 0,
+  "notes": [
+    "one preset group at a time (8 counters fit, the topdown tree needs 66)",
+    "pmu_group*.json is written by libkperfx's own C writer",
+    "confidence = time_running/time_enabled of the group leader",
+    "topdown/IPC are only meaningful together with the confidence recorded here"
+  ]
+}

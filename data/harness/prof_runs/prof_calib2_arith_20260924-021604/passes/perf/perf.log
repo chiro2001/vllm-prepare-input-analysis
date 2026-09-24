@@ -1,0 +1,7 @@
+[ perf record: Woken up 146 times to write data ]
+Warning:
+Processed 4866 events and lost 1 chunks!
+
+Check IO/CPU overload!
+
+[ perf record: Captured and wrote 36.325 MB /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/harness/prof_runs/prof_calib2_arith_20260924-021604/passes/perf/perf.data (4446 samples) ]

@@ -1,0 +1,13 @@
+label,python_label,python_bin,python,python_impl,variant,tensor_backend,iters,rounds,median_ns,min_ns,p10_ns,p90_ns,us_per_iter,checksum,numpy,torch,gil_enabled,affinity,error
+cp312:plain:numpy,cp312,.venv/bin/python,3.12.14,cpython,plain,numpy,5000,7,15208.4348,14898.1696,14898.1696,16628.8276,15.208434800000001,14455000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:plain:none,cp312,.venv/bin/python,3.12.14,cpython,plain,none,5000,7,4453.7188,4070.3818,4070.3818,6673.0188,4.4537188,14385000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:slots:numpy,cp312,.venv/bin/python,3.12.14,cpython,slots,numpy,5000,7,14968.148,14836.4368,14836.4368,16844.5326,14.968148,14455000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:slots:none,cp312,.venv/bin/python,3.12.14,cpython,slots,none,5000,7,4114.6724,4040.7688,4040.7688,4378.4306,4.114672400000001,14385000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:manual_dict:numpy,cp312,.venv/bin/python,3.12.14,cpython,manual_dict,numpy,5000,7,15569.8386,14672.0274,14672.0274,16379.0272,15.569838599999999,14455000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:manual_dict:none,cp312,.venv/bin/python,3.12.14,cpython,manual_dict,none,5000,7,4052.7112,3985.5542,3985.5542,4213.398,4.0527112,14385000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:manual_slots:numpy,cp312,.venv/bin/python,3.12.14,cpython,manual_slots,numpy,5000,7,15352.8352,15062.6776,15062.6776,15966.8026,15.3528352,14455000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:manual_slots:none,cp312,.venv/bin/python,3.12.14,cpython,manual_slots,none,5000,7,4014.9206,3924.9694,3924.9694,4693.5226,4.0149206,14385000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:namedtuple:numpy,cp312,.venv/bin/python,3.12.14,cpython,namedtuple,numpy,5000,7,14997.2038,14803.7182,14803.7182,15222.218,14.9972038,14455000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:namedtuple:none,cp312,.venv/bin/python,3.12.14,cpython,namedtuple,none,5000,7,4140.6686,4120.6834,4120.6834,4845.6172,4.1406686,14385000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:dict:numpy,cp312,.venv/bin/python,3.12.14,cpython,dict,numpy,5000,7,17319.299,16401.044,16401.044,18296.9852,17.319298999999997,14455000,2.3.5,2.13.0+cpu,True,"4,5,6,7",
+cp312:dict:none,cp312,.venv/bin/python,3.12.14,cpython,dict,none,5000,7,4701.5194,4582.7788,4582.7788,4827.0428,4.7015194000000005,14385000,2.3.5,2.13.0+cpu,True,"4,5,6,7",

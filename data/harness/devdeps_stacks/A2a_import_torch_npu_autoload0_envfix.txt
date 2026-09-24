@@ -1,0 +1,43 @@
+# step_id     : A2a_import_torch_npu_autoload0
+# title       : import torch_npu，TORCH_DEVICE_BACKEND_AUTOLOAD=0
+# cwd         : /work
+# returncode  : 0
+# duration_s  : 5.03
+# extra env   : {"USER": "probe", "LOGNAME": "probe"}
+# env overrides: {"TORCH_DEVICE_BACKEND_AUTOLOAD": "0"}
+# ---- COMMAND (python -c) ----
+import json, sys, os
+import torch
+print("env.TORCH_DEVICE_BACKEND_AUTOLOAD =", os.environ.get("TORCH_DEVICE_BACKEND_AUTOLOAD"))
+print("torch:", torch.__version__, "| hasattr(torch,'npu') before import torch_npu =", hasattr(torch, "npu"))
+import torch_npu
+print("torch_npu OK")
+print("torch_npu.__file__ =", getattr(torch_npu, "__file__", None))
+print("torch_npu.__version__ =", getattr(torch_npu, "__version__", None))
+print("hasattr(torch,'npu') after import torch_npu =", hasattr(torch, "npu"))
+print("torch.npu.is_available() =", getattr(torch, "npu", None) and torch.npu.is_available())
+print("sys.modules torch_npu =", sys.modules.get("torch_npu"))
+# ---- STDOUT ----
+env.TORCH_DEVICE_BACKEND_AUTOLOAD = 0
+torch: 2.10.0+cpu | hasattr(torch,'npu') before import torch_npu = False
+torch_npu OK
+torch_npu.__file__ = /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/__init__.py
+torch_npu.__version__ = 2.10.0.post4
+hasattr(torch,'npu') after import torch_npu = True
+torch.npu.is_available() = False
+sys.modules torch_npu = <module 'torch_npu' from '/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/__init__.py'>
+[LOG_WARNING] can not create directory, directory: /ascend/log, possible reason: No such file or directory.
+# ---- STDERR ----
+can not use command: npu-smi info
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/_path_manager.py:66: UserWarning: Permission mismatch: The owner of /usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so does not match.
+  warnings.warn(f"Permission mismatch: The owner of {path} does not match.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0 owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/cann-9.1.0/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+
+# ---- END ----

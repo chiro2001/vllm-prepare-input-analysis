@@ -1,0 +1,1 @@
+{"counters": {"L2I_TLB": 999081, "L2I_TLB_REFILL": 8046, "L2I_CACHE": 2005391, "L2I_CACHE_REFILL": 254848, "PC_BUF_STALL": 2125343, "INT_PTAG_STALL": 615202891, "CC_PTAG_STALL": 0, "VFP_SINGLE_PTAG_STALL": 614}, "confidence": 1.0, "ipc": null, "stopped_reason": "target_exit"}

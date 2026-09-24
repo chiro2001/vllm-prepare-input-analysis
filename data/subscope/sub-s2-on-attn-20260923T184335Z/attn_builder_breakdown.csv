@@ -1,0 +1,10 @@
+subscope,self_us_p50,self_us_p90,self_us_p99,share_pct_of_builder_p50
+pi: am.build.qsl_h2d,33.79,40.9,75.38,3.19
+pi: am.build.backend_metadata,14.88,16.0,22.13,1.4
+pi: am.build.tolist,9.8,10.69,16.77,0.92
+pi: am.build.split_decodes,9.59,12.64,106.28,0.9
+pi: am.build.seq_lens_select,8.27,8.82,12.34,0.78
+pi: am.build.metadata_ctor,6.78,7.73,13.4,0.64
+pi: am.build.fia_pad,1.98,2.13,2.57,0.19
+pi: am.build.attn_mask,1.22,1.41,2.14,0.12
+pi: am.builder_build (unattributed residual),973.86,,,91.86

@@ -1,0 +1,119 @@
+{
+  "schema": "pi-pmu-group-meta-v1",
+  "tag": "real-b1",
+  "group": 2,
+  "preset": "920b_topdown_full_2",
+  "events": [
+    "exe_stall_div",
+    "fsu_stall",
+    "mem_stall_anyload",
+    "mem_stall_anystore",
+    "memstall_l1miss",
+    "memstall_l2miss",
+    "memstall_l3miss",
+    "rob_stall"
+  ],
+  "tid": 704908,
+  "pid": 704908,
+  "status": "ok",
+  "attempts": 1,
+  "rc": 0,
+  "timed_out": false,
+  "error": null,
+  "outer_wall_s": 3.1317,
+  "inner_wall_s": 3.015021,
+  "started_at_utc": "2026-09-23T20:29:24Z",
+  "finished_at_utc": "2026-09-23T20:29:27Z",
+  "confidence": 1.0,
+  "time_enabled": 2927511250,
+  "time_running": 2927511250,
+  "useronly_forced": false,
+  "counters": [
+    {
+      "name": "EXE_STALL_DIV",
+      "id": "exe_stall_div",
+      "config": "0x7003",
+      "delta": 5509311,
+      "rate": 1881909.420502
+    },
+    {
+      "name": "FSU_STALL",
+      "id": "fsu_stall",
+      "config": "0x7004",
+      "delta": 3209494,
+      "rate": 1096321.662299
+    },
+    {
+      "name": "MEM_STALL_ANYLOAD",
+      "id": "mem_stall_anyload",
+      "config": "0x7005",
+      "delta": 2360433203,
+      "rate": 806293469.581031
+    },
+    {
+      "name": "MEM_STALL_ANYSTORE",
+      "id": "mem_stall_anystore",
+      "config": "0x7006",
+      "delta": 110905,
+      "rate": 37883.714367
+    },
+    {
+      "name": "MEMSTALL_L1MISS",
+      "id": "memstall_l1miss",
+      "config": "0x7007",
+      "delta": 1445205729,
+      "rate": 493663595.314963
+    },
+    {
+      "name": "MEMSTALL_L2MISS",
+      "id": "memstall_l2miss",
+      "config": "0x7008",
+      "delta": 1060202070,
+      "rate": 362151322.219513
+    },
+    {
+      "name": "MEMSTALL_L3MISS",
+      "id": "memstall_l3miss",
+      "config": "0x7009",
+      "delta": 0,
+      "rate": 0.0
+    },
+    {
+      "name": "ROB_STALL",
+      "id": "rob_stall",
+      "config": "0x2004",
+      "delta": 40400713,
+      "rate": 13800361.313727
+    }
+  ],
+  "counters_map": {
+    "EXE_STALL_DIV": 5509311,
+    "FSU_STALL": 3209494,
+    "MEM_STALL_ANYLOAD": 2360433203,
+    "MEM_STALL_ANYSTORE": 110905,
+    "MEMSTALL_L1MISS": 1445205729,
+    "MEMSTALL_L2MISS": 1060202070,
+    "MEMSTALL_L3MISS": 0,
+    "ROB_STALL": 40400713
+  },
+  "cmd": [
+    "sudo",
+    "-n",
+    "/usr/bin/python3",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+    "--inner",
+    "--tid",
+    "704908",
+    "--group",
+    "2",
+    "--window",
+    "3.000000",
+    "--preset-prefix",
+    "920b_topdown_full_",
+    "--kperfx-python",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/python",
+    "--quiet"
+  ],
+  "stderr_tail": "KPERFX_META {\"group\": 2, \"preset\": \"920b_topdown_full_2\", \"events\": [\"exe_stall_div\", \"fsu_stall\", \"mem_stall_anyload\", \"mem_stall_anystore\", \"memstall_l1miss\", \"memstall_l2miss\", \"memstall_l3miss\", \"rob_stall\"], \"tid\": 704908, \"window_requested_s\": 3.0, \"wall_s\": 3.015021, \"started_at_utc\": \"2026-09-23T20:29:24Z\", \"finished_at_utc\": \"2026-09-23T20:29:27Z\", \"time_enabled_ns\": 2927511250, \"time_running_ns\": 2927511250, \"confidence\": 1.0, \"useronly_forced\": false, \"instances\": 1, \"counters\": 8, \"raw_json_writer\": \"kperfx_ctx_write_output\"}\n",
+  "raw_json_writer": "kperfx_ctx_write_output"
+}

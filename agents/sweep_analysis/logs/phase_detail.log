@@ -1,0 +1,95 @@
+[run] sweep_d_base :: --batch 16 --isl 1024 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_base_per_step_20260923-182310.csv
+  [cli] wrote /work/data/harness/sweep_d_base_summary_20260923-182310.json
+  [cli] wrote /work/data/harness/sweep_d_base_substep_20260923-182310.csv
+[run] ok sweep_d_base (59s)
+[run] sweep_d_isl_512 :: --batch 16 --isl 512 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_isl_512_per_step_20260923-182401.csv
+  [cli] wrote /work/data/harness/sweep_d_isl_512_summary_20260923-182401.json
+  [cli] wrote /work/data/harness/sweep_d_isl_512_substep_20260923-182401.csv
+[run] ok sweep_d_isl_512 (55s)
+[run] sweep_d_isl_2048 :: --batch 16 --isl 2048 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_isl_2048_per_step_20260923-182505.csv
+  [cli] wrote /work/data/harness/sweep_d_isl_2048_summary_20260923-182505.json
+  [cli] wrote /work/data/harness/sweep_d_isl_2048_substep_20260923-182505.csv
+[run] ok sweep_d_isl_2048 (65s)
+[run] sweep_d_isl_8192 :: --batch 16 --isl 8192 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_isl_8192_per_step_20260923-182609.csv
+  [cli] wrote /work/data/harness/sweep_d_isl_8192_summary_20260923-182609.json
+  [cli] wrote /work/data/harness/sweep_d_isl_8192_substep_20260923-182609.csv
+[run] ok sweep_d_isl_8192 (68s)
+[run] sweep_d_batch_1 :: --batch 1 --isl 1024 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_batch_1_per_step_20260923-182710.csv
+  [cli] wrote /work/data/harness/sweep_d_batch_1_summary_20260923-182710.json
+  [cli] wrote /work/data/harness/sweep_d_batch_1_substep_20260923-182710.csv
+[run] ok sweep_d_batch_1 (57s)
+[run] sweep_d_batch_2 :: --batch 2 --isl 1024 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_batch_2_per_step_20260923-182824.csv
+  [cli] wrote /work/data/harness/sweep_d_batch_2_summary_20260923-182824.json
+  [cli] wrote /work/data/harness/sweep_d_batch_2_substep_20260923-182824.csv
+[run] ok sweep_d_batch_2 (75s)
+[run] sweep_d_batch_8 :: --batch 8 --isl 1024 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_batch_8_per_step_20260923-182927.csv
+  [cli] wrote /work/data/harness/sweep_d_batch_8_summary_20260923-182927.json
+  [cli] wrote /work/data/harness/sweep_d_batch_8_substep_20260923-182927.csv
+[run] ok sweep_d_batch_8 (64s)
+[run] sweep_d_batch_64 :: --batch 64 --isl 1024 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_batch_64_per_step_20260923-183026.csv
+  [cli] wrote /work/data/harness/sweep_d_batch_64_summary_20260923-183026.json
+  [cli] wrote /work/data/harness/sweep_d_batch_64_substep_20260923-183026.csv
+[run] ok sweep_d_batch_64 (51s)
+[run] sweep_d_chunk_128 :: --batch 16 --isl 1024 --chunk-size 128 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_chunk_128_per_step_20260923-183125.csv
+  [cli] wrote /work/data/harness/sweep_d_chunk_128_summary_20260923-183125.json
+  [cli] wrote /work/data/harness/sweep_d_chunk_128_substep_20260923-183125.csv
+[run] ok sweep_d_chunk_128 (67s)
+[run] sweep_d_chunk_1024 :: --batch 16 --isl 1024 --chunk-size 1024 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_chunk_1024_per_step_20260923-183235.csv
+  [cli] wrote /work/data/harness/sweep_d_chunk_1024_summary_20260923-183235.json
+  [cli] wrote /work/data/harness/sweep_d_chunk_1024_substep_20260923-183235.csv
+[run] ok sweep_d_chunk_1024 (60s)
+[run] sweep_d_chunk_8192 :: --batch 16 --isl 1024 --chunk-size 8192 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_chunk_8192_per_step_20260923-183336.csv
+  [cli] wrote /work/data/harness/sweep_d_chunk_8192_summary_20260923-183336.json
+  [cli] wrote /work/data/harness/sweep_d_chunk_8192_substep_20260923-183336.csv
+[run] ok sweep_d_chunk_8192 (69s)
+[run] sweep_d_blocksize_32 :: --batch 16 --isl 1024 --block-size 32 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_blocksize_32_per_step_20260923-183440.csv
+  [cli] wrote /work/data/harness/sweep_d_blocksize_32_summary_20260923-183440.json
+  [cli] wrote /work/data/harness/sweep_d_blocksize_32_substep_20260923-183440.csv
+[run] ok sweep_d_blocksize_32 (64s)
+[run] sweep_d_blocksize_64 :: --batch 16 --isl 1024 --block-size 64 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_blocksize_64_per_step_20260923-183544.csv
+  [cli] wrote /work/data/harness/sweep_d_blocksize_64_summary_20260923-183544.json
+  [cli] wrote /work/data/harness/sweep_d_blocksize_64_substep_20260923-183544.csv
+[run] ok sweep_d_blocksize_64 (62s)
+[run] sweep_d_blocksize_256 :: --batch 16 --isl 1024 --block-size 256 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_blocksize_256_per_step_20260923-183646.csv
+  [cli] wrote /work/data/harness/sweep_d_blocksize_256_summary_20260923-183646.json
+  [cli] wrote /work/data/harness/sweep_d_blocksize_256_substep_20260923-183646.csv
+[run] ok sweep_d_blocksize_256 (63s)
+[run] sweep_d_spec_1 :: --batch 16 --isl 1024 --spec-k 1 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+[run] FAILED sweep_d_spec_1
+TraceBack (most recent call last):
+        [Init][Version]init SoC version failed.[FUNC:ReportInnerError][FILE:log_inner.cpp][LINE:132]
+        chipType=0 does not support get device msg feature.[FUNC:GetDevMsg][FILE:api_impl.cc][LINE:6119]
+        The argument is invalid. Reason: rtGetDevMsg execution failed, the feature is not supported.
+
+[run] sweep_d_spec_3 :: --batch 16 --isl 1024 --spec-k 3 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+[run] FAILED sweep_d_spec_3
+TraceBack (most recent call last):
+        [Init][Version]init SoC version failed.[FUNC:ReportInnerError][FILE:log_inner.cpp][LINE:132]
+        chipType=0 does not support get device msg feature.[FUNC:GetDevMsg][FILE:api_impl.cc][LINE:6119]
+        The argument is invalid. Reason: rtGetDevMsg execution failed, the feature is not supported.
+
+[run] sweep_d_prefix_0.5 :: --batch 16 --isl 1024 --prefix-hit-ratio 0.5 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_prefix_0.5_per_step_20260923-184005.csv
+  [cli] wrote /work/data/harness/sweep_d_prefix_0.5_summary_20260923-184005.json
+  [cli] wrote /work/data/harness/sweep_d_prefix_0.5_substep_20260923-184005.csv
+[run] ok sweep_d_prefix_0.5 (68s)
+[run] sweep_d_prefix_1.0 :: --batch 16 --isl 1024 --prefix-hit-ratio 1.0 --steps 80 --osl 128 --has-gdn --max-num-reqs 64 --max-num-batched-tokens 16384
+  [cli] wrote /work/data/harness/sweep_d_prefix_1.0_per_step_20260923-184111.csv
+  [cli] wrote /work/data/harness/sweep_d_prefix_1.0_summary_20260923-184111.json
+  [cli] wrote /work/data/harness/sweep_d_prefix_1.0_substep_20260923-184111.csv
+[run] ok sweep_d_prefix_1.0 (67s)
+agents/sweep_analysis/run_remote.sh: line 112: when: unbound variable

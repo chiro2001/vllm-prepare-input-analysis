@@ -1,0 +1,33 @@
+[2026-09-23T18:05:26Z] selftest cpu=200 groups=[1, 2, 3, 7, 8] sweep_window=5.0s perf_window=5.0s full9_window=3.0s workload=87s dir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z
+[2026-09-23T18:05:26Z] --list-groups rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/list-groups.txt
+[2026-09-23T18:05:27Z] workload=libkperfx workload_gen --kind alu pid=4090167 busy_tid=4090168 cpu=200 selection={"source": "schedstat_runtime_ns", "delta": {"4090167": 0, "4090168": 399265050}}
+[2026-09-23T18:05:27Z] target={"tid": 4090168, "comm": "workload_gen", "state": "R", "cpu": 200, "cpus_allowed": [200]}
+[2026-09-23T18:05:32Z] perf attempt 1 events=['cycles', 'instructions'] rc=0 counts=[('cycles', 14503288766), ('instructions', 19308812059)]
+[2026-09-23T18:05:58Z] sweep rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/sweep-g12378-w5
+[2026-09-23T18:05:58Z] compare cycles: perf=14503288766 kperfx=14500145956 rel_err=0.0217% pass=True
+[2026-09-23T18:05:58Z] compare instructions: perf=19308812059 kperfx=19306381592 rel_err=0.0126% pass=True
+[2026-09-23T18:06:27Z] full9 rc=0 all_confident=True min_conf=1.0 wall=28.397s
+[2026-09-23T18:06:27Z] selftest artifacts in /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z
+[2026-09-23T18:06:27Z] selftest verdict: PASS
+[2026-09-23T18:09:43Z] selftest cpu=200 groups=[1, 2, 3, 7, 8] sweep_window=5.0s perf_window=5.0s full9_window=3.0s workload=87s dir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z
+[2026-09-23T18:09:43Z] --list-groups rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/list-groups.txt
+[2026-09-23T18:09:44Z] workload=libkperfx workload_gen --kind alu pid=4134243 busy_tid=4134244 cpu=200 selection={"source": "schedstat_runtime_ns", "delta": {"4134243": 0, "4134244": 399089980}}
+[2026-09-23T18:09:44Z] target={"tid": 4134244, "comm": "workload_gen", "state": "R", "cpu": 200, "cpus_allowed": [200]}
+[2026-09-23T18:09:49Z] perf attempt 1 events=['cycles', 'instructions'] rc=0 counts=[('cycles', 14499353734), ('instructions', 19273342053)]
+[2026-09-23T18:10:15Z] sweep rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/sweep-g12378-w5
+[2026-09-23T18:10:15Z] compare cycles: perf=14499353734 kperfx=14498080121 rel_err=0.0088% pass=True
+[2026-09-23T18:10:15Z] compare instructions: perf=19273342053 kperfx=19200057439 rel_err=0.3802% pass=True
+[2026-09-23T18:10:44Z] full9 rc=0 all_confident=True min_conf=1.0 wall=28.377s
+[2026-09-23T18:10:44Z] selftest artifacts in /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z
+[2026-09-23T18:10:44Z] selftest verdict: PASS
+[2026-09-23T18:12:37Z] selftest cpu=200 groups=[1, 2, 3, 7, 8] sweep_window=5.0s perf_window=5.0s full9_window=3.0s workload=87s dir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z
+[2026-09-23T18:12:37Z] --list-groups rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/list-groups.txt
+[2026-09-23T18:12:38Z] workload=libkperfx workload_gen --kind alu pid=4160169 busy_tid=4160170 cpu=200 selection={"source": "schedstat_runtime_ns", "delta": {"4160169": 0, "4160170": 398753820}}
+[2026-09-23T18:12:38Z] target={"tid": 4160170, "comm": "workload_gen", "state": "R", "cpu": 200, "cpus_allowed": [200]}
+[2026-09-23T18:12:43Z] perf attempt 1 events=['cycles', 'instructions'] rc=0 counts=[('cycles', 14501769283), ('instructions', 19238718943)]
+[2026-09-23T18:13:09Z] sweep rc=0 -> /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/sweep-g12378-w5
+[2026-09-23T18:13:09Z] compare cycles: perf=14501769283 kperfx=14498074842 rel_err=0.0255% pass=True
+[2026-09-23T18:13:09Z] compare instructions: perf=19238718943 kperfx=19278219558 rel_err=0.2053% pass=True
+[2026-09-23T18:13:38Z] full9 rc=0 all_confident=True min_conf=1.0 wall=28.413s
+[2026-09-23T18:13:38Z] selftest artifacts in /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z
+[2026-09-23T18:13:38Z] selftest verdict: PASS

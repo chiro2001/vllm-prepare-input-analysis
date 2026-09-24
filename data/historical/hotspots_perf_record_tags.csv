@@ -1,0 +1,9 @@
+tag,period,share_of_top30_percent,share_of_full_profile_percent,samples,n_symbols,profile_total_period,basis
+python_eval,15000151896,54.166,17.437,21922,8,86023367614,share_of_top30_percent 的分母是 top-30 之和；share_of_full_profile_percent 的分母是整份 perf record 的 period（86023367614）。注意 tags 只覆盖 top-30 符号，不是全部热点。
+allocator,3997252777,14.434,4.647,5841,5,86023367614,share_of_top30_percent 的分母是 top-30 之和；share_of_full_profile_percent 的分母是整份 perf record 的 period（86023367614）。注意 tags 只覆盖 top-30 符号，不是全部热点。
+kernel_syscall,2416527417,8.726,2.809,3535,3,86023367614,share_of_top30_percent 的分母是 top-30 之和；share_of_full_profile_percent 的分母是整份 perf record 的 period（86023367614）。注意 tags 只覆盖 top-30 符号，不是全部热点。
+(untagged),2191527339,7.914,2.548,3200,7,86023367614,share_of_top30_percent 的分母是 top-30 之和；share_of_full_profile_percent 的分母是整份 perf record 的 period（86023367614）。注意 tags 只覆盖 top-30 符号，不是全部热点。
+lock_or_sync,2124745308,7.673,2.47,3100,2,86023367614,share_of_top30_percent 的分母是 top-30 之和；share_of_full_profile_percent 的分母是整份 perf record 的 period（86023367614）。注意 tags 只覆盖 top-30 符号，不是全部热点。
+torch_dispatch,1068649948,3.859,1.242,1563,3,86023367614,share_of_top30_percent 的分母是 top-30 之和；share_of_full_profile_percent 的分母是整份 perf record 的 period（86023367614）。注意 tags 只覆盖 top-30 符号，不是全部热点。
+python_frame,531303486,1.919,0.618,776,1,86023367614,share_of_top30_percent 的分母是 top-30 之和；share_of_full_profile_percent 的分母是整份 perf record 的 period（86023367614）。注意 tags 只覆盖 top-30 符号，不是全部热点。
+loader,362524496,1.309,0.421,530,1,86023367614,share_of_top30_percent 的分母是 top-30 之和；share_of_full_profile_percent 的分母是整份 perf record 的 period（86023367614）。注意 tags 只覆盖 top-30 符号，不是全部热点。

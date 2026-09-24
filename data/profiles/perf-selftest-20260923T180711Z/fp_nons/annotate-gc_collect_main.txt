@@ -1,0 +1,1516 @@
+
+Sorted summary for file /usr/local/python3.12.13/lib/libpython3.12.so.1.0
+----------------------------------------------
+
+   54.54 pycore_gc.h:60
+   31.54 pycore_gc.h:59
+    4.08 gcmodule.c:648
+    3.28 gcmodule.c:663
+    1.45 gcmodule.c:597
+    1.26 gcmodule.c:667
+    1.06 gcmodule.c:491
+    0.68 gcmodule.c:652
+ Percent |	Source code & Disassembly of libpython3.12.so.1.0 for cycles (1037 samples, percent: local period)
+------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3      Disassembly of section .text:
+         :
+         : 5      00000000002eba20 <gc_collect_main>:
+         : 6      gc_collect_main():
+    0.00 :   2eba20: stp     x29, x30, [sp, #-320]!
+    0.00 :   2eba24: mov     x29, sp
+    0.00 :   2eba28: stp     x21, x22, [sp, #32]
+    0.00 :   2eba2c: ldr     x22, [x0, #16]
+    0.00 :   2eba30: stp     x27, x28, [sp, #80]
+    0.00 :   2eba34: mov     x27, x0
+    0.00 :   2eba38: stp     x19, x20, [sp, #16]
+    0.00 :   2eba3c: add     x21, x22, #0x70
+    0.00 :   2eba40: ldr     w0, [x21, #16]
+    0.00 :   2eba44: stp     x23, x24, [sp, #48]
+    0.00 :   2eba48: add     x20, sp, #0xd8
+    0.00 :   2eba4c: stp     x25, x26, [sp, #64]
+    0.00 :   2eba50: str     w1, [sp, #132]
+    0.00 :   2eba54: stp     x2, x3, [sp, #144]
+    0.00 :   2eba58: str     xzr, [sp, #160]
+    0.00 :   2eba5c: str     w4, [sp, #168]
+    0.00 :   2eba60: tbnz    w0, #0, 2ec4e4 <gc_collect_main+0xac4>
+    0.00 :   2eba64: ldr     w0, [sp, #132]
+    0.00 :   2eba68: add     w1, w0, #0x1
+    0.00 :   2eba6c: cmp     w1, #0x2
+    0.00 :   2eba70: b.le    2ec458 <gc_collect_main+0xa38>
+    0.00 :   2eba74: sxtw    x26, w0
+    0.00 :   2eba78: add     x7, x22, #0x88
+    0.00 :   2eba7c: add     x0, x26, #0x1
+    0.00 :   2eba80: str     wzr, [x21, #44]
+         : 1228   gc_list_is_empty():
+    0.00 :   2eba84: ldr     x3, [x21, #24]
+         : 244    gc_collect_main():
+    0.00 :   2eba88: add     x0, x0, x0, lsl #1
+    0.00 :   2eba8c: str     wzr, [x21, #68]
+    0.00 :   2eba90: str     wzr, [x21, #92]
+    0.00 :   2eba94: add     x28, x21, x0, lsl #3
+         : 1232   gc_list_merge():
+    0.00 :   2eba98: cmp     x7, x3
+    0.00 :   2eba9c: b.eq    2ec614 <gc_collect_main+0xbf4>  // b.none
+         : 303    _PyGCHead_PREV():
+    0.00 :   2ebaa0: add     x0, x26, x26, lsl #1
+    0.00 :   2ebaa4: ldr     x4, [x21, #32]
+    0.00 :   2ebaa8: add     x0, x21, x0, lsl #3
+         : 71     _PyGCHead_SET_PREV():
+    0.00 :   2ebaac: ldr     x2, [x3, #8]
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ebab0: and     x4, x4, #0xfffffffffffffffc
+    0.00 :   2ebab4: ldr     x6, [x0, #32]
+         : 70     _PyGCHead_SET_PREV():
+    0.00 :   2ebab8: and     x2, x2, #0x3
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ebabc: and     x6, x6, #0xfffffffffffffffc
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ebac0: orr     x2, x2, x6
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ebac4: str     x3, [x6]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ebac8: str     x2, [x3, #8]
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ebacc: str     x28, [x4]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ebad0: ldr     x2, [x0, #32]
+    0.00 :   2ebad4: and     x2, x2, #0x3
+    0.00 :   2ebad8: orr     x2, x2, x4
+    0.00 :   2ebadc: str     x2, [x0, #32]
+         : 78     gc_collect_main():
+    0.00 :   2ebae0: ldr     w0, [sp, #132]
+         : 1231   gc_list_init():
+    0.00 :   2ebae4: stp     x7, x7, [x21, #24]
+         : 237    gc_collect_main():
+    0.00 :   2ebae8: cmp     w0, #0x1
+    0.00 :   2ebaec: b.le    2ec60c <gc_collect_main+0xbec>
+         : 1232   gc_list_is_empty():
+    0.00 :   2ebaf0: ldr     x3, [x21, #48]
+         : 244    gc_collect_main():
+    0.00 :   2ebaf4: add     x2, x22, #0xa0
+         : 1232   gc_list_merge():
+    0.00 :   2ebaf8: cmp     x2, x3
+    0.00 :   2ebafc: b.eq    2ebb40 <gc_collect_main+0x120>  // b.none
+         : 303    _PyGCHead_PREV():
+    0.00 :   2ebb00: add     x0, x26, x26, lsl #1
+    0.00 :   2ebb04: ldr     x6, [x21, #56]
+    0.00 :   2ebb08: add     x0, x21, x0, lsl #3
+         : 71     _PyGCHead_SET_PREV():
+    0.00 :   2ebb0c: ldr     x4, [x3, #8]
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ebb10: and     x6, x6, #0xfffffffffffffffc
+    0.00 :   2ebb14: ldr     x7, [x0, #32]
+         : 70     _PyGCHead_SET_PREV():
+    0.00 :   2ebb18: and     x4, x4, #0x3
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ebb1c: and     x7, x7, #0xfffffffffffffffc
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ebb20: orr     x4, x4, x7
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ebb24: str     x3, [x7]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ebb28: str     x4, [x3, #8]
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ebb2c: str     x28, [x6]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ebb30: ldr     x3, [x0, #32]
+    0.00 :   2ebb34: and     x3, x3, #0x3
+    0.00 :   2ebb38: orr     x3, x3, x6
+    0.00 :   2ebb3c: str     x3, [x0, #32]
+         : 78     gc_collect_main():
+    0.00 :   2ebb40: ldr     w0, [sp, #132]
+    0.00 :   2ebb44: mov     x25, x28
+         : 1232   gc_list_init():
+    0.00 :   2ebb48: stp     x2, x2, [x21, #48]
+         : 237    gc_collect_main():
+    0.00 :   2ebb4c: cmp     w0, #0x2
+    0.00 :   2ebb50: b.le    2ebbb8 <gc_collect_main+0x198>
+         : 1232   gc_list_is_empty():
+    0.00 :   2ebb54: ldr     x3, [x21, #72]
+         : 244    gc_collect_main():
+    0.00 :   2ebb58: add     x5, x22, #0xb8
+         : 1232   gc_list_merge():
+    0.00 :   2ebb5c: cmp     x5, x3
+    0.00 :   2ebb60: b.eq    2ec61c <gc_collect_main+0xbfc>  // b.none
+         : 303    _PyGCHead_PREV():
+    0.00 :   2ebb64: add     x2, x26, x26, lsl #1
+    0.00 :   2ebb68: sxtw    x0, w1
+    0.00 :   2ebb6c: ldr     x4, [x21, #80]
+    0.00 :   2ebb70: add     x1, x21, x2, lsl #3
+         : 72     _PyGCHead_SET_PREV():
+    0.00 :   2ebb74: ldr     x2, [x3, #8]
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ebb78: and     x4, x4, #0xfffffffffffffffc
+    0.00 :   2ebb7c: ldr     x6, [x1, #32]
+         : 70     _PyGCHead_SET_PREV():
+    0.00 :   2ebb80: and     x2, x2, #0x3
+         : 75     gc_collect_main():
+    0.00 :   2ebb84: add     x0, x0, #0x1
+         : 1238   _PyGCHead_PREV():
+    0.00 :   2ebb88: and     x6, x6, #0xfffffffffffffffc
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ebb8c: orr     x2, x2, x6
+         : 75     gc_collect_main():
+    0.00 :   2ebb90: add     x0, x0, x0, lsl #1
+         : 1238   _PyGCHead_SET_NEXT():
+    0.00 :   2ebb94: str     x3, [x6]
+         : 64     gc_collect_main():
+    0.00 :   2ebb98: add     x25, x21, x0, lsl #3
+         : 1238   _PyGCHead_SET_PREV():
+    0.00 :   2ebb9c: str     x2, [x3, #8]
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ebba0: str     x28, [x4]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ebba4: ldr     x2, [x1, #32]
+    0.00 :   2ebba8: and     x2, x2, #0x3
+    0.00 :   2ebbac: orr     x2, x2, x4
+    0.00 :   2ebbb0: str     x2, [x1, #32]
+         : 78     gc_list_init():
+    0.00 :   2ebbb4: stp     x5, x5, [x21, #72]
+         : 237    _PyGCHead_NEXT():
+    0.00 :   2ebbb8: add     x0, x26, x26, lsl #1
+    0.00 :   2ebbbc: add     x0, x21, x0, lsl #3
+    0.00 :   2ebbc0: ldr     x3, [x0, #24]
+    0.00 :   2ebbc4: mov     x0, x3
+         : 61     update_refs():
+    0.00 :   2ebbc8: cmp     x28, x3
+    0.00 :   2ebbcc: b.eq    2ec4b0 <gc_collect_main+0xa90>  // b.none
+         : 426    _PyThreadState_GET():
+    0.10 :   2ebbd0: mrs     x1, tpidr_el0
+    0.00 :   2ebbd4: adrp    x0, 542000 <PyImport_GetModule@@Base+0x2a08a0>
+    0.00 :   2ebbd8: ldr     x2, [x0, #3496]
+    0.00 :   2ebbdc: add     x0, x0, #0xda8
+    0.00 :   2ebbe0: blr     x2
+    0.00 :   2ebbe4: ldr     x7, [x1, x0]
+    0.00 :   2ebbe8: b       2ebc04 <gc_collect_main+0x1e4>
+         : 104    gc_reset_refs():
+    0.48 :   2ebbec: and     x2, x2, #0x1
+    0.00 :   2ebbf0: orr     x0, x2, x0, lsl #2
+    0.00 :   2ebbf4: orr     x0, x0, #0x2
+    0.00 :   2ebbf8: str     x0, [x1, #8]
+         : 106    update_refs():
+    0.00 :   2ebbfc: cmp     x28, x4
+    0.00 :   2ebc00: b.eq    2ebc60 <gc_collect_main+0x240>  // b.none
+         : 426    _Py_IsImmortal():
+    0.00 :   2ebc04: ldp     x2, x0, [x3, #8]
+    0.00 :   2ebc08: mov     x1, x3
+         : 244    _PyGCHead_NEXT():
+   31.54 :   2ebc0c: ldr     x4, [x3] // pycore_gc.h:59
+    0.00 :   2ebc10: mov     x3, x4
+         : 61     update_refs():
+    0.00 :   2ebc14: tbz     w0, #31, 2ebbec <gc_collect_main+0x1cc>
+         : 431    _PyGCHead_SET_PREV():
+    0.00 :   2ebc18: ldr     x0, [x4, #8]
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ebc1c: and     x2, x2, #0xfffffffffffffffc
+         : 69     _PyInterpreterState_GET():
+    0.00 :   2ebc20: ldr     x5, [x7, #16]
+         : 134    _PyGCHead_SET_PREV():
+    0.00 :   2ebc24: and     x0, x0, #0x3
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ebc28: str     x4, [x2]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ebc2c: orr     x0, x0, x2
+    0.00 :   2ebc30: str     x0, [x4, #8]
+         : 76     update_refs():
+    0.00 :   2ebc34: add     x6, x5, #0xd8
+         : 432    _PyGCHead_SET_PREV():
+    0.00 :   2ebc38: ldr     x0, [x1, #8]
+         : 75     gc_list_move():
+    0.00 :   2ebc3c: ldr     x2, [x5, #224]
+         : 290    _PyGCHead_SET_PREV():
+    0.00 :   2ebc40: and     x0, x0, #0x3
+    0.00 :   2ebc44: orr     x0, x0, x2
+    0.00 :   2ebc48: str     x0, [x1, #8]
+         : 77     _PyGCHead_SET_NEXT():
+    0.00 :   2ebc4c: str     x1, [x2]
+         : 64     gc_list_move():
+    0.00 :   2ebc50: str     x1, [x5, #224]
+         : 293    _PyGCHead_SET_NEXT():
+    0.00 :   2ebc54: str     x6, [x1]
+         : 64     update_refs():
+    0.00 :   2ebc58: cmp     x28, x4
+    0.00 :   2ebc5c: b.ne    2ebc04 <gc_collect_main+0x1e4>  // b.any
+         : 426    _PyGCHead_NEXT():
+    0.00 :   2ebc60: add     x0, x26, x26, lsl #1
+    0.00 :   2ebc64: add     x0, x21, x0, lsl #3
+    0.00 :   2ebc68: ldr     x22, [x0, #24]
+    0.00 :   2ebc6c: mov     x0, x22
+         : 61     subtract_refs():
+    0.00 :   2ebc70: cmp     x28, x22
+    0.00 :   2ebc74: b.eq    2ec4b0 <gc_collect_main+0xa90>  // b.none
+    0.00 :   2ebc78: adrp    x23, 2eb000 <gc_set_threshold+0x20>
+    0.00 :   2ebc7c: add     x23, x23, #0xa0
+    0.00 :   2ebc80: ldr     x3, [x22, #24]
+    0.00 :   2ebc84: add     x2, x22, #0x10
+    0.00 :   2ebc88: mov     x0, x2
+    0.00 :   2ebc8c: mov     x1, x23
+    1.06 :   2ebc90: ldr     x3, [x3, #184] // gcmodule.c:491
+    0.00 :   2ebc94: blr     x3
+         : 495    _PyGCHead_NEXT():
+    0.00 :   2ebc98: ldr     x22, [x22]
+         : 61     subtract_refs():
+    0.00 :   2ebc9c: cmp     x28, x22
+    0.00 :   2ebca0: b.ne    2ebc80 <gc_collect_main+0x260>  // b.any
+         : 490    _PyGCHead_NEXT():
+    0.00 :   2ebca4: add     x0, x26, x26, lsl #1
+         : 60     gc_list_init():
+    0.00 :   2ebca8: add     x19, sp, #0xb8
+    0.00 :   2ebcac: stp     x19, x19, [sp, #184]
+         : 238    _PyGCHead_NEXT():
+    0.00 :   2ebcb0: add     x0, x21, x0, lsl #3
+    0.00 :   2ebcb4: ldr     x24, [x0, #24]
+    0.00 :   2ebcb8: mov     x0, x24
+         : 61     move_unreachable():
+    0.00 :   2ebcbc: cmp     x28, x24
+    0.00 :   2ebcc0: b.eq    2ecac8 <gc_collect_main+0x10a8>  // b.none
+    0.00 :   2ebcc4: adrp    x22, 2eb000 <gc_set_threshold+0x20>
+    0.00 :   2ebcc8: mov     x23, x28
+    0.00 :   2ebccc: add     x22, x22, #0xf4
+    0.00 :   2ebcd0: orr     x0, x19, #0x1
+    0.00 :   2ebcd4: str     x0, [sp, #104]
+         : 635    gc_get_refs():
+    0.10 :   2ebcd8: ldr     x3, [x24, #8]
+         : 93     move_unreachable():
+    0.00 :   2ebcdc: mov     x2, x28
+    0.00 :   2ebce0: mov     x1, x22
+    0.00 :   2ebce4: add     x0, x24, #0x10
+    0.10 :   2ebce8: orr     x5, x24, #0x1
+    0.00 :   2ebcec: cmp     xzr, x3, lsr #2
+    0.00 :   2ebcf0: b.eq    2ebd40 <gc_collect_main+0x320>  // b.none
+    1.45 :   2ebcf4: ldr     x3, [x24, #24] // gcmodule.c:597
+    0.39 :   2ebcf8: ldr     x3, [x3, #184]
+    0.00 :   2ebcfc: blr     x3
+         : 604    _PyGCHead_SET_PREV():
+    0.10 :   2ebd00: ldp     x1, x0, [x24]
+    0.00 :   2ebd04: and     x0, x0, #0x3
+    0.00 :   2ebd08: orr     x0, x23, x0
+         : 77     move_unreachable():
+    0.00 :   2ebd0c: mov     x23, x24
+         : 587    gc_clear_collecting():
+    0.10 :   2ebd10: and     x0, x0, #0xfffffffffffffffd
+    0.10 :   2ebd14: str     x0, [x24, #8]
+         : 88     move_unreachable():
+    0.00 :   2ebd18: cmp     x28, x1
+    0.00 :   2ebd1c: b.eq    2ebd70 <gc_collect_main+0x350>  // b.none
+    0.10 :   2ebd20: mov     x24, x1
+    0.00 :   2ebd24: mov     x2, x28
+    0.00 :   2ebd28: mov     x1, x22
+    0.00 :   2ebd2c: add     x0, x24, #0x10
+    0.10 :   2ebd30: orr     x5, x24, #0x1
+         : 632    gc_get_refs():
+    0.00 :   2ebd34: ldr     x3, [x24, #8]
+         : 93     move_unreachable():
+    0.00 :   2ebd38: cmp     xzr, x3, lsr #2
+    0.00 :   2ebd3c: b.ne    2ebcf4 <gc_collect_main+0x2d4>  // b.any
+         : 589    _PyGCHead_PREV():
+    0.00 :   2ebd40: ldr     x0, [sp, #192]
+         : 69     move_unreachable():
+    0.00 :   2ebd44: ldr     x1, [x24]
+         : 622    _PyGCHead_PREV():
+    0.00 :   2ebd48: and     x0, x0, #0xfffffffffffffffc
+         : 69     move_unreachable():
+    0.00 :   2ebd4c: str     x1, [x23]
+         : 622    _PyGCHead_SET_PREV():
+    0.00 :   2ebd50: orr     x3, x3, x0
+         : 75     move_unreachable():
+    0.00 :   2ebd54: str     x5, [x0]
+    0.00 :   2ebd58: ldr     x0, [sp, #104]
+         : 634    _PyGCHead_SET_PREV():
+    0.00 :   2ebd5c: stp     x0, x3, [x24]
+         : 75     move_unreachable():
+    0.00 :   2ebd60: str     x24, [sp, #192]
+    0.00 :   2ebd64: ldr     x24, [x23]
+    0.00 :   2ebd68: cmp     x28, x24
+    0.00 :   2ebd6c: b.ne    2ebcd8 <gc_collect_main+0x2b8>  // b.any
+         : 588    _PyGCHead_NEXT():
+    0.00 :   2ebd70: add     x0, x26, x26, lsl #1
+         : 60     move_unreachable():
+    0.00 :   2ebd74: ldr     x2, [sp, #184]
+         : 642    _PyGCHead_NEXT():
+    0.00 :   2ebd78: add     x0, x21, x0, lsl #3
+         : 60     move_unreachable():
+    0.00 :   2ebd7c: and     x2, x2, #0xfffffffffffffffe
+    0.00 :   2ebd80: str     x2, [sp, #184]
+         : 643    _PyGCHead_NEXT():
+    0.00 :   2ebd84: ldr     x22, [x0, #24]
+         : 61     move_unreachable():
+    0.00 :   2ebd88: str     x23, [x0, #32]
+         : 640    untrack_tuples():
+    0.00 :   2ebd8c: cmp     x28, x22
+    0.00 :   2ebd90: b.eq    2ec4cc <gc_collect_main+0xaac>  // b.none
+    0.00 :   2ebd94: adrp    x23, 53f000 <initial+0x70150>
+    0.00 :   2ebd98: ldr     x23, [x23, #2968]
+    0.00 :   2ebd9c: b       2ebda8 <gc_collect_main+0x388>
+    4.08 :   2ebda0: cmp     x28, x22 // gcmodule.c:648
+    0.00 :   2ebda4: b.eq    2ebdd0 <gc_collect_main+0x3b0>  // b.none
+    0.29 :   2ebda8: ldr     x1, [x22, #24]
+    0.00 :   2ebdac: mov     x0, x22
+         : 653    _PyGCHead_NEXT():
+   16.69 :   2ebdb0: ldr     x22, [x22] // pycore_gc.h:60
+         : 61     untrack_tuples():
+    0.00 :   2ebdb4: cmp     x1, x23
+    0.00 :   2ebdb8: b.ne    2ebda0 <gc_collect_main+0x380>  // b.any
+    0.68 :   2ebdbc: add     x0, x0, #0x10 // gcmodule.c:652
+    0.00 :   2ebdc0: bl      108550 <_PyTuple_MaybeUntrack@plt>
+    0.00 :   2ebdc4: cmp     x28, x22
+    0.00 :   2ebdc8: b.ne    2ebda8 <gc_collect_main+0x388>  // b.any
+    0.00 :   2ebdcc: nop
+         : 651    gc_collect_main():
+    0.00 :   2ebdd0: cmp     x25, x28
+    0.00 :   2ebdd4: b.eq    2ec628 <gc_collect_main+0xc08>  // b.none
+    0.00 :   2ebdd8: ldr     w0, [sp, #132]
+    0.00 :   2ebddc: cmp     w0, #0x1
+    0.00 :   2ebde0: b.eq    2ec594 <gc_collect_main+0xb74>  // b.none
+         : 1250   gc_list_is_empty():
+    0.00 :   2ebde4: add     x0, x26, x26, lsl #1
+    0.00 :   2ebde8: add     x0, x21, x0, lsl #3
+    0.00 :   2ebdec: ldr     x1, [x0, #24]
+         : 246    gc_list_merge():
+    0.00 :   2ebdf0: cmp     x1, x28
+    0.00 :   2ebdf4: b.eq    2ebe30 <gc_collect_main+0x410>  // b.none
+         : 303    _PyGCHead_PREV():
+    0.00 :   2ebdf8: ldr     x4, [x25, #8]
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ebdfc: ldr     x2, [x1, #8]
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ebe00: and     x4, x4, #0xfffffffffffffffc
+    0.00 :   2ebe04: ldr     x3, [x0, #32]
+         : 70     _PyGCHead_SET_PREV():
+    0.00 :   2ebe08: and     x0, x2, #0x3
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ebe0c: str     x1, [x4]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ebe10: orr     x0, x0, x4
+    0.00 :   2ebe14: str     x0, [x1, #8]
+         : 76     _PyGCHead_PREV():
+    0.00 :   2ebe18: and     x1, x3, #0xfffffffffffffffc
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ebe1c: ldr     x0, [x25, #8]
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ebe20: str     x25, [x1]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ebe24: and     x0, x0, #0x3
+    0.00 :   2ebe28: orr     x0, x0, x1
+    0.00 :   2ebe2c: str     x0, [x25, #8]
+         : 77     gc_list_init():
+    0.00 :   2ebe30: add     x0, x26, x26, lsl #1
+         : 237    _PyGCHead_NEXT():
+    0.00 :   2ebe34: ldr     x2, [sp, #184]
+         : 60     gc_list_init():
+    0.00 :   2ebe38: add     x0, x21, x0, lsl #3
+    0.00 :   2ebe3c: stp     x28, x28, [x0, #24]
+    0.00 :   2ebe40: add     x24, sp, #0xc8
+    0.00 :   2ebe44: stp     x24, x24, [sp, #200]
+         : 240    move_legacy_finalizers():
+    0.00 :   2ebe48: cmp     x2, x19
+    0.00 :   2ebe4c: b.eq    2ebef4 <gc_collect_main+0x4d4>  // b.none
+         : 696    has_legacy_finalizer():
+    0.00 :   2ebe50: ldr     x3, [x2, #24]
+    0.00 :   2ebe54: mov     x1, x2
+         : 679    move_legacy_finalizers():
+    0.00 :   2ebe58: ldr     x0, [x2]
+    0.00 :   2ebe5c: ldr     x3, [x3, #376]
+    0.00 :   2ebe60: and     x0, x0, #0xfffffffffffffffe
+    0.00 :   2ebe64: str     x0, [x2]
+    0.00 :   2ebe68: mov     x2, x0
+    0.00 :   2ebe6c: cbz     x3, 2ebeb4 <gc_collect_main+0x494>
+         : 702    gc_clear_collecting():
+    0.00 :   2ebe70: ldr     x4, [x1, #8]
+    0.00 :   2ebe74: and     x3, x4, #0xfffffffffffffffd
+    0.00 :   2ebe78: str     x3, [x1, #8]
+         : 89     _PyGCHead_PREV():
+    0.00 :   2ebe7c: and     x4, x4, #0xfffffffffffffffc
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ebe80: ldr     x3, [x0, #8]
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ebe84: str     x0, [x4]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ebe88: and     x3, x3, #0x3
+    0.00 :   2ebe8c: orr     x3, x3, x4
+    0.00 :   2ebe90: str     x3, [x0, #8]
+    0.00 :   2ebe94: ldr     x3, [x1, #8]
+         : 78     gc_list_move():
+    0.00 :   2ebe98: ldr     x4, [sp, #208]
+         : 290    _PyGCHead_SET_PREV():
+    0.00 :   2ebe9c: and     x3, x3, #0x3
+    0.00 :   2ebea0: orr     x3, x3, x4
+    0.00 :   2ebea4: str     x3, [x1, #8]
+         : 77     _PyGCHead_SET_NEXT():
+    0.00 :   2ebea8: str     x1, [x4]
+         : 64     gc_list_move():
+    0.00 :   2ebeac: str     x1, [sp, #208]
+         : 293    _PyGCHead_SET_NEXT():
+    0.00 :   2ebeb0: str     x24, [x1]
+         : 64     move_legacy_finalizers():
+    0.00 :   2ebeb4: cmp     x0, x19
+    0.00 :   2ebeb8: b.ne    2ebe50 <gc_collect_main+0x430>  // b.any
+         : 696    _PyGCHead_NEXT():
+    0.00 :   2ebebc: ldr     x23, [sp, #200]
+         : 61     move_legacy_finalizer_reachable():
+    0.00 :   2ebec0: adrp    x22, 2eb000 <gc_set_threshold+0x20>
+    0.00 :   2ebec4: add     x22, x22, #0x1b4
+    0.00 :   2ebec8: cmp     x23, x24
+    0.00 :   2ebecc: b.eq    2ebef4 <gc_collect_main+0x4d4>  // b.none
+    0.00 :   2ebed0: ldr     x3, [x23, #24]
+    0.00 :   2ebed4: add     x0, x23, #0x10
+    0.00 :   2ebed8: mov     x2, x24
+    0.00 :   2ebedc: mov     x1, x22
+    0.00 :   2ebee0: ldr     x3, [x3, #184]
+    0.00 :   2ebee4: blr     x3
+         : 754    _PyGCHead_NEXT():
+    0.00 :   2ebee8: ldr     x23, [x23]
+         : 61     move_legacy_finalizer_reachable():
+    0.00 :   2ebeec: cmp     x23, x24
+    0.00 :   2ebef0: b.ne    2ebed0 <gc_collect_main+0x4b0>  // b.any
+         : 748    gc_collect_main():
+    0.00 :   2ebef4: ldr     w0, [x21, #16]
+         : 1278   _PyGCHead_NEXT():
+    0.00 :   2ebef8: ldr     x22, [sp, #184]
+    0.00 :   2ebefc: mov     x23, x22
+         : 61     gc_collect_main():
+    0.00 :   2ebf00: tbz     w0, #1, 2ebf4c <gc_collect_main+0x52c>
+    0.00 :   2ebf04: cmp     x22, x19
+    0.00 :   2ebf08: b.eq    2eca8c <gc_collect_main+0x106c>  // b.none
+    0.00 :   2ebf0c: adrp    x23, 383000 <_fini+0x27c84>
+    0.00 :   2ebf10: adrp    x0, 383000 <_fini+0x27c84>
+         : 1282   debug_cycle():
+    0.00 :   2ebf14: add     x23, x23, #0x1e0
+    0.00 :   2ebf18: add     x28, x0, #0x1f0
+    0.00 :   2ebf1c: nop
+    0.00 :   2ebf20: ldr     x2, [x22, #24]
+    0.00 :   2ebf24: add     x3, x22, #0x10
+    0.00 :   2ebf28: mov     x1, x23
+    0.00 :   2ebf2c: mov     x0, x28
+    0.00 :   2ebf30: ldr     x2, [x2, #24]
+    0.00 :   2ebf34: bl      108540 <PySys_FormatStderr@plt>
+         : 938    _PyGCHead_NEXT():
+    0.00 :   2ebf38: ldr     x22, [x22]
+         : 61     gc_collect_main():
+    0.00 :   2ebf3c: cmp     x22, x19
+    0.00 :   2ebf40: b.ne    2ebf20 <gc_collect_main+0x500>  // b.any
+         : 1280   _PyGCHead_NEXT():
+    0.00 :   2ebf44: ldr     x22, [sp, #184]
+    0.00 :   2ebf48: mov     x23, x22
+         : 61     gc_list_init():
+    0.00 :   2ebf4c: stp     x20, x20, [sp, #216]
+         : 237    handle_weakrefs():
+    0.00 :   2ebf50: cmp     x23, x19
+    0.00 :   2ebf54: b.eq    2eca80 <gc_collect_main+0x1060>  // b.none
+    0.00 :   2ebf58: adrp    x0, 53f000 <initial+0x70150>
+    0.00 :   2ebf5c: ldr     x0, [x0, #2480]
+    0.00 :   2ebf60: str     x0, [sp, #104]
+    0.00 :   2ebf64: adrp    x0, 53f000 <initial+0x70150>
+    0.00 :   2ebf68: ldr     x0, [x0, #3872]
+    0.00 :   2ebf6c: str     x0, [sp, #112]
+    0.00 :   2ebf70: adrp    x0, 53f000 <initial+0x70150>
+    0.00 :   2ebf74: ldr     x0, [x0, #2624]
+    0.00 :   2ebf78: str     x0, [sp, #136]
+    0.00 :   2ebf7c: b       2ebf88 <gc_collect_main+0x568>
+    0.00 :   2ebf80: cmp     x22, x19
+    0.00 :   2ebf84: b.eq    2ec060 <gc_collect_main+0x640>  // b.none
+    0.00 :   2ebf88: mov     x28, x22
+    0.00 :   2ebf8c: add     x23, x22, #0x10
+         : 791    PyObject_TypeCheck():
+    0.00 :   2ebf90: ldr     x1, [sp, #104]
+         : 382    Py_TYPE():
+    0.00 :   2ebf94: ldr     x0, [x28, #24]
+         : 221    _PyGCHead_NEXT():
+    0.00 :   2ebf98: ldr     x22, [x22]
+         : 61     PyObject_TypeCheck():
+    0.00 :   2ebf9c: cmp     x0, x1
+    0.00 :   2ebfa0: b.eq    2ebfc8 <gc_collect_main+0x5a8>  // b.none
+    0.00 :   2ebfa4: bl      10a990 <PyType_IsSubtype@plt>
+    0.00 :   2ebfa8: cbnz    w0, 2ebfc8 <gc_collect_main+0x5a8>
+         : 385    Py_TYPE():
+    0.00 :   2ebfac: ldr     x0, [x28, #24]
+         : 221    handle_weakrefs():
+    0.00 :   2ebfb0: ldr     x1, [sp, #112]
+    0.00 :   2ebfb4: cmp     x0, x1
+    0.00 :   2ebfb8: ldr     x1, [sp, #136]
+    0.00 :   2ebfbc: ccmp    x0, x1, #0x4, ne        // ne = any
+    0.00 :   2ebfc0: b.ne    2ebfd4 <gc_collect_main+0x5b4>  // b.any
+    0.00 :   2ebfc4: nop
+    0.00 :   2ebfc8: mov     x0, x23
+    0.00 :   2ebfcc: bl      10bdd0 <_PyWeakref_ClearRef@plt>
+         : 806    Py_TYPE():
+    0.00 :   2ebfd0: ldr     x0, [x28, #24]
+         : 221    _PyType_SUPPORTS_WEAKREFS():
+    0.00 :   2ebfd4: ldr     x1, [x0, #208]
+         : 368    handle_weakrefs():
+    0.00 :   2ebfd8: cbz     x1, 2ebf80 <gc_collect_main+0x560>
+    0.00 :   2ebfdc: ldr     x28, [x23, x1]
+         : 822    _PyObject_GET_WEAKREFS_LISTPTR_FROM_OFFSET():
+    0.00 :   2ebfe0: add     x23, x23, x1
+         : 335    handle_weakrefs():
+    0.00 :   2ebfe4: cbz     x28, 2ebf80 <gc_collect_main+0x560>
+    0.00 :   2ebfe8: mov     x0, x28
+    0.00 :   2ebfec: bl      10bdd0 <_PyWeakref_ClearRef@plt>
+    0.00 :   2ebff0: ldr     x1, [x28, #24]
+    0.00 :   2ebff4: sub     x3, x28, #0x10
+    0.00 :   2ebff8: cbz     x1, 2ec050 <gc_collect_main+0x630>
+         : 832    gc_is_collecting():
+    0.00 :   2ebffc: ldur    x1, [x28, #-8]
+         : 81     _PyGCHead_PREV():
+    0.00 :   2ec000: and     x4, x1, #0xfffffffffffffffc
+         : 69     handle_weakrefs():
+    0.00 :   2ec004: tbnz    w1, #1, 2ec050 <gc_collect_main+0x630>
+         : 865    Py_INCREF():
+    0.00 :   2ec008: ldr     w1, [x28]
+    0.00 :   2ec00c: adds    w1, w1, #0x1
+    0.00 :   2ec010: b.eq    2ec018 <gc_collect_main+0x5f8>  // b.none
+    0.00 :   2ec014: str     w1, [x28]
+         : 647    _PyGCHead_NEXT():
+    0.00 :   2ec018: ldur    x2, [x28, #-16]
+         : 60     _PyGCHead_SET_PREV():
+    0.00 :   2ec01c: ldr     x1, [x2, #8]
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ec020: str     x2, [x4]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ec024: and     x1, x1, #0x3
+    0.00 :   2ec028: orr     x1, x1, x4
+    0.00 :   2ec02c: str     x1, [x2, #8]
+    0.00 :   2ec030: ldur    x1, [x28, #-8]
+         : 78     gc_list_move():
+    0.00 :   2ec034: ldr     x2, [sp, #224]
+         : 290    _PyGCHead_SET_PREV():
+    0.00 :   2ec038: and     x1, x1, #0x3
+    0.00 :   2ec03c: orr     x1, x1, x2
+    0.00 :   2ec040: stur    x1, [x28, #-8]
+         : 77     _PyGCHead_SET_NEXT():
+    0.00 :   2ec044: str     x3, [x2]
+         : 64     gc_list_move():
+    0.00 :   2ec048: str     x3, [sp, #224]
+         : 293    _PyGCHead_SET_NEXT():
+    0.00 :   2ec04c: stur    x20, [x28, #-16]
+         : 64     handle_weakrefs():
+    0.00 :   2ec050: ldr     x28, [x23]
+    0.00 :   2ec054: cbnz    x28, 2ebfe8 <gc_collect_main+0x5c8>
+    0.00 :   2ec058: cmp     x22, x19
+    0.00 :   2ec05c: b.ne    2ebf88 <gc_collect_main+0x568>  // b.any
+         : 788    gc_list_is_empty():
+    0.00 :   2ec060: ldr     x28, [sp, #216]
+         : 244    handle_weakrefs():
+    0.00 :   2ec064: str     wzr, [sp, #104]
+    0.00 :   2ec068: cmp     x28, x20
+    0.00 :   2ec06c: b.eq    2ecab8 <gc_collect_main+0x1098>  // b.none
+    0.00 :   2ec070: ldr     x23, [x28, #40]
+    0.00 :   2ec074: add     x22, x28, #0x10
+    0.00 :   2ec078: mov     x1, x22
+    0.00 :   2ec07c: mov     x0, x23
+    0.00 :   2ec080: bl      108df0 <PyObject_CallOneArg@plt>
+    0.00 :   2ec084: cbz     x0, 2ec0ec <gc_collect_main+0x6cc>
+         : 901    _Py_IsImmortal():
+    0.00 :   2ec088: ldr     x3, [x0]
+         : 243    Py_DECREF():
+    0.00 :   2ec08c: tbnz    w3, #31, 2ec09c <gc_collect_main+0x67c>
+    0.00 :   2ec090: sub     x3, x3, #0x1
+    0.00 :   2ec094: str     x3, [x0]
+    0.00 :   2ec098: cbz     x3, 2ec444 <gc_collect_main+0xa24>
+         : 707    _Py_IsImmortal():
+    0.00 :   2ec09c: ldr     x0, [x28, #16]
+         : 243    Py_DECREF():
+    0.00 :   2ec0a0: tbnz    w0, #31, 2ec0b0 <gc_collect_main+0x690>
+    0.00 :   2ec0a4: sub     x0, x0, #0x1
+    0.00 :   2ec0a8: str     x0, [x28, #16]
+    0.00 :   2ec0ac: cbz     x0, 2ec438 <gc_collect_main+0xa18>
+         : 707    handle_weakrefs():
+    0.00 :   2ec0b0: ldr     x0, [sp, #216]
+    0.00 :   2ec0b4: cmp     x0, x28
+    0.00 :   2ec0b8: b.eq    2ec0f8 <gc_collect_main+0x6d8>  // b.none
+    0.00 :   2ec0bc: ldr     w1, [sp, #104]
+    0.00 :   2ec0c0: add     w1, w1, #0x1
+    0.00 :   2ec0c4: str     w1, [sp, #104]
+    0.00 :   2ec0c8: cmp     x20, x0
+    0.00 :   2ec0cc: b.eq    2ec140 <gc_collect_main+0x720>  // b.none
+         : 889    gc_list_size():
+    0.00 :   2ec0d0: mov     x28, x0
+         : 322    handle_weakrefs():
+    0.00 :   2ec0d4: add     x22, x28, #0x10
+    0.00 :   2ec0d8: mov     x1, x22
+    0.00 :   2ec0dc: ldr     x23, [x22, #24]
+    0.00 :   2ec0e0: mov     x0, x23
+    0.00 :   2ec0e4: bl      108df0 <PyObject_CallOneArg@plt>
+    0.00 :   2ec0e8: cbnz    x0, 2ec088 <gc_collect_main+0x668>
+    0.00 :   2ec0ec: mov     x0, x23
+    0.00 :   2ec0f0: bl      109e90 <PyErr_WriteUnraisable@plt>
+    0.00 :   2ec0f4: b       2ec09c <gc_collect_main+0x67c>
+         : 904    _PyGCHead_PREV():
+    0.00 :   2ec0f8: ldp     x2, x1, [x28]
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ec0fc: ldr     x0, [x2, #8]
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ec100: and     x1, x1, #0xfffffffffffffffc
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ec104: and     x0, x0, #0x3
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ec108: str     x2, [x1]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ec10c: orr     x0, x0, x1
+    0.00 :   2ec110: str     x0, [x2, #8]
+    0.00 :   2ec114: ldr     x0, [x28, #8]
+         : 77     gc_list_move():
+    0.00 :   2ec118: ldr     x1, [x25, #8]
+         : 290    _PyGCHead_SET_PREV():
+    0.00 :   2ec11c: and     x0, x0, #0x3
+    0.00 :   2ec120: orr     x0, x0, x1
+    0.00 :   2ec124: str     x0, [x28, #8]
+         : 77     _PyGCHead_SET_NEXT():
+    0.00 :   2ec128: str     x28, [x1]
+         : 64     gc_list_move():
+    0.00 :   2ec12c: str     x28, [x25, #8]
+         : 293    _PyGCHead_SET_NEXT():
+    0.00 :   2ec130: str     x25, [x28]
+         : 64     gc_list_is_empty():
+    0.00 :   2ec134: ldr     x0, [sp, #216]
+         : 244    handle_weakrefs():
+    0.00 :   2ec138: cmp     x20, x0
+    0.00 :   2ec13c: b.ne    2ec0d0 <gc_collect_main+0x6b0>  // b.any
+         : 889    gc_list_is_empty():
+    0.00 :   2ec140: ldr     x23, [sp, #184]
+         : 244    gc_collect_main():
+    0.00 :   2ec144: ldrsw   x0, [sp, #104]
+         : 1285   _PyGCHead_NEXT():
+    0.00 :   2ec148: mov     x3, x23
+         : 61     gc_collect_main():
+    0.00 :   2ec14c: str     x0, [sp, #104]
+         : 1285   gc_list_init():
+    0.00 :   2ec150: stp     x20, x20, [sp, #216]
+         : 237    finalize_garbage():
+    0.00 :   2ec154: cmp     x19, x23
+    0.00 :   2ec158: b.eq    2ec244 <gc_collect_main+0x824>  // b.none
+    0.00 :   2ec15c: nop
+         : 989    _PyGCHead_PREV():
+    0.00 :   2ec160: ldp     x2, x1, [x23]
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ec164: ldr     x0, [x2, #8]
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ec168: and     x1, x1, #0xfffffffffffffffc
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ec16c: and     x0, x0, #0x3
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ec170: str     x2, [x1]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ec174: orr     x0, x0, x1
+    0.00 :   2ec178: str     x0, [x2, #8]
+    0.00 :   2ec17c: ldr     x0, [x23, #8]
+         : 77     gc_list_move():
+    0.00 :   2ec180: ldr     x1, [sp, #224]
+         : 290    _PyGCHead_SET_PREV():
+    0.00 :   2ec184: and     x0, x0, #0x3
+    0.00 :   2ec188: orr     x0, x0, x1
+    0.00 :   2ec18c: str     x0, [x23, #8]
+         : 77     _PyGCHead_SET_NEXT():
+    0.00 :   2ec190: str     x23, [x1]
+         : 64     gc_list_move():
+    0.00 :   2ec194: str     x23, [sp, #224]
+         : 293    _PyGCHead_SET_NEXT():
+    0.00 :   2ec198: str     x20, [x23]
+         : 64     _PyGCHead_FINALIZED():
+    0.00 :   2ec19c: ldr     x1, [x23, #8]
+         : 79     finalize_garbage():
+    0.00 :   2ec1a0: tbnz    w1, #0, 2ec1e8 <gc_collect_main+0x7c8>
+    0.00 :   2ec1a4: ldr     x2, [x23, #24]
+    0.00 :   2ec1a8: add     x28, x23, #0x10
+    0.00 :   2ec1ac: mov     x0, x28
+         : 995    _PyGCHead_SET_FINALIZED():
+    0.00 :   2ec1b0: orr     x1, x1, #0x1
+         : 82     finalize_garbage():
+    0.00 :   2ec1b4: ldr     x3, [x2, #392]
+    0.00 :   2ec1b8: cbz     x3, 2ec1e8 <gc_collect_main+0x7c8>
+         : 991    Py_INCREF():
+    0.00 :   2ec1bc: ldr     w2, [x23, #16]
+         : 643    _PyGCHead_SET_FINALIZED():
+    0.00 :   2ec1c0: str     x1, [x23, #8]
+         : 82     Py_INCREF():
+    0.00 :   2ec1c4: adds    w2, w2, #0x1
+    0.00 :   2ec1c8: b.eq    2ec1d0 <gc_collect_main+0x7b0>  // b.none
+    0.00 :   2ec1cc: str     w2, [x23, #16]
+         : 647    finalize_garbage():
+    0.00 :   2ec1d0: blr     x3
+         : 995    _Py_IsImmortal():
+    0.00 :   2ec1d4: ldr     x0, [x23, #16]
+         : 243    Py_DECREF():
+    0.00 :   2ec1d8: sub     x1, x0, #0x1
+    0.00 :   2ec1dc: tbnz    w0, #31, 2ec1e8 <gc_collect_main+0x7c8>
+    0.00 :   2ec1e0: str     x1, [x23, #16]
+    0.00 :   2ec1e4: cbz     x1, 2ec44c <gc_collect_main+0xa2c>
+         : 706    gc_list_is_empty():
+    0.00 :   2ec1e8: ldr     x23, [sp, #184]
+         : 244    finalize_garbage():
+    0.00 :   2ec1ec: cmp     x23, x19
+    0.00 :   2ec1f0: b.ne    2ec160 <gc_collect_main+0x740>  // b.any
+         : 988    gc_list_is_empty():
+    0.00 :   2ec1f4: ldr     x1, [sp, #216]
+         : 244    _PyGCHead_NEXT():
+    0.00 :   2ec1f8: mov     x3, x19
+         : 61     gc_list_merge():
+    0.00 :   2ec1fc: cmp     x20, x1
+    0.00 :   2ec200: b.eq    2ec244 <gc_collect_main+0x824>  // b.none
+         : 303    _PyGCHead_PREV():
+    0.00 :   2ec204: ldr     x3, [sp, #192]
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ec208: ldr     x0, [x1, #8]
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ec20c: and     x3, x3, #0xfffffffffffffffc
+    0.00 :   2ec210: ldr     x2, [sp, #224]
+         : 70     _PyGCHead_SET_PREV():
+    0.00 :   2ec214: and     x0, x0, #0x3
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ec218: str     x1, [x3]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ec21c: orr     x0, x0, x3
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ec220: and     x2, x2, #0xfffffffffffffffc
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ec224: str     x0, [x1, #8]
+    0.00 :   2ec228: ldr     x0, [sp, #192]
+         : 76     _PyGCHead_SET_NEXT():
+    0.00 :   2ec22c: str     x19, [x2]
+         : 64     _PyGCHead_NEXT():
+    0.00 :   2ec230: ldr     x23, [sp, #184]
+         : 61     _PyGCHead_SET_PREV():
+    0.00 :   2ec234: and     x0, x0, #0x3
+    0.00 :   2ec238: orr     x0, x0, x2
+    0.00 :   2ec23c: str     x0, [sp, #192]
+         : 77     _PyGCHead_NEXT():
+    0.00 :   2ec240: mov     x3, x23
+         : 61     gc_list_clear_collecting():
+    0.00 :   2ec244: cmp     x3, x19
+    0.00 :   2ec248: b.eq    2ec6b0 <gc_collect_main+0xc90>  // b.none
+    0.00 :   2ec24c: mov     x0, x3
+         : 336    gc_clear_collecting():
+    0.00 :   2ec250: ldr     x1, [x0, #8]
+    0.00 :   2ec254: and     x1, x1, #0xfffffffffffffffd
+    0.00 :   2ec258: str     x1, [x0, #8]
+         : 89     _PyGCHead_NEXT():
+    0.00 :   2ec25c: ldr     x0, [x0]
+         : 61     gc_list_clear_collecting():
+    0.00 :   2ec260: cmp     x0, x19
+    0.00 :   2ec264: b.ne    2ec250 <gc_collect_main+0x830>  // b.any
+         : 335    _PyThreadState_GET():
+    0.00 :   2ec268: mrs     x1, tpidr_el0
+    0.00 :   2ec26c: adrp    x0, 542000 <PyImport_GetModule@@Base+0x2a08a0>
+    0.00 :   2ec270: ldr     x2, [x0, #3496]
+    0.00 :   2ec274: add     x0, x0, #0xda8
+    0.00 :   2ec278: blr     x2
+    0.00 :   2ec27c: ldr     x7, [x1, x0]
+    0.00 :   2ec280: b       2ec29c <gc_collect_main+0x87c>
+         : 104    gc_reset_refs():
+    0.00 :   2ec284: and     x2, x2, #0x1
+    0.00 :   2ec288: orr     x0, x2, x0, lsl #2
+    0.00 :   2ec28c: orr     x0, x0, #0x2
+    0.00 :   2ec290: str     x0, [x1, #8]
+         : 106    update_refs():
+    0.00 :   2ec294: cmp     x4, x19
+    0.00 :   2ec298: b.eq    2ec2f8 <gc_collect_main+0x8d8>  // b.none
+         : 426    _Py_IsImmortal():
+    0.00 :   2ec29c: ldp     x2, x0, [x3, #8]
+    0.00 :   2ec2a0: mov     x1, x3
+         : 244    _PyGCHead_NEXT():
+    0.00 :   2ec2a4: ldr     x4, [x3]
+    0.00 :   2ec2a8: mov     x3, x4
+         : 61     update_refs():
+    0.00 :   2ec2ac: tbz     w0, #31, 2ec284 <gc_collect_main+0x864>
+         : 431    _PyGCHead_SET_PREV():
+    0.00 :   2ec2b0: ldr     x0, [x4, #8]
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ec2b4: and     x2, x2, #0xfffffffffffffffc
+         : 69     _PyInterpreterState_GET():
+    0.00 :   2ec2b8: ldr     x5, [x7, #16]
+         : 134    _PyGCHead_SET_PREV():
+    0.00 :   2ec2bc: and     x0, x0, #0x3
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ec2c0: str     x4, [x2]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ec2c4: orr     x0, x0, x2
+    0.00 :   2ec2c8: str     x0, [x4, #8]
+         : 76     update_refs():
+    0.00 :   2ec2cc: add     x6, x5, #0xd8
+         : 432    _PyGCHead_SET_PREV():
+    0.00 :   2ec2d0: ldr     x0, [x1, #8]
+         : 75     gc_list_move():
+    0.00 :   2ec2d4: ldr     x2, [x5, #224]
+         : 290    _PyGCHead_SET_PREV():
+    0.00 :   2ec2d8: and     x0, x0, #0x3
+    0.00 :   2ec2dc: orr     x0, x0, x2
+    0.00 :   2ec2e0: str     x0, [x1, #8]
+         : 77     _PyGCHead_SET_NEXT():
+    0.00 :   2ec2e4: str     x1, [x2]
+         : 64     gc_list_move():
+    0.00 :   2ec2e8: str     x1, [x5, #224]
+         : 293    _PyGCHead_SET_NEXT():
+    0.00 :   2ec2ec: str     x6, [x1]
+         : 64     update_refs():
+    0.00 :   2ec2f0: cmp     x4, x19
+    0.00 :   2ec2f4: b.ne    2ec29c <gc_collect_main+0x87c>  // b.any
+         : 426    _PyGCHead_NEXT():
+    0.00 :   2ec2f8: ldr     x28, [sp, #184]
+    0.00 :   2ec2fc: mov     x23, x28
+         : 62     subtract_refs():
+    0.00 :   2ec300: cmp     x28, x19
+    0.00 :   2ec304: b.eq    2ec6b0 <gc_collect_main+0xc90>  // b.none
+    0.00 :   2ec308: adrp    x23, 2eb000 <gc_set_threshold+0x20>
+    0.00 :   2ec30c: add     x23, x23, #0xa0
+    0.00 :   2ec310: ldr     x3, [x28, #24]
+    0.00 :   2ec314: add     x2, x28, #0x10
+    0.00 :   2ec318: mov     x0, x2
+    0.00 :   2ec31c: mov     x1, x23
+    0.00 :   2ec320: ldr     x3, [x3, #184]
+    0.00 :   2ec324: blr     x3
+         : 495    _PyGCHead_NEXT():
+    0.00 :   2ec328: ldr     x28, [x28]
+         : 61     subtract_refs():
+    0.00 :   2ec32c: cmp     x28, x19
+    0.00 :   2ec330: b.ne    2ec310 <gc_collect_main+0x8f0>  // b.any
+         : 490    _PyGCHead_NEXT():
+    0.00 :   2ec334: ldr     x22, [sp, #184]
+         : 61     gc_list_init():
+    0.00 :   2ec338: stp     x20, x20, [sp, #216]
+         : 237    _PyGCHead_NEXT():
+    0.00 :   2ec33c: mov     x23, x22
+         : 61     move_unreachable():
+    0.00 :   2ec340: cmp     x22, x19
+    0.00 :   2ec344: b.eq    2ec6b4 <gc_collect_main+0xc94>  // b.none
+    0.00 :   2ec348: adrp    x23, 2eb000 <gc_set_threshold+0x20>
+    0.00 :   2ec34c: mov     x28, x19
+    0.00 :   2ec350: add     x23, x23, #0xf4
+    0.00 :   2ec354: orr     x0, x20, #0x1
+    0.00 :   2ec358: str     x0, [sp, #112]
+    0.00 :   2ec35c: nop
+         : 636    gc_get_refs():
+    0.00 :   2ec360: ldr     x4, [x22, #8]
+         : 93     move_unreachable():
+    0.00 :   2ec364: mov     x2, x19
+    0.00 :   2ec368: mov     x1, x23
+    0.00 :   2ec36c: add     x0, x22, #0x10
+    0.00 :   2ec370: orr     x6, x22, #0x1
+    0.00 :   2ec374: cmp     xzr, x4, lsr #2
+    0.00 :   2ec378: b.eq    2ec3c8 <gc_collect_main+0x9a8>  // b.none
+    0.00 :   2ec37c: ldr     x4, [x22, #24]
+    0.00 :   2ec380: ldr     x4, [x4, #184]
+    0.00 :   2ec384: blr     x4
+         : 604    _PyGCHead_SET_PREV():
+    0.00 :   2ec388: ldp     x1, x0, [x22]
+    0.00 :   2ec38c: and     x0, x0, #0x3
+    0.00 :   2ec390: orr     x0, x28, x0
+         : 77     move_unreachable():
+    0.00 :   2ec394: mov     x28, x22
+         : 587    gc_clear_collecting():
+    0.00 :   2ec398: and     x0, x0, #0xfffffffffffffffd
+    0.00 :   2ec39c: str     x0, [x22, #8]
+         : 88     move_unreachable():
+    0.00 :   2ec3a0: cmp     x1, x19
+    0.00 :   2ec3a4: b.eq    2ec3f8 <gc_collect_main+0x9d8>  // b.none
+    0.00 :   2ec3a8: mov     x22, x1
+    0.00 :   2ec3ac: mov     x2, x19
+    0.00 :   2ec3b0: mov     x1, x23
+    0.00 :   2ec3b4: add     x0, x22, #0x10
+    0.00 :   2ec3b8: orr     x6, x22, #0x1
+         : 632    gc_get_refs():
+    0.00 :   2ec3bc: ldr     x4, [x22, #8]
+         : 93     move_unreachable():
+    0.00 :   2ec3c0: cmp     xzr, x4, lsr #2
+    0.00 :   2ec3c4: b.ne    2ec37c <gc_collect_main+0x95c>  // b.any
+         : 589    _PyGCHead_PREV():
+    0.00 :   2ec3c8: ldr     x0, [sp, #224]
+         : 69     move_unreachable():
+    0.00 :   2ec3cc: ldr     x1, [x22]
+         : 622    _PyGCHead_PREV():
+    0.00 :   2ec3d0: and     x0, x0, #0xfffffffffffffffc
+         : 69     move_unreachable():
+    0.00 :   2ec3d4: str     x1, [x28]
+         : 622    _PyGCHead_SET_PREV():
+    0.00 :   2ec3d8: orr     x4, x4, x0
+         : 75     move_unreachable():
+    0.00 :   2ec3dc: str     x6, [x0]
+    0.00 :   2ec3e0: ldr     x0, [sp, #112]
+         : 634    _PyGCHead_SET_PREV():
+    0.00 :   2ec3e4: stp     x0, x4, [x22]
+         : 75     move_unreachable():
+    0.00 :   2ec3e8: str     x22, [sp, #224]
+    0.00 :   2ec3ec: ldr     x22, [x28]
+    0.00 :   2ec3f0: cmp     x22, x19
+    0.00 :   2ec3f4: b.ne    2ec360 <gc_collect_main+0x940>  // b.any
+    0.00 :   2ec3f8: ldr     x1, [sp, #216]
+    0.00 :   2ec3fc: str     x28, [sp, #192]
+    0.00 :   2ec400: mov     x5, x28
+    0.00 :   2ec404: and     x1, x1, #0xfffffffffffffffe
+    0.00 :   2ec408: str     x1, [sp, #216]
+         : 643    clear_unreachable_mask():
+    0.00 :   2ec40c: cmp     x1, x20
+    0.00 :   2ec410: b.eq    2ec430 <gc_collect_main+0xa10>  // b.none
+    0.00 :   2ec414: nop
+    0.00 :   2ec418: ldr     x0, [x1]
+    0.00 :   2ec41c: and     x0, x0, #0xfffffffffffffffe
+    0.00 :   2ec420: str     x0, [x1]
+    0.00 :   2ec424: mov     x1, x0
+    0.00 :   2ec428: cmp     x0, x20
+    0.00 :   2ec42c: b.ne    2ec418 <gc_collect_main+0x9f8>  // b.any
+    0.00 :   2ec430: ldr     x23, [sp, #184]
+    0.00 :   2ec434: b       2ec6c0 <gc_collect_main+0xca0>
+         : 720    Py_DECREF():
+    0.00 :   2ec438: mov     x0, x22
+    0.00 :   2ec43c: bl      10c0b0 <_Py_Dealloc@plt>
+    0.00 :   2ec440: b       2ec0b0 <gc_collect_main+0x690>
+    0.00 :   2ec444: bl      10c0b0 <_Py_Dealloc@plt>
+    0.00 :   2ec448: b       2ec09c <gc_collect_main+0x67c>
+    0.00 :   2ec44c: mov     x0, x28
+    0.00 :   2ec450: bl      10c0b0 <_Py_Dealloc@plt>
+    0.00 :   2ec454: b       2ec1e8 <gc_collect_main+0x7c8>
+         : 713    gc_collect_main():
+    0.00 :   2ec458: sxtw    x0, w1
+    0.00 :   2ec45c: add     x2, x0, w1, sxtw #1
+    0.00 :   2ec460: add     x2, x21, x2, lsl #3
+    0.00 :   2ec464: ldr     w3, [x2, #44]
+    0.00 :   2ec468: add     w3, w3, #0x1
+    0.00 :   2ec46c: str     w3, [x2, #44]
+    0.00 :   2ec470: ldr     w2, [sp, #132]
+    0.00 :   2ec474: cmp     w2, #0x0
+    0.00 :   2ec478: b.ge    2ec5c8 <gc_collect_main+0xba8>  // b.tcont
+    0.00 :   2ec47c: ldrsw   x26, [sp, #132]
+    0.00 :   2ec480: add     x1, x26, #0x1
+    0.00 :   2ec484: add     x1, x1, x1, lsl #1
+    0.00 :   2ec488: add     x28, x21, x1, lsl #3
+    0.00 :   2ec48c: add     x0, x0, #0x1
+    0.00 :   2ec490: add     x0, x0, x0, lsl #1
+    0.00 :   2ec494: add     x25, x21, x0, lsl #3
+         : 1240   _PyGCHead_NEXT():
+    0.00 :   2ec498: add     x0, x26, x26, lsl #1
+    0.00 :   2ec49c: add     x0, x21, x0, lsl #3
+    0.00 :   2ec4a0: ldr     x3, [x0, #24]
+    0.00 :   2ec4a4: mov     x0, x3
+         : 61     update_refs():
+    0.00 :   2ec4a8: cmp     x28, x3
+    0.00 :   2ec4ac: b.ne    2ebbd0 <gc_collect_main+0x1b0>  // b.any
+         : 426    gc_list_init():
+    0.00 :   2ec4b0: add     x19, sp, #0xb8
+    0.00 :   2ec4b4: str     x19, [sp, #192]
+    0.00 :   2ec4b8: mov     x2, x19
+         : 239    move_unreachable():
+    0.00 :   2ec4bc: add     x1, x26, x26, lsl #1
+    0.00 :   2ec4c0: str     x19, [sp, #184]
+    0.00 :   2ec4c4: add     x1, x21, x1, lsl #3
+    0.00 :   2ec4c8: str     x0, [x1, #32]
+         : 641    gc_collect_main():
+    0.00 :   2ec4cc: cmp     x25, x28
+    0.00 :   2ec4d0: b.ne    2ebdd8 <gc_collect_main+0x3b8>  // b.any
+         : 1248   gc_list_size():
+    0.00 :   2ec4d4: mov     x1, #0x0                        // #0
+         : 322    gc_collect_main():
+    0.00 :   2ec4d8: str     xzr, [x21, #232]
+    0.00 :   2ec4dc: str     x1, [x21, #224]
+    0.00 :   2ec4e0: b       2ebe40 <gc_collect_main+0x420>
+    0.00 :   2ec4e4: adrp    x19, 365000 <_fini+0x9c84>
+    0.00 :   2ec4e8: add     x23, x22, #0x88
+         : 1217   show_stats_each_generations():
+    0.00 :   2ec4ec: add     x19, x19, #0x348
+    0.00 :   2ec4f0: mov     w25, #0x0                       // #0
+    0.00 :   2ec4f4: mov     x24, #0x0                       // #0
+    0.00 :   2ec4f8: mov     x26, #0x64                      // #100
+         : 1070   gc_collect_main():
+    0.00 :   2ec4fc: adrp    x0, 383000 <_fini+0x27c84>
+    0.00 :   2ec500: add     x0, x0, #0x168
+    0.00 :   2ec504: bl      10ac10 <PySys_WriteStderr@plt>
+         : 1218   _PyGCHead_NEXT():
+    0.00 :   2ec508: ldr     x2, [x23]
+         : 61     show_stats_each_generations():
+    0.00 :   2ec50c: add     x0, x20, x24
+    0.00 :   2ec510: sub     x1, x26, x24
+         : 1071   gc_list_size():
+    0.00 :   2ec514: mov     x3, #0x0                        // #0
+    0.00 :   2ec518: cmp     x2, x23
+    0.00 :   2ec51c: b.eq    2ec530 <gc_collect_main+0xb10>  // b.none
+         : 324    _PyGCHead_NEXT():
+    0.00 :   2ec520: ldr     x2, [x2]
+         : 61     gc_list_size():
+    0.00 :   2ec524: add     x3, x3, #0x1
+    0.00 :   2ec528: cmp     x2, x23
+    0.00 :   2ec52c: b.ne    2ec520 <gc_collect_main+0xb00>  // b.any
+         : 324    show_stats_each_generations():
+    0.00 :   2ec530: mov     x2, x19
+    0.00 :   2ec534: bl      108ff0 <PyOS_snprintf@plt>
+    0.00 :   2ec538: add     x24, x24, w0, sxtw
+    0.00 :   2ec53c: add     w25, w25, #0x1
+    0.00 :   2ec540: cmp     x24, #0x63
+    0.00 :   2ec544: add     x23, x23, #0x18
+    0.00 :   2ec548: ccmp    w25, #0x2, #0x0, ls     // ls = plast
+    0.00 :   2ec54c: b.le    2ec508 <gc_collect_main+0xae8>
+         : 1073   _PyGCHead_NEXT():
+    0.00 :   2ec550: ldr     x0, [x22, #216]
+         : 61     show_stats_each_generations():
+    0.00 :   2ec554: add     x1, x22, #0xd8
+         : 1075   gc_list_size():
+    0.00 :   2ec558: mov     x2, #0x0                        // #0
+    0.00 :   2ec55c: cmp     x1, x0
+    0.00 :   2ec560: b.eq    2ec578 <gc_collect_main+0xb58>  // b.none
+    0.00 :   2ec564: nop
+         : 325    _PyGCHead_NEXT():
+    0.00 :   2ec568: ldr     x0, [x0]
+         : 61     gc_list_size():
+    0.00 :   2ec56c: add     x2, x2, #0x1
+    0.00 :   2ec570: cmp     x1, x0
+    0.00 :   2ec574: b.ne    2ec568 <gc_collect_main+0xb48>  // b.any
+         : 324    show_stats_each_generations():
+    0.00 :   2ec578: mov     x1, x20
+    0.00 :   2ec57c: adrp    x0, 383000 <_fini+0x27c84>
+    0.00 :   2ec580: add     x0, x0, #0x190
+    0.00 :   2ec584: bl      108540 <PySys_FormatStderr@plt>
+         : 1078   gc_collect_main():
+    0.00 :   2ec588: bl      108f00 <_PyTime_GetPerfCounter@plt>
+    0.00 :   2ec58c: str     x0, [sp, #160]
+    0.00 :   2ec590: b       2eba64 <gc_collect_main+0x44>
+         : 1220   _PyGCHead_NEXT():
+    0.00 :   2ec594: ldr     x0, [x21, #48]
+         : 61     gc_list_size():
+    0.00 :   2ec598: mov     x1, #0x0                        // #0
+    0.00 :   2ec59c: cmp     x28, x0
+    0.00 :   2ec5a0: b.eq    2ec5b8 <gc_collect_main+0xb98>  // b.none
+    0.00 :   2ec5a4: nop
+         : 325    _PyGCHead_NEXT():
+    0.10 :   2ec5a8: ldr     x0, [x0]
+         : 61     gc_list_size():
+    0.00 :   2ec5ac: add     x1, x1, #0x1
+    0.00 :   2ec5b0: cmp     x28, x0
+    0.00 :   2ec5b4: b.ne    2ec5a8 <gc_collect_main+0xb88>  // b.any
+         : 324    gc_collect_main():
+    0.00 :   2ec5b8: ldr     x0, [x21, #232]
+    0.00 :   2ec5bc: add     x0, x0, x1
+    0.00 :   2ec5c0: str     x0, [x21, #232]
+    0.00 :   2ec5c4: b       2ebde4 <gc_collect_main+0x3c4>
+    0.00 :   2ec5c8: str     wzr, [x21, #44]
+    0.00 :   2ec5cc: b.eq    2ec47c <gc_collect_main+0xa5c>  // b.none
+    0.00 :   2ec5d0: ldr     w2, [sp, #132]
+    0.00 :   2ec5d4: add     x7, x22, #0x88
+    0.00 :   2ec5d8: str     wzr, [x21, #68]
+         : 1228   gc_list_is_empty():
+    0.00 :   2ec5dc: ldr     x3, [x21, #24]
+         : 244    gc_collect_main():
+    0.00 :   2ec5e0: cmp     w2, #0x1
+    0.00 :   2ec5e4: b.eq    2eca98 <gc_collect_main+0x1078>  // b.none
+    0.00 :   2ec5e8: mov     x28, #0x70                      // #112
+    0.00 :   2ec5ec: str     wzr, [x21, #92]
+    0.00 :   2ec5f0: movk    x28, #0xc, lsl #32
+    0.00 :   2ec5f4: ldrsw   x26, [sp, #132]
+    0.00 :   2ec5f8: add     x28, x22, x28
+         : 1234   gc_list_merge():
+    0.00 :   2ec5fc: cmp     x3, x7
+    0.00 :   2ec600: b.ne    2ebaa0 <gc_collect_main+0x80>  // b.any
+         : 303    gc_list_init():
+    0.00 :   2ec604: str     x3, [x21, #32]
+         : 237    gc_collect_main():
+    0.00 :   2ec608: b       2ebaf0 <gc_collect_main+0xd0>
+    0.00 :   2ec60c: sxtw    x0, w1
+    0.00 :   2ec610: b       2ec48c <gc_collect_main+0xa6c>
+         : 1233   gc_list_init():
+    0.00 :   2ec614: str     x7, [x21, #32]
+         : 237    gc_collect_main():
+    0.00 :   2ec618: b       2ebaf0 <gc_collect_main+0xd0>
+         : 1231   gc_list_init():
+    0.00 :   2ec61c: sxtw    x0, w1
+    0.00 :   2ec620: str     x5, [x21, #80]
+         : 238    gc_collect_main():
+    0.00 :   2ec624: b       2ec48c <gc_collect_main+0xa6c>
+         : 1237   _PyGCHead_NEXT():
+    0.00 :   2ec628: add     x0, x26, x26, lsl #1
+    0.00 :   2ec62c: add     x0, x21, x0, lsl #3
+    0.00 :   2ec630: ldr     x22, [x0, #24]
+         : 61     untrack_dicts():
+    0.00 :   2ec634: cmp     x25, x22
+    0.00 :   2ec638: b.eq    2ecab0 <gc_collect_main+0x1090>  // b.none
+    0.00 :   2ec63c: adrp    x23, 53f000 <initial+0x70150>
+    0.00 :   2ec640: ldr     x23, [x23, #2368]
+    0.00 :   2ec644: b       2ec650 <gc_collect_main+0xc30>
+    3.28 :   2ec648: cmp     x28, x22 // gcmodule.c:663
+    0.00 :   2ec64c: b.eq    2ec674 <gc_collect_main+0xc54>  // b.none
+    0.00 :   2ec650: ldr     x1, [x22, #24]
+    0.00 :   2ec654: mov     x0, x22
+         : 668    _PyGCHead_NEXT():
+   13.42 :   2ec658: ldr     x22, [x22] // pycore_gc.h:60
+         : 61     untrack_dicts():
+    0.00 :   2ec65c: cmp     x1, x23
+    0.00 :   2ec660: b.ne    2ec648 <gc_collect_main+0xc28>  // b.any
+    1.26 :   2ec664: add     x0, x0, #0x10 // gcmodule.c:667
+    0.00 :   2ec668: bl      10b8d0 <_PyDict_MaybeUntrack@plt>
+    0.00 :   2ec66c: cmp     x28, x22
+    0.00 :   2ec670: b.ne    2ec650 <gc_collect_main+0xc30>  // b.any
+         : 665    _PyGCHead_NEXT():
+    0.00 :   2ec674: add     x0, x26, x26, lsl #1
+         : 60     gc_list_size():
+    0.00 :   2ec678: mov     x1, #0x0                        // #0
+         : 322    _PyGCHead_NEXT():
+    0.00 :   2ec67c: ldr     x2, [sp, #184]
+    0.00 :   2ec680: add     x0, x21, x0, lsl #3
+    0.00 :   2ec684: ldr     x0, [x0, #24]
+         : 61     gc_collect_main():
+    0.00 :   2ec688: str     xzr, [x21, #232]
+         : 1257   gc_list_size():
+    0.00 :   2ec68c: cmp     x28, x0
+    0.00 :   2ec690: b.eq    2ec4dc <gc_collect_main+0xabc>  // b.none
+    0.00 :   2ec694: nop
+         : 325    _PyGCHead_NEXT():
+   24.43 :   2ec698: ldr     x0, [x0] // pycore_gc.h:60
+         : 61     gc_list_size():
+    0.00 :   2ec69c: add     x1, x1, #0x1
+    0.00 :   2ec6a0: cmp     x28, x0
+    0.00 :   2ec6a4: b.ne    2ec698 <gc_collect_main+0xc78>  // b.any
+         : 324    gc_collect_main():
+    0.00 :   2ec6a8: str     x1, [x21, #224]
+    0.00 :   2ec6ac: b       2ebe40 <gc_collect_main+0x420>
+         : 1259   gc_list_init():
+    0.00 :   2ec6b0: str     x20, [sp, #224]
+         : 237    move_unreachable():
+    0.00 :   2ec6b4: mov     x5, x19
+    0.00 :   2ec6b8: str     x19, [sp, #192]
+    0.00 :   2ec6bc: str     x20, [sp, #216]
+         : 642    gc_list_merge():
+    0.00 :   2ec6c0: cmp     x23, x19
+    0.00 :   2ec6c4: b.eq    2ec6fc <gc_collect_main+0xcdc>  // b.none
+         : 303    _PyGCHead_PREV():
+    0.00 :   2ec6c8: ldr     x1, [x25, #8]
+    0.00 :   2ec6cc: and     x5, x5, #0xfffffffffffffffc
+         : 70     _PyGCHead_SET_PREV():
+    0.00 :   2ec6d0: ldr     x0, [x23, #8]
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ec6d4: and     x1, x1, #0xfffffffffffffffc
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ec6d8: and     x0, x0, #0x3
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ec6dc: str     x23, [x1]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ec6e0: orr     x0, x0, x1
+    0.00 :   2ec6e4: str     x0, [x23, #8]
+    0.00 :   2ec6e8: ldr     x0, [x25, #8]
+         : 77     _PyGCHead_SET_NEXT():
+    0.00 :   2ec6ec: str     x25, [x5]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ec6f0: and     x0, x0, #0x3
+    0.00 :   2ec6f4: orr     x0, x0, x5
+    0.00 :   2ec6f8: str     x0, [x25, #8]
+         : 77     _PyGCHead_NEXT():
+    0.00 :   2ec6fc: ldr     x23, [sp, #216]
+         : 60     gc_list_init():
+    0.00 :   2ec700: stp     x19, x19, [sp, #184]
+         : 237    _PyGCHead_NEXT():
+    0.00 :   2ec704: mov     x0, x23
+         : 61     gc_list_size():
+    0.00 :   2ec708: cmp     x23, x20
+    0.00 :   2ec70c: b.eq    2ec734 <gc_collect_main+0xd14>  // b.none
+    0.00 :   2ec710: mov     x1, #0x0                        // #0
+    0.00 :   2ec714: nop
+         : 323    _PyGCHead_NEXT():
+    0.00 :   2ec718: ldr     x0, [x0]
+         : 61     gc_list_size():
+    0.00 :   2ec71c: add     x1, x1, #0x1
+    0.00 :   2ec720: cmp     x0, x20
+    0.00 :   2ec724: b.ne    2ec718 <gc_collect_main+0xcf8>  // b.any
+         : 324    gc_collect_main():
+    0.00 :   2ec728: ldr     x0, [sp, #104]
+    0.00 :   2ec72c: add     x0, x0, x1
+    0.00 :   2ec730: str     x0, [sp, #104]
+    0.00 :   2ec734: adrp    x0, 38e000 <_fini+0x32c84>
+         : 1306   delete_garbage():
+    0.00 :   2ec738: adrp    x19, 383000 <_fini+0x27c84>
+    0.00 :   2ec73c: ldr     w1, [x21, #16]
+    0.00 :   2ec740: add     x19, x19, #0x200
+    0.00 :   2ec744: ldr     q0, [x0, #1248]
+    0.00 :   2ec748: add     x0, sp, #0x68
+    0.00 :   2ec74c: ld1     {v0.d}[1], [x0]
+    0.00 :   2ec750: str     q0, [sp, #112]
+    0.00 :   2ec754: b       2ec7c0 <gc_collect_main+0xda0>
+    0.00 :   2ec758: ldr     x0, [x23, #24]
+    0.00 :   2ec75c: ldr     x2, [x0, #192]
+    0.00 :   2ec760: cbz     x2, 2ec9c8 <gc_collect_main+0xfa8>
+         : 1030   Py_INCREF():
+    0.00 :   2ec764: ldr     w0, [x23, #16]
+    0.00 :   2ec768: adds    w0, w0, #0x1
+    0.00 :   2ec76c: b.eq    2ec774 <gc_collect_main+0xd54>  // b.none
+    0.00 :   2ec770: str     w0, [x23, #16]
+         : 647    delete_garbage():
+    0.00 :   2ec774: mov     x0, x28
+    0.00 :   2ec778: blr     x2
+         : 1031   _PyErr_Occurred():
+    0.00 :   2ec77c: ldr     x0, [x27, #96]
+    0.00 :   2ec780: cbz     x0, 2ec798 <gc_collect_main+0xd78>
+         : 25     delete_garbage():
+    0.00 :   2ec784: ldr     x0, [x0, #8]
+    0.00 :   2ec788: cbz     x0, 2ec798 <gc_collect_main+0xd78>
+    0.00 :   2ec78c: ldr     x1, [x23, #24]
+    0.00 :   2ec790: mov     x0, x19
+    0.00 :   2ec794: bl      109d20 <_PyErr_WriteUnraisableMsg@plt>
+         : 1034   _Py_IsImmortal():
+    0.00 :   2ec798: ldr     x0, [x23, #16]
+         : 243    Py_DECREF():
+    0.00 :   2ec79c: tbnz    w0, #31, 2ec7ac <gc_collect_main+0xd8c>
+    0.00 :   2ec7a0: sub     x0, x0, #0x1
+    0.00 :   2ec7a4: str     x0, [x23, #16]
+    0.00 :   2ec7a8: cbz     x0, 2ec7ec <gc_collect_main+0xdcc>
+         : 707    _PyGCHead_NEXT():
+    0.00 :   2ec7ac: ldr     x0, [sp, #216]
+         : 60     delete_garbage():
+    0.00 :   2ec7b0: ldr     w1, [x21, #16]
+    0.00 :   2ec7b4: cmp     x23, x0
+    0.00 :   2ec7b8: b.eq    2ec9c8 <gc_collect_main+0xfa8>  // b.none
+    0.00 :   2ec7bc: mov     x23, x0
+    0.00 :   2ec7c0: cmp     x20, x23
+    0.00 :   2ec7c4: b.eq    2ec7f8 <gc_collect_main+0xdd8>  // b.none
+    0.00 :   2ec7c8: add     x28, x23, #0x10
+    0.00 :   2ec7cc: tbz     w1, #5, 2ec758 <gc_collect_main+0xd38>
+    0.00 :   2ec7d0: ldr     x0, [x21, #208]
+    0.00 :   2ec7d4: mov     x1, x28
+    0.00 :   2ec7d8: bl      10b7e0 <PyList_Append@plt>
+    0.00 :   2ec7dc: tbz     w0, #31, 2ec7ac <gc_collect_main+0xd8c>
+    0.00 :   2ec7e0: mov     x0, x27
+    0.00 :   2ec7e4: bl      1081b0 <_PyErr_Clear@plt>
+    0.00 :   2ec7e8: b       2ec7ac <gc_collect_main+0xd8c>
+         : 1025   Py_DECREF():
+    0.00 :   2ec7ec: mov     x0, x28
+    0.00 :   2ec7f0: bl      10c0b0 <_Py_Dealloc@plt>
+    0.00 :   2ec7f4: b       2ec7ac <gc_collect_main+0xd8c>
+         : 708    _PyGCHead_NEXT():
+    0.00 :   2ec7f8: ldr     x28, [sp, #200]
+    0.00 :   2ec7fc: mov     x0, x28
+         : 61     gc_collect_main():
+    0.00 :   2ec800: cmp     x28, x24
+    0.00 :   2ec804: b.eq    2eca70 <gc_collect_main+0x1050>  // b.none
+         : 1309   debug_cycle():
+    0.00 :   2ec808: adrp    x20, 383000 <_fini+0x27c84>
+    0.00 :   2ec80c: adrp    x19, 383000 <_fini+0x27c84>
+    0.00 :   2ec810: add     x20, x20, #0x128
+    0.00 :   2ec814: add     x19, x19, #0x1f0
+         : 936    gc_collect_main():
+    0.00 :   2ec818: mov     x23, #0x0                       // #0
+    0.00 :   2ec81c: add     x23, x23, #0x1
+    0.00 :   2ec820: tbnz    w1, #2, 2ec96c <gc_collect_main+0xf4c>
+         : 1310   _PyGCHead_NEXT():
+    0.00 :   2ec824: ldr     x0, [x28]
+         : 61     gc_collect_main():
+    0.00 :   2ec828: cmp     x0, x24
+    0.00 :   2ec82c: b.eq    2ec840 <gc_collect_main+0xe20>  // b.none
+         : 1309   _PyGCHead_NEXT():
+    0.00 :   2ec830: ldr     x0, [x0]
+         : 61     gc_collect_main():
+    0.00 :   2ec834: add     x23, x23, #0x1
+    0.00 :   2ec838: cmp     x0, x24
+    0.00 :   2ec83c: b.ne    2ec830 <gc_collect_main+0xe10>  // b.any
+    0.00 :   2ec840: ldr     x0, [sp, #104]
+    0.00 :   2ec844: add     x19, x23, x0
+    0.00 :   2ec848: tbnz    w1, #0, 2ec9a0 <gc_collect_main+0xf80>
+         : 1313   _PyGCHead_NEXT():
+    0.00 :   2ec84c: ldr     x0, [sp, #200]
+    0.00 :   2ec850: mov     x20, x0
+         : 61     handle_legacy_finalizers():
+    0.00 :   2ec854: cmp     x0, x24
+    0.00 :   2ec858: b.eq    2ec894 <gc_collect_main+0xe74>  // b.none
+    0.00 :   2ec85c: nop
+    0.00 :   2ec860: ldr     w0, [x21, #16]
+    0.00 :   2ec864: add     x1, x20, #0x10
+    0.00 :   2ec868: tbnz    w0, #5, 2ec878 <gc_collect_main+0xe58>
+         : 956    has_legacy_finalizer():
+    0.00 :   2ec86c: ldr     x0, [x20, #24]
+         : 678    handle_legacy_finalizers():
+    0.00 :   2ec870: ldr     x0, [x0, #376]
+    0.00 :   2ec874: cbz     x0, 2ec884 <gc_collect_main+0xe64>
+    0.00 :   2ec878: ldr     x0, [x21, #208]
+    0.00 :   2ec87c: bl      10b7e0 <PyList_Append@plt>
+    0.00 :   2ec880: tbnz    w0, #31, 2eca14 <gc_collect_main+0xff4>
+         : 959    _PyGCHead_NEXT():
+    0.00 :   2ec884: ldr     x20, [x20]
+         : 61     handle_legacy_finalizers():
+    0.00 :   2ec888: cmp     x20, x24
+    0.00 :   2ec88c: b.ne    2ec860 <gc_collect_main+0xe40>  // b.any
+         : 954    gc_list_is_empty():
+    0.00 :   2ec890: ldr     x0, [sp, #200]
+         : 244    gc_list_merge():
+    0.00 :   2ec894: cmp     x24, x0
+    0.00 :   2ec898: b.eq    2ec8d4 <gc_collect_main+0xeb4>  // b.none
+         : 303    _PyGCHead_PREV():
+    0.00 :   2ec89c: ldr     x3, [x25, #8]
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ec8a0: ldr     x1, [x0, #8]
+         : 75     _PyGCHead_PREV():
+    0.00 :   2ec8a4: and     x3, x3, #0xfffffffffffffffc
+    0.00 :   2ec8a8: ldr     x2, [sp, #208]
+         : 70     _PyGCHead_SET_PREV():
+    0.00 :   2ec8ac: and     x1, x1, #0x3
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ec8b0: str     x0, [x3]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ec8b4: orr     x1, x1, x3
+    0.00 :   2ec8b8: str     x1, [x0, #8]
+         : 76     _PyGCHead_PREV():
+    0.00 :   2ec8bc: and     x1, x2, #0xfffffffffffffffc
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ec8c0: ldr     x0, [x25, #8]
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ec8c4: str     x25, [x1]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ec8c8: and     x0, x0, #0x3
+    0.00 :   2ec8cc: orr     x0, x0, x1
+    0.00 :   2ec8d0: str     x0, [x25, #8]
+         : 77     gc_collect_main():
+    0.00 :   2ec8d4: ldr     w0, [sp, #132]
+         : 1329   gc_list_init():
+    0.00 :   2ec8d8: stp     x24, x24, [sp, #200]
+         : 237    gc_collect_main():
+    0.00 :   2ec8dc: cmp     w0, #0x2
+    0.00 :   2ec8e0: b.eq    2eca38 <gc_collect_main+0x1018>  // b.none
+         : 1330   _PyErr_Occurred():
+    0.00 :   2ec8e4: ldr     x0, [x27, #96]
+    0.00 :   2ec8e8: cbz     x0, 2ec904 <gc_collect_main+0xee4>
+         : 25     gc_collect_main():
+    0.00 :   2ec8ec: ldr     x0, [x0, #8]
+    0.00 :   2ec8f0: cbz     x0, 2ec904 <gc_collect_main+0xee4>
+    0.00 :   2ec8f4: ldr     x0, [sp, #168]
+    0.00 :   2ec8f8: tbz     w0, #0, 2eca24 <gc_collect_main+0x1004>
+    0.00 :   2ec8fc: mov     x0, x27
+    0.00 :   2ec900: bl      1081b0 <_PyErr_Clear@plt>
+    0.00 :   2ec904: ldr     x0, [sp, #144]
+    0.00 :   2ec908: cbz     x0, 2ec914 <gc_collect_main+0xef4>
+    0.00 :   2ec90c: ldr     x1, [sp, #104]
+    0.00 :   2ec910: str     x1, [x0]
+    0.00 :   2ec914: ldr     x0, [sp, #152]
+    0.00 :   2ec918: cbz     x0, 2ec920 <gc_collect_main+0xf00>
+    0.00 :   2ec91c: str     x23, [x0]
+    0.00 :   2ec920: add     x0, x26, x26, lsl #1
+    0.00 :   2ec924: ldr     q1, [sp, #112]
+    0.00 :   2ec928: lsl     x0, x0, #3
+    0.00 :   2ec92c: add     x1, x0, #0x80
+    0.00 :   2ec930: add     x0, x21, x0
+    0.00 :   2ec934: ldp     x25, x26, [sp, #64]
+    0.00 :   2ec938: ldr     q0, [x21, x1]
+    0.00 :   2ec93c: ldp     x27, x28, [sp, #80]
+    0.00 :   2ec940: add     v0.2d, v0.2d, v1.2d
+    0.00 :   2ec944: str     q0, [x21, x1]
+    0.00 :   2ec948: ldr     x1, [x0, #144]
+    0.00 :   2ec94c: ldp     x21, x22, [sp, #32]
+    0.00 :   2ec950: add     x1, x1, x23
+    0.00 :   2ec954: ldp     x23, x24, [sp, #48]
+    0.00 :   2ec958: str     x1, [x0, #144]
+    0.00 :   2ec95c: mov     x0, x19
+    0.00 :   2ec960: ldp     x19, x20, [sp, #16]
+    0.00 :   2ec964: ldp     x29, x30, [sp], #320
+    0.00 :   2ec968: ret
+         : 1364   debug_cycle():
+    0.00 :   2ec96c: ldr     x2, [x28, #24]
+    0.00 :   2ec970: add     x3, x28, #0x10
+    0.00 :   2ec974: mov     x1, x20
+    0.00 :   2ec978: mov     x0, x19
+    0.00 :   2ec97c: ldr     x2, [x2, #24]
+    0.00 :   2ec980: bl      108540 <PySys_FormatStderr@plt>
+         : 938    _PyGCHead_NEXT():
+    0.00 :   2ec984: ldr     x28, [x28]
+         : 61     gc_collect_main():
+    0.00 :   2ec988: ldr     w1, [x21, #16]
+    0.00 :   2ec98c: cmp     x28, x24
+    0.00 :   2ec990: b.ne    2ec81c <gc_collect_main+0xdfc>  // b.any
+    0.00 :   2ec994: ldr     x0, [sp, #104]
+    0.00 :   2ec998: add     x19, x23, x0
+    0.00 :   2ec99c: tbz     w1, #0, 2ec84c <gc_collect_main+0xe2c>
+    0.00 :   2ec9a0: bl      108f00 <_PyTime_GetPerfCounter@plt>
+    0.00 :   2ec9a4: ldr     x1, [sp, #160]
+    0.00 :   2ec9a8: sub     x0, x0, x1
+    0.00 :   2ec9ac: bl      10c7d0 <_PyTime_AsSecondsDouble@plt>
+    0.00 :   2ec9b0: mov     x2, x23
+    0.00 :   2ec9b4: mov     x1, x19
+    0.00 :   2ec9b8: adrp    x0, 383000 <_fini+0x27c84>
+    0.00 :   2ec9bc: add     x0, x0, #0x210
+    0.00 :   2ec9c0: bl      10ac10 <PySys_WriteStderr@plt>
+    0.00 :   2ec9c4: b       2ec84c <gc_collect_main+0xe2c>
+         : 1320   gc_clear_collecting():
+    0.00 :   2ec9c8: ldp     x3, x2, [x23]
+    0.00 :   2ec9cc: and     x0, x2, #0xfffffffffffffffd
+    0.00 :   2ec9d0: str     x0, [x23, #8]
+         : 89     _PyGCHead_PREV():
+    0.00 :   2ec9d4: and     x2, x2, #0xfffffffffffffffc
+         : 69     _PyGCHead_SET_PREV():
+    0.00 :   2ec9d8: ldr     x0, [x3, #8]
+         : 75     _PyGCHead_SET_NEXT():
+    0.00 :   2ec9dc: str     x3, [x2]
+         : 64     _PyGCHead_SET_PREV():
+    0.00 :   2ec9e0: and     x0, x0, #0x3
+    0.00 :   2ec9e4: orr     x0, x0, x2
+    0.00 :   2ec9e8: str     x0, [x3, #8]
+    0.00 :   2ec9ec: ldr     x0, [x23, #8]
+         : 78     gc_list_move():
+    0.00 :   2ec9f0: ldr     x2, [x25, #8]
+         : 290    _PyGCHead_SET_PREV():
+    0.00 :   2ec9f4: and     x0, x0, #0x3
+    0.00 :   2ec9f8: orr     x0, x0, x2
+    0.00 :   2ec9fc: str     x0, [x23, #8]
+         : 77     _PyGCHead_SET_NEXT():
+    0.00 :   2eca00: str     x23, [x2]
+         : 64     gc_list_move():
+    0.00 :   2eca04: str     x23, [x25, #8]
+         : 293    _PyGCHead_SET_NEXT():
+    0.00 :   2eca08: str     x25, [x23]
+         : 64     gc_list_is_empty():
+    0.00 :   2eca0c: ldr     x23, [sp, #216]
+         : 244    gc_list_move():
+    0.00 :   2eca10: b       2ec7c0 <gc_collect_main+0xda0>
+         : 295    handle_legacy_finalizers():
+    0.00 :   2eca14: mov     x0, x27
+    0.00 :   2eca18: bl      1081b0 <_PyErr_Clear@plt>
+         : 959    gc_list_is_empty():
+    0.00 :   2eca1c: ldr     x0, [sp, #200]
+         : 244    handle_legacy_finalizers():
+    0.00 :   2eca20: b       2ec894 <gc_collect_main+0xe74>
+         : 959    gc_collect_main():
+    0.00 :   2eca24: adrp    x0, 383000 <_fini+0x27c84>
+    0.00 :   2eca28: mov     x1, #0x0                        // #0
+    0.00 :   2eca2c: add     x0, x0, #0x250
+    0.00 :   2eca30: bl      109d20 <_PyErr_WriteUnraisableMsg@plt>
+    0.00 :   2eca34: b       2ec904 <gc_collect_main+0xee4>
+    0.00 :   2eca38: ldr     x20, [x27, #16]
+         : 1330   clear_freelists():
+    0.00 :   2eca3c: mov     x0, x20
+    0.00 :   2eca40: bl      1d6340 <_PyTuple_ClearFreeList>
+    0.00 :   2eca44: mov     x0, x20
+    0.00 :   2eca48: bl      190660 <_PyFloat_ClearFreeList>
+    0.00 :   2eca4c: mov     x0, x20
+    0.00 :   2eca50: bl      19bba0 <_PyList_ClearFreeList>
+    0.00 :   2eca54: mov     x0, x20
+    0.00 :   2eca58: bl      1ae920 <_PyDict_ClearFreeList>
+    0.00 :   2eca5c: mov     x0, x20
+    0.00 :   2eca60: bl      18c590 <_PyAsyncGen_ClearFreeLists>
+    0.00 :   2eca64: mov     x0, x20
+    0.00 :   2eca68: bl      28a540 <_PyContext_ClearFreeList>
+    0.00 :   2eca6c: b       2ec8e4 <gc_collect_main+0xec4>
+         : 1060   gc_collect_main():
+    0.00 :   2eca70: ldr     x19, [sp, #104]
+    0.00 :   2eca74: mov     x23, #0x0                       // #0
+    0.00 :   2eca78: tbz     w1, #0, 2ec894 <gc_collect_main+0xe74>
+    0.00 :   2eca7c: b       2ec9a0 <gc_collect_main+0xf80>
+         : 1314   handle_weakrefs():
+    0.10 :   2eca80: mov     x3, x23
+    0.00 :   2eca84: str     xzr, [sp, #104]
+    0.00 :   2eca88: b       2ec150 <gc_collect_main+0x730>
+         : 789    gc_collect_main():
+    0.00 :   2eca8c: mov     x3, x19
+    0.00 :   2eca90: str     xzr, [sp, #104]
+    0.00 :   2eca94: b       2ec150 <gc_collect_main+0x730>
+    0.00 :   2eca98: add     x28, x22, #0xa0
+         : 1232   gc_list_is_empty():
+    0.00 :   2eca9c: mov     x26, #0x1                       // #1
+         : 244    gc_list_merge():
+    0.00 :   2ecaa0: cmp     x3, x7
+    0.00 :   2ecaa4: b.ne    2ebaa0 <gc_collect_main+0x80>  // b.any
+         : 303    gc_list_init():
+    0.00 :   2ecaa8: str     x3, [x21, #32]
+         : 237    gc_collect_main():
+    0.00 :   2ecaac: b       2ec48c <gc_collect_main+0xa6c>
+         : 1231   _PyGCHead_NEXT():
+    0.00 :   2ecab0: ldr     x2, [sp, #184]
+    0.00 :   2ecab4: b       2ec4d4 <gc_collect_main+0xab4>
+         : 61     gc_list_is_empty():
+    0.00 :   2ecab8: ldr     x23, [sp, #184]
+         : 244    _PyGCHead_NEXT():
+    0.00 :   2ecabc: str     xzr, [sp, #104]
+    0.00 :   2ecac0: mov     x3, x23
+    0.00 :   2ecac4: b       2ec150 <gc_collect_main+0x730>
+         : 63     gc_list_init():
+    0.00 :   2ecac8: mov     x2, x19
+    0.00 :   2ecacc: b       2ec4bc <gc_collect_main+0xa9c>

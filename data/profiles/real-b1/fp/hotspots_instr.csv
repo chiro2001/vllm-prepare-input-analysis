@@ -1,0 +1,21 @@
+rank,symbol,address,instruction,pct
+1,pthread_mutex_lock,8261c,"cmp     w2, #0x0 // libc.so.6[8261c]",40.79
+2,unicodekeys_lookup_unicode,10d4ac,"ldp     x21, x22, [sp, #32]",21.87
+3,pthread_mutex_lock,825b8,"tst     w2, #0x7c // libc.so.6[825b8]",18.08
+4,unicodekeys_lookup_unicode,10d43c,"add     x19, x19, x19, lsl #2",16.64
+5,pthread_mutex_lock,82614,"stxr    w3, w0, [x19] // libc.so.6[82614]",16.42
+6,unicodekeys_lookup_unicode,10d420,"lsl     x0, x20, #4",16.37
+7,unicodekeys_lookup_unicode,10d430,"ldr     x1, [x0, #24]",11.52
+8,pthread_mutex_lock,825a4,"add     x3, x0, #0x10 // libc.so.6[825a4]",7.16
+9,unicodekeys_lookup_unicode,10d4a4,"cmn     x20, #0x1",5.13
+10,unicodekeys_lookup_unicode,10d524,"ldr     x3, [x0, #16]",3.93
+11,_PyEval_EvalFrameDefault,1160ec,"str     w0, [x1]",3.93
+12,pthread_mutex_lock,826e8,"cmp     w2, #0x0 // libc.so.6[826e8]",3.73
+13,unicodekeys_lookup_unicode,10d478,"lsr     x21, x21, #10",3.30
+14,_PyEval_EvalFrameDefault,10fa80,"str     w0, [x25]",2.90
+15,pthread_mutex_lock,826e0,"stxr    w3, w0, [x19] // libc.so.6[826e0]",2.65
+16,_PyEval_EvalFrameDefault,112438,"ldr     w0, [x1]",2.59
+17,unicodekeys_lookup_unicode,10d4b4,"ldp     x19, x20, [sp, #16]",2.43
+18,_PyEval_EvalFrameDefault,1160e0,"ldr     w0, [x1]",2.42
+19,pthread_mutex_lock,82628,"ldr     w0, [x19, #12] // libc.so.6[82628]",2.32
+20,_PyEval_EvalFrameDefault,10fa74,"ldr     w0, [x25]",2.17

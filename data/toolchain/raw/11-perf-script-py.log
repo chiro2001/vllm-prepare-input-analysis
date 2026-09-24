@@ -1,0 +1,66 @@
+$ bash -lc perf script -i /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-py.data | head -60
+# rc=0 wall_s=0.201
+
+perf-exec 3965146 490956.854727:          1 cycles:P: 
+	ffffb395670334bc perf_event_enable_on_exec+0x64 ([kernel.kallsyms])
+	ffffb395670390b0 perf_event_exec+0x30 ([kernel.kallsyms])
+	ffffb395671bc940 begin_new_exec+0x208 ([kernel.kallsyms])
+	ffffb395672460cc load_elf_binary+0x314 ([kernel.kallsyms])
+	ffffb395671bb0fc search_binary_handler+0x114 ([kernel.kallsyms])
+	ffffb395671bb358 exec_binprm+0x58 ([kernel.kallsyms])
+	ffffb395671bb738 bprm_execve+0xb8 ([kernel.kallsyms])
+	ffffb395671bc164 do_execveat_common.isra.0+0x19c ([kernel.kallsyms])
+	ffffb395671bc3a8 __arm64_sys_execve+0x48 ([kernel.kallsyms])
+	ffffb39566cfc8a0 invoke_syscall+0x50 ([kernel.kallsyms])
+	ffffb39566cfca40 el0_svc_common.constprop.0+0xc8 ([kernel.kallsyms])
+	ffffb39566cfcb28 do_el0_svc+0x48 ([kernel.kallsyms])
+	ffffb39567bb8724 el0_svc+0x44 ([kernel.kallsyms])
+	ffffb39567bb8d18 el0t_64_sync_handler+0x100 ([kernel.kallsyms])
+	ffffb39566ce1e38 el0t_64_sync+0x188 ([kernel.kallsyms])
+
+perf-exec 3965146 490956.854732:          1 cycles:P: 
+	ffffb395670334bc perf_event_enable_on_exec+0x64 ([kernel.kallsyms])
+	ffffb395670390b0 perf_event_exec+0x30 ([kernel.kallsyms])
+	ffffb395671bc940 begin_new_exec+0x208 ([kernel.kallsyms])
+	ffffb395672460cc load_elf_binary+0x314 ([kernel.kallsyms])
+	ffffb395671bb0fc search_binary_handler+0x114 ([kernel.kallsyms])
+	ffffb395671bb358 exec_binprm+0x58 ([kernel.kallsyms])
+	ffffb395671bb738 bprm_execve+0xb8 ([kernel.kallsyms])
+	ffffb395671bc164 do_execveat_common.isra.0+0x19c ([kernel.kallsyms])
+	ffffb395671bc3a8 __arm64_sys_execve+0x48 ([kernel.kallsyms])
+	ffffb39566cfc8a0 invoke_syscall+0x50 ([kernel.kallsyms])
+	ffffb39566cfca40 el0_svc_common.constprop.0+0xc8 ([kernel.kallsyms])
+	ffffb39566cfcb28 do_el0_svc+0x48 ([kernel.kallsyms])
+	ffffb39567bb8724 el0_svc+0x44 ([kernel.kallsyms])
+	ffffb39567bb8d18 el0t_64_sync_handler+0x100 ([kernel.kallsyms])
+	ffffb39566ce1e38 el0t_64_sync+0x188 ([kernel.kallsyms])
+
+perf-exec 3965146 490956.854734:          1 cycles:P: 
+	ffffb395670334bc perf_event_enable_on_exec+0x64 ([kernel.kallsyms])
+	ffffb395670390b0 perf_event_exec+0x30 ([kernel.kallsyms])
+	ffffb395671bc940 begin_new_exec+0x208 ([kernel.kallsyms])
+	ffffb395672460cc load_elf_binary+0x314 ([kernel.kallsyms])
+	ffffb395671bb0fc search_binary_handler+0x114 ([kernel.kallsyms])
+	ffffb395671bb358 exec_binprm+0x58 ([kernel.kallsyms])
+	ffffb395671bb738 bprm_execve+0xb8 ([kernel.kallsyms])
+	ffffb395671bc164 do_execveat_common.isra.0+0x19c ([kernel.kallsyms])
+	ffffb395671bc3a8 __arm64_sys_execve+0x48 ([kernel.kallsyms])
+	ffffb39566cfc8a0 invoke_syscall+0x50 ([kernel.kallsyms])
+	ffffb39566cfca40 el0_svc_common.constprop.0+0xc8 ([kernel.kallsyms])
+	ffffb39566cfcb28 do_el0_svc+0x48 ([kernel.kallsyms])
+	ffffb39567bb8724 el0_svc+0x44 ([kernel.kallsyms])
+	ffffb39567bb8d18 el0t_64_sync_handler+0x100 ([kernel.kallsyms])
+	ffffb39566ce1e38 el0t_64_sync+0x188 ([kernel.kallsyms])
+
+perf-exec 3965146 490956.854736:         22 cycles:P: 
+	ffffb39567037c54 perf_event_remove_on_exec+0x5c ([kernel.kallsyms])
+	ffffb395670390b8 perf_event_exec+0x38 ([kernel.kallsyms])
+	ffffb395671bc940 begin_new_exec+0x208 ([kernel.kallsyms])
+	ffffb395672460cc load_elf_binary+0x314 ([kernel.kallsyms])
+	ffffb395671bb0fc search_binary_handler+0x114 ([kernel.kallsyms])
+	ffffb395671bb358 exec_binprm+0x58 ([kernel.kallsyms])
+	ffffb395671bb738 bprm_execve+0xb8 ([kernel.kallsyms])
+	ffffb395671bc164 do_execveat_common.isra.0+0x19c ([kernel.kallsyms])
+
+----- stderr -----
+

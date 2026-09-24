@@ -1,0 +1,133 @@
+{
+  "920b_topdown_full": {
+    "n_groups": 9,
+    "issue_width": 6,
+    "per_group_limit": 8,
+    "groups": {
+      "920b_topdown_full_1": {
+        "n_events": 8,
+        "events": [
+          "cpu_cycles",
+          "inst_retired",
+          "inst_spec",
+          "fetch_bubble",
+          "fetch_bubble_max",
+          "total_resource_stall",
+          "exec_stall",
+          "fdiv_fsqrt_stall"
+        ]
+      },
+      "920b_topdown_full_2": {
+        "n_events": 8,
+        "events": [
+          "exe_stall_div",
+          "fsu_stall",
+          "mem_stall_anyload",
+          "mem_stall_anystore",
+          "memstall_l1miss",
+          "memstall_l2miss",
+          "memstall_l3miss",
+          "rob_stall"
+        ]
+      },
+      "920b_topdown_full_3": {
+        "n_events": 8,
+        "events": [
+          "br_mis_pred",
+          "o3_flush",
+          "nuke_flush",
+          "bp_misp_br_ind",
+          "bp_misp_br_blr",
+          "bp_misp_br_bl",
+          "bp_misp_br_ret",
+          "if_sp_flush"
+        ]
+      },
+      "920b_topdown_full_4": {
+        "n_events": 8,
+        "events": [
+          "l2i_tlb",
+          "l2i_tlb_refill",
+          "l2i_cache",
+          "l2i_cache_refill",
+          "pcbuf_stall",
+          "int_ptag_stall",
+          "cc_ptag_stall",
+          "vfp_single_ptag_stall"
+        ]
+      },
+      "920b_topdown_full_5": {
+        "n_events": 8,
+        "events": [
+          "vfp_pair_ptag_stall",
+          "vpd_ptag_stall",
+          "int_mpq_stall",
+          "vfp_mpq_stall",
+          "cc_mpq_stall",
+          "ports_0_serialize",
+          "ports_0_nonserialize",
+          "ports_1"
+        ]
+      },
+      "920b_topdown_full_6": {
+        "n_events": 8,
+        "events": [
+          "ports_2",
+          "ports_3",
+          "ports_4",
+          "ports_5",
+          "ports_6",
+          "ld_cancel_dtlb_miss",
+          "ld_cancel_misalign",
+          "ld_cancel_lq_full"
+        ]
+      },
+      "920b_topdown_full_7": {
+        "n_events": 8,
+        "events": [
+          "ld_cancel_inst_type",
+          "ld_cancel_fwd_hzd",
+          "ld_cancel_struct_hzd",
+          "ld_cancel_pipeline",
+          "l2_bound_buf",
+          "l2_bound_snp",
+          "l2_bound_arb",
+          "dram_local"
+        ]
+      },
+      "920b_topdown_full_8": {
+        "n_events": 6,
+        "events": [
+          "dram_remote",
+          "dram_remote_cache",
+          "st_sca_full",
+          "st_head_no_pgen",
+          "st_order_fail",
+          "st_bound_pipeline"
+        ]
+      },
+      "920b_topdown_full_9": {
+        "n_events": 4,
+        "events": [
+          "context_switches",
+          "cpu_migrations",
+          "page_faults",
+          "cpu_clock"
+        ]
+      }
+    },
+    "family_aliases": [
+      "950b_topdown_full_*",
+      "k147_topdown_full_*"
+    ],
+    "small_presets": [
+      "basic",
+      "branch",
+      "memory",
+      "stalls",
+      "ports",
+      "software"
+    ],
+    "merge_cmd": "kperfx merge --out metrics.txt sweep/split_*.json"
+  }
+}

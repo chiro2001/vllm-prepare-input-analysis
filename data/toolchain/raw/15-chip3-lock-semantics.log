@@ -1,0 +1,25 @@
+### chip3_lock.sh semantics validation  2026-09-24T01:53:27+08:00
+
+$ scripts/chip3_lock.sh status
+HELD
+{
+  "cpuset": "120-159",
+  "device": "/dev/davinci3",
+  "host": "host22",
+  "nonce": "3906817-1790185596.453693",
+  "owner": "service_bringup",
+  "pid": 3906817,
+  "purpose": "chip3 A/B: profiler overhead control (phase timing OFF)",
+  "resource": "chip3",
+  "started_utc": "2026-09-23T17:46:36Z"
+}
+rc=0
+
+$ scripts/chip3_lock.sh acquire --owner env_toolchain --purpose 'lock semantics validation' --wait 1
+chip3_lock: held by owner=service_bringup (waited 1s)
+rc=75   (75 == EX_TEMPFAIL, i.e. held by someone else)
+
+### lock is held by another agent right now; the holder-only paths below were
+### verified in an earlier window (transcript in this same file of the report):
+    release --owner <not-holder>   -> rc=1  'refusing to release: held by owner=...'
+    acquire --wait 2 (second party) -> rc=75 EX_TEMPFAIL

@@ -1,0 +1,28 @@
+{
+  "count": 6,
+  "entries": [
+    {"name":"DRAM_REMOTE","id":"dram_remote","config":"0x7022","delta":0,"rate":0.000000},
+    {"name":"DRAM_REMOTE_CACHE","id":"dram_remote_cache","config":"0x7023","delta":0,"rate":0.000000},
+    {"name":"ST_SCA_FULL","id":"st_sca_full","config":"0x50a0","delta":231069,"rate":46208.939836},
+    {"name":"ST_HEAD_NO_PGEN","id":"st_head_no_pgen","config":"0x50a2","delta":953837,"rate":190747.337577},
+    {"name":"ST_ORDER_FAIL","id":"st_order_fail","config":"0x50a3","delta":79860076,"rate":15970335.472056},
+    {"name":"ST_BOUND_PIPELINE","id":"st_bound_pipeline","config":"0x50a4","delta":11804,"rate":2360.551722}
+  ],
+  "time_enabled": 5000525890,
+  "time_running": 5000525890,
+  "confidence": 1.000000,
+  "sampled": false,
+  "sample_count": 0,
+  "lost_samples": 0,
+  "gated": false,
+  "iter_gated": false,
+  "iter_start_at": 0,
+  "iter_end_at": 0,
+  "iter_start_seen": 0,
+  "iter_end_seen": 0,
+  "roi_start_seen": 0,
+  "roi_end_seen": 0,
+  "useronly_forced": false,
+  "instances": 1,
+  "pmu": "920B"
+}

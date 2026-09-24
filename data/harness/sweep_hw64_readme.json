@@ -1,0 +1,13 @@
+{
+  "source": "data/harness/hw64_sweep_*.csv",
+  "fixed": {
+    "max_num_reqs": 64,
+    "max_num_batched_tokens": 16384,
+    "has_gdn": true,
+    "model": "qwen35-0.8b",
+    "slot_mapping_mode": "cpu_fallback",
+    "triton_launch_us": 0.0
+  },
+  "caveat": "a3-22 宿主机有 64 个他人 python 进程，affinity 覆盖 0-639，taskset 挡不住；pi_p50 含噪声，us_p50 是干净信号",
+  "note": "pi_p50 含 cpu_fallback 的 numpy 兜底开销（triton_cpu_us），未扣除"
+}

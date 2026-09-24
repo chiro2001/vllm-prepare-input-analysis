@@ -1,0 +1,6 @@
+# C11 torch.zeros(device='npu')
+# ok=True
+# value='cpu'
+# exc=None
+# tb
+

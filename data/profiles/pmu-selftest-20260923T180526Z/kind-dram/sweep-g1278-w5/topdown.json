@@ -1,0 +1,201 @@
+{
+  "schema": "pi-pmu-topdown-v1",
+  "tag": "selftest-20260923T180526Z-dram",
+  "preset_prefix": "920b_topdown_full_",
+  "issue_width": 6,
+  "groups_requested": [
+    1,
+    2,
+    7,
+    8
+  ],
+  "groups_used": [
+    1,
+    2,
+    7,
+    8
+  ],
+  "groups_missing": [],
+  "complete_for_request": true,
+  "complete_topdown_tree": false,
+  "l1_topdown_pct": {
+    "frontend_bound": 0.04775237456859655,
+    "bad_spec": 0.0910565180420764,
+    "retiring": 24.020123011229302,
+    "backend_bound": 75.84106809616001
+  },
+  "subitems_pct": {
+    "resource_bound": 26.64771872237551,
+    "core_bound": 19.58817349723876,
+    "mem_bound": 29.605175876545744,
+    "mem_l1_bound": 0.016975042675554452,
+    "mem_l2_bound": 0.5918416120363874,
+    "mem_l3_dram_bound": 28.996359221833803,
+    "mem_mem_bound": 0.0,
+    "mem_store_bound": 0.0,
+    "frontend_latency_bound": 0.045888343913489935,
+    "frontend_bandwidth_bound": 0.0018640306551066174,
+    "rob_stall_pct": 100.0,
+    "ptag_stall_pct": 0.0,
+    "mapq_stall_pct": 0.0,
+    "pcbuf_stall_pct": 0.0,
+    "other_stall_pct": 0.0
+  },
+  "coverage": {
+    "l1_topdown_pct": {
+      "needs_groups": [
+        1
+      ],
+      "complete": true
+    },
+    "frontend_latency_bound": {
+      "needs_groups": [
+        1
+      ],
+      "complete": true
+    },
+    "frontend_bandwidth_bound": {
+      "needs_groups": [
+        1
+      ],
+      "complete": true
+    },
+    "resource_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "core_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "mem_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "mem_l1_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "mem_l2_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "mem_l3_dram_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "mem_mem_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "mem_store_bound": {
+      "needs_groups": [
+        1,
+        2
+      ],
+      "complete": true
+    },
+    "ooo_stall_split": {
+      "needs_groups": [
+        2,
+        4,
+        5
+      ],
+      "complete": false
+    }
+  },
+  "coverage_incomplete": [
+    "ooo_stall_split"
+  ],
+  "per_group_confidence": {
+    "1": 1.0,
+    "2": 1.0,
+    "7": 1.0,
+    "8": 1.0
+  },
+  "merged_counters_by_config": {
+    "0x11": 14499636362,
+    "0x8": 20896982942,
+    "0x1b": 20976200126,
+    "0x2011": 41543524,
+    "0x2012": 6653643,
+    "0x7000": 5094538088,
+    "0x7001": 14499372876,
+    "0x7002": 0,
+    "0x7003": 65741,
+    "0x7004": 0,
+    "0x7005": 5659947768,
+    "0x7006": 0,
+    "0x7007": 5656702462,
+    "0x7008": 5543553578,
+    "0x7009": 0,
+    "0x2004": 6114,
+    "0x5093": 9494,
+    "0x5094": 426266,
+    "0x5095": 1107548133,
+    "0x5096": 544532881,
+    "0x701e": 18,
+    "0x701f": 52327124,
+    "0x7020": 67057496,
+    "0x7021": 0,
+    "0x7022": 0,
+    "0x7023": 0,
+    "0x50a0": 231069,
+    "0x50a2": 953837,
+    "0x50a3": 79860076,
+    "0x50a4": 11804
+  },
+  "counter_group_owner": {
+    "0x11": 1,
+    "0x8": 1,
+    "0x1b": 1,
+    "0x2011": 1,
+    "0x2012": 1,
+    "0x7000": 1,
+    "0x7001": 1,
+    "0x7002": 1,
+    "0x7003": 2,
+    "0x7004": 2,
+    "0x7005": 2,
+    "0x7006": 2,
+    "0x7007": 2,
+    "0x7008": 2,
+    "0x7009": 2,
+    "0x2004": 2,
+    "0x5093": 7,
+    "0x5094": 7,
+    "0x5095": 7,
+    "0x5096": 7,
+    "0x701e": 7,
+    "0x701f": 7,
+    "0x7020": 7,
+    "0x7021": 7,
+    "0x7022": 8,
+    "0x7023": 8,
+    "0x50a0": 8,
+    "0x50a2": 8,
+    "0x50a3": 8,
+    "0x50a4": 8
+  }
+}

@@ -1,0 +1,1131 @@
+{
+  "finished_utc": "2026-09-23T20:38:55Z",
+  "n_flat_rows": 6935,
+  "notes": [],
+  "perf_data": "data/profiles/real-b1/fp/perf.data",
+  "perf_data_bytes": 16414620,
+  "perf_version": "perf version 6.6.0-159.4.13.167.oe2403sp4.aarch64",
+  "started_utc": "2026-09-23T20:37:35Z",
+  "symbols": {
+    "AscendAttentionMetadataBuilder": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 1.86,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendAttentionMetadataBuilder.build:/vllm-workspace/vllm-ascend/vllm_ascend/attention/attention_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.26,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendAttentionMetadataBuilder._split_decodes_and_prefills:/vllm-workspace/vllm-ascend/vllm_ascend/attention/attention_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendAttentionMetadataBuilder._build_backend_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/attention/attention_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "AscendAttentionMetadataBuilder",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "AscendGDNAttentionMetadataBuilder": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 20.1,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendGDNAttentionMetadataBuilder.build:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 5.94,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendGDNAttentionMetadataBuilder._pad_non_spec_decode_graph_inputs:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 4.04,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendGDNAttentionMetadataBuilder._attach_non_spec_decode_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.03,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendGDNAttentionMetadataBuilder._attach_spec_decode_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "AscendGDNAttentionMetadataBuilder",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "GDNAttentionMetadataBuilder": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 20.1,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendGDNAttentionMetadataBuilder.build:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 5.94,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendGDNAttentionMetadataBuilder._pad_non_spec_decode_graph_inputs:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 4.04,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendGDNAttentionMetadataBuilder._attach_non_spec_decode_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.03,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendGDNAttentionMetadataBuilder._attach_spec_decode_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "GDNAttentionMetadataBuilder",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "PinMemoryAllocator": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [],
+      "found_in_flat": false,
+      "pattern": "PinMemoryAllocator",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "_build_attention_metadata": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 31.6,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::NPUModelRunner._build_attention_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 23.26,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::NPUModelRunner._build_attention_metadata.<locals>._build_attn_group_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 3.57,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::NPUModelRunner._build_attention_metadata.<locals>._get_block_table_and_slot_mapping:/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::NPUModelRunner._build_attention_metadata.<locals>._get_dcp_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "_build_attention_metadata",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "_build_attn_group_metadata": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 23.26,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::NPUModelRunner._build_attention_metadata.<locals>._build_attn_group_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "_build_attn_group_metadata",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "_calc_spec_decode_metadata": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [],
+      "found_in_flat": false,
+      "pattern": "_calc_spec_decode_metadata",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "_fold_spec_sized_prefill_chunks_into_spec": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [],
+      "found_in_flat": false,
+      "pattern": "_fold_spec_sized_prefill_chunks_into_spec",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "_local_scalar_dense": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 0.11,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.03,
+          "symbol": "at::_ops::_local_scalar_dense::call(at::Tensor const&)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.07,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<c10::Scalar (at::Tensor const&), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CPU___local_scalar_dense>, c10::Scalar, c10::guts::typelist::typelist<at::Tensor const&> >, c10::Scalar (at::Tensor const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.06,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "at::native::_local_scalar_dense_cpu(at::Tensor const&)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.02,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.02,
+          "symbol": "at::native::_local_scalar_dense_cpu(at::Tensor const&)::{lambda()#1}::operator()() const [clone .isra.0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "at::native::_local_scalar_dense_cpu(at::Tensor const&)@plt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "_local_scalar_dense",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "_prepare_inputs": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 20.26,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::NPUModelRunner._prepare_inputs:/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "_prepare_inputs",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "_treat_single_token_prefills_with_state_as_decodes": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 3.55,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::_treat_single_token_prefills_with_state_as_decodes:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "_treat_single_token_prefills_with_state_as_decodes",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "_update_states": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 2.28,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::NPUModelRunner._update_states:/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 2.19,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::GPUModelRunner._update_states:/vllm-workspace/vllm/vllm/v1/worker/gpu_model_runner.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::GPUModelRunner._update_states_after_model_execute:/vllm-workspace/vllm/vllm/v1/worker/gpu_model_runner.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "_update_states",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "aclrtSynchronize": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 0.18,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "aclrtSynchronizeStreamWithTimeoutImpl                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.08,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "aclrtSynchronizeEventImpl                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "aclrtSynchronizeStreamWithTimeout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "aclrtSynchronize",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "async_tensor_h2d": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [],
+      "found_in_flat": false,
+      "pattern": "async_tensor_h2d",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "aten::item": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [],
+      "found_in_flat": false,
+      "pattern": "aten::item",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "build": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 31.6,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::NPUModelRunner._build_attention_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 23.26,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::NPUModelRunner._build_attention_metadata.<locals>._build_attn_group_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 20.1,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendGDNAttentionMetadataBuilder.build:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 5.94,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendGDNAttentionMetadataBuilder._pad_non_spec_decode_graph_inputs:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 4.04,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendGDNAttentionMetadataBuilder._attach_non_spec_decode_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 3.57,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::NPUModelRunner._build_attention_metadata.<locals>._get_block_table_and_slot_mapping:/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 3.55,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::_treat_single_token_prefills_with_state_as_decodes:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 3.38,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::_build_actual_seq_lengths:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 2.17,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.07,
+          "symbol": "at::TensorIteratorBase::build(at::TensorIteratorConfig&)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 1.86,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendAttentionMetadataBuilder.build:/vllm-workspace/vllm-ascend/vllm_ascend/attention/attention_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 1.08,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "at::TensorIteratorBase::build_borrowing_except_last_argument_comparison_op(at::TensorBase const&, at::TensorBase const&, at::TensorBase const&)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.76,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "at::TensorIteratorBase::build_borrowing_binary_op(at::TensorBase const&, at::TensorBase const&, at::TensorBase const&)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.55,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::NPUModelRunner._build_attn_state:/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.3,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "at::TensorIteratorBase::build_borrowing_comparison_op(at::TensorBase const&, at::TensorBase const&, at::TensorBase const&)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.26,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendAttentionMetadataBuilder._split_decodes_and_prefills:/vllm-workspace/vllm-ascend/vllm_ascend/attention/attention_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.12,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.02,
+          "symbol": "op::internal::BuildGraph(void*, unsigned int, op::OpArgList&, op::OpArgList&, op::OpArgList&)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.11,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.1,
+          "symbol": "_PyBuildSlice_ConsumeRefs                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.08,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "py::AttentionGroup.get_metadata_builder:/vllm-workspace/vllm/vllm/v1/worker/utils.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.07,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.02,
+          "symbol": "op::internal::BuildKernelNodeImpl(unsigned int, op::internal::SmallVector<aclTensor*, 8ul, op::internal::PoolAllocator<aclTensor*> >&, op::internal::SmallVector<aclTensor*, 8ul, op::internal::PoolAllocator<aclTensor*> >&, op::internal::SmallVector<aclTensor*, 8ul, op::internal::PoolAllocator<aclTensor*> >&)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.07,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.07,
+          "symbol": "build_indices_unicode                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.04,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "va_build_value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.04,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "_Py_BuildValue_SizeT                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.04,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::BatchUpdateBuilder.removed:/vllm-workspace/vllm/vllm/v1/sample/logits_processor/state.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.03,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::BatchUpdateBuilder._ensure_removed_sorted:/vllm-workspace/vllm/vllm/v1/sample/logits_processor/state.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.03,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.03,
+          "symbol": "at::TensorIteratorBase::build(at::TensorIteratorConfig&)@plt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.03,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.02,
+          "symbol": "Indv::CacheKeyBuilder::AppendShapeInfo(NnopbaseExecutorArgs*, aclTensor const*)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.03,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "Indv::CacheKeyBuilder::AppendTensorList(NnopbaseExecutorArgs*, aclTensorList const*)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.03,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendGDNAttentionMetadataBuilder._attach_spec_decode_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.02,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AttentionMaskBuilder.get_attention_mask:/vllm-workspace/vllm-ascend/vllm_ascend/attention/attention_mask.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.02,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "Indv::CacheKeyBuilder::AppendPlaceHolder(NnopbaseExecutorArgs*, unsigned char*)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.02,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "Indv::CacheKeyBuilder::AppendValueDependTensor(NnopbaseExecutorArgs*, void const*, unsigned long, unsigned long, ge::DataType)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.02,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::BatchUpdateBuilder.get_and_reset:/vllm-workspace/vllm/vllm/v1/sample/logits_processor/state.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::NPUModelRunner._build_attention_metadata.<locals>._get_dcp_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/worker/model_runner_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::_build_non_spec_chunked_prefill_metadata:/vllm-workspace/vllm-ascend/vllm_ascend/ops/gdn_attn_builder.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "Indv::CacheKeyBuilder::AppendDeterministic(NnopbaseExecutorArgs*, bool const*)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "Indv::CacheKeyBuilder::AppendMc2RankId(NnopbaseExecutorArgs*, unsigned int const*)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "_Py_VaBuildValue_SizeT                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "Indv::CacheKeyBuilder::EnsureCapacity(NnopbaseExecutorArgs*, unsigned long)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "Indv::CacheKeyBuilder::AppendTensor(NnopbaseExecutorArgs*, aclTensor const*)@plt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "Indv::CacheKeyBuilder::EnsureCapacity(NnopbaseExecutorArgs*, unsigned long)@plt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "build",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "compute_causal_conv1d_metadata": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [],
+      "found_in_flat": false,
+      "pattern": "compute_causal_conv1d_metadata",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "compute_num_computed_tokens": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 2.65,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::CommonAttentionMetadata.compute_num_computed_tokens:/vllm-workspace/vllm/vllm/v1/attention/backend.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "compute_num_computed_tokens",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "condense": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 0.08,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::InputBatch.condense:/vllm-workspace/vllm/vllm/v1/worker/gpu_input_batch.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "condense",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "cudaHostAlloc": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [],
+      "found_in_flat": false,
+      "pattern": "cudaHostAlloc",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "index_select": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 0.07,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "torch::autograd::THPVariable_index_select(_object*, _object*, _object*)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.07,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "at::_ops::index_select_out::call(at::Tensor const&, long, at::Tensor const&, at::Tensor&)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.06,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor& (c10::DispatchKeySet, at::Tensor const&, long, at::Tensor const&, at::Tensor&), &torch::ADInplaceOrView::(anonymous namespace)::index_select_out_out>, at::Tensor&, c10::guts::typelist::typelist<c10::DispatchKeySet, at::Tensor const&, long, at::Tensor const&, at::Tensor&> >, at::Tensor& (c10::DispatchKeySet, at::Tensor const&, long, at::Tensor const&, at::Tensor&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, long, at::Tensor const&, at::Tensor&)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.05,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "at::native::index_select_out_cpu_(at::Tensor const&, long, at::Tensor const&, at::Tensor&)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.04,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "torch::autograd::THPVariable_index_select(_object*, _object*, _object*)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "at::native::index_select_out_cpu_(at::Tensor const&, long, at::Tensor const&, at::Tensor&)::{lambda()#3}::operator()() const::{lambda()#3}::operator()() const                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "at::_ops::index_select_out::redispatch(c10::DispatchKeySet, at::Tensor const&, long, at::Tensor const&, at::Tensor&)@plt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "index_select",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "mamba_get_block_table_tensor": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 0.04,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::mamba_get_block_table_tensor:/vllm-workspace/vllm/vllm/v1/attention/backends/utils.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "mamba_get_block_table_tensor",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "np_to_pinned_tensor": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [],
+      "found_in_flat": false,
+      "pattern": "np_to_pinned_tensor",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "pin_memory": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 0.12,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "at::_ops::pin_memory::call(at::Tensor const&, std::optional<c10::Device>)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.11,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, std::optional<c10::Device>), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__pin_memory>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, std::optional<c10::Device> > >, at::Tensor (at::Tensor const&, std::optional<c10::Device>)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, std::optional<c10::Device>)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.1,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "at::native::pin_memory(at::Tensor const&, std::optional<c10::Device>)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.07,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "torch::autograd::THPVariable_pin_memory(_object*, _object*, _object*)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.06,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "torch::autograd::THPVariable_pin_memory(_object*, _object*, _object*)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "pin_memory",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "prepare_chunk_indices": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 0.0,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::prepare_chunk_indices:/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/fla/utils.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "prepare_chunk_indices",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "prepare_chunk_offsets": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 0.0,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::prepare_chunk_offsets:/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/fla/utils.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "prepare_chunk_offsets",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "split_decodes_and_prefills": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 2.55,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::split_decodes_and_prefills:/vllm-workspace/vllm/vllm/v1/attention/backends/utils.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 1.66,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::reorder_batch_to_split_decodes_and_prefills:/vllm-workspace/vllm/vllm/v1/attention/backends/utils.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.26,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::AscendAttentionMetadataBuilder._split_decodes_and_prefills:/vllm-workspace/vllm-ascend/vllm_ascend/attention/attention_v1.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.24,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "py::split_decodes_and_prefills:/vllm-workspace/vllm-ascend/vllm_ascend/attention/utils.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "split_decodes_and_prefills",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "swap_states": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [],
+      "found_in_flat": false,
+      "pattern": "swap_states",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    },
+    "tolist": {
+      "callee_found": false,
+      "callee_rows": [],
+      "caller_rows": [],
+      "flat_hits": [
+        {
+          "children_pct": 0.07,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "torch::autograd::THPVariable_tolist(_object*, _object*)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.07,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "torch::autograd::THPVariable_tolist(_object*, _object*)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.0,
+          "symbol": "array_tolist                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          -      -",
+          "symtype": "."
+        },
+        {
+          "children_pct": 0.01,
+          "comm": null,
+          "dso": null,
+          "self_pct": 0.01,
+          "symbol": "PyArray_ToList                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -",
+          "symtype": "."
+        }
+      ],
+      "found_in_flat": true,
+      "pattern": "tolist",
+      "rc": {
+        "callees": 129,
+        "callers": 129
+      }
+    }
+  }
+}

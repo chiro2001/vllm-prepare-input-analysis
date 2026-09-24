@@ -1,0 +1,18 @@
+# interleaved perf stat vs pmu_tid_sweep on ONE steady ALU thread
+# host a3-22, 2026-09-23T18:12:12Z, window=5s, taskset -c 200
+# workload: tools/libkperfx/build/workload_gen --kind alu --threads 1 --duration-ms 90000
+# note: workload_gen runs the load in a pthread; busy_tid is NOT the process leader
+# commands:
+#   sudo -n perf stat -t $T -e cycles,instructions -- sleep 5
+#   scripts/measure/pmu_tid_sweep.py --tid $T --window 5 --groups 1 --tag ilX --outdir /home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/pmu-selftest-20260923T180526Z/interleave-X
+
+== round A perf
+   perf:     14,502,094,609      cycles                                                                
+   perf:     19,222,550,565      instructions                     #    1.33  insn per cycle            
+== round A kperfx (group 1)
+   kperfx: cycles 14,501,295,894  instructions 19,235,277,707  confidence 1.0000  t_en 5.000607s  t_run 5.000607s  ipc 1.3265  ghz 2.8999
+== round B perf
+   perf:     14,478,853,575      cycles                                                                
+   perf:     19,218,507,615      instructions                     #    1.33  insn per cycle            
+== round B kperfx (group 1)
+   kperfx: cycles 14,499,353,103  instructions 19,272,060,849  confidence 1.0000  t_en 4.999909s  t_run 4.999909s  ipc 1.3292  ghz 2.8999

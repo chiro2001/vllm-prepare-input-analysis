@@ -1,0 +1,291 @@
+{
+  "criterion": "热点函数 top-20 重合 ≥80%",
+  "harness_run": "data/harness/prof_runs/prof_realmachine_20260924-031609/passes/perf/perf.data",
+  "harness_caliber": "preset=realmachine, batch=1, isl=128, osl=64, slot_mapping_mode=noop, perf record -t <host_tid> -e cycles:P",
+  "real_run": "data/historical/hotspots_perf_record_top.csv (a3-21, Qwen3.5-0.8B TP1 MTP-off long decode B1, worker main TID)",
+  "normalization": {
+    "strip": [
+      "[.]/[k] prefix",
+      "+0x offset",
+      "trailing 'const'",
+      "all parenthesised args"
+    ],
+    "dso_key": "strip .so / .so.N suffix",
+    "rationale": "同一函数的 C++ 签名在不同 perf 版本/编译单元下可能带/不带 const 与参数；libc 内的 stripped 地址按 dso+symbol 处理（不同 offset 视为不同条目，保守）"
+  },
+  "overlap": {
+    "n_intersection": 16,
+    "n_harness_top20": 20,
+    "n_real_top20": 20,
+    "top20_overlap_pct": 80.0,
+    "jaccard_pct": 66.7,
+    "meets_criterion_80pct": true,
+    "only_in_harness": [
+      "tuple_alloc",
+      "torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*,",
+      "torch::autograd::THPVariable_getitem(_object*,",
+      "0x0000000000083e70"
+    ],
+    "only_in_real": [
+      "eventfd_write+0x214",
+      "PyObject_GetAttr",
+      "pthread_rwlock_rdlock",
+      "cfree"
+    ]
+  },
+  "flatness": {
+    "harness_top10_sum_pct": 21.43,
+    "real_top10_sum_pct": 23.7,
+    "harness_top20_sum_pct": 27.35,
+    "real_top20_sum_pct": 28.72,
+    "harness_top1": "_PyEval_EvalFrameDefault",
+    "harness_top1_pct": 11.43,
+    "real_top1": "_PyEval_EvalFrameDefault",
+    "real_top1_pct": 10.33,
+    "top1_delta_pp": 1.1
+  },
+  "harness_top20": [
+    {
+      "rank": 1,
+      "overhead_pct": 11.43,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_PyEval_EvalFrameDefault"
+    },
+    {
+      "rank": 2,
+      "overhead_pct": 1.63,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_PyObject_Malloc"
+    },
+    {
+      "rank": 3,
+      "overhead_pct": 1.38,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "unicodekeys_lookup_unicode"
+    },
+    {
+      "rank": 4,
+      "overhead_pct": 1.37,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_PyType_Lookup"
+    },
+    {
+      "rank": 5,
+      "overhead_pct": 1.23,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_PyObject_Free"
+    },
+    {
+      "rank": 6,
+      "overhead_pct": 1.12,
+      "dso": "libc.so.6",
+      "symbol": "pthread_mutex_lock"
+    },
+    {
+      "rank": 7,
+      "overhead_pct": 0.9,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_PyObject_GenericGetAttrWithDict"
+    },
+    {
+      "rank": 8,
+      "overhead_pct": 0.82,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "tupledealloc"
+    },
+    {
+      "rank": 9,
+      "overhead_pct": 0.79,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "PyType_IsSubtype"
+    },
+    {
+      "rank": 10,
+      "overhead_pct": 0.76,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_Py_dict_lookup"
+    },
+    {
+      "rank": 11,
+      "overhead_pct": 0.71,
+      "dso": "libtorch_cpu.so",
+      "symbol": "c10::impl::OperatorEntry::lookup(c10::DispatchKeySet)"
+    },
+    {
+      "rank": 12,
+      "overhead_pct": 0.68,
+      "dso": "libc.so.6",
+      "symbol": "0x0000000000083e78"
+    },
+    {
+      "rank": 13,
+      "overhead_pct": 0.64,
+      "dso": "libc.so.6",
+      "symbol": "malloc"
+    },
+    {
+      "rank": 14,
+      "overhead_pct": 0.64,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "tuple_alloc"
+    },
+    {
+      "rank": 15,
+      "overhead_pct": 0.59,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_PyFrame_ClearExceptCode"
+    },
+    {
+      "rank": 16,
+      "overhead_pct": 0.58,
+      "dso": "ld-linux-aarch64.so.1",
+      "symbol": "0x00000000000127a0"
+    },
+    {
+      "rank": 17,
+      "overhead_pct": 0.54,
+      "dso": "libtorch_cpu.so",
+      "symbol": "torch::autograd::DifferentiableViewMeta::DifferentiableViewMeta(c10::TensorImpl*,"
+    },
+    {
+      "rank": 18,
+      "overhead_pct": 0.53,
+      "dso": "libtorch_python.so",
+      "symbol": "torch::autograd::THPVariable_getitem(_object*,"
+    },
+    {
+      "rank": 19,
+      "overhead_pct": 0.51,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "initialize_locals"
+    },
+    {
+      "rank": 20,
+      "overhead_pct": 0.5,
+      "dso": "libc.so.6",
+      "symbol": "0x0000000000083e70"
+    }
+  ],
+  "real_top20": [
+    {
+      "rank": 1,
+      "overhead_pct": 10.33,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_PyEval_EvalFrameDefault"
+    },
+    {
+      "rank": 2,
+      "overhead_pct": 2.06,
+      "dso": "[kernel.kallsyms]",
+      "symbol": "eventfd_write+0x214"
+    },
+    {
+      "rank": 3,
+      "overhead_pct": 2.04,
+      "dso": "libc.so.6",
+      "symbol": "pthread_mutex_lock"
+    },
+    {
+      "rank": 4,
+      "overhead_pct": 1.88,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "unicodekeys_lookup_unicode"
+    },
+    {
+      "rank": 5,
+      "overhead_pct": 1.56,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_PyType_Lookup"
+    },
+    {
+      "rank": 6,
+      "overhead_pct": 1.5,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_PyObject_Malloc"
+    },
+    {
+      "rank": 7,
+      "overhead_pct": 1.28,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_PyObject_GenericGetAttrWithDict"
+    },
+    {
+      "rank": 8,
+      "overhead_pct": 1.19,
+      "dso": "libc.so.6",
+      "symbol": "malloc"
+    },
+    {
+      "rank": 9,
+      "overhead_pct": 1.06,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_PyObject_Free"
+    },
+    {
+      "rank": 10,
+      "overhead_pct": 0.8,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_Py_dict_lookup"
+    },
+    {
+      "rank": 11,
+      "overhead_pct": 0.62,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "_PyFrame_ClearExceptCode"
+    },
+    {
+      "rank": 12,
+      "overhead_pct": 0.59,
+      "dso": "libc.so.6",
+      "symbol": "0x0000000000083e78"
+    },
+    {
+      "rank": 13,
+      "overhead_pct": 0.55,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "PyType_IsSubtype"
+    },
+    {
+      "rank": 14,
+      "overhead_pct": 0.52,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "initialize_locals"
+    },
+    {
+      "rank": 15,
+      "overhead_pct": 0.51,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "PyObject_GetAttr"
+    },
+    {
+      "rank": 16,
+      "overhead_pct": 0.49,
+      "dso": "libpython3.12.so.1.0",
+      "symbol": "tupledealloc"
+    },
+    {
+      "rank": 17,
+      "overhead_pct": 0.47,
+      "dso": "libtorch_cpu.so",
+      "symbol": "c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const"
+    },
+    {
+      "rank": 18,
+      "overhead_pct": 0.43,
+      "dso": "libc.so.6",
+      "symbol": "pthread_rwlock_rdlock"
+    },
+    {
+      "rank": 19,
+      "overhead_pct": 0.42,
+      "dso": "ld-linux-aarch64.so.1",
+      "symbol": "0x00000000000127a0"
+    },
+    {
+      "rank": 20,
+      "overhead_pct": 0.42,
+      "dso": "libc.so.6",
+      "symbol": "cfree"
+    }
+  ]
+}

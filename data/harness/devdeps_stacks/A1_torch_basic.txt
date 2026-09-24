@@ -1,0 +1,72 @@
+# step_id     : A1_torch_basic
+# title       : import torch（autoload=0）：版本 / backend / torch.npu 存在性 / torch.zeros(device='npu')
+# cwd         : /work
+# returncode  : 0
+# duration_s  : 1.64
+# env overrides: {}
+# ---- COMMAND (python -c) ----
+import json, os, sys
+import torch
+
+def safe(fn, *a, **kw):
+    try:
+        return fn(*a, **kw)
+    except BaseException as e:            # noqa: BLE001
+        return f"<{type(e).__name__}: {e}>"
+
+info = {
+    "python": sys.version.split()[0],
+    "torch.__version__": torch.__version__,
+    "torch.version.cuda": torch.version.cuda,
+    "torch.version.rocm": getattr(torch.version, "rocm", None),
+    "torch.version.hip": getattr(torch.version, "hip", None),
+    "torch.version.xpu": safe(lambda: torch.version.xpu),
+    "env.TORCH_DEVICE_BACKEND_AUTOLOAD": os.environ.get("TORCH_DEVICE_BACKEND_AUTOLOAD"),
+    "env.TORCH_DEVICE": os.environ.get("TORCH_DEVICE"),
+    "hasattr(torch,'npu')": hasattr(torch, "npu"),
+    "hasattr(torch,'cuda')": hasattr(torch, "cuda"),
+    "hasattr(torch,'xpu')": hasattr(torch, "xpu"),
+    "privateuse1_name": safe(torch._C._get_privateuse1_backend_name),
+    "torch_npu_in_sys_modules": [k for k in sys.modules if "npu" in k.lower()],
+    "cuda_is_available": safe(torch.cuda.is_available),
+    "cuda_device_count": safe(torch.cuda.device_count),
+    "torch.device('npu:0')": safe(lambda: str(torch.device("npu:0"))),
+    "torch.device('npu')": safe(lambda: str(torch.device("npu"))),
+    "torch.device('privateuseone:0')": safe(lambda: str(torch.device("privateuseone:0"))),
+    "torch.zeros(1, device='npu')": safe(lambda: str(torch.zeros(1, device="npu"))),
+    "torch.zeros(1, device='privateuseone')": safe(lambda: str(torch.zeros(1, device="privateuseone"))),
+    "torch.zeros(4, pin_memory=True).shape": safe(lambda: tuple(torch.zeros(4, pin_memory=True).shape)),
+    "torch.Tensor.npu exists": hasattr(torch.Tensor, "npu"),
+    "torch.cuda.Stream()": safe(lambda: str(torch.cuda.Stream())),
+}
+print(json.dumps(info, indent=2, ensure_ascii=False, default=str))
+# ---- STDOUT ----
+{
+  "python": "3.12.13",
+  "torch.__version__": "2.10.0+cpu",
+  "torch.version.cuda": null,
+  "torch.version.rocm": null,
+  "torch.version.hip": null,
+  "torch.version.xpu": null,
+  "env.TORCH_DEVICE_BACKEND_AUTOLOAD": "0",
+  "env.TORCH_DEVICE": null,
+  "hasattr(torch,'npu')": false,
+  "hasattr(torch,'cuda')": true,
+  "hasattr(torch,'xpu')": true,
+  "privateuse1_name": "privateuseone",
+  "torch_npu_in_sys_modules": [],
+  "cuda_is_available": false,
+  "cuda_device_count": 0,
+  "torch.device('npu:0')": "<RuntimeError: Expected one of cpu, cuda, ipu, xpu, mkldnn, opengl, opencl, ideep, hip, ve, fpga, maia, xla, lazy, vulkan, mps, meta, hpu, mtia, privateuseone device type at start of device string: npu>",
+  "torch.device('npu')": "<RuntimeError: Expected one of cpu, cuda, ipu, xpu, mkldnn, opengl, opencl, ideep, hip, ve, fpga, maia, xla, lazy, vulkan, mps, meta, hpu, mtia, privateuseone device type at start of device string: npu>",
+  "torch.device('privateuseone:0')": "privateuseone:0",
+  "torch.zeros(1, device='npu')": "<RuntimeError: Expected one of cpu, cuda, ipu, xpu, mkldnn, opengl, opencl, ideep, hip, ve, fpga, maia, xla, lazy, vulkan, mps, meta, hpu, mtia, privateuseone device type at start of device string: npu>",
+  "torch.zeros(1, device='privateuseone')": "<ModuleNotFoundError: No module named 'torch.privateuseone'>",
+  "torch.zeros(4, pin_memory=True).shape": "<RuntimeError: pin_memory=True requires a CUDA or other accelerator backend; no pinned memory allocator is available on this system.>",
+  "torch.Tensor.npu exists": false,
+  "torch.cuda.Stream()": "<RuntimeError: torch.cuda.Stream requires CUDA support>"
+}
+
+# ---- STDERR ----
+
+# ---- END ----

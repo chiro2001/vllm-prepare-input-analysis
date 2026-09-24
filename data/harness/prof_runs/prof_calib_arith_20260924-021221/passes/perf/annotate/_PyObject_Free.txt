@@ -1,0 +1,215 @@
+
+Sorted summary for file /usr/local/python3.12.13/lib/libpython3.12.so.1.0
+----------------------------------------------
+
+   27.97 obmalloc.c:1129
+   23.42 obmalloc.c:1029
+   18.05 obmalloc.c:1126
+   11.16 pycore_pystate.h:27
+    5.01 obmalloc.c:1827
+    4.30 obmalloc.c:1017
+    3.66 pycore_pystate.h:133
+    1.79 obmalloc.c:1846
+    1.60 obmalloc.c:1844
+    1.51 obmalloc.c:1808
+ Percent |	Source code & Disassembly of libpython3.12.so.1.0 for cycles:P (1113 samples, percent: local period)
+--------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3      Disassembly of section .text:
+         :
+         : 5      00000000001c87f0 <_PyObject_Free>:
+         : 6      _PyObject_Free():
+    1.79 :   1c87f0: cbz     x1, 1c88a8 <_PyObject_Free+0xb8> // obmalloc.c:1846
+    0.54 :   1c87f4: stp     x29, x30, [sp, #-48]! // obmalloc.c:1844
+         : 1845   _PyInterpreterState_GET():
+    0.36 :   1c87f8: mrs     x2, tpidr_el0
+         : 134    _PyObject_Free():
+    0.18 :   1c87fc: mov     x29, sp
+         : 1845   _PyInterpreterState_GET():
+    0.00 :   1c8800: adrp    x0, 542000 <PyImport_GetModule@@Base+0x2a08a0>
+    1.61 :   1c8804: ldr     x3, [x0, #3496] // pycore_pystate.h:133
+    0.00 :   1c8808: add     x0, x0, #0xda8
+    0.00 :   1c880c: blr     x3
+         : 137    _PyObject_Free():
+    1.07 :   1c8810: stp     x19, x20, [sp, #16] // obmalloc.c:1844
+         : 1845   _PyInterpreterState_GET():
+    0.53 :   1c8814: ldr     x2, [x2, x0] // pycore_pystate.h:133
+         : 134    _PyInterpreterState_Main():
+    0.00 :   1c8818: adrp    x20, 53f000 <initial+0x70150>
+    4.35 :   1c881c: ldr     x20, [x20, #3192] // pycore_pystate.h:27
+         : 29     _PyInterpreterState_GET():
+    1.52 :   1c8820: ldr     x19, [x2, #16] // pycore_pystate.h:133
+         : 134    _PyInterpreterState_Main():
+    6.81 :   1c8824: ldr     x0, [x20, #48] // pycore_pystate.h:27
+         : 28     has_own_state():
+    0.00 :   1c8828: cmp     x19, x0
+    0.00 :   1c882c: b.eq    1c8838 <_PyObject_Free+0x48>  // b.none
+    0.00 :   1c8830: ldr     x2, [x19, #1728]
+    0.00 :   1c8834: tbnz    w2, #5, 1c88d0 <_PyObject_Free+0xe0>
+         : 859    arena_map_get():
+    4.30 :   1c8838: lsr     x2, x1, #49 // obmalloc.c:1017
+    0.00 :   1c883c: add     x0, x19, #0xf88
+         : 1019   pymalloc_free():
+    0.00 :   1c8840: and     x3, x1, #0xffffffffffffc000
+         : 1796   arena_map_get():
+    0.00 :   1c8844: add     x2, x0, x2, lsl #3
+    0.35 :   1c8848: ldr     x2, [x2, #1096]
+    0.00 :   1c884c: cbz     x2, 1c88b8 <_PyObject_Free+0xc8>
+   23.42 :   1c8850: ubfx    x4, x1, #34, #15 // obmalloc.c:1029
+    0.00 :   1c8854: ldr     x4, [x2, x4, lsl #3]
+    0.00 :   1c8858: cbz     x4, 1c88b8 <_PyObject_Free+0xc8>
+         : 1032   arena_map_is_used():
+   18.05 :   1c885c: ubfx    x2, x1, #20, #14 // obmalloc.c:1126
+    0.00 :   1c8860: and     w5, w1, #0xfffff
+    0.00 :   1c8864: lsl     x2, x2, #3
+    0.00 :   1c8868: add     x6, x4, x2
+    0.00 :   1c886c: ldr     w2, [x4, x2]
+   14.26 :   1c8870: ldr     w4, [x6, #4] // obmalloc.c:1129
+    0.00 :   1c8874: cmp     w4, w5
+    0.00 :   1c8878: b.le    1c88ac <_PyObject_Free+0xbc>
+         : 1132   pymalloc_free():
+    1.51 :   1c887c: ldr     x2, [x3, #8] // obmalloc.c:1808
+    0.09 :   1c8880: str     x2, [x1]
+    0.00 :   1c8884: str     x1, [x3, #8]
+    0.00 :   1c8888: ldr     w1, [x3]
+    0.00 :   1c888c: sub     w1, w1, #0x1
+    0.09 :   1c8890: str     w1, [x3]
+    0.00 :   1c8894: cbz     x2, 1c8908 <_PyObject_Free+0x118>
+    5.01 :   1c8898: cbz     w1, 1c8928 <_PyObject_Free+0x138> // obmalloc.c:1827
+         : 1828   _PyObject_Free():
+    0.45 :   1c889c: ldp     x19, x20, [sp, #16]
+    0.00 :   1c88a0: ldp     x29, x30, [sp], #48
+    0.00 :   1c88a4: ret
+    0.00 :   1c88a8: ret
+         : 1860   arena_map_is_used():
+   13.71 :   1c88ac: cmp     w2, #0x0 // obmalloc.c:1129
+    0.00 :   1c88b0: ccmp    w2, w5, #0x0, ne        // ne = any
+    0.00 :   1c88b4: b.le    1c887c <_PyObject_Free+0x8c>
+         : 1132   _PyObject_Free():
+    0.00 :   1c88b8: mov     x0, x1
+    0.00 :   1c88bc: bl      10a480 <PyMem_RawFree@plt>
+    0.00 :   1c88c0: ldr     x0, [x19, #5064]
+    0.00 :   1c88c4: sub     x0, x0, #0x1
+    0.00 :   1c88c8: str     x0, [x19, #5064]
+    0.00 :   1c88cc: b       1c889c <_PyObject_Free+0xac>
+         : 1858   _PyRuntimeState_GetFinalizing():
+    0.00 :   1c88d0: add     x2, x20, #0x18
+    0.00 :   1c88d4: ldr     x3, [x2]
+         : 212    _Py_IsMainInterpreterFinalizing():
+    0.00 :   1c88d8: add     x2, x20, #0x7d0
+    0.00 :   1c88dc: cmp     x3, #0x0
+    0.00 :   1c88e0: add     x2, x2, #0x12, lsl #12
+         : 46     pymalloc_free():
+    0.00 :   1c88e4: and     x3, x1, #0xffffffffffffc000
+         : 1796   _PyInterpreterState_Main():
+    0.00 :   1c88e8: ccmp    x19, x2, #0x0, ne       // ne = any
+    0.00 :   1c88ec: csel    x19, x0, x2, ne // ne = any
+         : 29     arena_map_get():
+    0.00 :   1c88f0: lsr     x2, x1, #49
+    0.00 :   1c88f4: add     x0, x19, #0xf88
+    0.00 :   1c88f8: add     x2, x0, x2, lsl #3
+    0.00 :   1c88fc: ldr     x2, [x2, #1096]
+    0.00 :   1c8900: cbnz    x2, 1c8850 <_PyObject_Free+0x60>
+    0.00 :   1c8904: b       1c88b8 <_PyObject_Free+0xc8>
+         : 1023   insert_to_usedpool():
+    0.00 :   1c8908: ldr     w1, [x3, #36]
+    0.00 :   1c890c: lsl     w1, w1, #1
+    0.00 :   1c8910: ldr     x0, [x0, x1, lsl #3]
+    0.00 :   1c8914: ldr     x1, [x0, #24]
+    0.00 :   1c8918: stp     x0, x1, [x3, #16]
+    0.00 :   1c891c: str     x3, [x0, #24]
+    0.00 :   1c8920: str     x3, [x1, #16]
+         : 1612   pymalloc_free():
+    0.00 :   1c8924: b       1c889c <_PyObject_Free+0xac>
+         : 1822   insert_to_freepool():
+    0.00 :   1c8928: stp     x21, x22, [sp, #32]
+    0.00 :   1c892c: mov     w1, #0x30                       // #48
+    0.00 :   1c8930: ldr     w21, [x3, #32]
+    0.00 :   1c8934: ldr     x22, [x19, #4488]
+    0.00 :   1c8938: ldp     x5, x4, [x3, #16]
+    0.00 :   1c893c: umull   x21, w21, w1
+    0.00 :   1c8940: add     x2, x22, x21
+    0.00 :   1c8944: ldr     w1, [x2, #16]
+    0.00 :   1c8948: ldr     x6, [x2, #24]
+    0.00 :   1c894c: str     x4, [x5, #24]
+    0.00 :   1c8950: str     x5, [x4, #16]
+    0.00 :   1c8954: add     x4, x19, w1, uxtw #3
+    0.00 :   1c8958: str     x6, [x3, #16]
+    0.00 :   1c895c: str     x3, [x2, #24]
+    0.00 :   1c8960: ldr     x3, [x4, #4520]
+    0.00 :   1c8964: cmp     x2, x3
+    0.00 :   1c8968: b.eq    1c8a28 <_PyObject_Free+0x238>  // b.none
+    0.00 :   1c896c: ldr     w4, [x2, #20]
+    0.00 :   1c8970: add     w1, w1, #0x1
+    0.00 :   1c8974: str     w1, [x2, #16]
+    0.00 :   1c8978: cmp     w1, w4
+    0.00 :   1c897c: b.eq    1c89cc <_PyObject_Free+0x1dc>  // b.none
+    0.00 :   1c8980: cmp     w1, #0x1
+    0.00 :   1c8984: b.eq    1c8a54 <_PyObject_Free+0x264>  // b.none
+    0.00 :   1c8988: add     x1, x19, w1, uxtw #3
+    0.00 :   1c898c: ldr     x0, [x1, #4520]
+    0.00 :   1c8990: cbz     x0, 1c8a4c <_PyObject_Free+0x25c>
+    0.00 :   1c8994: cmp     x2, x3
+    0.00 :   1c8998: b.eq    1c8a44 <_PyObject_Free+0x254>  // b.none
+    0.00 :   1c899c: ldp     x4, x1, [x2, #32]
+    0.00 :   1c89a0: cbz     x1, 1c8a7c <_PyObject_Free+0x28c>
+    0.00 :   1c89a4: str     x4, [x1, #32]
+    0.00 :   1c89a8: ldr     x4, [x2, #32]
+    0.00 :   1c89ac: ldr     x0, [x3, #32]
+    0.00 :   1c89b0: str     x1, [x4, #40]
+    0.00 :   1c89b4: stp     x0, x3, [x2, #32]
+    0.00 :   1c89b8: cbz     x0, 1c89c0 <_PyObject_Free+0x1d0>
+    0.00 :   1c89bc: str     x2, [x0, #40]
+    0.00 :   1c89c0: ldp     x21, x22, [sp, #32]
+    0.00 :   1c89c4: str     x2, [x3, #32]
+    0.00 :   1c89c8: b       1c889c <_PyObject_Free+0xac>
+    0.00 :   1c89cc: ldr     x4, [x2, #32]
+    0.00 :   1c89d0: cbz     x4, 1c8980 <_PyObject_Free+0x190>
+    0.00 :   1c89d4: ldr     x3, [x2, #40]
+    0.00 :   1c89d8: cbz     x3, 1c8a84 <_PyObject_Free+0x294>
+    0.00 :   1c89dc: str     x4, [x3, #32]
+    0.00 :   1c89e0: ldr     x1, [x22, x21]
+    0.00 :   1c89e4: str     x3, [x4, #40]
+    0.00 :   1c89e8: ldr     x3, [x19, #4504]
+    0.00 :   1c89ec: str     x3, [x2, #32]
+    0.00 :   1c89f0: str     x2, [x19, #4504]
+    0.00 :   1c89f4: mov     w2, #0x0                        // #0
+    0.00 :   1c89f8: bl      1c85d0 <arena_map_mark_used>
+    0.00 :   1c89fc: ldr     x1, [x22, x21]
+    0.00 :   1c8a00: mov     x2, #0x100000                   // #1048576
+    0.00 :   1c8a04: ldr     x0, [x20, #360]
+    0.00 :   1c8a08: ldr     x3, [x20, #376]
+    0.00 :   1c8a0c: blr     x3
+    0.00 :   1c8a10: str     xzr, [x22, x21]
+    0.00 :   1c8a14: ldr     x0, [x19, #5040]
+    0.00 :   1c8a18: ldp     x21, x22, [sp, #32]
+    0.00 :   1c8a1c: sub     x0, x0, #0x1
+    0.00 :   1c8a20: str     x0, [x19, #5040]
+    0.00 :   1c8a24: b       1c889c <_PyObject_Free+0xac>
+    0.00 :   1c8a28: ldr     x5, [x2, #40]
+    0.00 :   1c8a2c: cbz     x5, 1c8a3c <_PyObject_Free+0x24c>
+    0.00 :   1c8a30: ldr     w6, [x5, #16]
+    0.00 :   1c8a34: cmp     w1, w6
+    0.00 :   1c8a38: csel    x5, x5, xzr, eq // eq = none
+    0.00 :   1c8a3c: str     x5, [x4, #4520]
+    0.00 :   1c8a40: b       1c896c <_PyObject_Free+0x17c>
+    0.00 :   1c8a44: ldp     x21, x22, [sp, #32]
+    0.00 :   1c8a48: b       1c889c <_PyObject_Free+0xac>
+    0.00 :   1c8a4c: str     x2, [x1, #4520]
+    0.00 :   1c8a50: b       1c8994 <_PyObject_Free+0x1a4>
+    0.00 :   1c8a54: ldr     x0, [x19, #4512]
+    0.00 :   1c8a58: stp     x0, xzr, [x2, #32]
+    0.00 :   1c8a5c: cbz     x0, 1c8a64 <_PyObject_Free+0x274>
+    0.00 :   1c8a60: str     x2, [x0, #40]
+    0.00 :   1c8a64: ldr     x0, [x19, #4528]
+    0.00 :   1c8a68: str     x2, [x19, #4512]
+    0.00 :   1c8a6c: cbnz    x0, 1c8a44 <_PyObject_Free+0x254>
+    0.00 :   1c8a70: ldp     x21, x22, [sp, #32]
+    0.00 :   1c8a74: str     x2, [x19, #4528]
+    0.00 :   1c8a78: b       1c889c <_PyObject_Free+0xac>
+    0.00 :   1c8a7c: str     x4, [x19, #4512]
+    0.00 :   1c8a80: b       1c89ac <_PyObject_Free+0x1bc>
+    0.00 :   1c8a84: str     x4, [x19, #4512]
+    0.00 :   1c8a88: b       1c89e0 <_PyObject_Free+0x1f0>

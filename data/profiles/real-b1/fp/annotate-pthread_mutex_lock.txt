@@ -1,0 +1,183 @@
+
+Sorted summary for file /usr/lib64/libc.so.6
+----------------------------------------------
+
+   40.79 libc.so.6[8261c]
+   18.08 libc.so.6[825b8]
+   16.42 libc.so.6[82614]
+    7.16 libc.so.6[825a4]
+    3.73 libc.so.6[826e8]
+    2.65 libc.so.6[826e0]
+    2.32 libc.so.6[82628]
+    1.99 libc.so.6[825c0]
+    1.42 libc.so.6[8262c]
+    1.14 libc.so.6[82644]
+    0.60 libc.so.6[82680]
+    0.57 libc.so.6[825d4]
+    0.57 libc.so.6[825a8]
+    0.57 libc.so.6[82670]
+    0.55 libc.so.6[826a0]
+ Percent |	Source code & Disassembly of libc.so.6 for cycles (348 samples, percent: local period)
+------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3     Disassembly of section .text:
+         :
+         : 5     00000000000825a4 <__pthread_mutex_lock@GLIBC_2.17>:
+    7.16 :   825a4:  add     x3, x0, #0x10 // libc.so.6[825a4]
+    0.57 :   825a8:  ldr     w2, [x3] // libc.so.6[825a8]
+    0.00 :   825ac:  mov     w1, #0x17f                      // #383
+    0.00 :   825b0:  and     w1, w2, w1
+    0.00 :   825b4:  nop
+   18.08 :   825b8:  tst     w2, #0x7c // libc.so.6[825b8]
+    0.00 :   825bc:  b.ne    8265c <__pthread_mutex_lock@GLIBC_2.17+0xb8>  // b.any
+    1.99 :   825c0:  stp     x29, x30, [sp, #-32]! // libc.so.6[825c0]
+    0.00 :   825c4:  mov     x29, sp
+    0.00 :   825c8:  stp     x19, x20, [sp, #16]
+    0.00 :   825cc:  mov     x19, x0
+    0.00 :   825d0:  cbnz    w1, 82660 <__pthread_mutex_lock@GLIBC_2.17+0xbc>
+    0.57 :   825d4:  mrs     x20, tpidr_el0 // libc.so.6[825d4]
+    0.00 :   825d8:  ldr     w0, [x3]
+    0.00 :   825dc:  and     w1, w0, #0x80
+    0.00 :   825e0:  tbnz    w0, #7, 82608 <__pthread_mutex_lock@GLIBC_2.17+0x64>
+    0.00 :   825e4:  adrp    x0, 1a7000 <re_syntax_options@@GLIBC_2.17+0x258>
+    0.00 :   825e8:  ldrsb   w0, [x0, #2024]
+    0.00 :   825ec:  cbz     w0, 82608 <__pthread_mutex_lock@GLIBC_2.17+0x64>
+    0.00 :   825f0:  ldr     w0, [x19]
+    0.00 :   825f4:  cbnz    w0, 82608 <__pthread_mutex_lock@GLIBC_2.17+0x64>
+    0.00 :   825f8:  mov     w0, #0x1                        // #1
+    0.00 :   825fc:  sub     x20, x20, #0x740
+    0.00 :   82600:  str     w0, [x19]
+    0.00 :   82604:  b       82628 <__pthread_mutex_lock@GLIBC_2.17+0x84>
+    0.29 :   82608:  mov     w0, #0x1                        // #1
+    0.00 :   8260c:  ldaxr   w2, [x19]
+    0.00 :   82610:  cbnz    w2, 8261c <__pthread_mutex_lock@GLIBC_2.17+0x78>
+   16.42 :   82614:  stxr    w3, w0, [x19] // libc.so.6[82614]
+    0.00 :   82618:  cbnz    w3, 8260c <__pthread_mutex_lock@GLIBC_2.17+0x68>
+   40.79 :   8261c:  cmp     w2, #0x0 // libc.so.6[8261c]
+    0.00 :   82620:  b.ne    8264c <__pthread_mutex_lock@GLIBC_2.17+0xa8>  // b.any
+    0.00 :   82624:  sub     x20, x20, #0x740
+    2.32 :   82628:  ldr     w0, [x19, #12] // libc.so.6[82628]
+    1.42 :   8262c:  ldr     w1, [x20, #208] // libc.so.6[8262c]
+    0.00 :   82630:  add     w0, w0, #0x1
+    0.00 :   82634:  stp     w1, w0, [x19, #8]
+    0.00 :   82638:  nop
+    0.00 :   8263c:  mov     w0, #0x0                        // #0
+    0.29 :   82640:  ldp     x19, x20, [sp, #16]
+    1.14 :   82644:  ldp     x29, x30, [sp], #32 // libc.so.6[82644]
+    0.00 :   82648:  ret
+    0.00 :   8264c:  sub     x20, x20, #0x740
+    0.00 :   82650:  mov     x0, x19
+    0.00 :   82654:  bl      7ca30 <__lll_lock_wait_private@@GLIBC_PRIVATE+0x70>
+    0.00 :   82658:  b       82628 <__pthread_mutex_lock@GLIBC_2.17+0x84>
+    0.00 :   8265c:  b       81f80 <__pthread_mutex_init@GLIBC_2.17+0x220>
+    0.00 :   82660:  ldr     w0, [x3]
+    0.00 :   82664:  and     w0, w0, #0x7f
+    0.00 :   82668:  cmp     w0, #0x1
+    0.00 :   8266c:  b.ne    826fc <__pthread_mutex_lock@GLIBC_2.17+0x158>  // b.any
+    0.57 :   82670:  mrs     x20, tpidr_el0 // libc.so.6[82670]
+    0.00 :   82674:  ldr     w2, [x19, #8]
+    0.00 :   82678:  sub     x20, x20, #0x740
+    0.00 :   8267c:  ldr     w1, [x20, #208]
+    0.60 :   82680:  cmp     w2, w1 // libc.so.6[82680]
+    0.00 :   82684:  b.ne    826a0 <__pthread_mutex_lock@GLIBC_2.17+0xfc>  // b.any
+    0.00 :   82688:  ldr     w0, [x19, #4]
+    0.00 :   8268c:  cmn     w0, #0x1
+    0.00 :   82690:  b.eq    82730 <__pthread_mutex_lock@GLIBC_2.17+0x18c>  // b.none
+    0.00 :   82694:  add     w0, w0, #0x1
+    0.00 :   82698:  str     w0, [x19, #4]
+    0.00 :   8269c:  b       8263c <__pthread_mutex_lock@GLIBC_2.17+0x98>
+    0.55 :   826a0:  ldr     w2, [x3] // libc.so.6[826a0]
+    0.00 :   826a4:  and     w1, w2, #0x80
+    0.00 :   826a8:  tbnz    w2, #7, 826d4 <__pthread_mutex_lock@GLIBC_2.17+0x130>
+    0.28 :   826ac:  adrp    x2, 1a7000 <re_syntax_options@@GLIBC_2.17+0x258>
+    0.00 :   826b0:  ldrsb   w2, [x2, #2024]
+    0.00 :   826b4:  cbz     w2, 826d4 <__pthread_mutex_lock@GLIBC_2.17+0x130>
+    0.00 :   826b8:  ldr     w2, [x19]
+    0.00 :   826bc:  cbnz    w2, 826d4 <__pthread_mutex_lock@GLIBC_2.17+0x130>
+    0.00 :   826c0:  str     w0, [x19]
+    0.00 :   826c4:  nop
+    0.00 :   826c8:  mov     w0, #0x1                        // #1
+    0.00 :   826cc:  str     w0, [x19, #4]
+    0.00 :   826d0:  b       82628 <__pthread_mutex_lock@GLIBC_2.17+0x84>
+    0.29 :   826d4:  mov     w0, #0x1                        // #1
+    0.29 :   826d8:  ldaxr   w2, [x19]
+    0.00 :   826dc:  cbnz    w2, 826e8 <__pthread_mutex_lock@GLIBC_2.17+0x144>
+    2.65 :   826e0:  stxr    w3, w0, [x19] // libc.so.6[826e0]
+    0.00 :   826e4:  cbnz    w3, 826d8 <__pthread_mutex_lock@GLIBC_2.17+0x134>
+    3.73 :   826e8:  cmp     w2, #0x0 // libc.so.6[826e8]
+    0.00 :   826ec:  b.eq    826c8 <__pthread_mutex_lock@GLIBC_2.17+0x124>  // b.none
+    0.00 :   826f0:  mov     x0, x19
+    0.00 :   826f4:  bl      7ca30 <__lll_lock_wait_private@@GLIBC_PRIVATE+0x70>
+    0.00 :   826f8:  b       826c8 <__pthread_mutex_lock@GLIBC_2.17+0x124>
+    0.00 :   826fc:  ldr     w0, [x3]
+    0.00 :   82700:  and     w0, w0, #0x7f
+    0.00 :   82704:  cmp     w0, #0x3
+    0.00 :   82708:  b.ne    82738 <__pthread_mutex_lock@GLIBC_2.17+0x194>  // b.any
+    0.00 :   8270c:  mov     w0, #0x1                        // #1
+    0.00 :   82710:  ldaxr   w1, [x19]
+    0.00 :   82714:  cbnz    w1, 82720 <__pthread_mutex_lock@GLIBC_2.17+0x17c>
+    0.00 :   82718:  stxr    w2, w0, [x19]
+    0.00 :   8271c:  cbnz    w2, 82710 <__pthread_mutex_lock@GLIBC_2.17+0x16c>
+    0.00 :   82720:  cmp     w1, #0x0
+    0.00 :   82724:  b.ne    82758 <__pthread_mutex_lock@GLIBC_2.17+0x1b4>  // b.any
+    0.00 :   82728:  mrs     x20, tpidr_el0
+    0.00 :   8272c:  b       82624 <__pthread_mutex_lock@GLIBC_2.17+0x80>
+    0.00 :   82730:  mov     w0, #0xb                        // #11
+    0.00 :   82734:  b       82640 <__pthread_mutex_lock@GLIBC_2.17+0x9c>
+    0.00 :   82738:  mrs     x20, tpidr_el0
+    0.00 :   8273c:  ldr     w0, [x19, #8]
+    0.00 :   82740:  sub     x1, x20, #0x740
+    0.00 :   82744:  ldr     w1, [x1, #208]
+    0.00 :   82748:  cmp     w1, w0
+    0.00 :   8274c:  b.ne    825d8 <__pthread_mutex_lock@GLIBC_2.17+0x34>  // b.any
+    0.00 :   82750:  mov     w0, #0x23                       // #35
+    0.00 :   82754:  b       82640 <__pthread_mutex_lock@GLIBC_2.17+0x9c>
+    0.00 :   82758:  ldr     w20, [x19, #20]
+    0.00 :   8275c:  adrp    x1, 1a0000 <_IO_wfile_jumps@@GLIBC_2.17+0xbf0>
+    0.00 :   82760:  add     w20, w20, #0x5
+    0.00 :   82764:  ldrsh   w1, [x1, #168]
+    0.00 :   82768:  lsl     w20, w20, #1
+    0.00 :   8276c:  cmp     w20, w1
+    0.00 :   82770:  csel    w20, w20, w1, le
+    0.00 :   82774:  cmp     w20, #0x1
+    0.00 :   82778:  b.le    8280c <__pthread_mutex_lock@GLIBC_2.17+0x268>
+    0.00 :   8277c:  mov     w1, w0
+    0.00 :   82780:  ldr     w2, [x19]
+    0.00 :   82784:  cbnz    w2, 827c4 <__pthread_mutex_lock@GLIBC_2.17+0x220>
+    0.00 :   82788:  ldaxr   w2, [x19]
+    0.00 :   8278c:  cbnz    w2, 82798 <__pthread_mutex_lock@GLIBC_2.17+0x1f4>
+    0.00 :   82790:  stxr    w4, w1, [x19]
+    0.00 :   82794:  cbnz    w4, 82788 <__pthread_mutex_lock@GLIBC_2.17+0x1e4>
+    0.00 :   82798:  cmp     w2, #0x0
+    0.00 :   8279c:  b.ne    827c4 <__pthread_mutex_lock@GLIBC_2.17+0x220>  // b.any
+    0.00 :   827a0:  ldr     w1, [x19, #20]
+    0.00 :   827a4:  mov     w2, #0x8                        // #8
+    0.00 :   827a8:  mrs     x20, tpidr_el0
+    0.00 :   827ac:  sub     w0, w0, w1
+    0.00 :   827b0:  sub     x20, x20, #0x740
+    0.00 :   827b4:  sdiv    w0, w0, w2
+    0.00 :   827b8:  add     w0, w0, w1
+    0.00 :   827bc:  str     w0, [x19, #20]
+    0.00 :   827c0:  b       82628 <__pthread_mutex_lock@GLIBC_2.17+0x84>
+    0.00 :   827c4:  add     w0, w0, #0x1
+    0.00 :   827c8:  cmp     w20, w0
+    0.00 :   827cc:  b.ne    82780 <__pthread_mutex_lock@GLIBC_2.17+0x1dc>  // b.any
+    0.00 :   827d0:  mov     w0, #0x1                        // #1
+    0.00 :   827d4:  ldaxr   w1, [x19]
+    0.00 :   827d8:  cbnz    w1, 827e4 <__pthread_mutex_lock@GLIBC_2.17+0x240>
+    0.00 :   827dc:  stxr    w2, w0, [x19]
+    0.00 :   827e0:  cbnz    w2, 827d4 <__pthread_mutex_lock@GLIBC_2.17+0x230>
+    0.00 :   827e4:  cmp     w1, #0x0
+    0.00 :   827e8:  b.ne    827f4 <__pthread_mutex_lock@GLIBC_2.17+0x250>  // b.any
+    0.00 :   827ec:  mov     w0, w20
+    0.00 :   827f0:  b       827a0 <__pthread_mutex_lock@GLIBC_2.17+0x1fc>
+    0.00 :   827f4:  ldr     w1, [x3]
+    0.00 :   827f8:  mov     x0, x19
+    0.00 :   827fc:  and     w1, w1, #0x80
+    0.00 :   82800:  bl      7ca30 <__lll_lock_wait_private@@GLIBC_PRIVATE+0x70>
+    0.00 :   82804:  mov     w0, w20
+    0.00 :   82808:  b       827a0 <__pthread_mutex_lock@GLIBC_2.17+0x1fc>
+    0.00 :   8280c:  mov     w20, w0
+    0.00 :   82810:  b       827d0 <__pthread_mutex_lock@GLIBC_2.17+0x22c>

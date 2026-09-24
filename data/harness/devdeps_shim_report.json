@@ -1,0 +1,25 @@
+{
+  "installed": true,
+  "device": "cpu",
+  "pin_memory_available": false,
+  "calls": {
+    "npu.synchronize": 1,
+    "npu.empty_cache": 1,
+    "triton.get_current_target": 1,
+    "pin_memory->False:zeros": 3,
+    "device.map_npu_to_cpu": 2,
+    "CpuGpuBuffer.copy_to_gpu": 2,
+    "Tensor.npu": 1,
+    "Tensor.to(npu)": 2,
+    "device.map_npu_to_cpu_str": 2,
+    "npu.stream": 1,
+    "Event.record": 1,
+    "Event.synchronize": 1,
+    "Stream.synchronize": 1
+  },
+  "degraded_copy_bytes": {
+    "copy_to_gpu": 4352,
+    "to_npu": 32
+  },
+  "warnings": []
+}

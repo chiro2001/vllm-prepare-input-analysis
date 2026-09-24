@@ -1,0 +1,540 @@
+{
+  "generated_utc": "2026-09-23T17:52:05Z",
+  "host": {
+    "uname": [
+      "Linux host22 6.6.0-159.4.3.154.oe2403sp4.aarch64 #1 SMP Mon Jun 29 00:38:31 CST 2026 aarch64 aarch64 aarch64 GNU/Linux"
+    ],
+    "hostname": [
+      "host22"
+    ],
+    "perf_version": [
+      "perf version 6.6.0-159.4.13.167.oe2403sp4.aarch64"
+    ],
+    "paranoid": [
+      "2"
+    ],
+    "nproc": [
+      "640"
+    ],
+    "cpufreq_governor": [
+      "performance"
+    ],
+    "msprof_residue": [
+      "NONE"
+    ],
+    "perf_residue": [
+      "NONE"
+    ]
+  },
+  "cpus": {
+    "slice": "122-157",
+    "pin_cpu": 122,
+    "list": [
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157
+    ]
+  },
+  "artifacts": {
+    "probe_load_bin": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/probe_load",
+    "perf_c_data": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-c.data",
+    "perf_py_data": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/perf-py.data"
+  },
+  "checks": {
+    "build_probe_load": {
+      "ok": true,
+      "binary": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/toolchain-qualification/probe_load",
+      "sha256": "afd4907a694a3633a77ee73cdd03b818b659c2626692062ae5a0351b2db337b3"
+    },
+    "perf_stat_basic": {
+      "ok": true,
+      "counters": {
+        "cycles": {
+          "value": 7252159710.0,
+          "raw": "7,252,159,710",
+          "enabled_pct": null
+        },
+        "instructions": {
+          "value": 13465579081.0,
+          "raw": "13,465,579,081",
+          "enabled_pct": null
+        },
+        "branches": {
+          "value": 1535281633.0,
+          "raw": "1,535,281,633",
+          "enabled_pct": null
+        },
+        "branch-misses": {
+          "value": 80374997.0,
+          "raw": "80,374,997",
+          "enabled_pct": null
+        },
+        "cycles:u": {
+          "value": 7235316568.0,
+          "raw": "7,235,316,568",
+          "enabled_pct": null
+        },
+        "cycles:k": {
+          "value": 16843142.0,
+          "raw": "16,843,142",
+          "enabled_pct": null
+        }
+      },
+      "ipc_from_stat": 1.8568
+    },
+    "perf_stat_multiplex_event_availability": {
+      "requested": [
+        "cycles",
+        "instructions",
+        "branches",
+        "branch-misses",
+        "L1-dcache-loads",
+        "L1-dcache-load-misses",
+        "L1-dcache-stores",
+        "L1-icache-loads",
+        "L1-icache-load-misses",
+        "dTLB-loads",
+        "dTLB-load-misses",
+        "iTLB-loads",
+        "iTLB-load-misses",
+        "cache-references",
+        "cache-misses",
+        "bus-cycles",
+        "ref-cycles",
+        "stalled-cycles-frontend",
+        "stalled-cycles-backend",
+        "cpu-clock",
+        "task-clock",
+        "context-switches",
+        "page-faults"
+      ],
+      "used": [
+        "instructions",
+        "branch-misses",
+        "L1-dcache-loads",
+        "L1-dcache-load-misses",
+        "L1-icache-loads",
+        "L1-icache-load-misses",
+        "dTLB-loads",
+        "dTLB-load-misses",
+        "iTLB-loads"
+      ],
+      "dropped_not_advertised": [
+        "cycles",
+        "branches",
+        "L1-dcache-stores",
+        "bus-cycles",
+        "ref-cycles"
+      ],
+      "n_supported_seen": 3391
+    },
+    "perf_stat_multiplex": {
+      "ok": true,
+      "n_requested": 9,
+      "n_reported": 9,
+      "enabled_pct": {
+        "instructions": 88.81,
+        "branch-misses": 88.81,
+        "L1-dcache-loads": 88.81,
+        "L1-dcache-load-misses": 88.81,
+        "L1-icache-loads": 88.8,
+        "L1-icache-load-misses": 88.91,
+        "dTLB-loads": 89.07,
+        "dTLB-load-misses": 89.08,
+        "iTLB-loads": 88.91
+      },
+      "min_enabled_pct": 88.8,
+      "note": "enabled_pct \u5c31\u662f time_running/time_enabled\uff0cperf \u7528 (xx.xx%) \u6807\u6ce8"
+    },
+    "perf_record_c": {
+      "ok": true,
+      "data_bytes": 729196,
+      "report_top": [
+        {
+          "overhead_pct": 56.1,
+          "comm": "probe_load",
+          "dso": "probe_load",
+          "symbol": "probe_hot_branch"
+        },
+        {
+          "overhead_pct": 32.78,
+          "comm": "probe_load",
+          "dso": "probe_load",
+          "symbol": "probe_hot_pointer_chase"
+        },
+        {
+          "overhead_pct": 10.94,
+          "comm": "probe_load",
+          "dso": "probe_load",
+          "symbol": "probe_hot_fp"
+        }
+      ],
+      "report_nonempty": true,
+      "annotate_ok": true,
+      "annotate_source_lines": 22,
+      "annotate_instruction_lines": 22,
+      "annotation_toolchain": [
+        "objdump    /usr/bin/objdump",
+        "addr2line  /usr/bin/addr2line",
+        "nm         /usr/bin/nm",
+        "readelf    /usr/bin/readelf",
+        "gdb        MISSING"
+      ],
+      "script_lines": 40,
+      "header_has_cmdline": true
+    },
+    "perf_record_python": {
+      "ok": true,
+      "data_bytes": 99676960,
+      "report_top": [
+        {
+          "overhead_pct": 35.29,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "_PyEval_EvalFrameDefault"
+        },
+        {
+          "overhead_pct": 14.88,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "PyObject_Malloc"
+        },
+        {
+          "overhead_pct": 2.75,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "PyLong_FromLong"
+        },
+        {
+          "overhead_pct": 2.28,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x0000000000177180"
+        },
+        {
+          "overhead_pct": 2.09,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001476b4"
+        },
+        {
+          "overhead_pct": 1.86,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "_PyLong_New"
+        },
+        {
+          "overhead_pct": 1.59,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001476c0"
+        },
+        {
+          "overhead_pct": 1.03,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001bd844"
+        },
+        {
+          "overhead_pct": 0.9,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x000000000017719c"
+        },
+        {
+          "overhead_pct": 0.9,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001476a0"
+        },
+        {
+          "overhead_pct": 0.8,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001869c8"
+        },
+        {
+          "overhead_pct": 0.76,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001ab500"
+        },
+        {
+          "overhead_pct": 0.76,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001476e0"
+        },
+        {
+          "overhead_pct": 0.75,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001b9960"
+        },
+        {
+          "overhead_pct": 0.63,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001a1cb4"
+        },
+        {
+          "overhead_pct": 0.6,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001869cc"
+        },
+        {
+          "overhead_pct": 0.54,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001ab4f8"
+        },
+        {
+          "overhead_pct": 0.53,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001b8d58"
+        },
+        {
+          "overhead_pct": 0.53,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001476e8"
+        },
+        {
+          "overhead_pct": 0.52,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "PyMem_Realloc"
+        },
+        {
+          "overhead_pct": 0.5,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x000000000014767c"
+        },
+        {
+          "overhead_pct": 0.46,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001b90dc"
+        },
+        {
+          "overhead_pct": 0.43,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x00000000001ab4d4"
+        },
+        {
+          "overhead_pct": 0.43,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "PyObject_GC_Del"
+        },
+        {
+          "overhead_pct": 0.43,
+          "comm": "python3",
+          "dso": "libpython3.11.so.1.0",
+          "symbol": "0x0000000000153200"
+        }
+      ],
+      "python_frames": [
+        "_PyEval_EvalFrameDefault",
+        "PyObject_Malloc",
+        "PyLong_FromLong",
+        "_PyLong_New",
+        "PyMem_Realloc",
+        "PyObject_GC_Del"
+      ],
+      "script_lines": 60
+    },
+    "perf_record_pid": {
+      "ok": true,
+      "target_pid": 3965468,
+      "report_top": [
+        {
+          "overhead_pct": 59.28,
+          "comm": "probe_load",
+          "dso": "probe_load",
+          "symbol": "probe_hot_branch"
+        },
+        {
+          "overhead_pct": 32.85,
+          "comm": "probe_load",
+          "dso": "probe_load",
+          "symbol": "probe_hot_pointer_chase"
+        },
+        {
+          "overhead_pct": 7.87,
+          "comm": "probe_load",
+          "dso": "probe_load",
+          "symbol": "probe_hot_fp"
+        }
+      ]
+    },
+    "libkperfx_mux": {
+      "ok": true,
+      "requested_events": 16,
+      "hw_group_limit": 8,
+      "instances": 2.0,
+      "time_enabled": 3002481000.0,
+      "time_running": 1501240500.0,
+      "confidence": 0.5,
+      "running_over_enabled": 0.5,
+      "useronly_forced": false,
+      "zero_delta_events": [
+        "LD_RETIRED",
+        "ST_RETIRED"
+      ],
+      "note": "confidence == time_running/time_enabled == 8/16 for 16 events on an 8-counter PMU; this is the independent cross-check of perf's (xx.xx%) enabled column."
+    },
+    "cpu_slice_idle_before": {
+      "cpus": "122-157",
+      "sample_s": 2.0,
+      "per_cpu_busy_pct": {
+        "122": 0.0,
+        "123": 0.0,
+        "124": 0.0,
+        "125": 0.0,
+        "126": 0.0,
+        "127": 0.0,
+        "128": 0.0,
+        "129": 0.0,
+        "130": 0.0,
+        "131": 0.0,
+        "132": 0.0,
+        "133": 0.0,
+        "134": 0.0,
+        "135": 0.0,
+        "136": 0.0,
+        "137": 0.0,
+        "138": 0.0,
+        "139": 0.0,
+        "140": 0.0,
+        "141": 0.0,
+        "142": 0.0,
+        "143": 0.0,
+        "144": 0.0,
+        "145": 0.0,
+        "146": 0.0,
+        "147": 2.05,
+        "148": 0.0,
+        "149": 0.0,
+        "150": 0.0,
+        "151": 1.49,
+        "152": 0.0,
+        "153": 0.0,
+        "154": 100.0,
+        "155": 0.0,
+        "156": 0.0,
+        "157": 0.0
+      },
+      "max_busy_pct": 100.0,
+      "mean_busy_pct": 2.88
+    },
+    "cpu_slice_during_synthetic_load": {
+      "cpus": "122-157",
+      "sample_s": 2.0,
+      "per_cpu_busy_pct": {
+        "122": 0.5,
+        "123": 0.0,
+        "124": 100.0,
+        "125": 0.0,
+        "126": 100.0,
+        "127": 0.0,
+        "128": 100.0,
+        "129": 0.0,
+        "130": 100.0,
+        "131": 0.0,
+        "132": 100.0,
+        "133": 0.0,
+        "134": 99.5,
+        "135": 0.0,
+        "136": 0.0,
+        "137": 100.0,
+        "138": 0.0,
+        "139": 100.0,
+        "140": 0.0,
+        "141": 0.0,
+        "142": 0.0,
+        "143": 0.0,
+        "144": 0.0,
+        "145": 0.0,
+        "146": 0.0,
+        "147": 1.55,
+        "148": 0.0,
+        "149": 0.0,
+        "150": 0.0,
+        "151": 1.5,
+        "152": 0.0,
+        "153": 0.0,
+        "154": 98.98,
+        "155": 0.0,
+        "156": 0.0,
+        "157": 0.0
+      },
+      "max_busy_pct": 100.0,
+      "mean_busy_pct": 25.06
+    }
+  },
+  "verdicts": {
+    "perf_stat": "PASS",
+    "perf_multiplex_running_ratio": "PASS",
+    "perf_record_fp_c": "PASS",
+    "perf_annotate": "PASS",
+    "perf_script": "PASS",
+    "perf_record_dwarf_python": "PASS",
+    "perf_record_pid": "PASS",
+    "libkperfx_multiplex": "PASS"
+  },
+  "raw_logs": {
+    "build": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/01-build-probe-load.log",
+    "stat_basic": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/02-perf-stat-basic.log",
+    "stat_mux": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/03-perf-stat-multiplex.log",
+    "record_c": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/04-perf-record-c.log",
+    "report_c": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/05-perf-report-c.log",
+    "header_c": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/06-perf-header-c.log",
+    "script_c": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/07-perf-script-c.log",
+    "annotate_c": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/08-perf-annotate-c.log",
+    "tools": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/08b-annotation-toolchain.log",
+    "record_py": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/09-perf-record-py.log",
+    "report_py": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/10-perf-report-py.log",
+    "script_py": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/11-perf-script-py.log",
+    "record_pid": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/12-perf-record-pid.log",
+    "report_pid": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/13-perf-report-pid.log",
+    "kperfx_mux": "/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/toolchain/raw/14-kperfx-multiplex.log"
+  }
+}

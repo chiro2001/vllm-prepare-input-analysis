@@ -1,0 +1,6 @@
+[ERROR inferno::flamegraph] No stack counts found
+Error: Custom { kind: InvalidData, error: "No stack counts found" }
+[perf_capture.sh] ok: tid=93128 samples=0 unknown=100.00% py_frames=0
+[perf_capture.sh] outdir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp
+[perf_capture.sh] ok: tid=93128 samples=15026 unknown=1.24% py_frames=1086
+[perf_capture.sh] outdir=/home/REMOTE_USER/projects/vllm/prepare-input-phase/data/profiles/perf-selftest-20260923T180711Z/fp

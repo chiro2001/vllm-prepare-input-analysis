@@ -1,0 +1,19 @@
+{
+ "description": "worker forward producer \u4e3b\u7ebf\u7a0b\u7684 top-down L1 \u56db\u6876 + IPC\u3002",
+ "tier": "historical-measured",
+ "scope": "exact_worker_main_tid\uff08perf stat -t <worker main TID>\uff09",
+ "definition": "920B_topdown.txt: frontend=fetch_bubble/(6*cycles); bad_spec=(inst_spec-inst_retired)/(6*cycles); retiring=inst_retired/(6*cycle); backend=100-\u5176\u4f59\u4e09\u6876",
+ "confidence": {
+  "multiplexing": "\u65e0\u3002a3-22 \u4e0a 182 \u4e2a topdown-l1 raw.csv\uff0843 \u4e2a run\u3001724 \u884c\u4e8b\u4ef6\uff09\u5168\u90e8 percent_enabled=100.00\uff1bperf stat ipc/software \u7684 3 \u4e2a\u6709\u6548 run \u540c\u6837 100.00\u3002",
+  "time_enabled_s": "topdown \u7a97\u53e3 4.48\u201324.65 s\uff08\u5747\u503c 19.9 s\uff09"
+ },
+ "sources": [
+  "reports/topdown-campaign/topdown-l1-windows.csv\uff08362 \u4e2a\u7a97\u53e3\uff09",
+  "reports/topdown-campaign/per-config-rank.csv",
+  "reports/mode-campaign-815/per-config.csv"
+ ],
+ "caveats": [
+  "graph+MTP-on \u81c2\u7684\u56db\u6876\u88ab\u4e0b\u6e38\u6d41 event \u7684\u5fd9\u8f6e\u8be2\u6c61\u67d3\uff08\u89c1 MTP_PREPARE_INPUT_SPIN.md \u00a78.2/8.3\uff09\uff0c\u4e0d\u80fd\u76f4\u63a5\u8bfb\u4f5c CPU \u5de5\u4f5c\u753b\u50cf\u3002",
+  "\u5168\u90e8\u4e3a graph(FULL_DECODE_ONLY) \u4e0e eager \u4e24\u79cd\u6267\u884c\u6a21\u5f0f\uff0c\u65e0 chunked-prefill/\u9ad8\u5e76\u53d1\u7ef4\u5ea6\u7684 topdown\u3002"
+ ]
+}

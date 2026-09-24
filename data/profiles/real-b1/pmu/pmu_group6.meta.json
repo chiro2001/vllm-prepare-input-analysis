@@ -1,0 +1,119 @@
+{
+  "schema": "pi-pmu-group-meta-v1",
+  "tag": "real-b1",
+  "group": 6,
+  "preset": "920b_topdown_full_6",
+  "events": [
+    "ports_2",
+    "ports_3",
+    "ports_4",
+    "ports_5",
+    "ports_6",
+    "ld_cancel_dtlb_miss",
+    "ld_cancel_misalign",
+    "ld_cancel_lq_full"
+  ],
+  "tid": 704908,
+  "pid": 704908,
+  "status": "ok",
+  "attempts": 1,
+  "rc": 0,
+  "timed_out": false,
+  "error": null,
+  "outer_wall_s": 3.1261,
+  "inner_wall_s": 3.014911,
+  "started_at_utc": "2026-09-23T20:29:37Z",
+  "finished_at_utc": "2026-09-23T20:29:40Z",
+  "confidence": 1.0,
+  "time_enabled": 2850276710,
+  "time_running": 2850276710,
+  "useronly_forced": false,
+  "counters": [
+    {
+      "name": "PORTS_2",
+      "id": "ports_2",
+      "config": "0x700d",
+      "delta": 876393292,
+      "rate": 307476564.968318
+    },
+    {
+      "name": "PORTS_3",
+      "id": "ports_3",
+      "config": "0x700e",
+      "delta": 716852656,
+      "rate": 251502829.000767
+    },
+    {
+      "name": "PORTS_4",
+      "id": "ports_4",
+      "config": "0x700f",
+      "delta": 522320197,
+      "rate": 183252452.355757
+    },
+    {
+      "name": "PORTS_5",
+      "id": "ports_5",
+      "config": "0x7010",
+      "delta": 293373699,
+      "rate": 102928146.579846
+    },
+    {
+      "name": "PORTS_6",
+      "id": "ports_6",
+      "config": "0x7011",
+      "delta": 191263684,
+      "rate": 67103549.395385
+    },
+    {
+      "name": "LD_CANCEL_DTLB_MISS",
+      "id": "ld_cancel_dtlb_miss",
+      "config": "0x5090",
+      "delta": 272209820,
+      "rate": 95502945.045641
+    },
+    {
+      "name": "LD_CANCEL_MISALIGN",
+      "id": "ld_cancel_misalign",
+      "config": "0x5091",
+      "delta": 6557716,
+      "rate": 2300729.601794
+    },
+    {
+      "name": "LD_CANCEL_LQ_FULL",
+      "id": "ld_cancel_lq_full",
+      "config": "0x5092",
+      "delta": 25666,
+      "rate": 9004.739754
+    }
+  ],
+  "counters_map": {
+    "PORTS_2": 876393292,
+    "PORTS_3": 716852656,
+    "PORTS_4": 522320197,
+    "PORTS_5": 293373699,
+    "PORTS_6": 191263684,
+    "LD_CANCEL_DTLB_MISS": 272209820,
+    "LD_CANCEL_MISALIGN": 6557716,
+    "LD_CANCEL_LQ_FULL": 25666
+  },
+  "cmd": [
+    "sudo",
+    "-n",
+    "/usr/bin/python3",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/scripts/measure/pmu_tid_sweep.py",
+    "--inner",
+    "--tid",
+    "704908",
+    "--group",
+    "6",
+    "--window",
+    "3.000000",
+    "--preset-prefix",
+    "920b_topdown_full_",
+    "--kperfx-python",
+    "/home/REMOTE_USER/projects/vllm/prepare-input-phase/tools/libkperfx/python",
+    "--quiet"
+  ],
+  "stderr_tail": "KPERFX_META {\"group\": 6, \"preset\": \"920b_topdown_full_6\", \"events\": [\"ports_2\", \"ports_3\", \"ports_4\", \"ports_5\", \"ports_6\", \"ld_cancel_dtlb_miss\", \"ld_cancel_misalign\", \"ld_cancel_lq_full\"], \"tid\": 704908, \"window_requested_s\": 3.0, \"wall_s\": 3.014911, \"started_at_utc\": \"2026-09-23T20:29:37Z\", \"finished_at_utc\": \"2026-09-23T20:29:40Z\", \"time_enabled_ns\": 2850276710, \"time_running_ns\": 2850276710, \"confidence\": 1.0, \"useronly_forced\": false, \"instances\": 1, \"counters\": 8, \"raw_json_writer\": \"kperfx_ctx_write_output\"}\n",
+  "raw_json_writer": "kperfx_ctx_write_output"
+}

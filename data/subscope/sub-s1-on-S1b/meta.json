@@ -1,0 +1,30 @@
+{
+  "raw": "data/subscope/sub-s1-on-S1b/raw.csv",
+  "worker_tid": 131,
+  "steps_total": 125,
+  "steps_analysed": 123,
+  "steps_dropped_as_warmup": 0,
+  "n_probe_names": 35,
+  "prepare_input_wall_us": {
+    "p50": 3116.29,
+    "p90": 3449.05,
+    "p99": 3513.58,
+    "mean": 3166.134,
+    "min": 170.56
+  },
+  "phases": [
+    "decode",
+    "prefill",
+    "unknown"
+  ],
+  "unattributed_us_p50": 219.25,
+  "unattributed_pct_p50": 7.04,
+  "invariant_max_abs_residual_us": 0.0,
+  "probe_floor_us": 2.2,
+  "scopes_below_probe_floor": [
+    "pi: ubatch_slices",
+    "pi: sanitize_placeholder_ids",
+    "pi: tokens_list",
+    "pi: in.mrope_drift"
+  ]
+}
